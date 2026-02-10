@@ -1,0 +1,323 @@
+id,use_cases
+chatgpt,writing drafts & emails|summarizing documents|brainstorming ideas|coding assistance|creative writing
+claude,analyzing long documents|coding complex projects|creative writing nuance|summarizing research|data extraction
+google-gemini,research with real-time web|multimodal analysis (images/video)|creative writing|complex problem solving|coding
+perplexity,deep research & citations|fact-checking|finding obscure information|academic research|market analysis
+microsoft-copilot,office 365 integration|enterprise-grade security|web-connected research|document creation|image generation
+midjourney,high-end artistic generation|photorealistic images|logo & branding concepts|texture creation|creative inspiration
+suno,creating original songs|generating backing tracks|musical experimentation|content creation soundtracks|fun & entertainment
+bolt,rapid web app prototyping|full-stack development|debugging & fixing code|deploying web projects|learning web dev
+luma-ai,3d model generation|drone-style video shots|visual effects|product showcase videos|virtual tours
+elevenlabs,realistic voiceovers|dubbing content|creating audiobooks|game character voices|accessibility features
+10web,automated wordpress building|converting sites to wordpress|hosting management|ai website builder|page speed optimization
+activepieces,automating business workflows|connecting multiple apps|open source automation|replacing zapier|visual flow building
+ada,automating customer service|ai chatbots for enterprise|personalized support|multilingual support|ticket deflection
+adalo,building mobile apps without code|visual app design|publishing to app stores|database management|prototyping apps
+adcreativeai,generating high conversion ad creatives|predicting creative performance scores|social media post automation|competitor ad analysis|brand identity consistency
+adobe-firefly,commercial usage safe generation|text effects creation|vector recoloring|generative fill|image expansion
+ai21-labs,building nlp applications|text generation via api|reading comprehension tasks|paraphrasing content|grammar correction
+aiva,composing emotional soundtracks|generating game music|background music for video|midi file export|classical style composition
+akkio,predictive analytics for business|forecasting sales trends|churn prediction|no-code machine learning|data visualization
+amazon-codewhisperer,aws cloud coding|security vulnerability scanning|ide code completion|suggesting code snippets|python and java support
+anthropic-claude-api,long context processing|building text analysis apps|chatbot integration|summarizing large datasets|ethical ai development
+anyword,performance marketing copy|predicting copy scores|generating social captions|blog post outlines|email subject lines
+apple-intelligence,improving siri interactions|on-device text summary|image generation integration|writing tools systemwide|smart notifications
+appgyver,professional app development|visual logic flow|sap integration|cross-platform deployment|enterprise mobile apps
+artbreeder,character portrait creation|mixing images genetically|landscape generation|concept art iteration|gene editing images
+askcodi,generating code snippets|explaining complex code|writing unit tests|documentation assistance|sql query generation
+assemblyai,transcribing audio files|speech analytics|audio intelligence via api|summarizing meetings|sentiment analysis
+attention-insight,predicting visual attention|heatmap generation|landing page optimization|design validation|pre-launch testing
+automator,marketing automation flows|lead scoring|email drip campaigns|crm synchronization|sales funnel management
+avoma,meeting transcription|ai notes assistant|conversation intelligence|crm automatic entry|sales coaching insights
+bardeen,browser automation|scraping web data|automating meeting workflows|linkedin lead sourcing|copying data to notion
+base44,business intelligence|data analysis|reporting automation|visualizing metrics|identifying trends
+beatoven,royalty-free music generation|customizing track mood|video background audio|podcast intros|adjusting song length
+beautifulai,creating slide decks|formatting presentations|smart slide templates|team collaboration|brand consistent slides
+bildr,web3 app development|visual saas building|chrome extension creation|connecting apis visually|designing web apps
+bing-chat,web connected research|generating images (dalle)|summarizing search results|creative writing|finding current events
+blackbox-ai,coding assistant|repository search|debugging code|converting code languages|ide extension
+bluewillow,midjourney alternative|discord based generation|artistic image creation|logo concepts|character design
+booke-ai,automating bookkeeping|categorizing transactions|extracting data from receipts|reconciling bank feeds|accountant communication
+boomy,instant song creation|releasing music to spotify|generating beats|remixing tracks|monetizing ai music
+botpress,building chat bots|visual conversation flows|integrating with messenger|nlp intent recognition|deployment management
+brandmark,generating logos|creating brand guidelines|business card design|social media assets|color palette selection
+breeze-ai,content marketing automation|generating blog posts|seo optimization|social media scheduling|long-form writing
+brisk-teaching,grading student work|generating feedback|detecting ai writing|summarizing articles|creating lesson plans
+bubble,full-stack web apps|visual database design|complex workflows|responsive design|marketplace building
+buffer-ai-assistant,repurposing content|generating social posts|summarizing articles|brainstorming ideas|linkedin post writing
+canva,graphic design templates|social media graphics|presentation design|video editing|print materials
+canva-ai,magic edit photos|text to image generation|magic design templates|translating designs|magic write copy
+capcut,editing short form video|auto captions|tiktok video creation|visual effects|background removal
+casetext-cocounsel,legal research assistant|document review|contract analysis|legal drafting|deposition preparation
+chatfuel,whatsapp chatbots|facebook messenger bots|ecommerce automation|customer support automation|lead qualification
+chatgpt-advanced-data-analysis,analyzing excel files|visualizing data charts|converting file formats|python code execution|math problem solving
+chorusai,sales call analysis|coaching sales reps|identifying deal risks|recording meetings|conversation metrics
+cleanuppictures,removing objects from photos|cleaning up product shots|removing watermarks|retouching images|inpainting missing parts
+clearscope,seo content optimization|grading content relevance|keyword research|competitor analysis|content outlining
+cleo,personal finance assistant|budgeting help|roasting spending habits|saving money tips|credit building
+clerkio,ecommerce personalization|search and recommendations|email marketing automation|audience segmentation|predictive analytics
+clickup-ai,summarizing tasks|generating subtasks|writing project updates|brainstorming docs|translating comments
+amazon-q,enterprise chat assistant|coding companion for aws|querying business data|summarizing documents|generating content
+antigravity,advanced agentic coding|autonomous development|complex refactoring|project architecture planning|visual verification
+clipchamp,video editing in browser|auto caption generation|text to speech|screen recording|creating social videos
+clipdrop,removing objects cleanly|upscaling images|relighting photos|replacing backgrounds|generating image variations
+cloudflare-workers-ai,running global ai models|serverless inference|building ai apps|edge computing tasks|low latency processing
+coda-ai,organizing team knowledge|automating doc summaries|generating tables|writing meeting notes|project management
+codeium,free code completion|refactoring code|explaining functions|generating unit tests|context aware suggestions
+codex-openai,translating natural language to code|completing code blocks|refactoring functions|documenting code|learning programming
+cognii,assessing open ended answers|tutoring automation|giving instant feedback|grading essays|personalized learning
+cohere-api,building custom chatbots|classifying text|embedding search|multilingual understanding|enterprise nlp
+colormind,generating color palettes|extracting colors from images|ui color inspiration|brand styling|design system colors
+colossyan,creating training videos|ai avatars|text to video|localizing video content|educational explainer videos
+consensus,academic research search|finding scientific papers|summarizing studies|fact checking claims|literature review
+contentbot,blog post writing|marketing copy generation|landing page content|automation workflows|email newsletters
+contentshake-ai,optimizing content for seo|generating blog ideas|competitor analysis|writing wordpress posts|social media snippets
+contentstudio,social media management|curating content|scheduling posts|generating captions|analyzing engagement
+continue,open source coding assistant|ide chat integration|context aware coding|debugging errors|explaining codebase
+copyai,writing marketing copy|generating blog posts|email subject lines|social media captions|product descriptions
+copysmith,bulk product descriptions|ecommerce content|ad copy generation|content rewriting|team collaboration
+coursebox,generating course structures|creating quizzes|writing lesson content|lms integration|rapid instructional design
+craft,structured document creation|daily notes|collaborative writing|linking ideas|content publishing
+craiyon,free image generation|drawing prompts|visual brainstorming|creating memes|artistic experimentation
+creatify,generating video ads|ecommerce product videos|marketing clips|social media hooks|converting url to video
+cursor,ai powered code editor|chat with codebase|fixing bugs instantly|refactoring files|understanding legacy code
+d-id,animating photos|creating talking heads|virtual presenters|personalized video messages|training avatars
+dall-e-3,high fidelity image generation|following complex prompts|creating text in images|artistic rendering|visual concepts
+datarobot,automating machine learning|predictive modeling|data science workflows|deployment monitoring|business forecasting
+debuild,generating web apps|react component building|visual interface design|deployment automation|rapid prototyping
+decktopus,creating presentation decks|formatting slides|finding slide images|writing slide content|sharing presentations
+deepai,image generation api|text generation|content moderation|coloring images|fantasy world creation
+describely,ecommerce product content|seo descriptions|catalog management|bulk content generation|shopify integration
+descript,editing video by text|removing filler words|overdub voice cloning|screen recording|podcast editing
+descript-overdub,cloning your voice|fixing audio mistakes|text to speech|personalized voiceovers|narrating content
+diagram,design automation|generating figma assets|ui prototyping|icon generation|design system utilities
+docyt,automating accounting|bookkeeping workflows|expense management|financial reporting|receipt capture
+donotpay,legal assistance|canceling subscriptions|fighting parking tickets|consumer rights|drafting legal letters
+dora-run,3d web design|animating websites|no-code 3d building|landing page creation|interactive ui
+dreamstudio,stable diffusion generation|controlling image styles|inpainting and outpainting|generating textures|visual art
+drift,conversational marketing|buying signal detection|chatbot automation|booking meetings|customer support
+duolingo-max,roleplay language practice|explaining answer mistakes|interactive learning|personalized feedback|language immersion
+durable,building websites in seconds|ai crm|generating business names|invoicing|local seo checking
+educaidor,lesson planning|creating educational resources|student assessment|curriculum design|teaching assistance
+elicit,automating research workflows|extracting data from papers|synthesizing findings|finding related papers|literature matrix
+fathom,recording zoom meetings|transcribing calls|highlighting key moments|sharing clips|meeting summaries
+feedhive,scheduling social posts|recycling content|analyzing performance|generating hashtags|collaboration
+fig,terminal autocompletion|command line help|shell scripting assistance|developer productivity|team shortcuts
+figma,interface design|prototyping|design systems|collaboration|vector editing
+finalround-ai,interview preparation|mock interview practice|resume feedback|answer coaching|job application help
+finance-pal,financial planning|investment analysis|budget tracking|market insights|portfolio management
+finch,optimizing building design|architectural layouts|floor plan generation|generative design|spatial planning
+firefliesai,automating meeting notes|transcribing voice conversations|analyzing sentiment|team collaboration|crm sync
+fliki,text to video creation|voiceover generation|blog to video|social media clips|audiobooks
+flutterflow,building mobile apps|visual development|firebase integration|generating code|ui design
+forethought,customer support automation|ticket triage|solving queries|identifying trends|agent assistance
+framer,designing websites|publishing to web|interactive prototyping|animation design|cms management
+framer-ai,generating simple sites|layout iteration|copy generation|color styling|responsive design
+frase,seo content briefs|optimizing articles|competitor research|answering questions|content decay analysis
+freshdesk-ai,automating support tickets|agent assist|predictive support|chatbot flows|customer insights
+galileo-ai,generating ui designs|mobile app screens|figma editable designs|prototyping flows|text to ui
+gamma,generating presentations|creating documents|webpage building|visual storytelling|content formatting
+github-copilot,code completion|suggestion logic|translating code comments|learning apis|pair programming
+glass-health,clinical decision support|differential diagnosis|medical knowledge search|patient care planning|learning medicine
+glide,building apps from sheets|no-code development|internal business apps|client portals|inventory management
+gong,revenue intelligence|analyzing sales calls|deal visibility|coaching teams|market insights
+google-ai-studio,prototyping with gemini|prompt engineering|testing models|api key management|tuning models
+gradescope-ai,grouping similar answers|grading assignments|providing feedback|exam management|academic integrity
+grain,recording customer calls|highlighting insights|creating video clips|transcription|sharing user feedback
+grammarly,correcting grammar|improving tone|detecting plagiarism|rewriting sentences|writing confidence
+gridlex,integrated business suite|crm and helpdesk|billing and hr|app building|data management
+growthbar,seo content writing|blog outlining|keyword research|competitor tracking|chrome extension
+happy-scribe,audio transcription|subtitling videos|translation services|podcast transcripts|meeting notes
+harvey-ai,legal work automation|contract analysis|legal research|identifying risk|drafting clauses
+help-scout-ai,customer support email|knowledge base management|live chat|reporting|inbox collaboration
+hex,collaborative data science|sql and python notebooks|interactive data apps|sharing insights|visualizing data
+heygen,creating avatar videos|translating video dubs|marketing videos|sales outreach|training content
+hootsuite-insights,social listening|brand monitoring|trend analysis|competitor benchmarking|audience sentiment
+hostinger-ai-builder,generating websites|writing copy|selecting images|seo setup|heatmap analysis
+hubspot-ai,generating email copy|blog post ideas|crm data enrichment|predictive lead scoring|social captions
+hugging-face,hosting models|datasets access|demo spaces|training transformers|open source collaboration
+hyperwrite,personal writing assistant|email replies|document generation|research tool|autocompletion
+hypotenuse-ai,ecommerce product descriptions|blog articles|social media copy|advertising text|batch generation
+ideogram,rendering text in images|logo design|typography generation|artistic posters|graphic design
+instantlyai,scaling cold email campaigns|warming up email accounts|automating outreach|b2b lead generation|email deliverability
+intercom-fin,resolving customer queries|support ticket automation|conversational ai for support|reducing support volume|24/7 customer service
+invideo,creating marketing videos|converting text to video|editing videos online|social media clips|video templates
+jasper-ai,writing marketing copy|generating blog posts|creating ad copy|seo content optimization|social media captions
+jenni-ai,academic writing assistant|generating citations|paraphrasing text|autocomplete for essays|research paper drafting
+julius-ai,analyzing data sets|visualizing complex data|python code generation|statistical analysis|chatting with spreadsheets
+kapwing,collaborative video editing|subtitling videos|creating memes|repurposing content for social|online video tools
+khan-academy-khanmigo,personalized tutoring|homework help|coding instruction|essay feedback|teacher lesson planning
+khroma,generating color palettes|ai color combinations|design inspiration|learning color preferences|brand color selection
+kickresume,writing resumes with ai|generating cover letters|resume checking|career coaching|optimizing linkedin profiles
+krisp,removing background noise|enhancing voice clarity|transcribing meetings|noise cancellation|professional audio
+kustomer-ai,automating support responses|sentiment analysis|classifying tickets|agent assistance|customer service workflows
+lalalai,extracting vocal stems|isolating instruments|splitting audio tracks|removing drums|music production
+landbot,building chatbots|lead generation forms|automating whatsapp conversations|no code bot builder|interactive conversational flows
+langchain,building llm applications|chaining prompts|connecting to data sources|creating agents|custom ai development
+lately,repurposing long form content|generating social posts|analyzing social performance|automating scheduling|content marketing
+lavender,writing sales emails|scoring email effectiveness|personalizing outreach|coaching sales reps|increasing reply rates
+lawgeex,automating contract review|legal compliance check|approving contracts|identifying risks|legal operations
+lazyapply,automating job applications|applying on linkedin|resume optimization|job search automation|finding remote jobs
+legalmation,automating litigation tasks|drafting legal responses|analyzing lawsuits|legal workflow automation|insurance defense
+lemlist,personalizing cold emails|multichannel outreach|warming up domains|sales engagement|email automation
+leonardo-ai,game asset generation|creating character art|concept art generation|training custom models|high quality image synthesis
+let's-enhance,upscaling images|improving photo quality|restoring old photos|color correction|removing compression artifacts
+lex,writing assistance|overcoming writers block|drafting newsletters|smart outlining|collaborative editing
+llamaindex,connecting data to llms|rag implementation|indexing documents|querying private data|building knowledge bases
+looka,designing logos|building brand kits|generating business cards|social media assets|brand identity
+lovable,generating web apps|full stack rapid dev|react and supabase apps|natural language coding|software prototyping
+lumen5,turning blogs to videos|content marketing videos|social media storytelling|video automation|corporate training videos
+luminar-neo,ai photo editing|replacing skies|enhancing portraits|removing objects|lighting correction
+magical,automating repetitive tasks|filling forms automatically|messaging shortcuts|crm data entry|productivity boosts
+magician-figma,generating icons in figma|text to image for design|copywriting for prototypes|design automation|figma plugin
+magicschool-ai,lesson planning assistance|generating rubrics|writing iep goals|creating worksheets|teacher productivity
+make-integromat,connecting apps visually|automating complex workflows|data synchronization|api integration|no code automation
+manus,automating literature review|analyzing scientific papers|finding research gaps|synthesizing evidence|academic research
+manychat,instagram dm automation|facebook messenger bots|generating leads via chat|automating support|marketing funnels
+marketmuse,optimizing content strategy|keyword research|identifying content gaps|competitive analysis|seo briefing
+mem,organizing personal notes|connecting knowledge|smart search|generating ideas|daily journaling
+memorable,predicting ad performance|optimizing visual assets|creative intelligence|brand consistency|marketing auditing
+meta-ai,generating images socially|chatting on whatsapp|information retrieval|content creation|smart assistant
+microsoft-power-automate,business process automation|connecting microsoft apps|automating desktop tasks|workflow approvals|data processing
+mintlify-writer,documenting code|generating docsites|maintaining documentation|automating api docs|technical writing
+mockup-ai,placing designs on products|generating model shots|apparel mockups|product photography|visualizing merchandise
+monarch-money,personal finance tracking|visualizing net worth|budgeting assistance|tracking investments|financial goals
+monkeylearn,classifying text data|sentiment analysis|extracting keywords|no code nlp|analyzing customer feedback
+motion,automating daily schedules|task management|calendar optimization|project planning|meeting coordination
+murf-ai,generating realistic voiceovers|text to speech|elearning narration|marketing videos|podcast intros
+n8n,workflow automation|self hosted automation|connecting apis|complex data flows|developer friendly automation
+nabla-copilot,automating clinical notes|medical transcription|doctor admin assistance|ehr integration|patient summary
+nano-banana,searching scientific literature|analyzing patents|technical research|summarizing r&d|finding prior art
+neuronwriter,optimizing content for google|competitor analysis|nlp keyword suggestions|content planning|seo writing
+nightcafe,artistic image generation|style transfer|participating in art challenges|community art creation|ai art studio
+nosto,ecommerce personalization|product recommendations|behavioral popups|dynamic bundles|merchandising
+notion,organizing team workspaces|project management|wiki creation|note taking|database management
+notion-ai,summarizing page content|writing drafts|brainstorming ideas|translating text|editing for tone
+ocoya,social media scheduling|generating captions|creating graphics|analyzing hashtags|ecommerce marketing
+octane-ai,ecommerce quizzes|product recommendation quizzes|collecting zero party data|sms marketing|shopify growth
+omneky,generating ad creatives|analyzing ad performance|cross platform ads|marketing automation|scaling campaigns
+openai-api,integrating gpt models|building ai apps|fine tuning models|text generation|embeddings
+openai-playground,testing prompts|experimenting with models|prototyping ai features|adjusting parameters|learning llms
+otterai,transcribing meetings|generating summaries|identifying speakers|recording notes|voice memos
+pencil,generating ad creatives|predicting ad success|brand consistent design|variation testing|marketing assets
+perplexity-ai,answering complex questions|citing sources|web connected research|summarizing information|learning new topics
+perplexity-pages,creating visual articles|sharing research findings|generating reports|curating knowledge|publishing content
+phind,developer search engine|answering coding questions|debugging errors|finding documentation|technical problem solving
+photor,rating photo aesthetics|selecting best photos|analyzing image quality|photography assistant|curating albums
+pictory,turning script to video|editing video with text|creating highlights|adding captions|content repurposing
+pieces,saving code snippets|context aware copilot|managing developer knowledge|workflow efficiency|on device ai
+pika,animating images|text to video generation|lip sync animation|video effects|creative motion
+pika-labs,discord video generation|animating text|creating short clips|visual storytelling|video experimentation
+pitch,creating presentations|collaborative slide design|pitch deck templates|visual storytelling|slide analytics
+pixlr-ai,generative photo editing|background removal|image expansion|smart resize|creative filters
+pixray,pixel art generation|drawing with code|cli image generation|artistic experiments|vgan styles
+playground-ai,editing images with ai|mixed image generation|creative design|collaborative art|canvas editing
+polyai,voice assistants for support|automating phone calls|customer service voicebots|reservation booking|conversational ivr
+polymer,visualizing data|building dashboards|analyzing spreadsheets|sharing insights|interactive data exploration
+postwise,writing twitter threads|scheduling tweets|growing twitter audience|viral content ideas|twitter analytics
+predisai,generating social posts|ecommerce product videos|competitor analysis|hashtags generation|brand content
+presentationsai,generating decks instantly|brand consistent slides|collaborative editing|presentation templates|slide design
+prowritingaid,checking grammar and style|improving readability|rephrasing sentences|writing coaching|plagiarism checking
+quickads,generating ad copy|creating ad visuals|multi platform ads|marketing automation|small business ads
+quillbot,rephrasing text|checking grammar|summarizing articles|generating citations|writer efficiency
+quizizz-ai,creating quizzes instantly|generating questions from text|grading assignments|interactive learning|teacher tools
+quizlet-q-chat,studying with ai tutor|generating flashcards|practicing languages|homework help|active recall
+rasa,building conversational ai|open source chatbot framework|customer service automation|nlp development|enterprise agents
+readai,automated meeting summaries|measuring engagement|transcribing calls|video highlights|meeting analytics
+readdy-ai,interior design visualization|staging rooms virtually|architectural concepts|real estate marketing|home renovation ideas
+rebuy,ecommerce personalization|smart upsells|post purchase offers|retention marketing|shopify growth
+reclaim,optimizing calendar schedules|protecting focus time|syncing personal and work calendars|task blocking|meeting coordination
+reflect,personal knowledge management|networked notes|daily journaling|meeting notes|secure writing
+regieai,automating sales outreach|generating email sequences|content management|personalizing visuals|sales scaling
+relay,automating team workflows|collaborative automation|human in the loop tasks|project management|connecting apps
+relume,generating sitemaps|building wireframes|web design library|figma to webflow|agency workflow
+remini,enhancing photo quality|restoring old photos|clarifying blurry images|video enhancement|professional retouching
+removebg,removing image backgrounds|transparent pngs|ecommerce product photos|marketing visuals|batch processing
+replai,analyzing creative performance|tagging video assets|optimizing ad creatives|marketing insights|computer vision
+replicate,running open source models|deploying ai apis|image generation|fine tuning models|developer tools
+replika,personal ai companion|emotional support|virtual friendship|roleplay chat|mental wellness
+replit,collaborative coding|cloud ide|hosting web apps|learning python|instant deployment
+replit-ai,code completion|explaining code|generating functions|debugging errors|pair programming
+replyio,automating sales email|multichannel outreach|linkedin automation|crm integration|sales engagement
+research-rabbit,visualizing research papers|finding connected studies|literature mapping|alerting new papers|academic discovery
+resemble-ai,cloning voices|generating neural speech|localizing audio|game character voices|real time speech to speech
+resume-worded,scoring resumes|optimizing linkedin profiles|keyword targeting|career coaching|job application help
+retool,building internal tools|connecting databases|drag and drop admin panels|workflow automation|developer productivity
+rev-ai,speech to text api|sentiment analysis|topic extraction|language identification|asynchronous transcription
+rezi,optimizing resumes for ats|generating bullet points|cover letter writing|job specific targeting|career documents
+rows,spreadsheet automation|connecting apis|visualizing data|sharing reports|modern excel alternative
+runway,video editing ai|text to video generation|inpainting video|green screen removal|creative visual effects
+rytr,writing blog sections|generating emails|creating social posts|improving content tone|copywriting assistance
+salesforce-einstein,predicting sales trends|automating crm tasks|customer insights|personalized marketing|service recommendations
+scalenut,seo content planning|long form writing|optimizing articles|keyword clustering|content auditing
+scholarcy,summarizing academic papers|extracting key facts|generating flashcards|literature review|reading assistant
+scispace,understanding research papers|chatting with pdfs|finding relevant studies|explaining math formulas|literature search
+sembly,transcribing meetings|generating minutes|identifying action items|sharing meeting insights|team accountability
+semrush,keyword research|competitor analysis|site auditing|content marketing strategy|rank tracking
+shopify-magic,writing product descriptions|generating blog posts|email marketing copy|store content|ecommerce automation
+shortly-ai,overcoming writers block|continuing stories|expanding thoughts|creative writing|minimalist writing
+shortwave,organizing email inbox|summarizing threads|scheduling delivery|ai email assistant|productivity focus
+simplified,graphic design automation|video editing|writing marketing copy|social media scheduling|brand management
+sivi-ai,generating designs from text|creating banner ads|email headers|social posts|brand consistent visuals
+slidesai,generating presentation slides|formatting text to decks|google slides integration|creating handouts|presentation outlines
+slidespeak,chatting with powerpoint|summarizing presentations|generating slide content|analysis of decks|consulting tools
+smartwriter,personalizing cold emails|linkedin outreach|backlink requests|sales icebreakers|hyper personalized copy
+softr,building portals from airtable|client gateways|internal tools|membership sites|no code web apps
+sonara,automating job search|applying to jobs|filling applications|finding matching roles|career efficiency
+sora,generating realistic video|text to video simulation|cinematic scenes|visual storytelling|creative video production
+soundraw,customizing royalty free music|adjusting song mood|video background music|podcast audio|content creation
+sourcegraph-cody,codebase search|explaining complex code|writing unit tests|finding definitions|developer answers
+spark,managing email|AI writing assistant|collaborative inbox|scheduling emails|team communication
+speechify,text to speech reading|listening to articles|audiobook creation|voice cloning|productivity listening
+speedy-brand,seo blog writing|social media content|brand consistent copy|small business marketing|content strategy
+spellbook,drafting legal contracts|reviewing agreements|negotiating terms|legal assistant|clause generation
+stable-diffusion,generating images locally|fine tuning models|artistic control|open source art|text to image
+starryai,generating mobile art|creating nfts|artistic styles|avatar creation|visual experimentation
+sudowrite,writing fiction|brainstorming plot twists|expanding scenes|character development|creative writing assistant
+superhuman,fastest email experience|undo send|read statuses|keyboard shortcuts|email productivity
+surfer-seo,optimizing content scores|keyword density|competitor analysis|content editor|outline generation
+synthesia,creating ai video avatars|text to video|multilingual training videos|sales presentations|corporate comms
+tableau-ai,visualizing data insights|predictive analytics|explaining charts|business intelligence|data storytelling
+tabnine,code completion|predicting next lines|private codebase learning|secure coding|developer efficiency
+tana,knowledge management|ai supertags|connecting ideas|daily workflow|personal database
+taplio,growing on linkedin|scheduling posts|generating content|analyzing engagement|network building
+taskade,managing projects|ai agents for tasks|mind mapping|team collaboration|workflow automation
+teal,tracking job applications|resume builder|career growth|job search organization|contact management
+textcortex,writing everywhere|browser extension assistant|email writing|rewriting text|creative content
+thoughtspot,search driven analytics|visualizing business data|embedding charts|asking data questions|bi for everyone
+tidio,customer service chatbot|live chat automation|increasing sales|order tracking|support AI
+tl;dv,recording google meets|highlighting calls|transcribing zoom|sharing insights|user research
+together-ai,running open source models|fine tuning llms|fast inference|developer api|cloud gpu
+tome,storytelling formatting|generating presentations|visual documents|interactive microsites|creative pitching
+topaz-ai,upscaling video|sharpening photos|denoising images|restoring visual quality|professional enhancement
+trayio,enterprise automation|integrating apis|data orchestration|workflow logic|connecting saas apps
+trint,transcribing audio-video|collaborative editing|captioning content|searchable transcripts|media production
+twain,coaching sales outreach|improving email clarity|increasing response rates|communication training|sales writing
+tweet-hunter,growing twitter audience|finding viral tweets|scheduling threads|auto dm|twitter analytics
+udio,creating high quality music|generating full songs|musical creativity|text to audio|music production
+uizard,designing ui mockups|sketch to screen|prototyping apps|heatmap prediction|collaborative design
+ultimateai,automating support tickets|multilingual chat|crm integration|customer service efficiency|enterprise support
+unicorn-platform,building landing pages|startup websites|blog functionality|stripe integration|simple web builder
+upscalemedia,enhancing image resolution|removing jpeg artifacts|batch upscaling|ecommerce photo quality|print ready images
+v0-by-vercel,generating ui components|building with shadcn and tailwind|react prototyping|converting text to ui|frontend development
+vercel-ai-sdk,building ai apps|streaming text responses|integrating with nextjs|connecting to llms|developer toolkit
+vicai,automating accounts payable|processing invoices|expense approvals|financial forecasting|accounting efficiency
+visenze,visual search for ecommerce|smart product recommendations|tagging product images|automated cataloging|retail visual ai
+voiceflow,designing conversation flows|prototyping chatbots|collaborating on voice apps|testing nlp logic|launching agents
+warmerai,personalizing cold emails|scaling outreach|improving reply rates|sales automation|generating opening lines
+warp,modern terminal experience|ai command suggestions|saving workflows|sharing commands|developer productivity
+webflow,visual web development|cms management|building responsive sites|hosting websites|design interactions
+wix-ai,generating websites instantly|writing site copy|creating images|optimizing seo|business management tools
+woebot,mental health support|cbt based conversations|tracking mood|daily checkins|emotional wellness
+wordtune,rewriting sentences|changing tone|expanding text|shortening paragraphs|writing confidence
+workato,enterprise automation|integrating apps|workflow orchestration|connecting data|business logic
+writecream,generating personalized intros|creating ad copy|writing blog articles|voiceover generation|cold outreach
+writesonic,seo blog writing|paraphrasing tools|landing page copy|product descriptions|marketing content
+wysa,mental health chatbot|stress management|sleep improvement|anxiety support|daily mindfulness
+yellowai,automating customer experience|voice and chat bots|enterprise support|conversational commerce|agent assist
+yoodli,improving public speaking|practicing presentations|interview coaching|real time speech feedback|communication skills
+youcom,conversational search engine|coding assistance|finding information properly|summarizing web results|private search
+youper,emotional support chatbots|anxiety relief exercises|tracking mental health|personalized therapy|mood monitoring
+zapier-ai,automating workflows naturally|building zaps with text|connecting 5000+ apps|troubleshooting errors|logic building
+zendesk-ai,automating support tickets|sentiment analysis|agent copilot|macro suggestions|customer intent detection
+zipchat,ecommerce chatbots|automating customer answers|increasing conversion rates|24/7 support|tracking sales

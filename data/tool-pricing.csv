@@ -1,0 +1,13 @@
+id,has_free_tier,starting_price,price_currency,pricing_model,notes,pricing_url
+chatgpt,yes,20,USD,subscription,Plus plan
+midjourney,no,10,USD,subscription,Basic plan
+cursor,yes,20,USD,subscription,Pro plan
+claude,yes,20,USD,subscription,Pro plan
+zapier,yes,19.99,USD,subscription,Starter plan
+canva,yes,12.99,USD,subscription,Pro plan annual billing
+notion,yes,8,USD,subscription,Plus plan per user
+grammarly,yes,12,USD,subscription,Premium plan monthly
+anthropic-claude-api,no,,USD,usage-based,Pay per API token
+adobe-firefly,yes,,USD,subscription,Included with Creative Cloud
+adcreativeai,yes,29,USD,subscription,Free trial available,https://www.adcreative.ai/pricing
+monarch-money,yes,14.99,USD,subscription,Mint alternative,https://www.monarch.com/pricing

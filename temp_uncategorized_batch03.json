@@ -1,0 +1,437 @@
+[
+  {
+    "id": "predisai",
+    "name": "Predis.ai",
+    "url": "https://predis.ai/"
+  },
+  {
+    "id": "presentationsai",
+    "name": "Presentations.AI",
+    "url": "https://www.presentations.ai/"
+  },
+  {
+    "id": "prowritingaid",
+    "name": "ProWritingAid",
+    "url": "https://prowritingaid.com/"
+  },
+  {
+    "id": "quickads",
+    "name": "Quickads",
+    "url": "https://www.quickads.ai/"
+  },
+  {
+    "id": "quizizz-ai",
+    "name": "Quizizz AI",
+    "url": "https://wayground.com/"
+  },
+  {
+    "id": "quizlet-q-chat",
+    "name": "Quizlet Q-Chat",
+    "url": "https://quizlet.com/"
+  },
+  {
+    "id": "rasa",
+    "name": "Rasa",
+    "url": "https://rasa.com"
+  },
+  {
+    "id": "readai",
+    "name": "Read.ai",
+    "url": "https://www.read.ai/"
+  },
+  {
+    "id": "readdy-ai",
+    "name": "Readdy",
+    "url": "https://readdy.ai/"
+  },
+  {
+    "id": "rebuy",
+    "name": "Rebuy",
+    "url": "https://www.rebuyengine.com/"
+  },
+  {
+    "id": "reclaim",
+    "name": "Reclaim",
+    "url": "https://reclaim.ai/"
+  },
+  {
+    "id": "reflect",
+    "name": "Reflect",
+    "url": "https://reflect.app/"
+  },
+  {
+    "id": "regieai",
+    "name": "Regie.ai",
+    "url": "https://www.regie.ai/"
+  },
+  {
+    "id": "relay",
+    "name": "Relay",
+    "url": "https://www.relay.app/"
+  },
+  {
+    "id": "relume",
+    "name": "Relume",
+    "url": "https://www.relume.io/"
+  },
+  {
+    "id": "remini",
+    "name": "Remini",
+    "url": "https://remini.ai/"
+  },
+  {
+    "id": "removebg",
+    "name": "remove.bg",
+    "url": "https://www.remove.bg/"
+  },
+  {
+    "id": "replai",
+    "name": "Replai",
+    "url": "https://www.replai.io/"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "url": "https://replicate.com"
+  },
+  {
+    "id": "replika",
+    "name": "Replika",
+    "url": "https://replika.com"
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "url": "https://replit.com/"
+  },
+  {
+    "id": "replit-ai",
+    "name": "Replit AI",
+    "url": "https://replit.com/"
+  },
+  {
+    "id": "replyio",
+    "name": "Reply.io",
+    "url": "https://reply.io/"
+  },
+  {
+    "id": "research-rabbit",
+    "name": "Research Rabbit",
+    "url": "https://www.researchrabbit.ai/"
+  },
+  {
+    "id": "resemble-ai",
+    "name": "Resemble AI",
+    "url": "https://www.resemble.ai/"
+  },
+  {
+    "id": "resume-worded",
+    "name": "Resume Worded",
+    "url": "https://resumeworded.com/"
+  },
+  {
+    "id": "retool",
+    "name": "Retool",
+    "url": "https://retool.com"
+  },
+  {
+    "id": "rev-ai",
+    "name": "Rev AI",
+    "url": "https://www.rev.ai/"
+  },
+  {
+    "id": "rezi",
+    "name": "Rezi",
+    "url": "https://www.rezi.ai/"
+  },
+  {
+    "id": "rows",
+    "name": "Rows",
+    "url": "https://rows.com/ai"
+  },
+  {
+    "id": "scholarcy",
+    "name": "Scholarcy",
+    "url": "https://www.scholarcy.com/"
+  },
+  {
+    "id": "scispace",
+    "name": "Scispace",
+    "url": "https://scispace.com"
+  },
+  {
+    "id": "sembly",
+    "name": "Sembly",
+    "url": "https://www.sembly.ai/"
+  },
+  {
+    "id": "semrush",
+    "name": "Semrush",
+    "url": "https://www.semrush.com/"
+  },
+  {
+    "id": "shopify-magic",
+    "name": "Shopify Magic",
+    "url": "https://www.shopify.com/magic"
+  },
+  {
+    "id": "shortly-ai",
+    "name": "Shortly AI",
+    "url": "https://shortlyai.com/"
+  },
+  {
+    "id": "shortwave",
+    "name": "Shortwave",
+    "url": "https://www.shortwave.com/#r"
+  },
+  {
+    "id": "sivi-ai",
+    "name": "Sivi AI",
+    "url": "https://sivi.ai/"
+  },
+  {
+    "id": "slidespeak",
+    "name": "SlideSpeak",
+    "url": "https://slidespeak.co/"
+  },
+  {
+    "id": "smartwriter",
+    "name": "Smartwriter",
+    "url": "https://www.smartwriter.ai/"
+  },
+  {
+    "id": "softr",
+    "name": "Softr",
+    "url": "https://www.softr.io/"
+  },
+  {
+    "id": "sonara",
+    "name": "Sonara",
+    "url": "https://www.sonara.ai/"
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "url": "https://sora.com/"
+  },
+  {
+    "id": "sourcegraph-cody",
+    "name": "Sourcegraph Cody",
+    "url": "https://sourcegraph.com/cody"
+  },
+  {
+    "id": "spark",
+    "name": "Spark",
+    "url": "https://www.spark.ai/"
+  },
+  {
+    "id": "speedy-brand",
+    "name": "Speedy Brand",
+    "url": "https://speedybrand.io/"
+  },
+  {
+    "id": "spellbook",
+    "name": "Spellbook",
+    "url": "https://www.spellbook.legal/"
+  },
+  {
+    "id": "starryai",
+    "name": "Starryai",
+    "url": "https://starryai.com/"
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "url": "https://suno.com/"
+  },
+  {
+    "id": "superhuman",
+    "name": "Superhuman",
+    "url": "https://superhuman.com"
+  },
+  {
+    "id": "surfer-seo",
+    "name": "Surfer SEO",
+    "url": "https://surferseo.com/"
+  },
+  {
+    "id": "tableau-ai",
+    "name": "Tableau AI",
+    "url": "https://www.tableau.com/"
+  },
+  {
+    "id": "tana",
+    "name": "Tana",
+    "url": "https://tana.inc/"
+  },
+  {
+    "id": "taplio",
+    "name": "Taplio",
+    "url": "https://taplio.com"
+  },
+  {
+    "id": "teal",
+    "name": "Teal",
+    "url": "https://www.tealhq.com/"
+  },
+  {
+    "id": "textcortex",
+    "name": "TextCortex",
+    "url": "https://textcortex.com/"
+  },
+  {
+    "id": "thoughtspot",
+    "name": "ThoughtSpot",
+    "url": "https://www.thoughtspot.com/"
+  },
+  {
+    "id": "tidio",
+    "name": "Tidio",
+    "url": "https://www.tidio.com/"
+  },
+  {
+    "id": "tl;dv",
+    "name": "tl;dv",
+    "url": "https://tldv.io/"
+  },
+  {
+    "id": "together-ai",
+    "name": "Together AI",
+    "url": "https://www.together.ai/"
+  },
+  {
+    "id": "topaz-ai",
+    "name": "Topaz AI",
+    "url": "https://www.topazlabs.com/"
+  },
+  {
+    "id": "trayio",
+    "name": "Tray.io",
+    "url": "https://tray.ai/"
+  },
+  {
+    "id": "trint",
+    "name": "Trint",
+    "url": "https://trint.com/"
+  },
+  {
+    "id": "twain",
+    "name": "Twain",
+    "url": "https://www.twaingpt.com/"
+  },
+  {
+    "id": "tweet-hunter",
+    "name": "Tweet Hunter",
+    "url": "https://tweethunter.io/"
+  },
+  {
+    "id": "uizard",
+    "name": "Uizard",
+    "url": "https://uizard.io/"
+  },
+  {
+    "id": "ultimateai",
+    "name": "Ultimate.ai",
+    "url": "https://www.zendesk.co.uk/service/ai/ai-agents/#georedirect"
+  },
+  {
+    "id": "unicorn-platform",
+    "name": "Unicorn Platform",
+    "url": "https://unicornplatform.com/"
+  },
+  {
+    "id": "upscalemedia",
+    "name": "Upscale.media",
+    "url": "https://www.upscale.media/"
+  },
+  {
+    "id": "v0-by-vercel",
+    "name": "v0 by Vercel",
+    "url": "https://v0.app/"
+  },
+  {
+    "id": "vicai",
+    "name": "Vic.ai",
+    "url": "https://www.vic.ai/"
+  },
+  {
+    "id": "visenze",
+    "name": "ViSenze",
+    "url": "https://www.visenze.com/"
+  },
+  {
+    "id": "voiceflow",
+    "name": "Voiceflow",
+    "url": "https://www.voiceflow.com/"
+  },
+  {
+    "id": "warmerai",
+    "name": "Warmer.ai",
+    "url": "https://warmer.ai/"
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "url": "https://www.warp.dev/"
+  },
+  {
+    "id": "wix-ai",
+    "name": "Wix AI",
+    "url": "https://www.wix.com/ai-website-builder"
+  },
+  {
+    "id": "woebot",
+    "name": "Woebot",
+    "url": "https://www.woebot.com/"
+  },
+  {
+    "id": "workato",
+    "name": "Workato",
+    "url": "https://www.workato.com/"
+  },
+  {
+    "id": "writecream",
+    "name": "Writecream",
+    "url": "https://www.writecream.com/"
+  },
+  {
+    "id": "wysa",
+    "name": "Wysa",
+    "url": "https://www.wysa.com/"
+  },
+  {
+    "id": "yellowai",
+    "name": "Yellow.ai",
+    "url": "https://yellow.ai/"
+  },
+  {
+    "id": "yoodli",
+    "name": "Yoodli",
+    "url": "https://yoodli.ai/"
+  },
+  {
+    "id": "youcom",
+    "name": "You.com",
+    "url": "https://you.com/"
+  },
+  {
+    "id": "youper",
+    "name": "Youper",
+    "url": "https://www.youper.ai/"
+  },
+  {
+    "id": "zapier-ai",
+    "name": "Zapier AI",
+    "url": "https://zapier.com/"
+  },
+  {
+    "id": "zendesk-ai",
+    "name": "Zendesk AI",
+    "url": "https://www.zendesk.co.uk/"
+  },
+  {
+    "id": "zipchat",
+    "name": "Zipchat",
+    "url": "https://www.zipchat.ai/"
+  }
+]

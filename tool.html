@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Details — WhichAIPick</title>
+  <meta name="description"
+    content="Explore AI tool details: discover category, pricing, features, and how to try it. Find related tools and alternatives in our directory.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tool Details — WhichAIPick">
+  <meta property="og:description"
+    content="Explore AI tool details: discover category, pricing, features, and how to try it. Find related tools and alternatives in our directory.">
+  <meta property="og:image" content="/assets/logo/logo-final.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="Tool Details — WhichAIPick">
+  <meta property="twitter:description"
+    content="Explore AI tool details: discover category, pricing, features, and how to try it. Find related tools and alternatives in our directory.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/styles.css?v=fixheader1">
+  <link rel="stylesheet" href="/css/pages/tool.css">
+</head>
+
+<body data-bg="tool">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-container">
+      <div id="tool-container">
+        <p style="text-align: center;">Loading tool...</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/main.js?v=1.6"></script>
+  <script src="/js/pricing.js?v=1.6"></script>
+  <script src="/js/usecases.js?v=1.6"></script>
+  <script src="/js/descriptions.js?v=1.6"></script>
+  <script src="/js/layout.js?v=1.6" defer></script>
+  <script>
+    // Extract domain from URL
+    function getDomain(url) {
+      if (!url) return 'N/A';
+      try {
+        const urlObj = new URL(url.startsWith('http') ? url : 'https://' + url);
+        return urlObj.hostname.replace('www.', '');
+      } catch {
+        return 'N/A';
+      }
+    }
+
+    // Get 6 random related tools (excluding current)
+    function getRandomRelated(allTools, currentId, count = 6) {
+      const filtered = allTools.filter(t => t.id !== currentId);
+      const shuffled = filtered.sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, count);
+    }
+
+    // Render tool detail page
+    async function renderTool() {
+      const params = new URLSearchParams(window.location.search);
+      const toolId = params.get('id');
+
+      const container = document.getElementById('tool-container');
+
+      if (!toolId) {
+        // Update meta for missing ID
+        document.title = 'Tool Not Found — WhichAIPick';
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.content = 'No tool ID provided. Browse our directory to discover AI tools.';
+        }
+
+        container.innerHTML = `
+          <div class="tool-not-found">
+            <h1>Tool Not Found</h1>
+            <p>No tool ID provided.</p>
+            <a href="/browse.html" class="btn btn-primary">Browse Tools</a>
+          </div>
+        `;
+        return;
+      }
+
+      try {
+        await loadTools();
+        const tool = getToolById(toolId);
+
+        if (!tool) {
+          // Update meta for not found
+          document.title = 'Tool Not Found — WhichAIPick';
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) {
+            metaDesc.content = 'The requested tool could not be found. Browse our directory to discover AI tools.';
+          }
+
+          container.innerHTML = `
+            <div class="tool-not-found">
+              <h1>Tool Not Found</h1>
+              <p>We couldn't find a tool with that ID.</p>
+              <a href="/browse.html" class="btn btn-primary">Browse Tools</a>
+            </div>
+          `;
+          return;
+        }
+
+        // Update dynamic meta tags based on tool
+        document.title = `${tool.name} — WhichAIPick`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+
+        // Build description with category if available and not "Uncategorized"
+        let metaDescription = `Explore ${tool.name}`;
+        if (tool.category && tool.category !== 'Uncategorized') {
+          metaDescription += ` (${tool.category})`;
+        }
+        metaDescription += ': category, links, and how to try it.';
+
+        if (metaDesc) metaDesc.content = metaDescription;
+        if (ogTitle) ogTitle.content = `${tool.name} — WhichAIPick`;
+        if (twitterTitle) twitterTitle.content = `${tool.name} — WhichAIPick`;
+
+
+        // Determine CTA logic - never show duplicate destinations
+        let ctaUrl, ctaText;
+        if (tool.affiliate_url && tool.affiliate_url !== tool.website_url) {
+          // Show affiliate CTA if it exists and differs from website
+          ctaUrl = tool.affiliate_url;
+          ctaText = `Try ${tool.name}`;
+        } else {
+          // Otherwise show website CTA
+          ctaUrl = tool.website_url || '#';
+          ctaText = 'Visit Website';
+        }
+
+        // Description or fallback
+        const description = tool.description ||
+          'Explore what this tool can do and decide if it fits your workflow.';
+
+        // Domain
+        const domain = getDomain(tool.website_url);
+
+        // Tags
+        const hasTags = tool.tags && tool.tags.length > 0;
+
+        // Load pricing data
+        await loadPricing();
+        const pricingInfo = getPricingForTool(toolId);
+        const formattedPricing = formatPricing(pricingInfo, tool);
+
+        // Load description data
+        await loadDescriptions();
+        const shortDescription = getDescriptionForTool(toolId);
+        const displayDescription = shortDescription
+          ? formatDescription(shortDescription)
+          : 'Summary not yet available.';
+
+        // Load Use Cases (New)
+        await loadUseCases();
+        const useCases = getUseCasesForTool(toolId);
+
+        // Related tools
+        const relatedTools = getRandomRelated(getAllTools(), toolId, 6);
+
+        // Build HTML
+        let html = `
+          <div class="tool-detail-page">
+            <div class="tool-back-link">
+              <a href="/browse.html">← Back to Browse</a>
+            </div>
+
+            <div class="tool-hero">
+              <div class="tool-hero-meta">
+                <span class="tool-hero-category">${tool.category || 'Uncategorized'}</span>
+                ${formattedPricing.model !== 'Unknown' ? `<span class="tool-hero-pricing">${formattedPricing.model}</span>` : ''}
+              </div>
+              <h1>${tool.name}</h1>
+              <p class="tool-description">${displayDescription}</p>
+              
+              <div class="tool-cta-group">
+                <a href="${ctaUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-glow">
+                  ${ctaText}
+                </a>
+                <div class="tool-hero-domain">${domain}</div>
+              </div>
+            </div>
+
+            <div class="tool-info-grouped">
+              <div class="tool-info-card">
+                 <h3>Pricing & Access</h3>
+                 <div class="info-row">
+                    <span class="label">Free Tier</span>
+                    <span class="value">${formattedPricing.freeTier}</span>
+                 </div>
+                 <div class="info-row">
+                    <span class="label">Starting Price</span>
+                      ${formattedPricing.price}
+                      ${pricingInfo && pricingInfo.pricing_url ? `<a href="${pricingInfo.pricing_url}" target="_blank" rel="noopener" class="pricing-check-btn" style="margin-left:8px; font-size:12px;">Check plan</a>` : ''}
+                    </span>
+                 </div>
+              </div>
+
+               ${hasTags ? `
+              <div class="tool-info-card">
+                 <h3>Capabilities</h3>
+                 <div class="tags-container">
+                    ${tool.tags.map(tag => `<span class="tag-pill">${tag}</span>`).join('')}
+                 </div>
+              </div>
+              ` : ''}
+            </div>
+
+            ${useCases && useCases.length > 0 ? `
+            <div class="tool-section">
+              <h2>Best Use Cases</h2>
+              <ul class="tool-use-case-list">
+                ${useCases.map(uc => `<li>${uc}</li>`).join('')}
+              </ul>
+            </div>
+            ` : ''}
+
+            <div class="tool-section">
+              <h2>Related Tools</h2>
+              <div class="tool-related-grid">
+                ${relatedTools.map(related => `
+                  <div class="tool-related-card">
+                    <h3><a href="/tool.html?id=${encodeURIComponent(related.id)}">${related.name}</a></h3>
+                    <p class="tool-related-domain">${getDomain(related.website_url)}</p>
+                    <a href="/tool.html?id=${encodeURIComponent(related.id)}" class="btn btn-sm btn-secondary">View Tool</a>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+
+        container.innerHTML = html;
+
+      } catch (error) {
+        container.innerHTML = `
+          <div class="tool-not-found">
+            <h1>Error</h1>
+            <p>Failed to load tool data. Please refresh the page.</p>
+          </div>
+        `;
+      }
+    }
+
+    renderTool();
+  </script>
+</body>
+
+</html>

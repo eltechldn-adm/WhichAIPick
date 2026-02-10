@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My AI Tool Quiz — WhichAIPick</title>
+    <meta name="description"
+        content="Answer 5 quick questions to get personalized AI tool recommendations. Find the perfect tool for your specific workflow and budget.">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Find My AI Tool Quiz — WhichAIPick">
+    <meta property="og:description"
+        content="Answer 5 quick questions to get personalized AI tool recommendations. Find the perfect tool for your specific workflow and budget.">
+    <meta property="og:image" content="/assets/logo/logo-final.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Find My AI Tool Quiz — WhichAIPick">
+    <meta property="twitter:description"
+        content="Answer 5 quick questions to get personalized AI tool recommendations. Find the perfect tool for your specific workflow and budget.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/css/styles.css?v=fixheader1">
+    <link rel="stylesheet" href="/css/pages/find.css">
+</head>
+
+<body data-bg="search">
+    <div id="site-header"></div>
+
+    <main class="find-page">
+        <div class="page-container">
+            <!-- Quiz Container -->
+            <div id="quiz-container" class="quiz-container">
+                <div class="quiz-header">
+                    <h1>Find Your AI Tool</h1>
+                    <p class="quiz-subtitle">Answer a few questions to get personalized recommendations</p>
+                    <div id="progress-indicator" class="progress-indicator">
+                        <span id="progress-text">Question 1 of 5</span>
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Container -->
+                <div id="question-container" class="question-container">
+                    <!-- Questions will be rendered here by JavaScript -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="quiz-navigation">
+                    <button id="back-btn" class="btn btn-secondary" disabled>Back</button>
+                    <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+                </div>
+
+                <!-- Alternative Links -->
+                <div class="quiz-alternatives">
+                    <p>Prefer browsing? <a href="/browse.html">Browse all tools</a> or <a href="/search.html">Search</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Results Container -->
+            <div id="results-container" class="results-container" style="display: none;">
+                <div class="results-header">
+                    <h2>Your Recommended Tools</h2>
+                    <p class="results-subtitle">Based on your answers, here are the tools that best match your needs</p>
+                </div>
+
+                <!-- Top Categories -->
+                <div id="top-categories" class="top-categories">
+                    <!-- Categories will be rendered here -->
+                </div>
+
+                <!-- Recommended Tools -->
+                <div id="recommended-tools" class="recommended-tools">
+                    <!-- Tool cards will be rendered here -->
+                </div>
+
+                <!-- Actions -->
+                <div class="results-actions">
+                    <button id="start-over-btn" class="btn btn-primary">Start Over</button>
+                    <div class="alternative-links">
+                        <a href="/browse.html" class="btn btn-secondary">Browse All Tools</a>
+                        <a href="/search.html" class="btn btn-secondary">Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="/js/main.js?v=1.2"></script>
+    <script src="/js/find.js?v=1.2"></script>
+    <script src="/js/layout.js?v=1.2" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "framer-ai",
+    "name": "Framer AI",
+    "url": "https://framer-ai.com"
+  },
+  {
+    "id": "frase",
+    "name": "Frase",
+    "url": "https://www.frase.io/"
+  },
+  {
+    "id": "freshdesk-ai",
+    "name": "Freshdesk AI",
+    "url": "https://www.freshworks.com/freshdesk/"
+  },
+  {
+    "id": "galileo-ai",
+    "name": "Galileo AI",
+    "url": "https://galileo.ai/"
+  },
+  {
+    "id": "glass-health",
+    "name": "Glass Health",
+    "url": "https://glass.health/"
+  },
+  {
+    "id": "glide",
+    "name": "Glide",
+    "url": "https://www.glideapps.com/"
+  },
+  {
+    "id": "gong",
+    "name": "Gong",
+    "url": "https://www.gong.io/"
+  },
+  {
+    "id": "google-ai-studio",
+    "name": "Google AI Studio",
+    "url": "https://aistudio.google.com/welcome"
+  },
+  {
+    "id": "gradescope-ai",
+    "name": "Gradescope AI",
+    "url": "https://www.gradescope.com/"
+  },
+  {
+    "id": "grain",
+    "name": "Grain",
+    "url": "https://grain.com"
+  },
+  {
+    "id": "gridlex",
+    "name": "Gridlex",
+    "url": "https://gridlex.com"
+  },
+  {
+    "id": "growthbar",
+    "name": "GrowthBar",
+    "url": "https://www.seoptimer.com/growthbar/"
+  },
+  {
+    "id": "happy-scribe",
+    "name": "Happy Scribe",
+    "url": "https://transkriptor.com/"
+  },
+  {
+    "id": "harvey-ai",
+    "name": "Harvey AI",
+    "url": "https://www.harvey.ai/"
+  },
+  {
+    "id": "help-scout-ai",
+    "name": "Help Scout AI",
+    "url": "https://www.helpscout.com/"
+  },
+  {
+    "id": "hex",
+    "name": "Hex",
+    "url": "https://hex.tech/"
+  },
+  {
+    "id": "hootsuite-insights",
+    "name": "Hootsuite Insights",
+    "url": "https://www.hootsuite.com/"
+  },
+  {
+    "id": "hostinger-ai-builder",
+    "name": "Hostinger AI Builder",
+    "url": "https://www.hostinger.com/ai-website-builder"
+  },
+  {
+    "id": "hyperwrite",
+    "name": "HyperWrite",
+    "url": "https://www.hyperwriteai.com/"
+  },
+  {
+    "id": "instantlyai",
+    "name": "Instantly.ai",
+    "url": "https://instantly.ai/"
+  },
+  {
+    "id": "intercom-fin",
+    "name": "Intercom Fin",
+    "url": "https://fin.ai/"
+  },
+  {
+    "id": "jasper-ai",
+    "name": "Jasper AI",
+    "url": "https://www.jasper.ai/"
+  },
+  {
+    "id": "jenni-ai",
+    "name": "Jenni AI",
+    "url": "https://jenni.ai/"
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "url": "https://julius.ai/"
+  },
+  {
+    "id": "kapwing",
+    "name": "Kapwing",
+    "url": "https://www.kapwing.com/"
+  },
+  {
+    "id": "khan-academy-khanmigo",
+    "name": "Khan Academy Khanmigo",
+    "url": "https://www.khanacademy.org/khanmigo"
+  },
+  {
+    "id": "khroma",
+    "name": "Khroma",
+    "url": "https://www.khroma.co/"
+  },
+  {
+    "id": "kickresume",
+    "name": "Kickresume",
+    "url": "https://www.kickresume.com/en/"
+  },
+  {
+    "id": "krisp",
+    "name": "Krisp",
+    "url": "https://krisp.ai/"
+  },
+  {
+    "id": "kustomer-ai",
+    "name": "Kustomer AI",
+    "url": "https://www.kustomer.com/"
+  },
+  {
+    "id": "lalalai",
+    "name": "Lalal.ai",
+    "url": "https://www.lalal.ai/"
+  },
+  {
+    "id": "landbot",
+    "name": "Landbot",
+    "url": "https://landbot.io/"
+  },
+  {
+    "id": "lately",
+    "name": "Lately",
+    "url": "https://www.lately.ai/"
+  },
+  {
+    "id": "lavender",
+    "name": "Lavender",
+    "url": "https://www.lavender.ai/"
+  },
+  {
+    "id": "lawgeex",
+    "name": "Lawgeex",
+    "url": "https://www.lawgeex.com/"
+  },
+  {
+    "id": "lazyapply",
+    "name": "LazyApply",
+    "url": "https://lazyapply.com"
+  },
+  {
+    "id": "legalmation",
+    "name": "LegalMation",
+    "url": "https://www.legalmation.com/"
+  },
+  {
+    "id": "lemlist",
+    "name": "Lemlist",
+    "url": "https://www.lemlist.com/"
+  },
+  {
+    "id": "let's-enhance",
+    "name": "Let's Enhance",
+    "url": "https://letsenhance.io/vi"
+  },
+  {
+    "id": "lex",
+    "name": "Lex",
+    "url": "https://lex.page/"
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev/"
+  },
+  {
+    "id": "luminar-neo",
+    "name": "Luminar Neo",
+    "url": "https://skylum.com/luminar"
+  },
+  {
+    "id": "magical",
+    "name": "Magical",
+    "url": "https://magicalai.io/"
+  },
+  {
+    "id": "magician-figma",
+    "name": "Magician (Figma)",
+    "url": "https://www.figma.com/community/file/1199636859443039625/ai-magician-playground"
+  },
+  {
+    "id": "magicschool-ai",
+    "name": "MagicSchool AI",
+    "url": "https://www.magicschool.ai/"
+  },
+  {
+    "id": "make-integromat",
+    "name": "Make (Integromat)",
+    "url": "https://www.make.com/en"
+  },
+  {
+    "id": "manus",
+    "name": "Manus",
+    "url": "https://manus.im/"
+  },
+  {
+    "id": "manychat",
+    "name": "ManyChat",
+    "url": "https://manychat.com/"
+  },
+  {
+    "id": "marketmuse",
+    "name": "MarketMuse",
+    "url": "https://www.marketmuse.com/"
+  },
+  {
+    "id": "mem",
+    "name": "Mem",
+    "url": "https://get.mem.ai/"
+  },
+  {
+    "id": "memorable",
+    "name": "Memorable",
+    "url": "https://www.memorable.io/m/www.memorable.io/"
+  },
+  {
+    "id": "microsoft-power-automate",
+    "name": "Microsoft Power Automate",
+    "url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/"
+  },
+  {
+    "id": "mintlify-writer",
+    "name": "Mintlify Writer",
+    "url": "https://www.mintlify.com/"
+  },
+  {
+    "id": "mockup-ai",
+    "name": "Mockup AI",
+    "url": "https://www.mokkup.ai/"
+  },
+  {
+    "id": "monarch-money",
+    "name": "Monarch Money",
+    "url": "https://monarch-money.com/"
+  },
+  {
+    "id": "monkeylearn",
+    "name": "MonkeyLearn",
+    "url": "https://www.medallia.com/platform/text-analytics/?utm_campaign=monkeylearnmigration/???"
+  },
+  {
+    "id": "motion",
+    "name": "Motion",
+    "url": "https://www.motion.ai/"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "url": "https://n8n.io/"
+  },
+  {
+    "id": "nabla-copilot",
+    "name": "Nabla Copilot",
+    "url": "https://www.nabla.com/"
+  },
+  {
+    "id": "nano-banana",
+    "name": "Nano Banana",
+    "url": "https://nanabanana.ai/"
+  },
+  {
+    "id": "neuronwriter",
+    "name": "NeuronWriter",
+    "url": "https://neuronwriter.com"
+  },
+  {
+    "id": "nightcafe",
+    "name": "NightCafe",
+    "url": "https://creator.nightcafe.studio/"
+  },
+  {
+    "id": "nosto",
+    "name": "Nosto",
+    "url": "https://www.nosto.com/"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "url": "https://www.notion.com/en-gb"
+  },
+  {
+    "id": "ocoya",
+    "name": "Ocoya",
+    "url": "https://www.ocoya.com/"
+  },
+  {
+    "id": "octane-ai",
+    "name": "Octane AI",
+    "url": "https://www.octaneai.com/"
+  },
+  {
+    "id": "omneky",
+    "name": "Omneky",
+    "url": "https://www.omneky.com/"
+  },
+  {
+    "id": "openai-api",
+    "name": "OpenAI API",
+    "url": "https://openai.com/api/"
+  },
+  {
+    "id": "otterai",
+    "name": "Otter.ai",
+    "url": "https://otter.ai/"
+  },
+  {
+    "id": "pencil",
+    "name": "Pencil",
+    "url": "https://www.pencil.dev/"
+  },
+  {
+    "id": "perplexity-ai",
+    "name": "Perplexity AI",
+    "url": "https://www.perplexity.ai/"
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "url": "https://phindai.org/"
+  },
+  {
+    "id": "photor",
+    "name": "Photor",
+    "url": "https://www.fotor.com/ai/"
+  },
+  {
+    "id": "pieces",
+    "name": "Pieces",
+    "url": "https://pieces.app/"
+  },
+  {
+    "id": "pitch",
+    "name": "Pitch",
+    "url": "https://pitch.com"
+  },
+  {
+    "id": "pixlr-ai",
+    "name": "Pixlr AI",
+    "url": "https://pixlr.com/"
+  },
+  {
+    "id": "pixray",
+    "name": "Pixray",
+    "url": "https://replicate.com/pixray/text2image"
+  },
+  {
+    "id": "polyai",
+    "name": "PolyAI",
+    "url": "https://poly.ai/"
+  },
+  {
+    "id": "polymer",
+    "name": "Polymer",
+    "url": "https://www.polymersearch.com/"
+  },
+  {
+    "id": "postwise",
+    "name": "Postwise",
+    "url": "https://postwise.ai/"
+  }
+]

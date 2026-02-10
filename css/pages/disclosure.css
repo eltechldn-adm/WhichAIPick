@@ -1,0 +1,52 @@
+/* ========== PAGE: DISCLOSURE ========== */
+
+/* Disclosure Content Container */
+.disclosure-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.disclosure-content h1 {
+    color: #F5A623;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Disclosure Sections */
+.disclosure-section {
+    margin-bottom: 40px;
+}
+
+.disclosure-section h2 {
+    color: #F5A623;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.disclosure-section p {
+    color: #F4F4F4;
+    opacity: 0.9;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.disclosure-section a {
+    color: #F5A623;
+    text-decoration: none;
+}
+
+.disclosure-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Disclosure */
+@media (max-width: 768px) {
+    .disclosure-content h1 {
+        font-size: 2rem;
+    }
+
+    .disclosure-section h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,388 @@
+/* ========== PAGE: TOOL DETAIL (BASE44-LEVEL POLISH - Phase 4.2c) ========== */
+
+/* Tool Detail Page Container */
+.tool-detail-page {
+    max-width: 900px;
+    /* Slightly wider for better breathing room */
+    margin: 0 auto;
+    padding-bottom: var(--space-8);
+}
+
+/* Back Link */
+.tool-back-link {
+    margin-bottom: var(--space-6);
+    padding-top: var(--space-4);
+}
+
+.tool-back-link a {
+    color: var(--c-text-muted);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: all var(--t-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--r-full);
+}
+
+.tool-back-link a:hover {
+    color: var(--c-accent);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(-4px);
+}
+
+/* Tool Hero Section */
+.tool-hero {
+    text-align: center;
+    margin-bottom: var(--space-8);
+    position: relative;
+    padding: var(--space-6) 0;
+    border-bottom: 1px solid var(--c-border);
+}
+
+/* Hero Meta (Category & Pricing Badges) */
+.tool-hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.tool-hero-category,
+.tool-hero-pricing {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border-radius: var(--r-full);
+    font-weight: 600;
+}
+
+.tool-hero-category {
+    background: rgba(245, 166, 35, 0.1);
+    color: var(--c-accent);
+    border: 1px solid rgba(245, 166, 35, 0.2);
+}
+
+.tool-hero-pricing {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--c-text-muted);
+    border: 1px solid var(--c-border);
+}
+
+.tool-hero h1 {
+    color: var(--c-accent);
+    font-size: var(--text-3xl);
+    /* Desktop size */
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(245, 166, 35, 0.1);
+}
+
+@media (min-width: 768px) {
+    .tool-hero h1 {
+        font-size: 3.5rem;
+        /* Larger on desktop */
+    }
+}
+
+.tool-description {
+    font-size: var(--text-lg);
+    color: var(--c-text);
+    opacity: 0.9;
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA Group - Conversion Focus */
+.tool-cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+.btn-lg {
+    padding: 18px 48px;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    min-width: 240px;
+}
+
+.btn-glow {
+    background: var(--c-accent);
+    color: #0F1215;
+    box-shadow: 0 0 24px rgba(245, 166, 35, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-glow:hover {
+    background: #FFBB3D;
+    box-shadow: 0 0 40px rgba(245, 166, 35, 0.5);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.tool-hero-domain {
+    font-size: var(--text-sm);
+    color: var(--c-text-muted);
+    opacity: 0.6;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+}
+
+/* Tool Info Grouped (Cards) */
+.tool-info-grouped {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+}
+
+.tool-info-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-1);
+    transition: transform var(--t-med);
+}
+
+.tool-info-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(245, 166, 35, 0.3);
+}
+
+.tool-info-card h3 {
+    margin: 0 0 var(--space-5) 0;
+    font-size: var(--text-lg);
+    color: var(--c-accent);
+    border-bottom: 1px solid var(--c-border);
+    padding-bottom: var(--space-3);
+    font-weight: 600;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    align-items: center;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-row .label {
+    color: var(--c-text-muted);
+    font-size: var(--text-sm);
+}
+
+.info-row .value {
+    color: var(--c-text);
+    font-weight: 600;
+    font-size: var(--text-base);
+    text-align: right;
+}
+
+/* Tags */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.tag-pill {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--c-text);
+    font-size: var(--text-xs);
+    padding: 6px 12px;
+    border-radius: var(--r-md);
+    border: 1px solid transparent;
+    transition: all var(--t-fast);
+}
+
+.tag-pill:hover {
+    border-color: var(--c-border);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tool Sections (Use Cases & Related) */
+.tool-section {
+    margin-bottom: var(--space-12);
+}
+
+.tool-section h2 {
+    color: var(--c-text);
+    /* White text, not accent for headers lower down */
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-6);
+    position: relative;
+    padding-left: var(--space-4);
+}
+
+.tool-section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background: var(--c-accent);
+    border-radius: var(--r-full);
+}
+
+/* Use Case List */
+.tool-use-case-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-4);
+}
+
+.tool-use-case-list li {
+    background: var(--c-surface);
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--r-lg);
+    color: var(--c-text);
+    font-size: var(--text-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    border: 1px solid var(--c-border);
+    transition: all var(--t-fast);
+}
+
+.tool-use-case-list li:hover {
+    background: var(--c-surface-hover);
+    transform: translateX(4px);
+    border-color: rgba(245, 166, 35, 0.3);
+}
+
+.tool-use-case-list li::before {
+    content: "✓";
+    color: var(--c-accent);
+    font-weight: 800;
+    font-size: var(--text-lg);
+    flex-shrink: 0;
+}
+
+/* Related Tools Grid (Matches Browse) */
+.tool-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-5);
+}
+
+.tool-related-card {
+    background: var(--c-surface);
+    padding: var(--space-5);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border);
+    transition: all var(--t-med);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-related-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 166, 35, 0.3);
+    box-shadow: var(--shadow-2);
+    background: var(--c-surface-hover);
+}
+
+.tool-related-card h3 {
+    margin: 0 0 var(--space-2) 0;
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.tool-related-card h3 a {
+    color: var(--c-accent);
+    text-decoration: none;
+}
+
+.tool-related-domain {
+    color: var(--c-text-muted);
+    opacity: 0.6;
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-4);
+    flex-grow: 1;
+}
+
+.tool-related-card .btn-sm {
+    align-self: flex-start;
+    width: 100%;
+}
+
+/* Phase 2: Pricing Check Link Style */
+.pricing-check-btn {
+    color: var(--c-accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--text-xs);
+    border-bottom: 1px dotted rgba(245, 166, 35, 0.4);
+    transition: all var(--t-fast);
+}
+
+.pricing-check-btn:hover {
+    color: #FFBB3D;
+    border-bottom-style: solid;
+}
+
+/* Tool Not Found */
+.tool-not-found {
+    text-align: center;
+    padding: var(--space-12) var(--space-5);
+}
+
+.tool-not-found h1 {
+    color: var(--c-accent);
+    margin-bottom: var(--space-4);
+    font-size: 2.5rem;
+}
+
+.tool-not-found p {
+    color: var(--c-text-muted);
+    margin-bottom: var(--space-6);
+    font-size: var(--text-lg);
+}
+
+/* Responsive Tool Page */
+@media (max-width: 768px) {
+    .tool-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .tool-info-grouped {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-cta-group {
+        width: 100%;
+    }
+
+    .btn-lg {
+        width: 100%;
+    }
+
+    .tool-section h2 {
+        font-size: 1.5rem;
+    }
+}

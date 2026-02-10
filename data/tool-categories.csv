@@ -1,0 +1,390 @@
+id,category
+10web,Development
+activepieces,Automation
+ada,Business
+adalo,Development
+adcreativeai,Marketing
+adobe-firefly,Design
+aiva,Video & Audio
+amazon-codewhisperer,Development
+anyword,Content Creation
+artbreeder,Design
+askcodi,Development
+assemblyai,Video & Audio
+automator,Automation
+bardeen,Automation
+beatoven,Video & Audio
+beautifulai,Design
+bildr,Development
+blackbox-ai,Development
+bluewillow,Design
+booke-ai,Business
+boomy,Video & Audio
+botpress,Business
+brandmark,Design
+brisk-teaching,Education
+bubble,Development
+buffer-ai-assistant,Marketing
+canva-ai,Design
+chatfuel,Business
+chatgpt,Productivity
+chatgpt-advanced-data-analysis,Research
+clipchamp,Video & Audio
+clipdrop,Design
+clickup-ai,Productivity
+claude,Productivity
+cleanup.pictures,Design
+clearscope,Marketing
+coda-ai,Productivity
+codeium,Development
+codex-openai,Development
+cognii,Education
+colormind,Design
+colossyan,Video & Audio
+consensus,Research
+contentbot,Content Creation
+contentshake-ai,Content Creation
+contentstudio,Content Creation
+continue,Development
+copyai,Content Creation
+copysmith,Content Creation
+coursebox,Education
+craiyon,Design
+creatify,Video & Audio
+cursor,Development
+d-id,Video & Audio
+dall-e-3,Design
+datarobot,Research
+debuild,Development
+decktopus,Design
+deepgram,Video & Audio
+descript,Video & Audio
+designify,Design
+dify,Development
+drift,Business
+duet-ai,Productivity
+eduaide-ai,Education
+elicit,Research
+elevenlabs,Video & Audio
+fireflies-ai,Productivity
+fliki,Video & Audio
+forefront-ai,Development
+framer,Design
+gamma,Design
+gemini,Productivity
+github-copilot,Development
+glean,Productivity
+google-bard,Productivity
+gradescope,Education
+grammarly,Content Creation
+guidde,Video & Audio
+heygen,Video & Audio
+hoppy-copy,Content Creation
+hubspot,Marketing
+hugging-face,Development
+hypotenuse-ai,Content Creation
+iask-ai,Research
+ideogram,Design
+inpaint,Design
+intercom,Business
+invideo,Video & Audio
+jasper,Content Creation
+kaiber,Video & Audio
+leonardo-ai,Design
+lexica,Design
+loom,Video & Audio
+looka,Design
+lumen5,Video & Audio
+lunit,Research
+magicstudio,Design
+make,Automation
+markcopy,Content Creation
+memberai,Business
+midjourney,Design
+murf-ai,Video & Audio
+namecheap,Business
+notion-ai,Productivity
+openai-sora,Video & Audio
+otter-ai,Productivity
+perplexity,Research
+pexelsai,Design
+photoroom,Design
+pictory,Video & Audio
+pika,Video & Audio
+playground-ai,Design
+podcastle,Video & Audio
+popai,Content Creation
+potion,Video & Audio
+prepo,Video & Audio
+promptbase,Development
+promptly,Development
+quillbot,Content Creation
+runway,Video & Audio
+rytr,Content Creation
+scalenut,Content Creation
+sembly-ai,Productivity
+semanticscholar,Research
+sendinblue-brevo,Marketing
+sendsteps,Business
+shutterstock-ai,Design
+simplified,Design
+slidesai,Design
+soundraw,Video & Audio
+speechify,Video & Audio
+stability-ai,Design
+stable-diffusion,Design
+sudowrite,Content Creation
+synthesia,Video & Audio
+tableau,Research
+tabnine,Development
+taskade,Productivity
+tome,Design
+tray,Automation
+typefully,Content Creation
+unscreen,Video & Audio
+upscaler,Design
+validatorai,Business
+veed,Video & Audio
+vondy,Design
+wave-ai,Video & Audio
+weaviate,Development
+webflow,Development
+wistia,Video & Audio
+wordtune,Content Creation
+writesonic,Content Creation
+zapier,Automation
+zendesk,Business
+ai21-labs,Development
+akkio,Business
+anthropic-claude-api,Development
+appgyver,Development
+attention-insight,Design
+avoma,Productivity
+base44,Business
+bing-chat,Research
+bolt,Development
+breeze-ai,Marketing
+canva,Design
+capcut,Video & Audio
+casetext-cocounsel,Business
+chorusai,Business
+cleanuppictures,Design
+cleo,Business
+clerkio,Marketing
+cohere-api,Development
+craft,Development
+deepai,Development
+describely,Content Creation
+descript-overdub,Video & Audio
+diagram,Development
+docyt,Business
+donotpay,Business
+dora-run,Design
+dreamstudio,Design
+duolingo-max,Education
+durable,Development
+educaidor,Education
+fathom,Productivity
+feedhive,Marketing
+fig,Development
+figma,Design
+finalround-ai,Education
+finance-pal,Business
+finch,Design
+firefliesai,Productivity
+flutterflow,Development
+forethought,Business
+framer-ai,Design
+frase,Content Creation
+freshdesk-ai,Business
+galileo-ai,Design
+glass-health,Research
+glide,Development
+gong,Business
+google-ai-studio,Development
+gradescope-ai,Education
+grain,Productivity
+gridlex,Business
+growthbar,Marketing
+happy-scribe,Video & Audio
+harvey-ai,Business
+help-scout-ai,Business
+hex,Research
+hootsuite-insights,Marketing
+hostinger-ai-builder,Development
+hyperwrite,Content Creation
+instantlyai,Marketing
+intercom-fin,Business
+jasper-ai,Content Creation
+jenni-ai,Research
+julius-ai,Research
+kapwing,Video & Audio
+khan-academy-khanmigo,Education
+khroma,Design
+kickresume,Productivity
+krisp,Video & Audio
+kustomer-ai,Business
+lalalai,Video & Audio
+landbot,Marketing
+lately,Marketing
+lavender,Marketing
+lawgeex,Business
+lazyapply,Productivity
+legalmation,Business
+lemlist,Marketing
+let's-enhance,Design
+lex,Content Creation
+lovable,Development
+luminar-neo,Design
+magical,Productivity
+magician-figma,Design
+magicschool-ai,Education
+make-integromat,Automation
+manus,Research
+manychat,Marketing
+marketmuse,Content Creation
+mem,Productivity
+memorable,Marketing
+microsoft-power-automate,Automation
+mintlify-writer,Development
+mockup-ai,Design
+monarch-money,Business
+monkeylearn,Research
+motion,Productivity
+n8n,Automation
+nabla-copilot,Business
+nano-banana,Research
+neuronwriter,Content Creation
+nightcafe,Design
+nosto,Marketing
+notion,Productivity
+ocoya,Marketing
+octane-ai,Marketing
+omneky,Marketing
+openai-api,Development
+otterai,Productivity
+pencil,Design
+perplexity-ai,Research
+phind,Development
+photor,Design
+pieces,Development
+pitch,Design
+pixlr-ai,Design
+pixray,Design
+polyai,Business
+polymer,Research
+postwise,Marketing
+predisai,Marketing
+presentationsai,Design
+prowritingaid,Content Creation
+quickads,Marketing
+quizizz-ai,Education
+quizlet-q-chat,Education
+rasa,Development
+readai,Productivity
+readdy-ai,Design
+rebuy,Marketing
+reclaim,Productivity
+reflect,Productivity
+regieai,Business
+relay,Automation
+relume,Design
+remini,Design
+removebg,Design
+replai,Marketing
+replicate,Development
+replika,Productivity
+replit,Development
+replit-ai,Development
+replyio,Marketing
+research-rabbit,Research
+resemble-ai,Video & Audio
+resume-worded,Productivity
+retool,Development
+rev-ai,Video & Audio
+rezi,Productivity
+rows,Business
+scholarcy,Research
+scispace,Research
+sembly,Productivity
+semrush,Marketing
+shopify-magic,Business
+shortly-ai,Content Creation
+shortwave,Productivity
+sivi-ai,Design
+slidespeak,Productivity
+smartwriter,Marketing
+softr,Development
+sonara,Productivity
+sora,Video & Audio
+sourcegraph-cody,Development
+spark,Business
+speedy-brand,Marketing
+spellbook,Business
+starryai,Design
+suno,Video & Audio
+superhuman,Productivity
+surfer-seo,Marketing
+tableau-ai,Research
+tana,Productivity
+taplio,Marketing
+teal,Productivity
+textcortex,Content Creation
+thoughtspot,Research
+tidio,Business
+tl;dv,Productivity
+together-ai,Development
+topaz-ai,Design
+trayio,Automation
+trint,Video & Audio
+twain,Business
+tweet-hunter,Marketing
+uizard,Design
+ultimateai,Business
+unicorn-platform,Development
+upscalemedia,Design
+v0-by-vercel,Development
+vicai,Business
+visenze,Business
+voiceflow,Development
+warmerai,Marketing
+warp,Development
+wix-ai,Development
+woebot,Productivity
+workato,Automation
+writecream,Content Creation
+wysa,Productivity
+yellowai,Business
+yoodli,Education
+youcom,Research
+youper,Productivity
+zapier-ai,Automation
+zendesk-ai,Business
+zipchat,Business
+google-gemini,Productivity
+google-ai-studio,Development
+openai-playground,Development
+microsoft-copilot,Productivity
+perplexity-pages,Research
+meta-ai,Research
+amazon-q,Business
+apple-intelligence,Productivity
+replit-ai,Development
+antigravity,Development
+lovable,Development
+bolt,Development
+vercel-ai-sdk,Development
+langchain,Development
+llamaindex,Development
+cloudflare-workers-ai,Development
+elevenlabs,Video & Audio
+suno,Video & Audio
+udio,Video & Audio
+luma-ai,Video & Audio
+pika-labs,Video & Audio
+leonardo-ai,Design
+ideogram,Design
+otterai,Productivity
+firefliesai,Productivity
+hubspot-ai,Business
+salesforce-einstein,Business

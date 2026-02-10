@@ -1,0 +1,182 @@
+[
+  {
+    "id": "10web",
+    "name": "10Web",
+    "website_url": "https://10web.io/",
+    "category": "Development"
+  },
+  {
+    "id": "activepieces",
+    "name": "ActivePieces",
+    "website_url": "https://www.activepieces.com/",
+    "category": "Automation"
+  },
+  {
+    "id": "ada",
+    "name": "Ada",
+    "website_url": "https://ada.com",
+    "category": "Business"
+  },
+  {
+    "id": "adalo",
+    "name": "Adalo",
+    "website_url": "https://www.adalo.com/",
+    "category": "Development"
+  },
+  {
+    "id": "adcreativeai",
+    "name": "AdCreative.ai",
+    "website_url": "https://www.adcreative.ai/",
+    "category": "Marketing"
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "website_url": "https://www.adobe.com/products/firefly.html",
+    "category": "Design"
+  },
+  {
+    "id": "ai21-labs",
+    "name": "AI21 Labs",
+    "website_url": "https://www.ai21.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "aiva",
+    "name": "AIVA",
+    "website_url": "https://www.aiva.ai/",
+    "category": "Video & Audio"
+  },
+  {
+    "id": "akkio",
+    "name": "Akkio",
+    "website_url": "https://www.akkio.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "amazon-codewhisperer",
+    "name": "Amazon CodeWhisperer",
+    "website_url": "https://docs.aws.amazon.com/codewhisperer/",
+    "category": "Development"
+  },
+  {
+    "id": "anthropic-claude-api",
+    "name": "Anthropic Claude API",
+    "website_url": "https://www.anthropic.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "anyword",
+    "name": "Anyword",
+    "website_url": "https://www.anyword.com/",
+    "category": "Content Creation"
+  },
+  {
+    "id": "appgyver",
+    "name": "AppGyver",
+    "website_url": "https://appmaster.io/appgyver",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "artbreeder",
+    "name": "Artbreeder",
+    "website_url": "https://www.artbreeder.com/",
+    "category": "Design"
+  },
+  {
+    "id": "askcodi",
+    "name": "AskCodi",
+    "website_url": "https://askcodi.com",
+    "category": "Development"
+  },
+  {
+    "id": "assemblyai",
+    "name": "AssemblyAI",
+    "website_url": "https://www.assemblyai.com/",
+    "category": "Video & Audio"
+  },
+  {
+    "id": "attention-insight",
+    "name": "Attention Insight",
+    "website_url": "https://attentioninsight.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "automator",
+    "name": "Automator",
+    "website_url": "https://automator.ai/",
+    "category": "Automation"
+  },
+  {
+    "id": "avoma",
+    "name": "Avoma",
+    "website_url": "https://www.avoma.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "bardeen",
+    "name": "Bardeen",
+    "website_url": "https://www.bardeen.ai/",
+    "category": "Automation"
+  },
+  {
+    "id": "base44",
+    "name": "Base44",
+    "website_url": "https://base44.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "beatoven",
+    "name": "Beatoven",
+    "website_url": "https://www.beatoven.ai/",
+    "category": "Video & Audio"
+  },
+  {
+    "id": "beautifulai",
+    "name": "Beautiful.ai",
+    "website_url": "https://www.pearme.ai/",
+    "category": "Design"
+  },
+  {
+    "id": "bildr",
+    "name": "Bildr",
+    "website_url": "https://www.bildr.com/",
+    "category": "Development"
+  },
+  {
+    "id": "bing-chat",
+    "name": "Bing Chat",
+    "website_url": "https://copilot.microsoft.com/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "blackbox-ai",
+    "name": "BlackBox AI",
+    "website_url": "https://www.blackbox.ai/",
+    "category": "Development"
+  },
+  {
+    "id": "bluewillow",
+    "name": "BlueWillow",
+    "website_url": "https://www.bluewillow.ai/",
+    "category": "Design"
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt.new",
+    "website_url": "https://bolt.new/",
+    "category": "Uncategorized"
+  },
+  {
+    "id": "booke-ai",
+    "name": "Booke AI",
+    "website_url": "https://booke.ai/uk",
+    "category": "Business"
+  },
+  {
+    "id": "boomy",
+    "name": "Boomy",
+    "website_url": "https://boomy.com/",
+    "category": "Video & Audio"
+  }
+]

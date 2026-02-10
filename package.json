@@ -1,0 +1,14 @@
+{
+  "name": "whichaipick",
+  "version": "1.0.0",
+  "description": "AI tool discovery and comparison platform",
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/convert-xlsx-to-tools-json.mjs",
+    "generate:favicons": "node scripts/generate-favicons.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0",
+    "xlsx": "^0.18.5"
+  }
+}

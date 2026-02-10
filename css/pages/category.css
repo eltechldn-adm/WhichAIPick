@@ -1,0 +1,188 @@
+/* ========== PAGE: CATEGORY (BASE44-LEVEL POLISH - Phase 4.2b) ========== */
+
+/* Category Hero */
+.category-hero {
+    text-align: center;
+    margin-bottom: var(--space-8);
+    position: relative;
+}
+
+.category-hero::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--c-accent);
+    margin: var(--space-6) auto 0;
+    border-radius: var(--r-full);
+    opacity: 0.5;
+}
+
+.category-hero h1 {
+    color: var(--c-accent);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.category-subtitle {
+    color: var(--c-text-muted);
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Category Navigator - "Hub" Feel */
+.category-navigator {
+    margin-bottom: var(--space-12);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+@media (max-width: 640px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        /* Stack on mobile for easier tapping */
+    }
+}
+
+.category-nav-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    padding: var(--space-5);
+    text-align: center;
+    text-decoration: none;
+    transition: all var(--t-fast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.category-nav-card:hover {
+    background: var(--c-surface-hover);
+    border-color: rgba(245, 166, 35, 0.4);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+}
+
+.category-nav-card.active {
+    background: rgba(245, 166, 35, 0.05);
+    /* Very subtle tint */
+    border-color: var(--c-accent);
+    box-shadow: 0 0 0 1px var(--c-accent);
+    /* Crisp active border */
+}
+
+.category-nav-name {
+    color: var(--c-text);
+    font-size: var(--text-base);
+    font-weight: 600;
+    transition: color var(--t-fast);
+}
+
+.category-nav-card:hover .category-nav-name,
+.category-nav-card.active .category-nav-name {
+    color: var(--c-accent);
+}
+
+.category-nav-count {
+    color: var(--c-text-muted);
+    font-size: var(--text-xs);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: var(--r-full);
+}
+
+/* Category Results */
+.category-results {
+    margin-top: var(--space-8);
+}
+
+.category-results-header {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.category-results-header h2 {
+    color: var(--c-text);
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-2);
+}
+
+.category-count {
+    color: var(--c-text-muted);
+    font-size: var(--text-base);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Category Prompt */
+.category-prompt {
+    text-align: center;
+    padding: var(--space-12) var(--space-5);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--r-lg);
+    border: 1px dashed var(--c-border);
+}
+
+.category-prompt p {
+    color: var(--c-text-muted);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-6);
+}
+
+/* Category List Grid - Matches Browse */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+@media (max-width: 640px) {
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Category Empty State */
+.category-empty {
+    text-align: center;
+    padding: var(--space-12) var(--space-5);
+    background: var(--c-surface);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--c-border);
+}
+
+.category-empty h2 {
+    color: var(--c-accent);
+    font-size: 2rem;
+    margin-bottom: var(--space-4);
+}
+
+.category-empty p {
+    color: var(--c-text-muted);
+    margin-bottom: var(--space-6);
+    font-size: var(--text-lg);
+}
+
+/* Responsive Category */
+@media (max-width: 768px) {
+    .category-hero h1 {
+        font-size: 2rem;
+    }
+
+    .category-results-header h2 {
+        font-size: 1.75rem;
+    }
+}

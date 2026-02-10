@@ -1,0 +1,83 @@
+/* ========== PAGE: SEARCH ========== */
+
+/* Search Hero Area */
+.search-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.search-hero h1 {
+    color: #F5A623;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.search-hero p {
+    color: #F4F4F4;
+    opacity: 0.8;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Search Input Container */
+.search-input-container {
+    margin-bottom: 20px;
+}
+
+.search-input-container input[type="search"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px 20px;
+    font-size: 18px;
+    background: rgba(42, 46, 51, 0.9);
+    border: 2px solid #2A2E33;
+    border-radius: 6px;
+    color: #F4F4F4;
+    transition: border-color 0.2s;
+}
+
+.search-input-container input[type="search"]:focus {
+    outline: none;
+    border-color: #F5A623;
+}
+
+/* Search Stats */
+.search-stats {
+    color: #F4F4F4;
+    opacity: 0.7;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Search Results Container */
+#search-results {
+    margin-top: 40px;
+}
+
+/* Search Empty State */
+.search-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #F4F4F4;
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+/* Search List (Grid) */
+.search-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Responsive Search */
+@media (max-width: 768px) {
+    .search-hero h1 {
+        font-size: 2rem;
+    }
+
+    .search-input-container input[type="search"] {
+        font-size: 16px;
+    }
+}

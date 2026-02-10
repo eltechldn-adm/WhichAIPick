@@ -1,0 +1,694 @@
+/* WhichAIPick - Phase 3: Home Hero Video Integration */
+
+/* ===================================
+   HERO VIDEO SECTION (Home Page Only)
+   =================================== */
+
+/* Hero Container */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0F1215;
+  /* Fallback background image if exists */
+  background-image: url('/assets/backgrounds/home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark Overlay for Text Readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 18, 21, 0.65);
+  z-index: 2;
+}
+
+/* Hero Content Layer */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 40px 20px;
+}
+
+.hero-headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #F4F4F4;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-subheadline {
+  font-size: 1.3rem;
+  color: #F4F4F4;
+  opacity: 0.95;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Reduced Motion Support - Hide video, show fallback */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+
+  .hero {
+    /* Fallback to solid background or static image only */
+    background-color: #0F1215;
+  }
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.1rem;
+  }
+
+  .hero-content {
+    padding: 30px 15px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===================================
+   END HERO SECTION
+   =================================== */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #0F1215;
+  color: #F4F4F4;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===================================
+   GLOBAL BACKGROUND SYSTEM (Phase 4)
+   =================================== */
+
+/* Background Layer for Pages with [data-bg] */
+body[data-bg]::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Fallback solid background */
+  background-color: #0F1215;
+  /* Dynamic background image based on data-bg attribute */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Specific background images for each page */
+body[data-bg="browse"]::before {
+  background-image: url('/assets/backgrounds/browse-bg.jpg');
+}
+
+body[data-bg="search"]::before {
+  background-image: url('/assets/backgrounds/search-bg.jpg');
+}
+
+body[data-bg="category"]::before {
+  background-image: url('/assets/backgrounds/category-bg.jpg');
+}
+
+body[data-bg="tool"]::before {
+  background-image: url('/assets/backgrounds/tool-bg.jpg');
+}
+
+body[data-bg="about"]::before {
+  background-image: url('/assets/backgrounds/about-bg.jpg');
+}
+
+body[data-bg="disclosure"]::before {
+  background-image: url('/assets/backgrounds/disclosure-bg.jpg');
+}
+
+/* Dark Overlay for Readability */
+body[data-bg]::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(15, 18, 21, 0.7);
+  pointer-events: none;
+}
+
+/* Ensure content layers above background */
+body[data-bg]>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional Motion Hook (DISABLED - for future use) */
+body[data-bg].bg-motion::before {
+  /* Subtle zoom effect - NOT ACTIVE unless .bg-motion is added to <body> */
+  /* animation: bgZoom 30s ease-in-out infinite alternate; */
+}
+
+/* Keyframes for future motion (COMMENTED OUT) */
+/*
+@keyframes bgZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+*/
+
+/* ===================================
+   END BACKGROUND SYSTEM
+   =================================== */
+
+
+/* Header */
+header {
+  background: #0F1215;
+  border-bottom: 1px solid #2A2E33;
+  padding: 20px 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-link img {
+  height: 40px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #F4F4F4;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.main-nav a:hover {
+  background: #2A2E33;
+  color: #F5A623;
+}
+
+/* Main Content - Updated for Hero Support */
+main {
+  flex: 1;
+  width: 100%;
+  /* Removed max-width and padding to allow hero full-bleed */
+  /* Individual pages add their own containers as needed */
+}
+
+/* Page Container (for non-hero pages) */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  color: #F5A623;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #F4F4F4;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: #0F1215;
+  border-top: 1px solid #2A2E33;
+  padding: 30px 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #F4F4F4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav a:hover {
+  color: #F5A623;
+}
+
+.copyright {
+  color: #F4F4F4;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+/* Tool List Styles */
+.tool-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tool-item {
+  background: #2A2E33;
+  padding: 20px;
+  border-left: 3px solid #F5A623;
+  border-radius: 4px;
+}
+
+.tool-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.tool-item h3 a {
+  color: #F5A623;
+  text-decoration: none;
+}
+
+.tool-item h3 a:hover {
+  text-decoration: underline;
+}
+
+.tool-item p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #F4F4F4;
+  opacity: 0.9;
+}
+
+.tool-item strong {
+  color: #F5A623;
+  font-weight: 600;
+}
+
+.tool-item a {
+  color: #F5A623;
+  transition: opacity 0.2s;
+}
+
+.tool-item a:hover {
+  opacity: 0.8;
+}
+
+/* ===================================
+   BROWSE PAGE SPECIFIC (Phase 5)
+   =================================== */
+
+/* Filter Bar */
+.filter-bar {
+  background: rgba(42, 46, 51, 0.6);
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.filter-search {
+  margin-bottom: 15px;
+}
+
+.filter-search input[type="search"] {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-item label {
+  color: #F4F4F4;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-item select {
+  padding: 8px 12px;
+  background: #2A2E33;
+  border: 1px solid #2A2E33;
+  border-radius: 4px;
+  color: #F4F4F4;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.filter-item select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.filter-item select:focus {
+  outline: none;
+  border-color: #F5A623;
+}
+
+/* Browse Stats */
+.browse-stats {
+  color: #F4F4F4;
+  opacity: 0.7;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* Browse List (Grid) */
+.browse-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Tool Card */
+.tool-card {
+  background: rgba(42, 46, 51, 0.8);
+  padding: 20px;
+  border-radius: 4px;
+  border-left: 3px solid #F5A623;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.2);
+}
+
+.tool-card-header {
+  margin-bottom: 15px;
+}
+
+.tool-card-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.tool-card-header h3 a {
+  color: #F5A623;
+  text-decoration: none;
+}
+
+.tool-card-header h3 a:hover {
+  text-decoration: underline;
+}
+
+.tool-card-domain {
+  display: block;
+  font-size: 13px;
+  color: #F4F4F4;
+  opacity: 0.6;
+}
+
+.tool-card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-link-secondary {
+  color: #F4F4F4;
+  text-decoration: none;
+  font-size: 13px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-link-secondary:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Load More Container */
+.load-more-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ===================================
+   END BROWSE PAGE SPECIFIC
+   =================================== */
+
+
+/* Tool Detail */
+.tool-detail {
+  background: #2A2E33;
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 4px;
+}
+
+.tool-detail h2 {
+  color: #F5A623;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.tool-detail p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.tool-detail strong {
+  color: #F5A623;
+}
+
+/* Buttons & CTAs */
+.cta-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: #F5A623;
+  color: #0F1215;
+}
+
+.btn-primary:hover {
+  background: #e09515;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #F5A623;
+  border: 2px solid #F5A623;
+}
+
+.btn-secondary:hover {
+  background: #F5A623;
+  color: #0F1215;
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="search"] {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background: #2A2E33;
+  border: 1px solid #2A2E33;
+  border-radius: 4px;
+  color: #F4F4F4;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus {
+  outline: none;
+  border-color: #F5A623;
+}
+
+/* Utilities */
+.text-muted {
+  color: #F4F4F4;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #F5A623;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .main-nav {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .tool-detail {
+    padding: 25px;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+}

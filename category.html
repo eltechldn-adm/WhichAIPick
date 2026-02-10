@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tool Categories — WhichAIPick</title>
+  <meta name="description"
+    content="Browse AI tools by category. Explore organized collections of tools for writing, design, productivity, development, and more.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Tool Categories — WhichAIPick">
+  <meta property="og:description"
+    content="Browse AI tools by category. Explore organized collections of tools for writing, design, productivity, development, and more.">
+  <meta property="og:image" content="/assets/logo/logo-final.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="AI Tool Categories — WhichAIPick">
+  <meta property="twitter:description"
+    content="Browse AI tools by category. Explore organized collections of tools for writing, design, productivity, development, and more.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/styles.css?v=fixheader1">
+  <link rel="stylesheet" href="/css/pages/browse.css">
+  <link rel="stylesheet" href="/css/pages/category.css">
+</head>
+
+<body data-bg="category">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-container">
+      <div class="category-page">
+        <div class="category-hero">
+          <h1>Browse by Category</h1>
+          <p class="category-subtitle">Explore AI tools organized by category.</p>
+        </div>
+
+        <!-- Category Navigator -->
+        <div id="category-navigator" class="category-navigator">
+          <p style="text-align: center;">Loading categories...</p>
+        </div>
+
+        <!-- Category Results -->
+        <div id="category-results" class="category-results">
+          <!-- Results will be rendered here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/main.js?v=1.6"></script>
+  <script src="/js/descriptions.js?v=1.6"></script>
+  <script src="/js/layout.js?v=1.6" defer></script>
+  <script>
+    let recommendedIds = []; // Global state for visual recommendations
+
+    // Extract domain from URL
+    function getDomain(url) {
+      if (!url) return 'N/A';
+      try {
+        const urlObj = new URL(url.startsWith('http') ? url : 'https://' + url);
+        return urlObj.hostname.replace('www.', '');
+      } catch {
+        return 'N/A';
+      }
+    }
+
+    // Render category navigator
+    async function renderCategoryNavigator() {
+      try {
+        await loadTools();
+        const allTools = getAllTools();
+        const container = document.getElementById('category-navigator');
+
+        if (!allTools || allTools.length === 0) {
+          container.innerHTML = '<p style="text-align: center;">Categories unavailable.</p>';
+          return;
+        }
+
+        // Count tools per category
+        const categoryCounts = {};
+        let categorizedCount = 0;
+
+        allTools.forEach(tool => {
+          const category = tool.category;
+          if (category && category !== 'Uncategorized') {
+            categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+            categorizedCount++;
+          }
+        });
+
+        // Calculate uncategorized
+        const totalTools = allTools.length;
+        const uncategorizedCount = totalTools - categorizedCount;
+
+        // Update subtitle with trust-building stats
+        const subtitle = document.querySelector('.category-subtitle');
+        if (subtitle) {
+          subtitle.textContent = `We’ve mapped ${categorizedCount} tools into categories so far. The rest are in Uncategorized while we expand coverage.`;
+        }
+
+        // Sort categories alphabetically
+        const sortedCategories = Object.entries(categoryCounts)
+          .sort((a, b) => a[0].localeCompare(b[0]));
+
+        // Add Uncategorized to the end if there are any
+        if (uncategorizedCount > 0) {
+          sortedCategories.push(['Uncategorized', uncategorizedCount]);
+        }
+
+        if (sortedCategories.length === 0) {
+          container.innerHTML = '<p style="text-align: center;">No categories available.</p>';
+          return;
+        }
+
+        // Get current category from URL
+        const params = new URLSearchParams(window.location.search);
+        const currentCategory = params.get('c');
+
+        // Build navigator HTML
+        let html = '<div class="category-grid">';
+
+        sortedCategories.forEach(([category, count]) => {
+          const encodedCategory = encodeURIComponent(category);
+          const isActive = currentCategory && currentCategory.toLowerCase() === category.toLowerCase();
+          const activeClass = isActive ? ' active' : '';
+
+          html += `
+                        <a href="/category.html?c=${encodedCategory}" class="category-nav-card${activeClass}">
+                            <div class="category-nav-name">${category}</div>
+                            <div class="category-nav-count">${count} tool${count !== 1 ? 's' : ''}</div>
+                        </a>
+                    `;
+        });
+
+        html += '</div>';
+        container.innerHTML = html;
+      } catch (error) {
+        document.getElementById('category-navigator').innerHTML = '<p style="text-align: center;">Failed to load categories.</p>';
+      }
+    }
+
+    // Render category results
+    async function renderCategoryResults() {
+      const params = new URLSearchParams(window.location.search);
+      const categoryParam = params.get('c');
+      const resultsContainer = document.getElementById('category-results');
+
+      if (!categoryParam) {
+        resultsContainer.innerHTML = `
+                    <div class="category-prompt">
+                        <p>Choose a category above to explore tools.</p>
+                        <a href="/browse.html" class="btn btn-secondary">Or browse all tools</a>
+                    </div>
+                `;
+        return;
+      }
+
+      try {
+        await loadTools();
+        const allTools = getAllTools();
+
+        // Filter tools by category
+        const categoryTools = allTools.filter(tool => {
+          if (categoryParam === 'Uncategorized') {
+            return !tool.category || tool.category === 'Uncategorized';
+          }
+          return tool.category && tool.category.toLowerCase() === categoryParam.toLowerCase();
+        });
+
+        if (categoryTools.length === 0) {
+          resultsContainer.innerHTML = `
+                        <div class="category-empty">
+                            <h2>${categoryParam} Tools</h2>
+                            <p>No tools in this category yet.</p>
+                            <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px;">
+                                <a href="/browse.html" class="btn btn-secondary">Browse All Tools</a>
+                                <a href="/search.html" class="btn btn-secondary">Search</a>
+                            </div>
+                        </div>
+                    `;
+          return;
+        }
+
+        // Sort tools (default: recommended)
+        const sortOrder = document.getElementById('category-sort-select')?.value || 'recommended';
+        let sortedTools;
+        if (sortOrder === 'recommended') {
+          sortedTools = sortToolsRecommended(categoryTools);
+        } else if (sortOrder === 'az') {
+          sortedTools = [...categoryTools].sort((a, b) => a.name.localeCompare(b.name));
+        } else {
+          sortedTools = [...categoryTools].sort((a, b) => b.name.localeCompare(a.name));
+        }
+
+        // Render tools in grid
+        const html = `
+                    <div class="category-results-header">
+                        <h2>${categoryParam} Tools</h2>
+                        <div style="display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                          <p class="category-count">${categoryTools.length} tool${categoryTools.length !== 1 ? 's' : ''}</p>
+                          <div class="filter-item">
+                            <label for="category-sort-select">Sort:</label>
+                            <select id="category-sort-select" aria-label="Sort tools">
+                              <option value="recommended">Recommended</option>
+                              <option value="az">A–Z</option>
+                              <option value="za">Z–A</option>
+                            </select>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="category-list">
+                        ${sortedTools.map(tool => {
+          // Visual Polish: Add recommended class
+          const isRecommended = recommendedIds.includes(tool.id);
+          const cardClass = isRecommended ? 'tool-card recommended' : 'tool-card';
+
+          return `
+                            <div class="${cardClass}">
+                                <div class="tool-card-header">
+                                    <h3><a href="/tool.html?id=${encodeURIComponent(tool.id)}">${tool.name}</a></h3>
+                                    <div class="tool-meta">
+                                        <span class="tool-card-category">${tool.category}</span>
+                                        <span class="tool-card-domain">${getDomain(tool.website_url)}</span>
+                                    </div>
+                                    ${getDescriptionForTool(tool.id) ? `<div class="tool-card-desc">${getDescriptionForTool(tool.id)}</div>` : ''}
+                                </div>
+                                <div class="tool-card-actions">
+                                    <a href="/tool.html?id=${encodeURIComponent(tool.id)}" class="btn btn-primary btn-sm">View Tool</a>
+                                    ${tool.website_url ? `
+                                        <a href="${tool.website_url}" target="_blank" rel="noopener" class="btn-link-secondary">
+                                            Website →
+                                        </a>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `;
+        }).join('')}
+                    </div>
+                `;
+
+        resultsContainer.innerHTML = html;
+
+        // Add event listener for sort dropdown
+        const sortSelect = document.getElementById('category-sort-select');
+        if (sortSelect) {
+          sortSelect.value = sortOrder; // Set the current sort order
+          sortSelect.addEventListener('change', renderCategoryResults);
+        }
+      } catch (error) {
+        resultsContainer.innerHTML = `
+                    <div class="category-empty">
+                        <p>Error loading category data. Please try again.</p>
+                    </div>
+                `;
+      }
+    }
+
+    // Initialize
+    (async function () {
+      // Load recommended list for visual highlighting
+      const recData = await loadRecommendedList();
+      recommendedIds = recData ? recData.recommended_ids : [];
+
+      await loadDescriptions(); // Load descriptions for cards
+
+      renderCategoryNavigator();
+      renderCategoryResults();
+    })();
+  </script>
+</body>
+
+</html>
