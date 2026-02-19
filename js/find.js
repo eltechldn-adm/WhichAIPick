@@ -473,6 +473,11 @@ function selectAnswer(value) {
     });
 
     updateNavigation();
+
+    // Analytics: Track Start
+    if (currentQuestion === 0) {
+        Analytics.track('quiz_start', { answer_value: value });
+    }
 }
 
 // Update progress indicator
@@ -571,6 +576,12 @@ async function calculateAndShowResults() {
 
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Analytics: Track Complete
+    Analytics.track('quiz_complete', {
+        goal: answers.goal,
+        result_count: recommendations.length
+    });
 }
 
 // Show stored results (skips calculation)

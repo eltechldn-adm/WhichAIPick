@@ -29,7 +29,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="/css/styles.css?v=fixheader1">
+  <link rel="stylesheet" href="/css/styles.css?v=2.6">
   <link rel="stylesheet" href="/css/pages/tool.css">
 </head>
 
@@ -46,11 +46,11 @@
 
   <div id="site-footer"></div>
 
-  <script src="/js/main.js?v=1.6"></script>
-  <script src="/js/pricing.js?v=1.6"></script>
-  <script src="/js/usecases.js?v=1.6"></script>
-  <script src="/js/descriptions.js?v=1.6"></script>
-  <script src="/js/layout.js?v=1.6" defer></script>
+  <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/pricing.js?v=6.4"></script>
+  <script src="/js/usecases.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=6.4"></script>
+  <script src="/js/layout.js?v=1.8" defer></script>
   <script>
     // Extract domain from URL
     function getDomain(url) {
@@ -70,28 +70,76 @@
       return shuffled.slice(0, count);
     }
 
+    // Logo fallback helper: extracts initials from tool name
+    function getInitials(name) {
+      if (!name) return '?';
+      const words = name.split(' ').filter(w => w.length > 0);
+      if (words.length === 1) return words[0].substring(0, 2).toUpperCase();
+      return words.slice(0, 2).map(w => w[0].toUpperCase()).join('');
+    }
+
+    // Logo fallback helper: creates styled initials badge
+    function createInitialsBadge(toolName) {
+      const initials = getInitials(toolName);
+      const badge = document.createElement('div');
+      badge.className = 'logo-fallback';
+      badge.textContent = initials;
+      badge.setAttribute('aria-label', `${toolName} logo`);
+      return badge;
+    }
+
+    // Handle logo load errors with cascading fallback
+    function handleLogoError(img) {
+      const currentSrc = img.src;
+      const toolName = img.dataset.toolName;
+      const toolDomain = img.dataset.toolDomain;
+
+      // If currently showing tool.logo_url, try Google favicon
+      if (!currentSrc.includes('google.com/s2/favicons')) {
+        const faviconUrl = `https://www.google.com/s2/favicons?domain=${toolDomain}&sz=128`;
+        img.onerror = () => handleLogoError(img); // Cascade to next level
+        img.src = faviconUrl;
+        return;
+      }
+
+      // If favicon failed, replace with initials badge
+      const badge = createInitialsBadge(toolName);
+      img.parentElement.replaceChild(badge, img);
+    }
+
     // Render tool detail page
     async function renderTool() {
+      // ── ID Resolution (C: defensive fallback chain) ──────────────────
       const params = new URLSearchParams(window.location.search);
-      const toolId = params.get('id');
+
+      // 1) Try canonical ?id= param
+      let toolId = params.get('id');
+
+      // 2) Try legacy ?tool= or ?slug= params
+      if (!toolId) toolId = params.get('tool') || params.get('slug');
+
+      // 3) Try pathname segment: /tool/<id>
+      if (!toolId) {
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        // e.g. /tool/chatgpt → ['tool', 'chatgpt']
+        if (pathParts.length >= 2 && pathParts[0] === 'tool') {
+          toolId = decodeURIComponent(pathParts[1]);
+        }
+      }
 
       const container = document.getElementById('tool-container');
 
       if (!toolId) {
-        // Update meta for missing ID
-        document.title = 'Tool Not Found — WhichAIPick';
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-          metaDesc.content = 'No tool ID provided. Browse our directory to discover AI tools.';
-        }
-
+        // 4) No ID found → redirect gracefully
+        document.title = 'Redirecting — WhichAIPick';
         container.innerHTML = `
           <div class="tool-not-found">
-            <h1>Tool Not Found</h1>
-            <p>No tool ID provided.</p>
-            <a href="/browse.html" class="btn btn-primary">Browse Tools</a>
+            <h1>No Tool Selected</h1>
+            <p>Redirecting you to the tool directory…</p>
+            <a href="/tools/" class="btn btn-primary">Browse Tools</a>
           </div>
         `;
+        setTimeout(() => window.location.replace('/tools/'), 2500);
         return;
       }
 
@@ -111,7 +159,7 @@
             <div class="tool-not-found">
               <h1>Tool Not Found</h1>
               <p>We couldn't find a tool with that ID.</p>
-              <a href="/browse.html" class="btn btn-primary">Browse Tools</a>
+              <a href="/tools/" class="btn btn-primary">Browse Tools</a>
             </div>
           `;
           return;
@@ -180,24 +228,47 @@
         let html = `
           <div class="tool-detail-page">
             <div class="tool-back-link">
-              <a href="/browse.html">← Back to Browse</a>
+              <a href="/tools">← Back to Browse</a>
             </div>
 
-            <div class="tool-hero">
-              <div class="tool-hero-meta">
-                <span class="tool-hero-category">${tool.category || 'Uncategorized'}</span>
-                ${formattedPricing.model !== 'Unknown' ? `<span class="tool-hero-pricing">${formattedPricing.model}</span>` : ''}
-              </div>
-              <h1>${tool.name}</h1>
-              <p class="tool-description">${displayDescription}</p>
-              
-              <div class="tool-cta-group">
-                <a href="${ctaUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-glow">
-                  ${ctaText}
-                </a>
-                <div class="tool-hero-domain">${domain}</div>
-              </div>
-            </div>
+            <section class="hero-shell">
+                        <div class="tool-header">
+                            <div class="tool-icon-wrapper">
+                                <img id="tool-logo" 
+                                     src="${tool.logo_url || ''}" 
+                                     alt="${tool.name} Logo" 
+                                     class="tool-logo-lg" 
+                                     data-tool-name="${tool.name}"
+                                     data-tool-domain="${domain}"
+                                     onerror="handleLogoError(this)">
+                            </div>
+                            <div class="tool-title-wrapper">
+                                <h1 id="tool-name">${tool.name}</h1>
+                                <div class="tool-meta">
+                                    <span id="tool-pricing-pill" class="pill pill-pricing">${formattedPricing.model !== 'Unknown' ? formattedPricing.model : 'Pricing Unknown'}</span>
+                                    
+                                    <!-- Pricing Confidence (Phase 5.3) -->
+                                    ${tool.pricing_confidence !== undefined ?
+            `<span class="text-muted" style="font-size: 11px; margin-left: 8px;" title="Confidence Level: ${tool.pricing_confidence}/3">
+                                            Pricing Confidence: ${['Low', 'Low', 'Medium', 'High'][tool.pricing_confidence] || 'Unknown'}
+                                            <span style="opacity:0.5; margin-left:2px;">(Auto-detected)</span>
+                                        </span>`
+            : ''}
+
+                                    <a id="tool-website" href="${tool.website_url}" target="_blank" rel="noopener" class="tool-link" onclick="Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${tool.website_url}', source: 'header' })">${domain} ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-narrow">
+                            <p id="tool-summary" class="tool-summary-lg">${displayDescription}</p>
+                            <div class="cta-row-hero">
+                                <a id="btn-visit" href="${ctaUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" onclick="Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${ctaUrl}', source: 'hero_cta' })">${ctaText}</a>
+                                <a href="/find.html" class="btn btn-secondary btn-lg" onclick="Analytics.track('compare_click', { tool_id: '${tool.id}' })">Compare Alternatives</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <div class="tool-info-grouped">
               <div class="tool-info-card">
@@ -208,10 +279,14 @@
                  </div>
                  <div class="info-row">
                     <span class="label">Starting Price</span>
-                      ${formattedPricing.price}
-                      ${pricingInfo && pricingInfo.pricing_url ? `<a href="${pricingInfo.pricing_url}" target="_blank" rel="noopener" class="pricing-check-btn" style="margin-left:8px; font-size:12px;">Check plan</a>` : ''}
-                    </span>
-                 </div>
+                        ${formattedPricing.price}
+                        ${pricingInfo && pricingInfo.pricing_url ? `<a href="${pricingInfo.pricing_url}" target="_blank" rel="noopener" class="pricing-check-btn" style="margin-left:8px; font-size:12px;">Check plan</a>` : ''}
+                      </span>
+                   </div>
+                   <!-- Report Issue Link (Phase 5.3) -->
+                   <div class="info-row" style="margin-top: 12px; border-top: 1px solid var(--c-border); padding-top: 12px;">
+                      <a href="mailto:support@whichaipick.com?subject=Pricing Issue: ${encodeURIComponent(tool.name)}&body=I found an issue with the pricing for ${tool.name} (${tool.website_url})..." style="font-size: 11px; color: var(--c-text-muted); text-decoration: underline;">Report pricing issue</a>
+                   </div>
               </div>
 
                ${hasTags ? `
@@ -238,12 +313,21 @@
               <div class="tool-related-grid">
                 ${relatedTools.map(related => `
                   <div class="tool-related-card">
-                    <h3><a href="/tool.html?id=${encodeURIComponent(related.id)}">${related.name}</a></h3>
+                    <h3><a href="/tool.html?id=${encodeURIComponent(related.id)}" onclick="Analytics.track('tool_related_click', { from_id: '${tool.id}', to_id: '${related.id}' })">${related.name}</a></h3>
                     <p class="tool-related-domain">${getDomain(related.website_url)}</p>
-                    <a href="/tool.html?id=${encodeURIComponent(related.id)}" class="btn btn-sm btn-secondary">View Tool</a>
+                    <a href="/tool.html?id=${encodeURIComponent(related.id)}" class="btn btn-sm btn-secondary" onclick="Analytics.track('tool_related_click', { from_id: '${tool.id}', to_id: '${related.id}' })">View Tool</a>
                   </div>
                 `).join('')}
               </div>
+            </div>
+
+            <!-- newsletter cta (phase 5.4) -->
+            <div class="cta-band" style="margin-top: 60px;">
+                <h2>Get AI Updates</h2>
+                <p>New tools drops and tutorials delivered weekly.</p>
+                <div class="cta-row">
+                    <a href="/newsletter" class="btn btn-primary btn-lg" onclick="Analytics.track('newsletter_cta_click', { location: 'tool_detail' })">Subscribe Free</a>
+                </div>
             </div>
           </div>
         `;
@@ -252,7 +336,7 @@
 
       } catch (error) {
         container.innerHTML = `
-          <div class="tool-not-found">
+    v class="tool-not-found">
             <h1>Error</h1>
             <p>Failed to load tool data. Please refresh the page.</p>
           </div>

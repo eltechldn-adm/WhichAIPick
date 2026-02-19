@@ -24,260 +24,186 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
-
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="/css/styles.css?v=fixheader1">
-  <link rel="stylesheet" href="/css/pages/browse.css">
-  <link rel="stylesheet" href="/css/pages/category.css">
+  <!-- Global Styles Only -->
+  <link rel="stylesheet" href="/css/styles.css?v=2.6">
 </head>
 
-<body data-bg="category">
+<body data-bg="browse">
   <div id="site-header"></div>
 
-  <main>
-    <div class="page-container">
-      <div class="category-page">
-        <div class="category-hero">
-          <h1>Browse by Category</h1>
-          <p class="category-subtitle">Explore AI tools organized by category.</p>
-        </div>
+  <main class="page-shell">
 
-        <!-- Category Navigator -->
-        <div id="category-navigator" class="category-navigator">
-          <p style="text-align: center;">Loading categories...</p>
-        </div>
+    <section class="section-spaced content-narrow">
+      <h1 id="category-title">Loading...</h1>
+      <p class="muted" id="category-description"></p>
+    </section>
 
-        <!-- Category Results -->
-        <div id="category-results" class="category-results">
-          <!-- Results will be rendered here by JavaScript -->
-        </div>
-      </div>
-    </div>
+    <section class="section-spaced">
+      <div class="tools-grid" id="category-tools-grid"></div>
+    </section>
+
   </main>
+
 
   <div id="site-footer"></div>
 
-  <script src="/js/main.js?v=1.6"></script>
-  <script src="/js/descriptions.js?v=1.6"></script>
-  <script src="/js/layout.js?v=1.6" defer></script>
+  <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=1.7"></script>
+  <script src="/js/layout.js?v=1.8" defer></script>
   <script>
-    let recommendedIds = []; // Global state for visual recommendations
-
-    // Extract domain from URL
-    function getDomain(url) {
-      if (!url) return 'N/A';
-      try {
-        const urlObj = new URL(url.startsWith('http') ? url : 'https://' + url);
-        return urlObj.hostname.replace('www.', '');
-      } catch {
-        return 'N/A';
-      }
-    }
-
-    // Render category navigator
-    async function renderCategoryNavigator() {
-      try {
-        await loadTools();
-        const allTools = getAllTools();
-        const container = document.getElementById('category-navigator');
-
-        if (!allTools || allTools.length === 0) {
-          container.innerHTML = '<p style="text-align: center;">Categories unavailable.</p>';
-          return;
-        }
-
-        // Count tools per category
-        const categoryCounts = {};
-        let categorizedCount = 0;
-
-        allTools.forEach(tool => {
-          const category = tool.category;
-          if (category && category !== 'Uncategorized') {
-            categoryCounts[category] = (categoryCounts[category] || 0) + 1;
-            categorizedCount++;
-          }
-        });
-
-        // Calculate uncategorized
-        const totalTools = allTools.length;
-        const uncategorizedCount = totalTools - categorizedCount;
-
-        // Update subtitle with trust-building stats
-        const subtitle = document.querySelector('.category-subtitle');
-        if (subtitle) {
-          subtitle.textContent = `We’ve mapped ${categorizedCount} tools into categories so far. The rest are in Uncategorized while we expand coverage.`;
-        }
-
-        // Sort categories alphabetically
-        const sortedCategories = Object.entries(categoryCounts)
-          .sort((a, b) => a[0].localeCompare(b[0]));
-
-        // Add Uncategorized to the end if there are any
-        if (uncategorizedCount > 0) {
-          sortedCategories.push(['Uncategorized', uncategorizedCount]);
-        }
-
-        if (sortedCategories.length === 0) {
-          container.innerHTML = '<p style="text-align: center;">No categories available.</p>';
-          return;
-        }
-
-        // Get current category from URL
-        const params = new URLSearchParams(window.location.search);
-        const currentCategory = params.get('c');
-
-        // Build navigator HTML
-        let html = '<div class="category-grid">';
-
-        sortedCategories.forEach(([category, count]) => {
-          const encodedCategory = encodeURIComponent(category);
-          const isActive = currentCategory && currentCategory.toLowerCase() === category.toLowerCase();
-          const activeClass = isActive ? ' active' : '';
-
-          html += `
-                        <a href="/category.html?c=${encodedCategory}" class="category-nav-card${activeClass}">
-                            <div class="category-nav-name">${category}</div>
-                            <div class="category-nav-count">${count} tool${count !== 1 ? 's' : ''}</div>
-                        </a>
-                    `;
-        });
-
-        html += '</div>';
-        container.innerHTML = html;
-      } catch (error) {
-        document.getElementById('category-navigator').innerHTML = '<p style="text-align: center;">Failed to load categories.</p>';
-      }
-    }
-
-    // Render category results
-    async function renderCategoryResults() {
+    // Category Page Logic
+    (async function () {
+      // Parse URL Param
       const params = new URLSearchParams(window.location.search);
       const categoryParam = params.get('c');
-      const resultsContainer = document.getElementById('category-results');
+      const titleEl = document.getElementById('category-title');
+      const descEl = document.getElementById('category-description');
+      const gridEl = document.getElementById('category-tools-grid');
 
       if (!categoryParam) {
-        resultsContainer.innerHTML = `
-                    <div class="category-prompt">
-                        <p>Choose a category above to explore tools.</p>
-                        <a href="/browse.html" class="btn btn-secondary">Or browse all tools</a>
-                    </div>
-                `;
+        // No category selected -> Show Directory of All Categories
+        console.log('No category param, showing directory');
+        titleEl.textContent = 'Browse by Category';
+        descEl.textContent = 'Explore our curated collection of AI tools by category.';
+
+        // Category Icon Mapping (SVG Paths)
+        const categoryIcons = {
+          'Automation': '<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Business': '<path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 21V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Content Creation': '<path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Design': '<path d="M12 19L19 12L22 15L15 22L12 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13L16.5 5.5L2 2L5.5 16.5L13 18L18 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 2L9.586 9.586" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 13C11 13 11 14.5 13 16.5C15 18.5 16.5 18.5 16.5 18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Development': '<path d="M16 18L22 12L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Education': '<path d="M22 10V16C22 16.11 22 16.29 21.96 16.4L18.88 18.2C18.66 18.33 18.36 18.37 18.11 18.29C17.7 18.17 17.43 17.77 17.43 17.34V14.1L12 17L2 12V22H0V11C0 10.93 0.01 10.87 0.05 10.81L2 7L12 2L22 7V10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13.5V18.13L12 21.5L18 18.13V13.5L12 16.5L6 13.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Marketing': '<path d="M12 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 20V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Productivity': '<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Research': '<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'Video & Audio': '<path d="M23 7L16 12L23 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H14C15.1046 19 16 18.1046 16 17V7C16 5.89543 15.1046 5 14 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+          'default': '<path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.27002 6.96002L12 12.01L20.73 6.96002" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+        };
+
+        try {
+          await loadTools();
+          const allCategories = getAllCategories();
+
+          // Build Directory Grid with Premium Cards
+          const categoryList = allCategories.map(c => {
+            // Determine Icon
+            let iconKey = c;
+            if (!categoryIcons[c]) iconKey = 'default';
+
+            const iconSvg = categoryIcons[iconKey];
+            const count = filterByCategory(c).length;
+
+            // Generate Slug for visual variation
+            const slug = c.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+
+            return `
+                <a href="/category.html?c=${encodeURIComponent(c)}" class="category-card cat-${slug}">
+                    <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        ${iconSvg}
+                    </svg>
+                    <h3>${c}</h3>
+                    <span class="category-card-count">${count} tools</span>
+                </a>`;
+          }).join('');
+
+
+          // Remove inline styles and use global grid class + specific directory modifier
+          gridEl.className = 'tools-grid category-directory-grid';
+          gridEl.style.display = '';
+          gridEl.style.gridTemplateColumns = '';
+          gridEl.style.gap = '';
+
+          gridEl.innerHTML = categoryList;
+
+        } catch (e) {
+          console.error(e);
+          gridEl.innerHTML = '<p>Failed to load categories.</p>';
+        }
         return;
       }
 
       try {
+        // Load Data
         await loadTools();
+        await loadDescriptions(); // Load descriptions
+        const recData = await loadRecommendedList();
+        const recommendedIds = recData ? recData.recommended_ids : [];
         const allTools = getAllTools();
 
-        // Filter tools by category
-        const categoryTools = allTools.filter(tool => {
-          if (categoryParam === 'Uncategorized') {
-            return !tool.category || tool.category === 'Uncategorized';
-          }
-          return tool.category && tool.category.toLowerCase() === categoryParam.toLowerCase();
-        });
+        // Filter
+        // Handle "Uncategorized" explicit check needed? 
+        // main.js filterByCategory does simple check.
+        let categoryTools = [];
+        if (categoryParam === 'Uncategorized') {
+          categoryTools = allTools.filter(t => !t.category || t.category === 'Uncategorized');
+        } else {
+          categoryTools = filterByCategory(categoryParam);
+        }
+
+        // Update Header
+        titleEl.textContent = `${categoryParam}`;
+        descEl.textContent = `The best AI tools for ${categoryParam.toLowerCase()}.`;
 
         if (categoryTools.length === 0) {
-          resultsContainer.innerHTML = `
-                        <div class="category-empty">
-                            <h2>${categoryParam} Tools</h2>
-                            <p>No tools in this category yet.</p>
-                            <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px;">
-                                <a href="/browse.html" class="btn btn-secondary">Browse All Tools</a>
-                                <a href="/search.html" class="btn btn-secondary">Search</a>
-                            </div>
-                        </div>
-                    `;
+          // Smart Recovery: Try searching instead
+          const searchResults = searchTools(categoryParam);
+
+          if (searchResults.length > 0) {
+            // Found via search
+            descEl.textContent = `We couldn't find a category named "${categoryParam}", but we found ${searchResults.length} tools matching that keyword.`;
+
+            // Sort and Render Search Results
+            const sortedResults = sortToolsRecommended(searchResults);
+            gridEl.innerHTML = '';
+            sortedResults.forEach(tool => {
+              const card = renderToolCard(tool, recommendedIds, 'category_fallback');
+              gridEl.appendChild(card);
+            });
+            return;
+          }
+
+          // No search results either -> Show Category List
+          const allCategories = getAllCategories();
+          const categoryList = allCategories.map(c =>
+            `<a href="/category.html?c=${encodeURIComponent(c)}" class="btn btn-secondary btn-sm" style="margin: 4px;">${c}</a>`
+          ).join('');
+
+          gridEl.innerHTML = `
+            <div class="empty-state" style="text-align: center; padding: 40px 0;">
+                <h3 style="margin-bottom: 16px;">Category Not Found</h3>
+                <p style="margin-bottom: 24px; color: var(--c-text-muted);">We couldn't find any tools for "${categoryParam}". Try browsing our active categories:</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 800px; margin: 0 auto;">
+                    ${categoryList}
+                </div>
+                <div style="margin-top: 32px;">
+                    <a href="/tools" class="btn btn-primary">Browse All Tools</a>
+                </div>
+            </div>`;
           return;
         }
 
-        // Sort tools (default: recommended)
-        const sortOrder = document.getElementById('category-sort-select')?.value || 'recommended';
-        let sortedTools;
-        if (sortOrder === 'recommended') {
-          sortedTools = sortToolsRecommended(categoryTools);
-        } else if (sortOrder === 'az') {
-          sortedTools = [...categoryTools].sort((a, b) => a.name.localeCompare(b.name));
-        } else {
-          sortedTools = [...categoryTools].sort((a, b) => b.name.localeCompare(a.name));
-        }
+        // Sort (Default: Recommended)
+        // Reuse main.js shared sort logic which puts recommended first
+        const sortedTools = sortToolsRecommended(categoryTools);
 
-        // Render tools in grid
-        const html = `
-                    <div class="category-results-header">
-                        <h2>${categoryParam} Tools</h2>
-                        <div style="display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                          <p class="category-count">${categoryTools.length} tool${categoryTools.length !== 1 ? 's' : ''}</p>
-                          <div class="filter-item">
-                            <label for="category-sort-select">Sort:</label>
-                            <select id="category-sort-select" aria-label="Sort tools">
-                              <option value="recommended">Recommended</option>
-                              <option value="az">A–Z</option>
-                              <option value="za">Z–A</option>
-                            </select>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="category-list">
-                        ${sortedTools.map(tool => {
-          // Visual Polish: Add recommended class
-          const isRecommended = recommendedIds.includes(tool.id);
-          const cardClass = isRecommended ? 'tool-card recommended' : 'tool-card';
+        // Render
+        gridEl.innerHTML = '';
+        sortedTools.forEach(tool => {
+          // Use shared render function
+          // Source 'category' triggers specific analytics context
+          const card = renderToolCard(tool, recommendedIds, 'category');
+          gridEl.appendChild(card);
+        });
 
-          return `
-                            <div class="${cardClass}">
-                                <div class="tool-card-header">
-                                    <h3><a href="/tool.html?id=${encodeURIComponent(tool.id)}">${tool.name}</a></h3>
-                                    <div class="tool-meta">
-                                        <span class="tool-card-category">${tool.category}</span>
-                                        <span class="tool-card-domain">${getDomain(tool.website_url)}</span>
-                                    </div>
-                                    ${getDescriptionForTool(tool.id) ? `<div class="tool-card-desc">${getDescriptionForTool(tool.id)}</div>` : ''}
-                                </div>
-                                <div class="tool-card-actions">
-                                    <a href="/tool.html?id=${encodeURIComponent(tool.id)}" class="btn btn-primary btn-sm">View Tool</a>
-                                    ${tool.website_url ? `
-                                        <a href="${tool.website_url}" target="_blank" rel="noopener" class="btn-link-secondary">
-                                            Website →
-                                        </a>
-                                    ` : ''}
-                                </div>
-                            </div>
-                        `;
-        }).join('')}
-                    </div>
-                `;
-
-        resultsContainer.innerHTML = html;
-
-        // Add event listener for sort dropdown
-        const sortSelect = document.getElementById('category-sort-select');
-        if (sortSelect) {
-          sortSelect.value = sortOrder; // Set the current sort order
-          sortSelect.addEventListener('change', renderCategoryResults);
-        }
-      } catch (error) {
-        resultsContainer.innerHTML = `
-                    <div class="category-empty">
-                        <p>Error loading category data. Please try again.</p>
-                    </div>
-                `;
+      } catch (e) {
+        console.error(e);
+        gridEl.innerHTML = '<p>Failed to load category data.</p>';
       }
-    }
-
-    // Initialize
-    (async function () {
-      // Load recommended list for visual highlighting
-      const recData = await loadRecommendedList();
-      recommendedIds = recData ? recData.recommended_ids : [];
-
-      await loadDescriptions(); // Load descriptions for cards
-
-      renderCategoryNavigator();
-      renderCategoryResults();
     })();
   </script>
 </body>

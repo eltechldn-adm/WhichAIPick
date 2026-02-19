@@ -7,7 +7,7 @@ async function loadPricing() {
     if (pricingLoaded) return;
 
     try {
-        const response = await fetch('data/tool-pricing.csv?v=1.6');
+        const response = await fetch('/data/tool-pricing.csv?v=1.6');
         const text = await response.text();
 
         // Parse CSV (simple parser for our format)

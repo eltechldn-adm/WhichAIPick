@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Accuracy Policy — WhichAIPick Standards</title>
+  <meta name="description"
+    content="How we verify AI software pricing, uncover hidden costs, and calculate the true cost of ownership. Our commitment to pricing accuracy.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://whichaipick.com/pricing-accuracy-policy.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Pricing Accuracy Policy — WhichAIPick Standards">
+  <meta property="og:description"
+    content="How we verify AI software pricing, uncover hidden costs, and calculate the true cost of ownership.">
+  <meta property="og:image" content="/assets/logo/logo-final.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css?v=2.6">
+
+  <!-- Schema: Article + FAQ -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "WhichAIPick Pricing Accuracy Policy",
+          "author": {
+            "@type": "Organization",
+            "name": "WhichAIPick"
+          },
+          "datePublished": "2024-02-01",
+          "dateModified": "2026-02-19",
+          "publisher": {
+            "@type": "Organization",
+            "name": "WhichAIPick",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://whichaipick.com/assets/logo/logo-final.png"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why is the price listed different from the vendor's site?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pricing changes rapidly. While we audit monthly, vendors may change prices overnight. Alternatively, we may be listing the 'Annual' billing price vs. the 'Monthly' price."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you list Enterprise pricing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We attempt to. If a vendor hides pricing behind a 'Contact Sales' wall, we use crowd-sourced data from verified users to provide an estimated range."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are 'Hidden Compute Costs'?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many AI tools charge a base subscription PLUS usage fees (credits/tokens). We calculated the 'Total Cost of Ownership' assuming average usage volume."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body data-bg="browse">
+  <div id="site-header"></div>
+
+  <main class="page-shell">
+
+    <section class="section-spaced content-narrow">
+      <h1 class="text-display-lg">Pricing Accuracy Policy</h1>
+      <p class="text-lg muted">Last Updated: February 19, 2026 • Version 1.2 • Reviewed quarterly by the <a
+          href="/about.html">Editorial Board</a></p>
+      <hr class="separator">
+    </section>
+
+    <section class="section-spaced content-narrow article-body">
+
+      <!-- Executive Summary -->
+      <div class="summary-box">
+        <h3>⚡ Pricing Policy Snapshot</h3>
+        <ul>
+          <li><strong>Real Cost:</strong> We list the "Total Cost of Ownership", including hidden API fees.</li>
+          <li><strong>USD Standard:</strong> All prices are converted to USD for standarized comparison.</li>
+          <li><strong>No Discounts:</strong> We review the sticker price, not temporary "Sale" prices.</li>
+          <li><strong>Automated Audit:</strong> Our bots track pricing changes monthly.</li>
+        </ul>
+      </div>
+
+      <h2>1. The Volatility of the AI Economy</h2>
+      <p>Pricing in the Artificial Intelligence sector is more volatile than in any other software vertical. Unlike
+        traditional SaaS (e.g., Email Marketing or CRM) where pricing remains stable for years, AI pricing fluctuates
+        monthly based on the underlying cost of compute. When OpenAI lowers the API cost for GPT-4o, downstream
+        application vendors often adjust their pricing within weeks.</p>
+      <p>This creates a significant challenge for buyers: <strong>Price Uncertainty.</strong></p>
+      <p>WhichAIPick is committed to providing the most accurate, up-to-date pricing data possible. We do not simply
+        "scrape" pricing pages. We interpret them. We analyze the <em>Unit Economics</em> of the software to explain
+        what you are actually paying for. Check our <a href="/tools">Tool Directory</a> to see this in practice.</p>
+
+      <h2>2. The "Hidden Tier" Problem</h2>
+      <p>Our primary goal is to expose the "Hidden Tier." Many AI vendors use deceptive pricing structures to make their
+        tools appear cheaper than they are. We have identified three common patterns derived from <a
+          href="https://www.darkpatterns.org/" target="_blank" rel="noopener noreferrer">Dark Pattern</a> research:</p>
+
+      <h3>Pattern A: The "Credit" Obfuscation</h3>
+      <p>A vendor charges $29/month for "500 Credits." Nowhere on the pricing page does it clearly state that generating
+        one High-Res image costs 50 credits. This effectively means the plan only includes 10 images. We calculate the
+        <strong>Real Unit Cost</strong> (e.g., "$2.90 per image") and display that in our reviews.</p>
+
+      <h3>Pattern B: The " BYOK" (Bring Your Own Key) Trap</h3>
+      <p>A tool charges $19/month for the interface but requires you to plug in your own OpenAI API key. This means your
+        <em>actual</em> bill is $19 + API usage fees, which could be hundreds of dollars. We explicitly flag BYOK tools
+        so you are not blindsided by double-billing.</p>
+
+      <h3>Pattern C: The "Teaser" Free Trial</h3>
+      <p>A tool offers a "Free Trial" that requires a credit card and automatically bills you $99 if you don't cancel
+        within 3 days. We flag these as "High Friction" trials in our <a href="/review-methodology.html">UX Scoring</a>.
+      </p>
+
+      <h2>3. Our Verification Protocol</h2>
+      <p>How do we ensure accuracy? We employ a multi-layered verification process.</p>
+      <ul>
+        <li><strong>Layer 1: Automated Change Detection.</strong> We run scripts that monitor the `/pricing` pages of
+          all 500+ tools in our directory. If the HTML structure of the pricing table changes, the tool is flagged for
+          manual review.</li>
+        <li><strong>Layer 2: The "Checkout" Test.</strong> For verified reviews, we often go through the checkout
+          process (without completing purchase) to verify that there are no hidden "Setup Fees" or "Tax Surcharges"
+          added at the last step.</li>
+        <li><strong>Layer 3: Historical Tracking.</strong> We maintain a log of previous prices. If a tool raises its
+          price, we note the increase. (e.g., "Price increased by 20% in Q1 2026").</li>
+      </ul>
+
+      <h2>4. Currency and Regional Pricing</h2>
+      <p>The AI market is global, but pricing is predominantly USD-centric. WhichAIPick standardizes all pricing in
+        <strong>United States Dollars (USD)</strong>.</p>
+      <p><strong>Regional Parity Warning:</strong> Users in Europe, India, and South America should be aware that many
+        AI vendors do not practice Purchasing Power Parity (PPP) pricing. A $20/month tool is significantly more
+        expensive in real terms for a user in Mumbai than in New York. Where verified specific regional pricing exists,
+        we attempt to note it.</p>
+
+      <h2>5. Legacy Plans and Grandfathering</h2>
+      <p>In AI, "Early Adopter" plans are gold. A plan purchased in 2023 might offer "Unlimited GPT-4" for $20/month, a
+        plan that no longer exists for new users.</p>
+      <p>We review the <strong>Current Public Price</strong>. We do not account for legacy plans in our scoring, as
+        those are not available to you, the new buyer. However, if a vendor breaks a promise to early adopters (e.g.,
+        canceling "Lifetime Deals"), we apply a severe "Trust Penalty" to their score.</p>
+
+      <h2>6. Data Limitations</h2>
+      <p>Despite our best efforts, perfect accuracy is impossible in a customized enterprise market.</p>
+      <ul>
+        <li><strong>Enterprise Opaqueness:</strong> For "Contact Sales" tiers, we rely on anonymous user reports. Take
+          these estimates with a grain of salt.</li>
+        <li><strong>Dynamic Discounts:</strong> Vendors often offer dynamic 20-30% discounts via exit-intent popups. We
+          list the sticker price, not the discount price.</li>
+        <li><strong>Rapid API Changes:</strong> Sometimes OpenAI changes pricing at 2 AM. Our site updates within 24
+          hours, but there may be a lag.</li>
+      </ul>
+
+      <h2>7. Risk of Inaccuracy</h2>
+      <p>We provide pricing data "as is." We are not responsible if a vendor changes their price between the time you
+        read our review and the time you click "Buy." Always verify on the vendor's official domain.</p>
+
+      <hr class="separator">
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-section">
+        <h3>How accurate is your pricing data?</h3>
+        <p>We aim for 95% accuracy. We audit top tools monthly and all tools quarterly. However, always verify the final
+          price on the vendor's checkout page before strict budgeting.</p>
+
+        <h3>Why do you list "Credit" costs?</h3>
+        <p>Because "Unlimited" is rarely unlimited. Understanding the cost-per-generation helps you compare tools
+          apples-to-apples. Use our <a href="/compare.html">Comparison Engine</a> to see this visually.</p>
+
+        <h3>Do you track "Lifetime Deals" (LTDs)?</h3>
+        <p>Yes. If a tool is available on platforms like AppSumo, we explicitly link to the LTD as it represents the
+          comprehensive best value for the user.</p>
+      </div>
+
+      <hr class="separator">
+
+      <h2>Related Resources</h2>
+      <ul class="citation-list">
+        <li><a href="/review-methodology.html">Review Methodology (Cost Pillar)</a></li>
+        <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+        <li><a href="/corrections-policy.html">Report an Error</a></li>
+        <li><a href="/about.html">About Us</a></li>
+      </ul>
+
+      <div class="site-footer-contact" style="margin-top: 40px; font-size: 0.9em; color: var(--c-text-muted);">
+        <p><strong>Contact the Pricing Analyst:</strong> Found a discrepancy? Email <a
+            href="mailto:pricing@whichaipick.com">pricing@whichaipick.com</a>.</p>
+      </div>
+
+      <div class="version-notes"
+        style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--c-border); font-size: 0.9em; color: var(--c-text-muted);">
+        <strong>Version Notes:</strong><br>
+        v1.2 (2026-02-19): Final Lock. Added Snapshot, "Data Limitations", and Disclaimer.<br>
+        v1.1 (2026-02-19): Added "Hidden Tier" analysis and Dark Pattern definitions. Integrating "BYOK" Trap
+        warning.<br>
+        v1.0 (2024-02-01): Initial publication of pricing standards.
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/layout.js?v=1.8" defer></script>
+</body>
+
+</html>

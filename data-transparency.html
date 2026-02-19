@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transparency Policy — Our Data Sources</title>
+    <meta name="description"
+        content="A comprehensive breakdown of how WhichAIPick collects, verifies, and processes data. Learn about our signal-to-noise filters, synthetic benchmarks, and privacy commitments.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://whichaipick.com/data-transparency.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Data Transparency Policy — Our Data Sources">
+    <meta property="og:description" content="A comprehensive breakdown of how WhichAIPick collects and verifies data.">
+    <meta property="og:image" content="/assets/logo/logo-final.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css?v=2.6">
+
+    <!-- Schema: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "WhichAIPick Data Transparency and Sources",
+      "author": {
+        "@type": "Organization",
+        "name": "WhichAIPick"
+      },
+      "datePublished": "2024-02-01",
+      "dateModified": "2026-02-19",
+      "publisher": {
+        "@type": "Organization",
+        "name": "WhichAIPick",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://whichaipick.com/assets/logo/logo-final.png"
+        }
+      }
+    }
+  </script>
+</head>
+
+<body data-bg="browse">
+    <div id="site-header"></div>
+
+    <main class="page-shell">
+
+        <section class="section-spaced content-narrow">
+            <h1 class="text-display-lg">Data Transparency Policy</h1>
+            <p class="text-lg muted">Last Updated: February 19, 2026 • Version 1.4 • Reviewed quarterly by the <a
+                    href="/about.html">Editorial Board</a></p>
+            <hr class="separator">
+        </section>
+
+        <section class="section-spaced content-narrow article-body">
+
+            <h2>1. The "Black Box" Problem in Media</h2>
+            <p>We live in an era of information opacity. Modern media has a sourcing problem. A headline claims "Study
+                Shows AI is Biased," but finding the actual PDF of the study is impossible. A review claims "Users Hate
+                This Tool," but links to no evidence or methodology. When you read a software review on many major tech
+                publications, you have no idea if the writer actually used the software, or if they just rewrote the
+                marketing copy from the vendor's homepage.</p>
+            <p>WhichAIPick operates differently. We believe that <strong>Data Sovereignty</strong> extends to the
+                reader. You have a right to know exactly where our conclusions come from. You have a right to audit our
+                inputs.</p>
+            <p>This policy details the precise inputs that feed our algorithm. We classify our data into three
+                categories: Primary (Vendor), Secondary (Synthetic), and Tertiary (User). By understanding this "Data
+                Supply Chain," you can better evaluate the trustworthiness of our recommendations in our <a
+                    href="/tools">Software Directory</a>.</p>
+
+            <h2>2. Primary Data: Verified Vendor Intelligence</h2>
+            <p>This is the "Hard Spec" data. In the world of physical hardware reviews, this would be the dimensions of
+                a phone or the horsepower of a car. In AI software, it is the context window size, the parameter count,
+                and the API rate limits.</p>
+            <p>We treat vendor-supplied data with extreme skepticism until it is verified. Marketing departments are
+                incentivized to exaggerate. Engineering departments are incentivized to be accurate. Our job is to find
+                the engineering truth hidden behind the marketing fluff.</p>
+
+            <h3>Sources of Primary Data</h3>
+            <ul>
+                <li><strong>API Documentation:</strong> This is our "Source of Truth." Marketing pages may claim
+                    "Unlimited," but the API docs will always reveal the rate limit (e.g., "60 requests per minute"). We
+                    scrape API documentation to build our feature matrix.</li>
+                <li><strong>Whitepapers & Technical Reports:</strong> For foundation models (like GPT-4 or Claude 3), we
+                    analyze the ArXiv papers released by the research labs. We look for specific benchmarks (MMLU,
+                    HumanEval) that are peer-reviewed.</li>
+                <li><strong>Terms of Service & Privacy Policies:</strong> We employ a "Legal Audit" script that scans
+                    these documents for keywords like "Training Data," "Data Retention," and "Third Party Sharing." This
+                    is how we determine our Privacy Scores.</li>
+                <li><strong>Security Audits (SOC2 / ISO 27001):</strong> We require vendors to provide proof of
+                    compliance. A badge on a footer is not enough; we ask for the date of the last audit.</li>
+            </ul>
+
+            <h3>Verification Protocols</h3>
+            <p>We cross-reference marketing claims against technical docs. If marketing says "Unlimited Context" but the
+                API docs say "128k context limit," we publish the 128k number and penalize the Trust score. If a vendor
+                claims to be "GDPR Compliant" but their servers are hosted exclusively in Virginia, USA, without
+                Standard Contractual Clauses (SCCs), we flag this as a Compliance Risk.</p>
+
+            <h2>3. Secondary Data: Synthetic Benchmarking</h2>
+            <p>This is the most valuable data we own. It is proprietary data generated by our own testing labs. It does
+                not exist anywhere else on the internet. Because AI models are non-deterministic (they give different
+                answers every time), relying on a single test is statistically invalid. We rely on **Synthetic
+                Benchmarking**—running thousands of automated tests to generate a statistical average of performance.
+            </p>
+
+            <h3>The Test Harness</h3>
+            <p>We have built a custom testing harness called "The Gauntlet." This software pipeline connects to the APIs
+                of the tools we review and fires a randomized battery of prompts. You can read more about this in our <a
+                    href="/review-methodology.html">Review Methodology</a>.</p>
+            <ul>
+                <li><strong>Latency Logs:</strong> We record the millisecond response time (Time to First Token) of
+                    models. We test this at different times of day to account for server load. A tool might be fast at 2
+                    AM but unusable at 2 PM. Our score reflects the average.</li>
+                <li><strong>Fidelity Scores:</strong> Our internal scoring of image/text quality based on our "Prompt
+                    Battery". We use reference-based scoring metrics (like BLEU and ROUGE for text, and CLIP scores for
+                    images) to mathematically grade the output.</li>
+                <li><strong>Regression Data:</strong> We track how these scores change over time. Users often complain
+                    that "GPT-4 feels dumber today." We don't rely on feelings. We look at the regression line of our
+                    benchmark scores over the last 90 days.</li>
+            </ul>
+
+            <h3>Synthetic Data Generation</h3>
+            <p>To test these tools without compromising user privacy, we generate **Synthetic User Data**. We do not
+                paste real confidential emails into an AI writer to test it. Instead, we use a library of "Fake PII"
+                (Personally Identifiable Information)—fake names, fake addresses, fake credit card numbers—to test how
+                the AI handles sensitive data. This allows us to test "Data Leakage" safety rails without risking real
+                harm.</p>
+
+            <h2>4. Tertiary Data: User Telemetry & Aggregation</h2>
+            <p>We aggregate anonymized user behavior to understand "Real World" usage patterns. This helps us weight our
+                categories. If 80% of our users are searching for "Free Plan," we increase the weight of the "Free Tier
+                Generosity" score in our algorithm.</p>
+
+            <h3>The "Wisdom of the Crowd" vs. "The Mob"</h3>
+            <p>User data is noisy. A user might give a tool a 1-star review because they forgot their password. To
+                filter this signal, we use **Cohort Analysis**.</p>
+            <ul>
+                <li><strong>Verified Users:</strong> We prioritize data from users who have authenticated via LinkedIn
+                    or corporate email.</li>
+                <li><strong>Usage Depth:</strong> We weight feedback higher from users who have revisited the tool page
+                    multiple times, indicating sustained interest.</li>
+                <li><strong>Exit Traffic:</strong> We track which outbound links are clicked. If a tool has high traffic
+                    but low click-through to the vendor, it implies the review convinced the user <em>not</em> to buy.
+                    This is a negative signal we incorporate into our "Satisfaction" metric.</li>
+            </ul>
+
+            <h3>Privacy Commitment</h3>
+            <p>We never use individual user data to influence a specific review. We look at aggregate cohorts only. We
+                do not track individual browsing history across the web. For comprehensive details, see our <a
+                    href="/editorial-policy.html">Editorial Ethics</a>.</p>
+
+            <h2>5. The Data Lifecycle: From Collection to Deletion</h2>
+            <p>We believe in **Data Minimization**. We only collect the data we need, and we delete it when we don't.
+                Here is the lifecycle of a data point at WhichAIPick:</p>
+
+            <h3>Phase 1: Ingestion</h3>
+            <p>Data enters our system via our automated scrapers (for pricing), our API harness (for benchmarks), or our
+                user feedback forms. All incoming data is timestamped and source-tagged.</p>
+
+            <h3>Phase 2: Normalization</h3>
+            <p>Raw data is messy. One vendor lists pricing as "$20/mo", another as "$240/yr", another as "0.003
+                cents/token". Our normalization engine converts all these values into a standard **Monthly Cost of
+                Ownership** metric to allow for apples-to-apples comparison. See <a
+                    href="/pricing-accuracy-policy.html">Pricing Policy</a>.</p>
+
+            <h3>Phase 3: Processing & Scoring</h3>
+            <p>The normalized data is fed into our Algorithm (The "WhichAIPick Score"). This algorithm runs nightly.
+                This means a change in a vendor's pricing today will be reflected in their score tomorrow morning.</p>
+
+            <h3>Phase 4: Archival & Deletion</h3>
+            <p>We retain historical pricing data for 24 months to power our "Price History" charts. After 24 months,
+                granular data is aggregated into monthly averages and the raw data is purged. User telemetry data
+                (clicks, dwell time) is anonymized after 90 days and deleted after 12 months.</p>
+
+            <h2>6. Third-Party Subprocessors</h2>
+            <p>We are a modern software company, which means we rely on cloud infrastructure. We are transparent about
+                who handles our data. We only work with sub-processors who meet our strict security standards.</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subprocessor</th>
+                            <th>Purpose</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Amazon Web Services (AWS)</strong></td>
+                            <td>Hosting & Compute Infrastructure</td>
+                            <td>USA (Virginia)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloudflare</strong></td>
+                            <td>CDN & DDoS Protection</td>
+                            <td>Global (Edge)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PostgreSQL (Managed)</strong></td>
+                            <td>Database Storage</td>
+                            <td>USA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Analytics 4</strong></td>
+                            <td>Anonymized Web Traffic Analytics</td>
+                            <td>Global</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>We do NOT share data with data brokers, ad networks, or hedge funds.</p>
+
+            <h2>7. Algorithmic Fairness & Bias Testing</h2>
+            <p>Algorithms are opinions embedded in code. Our ranking algorithm is an opinion: "We prefer safe, cheap,
+                fast tools." We are transparent about this bias. However, we strive to eliminate **Unintended Bias**.
+            </p>
+
+            <h3>The "Small Vendor" Bias</h3>
+            <p>Review sites often favor big incumbents (Adobe, Microsoft) because they have higher search volume. To
+                counter this, our algorithm includes a "Discovery Boost" for new tools that score highly on technical
+                merit but have low brand awareness. This ensures that a brilliant tool built by a 2-person team in
+                Estonia has a chance to outrank a mediocre tool built by Google. Discover these gems in our <a
+                    href="/tools">New Arrivals</a>.</p>
+
+            <h3>The "English Language" Bias</h3>
+            <p>Currently, our natural language processing tests are predominantly in English. We acknowledge this
+                limitation. We are actively working on a multi-lingual benchmark suite to fairly evaluate tools that
+                specialize in Spanish, French, and Mandarin generation.</p>
+
+            <h2>8. Data Limitations and Known Unknowns</h2>
+            <p>We pride ourselves on accuracy, but we are engineers, not magicians. Our data has limitations that you
+                should be aware of:</p>
+            <ul>
+                <li><strong>Endpoint Variance:</strong> We test from US and EU servers. Performance in Asia, Africa, or
+                    South America may vary significantly due to CDN propagation and latency. A tool that is "Fast" for
+                    us might be "Slow" for you in Mumbai.</li>
+                <li><strong>Enterprise Customization:</strong> We test the off-the-shelf product. Enterprise
+                    implementations often have custom fine-tuning, dedicated hardware, and SLA guarantees that improve
+                    performance significantly. We cannot benchmark private, air-gapped instances.</li>
+                <li><strong>A/B Testing:</strong> Vendors constantly A/B test their models. We might be testing "Model
+                    Version A" while you are served "Model Version B." Where possible, we try to force specific model
+                    versions via API, but this is not always possible with web interfaces.</li>
+                <li><strong>Hidden "Fair Use" Policies:</strong> Some "Unlimited" plans have hidden caps (e.g.,
+                    throttling after 2000 generations) that are not published in docs and only discovered through
+                    extreme usage. While we try to hit these limits, we cannot always trigger them in a standard test
+                    cycle.</li>
+            </ul>
+
+            <h2>9. How to Request Your Data</h2>
+            <p>If you have created an account with WhichAIPick (for saving tools or creating alerts), you have the right
+                to export or delete your data.</p>
+            <p><strong>To Export:</strong> Email <a href="mailto:privacy@whichaipick.com">privacy@whichaipick.com</a>
+                with the subject "Data Export Request." We will provide a JSON file of your data within 14 days.</p>
+            <p><strong>To Delete:</strong> Email <a href="mailto:privacy@whichaipick.com">privacy@whichaipick.com</a>
+                with the subject "Account Deletion." We will purge your data from our active database immediately and
+                from our backups within 30 days.</p>
+
+            <h2>10. Glossary of Data Terms</h2>
+            <p>Understanding data privacy requires understanding the jargon.</p>
+            <dl>
+                <dt><strong>PII (Personally Identifiable Information)</strong></dt>
+                <dd>Any data that can identify you: Name, Email, IP Address, Phone Number. We strip this.</dd>
+
+                <dt><strong>Pseudonymization</strong></dt>
+                <dd>Replacing your name with a random ID (e.g., "User 8492"). The data is still there, but it's not
+                    linked to "John Doe."</dd>
+
+                <dt><strong>Differential Privacy</strong></dt>
+                <dd>A mathematical technique that adds "noise" to a dataset so that statistical trends can be analyzed
+                    without revealing any single individual's data.</dd>
+
+                <dt><strong>Data Lake</strong></dt>
+                <dd>A centralized repository where we store structured and unstructured data at scale. Ours is
+                    encrypted.</dd>
+
+                <dt><strong>Clean Room</strong></dt>
+                <dd>A secure environment where data is analyzed without leaving the secure server. No data ever "leaves"
+                    the clean room.</dd>
+            </dl>
+
+            <hr class="separator">
+
+            <h2>Related Resources</h2>
+            <ul class="citation-list">
+                <li><a href="/review-methodology.html">Review Methodology</a></li>
+                <li><a href="/about.html">About WhichAIPick</a></li>
+                <li><a href="/editorial-policy.html">Editorial Policy</a></li>
+                <li><a href="/pricing-accuracy-policy.html">Pricing Accuracy Policy</a></li>
+            </ul>
+
+            <div class="site-footer-contact" style="margin-top: 40px; font-size: 0.9em; color: var(--c-text-muted);">
+                <p><strong>Contact the Data Protection Officer:</strong> For privacy concerns, email <a
+                        href="mailto:privacy@whichaipick.com">privacy@whichaipick.com</a>.</p>
+            </div>
+
+            <div class="version-notes"
+                style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--c-border); font-size: 0.9em; color: var(--c-text-muted);">
+                <strong>Version Notes:</strong><br>
+                v1.4 (2026-02-19): Final Lock. Added "Limitations of Data" and Compliance Contact.<br>
+                v1.3 (2026-02-19): Added Glossary of Data Terms.<br>
+                v1.2 (2026-02-19): Hyper-expanded "Data Lifecycle" and "Subprocessors" sections. Added "Algorithmic
+                Fairness" and "Synthetic Benchmarking" details.<br>
+                v1.1 (2026-02-19): Added "Primary vs Secondary" data classification spectrum.<br>
+                v1.0 (2024-02-01): Initial data transparency statement.
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="/js/main.js?v=6.4"></script>
+    <script src="/js/layout.js?v=1.8" defer></script>
+</body>
+
+</html>

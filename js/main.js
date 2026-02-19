@@ -6,6 +6,19 @@ let isLoading = false;
 let loadError = null;
 
 /**
+ * Extract domain from URL
+ */
+function getDomain(url) {
+    if (!url) return 'N/A';
+    try {
+        const urlObj = new URL(url.startsWith('http') ? url : 'https://' + url);
+        return urlObj.hostname.replace('www.', '');
+    } catch {
+        return 'N/A';
+    }
+}
+
+/**
  * Load tools data from JSON
  */
 async function loadTools() {
@@ -20,7 +33,7 @@ async function loadTools() {
 
     isLoading = true;
     try {
-        const response = await fetch('data/tools.json?v=1.6');
+        const response = await fetch('/data/tools.json?v=1.7');
         if (!response.ok) {
             throw new Error(`Failed to load tools data: ${response.status}`);
         }
@@ -122,7 +135,7 @@ async function loadRecommendedList() {
 
     recommendedLoading = true;
     try {
-        const response = await fetch('data/recommended.json?v=1.2');
+        const response = await fetch('/data/recommended.json?v=1.2');
         if (!response.ok) {
             console.warn('Recommended list not available, using fallback');
             recommendedData = { recommended_ids: [] };
@@ -185,6 +198,37 @@ function sortToolsRecommended(tools) {
 }
 
 /**
+ * Filter tools by Free Tier
+ */
+function filterByFreeTier(tools) {
+    if (!tools) return [];
+    return tools.filter(tool => tool.has_free_tier === true);
+}
+
+/**
+ * Sort tools: Free Tier first, then Recommended, then A-Z
+ */
+function sortToolsFreeFirst(tools) {
+    const freeTools = [];
+    const otherTools = [];
+
+    // Split by free tier
+    tools.forEach(tool => {
+        if (tool.has_free_tier === true) {
+            freeTools.push(tool);
+        } else {
+            otherTools.push(tool);
+        }
+    });
+
+    // Sort both groups by recommended/A-Z logic
+    const sortedFree = sortToolsRecommended(freeTools);
+    const sortedOther = sortToolsRecommended(otherTools);
+
+    return [...sortedFree, ...sortedOther];
+}
+
+/**
  * Show error message to user
  */
 function showError(message) {
@@ -208,3 +252,100 @@ if (document.readyState === 'loading') {
         showError('Failed to load tools data. Please refresh the page.');
     });
 }
+
+/**
+ * Shared Tool Card Renderer — Phase 6.4
+ * Fixes: clean pricing labels (no UNKNOWN), Google favicon logo chain, local initials fallback.
+ * @param {Object} tool - Tool data object
+ * @param {Array} recommendedIds - Unused (reserved for future visual cue)
+ * @param {String} source - Analytics source context (default: 'list')
+ * @returns {HTMLElement} - The fully constructed card element
+ */
+function renderToolCard(tool, recommendedIds = [], source = 'list') {
+    const card = document.createElement('div');
+    card.className = 'tool-card';
+
+    const domain = getDomain(tool.website_url);
+    const description = typeof getDescriptionForTool === 'function'
+        ? getDescriptionForTool(tool.id)
+        : (tool.description || '');
+
+    // Analytics source tagging — preserved exactly
+    const clickSource = source === 'category' ? 'category_list' : 'browse_list';
+    const detailSource = source === 'category' ? 'category_details' : 'browse_details';
+    const outSource = source === 'category' ? 'category_outbound' : 'browse_outbound';
+
+    // ── Pricing Badge (strict normalisation) ────────────────────────────────
+    // Accepted raw values from tools.json and their display mappings.
+    const PRICING_MAP = {
+        'free': { label: 'Free', cls: 'pricing-FREE' },
+        'freemium': { label: 'Freemium', cls: 'pricing-FREEMIUM' },
+        'paid': { label: 'Paid', cls: 'pricing-PAID' },
+        'free trial': { label: 'Free trial', cls: 'pricing-FREE_TRIAL' },
+        'free_trial': { label: 'Free trial', cls: 'pricing-FREE_TRIAL' },
+    };
+
+    const rawModel = (tool.pricing_model || '').trim().toLowerCase();
+    const pricingEntry = PRICING_MAP[rawModel];
+
+    let pricingBadgeHTML = '';
+    if (pricingEntry) {
+        // Known model → full badge
+        pricingBadgeHTML = `<span class="pricing-badge ${pricingEntry.cls}">${pricingEntry.label}</span>`;
+    } else if (tool.has_free_tier === true) {
+        // Unknown model but free tier confirmed
+        pricingBadgeHTML = `<span class="pricing-badge pricing-FREE">Free tier</span>`;
+    }
+    // else: no badge at all — keeps card clean
+
+    // ── Logo (3-tier fallback, no external avatar services) ─────────────────
+    // Tier 1: tool.logo_url (from data)
+    // Tier 2: Google favicon CDN (fast, no mixed content issues)
+    // Tier 3: Local initials badge (pure CSS/DOM — no external call)
+    const initials = (tool.name || '??').trim().split(/\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+    const faviconUrl = domain && domain !== 'N/A'
+        ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
+        : '';
+
+    let logoHTML;
+    if (tool.logo_url) {
+        // Tier 1 → Tier 3 on error
+        logoHTML = `<img class="tool-logo" src="${tool.logo_url}" alt="${tool.name} logo" width="44" height="44" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">${initials}</div>`;
+    } else if (faviconUrl) {
+        // Tier 2 → Tier 3 on error
+        logoHTML = `<img class="tool-logo" src="${faviconUrl}" alt="${tool.name} logo" width="44" height="44" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">${initials}</div>`;
+    } else {
+        // Tier 3 only
+        logoHTML = `<div class="tool-logo-initials">${initials}</div>`;
+    }
+
+    card.innerHTML = `
+      ${pricingBadgeHTML}
+      <div class="tool-card-top">
+        <div class="tool-logo-wrap">${logoHTML}</div>
+        <div class="tool-card-meta">
+          <h3 class="tool-name">
+            <a href="/tool.html?id=${encodeURIComponent(tool.id)}"
+               onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${clickSource}' })">${tool.name}</a>
+          </h3>
+          <div class="tool-category">${tool.category || 'Uncategorized'}</div>
+        </div>
+      </div>
+      <p class="tool-description">${description || '&nbsp;'}</p>
+      <div class="tool-card-actions">
+        <a href="/tool.html?id=${encodeURIComponent(tool.id)}" class="tc-btn-primary"
+           onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${detailSource}' })">View Details</a>
+        ${tool.website_url
+            ? `<a href="${tool.website_url}" target="_blank" rel="noopener" class="tc-btn-secondary"
+               onclick="if(window.Analytics) Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${tool.website_url}', source: '${outSource}' })">Visit →</a>`
+            : ''}
+      </div>
+    `;
+
+    return card;
+}
+

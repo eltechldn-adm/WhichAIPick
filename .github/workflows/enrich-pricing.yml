@@ -1,0 +1,38 @@
+name: Enrich Tool Pricing
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # Weekly on Monday at 3am UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run enrichment script
+        run: node scripts/enrich-pricing.js
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/tools.json
+          git commit -m "chore: enrich tool pricing metadata [skip ci]"
+          git push

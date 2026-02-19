@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Software with AI: MVP-First Guide</title>
+    <meta name="description"
+        content="Ship AI-powered software faster. Learn MVP-first development, no-code vs code paths, security best practices, and avoid common mistakes when building with AI.">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Build Software with AI: MVP-First Guide">
+    <meta property="og:description"
+        content="Ship AI-powered software faster. Learn MVP-first development, no-code vs code paths, security best practices, and avoid common mistakes when building with AI.">
+    <meta property="og:image" content="/assets/logo/logo-final.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Build Software with AI: MVP-First Guide">
+    <meta property="twitter:description"
+        content="Ship AI-powered software faster. Learn MVP-first development, no-code vs code paths, security best practices, and avoid common mistakes when building with AI.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://whichaipick.com/use-cases/build-software-with-ai">
+
+    <link rel="stylesheet" href="/css/styles.css?v=2.6">
+</head>
+
+<body data-bg="use-cases">
+    <div id="site-header"></div>
+
+    <main class="page-shell">
+        <!-- 1. HERO -->
+        <section class="hero-shell">
+            <h1>Build Software 10x Faster with AI</h1>
+            <div class="content-narrow">
+                <p>Use AI coding assistants and no-code platforms to ship MVPs in days, not months. Learn the MVP-first
+                    approach, when to choose no-code vs code, essential security practices, and how to iterate from
+                    prototype to production without a full engineering team.</p>
+
+                <div class="cta-row">
+                    <a href="/tools" class="btn btn-primary">Browse Tools</a>
+                    <a href="/academy.html" class="btn btn-secondary">AI Academy</a>
+                </div>
+
+                <div class="content-box">
+                    <p class="text-bold mb-3">In this guide:</p>
+                    <ul class="bullet-list">
+                        <li>MVP-first development workflow (spec → deploy)</li>
+                        <li>No-code and code paths compared</li>
+                        <li>Security and testing warnings for AI code</li>
+                        <li>Tool stacks for non-technical founders,solo devs, teams</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 2. OUTCOME + WHO IT'S FOR -->
+        <section class="section-spaced">
+            <div class="two-col-layout">
+                <div>
+                    <h2>The Outcome</h2>
+                    <p>You'll ship a working MVP in 1-4 weeks instead of 3-6 months. Success looks like:</p>
+                    <ul class="bullet-list mt-3">
+                        <li>Functioning prototype in users' hands within 2 weeks</li>
+                        <li>Validated product-market fit before heavy investment</li>
+                        <li>Iterative improvements based on real user feedback</li>
+                        <li>Foundation to hire engineers or scale yourself</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Who This Is For</h2>
+                    <ul class="bullet-list">
+                        <li>Non-technical founders building first MVP</li>
+                        <li>Solo developers accelerating development</li>
+                        <li>Agencies prototyping client solutions</li>
+                        <li>Product managers validating concepts</li>
+                        <li>Startups at pre-seed stage</li>
+                        <li>Developers learning new frameworks fast</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-box mt-5">
+                <p class="mb-3"><strong>✅ Best when:</strong> You need to validate an idea quickly or
+                    ship an internal tool. Speed and iteration matter more than perfection.</p>
+                <p><strong>❌ Not ideal when:</strong> Building mission-critical systems (healthcare, finance) where
+                    errors have serious consequences. AI code needs rigorous review.</p>
+            </div>
+        </section>
+
+        <!-- 3. STEP-BY-STEP WORKFLOW -->
+        <section class="section-spaced">
+            <div class="section-column">
+                <h2>8-Step AI-Powered SaaS Launch</h2>
+                <p>This workflow takes you from idea to deployed MVP in 1-4 weeks.</p>
+            </div>
+
+            <div class="content-narrow">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Write a Clear Product Spec</h3>
+                        <p>Use ChatGPT or Claude to refine your idea. Describe: what it does, who it's for, core
+                            features (3-5 max), and success criteria.</p>
+                        <p>Example prompt: "I want to build a SaaS that helps freelancers track invoices. It should
+                            have: client management, invoice generation, payment tracking. Give me a detailed product
+                            spec."</p>
+                        <p><strong>Output:</strong> A 1-2 page spec document with features, user flows, and tech stack
+                            suggestions.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Choose Your Path: No-Code or Code</h3>
+                        <p><strong>No-code path:</strong> Use AI-powered builders like Lovable or Bolt. Describe your
+                            app in natural language, get a working prototype in hours.</p>
+                        <p><strong>Code path:</strong> Use AI coding assistants (Cursor, GitHub Copilot) with frameworks
+                            like Next.js or Flask. AI writes 70-90% of the code.</p>
+                        <p><strong>Decision factor:</strong> No-code = faster launch but limited customization. Code =
+                            full control but requires basic programming knowledge.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Set Up Database & Authentication</h3>
+                        <p>Use Supabase (free tier) for auth + database, or Airtable for simple no-code databases.</p>
+                        <p>AI can generate your database schema: "Create a database schema for a freelance invoice
+                            tracker with clients, invoices, and payments tables."</p>
+                        <p><strong>Security note:</strong> Always use environment variables for API keys. Never
+                            hard-code secrets.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Design UI with AI</h3>
+                        <p>Use v0 by Vercel or Uizard to generate UI components from text descriptions. Export code and
+                            customize.</p>
+                        <p>Example: "Create a dashboard with invoice list, revenue chart, and quick actions sidebar."
+                        </p>
+                        <p><strong>CRITICAL:</strong> Review all database queries and auth logic. AI makes mistakes with
+                            permissions and data validation.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Build Features with AI Code Generation</h3>
+                        <p>Break features into small tasks. Ask AI to build one component or function at a time.
+                            Example: "Create a React component that displays a user profile with name, avatar, and
+                            edit button."</p>
+                        <p><strong>Always test each piece</strong> before moving to the next. AI-generated code
+                            often works 80% of the time—the last 20% needs human debugging.</p>
+                        <p>Tools: <a href="/tool.html?id=cursor">Cursor</a>, <a href="/tool.html?id=github-copilot">GitHub
+                                Copilot</a>, <a href="/tool.html?id=replit">Replit
+                                Agent</a>, <a href="/tool.html?id=boltnew">Bolt</a>.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Test & Debug (Don't Skip This)</h3>
+                        <p>AI code has bugs. Test every feature manually: auth flows, data persistence, edge cases
+                            (empty states, errors, network failures).</p>
+                        <p>Use AI to write test cases: "Generate unit tests for this function" or "What edge cases
+                            am I missing?"</p>
+                        <p><strong>Security checklist:</strong> Validate all inputs, sanitize user data, use
+                            environment variables for secrets, enable HTTPS, review authentication logic.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Deploy & Get Feedback</h3>
+                        <p>Use AI-friendly deployment platforms: <a href="/tool.html?id=vercel-ai-sdk">Vercel</a>, <a
+                                href="/tool.html?id=netlify">Netlify</a>,
+                            <a href="/tool.html?id=railway">Railway</a>, or <a href="/tool.html?id=replit">Replit</a> (one-click
+                            deploy).
+                        </p>
+                        <p>Share with 5-10 early users. Collect feedback on: What's confusing? What's missing?
+                            What's broken?</p>
+                        <p>AI can help analyze feedback and prioritize fixes: "Here's user feedback [paste]. What
+                            should I fix first?"</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h3>Iterate Rapidly</h3>
+                        <p>Use AI to implement feedback fast. Ship updates daily or weekly based on real usage data.
+                        </p>
+                        <p><strong>When to hire engineers:</strong> After MVP validation, when you need: complex
+                            logic, performance optimization, security audits, or scale beyond 1,000 users.</p>
+                        <p>Explore <a href="/use-cases.html">other use cases</a> for AI automation and scaling
+                            strategies.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- 4. RECOMMENDED TOOL STACK -->
+        <section class="section-spaced">
+            <h2>Recommended Tool Stacks by Technical Level</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Non-Technical Founder Stack</h3>
+                    <p class="pill">Best for: No coding experience, need prototype fast</p>
+                    <p class="text-bold my-3">Tool Types Needed:</p>
+                    <ul class="bullet-list mb-3">
+                        <li>No-code app builder with AI</li>
+                        <li>No-code database</li>
+                        <li>Conversational AI for spec writing</li>
+                    </ul>
+                    <p class="text-bold my-3">Example Tools:</p>
+                    <ul class="bullet-list mb-3">
+                        <li><a href="/tool.html?id=lovable">Lovable or Bolt</a> (AI app builder)</li>
+                        <li><a href="/tool.html?id=airtable">Airtable</a> (database, $0-$20/mo)</li>
+                        <li><a href="/tool.html?id=chatgpt-advanced-data-analysis">ChatGPT or Claude</a> ($0-$20/mo)</li>
+                        <li><a href="/tool.html?id=figma">Figma</a> (design, free tier)</li>
+                    </ul>
+                    <p class="text-muted text-sm"><strong>Typical monthly cost:</strong>
+                        $0-$50</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>Solo Developer Stack</h3>
+                    <p class="pill">Best for: Developers who know code basics</p>
+                    <p class="text-bold my-3">Tool Types Needed:</p>
+                    <ul class="bullet-list mb-3">
+                        <li>AI coding assistant (inline)</li>
+                        <li>Conversational AI for architecture</li>
+                        <li>Hosting platform with CI/CD</li>
+                        <li>Component library generator</li>
+                    </ul>
+                    <p class="text-bold my-3">Example Tools:</p>
+                    <ul class="bullet-list mb-3">
+                        <li><a href="/tool.html?id=cursor">Cursor or GitHub Copilot</a> ($10-$100/mo)</li>
+                        <li><a href="/tool.html?id=claude">Claude Pro</a> ($20/mo)</li>
+                        <li><a href="/tool.html?id=vercel-ai-sdk">Vercel or Netlify</a> (free-$20/mo)</li>
+                        <li><a href="/tool.html?id=v0-by-vercel">v0 by Vercel</a> ($0-$30/mo for UI gen)</li>
+                        <li><a href="/tool.html?id=supabase">Supabase</a> (auth/db, free-$25/mo)</li>
+                    </ul>
+                    <p class="text-muted text-sm"><strong>Typical monthly cost:</strong>
+                        $50-$200</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>Development Team Stack</h3>
+                    <p class="pill">Best for: Teams building production apps</p>
+                    <p class="text-bold my-3">Tool Types Needed:</p>
+                    <ul class="bullet-list mb-3">
+                        <li>Team-wide AI coding platform</li>
+                        <li>CI/CD with AI code review</li>
+                        <li>Testing automation</li>
+                        <li>API access for custom AI features</li>
+                    </ul>
+                    <p class="text-bold my-3">Example Tools:</p>
+                    <ul class="bullet-list mb-3">
+                        <li><a href="/tool.html?id=github-copilot">GitHub Copilot Business</a> ($19/user/mo)</li>
+                        <li><a href="/tool.html?id=replit">Replit Teams</a> ($30-$150/mo)</li>
+                        <li><a href="/tool.html?id=openai-playground">OpenAI API or Anthropic API</a> (usage-based)</li>
+                        <li><a href="/tool.html?id=vercel-ai-sdk">Vercel Pro</a> ($20/user/mo)</li>
+                        <li><a href="/tool.html?id=linear">Linear</a> (project mgmt, $8-$16/user/mo)</li>
+                    </ul>
+                    <p class="text-muted text-sm"><strong>Typical monthly cost:</strong>
+                        $200-$800+ (team of 3-5)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. COMMON MISTAKES -->
+        <section class="section-spaced">
+            <h2>Common Mistakes to Avoid</h2>
+            <div class="content-narrow">
+                <div class="mistake-list">
+                    <div class="mistake-item">
+                        <h4>1. Building Too Many Features Upfront</h4>
+                        <p><strong>The Fix:</strong> MVP = Minimum. Ship 3-5 core features maximum. Add more based on
+                            user feedback, not assumptions.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>2. Trusting AI Code Without Review</h4>
+                        <p><strong>The Fix:</strong> AI makes subtle bugs (auth bypasses, SQL injection, data leaks).
+                            Always review security-critical code and test thoroughly.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>3. Skipping Security Basics</h4>
+                        <p><strong>The Fix:</strong> Validate inputs, use parameterized queries, enable HTTPS, store
+                            secrets in environment variables. AI often skips these.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>4. No User Feedback Loop</h4>
+                        <p><strong>The Fix:</strong> Share early and often. 5 real users > 100 imagined personas. Build
+                            what users ask for, not what you think they need.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>5. Over-Engineering the First Version</h4>
+                        <p><strong>The Fix:</strong> Don't build for scale you don't have. Hard-code, use manual
+                            processes, skip edge cases. Optimize after validation.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>6. Ignoring Mobile Responsiveness</h4>
+                        <p><strong>The Fix:</strong> 60%+ of users are mobile. Test on real devices, not just desktop.
+                            AI-generated UI often breaks on small screens.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>7. No Error Handling or Logging</h4>
+                        <p><strong>The Fix:</strong> AI code rarely includes proper error handling. Add try-catch
+                            blocks, user-friendly error messages, and logging for debugging.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>8. Switching Tools Mid-Build</h4>
+                        <p><strong>The Fix:</strong> Commit to one stack for the MVP. Tool-hopping wastes weeks. Switch
+                            only after launch if truly necessary.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>9. Not Documenting Decisions</h4>
+                        <p><strong>The Fix:</strong> Keep a simple README or doc explaining: tech stack, folder
+                            structure, how to run locally, deployment steps. Future-you (or your first hire) will thank
+                            you.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h4>10. Expecting AI to "Just Work"</h4>
+                        <p><strong>The Fix:</strong> AI is a 10x accelerator, not a replacement for thinking. You still
+                            need to understand product, users, and basic architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. MINI-FAQ -->
+        <section class="section-spaced">
+            <h2>Frequently Asked Questions</h2>
+            <div class="content-narrow">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>Can I build a SaaS with no coding experience?</h4>
+                        <p>Yes, using no-code tools like <a href="/tool.html?id=lovable">Lovable</a>, <a
+                                href="/tool.html?id=boltnew">Bolt</a>, or <a href="/tool.html?id=bubble">Bubble</a> with AI
+                            assistance. You won't have full control or scale, but
+                            it's enough to validate and get first customers. Hire engineers after traction.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is AI-generated code production-ready?</h4>
+                        <p>Not without review. AI code works for prototypes but needs testing, security review, and
+                            refactoring for production. Use AI for speed, humans for reliability.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What's the fastest way to ship an MVP?</h4>
+                        <p>No-code AI builders like <a href="/compare/replit-vs-lovable">Replit Agent or Lovable</a>.
+                            You can have a working app in 24-72 hours if your spec is clear. Compare platforms at <a
+                                href="/compare/replit-vs-lovable">Replit vs Lovable</a>.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Should I learn to code or use no-code?</h4>
+                        <p>For first MVP: no-code. For long-term: learn code basics (or hire). No-code is fast but
+                            limiting. Code gives full control. AI makes learning code 5x faster—start with tutorials +
+                            <a href="/tool.html?id=chatgpt-advanced-data-analysis">ChatGPT</a> to explain concepts.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What about AI and intellectual property?</h4>
+                        <p>AI-generated code is yours to use, but avoid copy-pasting proprietary code into AI tools
+                            (violates licenses). Always review AI outputs for potential copyright issues, especially in
+                            heavily regulated industries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. NEXT STEPS CTA BAND -->
+        <section class="section-spaced">
+            <div class="cta-band">
+                <h2>Ready to Build Your MVP?</h2>
+                <p>Explore development tools, learn about AI coding agents, or compare top no-code platforms.</p>
+                <div class="cta-row">
+                    <a href="/tools" class="btn btn-primary btn-lg">Browse Tools</a>
+                    <a href="/academy/ai-agents-explained" class="btn btn-secondary btn-lg">Learn AI Agents</a>
+                    <a href="/compare/replit-vs-lovable" class="btn btn-secondary btn-lg">Compare Builder Tools</a>
+                </div>
+                <p class="text-sm text-muted mt-4">
+                    Explore more use cases at <a href="/use-cases.html"
+                        style="color: var(--c-accent); text-decoration: underline;">Use Cases Hub</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="/js/main.js?v=6.4"></script>
+    <script src="/js/layout.js?v=1.8" defer></script>
+</body>
+
+</html>

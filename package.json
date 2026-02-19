@@ -1,14 +1,18 @@
 {
   "name": "whichaipick",
-  "version": "1.0.0",
-  "description": "AI tool discovery and comparison platform",
+  "private": true,
   "type": "module",
   "scripts": {
+    "dev": "wrangler pages dev . --port 8080 --local",
+    "clean-cache": "echo Clear browser cache manually (DevTools → Disable cache)",
     "build:data": "node scripts/convert-xlsx-to-tools-json.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs"
   },
   "dependencies": {
     "sharp": "^0.33.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
   }
 }

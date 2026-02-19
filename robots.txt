@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /data/
+Disallow: /*.json$
+Disallow: /*?*
 
-Sitemap: /sitemap.xml
+Allow: /tools
+Allow: /academy/
+Allow: /use-cases/
+Allow: /compare/
+Allow: /blog/
+
+Sitemap: https://whichaipick.com/sitemap.xml

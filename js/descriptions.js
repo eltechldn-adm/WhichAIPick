@@ -7,7 +7,7 @@ async function loadDescriptions() {
     if (descriptionsLoaded) return;
 
     try {
-        const response = await fetch('data/tool-descriptions.csv?v=1.6');
+        const response = await fetch('/data/tool-descriptions.csv?v=1.6');
         const text = await response.text();
 
         // Parse CSV

@@ -1,0 +1,24 @@
+# WhichAIPick — Cloudflare Pages Redirects
+# Format: source  destination  status_code
+# Note: Cloudflare automatically preserves query strings through 301 redirects.
+
+# ── Tool detail page (query strings preserved automatically) ──
+/tool               /tool.html            301
+/tool/              /tool.html            301
+
+# ── Hub directory routes → canonical .html files ──────────────
+/academy            /academy.html         301
+/academy/           /academy.html         301
+/use-cases          /use-cases.html       301
+/use-cases/         /use-cases.html       301
+/compare            /compare.html         301
+/compare/           /compare.html         301
+/blog               /blog.html            301
+/blog/              /blog.html            301
+/make-money         /make-money.html      301
+/make-money/        /make-money.html      301
+/start-here         /start-here.html      301
+/start-here/        /start-here.html      301
+
+# ── Legacy browse stub ─────────────────────────────────────────
+/browse.html        /tools/               301

@@ -8,7 +8,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 2
+    "source_row": 2,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "activepieces",
@@ -19,7 +25,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 3
+    "source_row": 3,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "ada",
@@ -30,7 +42,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 4
+    "source_row": 4,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "adalo",
@@ -41,7 +59,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 5
+    "source_row": 5,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "adcreativeai",
@@ -52,7 +76,13 @@
     "description": "Generate high-converting ad creatives and social media posts in seconds using Artificial Intelligence. Get data-backed insights to maximize your ROAS.",
     "pricing": null,
     "tags": [],
-    "source_row": 6
+    "source_row": 6,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "adobe-firefly",
@@ -63,7 +93,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 7
+    "source_row": 7,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "ai21-labs",
@@ -74,7 +110,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 8
+    "source_row": 8,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "aiva",
@@ -85,7 +127,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 9
+    "source_row": 9,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "akkio",
@@ -96,7 +144,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 10
+    "source_row": 10,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "amazon-codewhisperer",
@@ -107,7 +161,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 11
+    "source_row": 11,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "anthropic-claude-api",
@@ -118,7 +178,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 12
+    "source_row": 12,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "anyword",
@@ -129,7 +195,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 13
+    "source_row": 13,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "appgyver",
@@ -140,7 +212,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 14
+    "source_row": 14,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "artbreeder",
@@ -151,7 +229,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 15
+    "source_row": 15,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "askcodi",
@@ -162,7 +246,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 16
+    "source_row": 16,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "assemblyai",
@@ -173,7 +263,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 17
+    "source_row": 17,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "attention-insight",
@@ -184,7 +280,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 18
+    "source_row": 18,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "automator",
@@ -195,7 +297,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 19
+    "source_row": 19,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "avoma",
@@ -206,7 +314,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 20
+    "source_row": 20,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "bardeen",
@@ -217,7 +331,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 21
+    "source_row": 21,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "beatoven",
@@ -228,7 +348,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 22
+    "source_row": 22,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "beautifulai",
@@ -239,7 +365,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 23
+    "source_row": 23,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "bildr",
@@ -250,7 +382,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 24
+    "source_row": 24,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "bing-chat",
@@ -261,7 +399,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 25
+    "source_row": 25,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "blackbox-ai",
@@ -272,7 +416,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 26
+    "source_row": 26,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "bluewillow",
@@ -283,7 +433,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 27
+    "source_row": 27,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "booke-ai",
@@ -294,7 +450,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 28
+    "source_row": 28,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "boomy",
@@ -305,7 +467,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 29
+    "source_row": 29,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "botpress",
@@ -316,7 +484,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 30
+    "source_row": 30,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "brandmark",
@@ -327,7 +501,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 31
+    "source_row": 31,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "breeze-ai",
@@ -338,7 +518,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 32
+    "source_row": 32,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "brisk-teaching",
@@ -349,7 +535,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 33
+    "source_row": 33,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "bubble",
@@ -360,7 +552,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 34
+    "source_row": 34,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "buffer-ai-assistant",
@@ -371,7 +569,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 35
+    "source_row": 35,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "canva-ai",
@@ -382,7 +586,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 36
+    "source_row": 36,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "casetext-cocounsel",
@@ -393,7 +603,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 37
+    "source_row": 37,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "chatfuel",
@@ -404,7 +620,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 38
+    "source_row": 38,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "chatgpt",
@@ -415,7 +637,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 39
+    "source_row": 39,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "chatgpt-advanced-data-analysis",
@@ -426,7 +654,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 40
+    "source_row": 40,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "chorusai",
@@ -437,7 +671,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 41
+    "source_row": 41,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "claude",
@@ -448,7 +688,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 42
+    "source_row": 42,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "cleanuppictures",
@@ -459,7 +705,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 43
+    "source_row": 43,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "clearscope",
@@ -470,7 +722,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 44
+    "source_row": 44,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "cleo",
@@ -481,7 +739,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 45
+    "source_row": 45,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "clerkio",
@@ -492,7 +756,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 46
+    "source_row": 46,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "clickup-ai",
@@ -503,7 +773,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 47
+    "source_row": 47,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "clipchamp",
@@ -514,7 +790,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 48
+    "source_row": 48,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "clipdrop",
@@ -525,7 +807,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 49
+    "source_row": 49,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "coda-ai",
@@ -536,7 +824,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 50
+    "source_row": 50,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "codeium",
@@ -547,7 +841,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 51
+    "source_row": 51,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "codex-openai",
@@ -558,7 +858,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 52
+    "source_row": 52,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "cognii",
@@ -569,7 +875,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 53
+    "source_row": 53,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "cohere-api",
@@ -580,7 +892,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 54
+    "source_row": 54,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "colormind",
@@ -591,7 +909,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 55
+    "source_row": 55,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "colossyan",
@@ -602,7 +926,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 56
+    "source_row": 56,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "consensus",
@@ -613,7 +943,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 57
+    "source_row": 57,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "contentbot",
@@ -624,7 +960,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 58
+    "source_row": 58,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "contentshake-ai",
@@ -635,7 +977,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 59
+    "source_row": 59,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "contentstudio",
@@ -646,7 +994,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 60
+    "source_row": 60,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "continue",
@@ -657,7 +1011,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 61
+    "source_row": 61,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "copyai",
@@ -668,7 +1028,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 62
+    "source_row": 62,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "copysmith",
@@ -679,7 +1045,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 63
+    "source_row": 63,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "coursebox",
@@ -690,7 +1062,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 64
+    "source_row": 64,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "craft",
@@ -701,7 +1079,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 65
+    "source_row": 65,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "craiyon",
@@ -712,7 +1096,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 66
+    "source_row": 66,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "creatify",
@@ -723,7 +1113,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 67
+    "source_row": 67,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "cursor",
@@ -734,7 +1130,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 69
+    "source_row": 69,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "d-id",
@@ -745,7 +1147,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 70
+    "source_row": 70,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "dall-e-3",
@@ -756,7 +1164,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 71
+    "source_row": 71,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "datarobot",
@@ -767,7 +1181,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 72
+    "source_row": 72,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "debuild",
@@ -778,7 +1198,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 73
+    "source_row": 73,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "decktopus",
@@ -789,7 +1215,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 74
+    "source_row": 74,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "deepai",
@@ -800,7 +1232,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 75
+    "source_row": 75,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "describely",
@@ -811,7 +1249,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 76
+    "source_row": 76,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "descript",
@@ -822,7 +1266,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 77
+    "source_row": 77,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "descript-overdub",
@@ -833,7 +1283,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 78
+    "source_row": 78,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "diagram",
@@ -844,7 +1300,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 79
+    "source_row": 79,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "docyt",
@@ -855,7 +1317,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 80
+    "source_row": 80,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "donotpay",
@@ -866,7 +1334,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 81
+    "source_row": 81,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "dreamstudio",
@@ -877,7 +1351,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 82
+    "source_row": 82,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "drift",
@@ -888,7 +1368,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 83
+    "source_row": 83,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "duolingo-max",
@@ -899,7 +1385,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 84
+    "source_row": 84,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "durable",
@@ -910,7 +1402,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 85
+    "source_row": 85,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "educaidor",
@@ -921,7 +1419,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 86
+    "source_row": 86,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "elevenlabs",
@@ -932,7 +1436,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 87
+    "source_row": 87,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "elicit",
@@ -943,7 +1453,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 88
+    "source_row": 88,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "fathom",
@@ -954,7 +1470,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 89
+    "source_row": 89,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "feedhive",
@@ -965,7 +1487,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 90
+    "source_row": 90,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "fig",
@@ -976,7 +1504,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 91
+    "source_row": 91,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "finalround-ai",
@@ -987,7 +1521,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 92
+    "source_row": 92,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "finance-pal",
@@ -998,7 +1538,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 93
+    "source_row": 93,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "finch",
@@ -1009,7 +1555,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 94
+    "source_row": 94,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "firefliesai",
@@ -1020,7 +1572,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 95
+    "source_row": 95,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "fliki",
@@ -1031,7 +1589,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 96
+    "source_row": 96,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "flutterflow",
@@ -1042,7 +1606,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 97
+    "source_row": 97,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "forethought",
@@ -1053,7 +1623,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 98
+    "source_row": 98,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "framer",
@@ -1064,7 +1640,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 99
+    "source_row": 99,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "framer-ai",
@@ -1075,7 +1657,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 100
+    "source_row": 100,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "frase",
@@ -1086,7 +1674,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 101
+    "source_row": 101,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "freshdesk-ai",
@@ -1097,7 +1691,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 102
+    "source_row": 102,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "galileo-ai",
@@ -1108,7 +1708,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 103
+    "source_row": 103,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "gamma",
@@ -1119,7 +1725,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 104
+    "source_row": 104,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "github-copilot",
@@ -1130,7 +1742,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 105
+    "source_row": 105,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "glass-health",
@@ -1141,7 +1759,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 106
+    "source_row": 106,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "glide",
@@ -1152,7 +1776,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 107
+    "source_row": 107,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "gong",
@@ -1163,7 +1793,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 108
+    "source_row": 108,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "google-ai-studio",
@@ -1174,7 +1810,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 109
+    "source_row": 109,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "gradescope-ai",
@@ -1185,7 +1827,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 110
+    "source_row": 110,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "grain",
@@ -1196,7 +1844,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 111
+    "source_row": 111,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "grammarly",
@@ -1207,7 +1861,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 112
+    "source_row": 112,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "gridlex",
@@ -1218,7 +1878,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 113
+    "source_row": 113,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "growthbar",
@@ -1229,7 +1895,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 114
+    "source_row": 114,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "happy-scribe",
@@ -1240,7 +1912,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 115
+    "source_row": 115,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "harvey-ai",
@@ -1251,7 +1929,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 116
+    "source_row": 116,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "help-scout-ai",
@@ -1262,7 +1946,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 117
+    "source_row": 117,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hex",
@@ -1273,7 +1963,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 118
+    "source_row": 118,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "heygen",
@@ -1284,7 +1980,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 119
+    "source_row": 119,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hootsuite-insights",
@@ -1295,7 +1997,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 120
+    "source_row": 120,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hostinger-ai-builder",
@@ -1306,7 +2014,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 121
+    "source_row": 121,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hugging-face",
@@ -1317,7 +2031,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 122
+    "source_row": 122,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hyperwrite",
@@ -1328,7 +2048,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 123
+    "source_row": 123,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hypotenuse-ai",
@@ -1339,7 +2065,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 124
+    "source_row": 124,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "ideogram",
@@ -1350,7 +2082,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 125
+    "source_row": 125,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "instantlyai",
@@ -1361,7 +2099,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 126
+    "source_row": 126,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "intercom-fin",
@@ -1372,7 +2116,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 127
+    "source_row": 127,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "invideo",
@@ -1383,7 +2133,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 128
+    "source_row": 128,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "jasper-ai",
@@ -1394,7 +2150,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 129
+    "source_row": 129,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "jenni-ai",
@@ -1405,7 +2167,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 130
+    "source_row": 130,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "julius-ai",
@@ -1416,7 +2184,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 131
+    "source_row": 131,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "kapwing",
@@ -1427,7 +2201,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 132
+    "source_row": 132,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "khan-academy-khanmigo",
@@ -1438,7 +2218,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 133
+    "source_row": 133,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "khroma",
@@ -1449,7 +2235,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 134
+    "source_row": 134,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "kickresume",
@@ -1460,7 +2252,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 135
+    "source_row": 135,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "krisp",
@@ -1471,7 +2269,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 136
+    "source_row": 136,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "kustomer-ai",
@@ -1482,7 +2286,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 137
+    "source_row": 137,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lalalai",
@@ -1493,7 +2303,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 138
+    "source_row": 138,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "landbot",
@@ -1504,7 +2320,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 139
+    "source_row": 139,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lately",
@@ -1515,7 +2337,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 140
+    "source_row": 140,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lavender",
@@ -1526,7 +2354,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 141
+    "source_row": 141,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lawgeex",
@@ -1537,7 +2371,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 142
+    "source_row": 142,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lazyapply",
@@ -1548,7 +2388,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 143
+    "source_row": 143,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "legalmation",
@@ -1559,7 +2405,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 144
+    "source_row": 144,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lemlist",
@@ -1570,7 +2422,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 145
+    "source_row": 145,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "leonardo-ai",
@@ -1581,7 +2439,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 146
+    "source_row": 146,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "let's-enhance",
@@ -1592,7 +2456,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 147
+    "source_row": 147,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lex",
@@ -1603,7 +2473,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 148
+    "source_row": 148,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "looka",
@@ -1614,7 +2490,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 149
+    "source_row": 149,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lumen5",
@@ -1625,7 +2507,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 150
+    "source_row": 150,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "luminar-neo",
@@ -1636,7 +2524,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 151
+    "source_row": 151,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "magical",
@@ -1647,7 +2541,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 152
+    "source_row": 152,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "magician-figma",
@@ -1658,7 +2558,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 153
+    "source_row": 153,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "magicschool-ai",
@@ -1669,7 +2575,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 154
+    "source_row": 154,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "make-integromat",
@@ -1680,7 +2592,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 155
+    "source_row": 155,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "manychat",
@@ -1691,7 +2609,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 156
+    "source_row": 156,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "marketmuse",
@@ -1702,7 +2626,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 157
+    "source_row": 157,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "mem",
@@ -1713,7 +2643,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 158
+    "source_row": 158,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "memorable",
@@ -1724,7 +2660,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 159
+    "source_row": 159,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "microsoft-power-automate",
@@ -1735,7 +2677,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 160
+    "source_row": 160,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "midjourney",
@@ -1746,7 +2694,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 161
+    "source_row": 161,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "mintlify-writer",
@@ -1757,7 +2711,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 162
+    "source_row": 162,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "mockup-ai",
@@ -1768,7 +2728,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 163
+    "source_row": 163,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "monarch-money",
@@ -1779,7 +2745,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 164
+    "source_row": 164,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "monkeylearn",
@@ -1790,7 +2762,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 165
+    "source_row": 165,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "motion",
@@ -1801,7 +2779,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 166
+    "source_row": 166,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "murf-ai",
@@ -1812,7 +2796,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 167
+    "source_row": 167,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "n8n",
@@ -1823,7 +2813,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 168
+    "source_row": 168,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "nabla-copilot",
@@ -1834,7 +2830,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 169
+    "source_row": 169,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "neuronwriter",
@@ -1845,7 +2847,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 170
+    "source_row": 170,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "nightcafe",
@@ -1856,7 +2864,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 171
+    "source_row": 171,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "nosto",
@@ -1867,7 +2881,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 172
+    "source_row": 172,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "notion-ai",
@@ -1878,7 +2898,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 173
+    "source_row": 173,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "ocoya",
@@ -1889,7 +2915,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 174
+    "source_row": 174,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "octane-ai",
@@ -1900,7 +2932,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 175
+    "source_row": 175,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "omneky",
@@ -1911,7 +2949,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 176
+    "source_row": 176,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "openai-api",
@@ -1922,7 +2966,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 177
+    "source_row": 177,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "otterai",
@@ -1933,7 +2983,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 178
+    "source_row": 178,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pencil",
@@ -1944,7 +3000,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 179
+    "source_row": 179,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "perplexity-ai",
@@ -1955,7 +3017,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 180
+    "source_row": 180,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "phind",
@@ -1966,7 +3034,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 181
+    "source_row": 181,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "photor",
@@ -1977,7 +3051,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 182
+    "source_row": 182,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pictory",
@@ -1988,7 +3068,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 183
+    "source_row": 183,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pieces",
@@ -1999,7 +3085,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 184
+    "source_row": 184,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pitch",
@@ -2010,7 +3102,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 185
+    "source_row": 185,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pixlr-ai",
@@ -2021,7 +3119,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 186
+    "source_row": 186,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pixray",
@@ -2032,7 +3136,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 187
+    "source_row": 187,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "playground-ai",
@@ -2043,7 +3153,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 188
+    "source_row": 188,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "polyai",
@@ -2054,7 +3170,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 189
+    "source_row": 189,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "polymer",
@@ -2065,7 +3187,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 190
+    "source_row": 190,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "postwise",
@@ -2076,7 +3204,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 191
+    "source_row": 191,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "predisai",
@@ -2087,7 +3221,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 192
+    "source_row": 192,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "presentationsai",
@@ -2098,7 +3238,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 193
+    "source_row": 193,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "prowritingaid",
@@ -2109,7 +3255,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 194
+    "source_row": 194,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "quickads",
@@ -2120,7 +3272,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 195
+    "source_row": 195,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "quillbot",
@@ -2131,7 +3289,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 196
+    "source_row": 196,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "quizizz-ai",
@@ -2142,7 +3306,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 197
+    "source_row": 197,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "quizlet-q-chat",
@@ -2153,7 +3323,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 198
+    "source_row": 198,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "rasa",
@@ -2164,7 +3340,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 199
+    "source_row": 199,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "readai",
@@ -2175,7 +3357,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 200
+    "source_row": 200,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "rebuy",
@@ -2186,7 +3374,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 201
+    "source_row": 201,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "reclaim",
@@ -2197,7 +3391,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 202
+    "source_row": 202,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "reflect",
@@ -2208,7 +3408,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 203
+    "source_row": 203,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "regieai",
@@ -2219,7 +3425,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 204
+    "source_row": 204,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "relay",
@@ -2230,7 +3442,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 205
+    "source_row": 205,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "relume",
@@ -2241,7 +3459,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 206
+    "source_row": 206,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "remini",
@@ -2252,7 +3476,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 207
+    "source_row": 207,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "removebg",
@@ -2263,7 +3493,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 208
+    "source_row": 208,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "replai",
@@ -2274,7 +3510,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 209
+    "source_row": 209,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "replicate",
@@ -2285,7 +3527,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 210
+    "source_row": 210,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "replika",
@@ -2296,7 +3544,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 211
+    "source_row": 211,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "replit-ai",
@@ -2307,7 +3561,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 212
+    "source_row": 212,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "replyio",
@@ -2318,7 +3578,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 213
+    "source_row": 213,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "research-rabbit",
@@ -2329,7 +3595,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 214
+    "source_row": 214,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "resemble-ai",
@@ -2340,7 +3612,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 215
+    "source_row": 215,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "resume-worded",
@@ -2351,7 +3629,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 216
+    "source_row": 216,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "retool",
@@ -2362,7 +3646,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 217
+    "source_row": 217,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "rev-ai",
@@ -2373,7 +3663,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 218
+    "source_row": 218,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "rezi",
@@ -2384,7 +3680,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 219
+    "source_row": 219,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "rows",
@@ -2395,7 +3697,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 220
+    "source_row": 220,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "runway",
@@ -2406,7 +3714,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 222
+    "source_row": 222,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "rytr",
@@ -2417,7 +3731,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 223
+    "source_row": 223,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "scalenut",
@@ -2428,7 +3748,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 224
+    "source_row": 224,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "scholarcy",
@@ -2439,7 +3765,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 225
+    "source_row": 225,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "scispace",
@@ -2450,7 +3782,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 226
+    "source_row": 226,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "sembly",
@@ -2461,7 +3799,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 227
+    "source_row": 227,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "semrush",
@@ -2472,7 +3816,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 228
+    "source_row": 228,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "shopify-magic",
@@ -2483,7 +3833,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 229
+    "source_row": 229,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "shortly-ai",
@@ -2494,7 +3850,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 230
+    "source_row": 230,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "shortwave",
@@ -2505,7 +3867,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 231
+    "source_row": 231,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "simplified",
@@ -2516,7 +3884,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 232
+    "source_row": 232,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "sivi-ai",
@@ -2527,7 +3901,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 233
+    "source_row": 233,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "slidesai",
@@ -2538,7 +3918,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 234
+    "source_row": 234,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "slidespeak",
@@ -2549,7 +3935,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 235
+    "source_row": 235,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "smartwriter",
@@ -2560,7 +3952,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 236
+    "source_row": 236,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "softr",
@@ -2571,7 +3969,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 237
+    "source_row": 237,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "sonara",
@@ -2582,7 +3986,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 238
+    "source_row": 238,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "soundraw",
@@ -2593,7 +4003,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 239
+    "source_row": 239,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "sourcegraph-cody",
@@ -2604,7 +4020,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 240
+    "source_row": 240,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "spark",
@@ -2615,7 +4037,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 241
+    "source_row": 241,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "speechify",
@@ -2626,7 +4054,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 242
+    "source_row": 242,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "speedy-brand",
@@ -2637,7 +4071,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 243
+    "source_row": 243,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "spellbook",
@@ -2648,7 +4088,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 244
+    "source_row": 244,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "stable-diffusion",
@@ -2659,7 +4105,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 245
+    "source_row": 245,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "starryai",
@@ -2670,7 +4122,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 246
+    "source_row": 246,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "sudowrite",
@@ -2681,7 +4139,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 247
+    "source_row": 247,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "superhuman",
@@ -2692,7 +4156,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 248
+    "source_row": 248,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "surfer-seo",
@@ -2703,7 +4173,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 249
+    "source_row": 249,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "synthesia",
@@ -2714,7 +4190,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 251
+    "source_row": 251,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tableau-ai",
@@ -2725,7 +4207,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 252
+    "source_row": 252,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tabnine",
@@ -2736,7 +4224,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 253
+    "source_row": 253,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tana",
@@ -2747,7 +4241,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 254
+    "source_row": 254,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "taplio",
@@ -2758,7 +4258,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 255
+    "source_row": 255,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "taskade",
@@ -2769,7 +4275,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 256
+    "source_row": 256,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "teal",
@@ -2780,7 +4292,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 257
+    "source_row": 257,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "textcortex",
@@ -2791,7 +4309,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 258
+    "source_row": 258,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "thoughtspot",
@@ -2802,7 +4326,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 259
+    "source_row": 259,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tidio",
@@ -2813,7 +4343,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 260
+    "source_row": 260,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tl;dv",
@@ -2824,7 +4360,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 261
+    "source_row": 261,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "together-ai",
@@ -2835,7 +4377,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 262
+    "source_row": 262,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tome",
@@ -2846,7 +4394,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 263
+    "source_row": 263,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "topaz-ai",
@@ -2857,7 +4411,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 264
+    "source_row": 264,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "trayio",
@@ -2868,7 +4428,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 265
+    "source_row": 265,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "trint",
@@ -2879,7 +4445,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 266
+    "source_row": 266,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "twain",
@@ -2890,7 +4462,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 267
+    "source_row": 267,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "tweet-hunter",
@@ -2901,7 +4479,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 268
+    "source_row": 268,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "uizard",
@@ -2912,7 +4496,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 269
+    "source_row": 269,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "ultimateai",
@@ -2923,7 +4513,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 270
+    "source_row": 270,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "unicorn-platform",
@@ -2934,7 +4530,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 271
+    "source_row": 271,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "upscalemedia",
@@ -2945,7 +4547,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 272
+    "source_row": 272,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "v0-by-vercel",
@@ -2956,7 +4564,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 273
+    "source_row": 273,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "vicai",
@@ -2967,7 +4581,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 274
+    "source_row": 274,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "visenze",
@@ -2978,7 +4598,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 275
+    "source_row": 275,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "voiceflow",
@@ -2989,7 +4615,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 276
+    "source_row": 276,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "warmerai",
@@ -3000,7 +4632,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 277
+    "source_row": 277,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "warp",
@@ -3011,7 +4649,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 278
+    "source_row": 278,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "webflow",
@@ -3022,7 +4666,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 279
+    "source_row": 279,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "wix-ai",
@@ -3033,7 +4683,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 280
+    "source_row": 280,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "woebot",
@@ -3044,7 +4700,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 281
+    "source_row": 281,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "wordtune",
@@ -3055,7 +4717,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 282
+    "source_row": 282,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "workato",
@@ -3066,7 +4734,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 283
+    "source_row": 283,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "writecream",
@@ -3077,7 +4751,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 284
+    "source_row": 284,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "writesonic",
@@ -3088,7 +4768,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 286
+    "source_row": 286,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "wysa",
@@ -3099,7 +4785,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 287
+    "source_row": 287,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "yellowai",
@@ -3110,7 +4802,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 288
+    "source_row": 288,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "yoodli",
@@ -3121,7 +4819,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 289
+    "source_row": 289,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "youcom",
@@ -3132,7 +4836,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 290
+    "source_row": 290,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "youper",
@@ -3143,7 +4853,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 291
+    "source_row": 291,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "zapier-ai",
@@ -3154,7 +4870,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 292
+    "source_row": 292,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "zendesk-ai",
@@ -3165,7 +4887,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 293
+    "source_row": 293,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "zipchat",
@@ -3176,7 +4904,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 294
+    "source_row": 294,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "sora",
@@ -3187,7 +4921,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 295
+    "source_row": 295,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "replit",
@@ -3198,7 +4938,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 296
+    "source_row": 296,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "lovable",
@@ -3209,7 +4955,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 297
+    "source_row": 297,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "bolt",
@@ -3220,7 +4972,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 298
+    "source_row": 298,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "dora-run",
@@ -3231,7 +4989,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 299
+    "source_row": 299,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "base44",
@@ -3242,7 +5006,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 300
+    "source_row": 300,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "manus",
@@ -3253,7 +5023,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 301
+    "source_row": 301,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "free_trial",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "readdy-ai",
@@ -3264,7 +5040,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 302
+    "source_row": 302,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "perplexity",
@@ -3275,7 +5057,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 303
+    "source_row": 303,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pika",
@@ -3286,7 +5074,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 304
+    "source_row": 304,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "suno",
@@ -3297,7 +5091,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 305
+    "source_row": 305,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "nano-banana",
@@ -3308,7 +5108,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 306
+    "source_row": 306,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "canva",
@@ -3319,7 +5125,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 307
+    "source_row": 307,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "notion",
@@ -3330,7 +5142,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 308
+    "source_row": 308,
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "figma",
@@ -3341,7 +5159,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 309
+    "source_row": 309,
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "capcut",
@@ -3352,7 +5176,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": 310
+    "source_row": 310,
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "google-gemini",
@@ -3363,7 +5193,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "openai-playground",
@@ -3374,7 +5210,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "microsoft-copilot",
@@ -3385,7 +5227,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "perplexity-pages",
@@ -3396,7 +5244,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "meta-ai",
@@ -3407,7 +5261,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "amazon-q",
@@ -3418,7 +5278,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "apple-intelligence",
@@ -3429,7 +5295,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "antigravity",
@@ -3440,7 +5312,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "vercel-ai-sdk",
@@ -3451,7 +5329,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": false,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "unknown",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "langchain",
@@ -3462,7 +5346,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "llamaindex",
@@ -3473,7 +5363,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "cloudflare-workers-ai",
@@ -3484,7 +5380,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "udio",
@@ -3495,7 +5397,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "unknown",
+    "pricing_confidence": 0,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "luma-ai",
@@ -3506,7 +5414,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "pika-labs",
@@ -3517,7 +5431,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "pricing_page",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "hubspot-ai",
@@ -3528,7 +5448,13 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": false,
+    "pricing_model": "paid",
+    "pricing_confidence": 2,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   },
   {
     "id": "salesforce-einstein",
@@ -3539,6 +5465,12 @@
     "description": null,
     "pricing": null,
     "tags": [],
-    "source_row": "manual-injection-a2"
+    "source_row": "manual-injection-a2",
+    "pricing_detected": true,
+    "has_free_tier": true,
+    "pricing_model": "freemium",
+    "pricing_confidence": 3,
+    "pricing_source": "homepage",
+    "pricing_checked_at": "2026-02-15"
   }
 ]

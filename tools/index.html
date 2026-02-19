@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse AI Tools — Which AIPick</title>
+  <meta name="description"
+    content="Browse the complete directory of AI tools. Filter by category, explore new tools, and find exactly what you need for your projects and workflows.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Browse AI Tools — WhichAIPick">
+  <meta property="og:description"
+    content="Browse the complete directory of AI tools. Filter by category, explore new tools, and find exactly what you need for your projects and workflows.">
+  <meta property="og:image" content="/assets/logo/logo-final.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="Browse AI Tools — WhichAIPick">
+  <meta property="twitter:description"
+    content="Browse the complete directory of AI tools. Filter by category, explore new tools, and find exactly what you need for your projects and workflows.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://whichaipick.com/tools">
+
+  <link rel="stylesheet" href="/css/styles.css?v=2.6">
+</head>
+
+<body data-bg="browse">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-container">
+      <div class="page-header">
+        <h1>Browse AI Tools</h1>
+        <p>Discover tools across every workflow</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-search">
+          <input type="search" id="search-input" placeholder="Search by name..." aria-label="Search tools">
+        </div>
+
+        <div class="filter-controls">
+          <div class="filter-item">
+            <label for="sort-select">Sort:</label>
+            <select id="sort-select" aria-label="Sort tools">
+              <option value="recommended">Recommended</option>
+              <option value="free_first">Free First</option>
+              <option value="az">A–Z</option>
+              <option value="za">Z–A</option>
+            </select>
+          </div>
+
+          <!-- Free Tier Toggle -->
+          <div class="filter-item">
+            <label class="toggle-switch">
+              <input type="checkbox" id="free-tier-toggle">
+              <span class="toggle-slider"></span>
+            </label>
+            <label for="free-tier-toggle" title="Pricing is auto-detected; some tools may be misclassified."
+              style="cursor: pointer;">
+              Free tier <span style="font-size: 0.8em; opacity: 0.7;">(detected)</span>
+            </label>
+          </div>
+
+          <div class="filter-item">
+            <label for="category-select">Category:</label>
+            <select id="category-select" aria-label="Category filter">
+              <option value="">All categories</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool List Container -->
+      <div id="browse-container">
+        <div id="browse-stats" class="browse-stats"></div>
+        <div id="browse-list" class="browse-list"></div>
+        <div id="load-more-container" class="load-more-container"></div>
+
+        <!-- Newsletter CTA (Phase 5.4) -->
+        <div class="cta-band" style="margin-top: 60px;">
+          <h2>Stay Ahead of the Curve</h2>
+          <p>Get the latest AI tool discoveries and guides delivered to your inbox.</p>
+          <div class="cta-row">
+            <a href="/newsletter" class="btn btn-primary btn-lg"
+              onclick="Analytics.track('newsletter_cta_click', { location: 'tools_list' })">Subscribe Free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=1.7"></script>
+  <script src="/js/layout.js?v=1.8" defer></script>
+  <script>
+    let allTools = [];
+    let filteredTools = [];
+    let displayedCount = 0;
+    let recommendedIds = []; // Global state for visual recommendations
+    const ITEMS_PER_PAGE = 30;
+
+    // Render tools
+    function renderTools(append = false) {
+      const container = document.getElementById('browse-list');
+      const start = append ? displayedCount : 0;
+      const end = Math.min(start + ITEMS_PER_PAGE, filteredTools.length);
+
+      if (!append) {
+        container.innerHTML = '';
+        displayedCount = 0;
+      }
+
+      const fragment = document.createDocumentFragment();
+
+      for (let i = start; i < end; i++) {
+        const tool = filteredTools[i];
+        // Use shared renderer from main.js
+        // Pass tool, recommendedIds, and 'browse' as source context
+        const card = renderToolCard(tool, recommendedIds, 'browse');
+        fragment.appendChild(card);
+      }
+
+      container.appendChild(fragment);
+      displayedCount = end;
+
+      updateLoadMoreButton();
+      updateStats();
+    }
+
+    // Update load more button
+    function updateLoadMoreButton() {
+      const container = document.getElementById('load-more-container');
+
+      if (displayedCount < filteredTools.length) {
+        const remaining = filteredTools.length - displayedCount;
+        container.innerHTML = `
+          <button id="load-more-btn" class="btn btn-secondary">
+            Load More (+${Math.min(ITEMS_PER_PAGE, remaining)} tools)
+          </button>
+        `;
+        document.getElementById('load-more-btn').addEventListener('click', () => {
+          renderTools(true);
+        });
+      } else {
+        container.innerHTML = '';
+      }
+    }
+
+    // Update stats
+    function updateStats() {
+      const stats = document.getElementById('browse-stats');
+      stats.textContent = `Showing ${displayedCount} of ${filteredTools.length} tools`;
+    }
+
+    // Filter and sort
+    function applyFilters() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const sortOrder = document.getElementById('sort-select').value;
+      const selectedCategory = document.getElementById('category-select').value;
+      const freeTierToggle = document.getElementById('free-tier-toggle');
+      const freeTierOnly = freeTierToggle ? freeTierToggle.checked : false;
+
+      // Filter by search, category, and free tier
+      filteredTools = allTools.filter(tool => {
+        const matchesSearch = tool.name.toLowerCase().includes(searchTerm);
+        const matchesCategory = !selectedCategory || tool.category === selectedCategory;
+        const matchesFree = !freeTierOnly || tool.has_free_tier === true;
+        return matchesSearch && matchesCategory && matchesFree;
+      });
+
+      // Track events for filters
+      if (freeTierOnly) Analytics.track('free_tier_toggle', { action: 'enable' });
+      if (sortOrder === 'free_first') Analytics.track('free_first_sort', { action: 'sort' });
+
+      // Sort
+      if (sortOrder === 'recommended') {
+        filteredTools = sortToolsRecommended(filteredTools);
+      } else if (sortOrder === 'free_first') {
+        filteredTools = sortToolsFreeFirst(filteredTools); // Uses main.js helper
+      } else if (sortOrder === 'az') {
+        filteredTools.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (sortOrder === 'za') {
+        filteredTools.sort((a, b) => b.name.localeCompare(a.name));
+      }
+
+      renderTools(false);
+    }
+
+    // Initialize
+    async function init() {
+      try {
+        await loadTools();
+        await loadDescriptions(); // Load descriptions for cards
+
+        // Load recommended list for visual highlighting
+        const recData = await loadRecommendedList();
+        recommendedIds = recData ? recData.recommended_ids : [];
+
+        allTools = getAllTools();
+        filteredTools = [...allTools];
+
+        // Extract unique categories (excluding Uncategorized)
+        const categories = new Set();
+        allTools.forEach(tool => {
+          if (tool.category && tool.category !== 'Uncategorized') {
+            categories.add(tool.category);
+          }
+        });
+
+        // Populate category dropdown
+        const categorySelect = document.getElementById('category-select');
+        const sortedCategories = Array.from(categories).sort();
+        sortedCategories.forEach(category => {
+          const option = document.createElement('option');
+          option.value = category;
+          option.textContent = category;
+          categorySelect.appendChild(option);
+        });
+
+        // Use main.js sort helper which uses its internal rec data, 
+        // but we also have local recommendedIds for visual class
+        filteredTools = sortToolsRecommended(filteredTools);
+
+        renderTools(false);
+
+        // Event listeners
+        document.getElementById('search-input').addEventListener('input', applyFilters);
+        document.getElementById('sort-select').addEventListener('change', applyFilters);
+        document.getElementById('category-select').addEventListener('change', applyFilters);
+
+        const freeTierToggle = document.getElementById('free-tier-toggle');
+        if (freeTierToggle) {
+          freeTierToggle.addEventListener('change', applyFilters);
+        }
+
+      } catch (error) {
+        document.getElementById('browse-list').innerHTML = '<p style="text-align: center;">Failed to load tools.</p>';
+      }
+    }
+
+    init();
+  </script>
+</body>
+
+</html>
