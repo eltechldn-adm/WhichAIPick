@@ -45,57 +45,142 @@
 
     <main>
         <!-- 1. HERO SECTION -->
-        <section class="hero">
-            <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-                <source src="assets/hero/hero-loop.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 class="hero-headline">Discover AI Tools You Didn't Know Existed</h1>
-                <p class="hero-subheadline">Browse 322 AI tools across every category. Find your perfect match with our
-                    quiz or explore tools by use case, comparison, and learning resources.</p>
-                <div class="hero-cta">
+        <section class="hero static-premium-hero scene-wrapper">
+            <div class="parallax-layer bg-glow-blue" data-parallax-speed="0.08"></div>
+            <div class="hero-content reveal">
+                <h1 class="hero-headline reveal">Discover, Compare & Evaluate AI Tools With Confidence</h1>
+                <p class="hero-subheadline reveal" style="transition-delay: 100ms;">Browse 322+ AI tools across every
+                    category, independently researched with
+                    verified pricing models to help you find your perfect match.</p>
+                <div class="hero-cta reveal" style="transition-delay: 200ms;">
                     <a href="/tools" class="btn btn-primary">Browse Tools</a>
-                    <a href="/find.html" class="btn btn-secondary">Take the Quiz</a>
+                    <a href="/compare.html" class="btn btn-secondary">Compare Tools</a>
+                    <a href="/academy.html" class="btn btn-secondary">Explore Academy</a>
                 </div>
-                <p style="margin-top: 16px; opacity: 0.7; font-size: 0.9rem; color: #F4F4F4;">
-                    322 tools cataloged • Clean routes • Updated for 2026
-                </p>
+
+                <div class="hero-stats-strip reveal" style="transition-delay: 300ms;">
+                    <div class="stat-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        <span>322+ Tools Indexed</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>300+ Fully Researched</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
+                        <span>Pricing Verified</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>Updated Daily</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 2. START HERE - QUICK PATHS -->
-        <section class="page-shell">
+        <!-- 2. WHY WHICHAIPICK -->
+        <section class="page-shell scene-wrapper">
+            <div class="parallax-layer bg-glow-orange" data-parallax-speed="-0.05"></div>
             <div class="section-spaced">
-                <h2 style="text-align: center; margin-bottom: 40px;">Start Here</h2>
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h3>AI Academy</h3>
-                        <p>Learn AI fundamentals, how tools work, and what's possible. Start with the basics or dive
-                            into specific concepts like agents and automation.</p>
-                        <a href="/academy.html" class="btn btn-primary">Explore Academy</a>
+                <h2 class="reveal" style="text-align: center; margin-bottom: 40px;">Why WhichAIPick?</h2>
+                <div class="features-grid reveal-stagger">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Independent Research</h3>
+                        <p>We test every tool manually. No automated scraping, no biased vendor claims. Just honest
+                            evaluation of capabilities.</p>
                     </div>
-                    <div class="content-card">
-                        <h3>Use Cases</h3>
-                        <p>Discover practical workflows for making money, creating content, building software, and
-                            saving time with AI-powered systems.</p>
-                        <a href="/use-cases.html" class="btn btn-primary">View Use Cases</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Transparent Pricing</h3>
+                        <p>We decipher complex pricing models. Instantly see if a tool has a true free tier, hidden
+                            costs, or confusing token systems.</p>
                     </div>
-                    <div class="content-card">
-                        <h3>Compare Tools</h3>
-                        <p>Side-by-side comparisons of popular AI tools. See strengths, weaknesses, pricing, and which
-                            option fits your specific needs.</p>
-                        <a href="/compare.html" class="btn btn-primary">Compare Options</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>Structured Comparisons</h3>
+                        <p>Stop guessing which tool is right. We put the biggest names head-to-head based on real-world
+                            use cases and functionality.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. PICK YOUR GOAL -->
-        <section class="page-shell">
+        <!-- 3. FEATURED TOOLS -->
+        <section class="page-shell scene-wrapper">
             <div class="section-spaced">
-                <h2 style="text-align: center; margin-bottom: 40px;">Pick Your Goal</h2>
-                <div class="content-grid">
+                <div class="section-header reveal"
+                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+                    <div>
+                        <h2 style="margin-bottom: 8px;">Featured AI Tools</h2>
+                        <p style="margin-bottom: 0; color: var(--c-text-muted);">Hand-picked solutions for immediate
+                            impact.</p>
+                    </div>
+                    <a href="/tools" class="btn btn-secondary btn-sm" style="margin-bottom: 4px;">View All 322 Tools
+                        &rarr;</a>
+                </div>
+                <div id="home-featured-tools" class="tools-grid reveal-stagger">
+                    <!-- JS Injected -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. BROWSE BY CATEGORY -->
+        <section class="page-shell scene-wrapper">
+            <div class="parallax-layer bg-glow-blue" data-parallax-speed="0.1"></div>
+            <div class="section-spaced">
+                <h2 class="reveal" style="text-align: center; margin-bottom: 40px;">Browse by Category</h2>
+                <div id="home-category-grid" class="content-grid reveal-stagger"
+                    style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                    <!-- JS Injected -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. HOW WE REVIEW -->
+        <section class="page-shell scene-wrapper"
+            style="background: rgba(42, 46, 51, 0.4); border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border);">
+            <div class="section-spaced content-narrow" style="text-align: center;">
+                <h2 class="reveal">Our Review Methodology</h2>
+                <p class="reveal" style="margin: 0 auto var(--space-4) auto;">Our editorial integrity is paramount. We
+                    do not accept
+                    payment to list tools, nor do we let affiliate partnerships influence our rankings. Every tool
+                    undergoes a rigorous 5-point evaluation covering Features, UX, Pricing Transparency, Output Quality,
+                    and Privacy.</p>
+                <div class="reveal">
+                    <a href="/review-methodology.html" class="btn btn-secondary">Read Full Methodology</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PICK YOUR GOAL -->
+        <section class="page-shell scene-wrapper">
+            <div class="section-spaced">
+                <h2 class="reveal" style="text-align: center; margin-bottom: 40px;">Pick Your Goal</h2>
+                <div class="content-grid reveal-stagger">
                     <div class="content-card">
                         <h3>Make Money with AI</h3>
                         <p>Turn AI skills into income. Learn 5 proven monetization models and launch in 48 hours.</p>
@@ -123,10 +208,11 @@
         </section>
 
         <!-- 4. LEARN AI FAST -->
-        <section class="page-shell">
+        <section class="page-shell scene-wrapper">
+            <div class="parallax-layer bg-glow-orange" data-parallax-speed="-0.08"></div>
             <div class="section-spaced">
-                <h2 style="text-align: center; margin-bottom: 40px;">Learn AI Fast</h2>
-                <div class="academy-links-grid">
+                <h2 class="reveal" style="text-align: center; margin-bottom: 40px;">Learn AI Fast</h2>
+                <div class="academy-links-grid reveal-stagger">
                     <a href="/academy/what-is-ai" class="academy-link-card">
                         <h4>What is AI?</h4>
                         <p>Foundations, terminology, and how AI actually works.</p>
@@ -156,10 +242,10 @@
         </section>
 
         <!-- 5. COMPARE BEFORE YOU CHOOSE -->
-        <section class="page-shell">
+        <section class="page-shell scene-wrapper">
             <div class="section-spaced">
-                <h2 style="text-align: center; margin-bottom: 40px;">Compare Before You Choose</h2>
-                <div class="content-grid">
+                <h2 class="reveal" style="text-align: center; margin-bottom: 40px;">Compare Before You Choose</h2>
+                <div class="content-grid reveal-stagger">
                     <div class="content-card">
                         <h3>ChatGPT vs Claude vs Gemini</h3>
                         <p>The top 3 conversational AIs compared: strengths, pricing, and use cases.</p>
@@ -184,15 +270,38 @@
             </div>
         </section>
 
-        <!-- 6. FINAL CTA BAND -->
-        <section class="page-shell">
-            <div class="section-spaced">
-                <div class="cta-band">
-                    <h2>Ready to Find Your Tools?</h2>
-                    <p>Browse the complete directory or take our quiz to get personalized recommendations.</p>
-                    <div class="cta-row">
-                        <a href="/tools" class="btn btn-primary btn-lg">Browse Tools</a>
-                        <a href="/find.html" class="btn btn-secondary btn-lg">Take the Quiz</a>
+        <!-- 7. SUBMIT TOOL & NEWSLETTER -->
+        <section class="page-shell scene-wrapper">
+            <div class="parallax-layer bg-glow-blue" data-parallax-speed="0.12"></div>
+            <div class="section-spaced reveal">
+                <div class="content-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                    <div class="content-card"
+                        style="display: flex; flex-direction: column; justify-content: center; text-align: center; padding: var(--space-6) var(--space-4);">
+                        <h3 style="margin-bottom: var(--space-2);">Are You Building an AI Tool?</h3>
+                        <p style="margin-bottom: var(--space-4); margin-left: auto; margin-right: auto;">Get in front of
+                            our audience of founders, creators, and operators. Submitting a tool is free and takes less
+                            than 3 minutes.</p>
+                        <div>
+                            <a href="/submit-tool.html" class="btn btn-secondary">Submit Your Tool</a>
+                        </div>
+                    </div>
+
+                    <div class="content-card"
+                        style="display: flex; flex-direction: column; justify-content: center; text-align: center; padding: var(--space-6) var(--space-4); background: rgba(245, 166, 35, 0.03); border-color: rgba(245, 166, 35, 0.2);">
+                        <h3 style="margin-bottom: var(--space-2); color: var(--c-text);">Get Our Weekly AI Briefing</h3>
+                        <p style="margin-bottom: var(--space-4); margin-left: auto; margin-right: auto;">No hype. No
+                            fluff. Just the most useful new tools, use cases, and industry news delivered once a week.
+                        </p>
+                        <form class="newsletter-block"
+                            style="display: flex; gap: 8px; max-width: 400px; margin: 0 auto; width: 100%;"
+                            onsubmit="event.preventDefault(); alert('Newsletter integration coming soon!');">
+                            <input type="email" placeholder="Enter your email" required
+                                style="flex: 1; min-width: 0; padding: 12px 16px; border-radius: var(--r-md); border: 1px solid var(--c-border); background: rgba(0,0,0,0.2); color: #fff;">
+                            <button type="submit" class="btn btn-primary"
+                                style="white-space: nowrap;">Subscribe</button>
+                        </form>
+                        <span style="font-size: var(--text-xs); color: var(--c-text-muted); margin-top: 12px;">Join
+                            15,000+ professionals. Unsubscribe anytime.</span>
                     </div>
                 </div>
             </div>
@@ -201,8 +310,10 @@
 
     <div id="site-footer"></div>
 
-    <script src="/js/main.js?v=6.4"></script>
+    <script src="/js/main.js?v=6.5"></script>
     <script src="/js/layout.js?v=1.8" defer></script>
+    <script src="/js/pages/home-motion.js" defer></script>
+    <script src="/js/pages/home.js?v=1.0" defer></script>
 </body>
 
 </html>
