@@ -1,36 +1,46 @@
 /* ===================================
-   HERO SECTION (Home Page Only)
+   HERO VIDEO SECTION (Home Page Only)
    =================================== */
 
 /* Hero Container */
 .hero {
   position: relative;
   width: 100%;
-  min-height: 85vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--c-bg);
-  /* handled via global background system now */
+  background: #0F1215;
+  /* Fallback background image if exists */
+  background-image: url('/assets/backgrounds/home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* New Premium Static Hero Additions */
-.static-premium-hero {
-  border-bottom: 1px solid var(--c-border);
-  position: relative;
-}
-
-.static-premium-hero::before {
-  content: '';
+/* Hero Video Background */
+.hero-video {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 30%, rgba(255, 179, 0, 0.08) 0%, transparent 60%);
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 1;
+  pointer-events: none;
+}
+
+/* Dark Overlay for Text Readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 18, 21, 0.65);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Hero Content Layer */
@@ -43,91 +53,47 @@
 }
 
 .hero-headline {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #F4F4F4;
-  margin-bottom: 24px;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hero-subheadline {
-  font-size: 1.25rem;
-  color: var(--c-text-muted);
-  margin-bottom: 40px;
+  font-size: 1.3rem;
+  color: #F4F4F4;
+  opacity: 0.95;
+  margin-bottom: 35px;
   line-height: 1.6;
-  max-width: 760px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-cta {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 48px;
 }
 
-/* Stats Strip */
-.hero-stats-strip {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  padding-top: 32px;
-  border-top: 1px solid var(--c-border);
-  max-width: 800px;
-  margin: 0 auto;
+/* Reduced Motion Support - Hide video, show fallback */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+
+  .hero {
+    /* Fallback to solid background or static image only */
+    background-color: #0F1215;
+  }
 }
 
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--c-text-muted);
-  font-size: var(--text-sm);
-  font-weight: 500;
-}
-
-.stat-item svg {
-  color: var(--c-accent);
-  opacity: 0.8;
-}
-
-/* Feature Grid */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-5);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--c-border);
-  border-radius: var(--r-md);
-  padding: var(--space-5);
-  text-align: center;
-  transition: transform var(--t-fast), background var(--t-fast);
-}
-
-.feature-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-2px);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: var(--space-3);
-}
-
-/* Responsive Hero & Features */
+/* Responsive Hero */
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
-    padding: 120px 0 60px;
+    min-height: 70vh;
   }
 
   .hero-headline {
@@ -136,34 +102,21 @@
 
   .hero-subheadline {
     font-size: 1.1rem;
-    margin-bottom: 30px;
   }
 
   .hero-content {
-    padding: 20px 16px;
+    padding: 30px 15px;
   }
 
   .hero-cta {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 15px;
   }
 
   .hero-cta .btn {
     width: 100%;
     text-align: center;
-  }
-
-  .hero-stats-strip {
-    gap: 16px;
-    justify-content: flex-start;
-    padding-top: 24px;
-  }
-
-  .stat-item {
-    width: calc(50% - 8px);
-    /* 2x2 grid on mobile */
   }
 }
 
@@ -265,7 +218,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  width: 100%;
   padding-top: var(--header-height);
   -webkit-font-smoothing: antialiased;
 }
@@ -2184,10 +2136,6 @@ select:focus {
   color: #111;
 }
 
-.tc-btn-primary:visited {
-  color: #111;
-}
-
 .tc-btn-secondary {
   flex: 1;
   padding: 9px 12px;
@@ -2208,10 +2156,6 @@ select:focus {
   color: var(--c-text);
 }
 
-.tc-btn-secondary:visited {
-  color: var(--c-text-muted);
-}
-
 /* --- Pricing Badge System --- */
 .pricing-badge {
   position: absolute;
@@ -2223,78 +2167,6 @@ select:focus {
   border-radius: 999px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.pricing-badges-wrapper {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  z-index: 10;
-}
-
-.pricing-badges-wrapper .pricing-badge {
-  position: relative;
-  top: auto;
-  right: auto;
-}
-
-.pricing-cred-badge {
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 6px;
-  border-radius: 999px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.cred-verified {
-  background: rgba(46, 204, 113, 0.15);
-  color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.3);
-}
-
-.cred-estimated {
-  background: rgba(245, 166, 35, 0.15);
-  color: var(--c-accent);
-  border: 1px solid rgba(245, 166, 35, 0.3);
-}
-
-.cred-unverified {
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tool-pricing-box {
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.tool-pricing-box .pricing-badges-wrapper {
-  position: relative;
-  top: auto;
-  right: auto;
-  justify-content: flex-start;
-}
-
-.pricing-verification-note {
-  font-size: 12px;
-  color: var(--c-text-muted);
-}
-
-.pricing-inferred-note {
-  font-size: 11px;
-  color: var(--c-accent);
-  max-width: 300px;
-  line-height: 1.3;
 }
 
 .pricing-FREE {
