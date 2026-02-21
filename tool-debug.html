@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Details — WhichAIPick</title>
+  <meta name="description"
+    content="Explore AI tool details: discover category, features, use cases, and how to try it. Find related tools and alternatives in our directory.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tool Details — WhichAIPick">
+  <meta property="og:description"
+    content="Explore AI tool details: discover category, features, use cases, and how to try it. Find related tools and alternatives in our directory.">
+  <meta property="og:image" content="/assets/logo/logo-final.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="Tool Details — WhichAIPick">
+  <meta property="twitter:description"
+    content="Explore AI tool details: discover category, features, use cases, and how to try it.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/styles.css?v=2.6">
+  <link rel="stylesheet" href="/css/pages/tool.css?v=9.3.2">
+</head>
+
+<body data-bg="tool">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-container">
+      <div id="tool-container">
+        <p style="text-align: center;">Loading tool...</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/usecases.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=6.4"></script>
+  <script src="/js/layout.js?v=1.8" defer></script>
+  <script>
+    // ── Helpers ──────────────────────────────────────────────────────────────
+    function getDomain(url) {
+      if (!url) return 'N/A';
+      try {
+        const u = new URL(url.startsWith('http') ? url : 'https://' + url);
+        return u.hostname.replace('www.', '');
+      } catch { return 'N/A'; }
+    }
+
+    function getInitials(name) {
+      if (!name) return '?';
+      const words = name.split(' ').filter(w => w.length > 0);
+      if (words.length === 1) return words[0].substring(0, 2).toUpperCase();
+      return words.slice(0, 2).map(w => w[0].toUpperCase()).join('');
+    }
+
+    function createInitialsBadge(toolName) {
+      const badge = document.createElement('div');
+      badge.className = 'logo-fallback';
+      badge.textContent = getInitials(toolName);
+      badge.setAttribute('aria-label', `${toolName} logo`);
+      return badge;
+    }
+
+    function handleLogoError(img) {
+      const currentSrc = img.src;
+      const toolName = img.dataset.toolName;
+      const toolDomain = img.dataset.toolDomain;
+      if (!currentSrc.includes('google.com/s2/favicons')) {
+        img.onerror = () => handleLogoError(img);
+        img.src = `https://www.google.com/s2/favicons?domain=${toolDomain}&sz=128`;
+        return;
+      }
+      img.parentElement.replaceChild(createInitialsBadge(toolName), img);
+    }
+
+    // Get N similar tools from same category (excludes current)
+    function getSimilarTools(allTools, currentId, category, count = 4) {
+      const same = allTools.filter(t => t.id !== currentId && t.category === category);
+      const shuffled = same.sort(() => Math.random() - 0.5);
+      // Top up with random tools if not enough in category
+      if (shuffled.length < count) {
+        const others = allTools.filter(t => t.id !== currentId && t.category !== category)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, count - shuffled.length);
+        return [...shuffled, ...others];
+      }
+      return shuffled.slice(0, count);
+    }
+
+    // Safe array check helper
+    function hasItems(arr) {
+      return Array.isArray(arr) && arr.length > 0;
+    }
+
+    // Render a tool card (authority version) — reuses main.js renderToolCard signature
+    function renderSimilarCard(related, currentId) {
+      const domain = getDomain(related.website_url);
+      const initials = (related.name || '??').trim().split(/\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+      const faviconUrl = domain && domain !== 'N/A'
+        ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
+        : '';
+
+      const logoHTML = faviconUrl
+        ? `<img class="tool-logo" src="${faviconUrl}" alt="${related.name} logo" width="36" height="36" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+           <div class="tool-logo-initials" style="display:none;">${initials}</div>`
+        : `<div class="tool-logo-initials">${initials}</div>`;
+
+      // Pricing badge
+      const pricingMap = {
+        'free': { label: 'Free', cls: 'pricing-FREE' },
+        'freemium': { label: 'Freemium', cls: 'pricing-FREEMIUM' },
+        'paid': { label: 'Paid', cls: 'pricing-PAID' },
+        'free trial': { label: 'Free trial', cls: 'pricing-FREE_TRIAL' },
+        'free_trial': { label: 'Free trial', cls: 'pricing-FREE_TRIAL' },
+      };
+      const rawModel = (related.pricing_model || '').trim().toLowerCase();
+      const pe = pricingMap[rawModel];
+
+      let badge = '';
+      let credLabel = '';
+      let credCls = '';
+      const conf = related.pricing_confidence || 0;
+      if (conf >= 3) {
+        credLabel = '✔ Verified';
+        credCls = 'cred-verified';
+      } else if (conf === 2) {
+        credLabel = '⚠ Estimated';
+        credCls = 'cred-estimated';
+      } else {
+        credLabel = '⏳ Unverified';
+        credCls = 'cred-unverified';
+      }
+      const credHtml = `<a href="/pricing-accuracy-policy.html" class="pricing-cred-badge ${credCls}" title="Pricing classification is manually reviewed. See methodology.">${credLabel}</a>`;
+
+      if (pe) {
+        badge = `<div class="pricing-badges-wrapper"><span class="pricing-badge ${pe.cls}">${pe.label}</span>${credHtml}</div>`;
+      } else if (related.has_free_tier) {
+        badge = `<div class="pricing-badges-wrapper"><span class="pricing-badge pricing-FREE">Free tier</span>${credHtml}</div>`;
+      }
+
+      return `
+        <a href="/tool?id=${encodeURIComponent(related.id)}" class="similar-card"
+           onclick="if(window.Analytics) Analytics.track('tool_similar_click', { from_id: '${currentId}', to_id: '${related.id}' })">
+          ${badge}
+          <div class="similar-card-top">
+            <div class="tool-logo-wrap">${logoHTML}</div>
+            <div class="similar-card-meta">
+              <span class="similar-card-name">${related.name}</span>
+              <span class="similar-card-cat">${related.category || ''}</span>
+            </div>
+          </div>
+          <p class="similar-card-desc">${related.description || domain}</p>
+          <span class="similar-card-cta">View Details →</span>
+        </a>`;
+    }
+
+    // ── Main render ──────────────────────────────────────────────────────────
+    async function renderTool() {
+      const params = new URLSearchParams(window.location.search);
+
+      // 1) Canonical ?id=
+      let toolId = params.get('id');
+      // 2) Legacy ?tool= / ?slug=
+      if (!toolId) toolId = params.get('tool') || params.get('slug');
+      // 3) Pathname: /tool/<id>
+      if (!toolId) {
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        if (pathParts.length >= 2 && pathParts[0] === 'tool') {
+          toolId = decodeURIComponent(pathParts[1]);
+        }
+      }
+
+      const container = document.getElementById('tool-container');
+
+      if (!toolId) {
+        document.title = 'Redirecting — WhichAIPick';
+        container.innerHTML = `
+          <div class="tool-not-found">
+            <h1>No Tool Selected</h1>
+            <p>Redirecting you to the tool directory…</p>
+            <a href="/tools/" class="btn btn-primary">Browse Tools</a>
+          </div>`;
+        setTimeout(() => window.location.replace('/tools/'), 2500);
+        return;
+      }
+
+      try {
+        await loadTools();
+        const tool = getToolById(toolId);
+
+        if (!tool) {
+          document.title = 'Tool Not Found — WhichAIPick';
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) metaDesc.content = 'The requested tool could not be found. Browse our directory to discover AI tools.';
+          container.innerHTML = `
+            <div class="tool-not-found">
+              <h1>Tool Not Found</h1>
+              <p>We couldn't find a tool with that ID.</p>
+              <a href="/tools/" class="btn btn-primary">Browse Tools</a>
+            </div>`;
+          return;
+        }
+
+        // ── Dynamic meta ────────────────────────────────────────────────────
+        document.title = `${tool.name} — WhichAIPick`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+        let metaDescription = `Explore ${tool.name}`;
+        if (tool.category && tool.category !== 'Uncategorized') metaDescription += ` (${tool.category})`;
+        metaDescription += ': features, use cases, and how to try it.';
+        if (metaDesc) metaDesc.content = metaDescription;
+        if (ogTitle) ogTitle.content = `${tool.name} — WhichAIPick`;
+        if (twitterTitle) twitterTitle.content = `${tool.name} — WhichAIPick`;
+
+        // ── CTA logic ───────────────────────────────────────────────────────
+        let ctaUrl, ctaText;
+        if (tool.affiliate_url && tool.affiliate_url !== tool.website_url) {
+          ctaUrl = tool.affiliate_url;
+          ctaText = `Try ${tool.name}`;
+        } else {
+          ctaUrl = tool.website_url || '#';
+          ctaText = 'Visit Website';
+        }
+
+        const domain = getDomain(tool.website_url);
+        const hasTags = hasItems(tool.tags);
+
+        // ── Optional authority fields (graceful fallback) ───────────────────
+        const longDescription = tool.long_description || null;
+        const features = hasItems(tool.features) ? tool.features : null;
+        const bestFor = hasItems(tool.best_for) ? tool.best_for : null;
+        const pros = hasItems(tool.pros) ? tool.pros : null;
+        const cons = hasItems(tool.cons) ? tool.cons : null;
+        // Phase 8.5 new fields
+        const howItWorks = tool.how_it_works || null;
+        const workflows = hasItems(tool.workflows) ? tool.workflows : null;
+        const featureGroups = hasItems(tool.feature_groups) ? tool.feature_groups : null;
+        const pricingOverview = tool.pricing_overview || null;
+        const comparison = tool.comparison_summary || null;
+
+        // ── Short description (from descriptions.js) ────────────────────────
+        await loadDescriptions();
+        const shortDescription = getDescriptionForTool(toolId);
+        const displayDescription = shortDescription
+          ? formatDescription(shortDescription)
+          : (tool.description || 'Explore what this tool can do and decide if it fits your workflow.');
+
+        // ── Use Cases (from usecases.js OR tool.use_cases) ─────────────────
+        await loadUseCases();
+        const useCasesFromFile = getUseCasesForTool(toolId);
+        const useCasesFromData = hasItems(tool.use_cases) ? tool.use_cases : null;
+        const useCases = (useCasesFromFile && useCasesFromFile.length > 0) ? useCasesFromFile : useCasesFromData;
+
+        // ── Similar tools (same category, 4 tools) ──────────────────────────
+        const allTools = getAllTools();
+        const similarTools = getSimilarTools(allTools, toolId, tool.category || '', 4);
+
+        // ─── SECTION BUILDERS ───────────────────────────────────────────────
+
+        // A2: Overview (long_description)
+        const whatSection = longDescription ? `
+          <section class="td-section td-section--article">
+            <h2 class="td-section-heading">Overview</h2>
+            <div class="td-article-prose">${longDescription}</div>
+          </section>` : '';
+
+        // How It Works
+        const howItWorksSection = howItWorks ? `
+          <section class="td-section td-section--article">
+            <h2 class="td-section-heading">How It Works</h2>
+            <div class="td-article-prose">${howItWorks}</div>
+          </section>` : '';
+
+        // Real-World Workflows
+        const workflowsSection = workflows ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Real-World Workflows</h2>
+            <div class="td-workflow-grid">
+              ${workflows.map(wf => `
+                <div class="td-workflow-block">
+                  ${wf.title ? `<h3 class="td-workflow-title">${wf.title}</h3>` : ''}
+                  <p class="td-workflow-body">${wf.description || wf}</p>
+                </div>`).join('')}
+            </div>
+          </section>` : '';
+
+        // Feature Deep Dive (grouped)
+        const featureDiveSection = featureGroups ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Feature Deep Dive</h2>
+            <div class="td-feature-groups">
+              ${featureGroups.map(grp => `
+                <div class="td-feature-group">
+                  ${grp.group ? `<h3 class="td-feature-group-title">${grp.group}</h3>` : ''}
+                  <ul class="td-feature-list">
+                    ${(grp.items || []).map(f => `<li>${f}</li>`).join('')}
+                  </ul>
+                </div>`).join('')}
+            </div>
+          </section>` : '';
+
+        // Pricing Overview
+        const pricingOverviewSection = pricingOverview ? `
+          <section class="td-section td-section--article">
+            <h2 class="td-section-heading">Pricing Overview</h2>
+            <div class="td-article-prose">${pricingOverview}</div>
+          </section>` : '';
+
+        // Comparison Summary
+        const comparisonSection = comparison ? `
+          <section class="td-section td-section--article">
+            <h2 class="td-section-heading">How It Compares</h2>
+            <div class="td-article-prose">${comparison}</div>
+          </section>` : '';
+
+        // C: Key Features
+        const featuresSection = features ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Key Features</h2>
+            <ul class="td-feature-list">
+              ${features.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+          </section>` : '';
+
+        // D: Use Cases
+        const useCasesSection = useCases && useCases.length > 0 ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Best Use Cases</h2>
+            <ul class="tool-use-case-list">
+              ${useCases.map(uc => `<li>${uc}</li>`).join('')}
+            </ul>
+          </section>` : '';
+
+        // E: Who Is This Best For?
+        const bestForSection = bestFor ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Who Is This Best For?</h2>
+            <ul class="td-bestfor-list">
+              ${bestFor.map(b => `<li>${b}</li>`).join('')}
+            </ul>
+          </section>` : '';
+
+        // F: Pros & Limitations
+        const prosConsSection = (pros || cons) ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Pros &amp; Limitations</h2>
+            <div class="td-proscons">
+              ${pros ? `
+              <div class="td-pros">
+                <h3 class="td-pc-heading td-pros-heading">Pros</h3>
+                <ul class="td-pc-list">
+                  ${pros.map(p => `<li>${p}</li>`).join('')}
+                </ul>
+              </div>` : ''}
+              ${cons ? `
+              <div class="td-cons">
+                <h3 class="td-pc-heading td-cons-heading">Limitations</h3>
+                <ul class="td-pc-list">
+                  ${cons.map(c => `<li>${c}</li>`).join('')}
+                </ul>
+              </div>` : ''}
+            </div>
+          </section>` : '';
+
+        // G: Similar Tools
+        const similarSection = similarTools.length > 0 ? `
+          <section class="td-section">
+            <h2 class="td-section-heading">Similar Tools</h2>
+            <div class="td-similar-grid">
+              ${similarTools.map(t => renderSimilarCard(t, tool.id)).join('')}
+            </div>
+          </section>` : '';
+
+        // Capabilities (tags) card
+        const capabilitiesBlock = hasTags ? `
+          <div class="tool-info-card">
+            <h3>Capabilities</h3>
+            <div class="tags-container">
+              ${tool.tags.map(tag => `<span class="tag-pill">${tag}</span>`).join('')}
+            </div>
+          </div>` : '';
+
+        // Setup Detail Page Pricing badge
+        const detailPricingMap = {
+          'free': { label: 'Free', cls: 'pricing-FREE' },
+          'freemium': { label: 'Freemium', cls: 'pricing-FREEMIUM' },
+          'paid': { label: 'Paid', cls: 'pricing-PAID' },
+          'free trial': { label: 'Free trial', cls: 'pricing-FREE_TRIAL' },
+          'free_trial': { label: 'Free trial', cls: 'pricing-FREE_TRIAL' },
+        };
+        const dRawModel = (tool.pricing_model || '').trim().toLowerCase();
+        const dPe = detailPricingMap[dRawModel];
+
+        let dBadgeHTML = '';
+        let dCredLabel = '';
+        let dCredCls = '';
+        const dConf = tool.pricing_confidence || 0;
+        if (dConf >= 3) { dCredLabel = '✔ Verified'; dCredCls = 'cred-verified'; }
+        else if (dConf === 2) { dCredLabel = '⚠ Estimated'; dCredCls = 'cred-estimated'; }
+        else { dCredLabel = '⏳ Unverified'; dCredCls = 'cred-unverified'; }
+        const dCredHtml = `<a href="/pricing-accuracy-policy.html" class="pricing-cred-badge ${dCredCls}" title="Pricing classification is manually reviewed. See methodology.">${dCredLabel}</a>`;
+
+        if (dPe) {
+          dBadgeHTML = `<span class="pricing-badge ${dPe.cls}">${dPe.label}</span>`;
+        } else if (tool.has_free_tier) {
+          dBadgeHTML = `<span class="pricing-badge pricing-FREE">Free tier</span>`;
+        }
+
+        let toolPricingBox = '';
+        if (dBadgeHTML) {
+          const verificationText = tool.pricing_last_verified ? `<div class="pricing-verification-note">Pricing last verified: ${tool.pricing_last_verified}</div>` : '';
+          const inferredNote = dConf < 3 ? '<div class="pricing-inferred-note">This pricing classification is inferred and may change.</div>' : '';
+          toolPricingBox = `
+            <div class="tool-pricing-box">
+              <div class="pricing-badges-wrapper">
+                ${dBadgeHTML}
+                ${dCredHtml}
+              </div>
+              ${verificationText}
+              ${inferredNote}
+            </div>
+          `;
+        }
+
+        // ── Full page HTML ──────────────────────────────────────────────────
+        const html = `
+          <div class="tool-detail-page">
+            <div class="tool-back-link">
+              <a href="/tools/">← Back to Browse</a>
+            </div>
+
+            <!-- A: HERO -->
+            <section class="hero-shell">
+              <div class="tool-header">
+                <div class="tool-icon-wrapper">
+                  <img id="tool-logo"
+                       src="${tool.logo_url || ''}"
+                       alt="${tool.name} Logo"
+                       class="tool-logo-lg"
+                       data-tool-name="${tool.name}"
+                       data-tool-domain="${domain}"
+                       onerror="handleLogoError(this)">
+                </div>
+                <div class="tool-title-wrapper">
+                  <h1 id="tool-name">${tool.name}</h1>
+                  <div class="tool-meta">
+                    ${tool.category && tool.category !== 'Uncategorized'
+            ? `<span class="tool-category-pill">${tool.category}</span>`
+            : ''}
+                    <a id="tool-website" href="${tool.website_url}" target="_blank" rel="noopener"
+                       class="tool-link"
+                       onclick="if(window.Analytics) Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${tool.website_url}', source: 'header' })">${domain} ↗</a>
+                  </div>
+                  ${toolPricingBox}
+                </div>
+              </div>
+              <div class="content-narrow">
+                <p id="tool-summary" class="tool-summary-lg">${displayDescription}</p>
+                <div class="cta-row-hero">
+                  <a id="btn-visit" href="${ctaUrl}" target="_blank" rel="noopener"
+                     class="btn btn-primary btn-lg"
+                     onclick="if(window.Analytics) Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${ctaUrl}', source: 'hero_cta' })">${ctaText}</a>
+                  <a href="/find.html" class="btn btn-secondary btn-lg"
+                     onclick="if(window.Analytics) Analytics.track('compare_click', { tool_id: '${tool.id}' })">Compare Alternatives</a>
+                </div>
+              </div>
+            </section>
+
+            <div class="container-tool-detail">
+              <div class="grid-tool-layout">
+                <div class="td-main-column">
+                  <!-- Capabilities card (tags) -->
+                  ${capabilitiesBlock ? `<div class="tool-info-grouped">${capabilitiesBlock}</div>` : ''}
+
+                  <!-- OVERVIEW -->
+                  ${whatSection}
+
+                  <!-- HOW IT WORKS -->
+                  ${howItWorksSection}
+
+                  <!-- KEY FEATURES / FEATURE DEEP DIVE -->
+                  ${featureGroups ? featureDiveSection : featuresSection}
+
+                  <!-- REAL-WORLD WORKFLOWS -->
+                  ${workflowsSection}
+
+                  <!-- USE CASES -->
+                  ${useCasesSection}
+
+                  <!-- COMPARISON SUMMARY -->
+                  ${comparisonSection}
+
+                  <!-- PRICING OVERVIEW -->
+                  ${pricingOverviewSection}
+                </div>
+
+                <div class="td-sidebar">
+                  <div class="td-sidebar-cta">
+                    <a id="btn-sidebar-visit" href="${ctaUrl}" target="_blank" rel="noopener"
+                       class="btn btn-primary btn-lg"
+                       onclick="if(window.Analytics) Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${ctaUrl}', source: 'sidebar_cta' })">${ctaText}</a>
+                    ${toolPricingBox}
+                  </div>
+
+                  <!-- WHO IS THIS BEST FOR? -->
+                  ${bestForSection}
+
+                  <!-- PROS & LIMITATIONS -->
+                  ${prosConsSection}
+
+                  <!-- SIMILAR TOOLS -->
+                  ${similarSection}
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter CTA -->
+            <div class="cta-band" style="margin-top: 60px;">
+              <h2>Get AI Updates</h2>
+              <p>New tools drops and tutorials delivered weekly.</p>
+              <div class="cta-row">
+                <a href="/newsletter" class="btn btn-primary btn-lg"
+                   onclick="if(window.Analytics) Analytics.track('newsletter_cta_click', { location: 'tool_detail' })">Subscribe Free</a>
+              </div>
+            </div>
+          </div>`;
+
+        container.innerHTML = html;
+
+      } catch (error) {
+        console.error('renderTool error:', error);
+        container.innerHTML = `
+          <div class="tool-not-found">
+            <h1>Error</h1>
+            <p>Failed to load tool data. Please refresh the page.</p>
+          </div>`;
+      }
+    }
+
+    renderTool();
+  </script>
+
+  <script>
+    setTimeout(() => {
+      const btn = document.getElementById('btn-sidebar-visit');
+      if (btn) {
+        const btnRect = btn.getBoundingClientRect();
+        const overlaps = [];
+        document.querySelectorAll('*').forEach(el => {
+          if (el === btn || btn.contains(el)) return;
+          const rect = el.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0 && 
+              rect.left < btnRect.right && rect.right > btnRect.left &&
+              rect.top < btnRect.bottom && rect.bottom > btnRect.top) {
+            overlaps.push(el.tagName + '.' + el.className);
+          }
+        });
+        console.log('OVERLAPS on btn-sidebar-visit:', overlaps);
+      }
+    }, 1000);
+  </script>
+
+</body>
+
+</html>

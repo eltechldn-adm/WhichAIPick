@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Submit a Tool — WhichAIPick</title>
+    <meta name="description"
+        content="Submit a new AI tool to be reviewed and featured in the WhichAIPick directory. We review every submission for quality and accuracy.">
+    <link rel="canonical" href="https://whichaipick.com/submit-tool.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <style>
+        /* Specific tweaks for the submission page */
+        .submit-hero {
+            text-align: center;
+            padding: var(--space-12) var(--space-4) var(--space-8);
+        }
+
+        .submit-hero-subtitle {
+            font-size: var(--text-lg);
+            color: var(--c-text-muted);
+            max-width: 600px;
+            margin: var(--space-4) auto 0;
+            line-height: var(--lh-base);
+        }
+
+        .submit-layout {
+            display: grid;
+            grid-template-columns: 1fr 450px;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .submit-form-container {
+            background: var(--c-surface);
+            border: 1px solid var(--c-border);
+            border-radius: var(--r-xl);
+            padding: var(--space-6);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .submit-iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: var(--r-md);
+            background: #ffffff;
+            /* Forms usually have white backgrounds */
+        }
+
+        .submit-guidelines {
+            background: var(--c-surface);
+            border: 1px solid var(--c-border);
+            border-radius: var(--r-xl);
+            padding: var(--space-8);
+            position: sticky;
+            top: 100px;
+        }
+
+        .guideline-section {
+            margin-bottom: var(--space-8);
+        }
+
+        .guideline-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .guideline-section h3 {
+            font-size: var(--text-xl);
+            color: var(--c-text);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .guideline-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            color: var(--c-text-muted);
+            line-height: var(--lh-base);
+        }
+
+        .guideline-list li {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .guideline-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--c-accent);
+            font-size: 1.2rem;
+            line-height: 1;
+            top: 2px;
+        }
+
+        .spam-alert {
+            background: rgba(245, 166, 35, 0.1);
+            border: 1px solid rgba(245, 166, 35, 0.3);
+            padding: var(--space-4);
+            border-radius: var(--r-md);
+            margin-top: var(--space-6);
+            font-size: var(--text-sm);
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .spam-alert svg {
+            color: var(--c-accent);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Form Styles */
+        .form-section {
+            margin-bottom: var(--space-8);
+        }
+
+        .form-section-title {
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--c-text);
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-2);
+            border-bottom: 1px solid var(--c-border);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-4);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+
+        .form-label {
+            display: block;
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: var(--c-text-muted);
+            margin-bottom: var(--space-2);
+        }
+
+        .form-label span.req {
+            color: var(--c-accent);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: var(--c-bg);
+            border: 1px solid var(--c-border);
+            border-radius: var(--r-md);
+            padding: var(--space-3);
+            color: var(--c-text);
+            font-family: inherit;
+            font-size: var(--text-base);
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--c-accent);
+            box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .form-check-input {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--c-border);
+            border-radius: 4px;
+            background: var(--c-bg);
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .form-check-input:checked {
+            background: var(--c-accent);
+            border-color: var(--c-accent);
+        }
+
+        .form-check-input:checked::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 2px;
+            width: 4px;
+            height: 9px;
+            border: solid #000;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .form-check-label {
+            font-size: var(--text-sm);
+            color: var(--c-text-muted);
+            cursor: pointer;
+            line-height: var(--lh-base);
+        }
+
+        .form-hint {
+            font-size: var(--text-xs);
+            color: var(--c-text-muted);
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .form-error-msg {
+            color: #ef4444;
+            /* red-500 */
+            font-size: var(--text-sm);
+            margin-top: 6px;
+            display: none;
+        }
+
+        .has-error .form-input,
+        .has-error .form-select,
+        .has-error .form-textarea {
+            border-color: #ef4444;
+        }
+
+        .has-error .form-error-msg {
+            display: block;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: var(--space-4);
+            font-size: var(--text-lg);
+            margin-top: var(--space-4);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        /* Success State */
+        .submit-success {
+            display: none;
+            text-align: center;
+            padding: var(--space-12) var(--space-6);
+        }
+
+        .submit-success h2 {
+            color: var(--c-text);
+            margin-bottom: var(--space-4);
+            font-size: var(--text-2xl);
+        }
+
+        .submit-success p {
+            color: var(--c-text-muted);
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-8);
+        }
+
+        .submit-success-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(245, 166, 35, 0.1);
+            color: var(--c-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-6);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 980px) {
+            .submit-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .submit-guidelines {
+                position: relative;
+                top: 0;
+                order: 2;
+            }
+
+            .submit-form-container {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .submit-hero {
+                padding: var(--space-8) var(--space-4) var(--space-6);
+            }
+
+            .submit-form-container {
+                padding: var(--space-4) var(--space-2);
+                border: none;
+                background: transparent;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .checkbox-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+
+<body class="page-static">
+    <!-- Header injected by layout.js -->
+    <div id="site-header"></div>
+
+    <main class="main-content">
+        <div class="submit-hero scene-wrapper"
+            style="position: relative; overflow: hidden; border-radius: var(--r-xl); margin-bottom: var(--space-8);">
+            <div class="parallax-layer bg-glow-orange" data-parallax-speed="0.08"
+                style="opacity: 0.5; pointer-events: none;"></div>
+            <div class="hero-surface reveal-stagger" style="position: relative; z-index: 2;">
+                <h1 class="reveal">Submit a Tool</h1>
+                <p class="submit-hero-subtitle reveal">Help keep the directory accurate. We review every submission
+                    manually to
+                    ensure quality and relevance.</p>
+            </div>
+        </div>
+
+        <div class="container container--wide">
+            <div class="submit-layout reveal">
+
+                <!-- Left Column: The Form -->
+                <div class="submit-form-container" id="formContainer">
+                    <div class="submit-success" id="submitSuccess">
+                        <div class="submit-success-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h2>Submission Received!</h2>
+                        <p>Thank you for submitting to WhichAIPick. Our editorial team will review your tool within 3 to
+                            5 business days.</p>
+                        <a href="/tools" class="btn btn-primary">Browse Directory</a>
+                    </div>
+
+                    <form id="submitToolForm" class="native-form" novalidate>
+                        <!-- Section 1: Submission Type -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">1. Submission Type</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-check">
+                                        <input type="radio" name="submission_type" value="new" class="form-check-input"
+                                            checked>
+                                        <span class="form-check-label">New Tool Submission</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-check">
+                                        <input type="radio" name="submission_type" value="update"
+                                            class="form-check-input">
+                                        <span class="form-check-label">Update Existing Tool</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" id="updateRefGroup" style="display: none;">
+                                <label for="existing_tool_reference" class="form-label">Link to existing tool page (if
+                                    updating)</label>
+                                <input type="url" id="existing_tool_reference" name="existing_tool_reference"
+                                    class="form-input" placeholder="https://whichaipick.com/tool/...">
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Tool Basics -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">2. Tool Basics</h3>
+                            <div class="form-group">
+                                <label for="tool_name" class="form-label">Tool Name <span class="req">*</span></label>
+                                <input type="text" id="tool_name" name="tool_name" class="form-input" required>
+                                <div class="form-error-msg">Tool name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="website_url" class="form-label">Website URL <span
+                                        class="req">*</span></label>
+                                <input type="url" id="website_url" name="website_url" class="form-input"
+                                    placeholder="https://..." required>
+                                <div class="form-error-msg">A valid website URL starting with http/https is required.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tagline" class="form-label">Short Tagline <span class="req">*</span></label>
+                                <input type="text" id="tagline" name="tagline" class="form-input" maxlength="90"
+                                    placeholder="Max 90 characters..." required>
+                                <div class="form-error-msg">Tagline is required (max 90 chars).</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description" class="form-label">Description <span
+                                        class="req">*</span></label>
+                                <textarea id="description" name="description" class="form-textarea"
+                                    placeholder="Explain what the tool does, who it is for, and why it is useful. Minimum 300 characters."
+                                    minlength="300" required></textarea>
+                                <div class="form-error-msg" id="descErrorMsg">Description must be at least 300
+                                    characters.</div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Classification -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">3. Classification</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="primary_category" class="form-label">Primary Category <span
+                                            class="req">*</span></label>
+                                    <select id="primary_category" name="primary_category" class="form-select" required>
+                                        <option value="">Select a category...</option>
+                                        <option value="Text & Writing">Text & Writing</option>
+                                        <option value="Image & Design">Image & Design</option>
+                                        <option value="Video & Animation">Video & Animation</option>
+                                        <option value="Audio & Voice">Audio & Voice</option>
+                                        <option value="Coding & Development">Coding & Development</option>
+                                        <option value="Business & Marketing">Business & Marketing</option>
+                                        <option value="Productivity">Productivity</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="form-error-msg">Please select a primary category.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags" class="form-label">Tags (Optional)</label>
+                                    <input type="text" id="tags" name="tags" class="form-input"
+                                        placeholder="e.g., SEO, Email, Marketing">
+                                    <div class="form-hint">Comma-separated tags.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Pricing -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">4. Pricing</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pricing_model" class="form-label">Pricing Model <span
+                                            class="req">*</span></label>
+                                    <select id="pricing_model" name="pricing_model" class="form-select" required>
+                                        <option value="">Select pricing format...</option>
+                                        <option value="free">Free</option>
+                                        <option value="freemium">Freemium</option>
+                                        <option value="free_trial">Free Trial</option>
+                                        <option value="paid">Paid</option>
+                                        <option value="enterprise">Enterprise</option>
+                                        <option value="open_source">Open Source</option>
+                                    </select>
+                                    <div class="form-error-msg">Please select a pricing model.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Has Free Tier? <span class="req">*</span></label>
+                                    <label class="form-check" style="margin-top: 12px;">
+                                        <input type="checkbox" id="has_free_tier" name="has_free_tier"
+                                            class="form-check-input" value="true" checked>
+                                        <span class="form-check-label">Yes, users can try it for free.</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" id="pricingNotesGroup">
+                                <div class="form-error-msg" id="pricingConsistencyError" style="margin-bottom: 8px;">
+                                    Free/Freemium/Open Source models must have the "Has Free Tier" checked.</div>
+                                <label for="pricing_notes" class="form-label">Pricing Notes (Optional)</label>
+                                <input type="text" id="pricing_notes" name="pricing_notes" class="form-input"
+                                    placeholder="e.g., $10/mo, Pay-as-you-go">
+                            </div>
+                        </div>
+
+                        <!-- Section 5: Product Details -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">5. Product Details</h3>
+                            <div class="form-group">
+                                <label class="form-label">Platforms</label>
+                                <div class="checkbox-grid">
+                                    <label class="form-check"><input type="checkbox" name="platforms" value="web"
+                                            class="form-check-input"><span class="form-check-label">Web</span></label>
+                                    <label class="form-check"><input type="checkbox" name="platforms" value="ios"
+                                            class="form-check-input"><span class="form-check-label">iOS</span></label>
+                                    <label class="form-check"><input type="checkbox" name="platforms" value="android"
+                                            class="form-check-input"><span
+                                            class="form-check-label">Android</span></label>
+                                    <label class="form-check"><input type="checkbox" name="platforms" value="desktop"
+                                            class="form-check-input"><span class="form-check-label">Mac/Windows
+                                            Desktop</span></label>
+                                    <label class="form-check"><input type="checkbox" name="platforms" value="api"
+                                            class="form-check-input"><span class="form-check-label">API</span></label>
+                                    <label class="form-check"><input type="checkbox" name="platforms" value="extension"
+                                            class="form-check-input"><span class="form-check-label">Browser
+                                            Extension</span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Key Features <span class="req">*</span></label>
+                                    <div id="keyFeaturesContainer">
+                                        <input type="text" name="key_features" class="form-input"
+                                            style="margin-bottom: 8px;" placeholder="Feature 1 (required)" required>
+                                        <input type="text" name="key_features" class="form-input"
+                                            style="margin-bottom: 8px;" placeholder="Feature 2 (required)" required>
+                                        <input type="text" name="key_features" class="form-input"
+                                            style="margin-bottom: 8px;" placeholder="Feature 3 (required)" required>
+                                    </div>
+                                    <div class="form-error-msg">At least 3 features are required.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Best Use Cases <span class="req">*</span></label>
+                                    <div id="useCasesContainer">
+                                        <input type="text" name="use_cases" class="form-input"
+                                            style="margin-bottom: 8px;" placeholder="Use Case 1 (required)" required>
+                                        <input type="text" name="use_cases" class="form-input"
+                                            style="margin-bottom: 8px;" placeholder="Use Case 2 (required)" required>
+                                        <input type="text" name="use_cases" class="form-input"
+                                            style="margin-bottom: 8px;" placeholder="Use Case 3 (required)" required>
+                                    </div>
+                                    <div class="form-error-msg">At least 3 use cases are required.</div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 16px;">
+                                <label class="form-label">Target Users</label>
+                                <div class="checkbox-grid" style="grid-template-columns: repeat(3, 1fr) !important;">
+                                    <label class="form-check"><input type="checkbox" name="target_users"
+                                            value="individuals" class="form-check-input"><span
+                                            class="form-check-label">Individuals</span></label>
+                                    <label class="form-check"><input type="checkbox" name="target_users" value="teams"
+                                            class="form-check-input"><span class="form-check-label">Teams</span></label>
+                                    <label class="form-check"><input type="checkbox" name="target_users"
+                                            value="enterprise" class="form-check-input"><span
+                                            class="form-check-label">Enterprise</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 6: Proof & Assets -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">6. Proof & Assets</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="logo_url" class="form-label">Logo URL (Optional)</label>
+                                    <input type="url" id="logo_url" name="logo_url" class="form-input"
+                                        placeholder="https://...">
+                                    <div class="form-error-msg">Must be a valid URL.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="demo_url" class="form-label">Demo Video URL (Optional)</label>
+                                    <input type="url" id="demo_url" name="demo_url" class="form-input"
+                                        placeholder="https://youtube.com/...">
+                                    <div class="form-error-msg">Must be a valid URL.</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="screenshot_urls" class="form-label">Screenshot URLs (Optional)</label>
+                                <textarea id="screenshot_urls" name="screenshot_urls" class="form-textarea"
+                                    style="min-height: 80px;" placeholder="One URL per line..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Section 7: Submitter & Consent -->
+                        <div class="form-section" style="margin-bottom: var(--space-4);">
+                            <h3 class="form-section-title">7. Submitter Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="submitter_email" class="form-label">Email Address <span
+                                            class="req">*</span></label>
+                                    <input type="email" id="submitter_email" name="submitter_email" class="form-input"
+                                        required>
+                                    <div class="form-error-msg">A valid email address is required.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="submitter_name" class="form-label">Your Name (Optional)</label>
+                                    <input type="text" id="submitter_name" name="submitter_name" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="relationship" class="form-label">Relationship to Tool <span
+                                        class="req">*</span></label>
+                                <select id="relationship" name="relationship" class="form-select" required>
+                                    <option value="">Select...</option>
+                                    <option value="founder">Founder / Maker</option>
+                                    <option value="employee">Employee / Team Member</option>
+                                    <option value="agency">Agency / PR</option>
+                                    <option value="user">Just a User / Fan</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="form-error-msg">Please specify your relationship.</div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 24px;">
+                                <label class="form-check">
+                                    <input type="checkbox" name="consent" id="consent" class="form-check-input"
+                                        required>
+                                    <span class="form-check-label">I confirm that I have the right to submit this tool
+                                        and that the information is accurate. <span class="req">*</span></span>
+                                </label>
+                                <div class="form-error-msg" id="consentError">You must agree to the terms to submit.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security & Honeypot -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="website_url_hp" id="website_url_hp" tabindex="-1"
+                                autocomplete="off">
+                        </div>
+
+                        <!-- Cloudflare Turnstile -->
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAzzpC0F7n-OINqf"
+                            style="margin-top: var(--space-4);"></div>
+
+                        <!-- Global Error Message Container -->
+                        <div class="form-error-msg" id="globalError"
+                            style="margin-top: 16px; font-weight: 500; font-size: 16px;">
+                            Please fix the errors above before submitting.
+                        </div>
+
+                        <!-- Submit Action -->
+                        <button type="submit" id="submitFormBtn" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Submit Tool for Review</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Guidelines & Rules -->
+                <aside class="submit-guidelines">
+                    <div class="guideline-section">
+                        <h3>What happens next</h3>
+                        <ul class="guideline-list">
+                            <li>Our editorial team reviews submissions within 3 to 5 business days.</li>
+                            <li>We test the tool to verify capabilities.</li>
+                            <li>We verify and standardise pricing models.</li>
+                            <li>We may edit the provided descriptions for clarity and brevity.</li>
+                            <li>Approved tools automatically appear in the directory.</li>
+                        </ul>
+                    </div>
+
+                    <div class="guideline-section">
+                        <h3>Submission requirements</h3>
+                        <ul class="guideline-list">
+                            <li>The product must be an AI-related tool or service.</li>
+                            <li>You must provide the official website URL.</li>
+                            <li>Pricing parameters are required (e.g., Free, Freemium, Free Trial, Paid).</li>
+                            <li>A primary category must be selected.</li>
+                            <li>A concise, accurate description of the tool's function is required.</li>
+                            <li><em>Optional:</em> Logo URL and point of contact email.</li>
+                        </ul>
+                    </div>
+
+                    <div class="spam-alert">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        <div>
+                            <strong>Quality Control</strong><br>
+                            Please do not submit affiliate redirects, link shorteners, or vaporware landing pages
+                            without a working product. They will be immediately rejected.
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer injected by layout.js -->
+    <div id="site-footer"></div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js?v=6.4"></script>
+    <script src="/js/layout.js?v=1.8" defer></script>
+
+    <!-- Form Logic & Analytics -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.Analytics) {
+                Analytics.track('page_view', { page: 'submit-tool' });
+            }
+
+            const form = document.getElementById('submitToolForm');
+            const submitBtn = document.getElementById('submitFormBtn');
+            const globalError = document.getElementById('globalError');
+            const submitSuccess = document.getElementById('submitSuccess');
+
+            // --- Toggle Updates ---
+            window.toggleUpdateRef = function (show) {
+                const group = document.getElementById('updateRefGroup');
+                const input = document.getElementById('existing_tool_reference');
+                if (show) {
+                    group.style.display = 'block';
+                    input.required = false;
+                } else {
+                    group.style.display = 'none';
+                    input.value = '';
+                }
+            };
+
+            // --- Realtime Pricing Validation ---
+            const pricingModel = document.getElementById('pricing_model');
+            const hasFreeTier = document.getElementById('has_free_tier');
+            const pricingConsistencyError = document.getElementById('pricingConsistencyError');
+            const checkPricingConsistency = () => {
+                const model = pricingModel.value;
+                if (!model) return true;
+                const requiresFree = ['free', 'freemium', 'free_trial', 'open_source'].includes(model);
+                if (requiresFree && !hasFreeTier.checked) {
+                    pricingConsistencyError.style.display = 'block';
+                    return false;
+                } else {
+                    pricingConsistencyError.style.display = 'none';
+                    return true;
+                }
+            };
+            pricingModel.addEventListener('change', checkPricingConsistency);
+            hasFreeTier.addEventListener('change', checkPricingConsistency);
+
+            // --- Helper: clear field error
+            const clearError = (input) => {
+                const group = input.closest('.form-group');
+                if (group) group.classList.remove('has-error');
+            };
+            const setError = (input) => {
+                const group = input.closest('.form-group');
+                if (group) group.classList.add('has-error');
+            };
+
+            // Add clear error on input
+            form.querySelectorAll('input, select, textarea').forEach(input => {
+                input.addEventListener('input', () => clearError(input));
+                input.addEventListener('change', () => clearError(input));
+            });
+
+            // --- Validation ---
+            const validateForm = () => {
+                let isValid = true;
+                let firstErrorInput = null;
+
+                // Native check validity for required, minlength, type
+                form.querySelectorAll('input, select, textarea').forEach(input => {
+                    if (input.type === 'hidden' || input.id === 'website_url_hp') return;
+
+                    // Manual checkbox group validation isn't strictly necessary per spec (they are optional)
+                    // but key_features and use_cases are required strings.
+                    if (input.name === 'key_features' || input.name === 'use_cases') {
+                        if (input.required && !input.value.trim()) {
+                            setError(input);
+                            isValid = false;
+                            if (!firstErrorInput) firstErrorInput = input;
+                        }
+                        return;
+                    }
+
+                    if (!input.checkValidity()) {
+                        setError(input);
+                        isValid = false;
+                        if (!firstErrorInput) firstErrorInput = input;
+                    }
+                });
+
+                if (!checkPricingConsistency()) {
+                    isValid = false;
+                    if (!firstErrorInput) firstErrorInput = pricingModel;
+                }
+
+                if (!isValid && firstErrorInput) {
+                    firstErrorInput.focus();
+                }
+
+                return isValid;
+            };
+
+            // --- Submit Handler ---
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                globalError.style.display = 'none';
+
+                if (!validateForm()) {
+                    globalError.style.display = 'block';
+                    globalError.textContent = 'Please fix the highlighted errors before submitting.';
+                    return;
+                }
+
+                const formData = new FormData(form);
+                const payload = {};
+
+                // Build payload
+                for (const [key, value] of formData.entries()) {
+                    // arrays
+                    if (['platforms', 'key_features', 'use_cases', 'target_users'].includes(key)) {
+                        if (!payload[key]) payload[key] = [];
+                        if (value.trim()) payload[key].push(value.trim());
+                    } else if (key === 'has_free_tier') {
+                        // ignore here
+                    } else if (key === 'submission_type') {
+                        payload[key] = value;
+                    } else {
+                        payload[key] = value.trim();
+                    }
+                }
+
+                payload.has_free_tier = hasFreeTier.checked;
+
+                // Turnstile Token
+                const turnstileVal = formData.get('cf-turnstile-response');
+                payload['cf-turnstile-response'] = turnstileVal || "";
+
+                // Visual Loading State
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="loading-spinner"></span> Submitting...';
+
+                try {
+                    const response = await fetch('/api/submit-tool', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json().catch(() => ({}));
+                        throw new Error(errorData.error || 'Server error occurred.');
+                    }
+
+                    // Success!
+                    if (window.Analytics) Analytics.track('submit_tool_submit');
+
+                    form.style.display = 'none';
+                    submitSuccess.style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                } catch (error) {
+                    console.error('Submission failed:', error);
+                    if (window.Analytics) Analytics.track('submit_tool_error', { message: error.message });
+                    globalError.style.display = 'block';
+                    globalError.textContent = 'Error: ' + error.message;
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

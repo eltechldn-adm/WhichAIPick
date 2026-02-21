@@ -153,6 +153,43 @@ body {
     }
 }
 
+/* Stat Strip */
+.hero-stats-strip {
+    background: rgba(15, 18, 21, 0.6);
+    border-top: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-border);
+    padding: var(--space-4) 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-value,
+.stat-check {
+    color: var(--c-accent);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        justify-content: center;
+        gap: var(--space-4) var(--space-6);
+    }
+}
+
 /* Quick-Start Section (Cards) */
 .quick-start-section {
     padding-top: var(--space-8);

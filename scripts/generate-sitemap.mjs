@@ -34,6 +34,7 @@ const STATIC_ROUTES = [
     { loc: '/make-money.html', priority: PRIORITY.HUBS, freq: CHANGEFREQ.WEEKLY },
     { loc: '/start-here.html', priority: PRIORITY.HUBS, freq: CHANGEFREQ.WEEKLY },
     { loc: '/newsletter', priority: PRIORITY.HUBS, freq: CHANGEFREQ.WEEKLY },
+    { loc: '/submit-tool.html', priority: 0.7, freq: CHANGEFREQ.MONTHLY },
 
     // Authority Pages
     { loc: '/about.html', priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },

@@ -454,6 +454,18 @@ function renderQuestion() {
   `;
 
     container.innerHTML = html;
+
+    // Apply motion to newly rendered question options by telling window observer to watch the question block
+    if (window.WhompRevealObserver) {
+        // Need a slight delay to ensure DOM paint has happened before watching
+        setTimeout(() => {
+            const newQ = container.querySelector('.question');
+            if (newQ) {
+                newQ.classList.add('reveal'); // add standard reveal state initially
+                window.WhompRevealObserver.observe(newQ);
+            }
+        }, 50);
+    }
 }
 
 // Select answer
@@ -656,6 +668,16 @@ function renderRecommendations(recommendations, container) {
     });
 
     container.innerHTML = toolsHtml;
+
+    // Hook motion choreography into results
+    if (window.WhompRevealObserver) {
+        setTimeout(() => {
+            container.querySelectorAll('.tool-result-card').forEach(card => {
+                card.classList.add('reveal');
+                window.WhompRevealObserver.observe(card);
+            });
+        }, 100);
+    }
 }
 
 // Start over
