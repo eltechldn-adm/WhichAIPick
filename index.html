@@ -231,7 +231,7 @@
                     });
 
                     categories.sort((a, b) => (counts[b] || 0) - (counts[a] || 0));
-                    const topCategories = categories.slice(0, 4);
+                    const topCategories = categories.slice(0, 8);
 
                     categoryContainer.innerHTML = '';
                     topCategories.forEach(cat => {
