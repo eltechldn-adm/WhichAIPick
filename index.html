@@ -133,8 +133,11 @@
             <div class="section-container">
                 <h2>Browse by Category</h2>
                 <div id="home-category-grid" class="content-grid"
-                    style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                    style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-bottom: var(--space-6);">
                     <!-- JS Injected -->
+                </div>
+                <div style="text-align: center;">
+                    <a href="/category" class="btn btn-primary">Browse All Categories</a>
                 </div>
             </div>
         </section>
@@ -217,7 +220,7 @@
                     });
                 }
 
-                // 2. Render Categories (top 8 by volume)
+                // 2. Render Categories (top 3 by volume)
                 const categoryContainer = document.getElementById('home-category-grid');
                 if (categoryContainer && window.getAllCategories) {
                     const categories = window.getAllCategories();
@@ -228,13 +231,12 @@
                     });
 
                     categories.sort((a, b) => (counts[b] || 0) - (counts[a] || 0));
-                    const topCategories = categories.slice(0, 8);
+                    const topCategories = categories.slice(0, 3);
 
                     categoryContainer.innerHTML = '';
                     topCategories.forEach(cat => {
-                        const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                         const card = document.createElement('a');
-                        card.href = `/category.html?slug=${slug}`;
+                        card.href = `/category?c=${encodeURIComponent(cat)}`;
                         card.className = 'content-card';
                         card.style.display = 'block';
                         card.style.textDecoration = 'none';
