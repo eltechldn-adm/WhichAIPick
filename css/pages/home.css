@@ -154,39 +154,81 @@ body {
 }
 
 /* Stat Strip */
-.hero-stats-strip {
-    background: rgba(15, 18, 21, 0.6);
-    border-top: 1px solid var(--c-border);
-    border-bottom: 1px solid var(--c-border);
-    padding: var(--space-4) 0;
-}
-
-.stats-grid {
+.hero-stats {
+    margin-top: 28px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-stats__grid {
+    width: min(920px, 100%);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.hero-stat {
+    border: 1px solid var(--c-border);
+    background: rgba(42, 46, 51, 0.35);
+    border-radius: 14px;
+    padding: 14px 14px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+.hero-stat__value {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: var(--c-text);
+    display: inline-flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-4);
+    justify-content: center;
+    gap: 8px;
+    line-height: 1.1;
 }
 
-.stat-item {
-    display: flex;
+.hero-stat__icon {
+    display: inline-flex;
     align-items: center;
-    gap: var(--space-2);
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: rgba(28, 132, 74, 0.25);
+    border: 1px solid rgba(28, 132, 74, 0.45);
+    font-size: 12px;
+    line-height: 1;
 }
 
-.stat-value,
-.stat-check {
-    color: var(--c-accent);
-    font-weight: 600;
+.hero-stat__label {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--c-text-muted);
+    letter-spacing: 0.2px;
 }
 
-@media (max-width: 768px) {
-    .stats-grid {
-        justify-content: center;
-        gap: var(--space-4) var(--space-6);
+@media (max-width: 980px) {
+    .hero-stats__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 var(--space-4);
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-stats__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stat {
+        text-align: left;
+    }
+
+    .hero-stat__value,
+    .hero-stat__label {
+        justify-content: flex-start;
     }
 }
 
