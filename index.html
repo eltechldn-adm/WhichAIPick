@@ -220,7 +220,7 @@
                     });
                 }
 
-                // 2. Render Categories (top 3 by volume)
+                // 2. Render Categories (top 4 by volume)
                 const categoryContainer = document.getElementById('home-category-grid');
                 if (categoryContainer && window.getAllCategories) {
                     const categories = window.getAllCategories();
@@ -231,7 +231,7 @@
                     });
 
                     categories.sort((a, b) => (counts[b] || 0) - (counts[a] || 0));
-                    const topCategories = categories.slice(0, 3);
+                    const topCategories = categories.slice(0, 4);
 
                     categoryContainer.innerHTML = '';
                     topCategories.forEach(cat => {
