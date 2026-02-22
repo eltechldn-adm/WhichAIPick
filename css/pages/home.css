@@ -191,11 +191,13 @@ body {
 .hero-marquee__track {
     display: flex;
     white-space: nowrap;
+    width: max-content;
 }
 
 .hero-marquee__group {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     gap: 40px;
     padding-right: 40px;
     animation: scroll-marquee 25s linear infinite;
