@@ -2117,7 +2117,9 @@ select:focus {
   margin-top: auto;
 }
 
-.tc-btn-primary {
+.tc-btn-primary,
+.tc-btn-primary:visited,
+.tc-btn-primary:active {
   flex: 1;
   padding: 9px 12px;
   border-radius: 10px;
@@ -2136,7 +2138,9 @@ select:focus {
   color: #111;
 }
 
-.tc-btn-secondary {
+.tc-btn-secondary,
+.tc-btn-secondary:visited,
+.tc-btn-secondary:active {
   flex: 1;
   padding: 9px 12px;
   border-radius: 10px;
