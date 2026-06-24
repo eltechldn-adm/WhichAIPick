@@ -96,14 +96,17 @@
     // Initialize on DOMContentLoaded
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-            injectHeader();
-            injectFooter();
-            loadAnalytics();
+            initGlobalFeatures();
         });
     } else {
+        initGlobalFeatures();
+    }
+
+    function initGlobalFeatures() {
         injectHeader();
         injectFooter();
         loadAnalytics();
+        loadCookieConsent();
     }
 
     // Load Analytics Script
@@ -111,6 +114,14 @@
         const script = document.createElement('script');
         script.src = '/js/analytics.js?v=5.0';
         script.async = true;
+        document.head.appendChild(script);
+    }
+
+    // Load Cookie Consent
+    function loadCookieConsent() {
+        const script = document.createElement('script');
+        script.src = '/js/cookie-consent.js';
+        script.defer = true;
         document.head.appendChild(script);
     }
 })();
