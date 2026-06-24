@@ -67,10 +67,14 @@
         }
     }
 
-    // Inject footer
+    // Inject footer (skipped if footer already hardcoded in raw HTML by build script)
     async function injectFooter() {
         const footerContainer = document.getElementById('site-footer');
         if (!footerContainer) return;
+
+        // Phase 2: footer is now hardcoded in raw HTML by scripts/inject-footer.mjs.
+        // If the container already has children, do nothing — avoids duplicate footers.
+        if (footerContainer.children.length > 0) return;
 
         try {
             const response = await fetch('/partials/footer.html?v=1.7');
