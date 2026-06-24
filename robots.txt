@@ -1,15 +1,23 @@
 User-agent: *
 Allow: /
+
+# Disallowed Paths
+Disallow: /admin/
 Disallow: /scripts/
 Disallow: /node_modules/
 Disallow: /data/
 Disallow: /*.json$
 Disallow: /*?*
 
-Allow: /tools
+# Allowed Crawlable Routes
+Allow: /tools/
+Allow: /category/
 Allow: /academy/
+Allow: /blog/
 Allow: /use-cases/
 Allow: /compare/
-Allow: /blog/
+Allow: /make-money/
+Allow: /start-here/
 
+# Sitemap
 Sitemap: https://whichaipick.com/sitemap.xml

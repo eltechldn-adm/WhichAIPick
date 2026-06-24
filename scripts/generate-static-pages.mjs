@@ -285,6 +285,9 @@ function buildToolPage(tool) {
   <link rel="stylesheet" href="/css/styles.css?v=2.6">
   <link rel="stylesheet" href="/css/pages/tool.css">
 
+  <!-- AdSense Verification & Consent -->
+  <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+  <script src="/js/consent.js" defer></script>
 
   <!-- Schema: SoftwareApplication -->
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
@@ -460,6 +463,9 @@ function buildCategoryPage(categoryName, categoryTools) {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css?v=2.6">
 
+  <!-- AdSense Verification & Consent -->
+  <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+  <script src="/js/consent.js" defer></script>
 
   <!-- Schema: CollectionPage + ItemList -->
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>

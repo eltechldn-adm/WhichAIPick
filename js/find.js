@@ -651,12 +651,12 @@ function renderRecommendations(recommendations, container) {
     recommendations.forEach(({ tool, explanation }) => {
         toolsHtml += `
       <div class="tool-result-card">
-        <h4><a href="/tool.html?id=${encodeURIComponent(tool.id)}">${tool.name}</a></h4>
+        <h4><a href="/tools/${encodeURIComponent(tool.id)}/">${tool.name}</a></h4>
         <div class="tool-result-domain">${getDomain(tool.website_url)}</div>
         <div class="tool-result-category">${tool.category}</div>
         <div class="tool-result-explanation">${explanation}</div>
         <div class="tool-result-actions">
-          <a href="/tool.html?id=${encodeURIComponent(tool.id)}" class="btn btn-sm btn-primary">View Tool</a>
+          <a href="/tools/${encodeURIComponent(tool.id)}/" class="btn btn-sm btn-primary">View Tool</a>
           ${tool.website_url ? `
             <a href="${tool.website_url}" target="_blank" rel="noopener" class="btn-link-secondary">
               Website →

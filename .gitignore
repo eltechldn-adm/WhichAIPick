@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules/
+
+# Environment variables & secrets
+.dev.vars
+.env
+.env.*
+
+# Local wrangler development directory
+.wrangler/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Agent/IDE directories
+.agent/
+
+# Private documentation & staging files
+docs-private/
+
+# Temp files and backups
+*.tmp
+*.bak
+*.backup
+*.log
+
+# Phase reports and staging files
+PHASE_*_REPORT.md
+phase*_report.md
+phase*_audit*.md
+temp_*.json
+all_tool_ids.txt
+missing.txt

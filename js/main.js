@@ -238,19 +238,35 @@ function showError(message) {
     document.body.insertBefore(errorDiv, document.body.firstChild);
 }
 
-// Auto-load on page load
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', async () => {
-        try {
-            await loadTools();
-        } catch (error) {
+// Auto-load helper: only fetch tools.json on pages that actually require the database
+function pageRequiresDatabase() {
+    const requiredIds = [
+        'home-featured-tools',
+        'home-category-grid',
+        'browse-list',
+        'quiz-container',
+        'search-list',
+        'category-tools-grid',
+        'tool-container'
+    ];
+    return requiredIds.some(id => document.getElementById(id) !== null);
+}
+
+// Auto-load on page load if elements are present
+if (pageRequiresDatabase()) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                await loadTools();
+            } catch (error) {
+                showError('Failed to load tools data. Please refresh the page.');
+            }
+        });
+    } else {
+        loadTools().catch(error => {
             showError('Failed to load tools data. Please refresh the page.');
-        }
-    });
-} else {
-    loadTools().catch(error => {
-        showError('Failed to load tools data. Please refresh the page.');
-    });
+        });
+    }
 }
 
 /**
@@ -329,7 +345,7 @@ function renderToolCard(tool, recommendedIds = [], source = 'list') {
         <div class="tool-logo-wrap">${logoHTML}</div>
         <div class="tool-card-meta">
           <h3 class="tool-name">
-            <a href="/tool.html?id=${encodeURIComponent(tool.id)}"
+            <a href="/tools/${encodeURIComponent(tool.id)}/"
                onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${clickSource}' })">${tool.name}</a>
           </h3>
           <div class="tool-category">${tool.category || 'Uncategorized'}</div>
@@ -337,7 +353,7 @@ function renderToolCard(tool, recommendedIds = [], source = 'list') {
       </div>
       <p class="tool-description">${description || '&nbsp;'}</p>
       <div class="tool-card-actions">
-        <a href="/tool.html?id=${encodeURIComponent(tool.id)}" class="tc-btn-primary"
+        <a href="/tools/${encodeURIComponent(tool.id)}/" class="tc-btn-primary"
            onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${detailSource}' })">View Details</a>
         ${tool.website_url
             ? `<a href="${tool.website_url}" target="_blank" rel="noopener" class="tc-btn-secondary"

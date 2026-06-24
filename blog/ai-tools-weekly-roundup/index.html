@@ -29,14 +29,105 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://whichaipick.com/blog/ai-tools-weekly-roundup">
+    <link rel="canonical" href="https://whichaipick.com/blog/ai-tools-weekly-roundup/">
 
     <link rel="stylesheet" href="/css/styles.css?v=2.6">
     
+    <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+    <script src="/js/consent.js"></script>
 </head>
 
 <body data-bg="blog">
-    <div id="site-header"></div>
+    <div id="site-header">
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="brand">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+            <span class="brand-name">WhichAIPick</span>
+        </a>
+
+        <nav class="main-nav">
+            <!-- Find Tools with Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Find Tools
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/tools/" class="dropdown-item">Browse All Tools</a>
+                    <a href="/category.html" class="dropdown-item">Browse by Category</a>
+                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                </div>
+            </div>
+
+            <!-- AI Academy with Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    AI Academy
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/academy.html" class="dropdown-item">All Guides</a>
+                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
+                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
+                </div>
+            </div>
+
+            <!-- Use Cases with Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Use Cases
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
+                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
+                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
+                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
+                </div>
+            </div>
+
+            <!-- Compare (Simple Link - No Dropdown) -->
+            <a href="/compare.html" class="nav-link">Compare</a>
+
+            <!-- Blog with Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/blog.html" class="dropdown-item">All Articles</a>
+                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
+                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                </div>
+            </div>
+
+            <!-- Simple Links (No Dropdown) -->
+            <a href="/make-money.html" class="nav-link">Make Money</a>
+            <a href="/start-here.html" class="nav-link">Start Here</a>
+        </nav>
+
+        <div class="header-cta">
+            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+</header>
+</div>
 
     <main class="page-shell">
         <!-- 1. HERO -->
@@ -58,7 +149,7 @@
                 <h2>1. The Next Gen of coding Assistants</h2>
                 <p class="text-secondary mb-3">
                     Coding assistants have evolved beyond simple autocompletion. The latest tools are acting more like
-                    autonomous junior developers. Tools like <a href="/tool.html?id=cursor">Cursor</a> and updated versions of <a href="/tool.html?id=github-copilot">GitHub Copilot</a> are now capable of refactoring entire files, fixing bugs across
+                    autonomous junior developers. Tools like <a href="/tools/cursor/">Cursor</a> and updated versions of <a href="/tools/github-copilot/">GitHub Copilot</a> are now capable of refactoring entire files, fixing bugs across
                     multiple directories, and even implementing features from natural language prompts with surprising
                     accuracy.
                 </p>
@@ -71,8 +162,8 @@
 
                 <h2>2. AI Video Generation Gets Realistic</h2>
                 <p class="text-secondary mb-3">
-                    We've seen a massive leap in video fidelity this month. Models like <a href="/tool.html?id=sora">Sora</a> (from
-                    OpenAI) and <a href="/tool.html?id=runway">Runway Gen-3</a> are producing clips that are increasingly hard to
+                    We've seen a massive leap in video fidelity this month. Models like <a href="/tools/sora/">Sora</a> (from
+                    OpenAI) and <a href="/tools/runway/">Runway Gen-3</a> are producing clips that are increasingly hard to
                     distinguish from reality. While there are still artifacts—weird hands, shifting physics—the gap is
                     closing.
                 </p>
@@ -101,7 +192,7 @@
 
                 <h2>4. Personal Productivity: The "Second Brain"</h2>
                 <p class="text-secondary mb-3">
-                    Note-taking apps are getting smarter. Tools like <a href="/tool.html?id=notion-ai">Notion AI</a> and <a href="/tool.html?id=mem">Mem</a> are using AI to automatically organize your thoughts, surface relevant
+                    Note-taking apps are getting smarter. Tools like <a href="/tools/notion-ai/">Notion AI</a> and <a href="/tools/mem/">Mem</a> are using AI to automatically organize your thoughts, surface relevant
                     notes when you need them, and even draft content based on your past writing.
                 </p>
                 <p class="text-secondary mb-5">

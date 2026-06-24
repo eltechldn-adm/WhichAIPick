@@ -34,6 +34,23 @@
         const headerContainer = document.getElementById('site-header');
         if (!headerContainer) return;
 
+        // If the container already has children (injected at build time), do not fetch.
+        // But still update the header height CSS variable for spacing.
+        if (headerContainer.children.length > 0) {
+            requestAnimationFrame(() => {
+                updateHeaderHeight();
+            });
+            setTimeout(() => {
+                updateHeaderHeight();
+            }, 50);
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => {
+                    updateHeaderHeight();
+                });
+            }
+            return;
+        }
+
         try {
             const response = await fetch('/partials/header.html?v=2.4hotfix');
             if (!response.ok) {
@@ -96,34 +113,15 @@
     // Initialize on DOMContentLoaded
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-            initGlobalFeatures();
+            injectHeader();
+            injectFooter();
         });
     } else {
-        initGlobalFeatures();
-    }
-
-    function initGlobalFeatures() {
         injectHeader();
         injectFooter();
-        loadAnalytics();
-        loadCookieConsent();
     }
 
-    // Load Analytics Script
-    function loadAnalytics() {
-        const script = document.createElement('script');
-        script.src = '/js/analytics.js?v=5.0';
-        script.async = true;
-        document.head.appendChild(script);
-    }
 
-    // Load Cookie Consent
-    function loadCookieConsent() {
-        const script = document.createElement('script');
-        script.src = '/js/cookie-consent.js';
-        script.defer = true;
-        document.head.appendChild(script);
-    }
 })();
 
 // Mobile Navigation Dropdown Toggle
