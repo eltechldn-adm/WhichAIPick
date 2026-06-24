@@ -404,6 +404,21 @@ async function recommendTools(userAnswers) {
 
 // Initialize quiz
 function initQuiz() {
+    // If the user navigated here fresh (clicked a link, typed URL), reset the quiz state.
+    // Preserve state only on page reload or browser back/forward navigation.
+    try {
+        const navigationEntry = performance.getEntriesByType('navigation')[0];
+        const isNavigate = navigationEntry
+            ? navigationEntry.type === 'navigate'
+            : (performance.navigation && performance.navigation.type === 0);
+
+        if (isNavigate) {
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    } catch (e) {
+        console.warn('Navigation check failed:', e);
+    }
+
     // Note: currentQuestion and answers are initialized at top level or restored
 
     // Attempt restore
