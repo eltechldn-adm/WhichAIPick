@@ -287,6 +287,8 @@ function buildToolPage(tool) {
 
   <!-- AdSense Verification & Consent -->
   <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088331504377019"
+     crossorigin="anonymous"></script>
   <script src="/js/consent.js" defer></script>
 
   <!-- Schema: SoftwareApplication -->
@@ -465,6 +467,8 @@ function buildCategoryPage(categoryName, categoryTools) {
 
   <!-- AdSense Verification & Consent -->
   <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088331504377019"
+     crossorigin="anonymous"></script>
   <script src="/js/consent.js" defer></script>
 
   <!-- Schema: CollectionPage + ItemList -->
