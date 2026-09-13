@@ -133,17 +133,87 @@
 </div>
 
   <main class="page-shell">
-
     <section class="section-spaced content-narrow">
-      <h1 id="category-title">Loading...</h1>
-      <p class="muted" id="category-description"></p>
+      <h1 id="category-title">Browse by Category</h1>
+      <p class="muted" id="category-description">Explore our curated collection of AI tools by category.</p>
     </section>
 
     <section class="section-spaced">
-      <div class="tools-grid" id="category-tools-grid"></div>
+      <div class="tools-grid category-directory-grid" id="category-tools-grid" style="display: grid; gap: 16px;">
+        
+    <a href="/category/automation/" class="category-card cat-automation">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Automation</h3>
+      <span class="category-card-count">10 tools</span>
+    </a>
+    <a href="/category/business/" class="category-card cat-business">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 21V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Business</h3>
+      <span class="category-card-count">42 tools</span>
+    </a>
+    <a href="/category/content-creation/" class="category-card cat-content-creation">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Content Creation</h3>
+      <span class="category-card-count">25 tools</span>
+    </a>
+    <a href="/category/design/" class="category-card cat-design">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 19L19 12L22 15L15 22L12 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13L16.5 5.5L2 2L5.5 16.5L13 18L18 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 2L9.586 9.586" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 13C11 13 11 14.5 13 16.5C15 18.5 16.5 18.5 16.5 18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Design</h3>
+      <span class="category-card-count">52 tools</span>
+    </a>
+    <a href="/category/development/" class="category-card cat-development">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 18L22 12L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Development</h3>
+      <span class="category-card-count">54 tools</span>
+    </a>
+    <a href="/category/education/" class="category-card cat-education">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 10V16C22 16.11 22 16.29 21.96 16.4L18.88 18.2C18.66 18.33 18.36 18.37 18.11 18.29C17.7 18.17 17.43 17.77 17.43 17.34V14.1L12 17L2 12V22H0V11C0 10.93 0.01 10.87 0.05 10.81L2 7L12 2L22 7V10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13.5V18.13L12 21.5L18 18.13V13.5L12 16.5L6 13.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Education</h3>
+      <span class="category-card-count">12 tools</span>
+    </a>
+    <a href="/category/marketing/" class="category-card cat-marketing">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 20V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Marketing</h3>
+      <span class="category-card-count">32 tools</span>
+    </a>
+    <a href="/category/productivity/" class="category-card cat-productivity">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Productivity</h3>
+      <span class="category-card-count">37 tools</span>
+    </a>
+    <a href="/category/research/" class="category-card cat-research">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 19C15.4183 19 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Research</h3>
+      <span class="category-card-count">23 tools</span>
+    </a>
+    <a href="/category/video-audio/" class="category-card cat-video-audio">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 7L16 12L23 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H14C15.1046 19 16 18.1046 16 17V7C16 5.89543 15.1046 5 14 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Video & Audio</h3>
+      <span class="category-card-count">35 tools</span>
+    </a>
+      </div>
     </section>
-
-  </main>
+</main>
 
 
   <div id="site-footer">

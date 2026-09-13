@@ -27,6 +27,7 @@ const validTargetUsers = new Set(['individual', 'team', 'enterprise', 'unknown']
 
 const seenIds = new Set();
 const seenUrls = new Set();
+const verificationDates = {};
 
 toolsJson.forEach((tool, index) => {
     // ERRORS: Strict failures
@@ -95,7 +96,20 @@ toolsJson.forEach((tool, index) => {
             warnings++;
         }
     });
+    // Collect verification dates
+    if (tool.lastVerifiedAt && tool.lastVerifiedAt.trim() !== '') {
+        verificationDates[tool.lastVerifiedAt] = (verificationDates[tool.lastVerifiedAt] || 0) + 1;
+    }
 });
+
+// Check for mass-assignment of lastVerifiedAt
+const totalTools = toolsJson.length;
+for (const [date, count] of Object.entries(verificationDates)) {
+    if (count > totalTools * 0.5) { // If more than 50% of tools share the exact same date
+        console.error(`[ERROR] Mass-assignment detected: ${count} tools have lastVerifiedAt set to ${date}. Dates must reflect genuine manual verification.`);
+        errors++;
+    }
+}
 
 console.log(`\nValidation Complete. Errors: ${errors}, Warnings: ${warnings}`);
 if (errors > 0) {

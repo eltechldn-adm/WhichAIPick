@@ -406,27 +406,15 @@ function buildToolPage(tool) {
 </html>`;
 }
 
-// ─── CATEGORY PAGE GENERATOR ──────────────────────────────────────────────────
-function buildCategoryPage(categoryName, categoryTools) {
-  const slug         = categorySlug(categoryName);
-  const canonicalUrl = `${DOMAIN}/category/${slug}/`;
-  const meta         = CATEGORY_META[categoryName] || {};
-  const intro        = meta.intro || `Browse AI tools in the ${categoryName} category.`;
-  const description  = meta.description || `Discover the best ${categoryName} AI tools, with honest editorial reviews, pricing information, and use case breakdowns.`;
-  const faq          = meta.faq || [];
 
-  const metaTitle = `Best AI ${categoryName} Tools in 2026 | WhichAIPick`;
-  const metaDesc  = truncate(`${intro} Browse ${categoryTools.length} curated AI tools with honest reviews, pricing, and use case breakdowns.`, 160);
-
-  // Tool cards using standard .tool-card layout (matching js/main.js)
-  const toolCardsHtml = categoryTools.map(tool => {
+function buildToolCardHTML(tool) {
     const toolUrl   = `/tools/${tool.id}/`;
     const toolDesc  = truncate(stripHtml(tool.long_description || ''), 120);
     const priceBadgeHTML = tool.has_free_tier ? `<div class="tool-card-badge">Free Tier</div>` : '';
     const domain = tool.website_url ? (new URL(tool.website_url).hostname.replace(/^www\./, '')) : 'N/A';
     
     // Tier 3: Local initials badge (pure CSS/DOM)
-    const initials = (tool.name || '??').trim().split(/\\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+    const initials = (tool.name || '??').trim().split(/\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
     const faviconUrl = domain && domain !== 'N/A' ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : '';
     
     let logoHTML;
@@ -464,7 +452,22 @@ function buildCategoryPage(categoryName, categoryTools) {
             : ''}
       </div>
     </div>`;
-  }).join('\\n        ');
+}
+
+// ─── CATEGORY PAGE GENERATOR ──────────────────────────────────────────────────
+function buildCategoryPage(categoryName, categoryTools) {
+  const slug         = categorySlug(categoryName);
+  const canonicalUrl = `${DOMAIN}/category/${slug}/`;
+  const meta         = CATEGORY_META[categoryName] || {};
+  const intro        = meta.intro || `Browse AI tools in the ${categoryName} category.`;
+  const description  = meta.description || `Discover the best ${categoryName} AI tools, with structured feature breakdowns and pricing data.`;
+  const faq          = meta.faq || [];
+
+  const metaTitle = `Best AI ${categoryName} Tools in 2026 | WhichAIPick`;
+  const metaDesc  = truncate(`${intro} Browse ${categoryTools.length} AI tools with detailed feature breakdowns and pricing data.`, 160);
+
+  // Tool cards using standard .tool-card layout (matching js/main.js)
+  const toolCardsHtml = categoryTools.map(tool => buildToolCardHTML(tool)).join('\n        ');
 
   // FAQ HTML
   const faqHtml = faq.length > 0
@@ -556,7 +559,7 @@ function buildCategoryPage(categoryName, categoryTools) {
           <div class="content-narrow">
             <p style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px;">${escAttr(intro)}</p>
             <p class="category-description" style="margin-top: 0; margin-bottom: 12px; font-size: 0.95rem;">${escAttr(description)}</p>
-            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">${categoryTools.length} tools curated and reviewed by the WhichAIPick editorial team.</p>
+            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">${categoryTools.length} tools researched and verified for feature accuracy and pricing.</p>
           </div>
         </div>
       </div>
@@ -664,5 +667,97 @@ for (const cat of categories) {
   console.log(`  [GENERATED] /category/${slug}/  (${catTools.length} tools)`);
 }
 console.log(`  ✓ ${categoriesGenerated} category pages written to /category/[slug]/index.html`);
+
+
+// 3) Update category.html (The Directory Hub)
+console.log('Injecting static content into category.html...');
+const categoryHtmlFile = path.join(ROOT, 'category.html');
+let categoryFileContent = fs.readFileSync(categoryHtmlFile, 'utf8');
+
+const categoryIcons = {
+  'Automation': '<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Business': '<path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 21V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 21V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Content Creation': '<path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Design': '<path d="M12 19L19 12L22 15L15 22L12 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13L16.5 5.5L2 2L5.5 16.5L13 18L18 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 2L9.586 9.586" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 13C11 13 11 14.5 13 16.5C15 18.5 16.5 18.5 16.5 18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Development': '<path d="M16 18L22 12L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Education': '<path d="M22 10V16C22 16.11 22 16.29 21.96 16.4L18.88 18.2C18.66 18.33 18.36 18.37 18.11 18.29C17.7 18.17 17.43 17.77 17.43 17.34V14.1L12 17L2 12V22H0V11C0 10.93 0.01 10.87 0.05 10.81L2 7L12 2L22 7V10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 13.5V18.13L12 21.5L18 18.13V13.5L12 16.5L6 13.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Marketing': '<path d="M12 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 20V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Productivity': '<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Research': '<path d="M11 19C15.4183 19 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'Video & Audio': '<path d="M23 7L16 12L23 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H14C15.1046 19 16 18.1046 16 17V7C16 5.89543 15.1046 5 14 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  'default': '<path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.27002 6.96002L12 12.01L20.73 6.96002" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+};
+
+const allCategoriesListHtml = categories.sort().map(c => {
+  let iconKey = c;
+  if (!categoryIcons[c]) iconKey = 'default';
+  const iconSvg = categoryIcons[iconKey];
+  const count = tools.filter(t => t.category === c).length;
+  const slug = categorySlug(c);
+  return `
+    <a href="/category/${slug}/" class="category-card cat-${slug}">
+      <svg class="category-card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          ${iconSvg}
+      </svg>
+      <h3>${c}</h3>
+      <span class="category-card-count">${count} tools</span>
+    </a>`;
+}).join('');
+
+const newMainContent = `
+    <section class="section-spaced content-narrow">
+      <h1 id="category-title">Browse by Category</h1>
+      <p class="muted" id="category-description">Explore our curated collection of AI tools by category.</p>
+    </section>
+
+    <section class="section-spaced">
+      <div class="tools-grid category-directory-grid" id="category-tools-grid" style="display: grid; gap: 16px;">
+        ${allCategoriesListHtml}
+      </div>
+    </section>
+`;
+
+categoryFileContent = categoryFileContent.replace(
+  /<main class="page-shell">[\s\S]*?<\/main>/,
+  `<main class="page-shell">${newMainContent}</main>`
+);
+
+fs.writeFileSync(categoryHtmlFile, categoryFileContent, 'utf8');
+console.log('  ✓ category.html updated with static grid.');
+
+// 4) Update index.html (Homepage Featured Tools)
+console.log('Injecting static content into index.html...');
+const indexHtmlFile = path.join(ROOT, 'index.html');
+let indexFileContent = fs.readFileSync(indexHtmlFile, 'utf8');
+
+const featuredFallbackTools = tools.slice(0, 6);
+const featuredFallbackHtml = featuredFallbackTools.map(tool => buildToolCardHTML(tool)).join('\n');
+
+indexFileContent = indexFileContent.replace(
+  /<div id="home-featured-tools" class="content-grid" style="margin-bottom: var\(--space-8\);">[\s\S]*?<\/div>\s*<div style="text-align: center;">/,
+  `<div id="home-featured-tools" class="content-grid" style="margin-bottom: var(--space-8);">\n${featuredFallbackHtml}\n</div>\n                <div style="text-align: center;">`
+);
+
+// Also categories grid for index.html
+const counts = {};
+tools.forEach(t => {
+  if (t.category) counts[t.category] = (counts[t.category] || 0) + 1;
+});
+const topCategories = [...categories].sort((a, b) => (counts[b] || 0) - (counts[a] || 0)).slice(0, 8);
+const categoryFallbackHtml = topCategories.map(cat => {
+  return `<a href="/category?c=${encodeURIComponent(cat)}" class="content-card" style="display: block; text-decoration: none; transition: transform var(--t-fast);">
+    <h3 style="margin-bottom: var(--space-2); color: var(--c-text); font-size: 1.25rem;">${cat}</h3>
+    <p style="color: var(--c-accent); margin: 0; font-size: 0.95rem; font-weight: 500;">${counts[cat]} Tools &rarr;</p>
+  </a>`;
+}).join('\n');
+
+indexFileContent = indexFileContent.replace(
+  /<div id="home-category-grid" class="content-grid"\s+style="grid-template-columns: repeat\(auto-fill, minmax\(280px, 1fr\)\); margin-bottom: var\(--space-6\);">[\s\S]*?<\/div>\s*<div style="text-align: center;">/,
+  `<div id="home-category-grid" class="content-grid"
+                    style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-bottom: var(--space-6);">\n${categoryFallbackHtml}\n</div>\n                <div style="text-align: center;">`
+);
+
+fs.writeFileSync(indexHtmlFile, indexFileContent, 'utf8');
+console.log('  ✓ index.html updated with static fallback grids.');
 
 console.log(`\nPhase 3 generation complete: ${toolsGenerated} tool pages + ${categoriesGenerated} category pages.`);

@@ -38,7 +38,7 @@ const CHANGEFREQ = {
 const STATIC_ROUTES = [
     { loc: '/',                         priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
     { loc: '/tools/',                   priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/category.html',            priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+
     { loc: '/academy.html',             priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
     { loc: '/use-cases.html',           priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
     { loc: '/compare.html',             priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
