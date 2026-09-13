@@ -185,16 +185,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -202,383 +202,910 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
   <main class="page-shell">
 
     <!-- Category Hero -->
-    <section class="hero-shell">
+    <section class="hero-shell" style="padding-bottom: 16px;">
       <div class="hero-surface">
         <div class="hero-inner">
           <h1>AI Video &amp; Audio Tools</h1>
           <div class="content-narrow">
-            <p>AI tools for video editing, audio production, voice cloning, transcription, and multimedia content creation.</p>
+            <p style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px;">AI tools for video editing, audio production, voice cloning, transcription, and multimedia content creation.</p>
+            <p class="category-description" style="margin-top: 0; margin-bottom: 12px; font-size: 0.95rem;">The video and audio AI space has seen explosive development. Tools in this category cover the full production pipeline: from AI script generation, to automated video editing, voice synthesis, sound design, music generation, transcription, and subtitle creation. Content creators, podcasters, filmmakers, and businesses all use these tools to produce professional-quality multimedia at dramatically lower cost and time.</p>
+            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">35 tools curated and reviewed by the WhichAIPick editorial team.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Description -->
-    <section class="section-spaced">
-      <div class="content-narrow">
-        <p class="category-description">The video and audio AI space has seen explosive development. Tools in this category cover the full production pipeline: from AI script generation, to automated video editing, voice synthesis, sound design, music generation, transcription, and subtitle creation. Content creators, podcasters, filmmakers, and businesses all use these tools to produce professional-quality multimedia at dramatically lower cost and time.</p>
-        <p style="color: var(--c-text-muted); margin-top: 12px;">35 tools curated and reviewed by the WhichAIPick editorial team.</p>
+    <!-- Filter Bar (Dynamic) -->
+    <div class="filter-bar">
+      <div class="filter-search">
+        <input type="search" id="search-input" placeholder="Search by name..." aria-label="Search tools">
       </div>
-    </section>
+      <div class="filter-controls">
+        <div class="filter-item">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select" aria-label="Sort tools">
+            <option value="recommended">Recommended</option>
+            <option value="free_first">Free First</option>
+            <option value="az">A–Z</option>
+            <option value="za">Z–A</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label class="toggle-switch">
+            <input type="checkbox" id="free-tier-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <label for="free-tier-toggle" title="Pricing is auto-detected; some tools may be misclassified." style="cursor: pointer;">
+            Free tier <span style="font-size: 0.8em; opacity: 0.7;">(detected)</span>
+          </label>
+        </div>
+        <div class="filter-item">
+          <label for="items-per-page-select">Per Page:</label>
+          <select id="items-per-page-select" aria-label="Items per page">
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
     <!-- Tool Grid -->
     <section class="section-spaced">
       <div class="content-wide">
-        <div class="tools-grid-static">
-        <a href="/tools/aiva/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">AIVA</h3>
-            
+        <div id="browse-container">
+          <div id="browse-stats" class="browse-stats">Showing 1-30 of 35 tools</div>
+          <div id="browse-list" class="browse-list">
+          <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=aiva.ai&amp;sz=128" alt="AIVA logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/aiva/" aria-label="View details for AIVA">AIVA</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="aiva" aria-label="Save AIVA to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">AIVA (Artificial Intelligence Virtual Artist) is a generative AI music composition platform designed to assist musician…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/assemblyai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">AssemblyAI</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">AIVA (Artificial Intelligence Virtual Artist) is a generative AI music composition platform designed to assist musician…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/aiva/" class="tc-btn-primary" aria-label="View full details for AIVA">View Details</a>
+        <a href="https://www.aiva.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit AIVA website">aiva.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=assemblyai.com&amp;sz=128" alt="AssemblyAI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/assemblyai/" aria-label="View details for AssemblyAI">AssemblyAI</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="assemblyai" aria-label="Save AssemblyAI to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">AssemblyAI is an applied artificial intelligence company providing API-based models for speech recognition, audio intel…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/beatoven/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Beatoven</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">AssemblyAI is an applied artificial intelligence company providing API-based models for speech recognition, audio intel…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/assemblyai/" class="tc-btn-primary" aria-label="View full details for AssemblyAI">View Details</a>
+        <a href="https://www.assemblyai.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit AssemblyAI website">assemblyai.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=beatoven.ai&amp;sz=128" alt="Beatoven logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/beatoven/" aria-label="View details for Beatoven">Beatoven</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="beatoven" aria-label="Save Beatoven to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Beatoven.ai is an artificial intelligence music generation platform designed specifically for video creators, podcaster…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/boomy/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Boomy</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Beatoven.ai is an artificial intelligence music generation platform designed specifically for video creators, podcaster…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/beatoven/" class="tc-btn-primary" aria-label="View full details for Beatoven">View Details</a>
+        <a href="https://www.beatoven.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Beatoven website">beatoven.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=boomy.com&amp;sz=128" alt="Boomy logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/boomy/" aria-label="View details for Boomy">Boomy</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="boomy" aria-label="Save Boomy to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Boomy is a highly accessible, generative AI music creation platform. Its core mission is to democratize music productio…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/clipchamp/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Clipchamp</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Boomy is a highly accessible, generative AI music creation platform. Its core mission is to democratize music productio…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/boomy/" class="tc-btn-primary" aria-label="View full details for Boomy">View Details</a>
+        <a href="https://boomy.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Boomy website">boomy.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=clipchamp.com&amp;sz=128" alt="Clipchamp logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/clipchamp/" aria-label="View details for Clipchamp">Clipchamp</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="clipchamp" aria-label="Save Clipchamp to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Clipchamp is a web-based, non-linear video editing platform that was acquired by Microsoft in 2021 and subsequently int…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/colossyan/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Colossyan</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Clipchamp is a web-based, non-linear video editing platform that was acquired by Microsoft in 2021 and subsequently int…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/clipchamp/" class="tc-btn-primary" aria-label="View full details for Clipchamp">View Details</a>
+        <a href="https://clipchamp.com/en/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Clipchamp website">clipchamp.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=colossyan.com&amp;sz=128" alt="Colossyan logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/colossyan/" aria-label="View details for Colossyan">Colossyan</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="colossyan" aria-label="Save Colossyan to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Colossyan is an enterprise-grade AI video generation platform focused intensely on corporate training, learning and dev…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/creatify/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Creatify</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Colossyan is an enterprise-grade AI video generation platform focused intensely on corporate training, learning and dev…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/colossyan/" class="tc-btn-primary" aria-label="View full details for Colossyan">View Details</a>
+        <a href="https://www.colossyan.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Colossyan website">colossyan.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=creatify.ai&amp;sz=128" alt="Creatify logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/creatify/" aria-label="View details for Creatify">Creatify</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="creatify" aria-label="Save Creatify to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Creatify.ai is a highly specialized generative AI platform built explicitly for digital marketers, e-commerce brands, a…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/d-id/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">D-ID</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Creatify.ai is a highly specialized generative AI platform built explicitly for digital marketers, e-commerce brands, a…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/creatify/" class="tc-btn-primary" aria-label="View full details for Creatify">View Details</a>
+        <a href="https://creatify.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Creatify website">creatify.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=d-id.com&amp;sz=128" alt="D-ID logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/d-id/" aria-label="View details for D-ID">D-ID</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="d-id" aria-label="Save D-ID to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">D-ID is an artificial intelligence platform specializing in generative AI video, specifically the creation of photoreal…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/descript/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Descript</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">D-ID is an artificial intelligence platform specializing in generative AI video, specifically the creation of photoreal…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/d-id/" class="tc-btn-primary" aria-label="View full details for D-ID">View Details</a>
+        <a href="https://www.d-id.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit D-ID website">d-id.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=descript.com&amp;sz=128" alt="Descript logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/descript/" aria-label="View details for Descript">Descript</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="descript" aria-label="Save Descript to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Descript is an AI-powered audio and video editing platform founded in 2017. It takes an unconventional approach to medi…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/descript-overdub/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Descript Overdub</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Descript is an AI-powered audio and video editing platform founded in 2017. It takes an unconventional approach to medi…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/descript/" class="tc-btn-primary" aria-label="View full details for Descript">View Details</a>
+        <a href="https://www.descript.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Descript website">descript.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=descript.com&amp;sz=128" alt="Descript Overdub logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/descript-overdub/" aria-label="View details for Descript Overdub">Descript Overdub</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="descript-overdub" aria-label="Save Descript Overdub to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Descript Overdub is the groundbreaking synthetic voice cloning feature embedded within the broader Descript audio/video…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/elevenlabs/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">ElevenLabs</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Descript Overdub is the groundbreaking synthetic voice cloning feature embedded within the broader Descript audio/video…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/descript-overdub/" class="tc-btn-primary" aria-label="View full details for Descript Overdub">View Details</a>
+        <a href="https://www.descript.com/regenerate" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Descript Overdub website">descript.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=elevenlabs.io&amp;sz=128" alt="ElevenLabs logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">E</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/elevenlabs/" aria-label="View details for ElevenLabs">ElevenLabs</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="elevenlabs" aria-label="Save ElevenLabs to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">ElevenLabs is an AI voice synthesis and audio generation platform founded in 2022. It provides tools for generating rea…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/fliki/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Fliki</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">ElevenLabs is an AI voice synthesis and audio generation platform founded in 2022. It provides tools for generating rea…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/elevenlabs/" class="tc-btn-primary" aria-label="View full details for ElevenLabs">View Details</a>
+        <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit ElevenLabs website">elevenlabs.io</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=fliki.ai&amp;sz=128" alt="Fliki logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">F</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/fliki/" aria-label="View details for Fliki">Fliki</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="fliki" aria-label="Save Fliki to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Fliki is an AI-powered text-to-video and text-to-speech platform designed to convert written content rapidly into publi…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/happy-scribe/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Happy Scribe</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Fliki is an AI-powered text-to-video and text-to-speech platform designed to convert written content rapidly into publi…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/fliki/" class="tc-btn-primary" aria-label="View full details for Fliki">View Details</a>
+        <a href="https://fliki.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Fliki website">fliki.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=happyscribe.com&amp;sz=128" alt="Happy Scribe logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">H</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/happy-scribe/" aria-label="View details for Happy Scribe">Happy Scribe</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="happy-scribe" aria-label="Save Happy Scribe to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Happy Scribe is a highly specialized Audio-to-Text platform focused intensely on established precision transcription an…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/heygen/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">HeyGen</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Happy Scribe is a highly specialized Audio-to-Text platform focused intensely on established precision transcription an…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/happy-scribe/" class="tc-btn-primary" aria-label="View full details for Happy Scribe">View Details</a>
+        <a href="https://www.happyscribe.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Happy Scribe website">happyscribe.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=heygen.com&amp;sz=128" alt="HeyGen logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">H</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/heygen/" aria-label="View details for HeyGen">HeyGen</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="heygen" aria-label="Save HeyGen to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">HeyGen is an AI video generation platform that produces talking avatar videos from text scripts, similar in category to…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/invideo/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">InVideo</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">HeyGen is an AI video generation platform that produces talking avatar videos from text scripts, similar in category to…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/heygen/" class="tc-btn-primary" aria-label="View full details for HeyGen">View Details</a>
+        <a href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit HeyGen website">heygen.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=invideo.io&amp;sz=128" alt="InVideo logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">I</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/invideo/" aria-label="View details for InVideo">InVideo</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="invideo" aria-label="Save InVideo to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">InVideo is an AI-powered video creation platform that enables users to produce marketing videos, social content, and ex…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/kapwing/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Kapwing</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">InVideo is an AI-powered video creation platform that enables users to produce marketing videos, social content, and ex…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/invideo/" class="tc-btn-primary" aria-label="View full details for InVideo">View Details</a>
+        <a href="https://invideo.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit InVideo website">invideo.io</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=kapwing.com&amp;sz=128" alt="Kapwing logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">K</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/kapwing/" aria-label="View details for Kapwing">Kapwing</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="kapwing" aria-label="Save Kapwing to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Kapwing is a collaborative, web-based non-linear video editor heavily focused on modern social media workflows and remo…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/krisp/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Krisp</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Kapwing is a collaborative, web-based non-linear video editor heavily focused on modern social media workflows and remo…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/kapwing/" class="tc-btn-primary" aria-label="View full details for Kapwing">View Details</a>
+        <a href="https://www.kapwing.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Kapwing website">kapwing.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=krisp.ai&amp;sz=128" alt="Krisp logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">K</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/krisp/" aria-label="View details for Krisp">Krisp</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="krisp" aria-label="Save Krisp to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Krisp is an AI-powered voice productivity application that runs securely in the background of a computer, acting as a v…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/lalalai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Lalal.ai</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Krisp is an AI-powered voice productivity application that runs securely in the background of a computer, acting as a v…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/krisp/" class="tc-btn-primary" aria-label="View full details for Krisp">View Details</a>
+        <a href="https://krisp.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Krisp website">krisp.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=lalal.ai&amp;sz=128" alt="Lalal.ai logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/lalalai/" aria-label="View details for Lalal.ai">Lalal.ai</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="lalalai" aria-label="Save Lalal.ai to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Lalal.ai is an highly potent, intensely specialized AI audio manipulation platform dedicated almost entirely to one hig…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/lumen5/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Lumen5</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Lalal.ai is an highly potent, intensely specialized AI audio manipulation platform dedicated almost entirely to one hig…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/lalalai/" class="tc-btn-primary" aria-label="View full details for Lalal.ai">View Details</a>
+        <a href="https://www.lalal.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Lalal.ai website">lalal.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=lumen5.com&amp;sz=128" alt="Lumen5 logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/lumen5/" aria-label="View details for Lumen5">Lumen5</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="lumen5" aria-label="Save Lumen5 to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Lumen5 is an AI-powered video creation platform heavily targeted at marketing departments, internal communications team…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/murf-ai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Murf AI</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Lumen5 is an AI-powered video creation platform heavily targeted at marketing departments, internal communications team…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/lumen5/" class="tc-btn-primary" aria-label="View full details for Lumen5">View Details</a>
+        <a href="https://lumen5.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Lumen5 website">lumen5.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=murf.ai&amp;sz=128" alt="Murf AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/murf-ai/" aria-label="View details for Murf AI">Murf AI</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="murf-ai" aria-label="Save Murf AI to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Murf AI is an AI voice generation and text-to-speech studio platform designed for content creators, educators, and mark…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/pictory/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Pictory</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Murf AI is an AI voice generation and text-to-speech studio platform designed for content creators, educators, and mark…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/murf-ai/" class="tc-btn-primary" aria-label="View full details for Murf AI">View Details</a>
+        <a href="https://murf.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Murf AI website">murf.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=pictory.ai&amp;sz=128" alt="Pictory logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">P</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/pictory/" aria-label="View details for Pictory">Pictory</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="pictory" aria-label="Save Pictory to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Pictory is an automated, AI-driven video creation and editing platform designed proactively for content marketers, cour…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/resemble-ai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Resemble AI</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Pictory is an automated, AI-driven video creation and editing platform designed proactively for content marketers, cour…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/pictory/" class="tc-btn-primary" aria-label="View full details for Pictory">View Details</a>
+        <a href="https://pictory.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Pictory website">pictory.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=resemble.ai&amp;sz=128" alt="Resemble AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/resemble-ai/" aria-label="View details for Resemble AI">Resemble AI</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="resemble-ai" aria-label="Save Resemble AI to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Resemble AI is an intensely powerful, fiercely specialized generative voice cloning and synthetic speech synthesis plat…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/rev-ai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Rev AI</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Resemble AI is an intensely powerful, fiercely specialized generative voice cloning and synthetic speech synthesis plat…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/resemble-ai/" class="tc-btn-primary" aria-label="View full details for Resemble AI">View Details</a>
+        <a href="https://www.resemble.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Resemble AI website">resemble.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=rev.ai&amp;sz=128" alt="Rev AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/rev-ai/" aria-label="View details for Rev AI">Rev AI</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="rev-ai" aria-label="Save Rev AI to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Rev AI is an highly powerful, highly specialized enterprise API infrastructure engineered by Rev.com (historically the…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/runway/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Runway ML</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Rev AI is an highly powerful, highly specialized enterprise API infrastructure engineered by Rev.com (historically the…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/rev-ai/" class="tc-btn-primary" aria-label="View full details for Rev AI">View Details</a>
+        <a href="https://www.rev.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Rev AI website">rev.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=runway.com&amp;sz=128" alt="Runway logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/runway/" aria-label="View details for Runway">Runway</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="runway" aria-label="Save Runway to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Runway is an AI creative platform focused on video generation, editing, and visual media production. Founded in 2018, i…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/soundraw/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Soundraw</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Runway is an AI creative platform focused on video generation, editing, and visual media production. Founded in 2018, i…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/runway/" class="tc-btn-primary" aria-label="View full details for Runway">View Details</a>
+        <a href="https://runway.com/?ref=whichaipick" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Runway website">runway.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=soundraw.io&amp;sz=128" alt="Soundraw logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/soundraw/" aria-label="View details for Soundraw">Soundraw</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="soundraw" aria-label="Save Soundraw to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Soundraw (Soundraw.io) is an infinitely fascinating, deeply customizable AI music composition platform specifically eng…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/speechify/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Speechify</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Soundraw (Soundraw.io) is an infinitely fascinating, deeply customizable AI music composition platform specifically eng…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/soundraw/" class="tc-btn-primary" aria-label="View full details for Soundraw">View Details</a>
+        <a href="https://soundraw.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Soundraw website">soundraw.io</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=speechify.com&amp;sz=128" alt="Speechify logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/speechify/" aria-label="View details for Speechify">Speechify</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="speechify" aria-label="Save Speechify to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Speechify is a large-scale popular, highly accessible AI Text-to-Speech (TTS) platform explicitly designed to radically…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/synthesia/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Synthesia</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Speechify is a large-scale popular, highly accessible AI Text-to-Speech (TTS) platform explicitly designed to radically…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/speechify/" class="tc-btn-primary" aria-label="View full details for Speechify">View Details</a>
+        <a href="https://speechify.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Speechify website">speechify.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=synthesia.com&amp;sz=128" alt="Synthesia logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/synthesia/" aria-label="View details for Synthesia">Synthesia</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="synthesia" aria-label="Save Synthesia to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Synthesia is an AI video generation platform that creates videos using AI avatars that deliver spoken content from a te…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/trint/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Trint</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Synthesia is an AI video generation platform that creates videos using AI avatars that deliver spoken content from a te…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/synthesia/" class="tc-btn-primary" aria-label="View full details for Synthesia">View Details</a>
+        <a href="https://www.synthesia.com/?ref=whichaipick" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Synthesia website">synthesia.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=trint.com&amp;sz=128" alt="Trint logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">T</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/trint/" aria-label="View details for Trint">Trint</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="trint" aria-label="Save Trint to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Trint is a highly specialized, surgically focused AI transcription and audio-editing platform built explicitly for the…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/sora/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Sora</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Trint is a highly specialized, surgically focused AI transcription and audio-editing platform built explicitly for the…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/trint/" class="tc-btn-primary" aria-label="View full details for Trint">View Details</a>
+        <a href="https://trint.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Trint website">trint.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=sora.com&amp;sz=128" alt="Sora logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/sora/" aria-label="View details for Sora">Sora</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="sora" aria-label="Save Sora to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Sora is an highly powerful, paradigm-eliminate generative AI video model developed by OpenAI, engineered to execute tex…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/pika/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Pika</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Sora is an highly powerful, paradigm-eliminate generative AI video model developed by OpenAI, engineered to execute tex…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/sora/" class="tc-btn-primary" aria-label="View full details for Sora">View Details</a>
+        <a href="https://sora.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Sora website">sora.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=pika.art&amp;sz=128" alt="Pika logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">P</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/pika/" aria-label="View details for Pika">Pika</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="pika" aria-label="Save Pika to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Pika (Pika Labs / Pika.art) is an highly powerful, hyper-agile generative AI video model engineered specifically to att…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/suno/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Suno</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Pika (Pika Labs / Pika.art) is an highly powerful, hyper-agile generative AI video model engineered specifically to att…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/pika/" class="tc-btn-primary" aria-label="View full details for Pika">View Details</a>
+        <a href="https://pika.art/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Pika website">pika.art</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=suno.ai&amp;sz=128" alt="Suno logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/suno/" aria-label="View details for Suno">Suno</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="suno" aria-label="Save Suno to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Suno (Suno AI) is a highly innovative, notable creative Generative AI engine that has fundamentally shattered the compl…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/capcut/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">CapCut</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Suno (Suno AI) is a highly innovative, notable creative Generative AI engine that has fundamentally shattered the compl…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/suno/" class="tc-btn-primary" aria-label="View full details for Suno">View Details</a>
+        <a href="https://suno.ai" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Suno website">suno.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=capcut.com&amp;sz=128" alt="CapCut logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/capcut/" aria-label="View details for CapCut">CapCut</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="capcut" aria-label="Save CapCut to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">CapCut is a free video editing application developed by ByteDance, the company behind TikTok. It is available on mobile…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/udio/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Udio</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">CapCut is a free video editing application developed by ByteDance, the company behind TikTok. It is available on mobile…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/capcut/" class="tc-btn-primary" aria-label="View full details for CapCut">View Details</a>
+        <a href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit CapCut website">capcut.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=udio.com&amp;sz=128" alt="Udio logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">U</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/udio/" aria-label="View details for Udio">Udio</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="udio" aria-label="Save Udio to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Udio is a generative artificial intelligence platform specialized in the synthesis of high-fidelity musical composition…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/luma-ai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Luma AI</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Udio is a generative artificial intelligence platform specialized in the synthesis of high-fidelity musical composition…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/udio/" class="tc-btn-primary" aria-label="View full details for Udio">View Details</a>
+        <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Udio website">udio.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=lumalabs.ai&amp;sz=128" alt="Luma AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/luma-ai/" aria-label="View details for Luma AI">Luma AI</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="luma-ai" aria-label="Save Luma AI to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Luma AI is an AI video and 3D content generation platform. It offers Dream Machine, a text-to-video and image-to-video…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/pika-labs/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Pika Labs</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Luma AI is an AI video and 3D content generation platform. It offers Dream Machine, a text-to-video and image-to-video…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/luma-ai/" class="tc-btn-primary" aria-label="View full details for Luma AI">View Details</a>
+        <a href="https://lumalabs.ai" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Luma AI website">lumalabs.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=pika.art&amp;sz=128" alt="Pika Labs logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">P</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/pika-labs/" aria-label="View details for Pika Labs">Pika Labs</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="pika-labs" aria-label="Save Pika Labs to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Pika (formerly Pika Labs) is an artificial intelligence platform dedicated specifically to generative video synthesis.…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
+          <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
+        </div>
+      </div>
+      <p class="tool-description">Pika (formerly Pika Labs) is an artificial intelligence platform dedicated specifically to generative video synthesis.…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/pika-labs/" class="tc-btn-primary" aria-label="View full details for Pika Labs">View Details</a>
+        <a href="https://pika.art" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Pika Labs website">pika.art</a>
+      </div>
+    </div>
+          </div>
+          <div id="load-more-container" class="load-more-container"></div>
         </div>
       </div>
     </section>
@@ -663,7 +1190,10 @@
 </div>
 
   <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=1.7"></script>
   <script src="/js/layout.js?v=1.8" defer></script>
+  <script>window.BROWSE_CONFIG = { category: 'Video &amp; Audio' };</script>
+  <script src="/js/browse.js?v=1.0" defer></script>
 </body>
 
 </html>

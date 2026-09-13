@@ -7,7 +7,6 @@ Disallow: /scripts/
 Disallow: /node_modules/
 Disallow: /data/
 Disallow: /*.json$
-Disallow: /*?*
 
 # Allowed Crawlable Routes
 Allow: /tools/

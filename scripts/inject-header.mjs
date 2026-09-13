@@ -66,8 +66,7 @@ function collectHtmlFiles(dir, results = []) {
 // ─── Injection Logic ─────────────────────────────────────────────────────────
 const SHELL_REGEX = /<div id="site-header"><\/div>/g;
 
-// Match an already-injected header block (from a previous run) so we can
-// replace it cleanly and stay idempotent.
+// Replace already-injected block (idempotent re-run)
 const EXISTING_HEADER_REGEX = /<div id="site-header">\s*<header[\s\S]*?<\/header>\s*<\/div>/g;
 
 function injectHeader(html) {

@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "wrangler pages dev . --port 8080 --local",
     "clean-cache": "echo Clear browser cache manually (DevTools → Disable cache)",
-    "build:data": "node scripts/convert-xlsx-to-tools-json.mjs",
+    "build:data": "node scripts/convert-xlsx-to-tools-json.mjs && npm run validate:data",
+    "validate:data": "node scripts/validate-data.mjs",
+    "validate:seo": "node scripts/validate-seo.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",
     "generate:pages": "node scripts/generate-static-pages.mjs",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",

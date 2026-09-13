@@ -125,16 +125,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -142,183 +142,360 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
   <main class="page-shell">
 
     <!-- Category Hero -->
-    <section class="hero-shell">
+    <section class="hero-shell" style="padding-bottom: 16px;">
       <div class="hero-surface">
         <div class="hero-inner">
           <h1>AI Automation Tools</h1>
           <div class="content-narrow">
-            <p>AI tools for workflow automation, process orchestration, integration, and no-code task execution.</p>
+            <p style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px;">AI tools for workflow automation, process orchestration, integration, and no-code task execution.</p>
+            <p class="category-description" style="margin-top: 0; margin-bottom: 12px; font-size: 0.95rem;">Automation AI tools connect your applications, trigger actions based on rules or AI decisions, and execute complex multi-step processes without human intervention. From connecting 1,000+ apps via Zapier-style integrations, to building AI agents that autonomously complete research tasks, these tools are the infrastructure layer of the modern AI-powered business.</p>
+            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">10 tools curated and reviewed by the WhichAIPick editorial team.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Description -->
-    <section class="section-spaced">
-      <div class="content-narrow">
-        <p class="category-description">Automation AI tools connect your applications, trigger actions based on rules or AI decisions, and execute complex multi-step processes without human intervention. From connecting 1,000+ apps via Zapier-style integrations, to building AI agents that autonomously complete research tasks, these tools are the infrastructure layer of the modern AI-powered business.</p>
-        <p style="color: var(--c-text-muted); margin-top: 12px;">10 tools curated and reviewed by the WhichAIPick editorial team.</p>
+    <!-- Filter Bar (Dynamic) -->
+    <div class="filter-bar">
+      <div class="filter-search">
+        <input type="search" id="search-input" placeholder="Search by name..." aria-label="Search tools">
       </div>
-    </section>
+      <div class="filter-controls">
+        <div class="filter-item">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select" aria-label="Sort tools">
+            <option value="recommended">Recommended</option>
+            <option value="free_first">Free First</option>
+            <option value="az">A–Z</option>
+            <option value="za">Z–A</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label class="toggle-switch">
+            <input type="checkbox" id="free-tier-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <label for="free-tier-toggle" title="Pricing is auto-detected; some tools may be misclassified." style="cursor: pointer;">
+            Free tier <span style="font-size: 0.8em; opacity: 0.7;">(detected)</span>
+          </label>
+        </div>
+        <div class="filter-item">
+          <label for="items-per-page-select">Per Page:</label>
+          <select id="items-per-page-select" aria-label="Items per page">
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
     <!-- Tool Grid -->
     <section class="section-spaced">
       <div class="content-wide">
-        <div class="tools-grid-static">
-        <a href="/tools/activepieces/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">ActivePieces</h3>
-            <span class="tool-card-badge">Free Tier</span>
+        <div id="browse-container">
+          <div id="browse-stats" class="browse-stats">Showing 1-10 of 10 tools</div>
+          <div id="browse-list" class="browse-list">
+          <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=activepieces.com&amp;sz=128" alt="ActivePieces logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/activepieces/" aria-label="View details for ActivePieces">ActivePieces</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="activepieces" aria-label="Save ActivePieces to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Activepieces is an open-source, no-code business automation tool designed as a direct competitor to Zapier and Make. It…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/automator/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Automator</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Activepieces is an open-source, no-code business automation tool designed as a direct competitor to Zapier and Make. It…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/activepieces/" class="tc-btn-primary" aria-label="View full details for ActivePieces">View Details</a>
+        <a href="https://www.activepieces.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit ActivePieces website">activepieces.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=automator.ai&amp;sz=128" alt="Automator logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/automator/" aria-label="View details for Automator">Automator</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="automator" aria-label="Save Automator to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Automator (part of the larger Glide workflow ecosystem, utilizing heavily integrated AI capabilities) is a specialized…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/bardeen/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Bardeen</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Automator (part of the larger Glide workflow ecosystem, utilizing heavily integrated AI capabilities) is a specialized…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/automator/" class="tc-btn-primary" aria-label="View full details for Automator">View Details</a>
+        <a href="https://automator.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Automator website">automator.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=bardeen.ai&amp;sz=128" alt="Bardeen logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/bardeen/" aria-label="View details for Bardeen">Bardeen</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="bardeen" aria-label="Save Bardeen to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Bardeen is a proactive, AI-powered automation platform that operates distinctively as a browser extension. While enterp…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/make-integromat/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Make (Integromat)</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Bardeen is a proactive, AI-powered automation platform that operates distinctively as a browser extension. While enterp…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/bardeen/" class="tc-btn-primary" aria-label="View full details for Bardeen">View Details</a>
+        <a href="https://www.bardeen.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Bardeen website">bardeen.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=make.com&amp;sz=128" alt="Make (Integromat) logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/make-integromat/" aria-label="View details for Make (Integromat)">Make (Integromat)</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="make-integromat" aria-label="Save Make (Integromat) to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Make (formerly Integromat) is a visual platform for building complex automated workflows across thousands of applicatio…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/microsoft-power-automate/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Microsoft Power Automate</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Make (formerly Integromat) is a visual platform for building complex automated workflows across thousands of applicatio…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/make-integromat/" class="tc-btn-primary" aria-label="View full details for Make (Integromat)">View Details</a>
+        <a href="https://www.make.com/en" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Make (Integromat) website">make.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=microsoft.com&amp;sz=128" alt="Microsoft Power Automate logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/microsoft-power-automate/" aria-label="View details for Microsoft Power Automate">Microsoft Power Automate</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="microsoft-power-automate" aria-label="Save Microsoft Power Automate to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Microsoft Power Automate (formerly Microsoft Flow) is an immense, enterprise-grade robotic process automation (RPA) and…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/n8n/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">n8n</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Microsoft Power Automate (formerly Microsoft Flow) is an immense, enterprise-grade robotic process automation (RPA) and…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/microsoft-power-automate/" class="tc-btn-primary" aria-label="View full details for Microsoft Power Automate">View Details</a>
+        <a href="https://www.microsoft.com/en-us/power-platform/products/power-automate/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Microsoft Power Automate website">microsoft.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=n8n.io&amp;sz=128" alt="n8n logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">N</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/n8n/" aria-label="View details for n8n">n8n</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="n8n" aria-label="Save n8n to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">n8n is a workflow automation tool designed to connect different applications, APIs, and databases. Distinctively, it is…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/relay/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Relay</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">n8n is a workflow automation tool designed to connect different applications, APIs, and databases. Distinctively, it is…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/n8n/" class="tc-btn-primary" aria-label="View full details for n8n">View Details</a>
+        <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit n8n website">n8n.io</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=relay.app&amp;sz=128" alt="Relay logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/relay/" aria-label="View details for Relay">Relay</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="relay" aria-label="Save Relay to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Relay.app is a modern, highly focused workflow automation platform designed to directly attack the complexity and fragi…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/trayio/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Tray.io</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Relay.app is a modern, highly focused workflow automation platform designed to directly attack the complexity and fragi…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/relay/" class="tc-btn-primary" aria-label="View full details for Relay">View Details</a>
+        <a href="https://www.relay.app/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Relay website">relay.app</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=tray.ai&amp;sz=128" alt="Tray.io logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">T</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/trayio/" aria-label="View details for Tray.io">Tray.io</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="trayio" aria-label="Save Tray.io to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Tray.io is a devastatingly powerful, large-scale Enterprise-Grade Integration Platform as a Service (iPaaS) combined wi…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/workato/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Workato</h3>
-            
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Tray.io is a devastatingly powerful, large-scale Enterprise-Grade Integration Platform as a Service (iPaaS) combined wi…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/trayio/" class="tc-btn-primary" aria-label="View full details for Tray.io">View Details</a>
+        <a href="https://tray.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Tray.io website">tray.ai</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=workato.com&amp;sz=128" alt="Workato logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">W</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/workato/" aria-label="View details for Workato">Workato</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="workato" aria-label="Save Workato to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Workato is an enterprise-class integration platform as a service (iPaaS) engineered to orchestrate and automate highly…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
-        <a href="/tools/zapier-ai/" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">Zapier AI</h3>
-            <span class="tool-card-badge">Free Tier</span>
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Workato is an enterprise-class integration platform as a service (iPaaS) engineered to orchestrate and automate highly…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/workato/" class="tc-btn-primary" aria-label="View full details for Workato">View Details</a>
+        <a href="https://www.workato.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Workato website">workato.com</a>
+      </div>
+    </div>\n        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=zapier.com&amp;sz=128" alt="Zapier AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">Z</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/zapier-ai/" aria-label="View details for Zapier AI">Zapier AI</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="zapier-ai" aria-label="Save Zapier AI to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">Zapier AI is the large-scale, proactive integration of Generative AI capabilities into the established global leader of…</p>
-          <span class="tool-card-link">View details →</span>
-        </a>
+          <div class="tool-category" style="margin-top: 4px;">Automation</div>
+        </div>
+      </div>
+      <p class="tool-description">Zapier AI is the large-scale, proactive integration of Generative AI capabilities into the established global leader of…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/zapier-ai/" class="tc-btn-primary" aria-label="View full details for Zapier AI">View Details</a>
+        <a href="https://zapier.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Zapier AI website">zapier.com</a>
+      </div>
+    </div>
+          </div>
+          <div id="load-more-container" class="load-more-container"></div>
         </div>
       </div>
     </section>
@@ -403,7 +580,10 @@
 </div>
 
   <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=1.7"></script>
   <script src="/js/layout.js?v=1.8" defer></script>
+  <script>window.BROWSE_CONFIG = { category: 'Automation' };</script>
+  <script src="/js/browse.js?v=1.0" defer></script>
 </body>
 
 </html>

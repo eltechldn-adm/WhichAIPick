@@ -32,18 +32,18 @@ const replacements = [
     { regex: /\b(boring)\b/gi, replacement: "routine" },
 
     // Superiority / Supremacy
-    { regex: /\b(god(s)?|titan(s)?|apex-predator|juggernaut)\b/gi, replacement: "leader$2" },
+    { regex: /\b(god(s)?|titan(s)?|apex-predator|juggernaut)\b/gi, replacement: (match) => match.toLowerCase().endsWith('s') ? "leaders" : "leader" },
     { regex: /\b(absolute|undisputed|unmatched)\b/gi, replacement: "established" },
     { regex: /\b(supreme)\b/gi, replacement: "primary" },
-    { regex: /\b(flawless(ly)?)\b/gi, replacement: "accurate$2" },
-    { regex: /\perfect(ly)?\b/gi, replacement: "accurate$2" },
+    { regex: /\b(flawless(ly)?)\b/gi, replacement: (match, p1, p2) => p2 ? "accurately" : "accurate" },
+    { regex: /\bperfect(ly)?\b/gi, replacement: (match, p1, p2) => p2 ? "accurately" : "accurate" },
 
     // Revolution / Disruption
     { regex: /\b(revolutionary|disruptive|game-changing)\b/gi, replacement: "innovative" },
 
     // Phrases
     { regex: /\b(holy grail)\b/gi, replacement: "key objective" },
-    { regex: /\b(hallucinate(s|d)?)\b/gi, replacement: "generate$2" }, // in the context of generating content on purpose
+    { regex: /\b(hallucinate(s|d)?)\b/gi, replacement: (match, p1, p2) => p2 ? "generate" + p2 : "generate" }, // in the context of generating content on purpose
     { regex: /\b(hallucination)\b/gi, replacement: "generation" }
 ];
 

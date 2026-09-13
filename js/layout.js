@@ -1,22 +1,18 @@
 // Layout Injection System
-// Injects shared header and footer partials into all pages
+// Phase 3: Updated for streamlined nav + off-canvas mobile panel
 
 (function () {
     'use strict';
 
     // Update header height CSS variable
     function updateHeaderHeight() {
-        // Select the actual injected header element
         const header = document.querySelector('#site-header header.site-header');
-
         if (header) {
-            // Use getBoundingClientRect for accurate height including borders
             const headerHeight = header.getBoundingClientRect().height;
             document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
         }
     }
 
-    // Debounce helper
     function debounce(func, wait) {
         let timeout;
         return function executedFunction(...args) {
@@ -34,25 +30,17 @@
         const headerContainer = document.getElementById('site-header');
         if (!headerContainer) return;
 
-        // If the container already has children (injected at build time), do not fetch.
-        // But still update the header height CSS variable for spacing.
         if (headerContainer.children.length > 0) {
-            requestAnimationFrame(() => {
-                updateHeaderHeight();
-            });
-            setTimeout(() => {
-                updateHeaderHeight();
-            }, 50);
+            requestAnimationFrame(() => updateHeaderHeight());
+            setTimeout(() => updateHeaderHeight(), 50);
             if (document.fonts && document.fonts.ready) {
-                document.fonts.ready.then(() => {
-                    updateHeaderHeight();
-                });
+                document.fonts.ready.then(() => updateHeaderHeight());
             }
             return;
         }
 
         try {
-            const response = await fetch('/partials/header.html?v=2.4hotfix');
+            const response = await fetch('/partials/header.html?v=3.0');
             if (!response.ok) {
                 console.warn('Failed to load header partial');
                 return;
@@ -60,41 +48,24 @@
             const html = await response.text();
             headerContainer.innerHTML = html;
 
-            // Update header height after injection with multiple timing strategies
-
-            // 1. Immediate update after DOM insertion
-            requestAnimationFrame(() => {
-                updateHeaderHeight();
-            });
-
-            // 2. Delayed update to catch layout settling (fonts, etc.)
-            setTimeout(() => {
-                updateHeaderHeight();
-            }, 50);
-
-            // 3. After fonts load (if supported)
+            requestAnimationFrame(() => updateHeaderHeight());
+            setTimeout(() => updateHeaderHeight(), 50);
             if (document.fonts && document.fonts.ready) {
-                document.fonts.ready.then(() => {
-                    updateHeaderHeight();
-                });
+                document.fonts.ready.then(() => updateHeaderHeight());
             }
-
         } catch (error) {
             console.warn('Error injecting header:', error);
         }
     }
 
-    // Inject footer (skipped if footer already hardcoded in raw HTML by build script)
+    // Inject footer
     async function injectFooter() {
         const footerContainer = document.getElementById('site-footer');
         if (!footerContainer) return;
-
-        // Phase 2: footer is now hardcoded in raw HTML by scripts/inject-footer.mjs.
-        // If the container already has children, do nothing — avoids duplicate footers.
         if (footerContainer.children.length > 0) return;
 
         try {
-            const response = await fetch('/partials/footer.html?v=1.7');
+            const response = await fetch('/partials/footer.html?v=3.0');
             if (!response.ok) {
                 console.warn('Failed to load footer partial');
                 return;
@@ -106,11 +77,9 @@
         }
     }
 
-    // Handle resize events (debounced)
     const debouncedUpdateHeight = debounce(updateHeaderHeight, 150);
     window.addEventListener('resize', debouncedUpdateHeight);
 
-    // Initialize on DOMContentLoaded
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             injectHeader();
@@ -120,113 +89,120 @@
         injectHeader();
         injectFooter();
     }
-
-
 })();
 
-// Mobile Navigation Dropdown Toggle
+// Mobile Navigation — Off-Canvas Panel
 (function () {
     'use strict';
 
-    let dropdownsInitialized = false;
+    let isInitialized = false;
 
-    // Initialize mobile dropdown accordion functionality
-    function initMobileDropdowns() {
-        const isMobile = window.innerWidth <= 1024;
+    function initMobileNav() {
+        if (isInitialized) return;
 
-        if (isMobile && !dropdownsInitialized) {
-            const navDropdowns = document.querySelectorAll('.nav-item-dropdown');
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const panel = document.querySelector('.mobile-nav-panel');
 
-            navDropdowns.forEach(dropdown => {
-                const navLink = dropdown.querySelector('.nav-link');
+        if (!toggleBtn || !panel) return;
 
-                if (navLink && !navLink.hasAttribute('data-mobile-listener')) {
-                    // Mark as initialized
-                    navLink.setAttribute('data-mobile-listener', 'true');
+        isInitialized = true;
 
-                    // Prevent default link behavior on mobile for dropdown parents
-                    navLink.addEventListener('click', (e) => {
-                        e.preventDefault();
+        function openPanel() {
+            panel.classList.add('nav-open');
+            panel.setAttribute('aria-hidden', 'false');
+            toggleBtn.classList.add('active');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            toggleBtn.setAttribute('aria-label', 'Close navigation menu');
+            document.body.style.overflow = 'hidden';
 
-                        // Toggle active class
-                        dropdown.classList.toggle('active');
-
-                        // Update aria-expanded attribute
-                        const isExpanded = dropdown.classList.contains('active');
-                        navLink.setAttribute('aria-expanded', isExpanded);
-                    });
-                }
-            });
-
-            // Initialize Hamburger Menu Toggle
-            const toggleBtn = document.querySelector('.mobile-menu-toggle');
-            const mainNav = document.querySelector('.main-nav');
-
-            if (toggleBtn && mainNav && !toggleBtn.hasAttribute('data-init')) {
-                toggleBtn.setAttribute('data-init', 'true');
-
-                toggleBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const isExpanded = toggleBtn.classList.toggle('active');
-                    mainNav.classList.toggle('nav-open');
-                    toggleBtn.setAttribute('aria-expanded', isExpanded);
-                });
+            // Move focus to panel
+            const firstLink = panel.querySelector('a, button');
+            if (firstLink) {
+                setTimeout(() => firstLink.focus(), 50);
             }
-
-            dropdownsInitialized = true;
-        } else if (!isMobile && dropdownsInitialized) {
-            // Reset on desktop
-            const navDropdowns = document.querySelectorAll('.nav-item-dropdown');
-            navDropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-                const navLink = dropdown.querySelector('.nav-link');
-                if (navLink) {
-                    navLink.setAttribute('aria-expanded', 'false');
-                    navLink.removeAttribute('data-mobile-listener');
-                }
-            });
-
-            // Reset hamburger
-            const toggleBtn = document.querySelector('.mobile-menu-toggle');
-            const mainNav = document.querySelector('.main-nav');
-            if (toggleBtn) {
-                toggleBtn.classList.remove('active');
-                toggleBtn.setAttribute('aria-expanded', 'false');
-            }
-            if (mainNav) {
-                mainNav.classList.remove('nav-open');
-            }
-
-            dropdownsInitialized = false;
         }
+
+        function closePanel() {
+            panel.classList.remove('nav-open');
+            panel.setAttribute('aria-hidden', 'true');
+            toggleBtn.classList.remove('active');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            toggleBtn.setAttribute('aria-label', 'Open navigation menu');
+            document.body.style.overflow = '';
+            toggleBtn.focus();
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const isOpen = panel.classList.contains('nav-open');
+            if (isOpen) {
+                closePanel();
+            } else {
+                openPanel();
+            }
+        });
+
+        // Close on Escape key and Focus Trap on Tab
+        document.addEventListener('keydown', (e) => {
+            if (!panel.classList.contains('nav-open')) return;
+
+            if (e.key === 'Escape') {
+                closePanel();
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                const focusableElements = panel.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (e.shiftKey) { // Shift + Tab
+                    if (document.activeElement === firstElement) {
+                        lastElement.focus();
+                        e.preventDefault();
+                    }
+                } else { // Tab
+                    if (document.activeElement === lastElement) {
+                        firstElement.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (panel.classList.contains('nav-open') &&
+                !panel.contains(e.target) &&
+                !toggleBtn.contains(e.target)) {
+                closePanel();
+            }
+        });
+
+        // Close if viewport becomes desktop
+        const mq = window.matchMedia('(min-width: 1025px)');
+        mq.addEventListener('change', (e) => {
+            if (e.matches && panel.classList.contains('nav-open')) {
+                closePanel();
+                document.body.style.overflow = '';
+            }
+        });
     }
 
-    // Wait for header to be injected before initializing
+    // Wait for header to be in DOM
     function waitForHeader() {
         const checkHeader = setInterval(() => {
-            const header = document.querySelector('.site-header .main-nav');
-            if (header) {
+            const panel = document.querySelector('.mobile-nav-panel');
+            if (panel) {
                 clearInterval(checkHeader);
-                initMobileDropdowns();
+                initMobileNav();
             }
-        }, 100);
-
-        // Timeout after 3 seconds
-        setTimeout(() => clearInterval(checkHeader), 3000);
+        }, 80);
+        setTimeout(() => clearInterval(checkHeader), 5000);
     }
 
-    // Initialize after DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', waitForHeader);
     } else {
         waitForHeader();
     }
-
-    // Re-initialize on resize (debounced)
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(initMobileDropdowns, 200);
-    });
 })();

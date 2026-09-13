@@ -186,6 +186,32 @@ function buildToolPage(tool) {
     ? `<p class="tool-affiliate-note"><em>Disclosure: This page may contain affiliate links. If you sign up through our link, we may earn a commission at no extra cost to you. See our <a href="/disclosure.html">Affiliate Disclosure</a>.</em></p>`
     : '';
 
+  // Logo (3-tier fallback matching main.js)
+  const initials = (name || '??').trim().split(/\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+  let domain = 'N/A';
+  if (tool.website_url) {
+    try {
+      const urlObj = new URL(tool.website_url.startsWith('http') ? tool.website_url : 'https://' + tool.website_url);
+      domain = urlObj.hostname.replace('www.', '');
+    } catch (e) {}
+  }
+  const faviconUrl = domain && domain !== 'N/A'
+    ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
+    : '';
+
+  let logoHTML;
+  if (tool.logo_url) {
+      logoHTML = `<img class="tool-page-logo" src="${tool.logo_url}" alt="${escAttr(name)} logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">${initials}</div>`;
+  } else if (faviconUrl) {
+      logoHTML = `<img class="tool-page-logo" src="${faviconUrl}" alt="${escAttr(name)} logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">${initials}</div>`;
+  } else {
+      logoHTML = `<div class="tool-page-logo-initials">${initials}</div>`;
+  }
+
   // Build sections
   const prosList  = buildList(tool.pros || [], 'tool-pros-list');
   const consList  = buildList(tool.cons || [], 'tool-cons-list');
@@ -304,7 +330,7 @@ function buildToolPage(tool) {
 
         <!-- Back link -->
         <div class="tool-back-link">
-          <a href="/category/${catSlug}/">← Back to ${category}</a>
+          <a href="/tools/">← Back to All Tools</a>
         </div>
 
         <!-- Hero -->
@@ -313,11 +339,20 @@ function buildToolPage(tool) {
             <span class="tool-hero-category">${escAttr(category)}</span>
             ${pricingBadge ? `<span class="tool-hero-pricing">${escAttr(pricingBadge)}</span>` : ''}
           </div>
-          <h1 class="tool-name">${escAttr(name)}</h1>
+          <div class="tool-hero-header">
+            ${logoHTML}
+            <h1 class="tool-name">${escAttr(name)}</h1>
+            <button class="shortlist-toggle-btn shortlist-toggle-btn--large" data-tool-id="${tool.id}" aria-label="Save ${escAttr(name)} to Shortlist" style="margin-left: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; padding: 12px; cursor: pointer; color: var(--c-text-muted); transition: all var(--t-fast); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
           <div class="tool-summary">
             ${tool.long_description || `<p>${escAttr(name)} is an AI-powered tool in the ${escAttr(category)} category.</p>`}
           </div>
           ${ctaUrl !== '#' ? `<a href="${escAttr(ctaUrl)}" target="_blank" rel="${ctaRel}" class="btn btn-primary btn-lg tool-cta">${escAttr(ctaLabel)}</a>` : ''}
+          <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+          </div>
         </div>
 
         ${affiliateNote}
@@ -337,12 +372,12 @@ function buildToolPage(tool) {
           ${featuresHtml}
         </div>` : ''}
 
-        <!-- Pros & Cons -->
+        <!-- Strengths & Limitations -->
         ${(prosList || consList) ? `<div class="tool-section">
-          <h2>Pros &amp; Cons</h2>
+          <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
-            ${prosList ? `<div class="tool-pros"><h3>Pros</h3>${prosList}</div>` : ''}
-            ${consList ? `<div class="tool-cons"><h3>Cons</h3>${consList}</div>` : ''}
+            ${prosList ? `<div class="tool-pros"><h3>Strengths</h3>${prosList}</div>` : ''}
+            ${consList ? `<div class="tool-cons"><h3>Limitations</h3>${consList}</div>` : ''}
           </div>
         </div>` : ''}
 
@@ -383,20 +418,53 @@ function buildCategoryPage(categoryName, categoryTools) {
   const metaTitle = `Best AI ${categoryName} Tools in 2026 | WhichAIPick`;
   const metaDesc  = truncate(`${intro} Browse ${categoryTools.length} curated AI tools with honest reviews, pricing, and use case breakdowns.`, 160);
 
-  // Tool cards
+  // Tool cards using standard .tool-card layout (matching js/main.js)
   const toolCardsHtml = categoryTools.map(tool => {
     const toolUrl   = `/tools/${tool.id}/`;
     const toolDesc  = truncate(stripHtml(tool.long_description || ''), 120);
-    const priceBadge = tool.has_free_tier ? '<span class="tool-card-badge">Free Tier</span>' : '';
-    return `<a href="${toolUrl}" class="tool-card-static">
-          <div class="tool-card-header">
-            <h3 class="tool-card-name">${escAttr(tool.name)}</h3>
-            ${priceBadge}
+    const priceBadgeHTML = tool.has_free_tier ? `<div class="tool-card-badge">Free Tier</div>` : '';
+    const domain = tool.website_url ? (new URL(tool.website_url).hostname.replace(/^www\./, '')) : 'N/A';
+    
+    // Tier 3: Local initials badge (pure CSS/DOM)
+    const initials = (tool.name || '??').trim().split(/\\s+/).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+    const faviconUrl = domain && domain !== 'N/A' ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : '';
+    
+    let logoHTML;
+    if (tool.logo_url) {
+        logoHTML = `<img class="tool-logo" src="${escAttr(tool.logo_url)}" alt="${escAttr(tool.name)} logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">${escAttr(initials)}</div>`;
+    } else if (faviconUrl) {
+        logoHTML = `<img class="tool-logo" src="${escAttr(faviconUrl)}" alt="${escAttr(tool.name)} logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">${escAttr(initials)}</div>`;
+    } else {
+        logoHTML = `<div class="tool-logo-initials">${escAttr(initials)}</div>`;
+    }
+
+    return `<div class="tool-card">
+      ${priceBadgeHTML}
+      <div class="tool-card-top ${priceBadgeHTML ? '' : 'tool-card-top--no-badge'}">
+        <div class="tool-logo-wrap">${logoHTML}</div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="${toolUrl}" aria-label="View details for ${escAttr(tool.name)}">${escAttr(tool.name)}</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="${tool.id}" aria-label="Save ${escAttr(tool.name)} to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
           </div>
-          <p class="tool-card-desc">${escAttr(toolDesc)}</p>
-          <span class="tool-card-link">View details →</span>
-        </a>`;
-  }).join('\n        ');
+          <div class="tool-category" style="margin-top: 4px;">${escAttr(tool.category) || 'Uncategorized'}</div>
+        </div>
+      </div>
+      <p class="tool-description">${escAttr(toolDesc) || '&nbsp;'}</p>
+      <div class="tool-card-actions">
+        <a href="${toolUrl}" class="tc-btn-primary" aria-label="View full details for ${escAttr(tool.name)}">View Details</a>
+        ${tool.website_url 
+            ? `<a href="${escAttr(tool.website_url)}" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit ${escAttr(tool.name)} website">${escAttr(domain !== 'N/A' ? domain : 'Visit site')}</a>` 
+            : ''}
+      </div>
+    </div>`;
+  }).join('\\n        ');
 
   // FAQ HTML
   const faqHtml = faq.length > 0
@@ -481,30 +549,62 @@ function buildCategoryPage(categoryName, categoryTools) {
   <main class="page-shell">
 
     <!-- Category Hero -->
-    <section class="hero-shell">
+    <section class="hero-shell" style="padding-bottom: 16px;">
       <div class="hero-surface">
         <div class="hero-inner">
           <h1>AI ${escAttr(categoryName)} Tools</h1>
           <div class="content-narrow">
-            <p>${escAttr(intro)}</p>
+            <p style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px;">${escAttr(intro)}</p>
+            <p class="category-description" style="margin-top: 0; margin-bottom: 12px; font-size: 0.95rem;">${escAttr(description)}</p>
+            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">${categoryTools.length} tools curated and reviewed by the WhichAIPick editorial team.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Description -->
-    <section class="section-spaced">
-      <div class="content-narrow">
-        <p class="category-description">${escAttr(description)}</p>
-        <p style="color: var(--c-text-muted); margin-top: 12px;">${categoryTools.length} tools curated and reviewed by the WhichAIPick editorial team.</p>
+    <!-- Filter Bar (Dynamic) -->
+    <div class="filter-bar">
+      <div class="filter-search">
+        <input type="search" id="search-input" placeholder="Search by name..." aria-label="Search tools">
       </div>
-    </section>
+      <div class="filter-controls">
+        <div class="filter-item">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select" aria-label="Sort tools">
+            <option value="recommended">Recommended</option>
+            <option value="free_first">Free First</option>
+            <option value="az">A–Z</option>
+            <option value="za">Z–A</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label class="toggle-switch">
+            <input type="checkbox" id="free-tier-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <label for="free-tier-toggle" title="Pricing is auto-detected; some tools may be misclassified." style="cursor: pointer;">
+            Free tier <span style="font-size: 0.8em; opacity: 0.7;">(detected)</span>
+          </label>
+        </div>
+        <div class="filter-item">
+          <label for="items-per-page-select">Per Page:</label>
+          <select id="items-per-page-select" aria-label="Items per page">
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
     <!-- Tool Grid -->
     <section class="section-spaced">
       <div class="content-wide">
-        <div class="tools-grid-static">
-        ${toolCardsHtml}
+        <div id="browse-container">
+          <div id="browse-stats" class="browse-stats">Showing 1-${Math.min(30, categoryTools.length)} of ${categoryTools.length} tools</div>
+          <div id="browse-list" class="browse-list">
+          ${toolCardsHtml}
+          </div>
+          <div id="load-more-container" class="load-more-container"></div>
         </div>
       </div>
     </section>
@@ -526,7 +626,10 @@ function buildCategoryPage(categoryName, categoryTools) {
   ${FOOTER_HTML}
 
   <script src="/js/main.js?v=6.4"></script>
+  <script src="/js/descriptions.js?v=1.7"></script>
   <script src="/js/layout.js?v=1.8" defer></script>
+  <script>window.BROWSE_CONFIG = { category: '${escAttr(categoryName)}' };</script>
+  <script src="/js/browse.js?v=1.0" defer></script>
 </body>
 
 </html>`;

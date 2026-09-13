@@ -341,23 +341,31 @@ function renderToolCard(tool, recommendedIds = [], source = 'list') {
 
     card.innerHTML = `
       ${pricingBadgeHTML}
-      <div class="tool-card-top">
+      <div class="tool-card-top ${pricingBadgeHTML ? '' : 'tool-card-top--no-badge'}">
         <div class="tool-logo-wrap">${logoHTML}</div>
         <div class="tool-card-meta">
-          <h3 class="tool-name">
-            <a href="/tools/${encodeURIComponent(tool.id)}/"
-               onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${clickSource}' })">${tool.name}</a>
-          </h3>
-          <div class="tool-category">${tool.category || 'Uncategorized'}</div>
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/${encodeURIComponent(tool.id)}/"
+                 onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${clickSource}' })"
+                 aria-label="View details for ${tool.name}">${tool.name}</a>
+            </h3>
+            <button class="shortlist-toggle-btn" data-tool-id="${tool.id}" aria-label="Save ${tool.name} to Shortlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">${tool.category || 'Uncategorized'}</div>
         </div>
       </div>
       <p class="tool-description">${description || '&nbsp;'}</p>
       <div class="tool-card-actions">
         <a href="/tools/${encodeURIComponent(tool.id)}/" class="tc-btn-primary"
-           onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${detailSource}' })">View Details</a>
+           onclick="if(window.Analytics) Analytics.track('tool_card_click', { tool_id: '${tool.id}', source: '${detailSource}' })"
+           aria-label="View full details for ${tool.name}">View Details</a>
         ${tool.website_url
-            ? `<a href="${tool.website_url}" target="_blank" rel="noopener" class="tc-btn-secondary"
-               onclick="if(window.Analytics) Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${tool.website_url}', source: '${outSource}' })">Visit →</a>`
+            ? `<a href="${tool.website_url}" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary"
+               onclick="if(window.Analytics) Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${tool.website_url}', source: '${outSource}' })"
+               aria-label="Visit ${tool.name} website">${domain !== 'N/A' ? domain : 'Visit site'}</a>`
             : ''}
       </div>
     `;

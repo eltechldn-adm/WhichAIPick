@@ -6,10 +6,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const INPUT_FILE = path.join(__dirname, '../data/URLs_for_Which_AI_Tool_UPDATED.xlsx');
+const INPUT_FILE = path.join(__dirname, '../data/URLs_for_Which_AI_Tool_AUDITED_2026-09-11.xlsx');
 const OUTPUT_FILE = path.join(__dirname, '../data/tools.json');
 const TAXONOMY_FILE = path.join(__dirname, '../data/category-taxonomy.json');
 const MAPPING_FILE = path.join(__dirname, '../data/tool-categories.csv');
+const DECISION_FILE = path.join(__dirname, '../data/decision-attributes.csv');
 
 // Load category taxonomy
 let allowedCategories = [];
@@ -44,6 +45,43 @@ if (fs.existsSync(MAPPING_FILE)) {
     console.log(`✅ Loaded ${categoryMap.size} category mappings`);
 } else {
     console.log('⚠️  No mapping file found, all tools will be Uncategorized');
+}
+
+// Load decision attributes
+const decisionMap = new Map();
+if (fs.existsSync(DECISION_FILE)) {
+    console.log('🧠 Loading decision attributes...');
+    const decisionData = fs.readFileSync(DECISION_FILE, 'utf8');
+    const lines = decisionData.split('\n').filter(line => line.trim());
+    if (lines.length > 0) {
+        const headers = lines[0].split(',');
+        for (let i = 1; i < lines.length; i++) {
+            const cols = lines[i].split(',');
+            const id = cols[0];
+            if (id) {
+                const attrs = {};
+                for (let j = 1; j < headers.length; j++) {
+                    let val = cols[j];
+                    if (val === 'true') val = true;
+                    if (val === 'false') val = false;
+                    attrs[headers[j]] = val;
+                }
+                decisionMap.set(id, attrs);
+            }
+        }
+    }
+    console.log(`✅ Loaded ${decisionMap.size} decision attributes`);
+}
+
+// Load existing tools.json to preserve rich data
+const existingToolsMap = new Map();
+if (fs.existsSync(OUTPUT_FILE)) {
+    console.log('🔄 Loading existing tools.json...');
+    const existingTools = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+    existingTools.forEach(tool => {
+        existingToolsMap.set(tool.id, tool);
+    });
+    console.log(`✅ Loaded ${existingToolsMap.size} existing tools.`);
 }
 
 console.log('🔄 Reading Excel file...');
@@ -104,21 +142,25 @@ rawData.forEach((row, index) => {
         category = categoryMap.get(baseId);
     }
 
-    // Build tool object
+    // Build tool object by merging with existing data if available
+    const existingTool = existingToolsMap ? existingToolsMap.get(baseId) : null;
+    const decisionAttrs = decisionMap.has(baseId) ? decisionMap.get(baseId) : {};
+    
     const newTool = {
+        ...(existingTool || {}),
         id: baseId || `tool-${index + 1}`,
         name: name,
         website_url: websiteUrl,
-        affiliate_url: affiliateUrl,
+        affiliate_url: existingTool ? existingTool.affiliate_url : affiliateUrl,
         category: category,
-        description: description,
-        pricing: pricing,
-        tags: tags,
-        source_row: index + 2 // +2 because Excel is 1-indexed and has header row
+        description: existingTool ? existingTool.description : description,
+        pricing: existingTool ? existingTool.pricing : pricing,
+        tags: existingTool && existingTool.tags ? existingTool.tags : tags,
+        source_row: index + 2, // +2 because Excel is 1-indexed and has header row
+        ...decisionAttrs
     };
 
-    // Use Map to enforce unique IDs (Last-Write Wins for duplicates like "Cursor" vs "Cursor (Ref)")
-    // This handles the 4 duplicate pairs in the Excel file by keeping the later/better version
+    // Use Map to enforce unique IDs
     toolsMap.set(newTool.id, newTool);
 });
 
@@ -156,13 +198,18 @@ const manualTools = [
 manualTools.forEach(tool => {
     // Check if tool already exists (by ID) to preserve description/tags
     const existing = toolsMap.get(tool.id);
+    const prevData = existing || (existingToolsMap ? existingToolsMap.get(tool.id) : null);
+    const decisionAttrs = decisionMap.has(tool.id) ? decisionMap.get(tool.id) : {};
+    
     const merged = {
+        ...(prevData || {}),
         ...tool,
-        affiliate_url: existing ? existing.affiliate_url : null,
-        description: existing ? existing.description : null,
-        pricing: existing ? existing.pricing : null,
-        tags: existing ? existing.tags : [],
-        source_row: existing ? existing.source_row : 'manual-injection-a2'
+        affiliate_url: prevData ? prevData.affiliate_url : null,
+        description: prevData ? prevData.description : null,
+        pricing: prevData ? prevData.pricing : null,
+        tags: prevData && prevData.tags ? prevData.tags : [],
+        source_row: prevData ? prevData.source_row : 'manual-injection-a2',
+        ...decisionAttrs
     };
     toolsMap.set(tool.id, merged);
 });

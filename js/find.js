@@ -431,10 +431,10 @@ function renderQuestion() {
     const currentAnswer = answers[question.key]; // V2: Access by key
 
     let html = `
-    <div class="question">
+    <div class="question" tabindex="-1" id="current-question-container">
       <h2>${question.text}</h2>
       ${question.helper ? `<p class="question-helper">${question.helper}</p>` : ''}
-      <div class="answers">
+      <div class="answers" role="radiogroup" aria-label="${question.text}">
   `;
 
     question.options.forEach((option, index) => {
@@ -442,7 +442,11 @@ function renderQuestion() {
         html += `
       <div class="answer-option ${isSelected ? 'selected' : ''}" 
            data-value="${option.value}"
-           onclick="selectAnswer('${option.value}')">
+           tabindex="0"
+           role="radio"
+           aria-checked="${isSelected}"
+           onclick="selectAnswer('${option.value}')"
+           onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault(); selectAnswer('${option.value}');}">
         ${option.text}
       </div>
     `;
@@ -454,6 +458,12 @@ function renderQuestion() {
   `;
 
     container.innerHTML = html;
+    
+    // Manage focus for accessibility
+    const questionContainer = document.getElementById('current-question-container');
+    if (questionContainer) {
+        questionContainer.focus();
+    }
 
     // Apply motion to newly rendered question options by telling window observer to watch the question block
     if (window.WhompRevealObserver) {

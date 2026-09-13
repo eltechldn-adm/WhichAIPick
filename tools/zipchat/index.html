@@ -61,16 +61,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -78,74 +78,78 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
@@ -155,7 +159,7 @@
 
         <!-- Back link -->
         <div class="tool-back-link">
-          <a href="/category/business/">← Back to Business</a>
+          <a href="/tools/">← Back to All Tools</a>
         </div>
 
         <!-- Hero -->
@@ -164,11 +168,22 @@
             <span class="tool-hero-category">Business</span>
             
           </div>
-          <h1 class="tool-name">Zipchat</h1>
+          <div class="tool-hero-header">
+            <img class="tool-page-logo" src="https://www.google.com/s2/favicons?domain=zipchat.ai&sz=128" alt="Zipchat logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">Z</div>
+            <h1 class="tool-name">Zipchat</h1>
+            <button class="shortlist-toggle-btn shortlist-toggle-btn--large" data-tool-id="zipchat" aria-label="Save Zipchat to Shortlist" style="margin-left: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; padding: 12px; cursor: pointer; color: var(--c-text-muted); transition: all var(--t-fast); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
           <div class="tool-summary">
             <p>Zipchat (Zipchat AI) is a hyper-proactive, relentlessly conversion-focused AI chatbot platform engineered exclusively for high-volume Shopify and WooCommerce eCommerce stores. While large-scale enterprise support desks (like Zendesk) focus on tracking angry customer return tickets, Zipchat explicitly views every single website visitor as a potential transaction. It operates not as a support agent, but as an autonomous, 24/7 digital salesperson, utilizing Generative AI to actively intercept browsing customers, answer hyper-specific product queries, overcome purchasing objections, and proactively drive "Add to Cart" actions.</p><p>Its primary differentiator is its "Zero-Friction Scraping & Sales Deployment." A Shopify store owner does not want to spend 3 weeks building a complex bot flowchart. With Zipchat, the owner simply copy-pastes their website URL. Within 60 seconds, the AI completely scrapes and reads every single product page, SKU, pricing variant, existing FAQ, and shipping policy. Instantly, the bot is alive on the site. If a customer is staring at a 4K TV and asks the chat widget, "Does this have 3 HDMI ports and will it arrive in London by Friday?", the AI instantly understands the specific SKU, mathematically references the scraped shipping policy, and confidently replies: "Yes, it has 4 HDMI ports and if you order in the next 3 hours, standard shipping guarantees London delivery by Thursday. Shall I add it to your cart?"</p><p>It is heavily utilized by large-scale Drop-shipping operators managing thousands of rapid consumer inquiries, agile direct-to-consumer (DTC) brands scaling intense paid social media traffic (where visitors demand instant answers), and lean eCommerce founders who absolutely refuse to hire a 24/7 international call center.</p>
           </div>
           <a href="https://www.zipchat.ai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Zipchat</a>
+          <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+          </div>
         </div>
 
         
@@ -187,7 +202,7 @@
         <!-- Main Description / How It Works -->
         <div class="tool-section">
         <h2>How It Works</h2>
-        <div class="tool-body-text"><p>A DTC brand selling highly technical outdoor camping gear launches a large-scale Facebook Ad campaign. Traffic spikes to 10,000 visitors, but abandoned carts are high because customers are confused about tent sizing. The owner installs Zipchat and inputs their Shopify URL. At 4 AM, a user is looking at a 4-person tent and opens the widget: "Is the rainfly rated for severe Alpine storms, and will a queen mattress fit inside?" Zipchat instantly references the technical specs scraped from the page and replies: "The rainfly has a large-scale 3000mm hydrostatic head rating (accurate$2 for Alpine storms), and the floor dimensions accurate$2 fit one standard Queen air mattress with 2 feet of space remaining! Want me to apply the current 10% welcome discount so you can check out?" The user clicks the native link in the chat and purchases instantly.</p></div>
+        <div class="tool-body-text"><p>A DTC brand selling highly technical outdoor camping gear launches a large-scale Facebook Ad campaign. Traffic spikes to 10,000 visitors, but abandoned carts are high because customers are confused about tent sizing. The owner installs Zipchat and inputs their Shopify URL. At 4 AM, a user is looking at a 4-person tent and opens the widget: "Is the rainfly rated for severe Alpine storms, and will a queen mattress fit inside?" Zipchat instantly references the technical specs scraped from the page and replies: "The rainfly has a large-scale 3000mm hydrostatic head rating (accurately for Alpine storms), and the floor dimensions accurately fit one standard Queen air mattress with 2 feet of space remaining! Want me to apply the current 10% welcome discount so you can check out?" The user clicks the native link in the chat and purchases instantly.</p></div>
       </div>
 
         <!-- Features -->
@@ -213,17 +228,17 @@
             </div>
         </div>
 
-        <!-- Pros & Cons -->
+        <!-- Strengths & Limitations -->
         <div class="tool-section">
-          <h2>Pros &amp; Cons</h2>
+          <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
-            <div class="tool-pros"><h3>Pros</h3><ul class="tool-pros-list">
+            <div class="tool-pros"><h3>Strengths</h3><ul class="tool-pros-list">
             <li>The established, established speed of deployment is a significant victory; the ability to simply paste a URL and immediately deploy a highly intelligent AI that mathematically understands your entire complex product catalog in 60 seconds is significant</li>
             <li>Viewing the AI explicitly as a &quot;Salesperson&quot; rather than a &quot;Support Desk&quot; fundamentally re-aligns the software’s value; if the software costs $100/mo but the dashboard proves the AI directly closed $5,000 in sales, the ROI is mathematically undeniable</li>
-            <li>The multi-lingual capacity inherently globalizes a small SMB; a store owner running a tiny operation from Ohio can accurate$2 and seamlessly close complex sales with active consumers in Brazil at 4 AM without hiring a Portuguese speaker</li>
+            <li>The multi-lingual capacity inherently globalizes a small SMB; a store owner running a tiny operation from Ohio can accurately and seamlessly close complex sales with active consumers in Brazil at 4 AM without hiring a Portuguese speaker</li>
             <li>The automated &quot;Human Handover&quot; guarantees that if a customer asks a complex, large-scale complex legal question about a refund, the AI stops talking and securely routes the email directly to the founder to prevent a catastrophic PR issue</li>
           </ul></div>
-            <div class="tool-cons"><h3>Cons</h3><ul class="tool-cons-list">
+            <div class="tool-cons"><h3>Limitations</h3><ul class="tool-cons-list">
             <li>Because the AI is explicitly trained by &quot;scraping the website,&quot; if the actual underlying Shopify website contains large-scale errors, outdated shipping policies, or terrible product descriptions, the AI will confidently generate that terrible information, infuriating customers</li>
             <li>It is utterly, proactively useless for highly complex, B2B enterprise software companies requiring large-scale integrations into legacy API ticketing databases; Zipchat is strictly for selling physical products via web platforms</li>
             <li>Highly proactive proactive chat triggers (the bot constantly popping up making noise while a user is just trying to read) can behave identically to horrible 1990s pop-up ads, causing furious users to abandon the site due to UI annoyance</li>

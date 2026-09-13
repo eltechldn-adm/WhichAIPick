@@ -66,16 +66,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -83,74 +83,78 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
@@ -160,7 +164,7 @@
 
         <!-- Back link -->
         <div class="tool-back-link">
-          <a href="/category/productivity/">← Back to Productivity</a>
+          <a href="/tools/">← Back to All Tools</a>
         </div>
 
         <!-- Hero -->
@@ -169,11 +173,22 @@
             <span class="tool-hero-category">Productivity</span>
             <span class="tool-hero-pricing">Free Tier Available</span>
           </div>
-          <h1 class="tool-name">Taskade</h1>
+          <div class="tool-hero-header">
+            <img class="tool-page-logo" src="https://www.google.com/s2/favicons?domain=taskade.com&sz=128" alt="Taskade logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">T</div>
+            <h1 class="tool-name">Taskade</h1>
+            <button class="shortlist-toggle-btn shortlist-toggle-btn--large" data-tool-id="taskade" aria-label="Save Taskade to Shortlist" style="margin-left: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; padding: 12px; cursor: pointer; color: var(--c-text-muted); transition: all var(--t-fast); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
           <div class="tool-summary">
             <p>Taskade is an highly rapid, deeply collaborative, and large-scale versatile "AI productivity super-app" designed to unify team whiteboarding, task management, and generative AI deployment into a single, cohesive workspace. While older monolithic platforms like Asana or Jira force users into highly rigid corporate workflows (sprints, tickets, epics), Taskade operates with the dynamic fluidity of a multiplayer brain. It allows a user to start by typing a chaotic bulleted list, use AI to expand that list into a mind map, and then instantly convert that mind map into a structured Kanban board for a development team.</p><p>Its primary differentiator is its "Omni-directional AI Architecture" and "Custom AI Agents." Taskade doesn't just have a chatbot on the side. The entire structural fabric of the application is powered by AI. A user can create a "Custom Agent" (e.g., an "SEO Marketing Expert Agent"). They drop 5 PDF documents detailing the company's brand guidelines into the agent's specific knowledge base. The team can then deploy that agent directly inside a project node, where it will autonomously scan the chaotic tasks, instantly assign deadlines, generate required marketing copy based on the PDFs, and automatically move the tasks across a kanban board, acting as a tireless robotic project manager.</p><p>It is heavily utilized by large-scale, highly agile remote teams spread across different continents, fast-moving digital marketing agencies that must instantly pivot project structures daily, indie software development pods lacking a dedicated scrum master, and neurodivergent individuals who require the ability to instantly swap between rigid lists and visual mind maps to process information.</p>
           </div>
           <a href="https://www.taskade.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Taskade</a>
+          <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+          </div>
         </div>
 
         
@@ -218,17 +233,17 @@
             </div>
         </div>
 
-        <!-- Pros & Cons -->
+        <!-- Strengths & Limitations -->
         <div class="tool-section">
-          <h2>Pros &amp; Cons</h2>
+          <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
-            <div class="tool-pros"><h3>Pros</h3><ul class="tool-pros-list">
-            <li>The established, established architectural wizardry of the &quot;Omni-directional Views&quot;; the ability to type a bulleted list and instantly view it as an accurate$2 formatted Kanban board without migrating data is a profound UX triumph over rigid tools like Trello</li>
+            <div class="tool-pros"><h3>Strengths</h3><ul class="tool-pros-list">
+            <li>The established, established architectural wizardry of the &quot;Omni-directional Views&quot;; the ability to type a bulleted list and instantly view it as an accurately formatted Kanban board without migrating data is a profound UX triumph over rigid tools like Trello</li>
             <li>The deployment of &quot;Custom AI Agents&quot; natively inside the workspace elevates the tool from a &quot;Notepad&quot; to a &quot;Digital Workforce&quot;; it doesn’t just store your tasks, it actively hires digital robots to complete them for you</li>
             <li>The intense, blazing speed and cross-platform fluidity across every device (including native Linux support) ensures the chaotic brain of an indie developer is permanently synchronized</li>
             <li>It actively wages war against severe &quot;Tool Fatigue&quot; by collapsing video chat, mind-mapping, document creation, and task management into a single browser tab, saving immense financial and cognitive resources</li>
           </ul></div>
-            <div class="tool-cons"><h3>Cons</h3><ul class="tool-cons-list">
+            <div class="tool-cons"><h3>Limitations</h3><ul class="tool-cons-list">
             <li>Because it violently attempts to be the &quot;Everything App&quot; (Docs + Tasks + Mind Maps + Video Chat), large-scale enterprise teams who require highly deep, specific features (like the hyper-complex, complex Sprint/Epic reporting found in Atlassian Jira) will find Taskade too lightweight</li>
             <li>The UI, while beautiful, can quickly become visually overwhelming and deeply chaotic if a large-scale 50-person team is simultaneously deploying customized AI agents and restructuring visual views on a single workspace without strict discipline</li>
             <li>While the AI Agents are highly clever, relying heavily on them to autonomously organize a large-scale, legally sensitive project can result in complex generated oversight if a human project manager is not proactively supervising the output</li>

@@ -74,12 +74,43 @@
     border: 1px solid var(--c-border);
 }
 
+.tool-hero-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.tool-page-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--r-md);
+    object-fit: cover;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+}
+
+.tool-page-logo-initials {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--r-md);
+    background: linear-gradient(135deg, rgba(245,166,35,0.2) 0%, rgba(245,166,35,0.05) 100%);
+    border: 1px solid rgba(245, 166, 35, 0.3);
+    color: var(--c-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .tool-hero h1 {
     color: var(--c-accent);
     font-size: var(--text-3xl);
     /* Desktop size */
     font-weight: 800;
-    margin-bottom: var(--space-4);
+    margin-bottom: 0;
     line-height: 1.1;
     text-shadow: 0 4px 20px rgba(245, 166, 35, 0.1);
 }
@@ -223,6 +254,9 @@
 /* Tool Sections (Use Cases & Related) */
 .tool-section {
     margin-bottom: var(--space-12);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tool-section h2 {

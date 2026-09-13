@@ -61,16 +61,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -78,74 +78,78 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
@@ -155,7 +159,7 @@
 
         <!-- Back link -->
         <div class="tool-back-link">
-          <a href="/category/video-audio/">← Back to Video & Audio</a>
+          <a href="/tools/">← Back to All Tools</a>
         </div>
 
         <!-- Hero -->
@@ -164,11 +168,22 @@
             <span class="tool-hero-category">Video &amp; Audio</span>
             <span class="tool-hero-pricing">Paid</span>
           </div>
-          <h1 class="tool-name">Trint</h1>
+          <div class="tool-hero-header">
+            <img class="tool-page-logo" src="https://www.google.com/s2/favicons?domain=trint.com&sz=128" alt="Trint logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">T</div>
+            <h1 class="tool-name">Trint</h1>
+            <button class="shortlist-toggle-btn shortlist-toggle-btn--large" data-tool-id="trint" aria-label="Save Trint to Shortlist" style="margin-left: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; padding: 12px; cursor: pointer; color: var(--c-text-muted); transition: all var(--t-fast); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
           <div class="tool-summary">
-            <p>Trint is a highly specialized, surgically focused AI transcription and audio-editing platform built explicitly for the brutally fast-paced world of elite global journalism, documentary filmmaking, and large-scale corporate media production. While generic transcription tools (like Otter.ai) exist to merely record a basic tech meeting, Trint was conceptually designed by an Emmy-winning war correspondent to fundamentally solve the difficult logistical nightmare of processing hours of chaotic, chaotic on-the-ground interview footage into an actionable, editable narrative story.</p><p>Its primary differentiator is its "Text-Video Synchronization" Editor. After a journalist uploads a large-scale 3-hour foreign interview, Trint utilizes advanced AI to instantly transcribe and translate the audio. Crucially, the text is glued to the video frame accurate$2. Trint fundamentally transforms audio editing into text editing. A documentary planner doesn't open Adobe Premiere to edit the film; they highlight a powerful 10-second quote in the text transcript, hit the "Highlight" key, and Trint instantly extracts that specific 10-second video clip. The journalist can stitch together an entire rough-cut narrative video simply by copy-and-pasting sentences in a word document.</p><p>It is heavily utilized by large-scale global newsrooms (Reuters, Washington Post) breaking large-scale stories on tight deadlines, true-crime documentary editors drowning in 500 hours of chaotic background audio tape, PR teams frantically translating large-scale CEO keynote speeches for global distribution, and qualitative academic researchers processing high volumes of chaotic human interaction.</p>
+            <p>Trint is a highly specialized, surgically focused AI transcription and audio-editing platform built explicitly for the brutally fast-paced world of elite global journalism, documentary filmmaking, and large-scale corporate media production. While generic transcription tools (like Otter.ai) exist to merely record a basic tech meeting, Trint was conceptually designed by an Emmy-winning war correspondent to fundamentally solve the difficult logistical nightmare of processing hours of chaotic, chaotic on-the-ground interview footage into an actionable, editable narrative story.</p><p>Its primary differentiator is its "Text-Video Synchronization" Editor. After a journalist uploads a large-scale 3-hour foreign interview, Trint utilizes advanced AI to instantly transcribe and translate the audio. Crucially, the text is glued to the video frame accurately. Trint fundamentally transforms audio editing into text editing. A documentary planner doesn't open Adobe Premiere to edit the film; they highlight a powerful 10-second quote in the text transcript, hit the "Highlight" key, and Trint instantly extracts that specific 10-second video clip. The journalist can stitch together an entire rough-cut narrative video simply by copy-and-pasting sentences in a word document.</p><p>It is heavily utilized by large-scale global newsrooms (Reuters, Washington Post) breaking large-scale stories on tight deadlines, true-crime documentary editors drowning in 500 hours of chaotic background audio tape, PR teams frantically translating large-scale CEO keynote speeches for global distribution, and qualitative academic researchers processing high volumes of chaotic human interaction.</p>
           </div>
           <a href="https://trint.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Trint</a>
+          <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+          </div>
         </div>
 
         
@@ -213,17 +228,17 @@
             </div>
         </div>
 
-        <!-- Pros & Cons -->
+        <!-- Strengths & Limitations -->
         <div class="tool-section">
-          <h2>Pros &amp; Cons</h2>
+          <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
-            <div class="tool-pros"><h3>Pros</h3><ul class="tool-pros-list">
+            <div class="tool-pros"><h3>Strengths</h3><ul class="tool-pros-list">
             <li>The concept of the &quot;Paper Edit&quot; is a significant paradigm shift for storytellers; allowing a writer to edit a video by highlighting text is infinitely more efficient and creatively freeing than forcing a writer to learn complex Adobe Premiere technical shortcuts</li>
             <li>The audio transcription algorithms are significantly more robust and hardened against horrific, chaotic background noise (like a live protest or a manufacturing floor) compared to consumer-grade meeting transcribers designed for quiet offices</li>
-            <li>The vast array of large-scale, highly professional export options (specifically outputting accurate$2 aligned XML files that can be dropped instantly into Adobe Premiere or Avid for the final edit) proves it was designed explicitly by media professionals</li>
+            <li>The vast array of large-scale, highly professional export options (specifically outputting accurately aligned XML files that can be dropped instantly into Adobe Premiere or Avid for the final edit) proves it was designed explicitly by media professionals</li>
             <li>The collaborative editing functionality completely eliminates the difficult chaos of emailing large-scale Word documents containing un-timestamped interview notes back and forth across a newsroom</li>
           </ul></div>
-            <div class="tool-cons"><h3>Cons</h3><ul class="tool-cons-list">
+            <div class="tool-cons"><h3>Limitations</h3><ul class="tool-cons-list">
             <li>Because it is an highly heavy, enterprise-grade media platform, casual users simply looking to record an internal marketing Zoom meeting will find the software significantly overly complex and large-scale expensive overkill compared to Otter.ai</li>
             <li>While excellent at loud environments, if an interview subject mumbles incoherently while large-scale sirens blare simultaneously, the AI will still produce a highly flawed, generated text document that requires painstaking manual human correction</li>
             <li>Relying entirely on AI to translate large-scale, highly explosive geopolitical interviews carries complex journalistic risk; if the AI mistranslates a critical, nuanced idiom from a world leader, the journalist utilizing the quote could spark an international incident</li>

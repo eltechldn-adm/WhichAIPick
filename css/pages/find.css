@@ -99,7 +99,10 @@
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--c-border);
     border-radius: var(--r-md);
-    padding: var(--space-4) var(--space-5);
+    padding: var(--space-5) var(--space-6);
+    min-height: 64px;
+    display: flex;
+    align-items: center;
     color: var(--c-text);
     font-size: var(--text-base);
     cursor: pointer;

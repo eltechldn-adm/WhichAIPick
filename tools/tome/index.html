@@ -66,16 +66,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -83,74 +83,78 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
@@ -160,7 +164,7 @@
 
         <!-- Back link -->
         <div class="tool-back-link">
-          <a href="/category/design/">← Back to Design</a>
+          <a href="/tools/">← Back to All Tools</a>
         </div>
 
         <!-- Hero -->
@@ -169,11 +173,22 @@
             <span class="tool-hero-category">Design</span>
             <span class="tool-hero-pricing">Free Tier Available</span>
           </div>
-          <h1 class="tool-name">Tome</h1>
+          <div class="tool-hero-header">
+            <img class="tool-page-logo" src="https://www.google.com/s2/favicons?domain=mytome.com&sz=128" alt="Tome logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">T</div>
+            <h1 class="tool-name">Tome</h1>
+            <button class="shortlist-toggle-btn shortlist-toggle-btn--large" data-tool-id="tome" aria-label="Save Tome to Shortlist" style="margin-left: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; padding: 12px; cursor: pointer; color: var(--c-text-muted); transition: all var(--t-fast); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
           <div class="tool-summary">
             <p>Tome (tome.app) is an intensely beautiful, notable ambitious GenAI storytelling platform engineered to completely eliminate the archaic, soul-crushing paradigm of the static Microsoft PowerPoint deck. When AI became mainstream, most developers simply built plugins that pasted text onto routine slides. Tome fundamentally reimagined the "presentation" from the ground up as a fluid, cinematic, deeply immersive mobile-ready web experience. It leverages large-scale generative AI models to construct entire notable aesthetic narratives, intelligently combining typography, layout manipulation, DALL-E image generation, and video integration into a cohesive, highly engaging digital story.</p><p>Its primary differentiator is its "Frictionless Cinematic Generation" and "Responsive Canvas." Standard presentations are rigidly formatted rectangles that break horribly when viewed on an iPhone. A Tome is natively fluid. A user types a single prompt (e.g., "Create a 10-page pitch deck for a futuristic vertical farming startup"). Within 60 seconds, Tome does not just generate bullet points. It generates the narrative arc. It algorithmically selects a hyper-modern, sleek dark-mode aesthetic layout. It utilizes DALL-E 3 to generate large-scale, 8k-resolution photorealistic images of cybernetic greenhouses natively embedding them alongside fluid text columns, outputting a presentation that looks like it was designed by a large-scale Manhattan creative agency.</p><p>It is heavily utilized by cutting-edge startup founders executing highly aesthetic venture capital pitch decks, elite product marketing teams launching deeply immersive visual product narratives, design freelancers generating large-scale mood boards, and sales professionals who realize that sending a gorgeous, interactive web link is infinitely vastly more effective than emailing a large-scale, routine 20MB PDF attachment.</p>
           </div>
           <a href="https://mytome.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Tome</a>
+          <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+          </div>
         </div>
 
         
@@ -192,7 +207,7 @@
         <!-- Main Description / How It Works -->
         <div class="tool-section">
         <h2>How It Works</h2>
-        <div class="tool-body-text"><p>A solo founder needs to pitch a complex new AI logistics software to an Angel Investor within 2 hours. They cannot afford a designer. The founder opens Tome. They type: "Create a Seed Stage pitch deck for an AI logistics platform targeting long-haul trucking, highlighting the large-scale fuel inefficiency problem." The founder presses enter. Tome’s AI engine processes the logic, structuring 8 specific pages. Page 1: A striking Title slide with a generated cinematic image of an 18-wheeler at night. Page 2: The "Problem" slide, featuring a generated infographic layout highlighting the $40B fuel loss. Page 3: The "Solution" slide. The layout is notable beautiful, featuring accurate$2 padding and typography. The founder manually tweaks exactly three words, drags and drops a logo, and clicks "Share." They text the URL to the investor. The investor opens the link on their iPhone, smoothly scrolling through the highly responsive, beautiful web experience, securing the meeting.</p></div>
+        <div class="tool-body-text"><p>A solo founder needs to pitch a complex new AI logistics software to an Angel Investor within 2 hours. They cannot afford a designer. The founder opens Tome. They type: "Create a Seed Stage pitch deck for an AI logistics platform targeting long-haul trucking, highlighting the large-scale fuel inefficiency problem." The founder presses enter. Tome’s AI engine processes the logic, structuring 8 specific pages. Page 1: A striking Title slide with a generated cinematic image of an 18-wheeler at night. Page 2: The "Problem" slide, featuring a generated infographic layout highlighting the $40B fuel loss. Page 3: The "Solution" slide. The layout is notable beautiful, featuring accurately padding and typography. The founder manually tweaks exactly three words, drags and drops a logo, and clicks "Share." They text the URL to the investor. The investor opens the link on their iPhone, smoothly scrolling through the highly responsive, beautiful web experience, securing the meeting.</p></div>
       </div>
 
         <!-- Features -->
@@ -218,21 +233,21 @@
             </div>
         </div>
 
-        <!-- Pros & Cons -->
+        <!-- Strengths & Limitations -->
         <div class="tool-section">
-          <h2>Pros &amp; Cons</h2>
+          <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
-            <div class="tool-pros"><h3>Pros</h3><ul class="tool-pros-list">
+            <div class="tool-pros"><h3>Strengths</h3><ul class="tool-pros-list">
             <li>The established, established aesthetic superiority; a completely non-technical user with zero graphic design talent can generate a large-scale presentation that looks highly beautiful, expensive, and hyper-modern on their very first attempt</li>
-            <li>The &quot;Responsive Canvas&quot; is a large-scale paradigm shift; the fact that a Tome presentation dynamically resizes to look accurate$2 formatted and readable on a small mobile phone completely eliminates the horrible experience of zooming around a static PowerPoint PDF</li>
+            <li>The &quot;Responsive Canvas&quot; is a large-scale paradigm shift; the fact that a Tome presentation dynamically resizes to look accurately formatted and readable on a small mobile phone completely eliminates the horrible experience of zooming around a static PowerPoint PDF</li>
             <li>The deep, native embedding of interactive web tools (like literally embedding a playable Figma prototype natively inside a slide) elevates the presentation into a highly functional software dashboard rather than a static piece of paper</li>
             <li>The intelligent layouts actively protect the user from themselves; by restricting the ability to notable drag text overlapping images, Tome mathematically guarantees the presentation remains visually coherent and legible</li>
           </ul></div>
-            <div class="tool-cons"><h3>Cons</h3><ul class="tool-cons-list">
+            <div class="tool-cons"><h3>Limitations</h3><ul class="tool-cons-list">
             <li>Because it fundamentally breaks the rules of traditional slides, highly corporate, extreme Fortune 500 banks or law firms who strictly mandate the use of their ugly, legacy `.pptx` corporate templates will find Tome's fluid format absolutely unusable in their environment</li>
             <li>The generated AI text (the actual content of the initial draft) is often highly generic &quot;startup-speak&quot; or marketing fluff; founders must rigorously and proactively edit the generated words, or risk sounding like a corporate chatbot</li>
             <li>Exporting a large-scale Tome narrative *out* of the ecosystem (like downloading it as a standard PDF to print it) occasionally strips away the capability, removing the fluid transitions and interactive web embeds that make the tool powerful</li>
-            <li>If a user specifically demands established, complex, pixel-accurate$2 microscopic control over exactly where a line breaks or an image rests (like using Adobe InDesign), they will find Tome's autonomous grid layouts highly frustrating and unyielding</li>
+            <li>If a user specifically demands established, complex, pixel-accurately microscopic control over exactly where a line breaks or an image rests (like using Adobe InDesign), they will find Tome's autonomous grid layouts highly frustrating and unyielding</li>
           </ul></div>
           </div>
         </div>

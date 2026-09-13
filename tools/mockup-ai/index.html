@@ -66,16 +66,16 @@
   <div id="site-header">
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="brand">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick Logo" class="brand-logo" width="120" height="40">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
             <span class="brand-name">WhichAIPick</span>
         </a>
 
-        <nav class="main-nav">
-            <!-- Find Tools with Dropdown -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
             <div class="nav-item-dropdown">
                 <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Find Tools
+                    Browse Tools
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
@@ -83,74 +83,78 @@
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
                     <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/find.html" class="dropdown-item">Take the Quiz</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
-            <!-- AI Academy with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    AI Academy
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">All Guides</a>
-                    <a href="/academy/what-is-ai/" class="dropdown-item">What is AI?</a>
-                    <a href="/academy/ai-automation-explained/" class="dropdown-item">AI Automation</a>
-                </div>
-            </div>
-
-            <!-- Use Cases with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/use-cases.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Use Cases
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/use-cases.html" class="dropdown-item">All Use Cases</a>
-                    <a href="/use-cases/build-software-with-ai/" class="dropdown-item">Build Software</a>
-                    <a href="/use-cases/save-time-with-ai/" class="dropdown-item">Save Time</a>
-                    <a href="/use-cases/create-content-with-ai/" class="dropdown-item">Create Content</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link - No Dropdown) -->
+            <!-- Compare (Simple Link) -->
             <a href="/compare.html" class="nav-link">Compare</a>
 
-            <!-- Blog with Dropdown -->
+            <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/blog.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Blog
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/blog.html" class="dropdown-item">All Articles</a>
-                    <a href="/blog/how-to-pick-an-ai-tool/" class="dropdown-item">How to Pick AI Tools</a>
-                    <a href="/blog/best-ai-tools-for-content/" class="dropdown-item">Best AI for Content</a>
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
-
-            <!-- Simple Links (No Dropdown) -->
-            <a href="/make-money.html" class="nav-link">Make Money</a>
-            <a href="/start-here.html" class="nav-link">Start Here</a>
         </nav>
 
-        <div class="header-cta">
-            <a href="/find.html" class="btn btn-primary btn-sm">Take the Quiz</a>
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/compare.html" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-box">
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
     </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
 </header>
 </div>
 
@@ -160,7 +164,7 @@
 
         <!-- Back link -->
         <div class="tool-back-link">
-          <a href="/category/design/">← Back to Design</a>
+          <a href="/tools/">← Back to All Tools</a>
         </div>
 
         <!-- Hero -->
@@ -169,11 +173,22 @@
             <span class="tool-hero-category">Design</span>
             <span class="tool-hero-pricing">Free Tier Available</span>
           </div>
-          <h1 class="tool-name">Mockup AI</h1>
+          <div class="tool-hero-header">
+            <img class="tool-page-logo" src="https://www.google.com/s2/favicons?domain=mokkup.ai&sz=128" alt="Mockup AI logo" width="64" height="64" loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="tool-page-logo-initials" style="display:none;">MA</div>
+            <h1 class="tool-name">Mockup AI</h1>
+            <button class="shortlist-toggle-btn shortlist-toggle-btn--large" data-tool-id="mockup-ai" aria-label="Save Mockup AI to Shortlist" style="margin-left: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; padding: 12px; cursor: pointer; color: var(--c-text-muted); transition: all var(--t-fast); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+          </div>
           <div class="tool-summary">
-            <p>Mockup AI (often categorized broadly alongside platforms like Mockey or specialized Midjourney pipelines) is a highly focused generative AI tool designed specifically for the Print-on-Demand (POD), e-commerce, and apparel industries. Historically, if a t-shirt seller designed a new graphic, they had to hire a model, rent a photography studio, and shoot the shirt, or painstakingly use Photoshop to warp their flat graphic onto a static stock photo. Mockup AI completely automates this brutal process.</p><p>Its primary differentiator is its 3D-aware texture mapping and generative realism. A user uploads a flat, transparent PNG of their stupid logo. They select a parameter: "A hipster drinking coffee in a sunny cafe, wearing a white hoodie." The AI generates an entirely unique, photorealistic human model wearing that exact hoodie, and accurate$2 renders the user's logo into the fabric. The AI understands the folds of the cloth, adjusting the lighting, shadows, and wrapping of the logo to ensure it looks physically real, entirely bypassing the "Photoshop sticker" effect.</p><p>It is heavily utilized by Etsy sellers dropping hundreds of new t-shirt designs a month, large-scale dropshipping e-commerce empires, independent fashion designers testing concepts before manufacturing, and digital marketing agencies needing endless, highly specific lifestyle photography for Facebook ads.</p>
+            <p>Mockup AI (often categorized broadly alongside platforms like Mockey or specialized Midjourney pipelines) is a highly focused generative AI tool designed specifically for the Print-on-Demand (POD), e-commerce, and apparel industries. Historically, if a t-shirt seller designed a new graphic, they had to hire a model, rent a photography studio, and shoot the shirt, or painstakingly use Photoshop to warp their flat graphic onto a static stock photo. Mockup AI completely automates this brutal process.</p><p>Its primary differentiator is its 3D-aware texture mapping and generative realism. A user uploads a flat, transparent PNG of their stupid logo. They select a parameter: "A hipster drinking coffee in a sunny cafe, wearing a white hoodie." The AI generates an entirely unique, photorealistic human model wearing that exact hoodie, and accurately renders the user's logo into the fabric. The AI understands the folds of the cloth, adjusting the lighting, shadows, and wrapping of the logo to ensure it looks physically real, entirely bypassing the "Photoshop sticker" effect.</p><p>It is heavily utilized by Etsy sellers dropping hundreds of new t-shirt designs a month, large-scale dropshipping e-commerce empires, independent fashion designers testing concepts before manufacturing, and digital marketing agencies needing endless, highly specific lifestyle photography for Facebook ads.</p>
           </div>
           <a href="https://www.mokkup.ai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Mockup AI</a>
+          <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+          </div>
         </div>
 
         
@@ -192,7 +207,7 @@
         <!-- Main Description / How It Works -->
         <div class="tool-section">
         <h2>How It Works</h2>
-        <div class="tool-body-text"><p>An Etsy seller creates a funny typography graphic that says "I Hate Mondays." They want to sell it on a black t-shirt, a white mug, and a tote bag. They open Mockup AI. They upload the transparent PNG graphic. First, they select the "T-Shirt" category and type a prompt: "A smiling woman walking a golden retriever in a snowy park." The AI generates an accurate, photorealistic photo of the exact scene, accurate$2 placing the "I Hate Mondays" graphic on her black shirt, automatically warping the text slightly to match the wrinkles in the cotton. Next, they select "Mug" and prompt "A cozy wooden desk by a window with rain." The AI outputs a pristine image of the mug displaying the design. The seller instantly uploads these beautiful, highly expensive-looking lifestyle photos to Etsy, large-scale increasing their conversion rate.</p></div>
+        <div class="tool-body-text"><p>An Etsy seller creates a funny typography graphic that says "I Hate Mondays." They want to sell it on a black t-shirt, a white mug, and a tote bag. They open Mockup AI. They upload the transparent PNG graphic. First, they select the "T-Shirt" category and type a prompt: "A smiling woman walking a golden retriever in a snowy park." The AI generates an accurate, photorealistic photo of the exact scene, accurately placing the "I Hate Mondays" graphic on her black shirt, automatically warping the text slightly to match the wrinkles in the cotton. Next, they select "Mug" and prompt "A cozy wooden desk by a window with rain." The AI outputs a pristine image of the mug displaying the design. The seller instantly uploads these beautiful, highly expensive-looking lifestyle photos to Etsy, large-scale increasing their conversion rate.</p></div>
       </div>
 
         <!-- Features -->
@@ -202,7 +217,7 @@
               <h4>Generative Mockup Engine</h4>
               <ul class="tool-feature-list">
             <li>Text-to-Image photorealistic lifestyle model generation</li>
-            <li>3D-aware texture mapping (warping graphics accurate$2 onto fabric/objects)</li>
+            <li>3D-aware texture mapping (warping graphics accurately onto fabric/objects)</li>
             <li>Automated lighting and shadow integration</li>
             <li>Vast library of target objects (T-shirts, Hoodies, Mugs, Posters, phone cases)</li>
           </ul>
@@ -218,17 +233,17 @@
             </div>
         </div>
 
-        <!-- Pros & Cons -->
+        <!-- Strengths & Limitations -->
         <div class="tool-section">
-          <h2>Pros &amp; Cons</h2>
+          <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
-            <div class="tool-pros"><h3>Pros</h3><ul class="tool-pros-list">
+            <div class="tool-pros"><h3>Strengths</h3><ul class="tool-pros-list">
             <li>The cost savings are established; completely eliminating the need to hire human models, rent expensive lighting equipment, and buy camera gear drastically lowers the barrier to entry for e-commerce</li>
             <li>The 3D texture mapping successfully defeats the awful, cheap &quot;Photoshop&quot; look where a flat logo looks like a sticker hovering over a shirt; the AI actually understands fabric wrinkles</li>
             <li>The sheer speed allows a seller to launch 100 new t-shirt designs in a single afternoon, creating the necessary large-scale product volume required to dominate Etsy algorithms</li>
             <li>The ability to endlessly generate diverse human models allows a small brand to accurately represent and target different global demographics accurately</li>
           </ul></div>
-            <div class="tool-cons"><h3>Cons</h3><ul class="tool-cons-list">
+            <div class="tool-cons"><h3>Limitations</h3><ul class="tool-cons-list">
             <li>Because it is generative AI, it struggles heavily with highly complex, established brand consistency; if you want 10 photos of the exact same recognizable supermodel, the AI will subtly change their face every time</li>
             <li>AI models occasionally suffer from the &quot;uncanny valley,&quot; rendering bizarre, complex hands or slightly distorted eyes if the prompt is too chaotic</li>
             <li>It is utterly useless if you are selling a highly unique, physically complex product (like a custom-built drone or a weirdly shaped perfume bottle) that the AI has never seen before</li>
