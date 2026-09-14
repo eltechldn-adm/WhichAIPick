@@ -542,21 +542,20 @@ class DirectoryEngine {
             if (this.activeFilters.pricing.length > 0) {
                 let model = (tool.pricingModel || tool.pricing_model || '').trim().toLowerCase();
                 if (model === 'free trial' || model === 'free_trial') model = 'paid';
-                if (!this.activeFilters.pricing.includes(model)) return false;
+                const activePricingLower = this.activeFilters.pricing.map(p => p.toLowerCase());
+                if (!activePricingLower.includes(model)) return false;
             }
 
             if (this.activeFilters.freeTier.length > 0) {
                 const wantsFree = this.activeFilters.freeTier.includes('has_free_tier');
                 const wantsNoFree = this.activeFilters.freeTier.includes('no_free_tier');
                 const hasFree = tool.hasFreeTier === true || tool.has_free_tier === true;
+                const isNoFree = tool.hasFreeTier === false || tool.has_free_tier === false;
                 
-                if (wantsFree && wantsNoFree) {
-                    // allow all
-                } else if (wantsFree && !hasFree) {
-                    return false;
-                } else if (wantsNoFree && hasFree) {
-                    return false;
-                }
+                const matchesFree = wantsFree && hasFree;
+                const matchesNoFree = wantsNoFree && isNoFree;
+                
+                if (!matchesFree && !matchesNoFree) return false;
             }
             
             if (this.activeFilters.useCase.length > 0) {
