@@ -60,10 +60,29 @@ class ShortlistManager {
         }
     }
 
+    showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'shortlist-toast';
+        toast.setAttribute('role', 'alert');
+        toast.setAttribute('aria-live', 'assertive');
+        toast.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--color-gray-800); color: var(--color-white); padding: 12px 24px; border-radius: 8px; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.5); border: 1px solid var(--color-gray-700); font-size: 0.9rem; pointer-events: none; opacity: 0; transition: opacity 0.3s ease;';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        
+        // Trigger reflow
+        void toast.offsetWidth;
+        toast.style.opacity = '1';
+        
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
     add(toolId) {
         if (!this.items.includes(toolId)) {
             if (this.items.length >= this.MAX_ITEMS) {
-                alert(`Your shortlist is full. Remove a tool before adding another.`);
+                this.showToast('Your shortlist is full. Remove a tool before adding another.');
                 return false;
             }
             this.items.push(toolId);

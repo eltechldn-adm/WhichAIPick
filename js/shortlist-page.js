@@ -49,6 +49,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Automatically remove IDs that don't exist in tools.json anymore
         staleIds.forEach(id => window.Shortlist.remove(id));
+        
+        // Show lightweight notice if stale IDs were removed
+        let staleNotice = document.getElementById('stale-id-notice');
+        if (staleIds.length > 0) {
+            if (!staleNotice) {
+                staleNotice = document.createElement('div');
+                staleNotice.id = 'stale-id-notice';
+                staleNotice.style.cssText = 'background-color: var(--color-gray-800); color: var(--color-gray-300); padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1.5rem; font-size: 0.9rem; text-align: center; border: 1px solid var(--color-gray-700);';
+                actionBox.parentNode.insertBefore(staleNotice, grid);
+            }
+            const word = staleIds.length === 1 ? 'tool was' : 'tools were';
+            staleNotice.textContent = `${staleIds.length} unavailable saved ${word} removed from your shortlist.`;
+            staleNotice.style.display = 'block';
+        } else if (staleNotice) {
+            staleNotice.style.display = 'none';
+        }
 
         if (validTools.length === 0) {
             grid.style.display = 'none';
@@ -125,7 +141,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         checkbox.addEventListener('change', (e) => {
             if (e.target.checked) {
                 if (selectedForCompare.size >= 4) {
-                    alert("You can only compare up to 4 tools at a time.");
+                    if (window.Shortlist && typeof window.Shortlist.showToast === 'function') {
+                        window.Shortlist.showToast("You can only compare up to 4 tools at a time.");
+                    } else {
+                        alert("You can only compare up to 4 tools at a time.");
+                    }
                     e.target.checked = false;
                     return;
                 }
