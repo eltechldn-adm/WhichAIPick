@@ -98,28 +98,24 @@ class DirectoryEngine {
 
     setupFilterOptions() {
         // Helper to generate checkboxes with Show More
-        const generateCheckboxes = (items, name, counts) => {
+        const generateCheckboxes = (items, name) => {
             const VISIBLE_COUNT = 6;
             const visibleItems = items.slice(0, VISIBLE_COUNT);
             const hiddenItems = items.slice(VISIBLE_COUNT);
             
             let html = visibleItems.map(item => {
-                const countStr = counts && counts[item] !== undefined ? `<span class="filter-count">${counts[item]}</span>` : '';
                 return `<label class="filter-checkbox-label">
                     <input type="checkbox" name="${name}" value="${item}"> 
                     <span class="filter-label-text">${item}</span>
-                    ${countStr}
                 </label>`;
             }).join('');
             
             if (hiddenItems.length > 0) {
                 html += `<div class="hidden-options" style="display: none;">
                     ${hiddenItems.map(item => {
-                        const countStr = counts && counts[item] !== undefined ? `<span class="filter-count">${counts[item]}</span>` : '';
                         return `<label class="filter-checkbox-label">
                             <input type="checkbox" name="${name}" value="${item}"> 
                             <span class="filter-label-text">${item}</span>
-                            ${countStr}
                         </label>`;
                     }).join('')}
                 </div>
@@ -128,37 +124,22 @@ class DirectoryEngine {
             return html;
         };
 
-        // Extract Categories & counts
-        const catCounts = {};
-        this.tools.forEach(t => {
-            if (t.category) catCounts[t.category] = (catCounts[t.category] || 0) + 1;
-        });
+        // Extract Categories
         const categories = [...new Set(this.tools.map(t => t.category).filter(Boolean))].sort();
         if (this.elements.categoryBox) {
-            this.elements.categoryBox.innerHTML = generateCheckboxes(categories, 'category', catCounts);
+            this.elements.categoryBox.innerHTML = generateCheckboxes(categories, 'category');
         }
 
-        // Pricing Models & counts
+        // Pricing Models
         const explicitPricing = ['Free', 'Freemium', 'Paid', 'Enterprise'];
-        const priceCounts = {};
-        this.tools.forEach(t => {
-            const model = (t.pricing_model || '').trim().toLowerCase();
-            const matched = explicitPricing.find(p => p.toLowerCase() === model);
-            if (matched) priceCounts[matched] = (priceCounts[matched] || 0) + 1;
-        });
         if (this.elements.pricingBox) {
-            this.elements.pricingBox.innerHTML = generateCheckboxes(explicitPricing, 'pricing', priceCounts);
+            this.elements.pricingBox.innerHTML = generateCheckboxes(explicitPricing, 'pricing');
         }
 
-        // Use-Case Grouping & counts
+        // Use-Case Grouping
         const useCaseGroups = Object.keys(USE_CASE_TAXONOMY).sort();
-        const ucCounts = {};
-        this.tools.forEach(t => {
-            const groups = this.mapUseCasesToGroups(t);
-            groups.forEach(g => ucCounts[g] = (ucCounts[g] || 0) + 1);
-        });
         if (this.elements.useCaseBox) {
-            this.elements.useCaseBox.innerHTML = generateCheckboxes(useCaseGroups, 'useCase', ucCounts);
+            this.elements.useCaseBox.innerHTML = generateCheckboxes(useCaseGroups, 'useCase');
         }
         
         // Bind Show More buttons

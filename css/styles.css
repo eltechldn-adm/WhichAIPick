@@ -2709,6 +2709,12 @@ input:focus+.toggle-slider {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
+  .mobile-filters-btn {
+    display: flex;
+  }
+}
+.mobile-filters-btn {
+  display: none;
 }
 
 /* Sidebar */
