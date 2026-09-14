@@ -2704,6 +2704,10 @@ input:focus+.toggle-slider {
   align-items: start;
 }
 
+.mobile-filters-btn {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .directory-layout {
     grid-template-columns: 1fr;
@@ -2712,9 +2716,6 @@ input:focus+.toggle-slider {
   .mobile-filters-btn {
     display: flex;
   }
-}
-.mobile-filters-btn {
-  display: none;
 }
 
 /* Sidebar */
