@@ -293,46 +293,90 @@
       </div>
     </section>
 
-    <!-- Filter Bar (Dynamic) -->
-    <div class="filter-bar">
-      <div class="filter-search">
-        <input type="search" id="search-input" placeholder="Search by name..." aria-label="Search tools">
-      </div>
-      <div class="filter-controls">
-        <div class="filter-item">
-          <label for="sort-select">Sort:</label>
-          <select id="sort-select" aria-label="Sort tools">
+    <!-- Directory Layout (Dynamic) -->
+    <div class="page-container directory-layout">
+      <!-- Filter Sidebar (Desktop) -->
+      <aside class="directory-sidebar" id="directory-sidebar">
+        <div class="directory-sidebar-header mobile-only">
+          <h2>Filters</h2>
+          <button class="close-sidebar-btn" id="close-sidebar-btn" aria-label="Close filters">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label for="search-input" class="filter-group-title">Search</label>
+          <input type="search" id="search-input" class="directory-search-input" placeholder="Search tools..." aria-label="Search tools by name or description">
+        </div>
+
+        <div class="filter-group">
+          <label for="sort-select" class="filter-group-title">Sort By</label>
+          <select id="sort-select" class="directory-sort-select" aria-label="Sort tools">
             <option value="recommended">Recommended</option>
-            <option value="free_first">Free First</option>
             <option value="az">A–Z</option>
             <option value="za">Z–A</option>
+            <option value="free_first">Free First</option>
           </select>
         </div>
-        <div class="filter-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="free-tier-toggle">
-            <span class="toggle-slider"></span>
-          </label>
-          <label for="free-tier-toggle" title="Pricing is auto-detected; some tools may be misclassified." style="cursor: pointer;">
-            Free tier <span style="font-size: 0.8em; opacity: 0.7;">(detected)</span>
-          </label>
-        </div>
-        <div class="filter-item">
-          <label for="items-per-page-select">Per Page:</label>
-          <select id="items-per-page-select" aria-label="Items per page">
-            <option value="30">30</option>
-            <option value="50">50</option>
-          </select>
-        </div>
-      </div>
-    </div>
 
-    <!-- Tool Grid -->
-    <section class="section-spaced">
-      <div class="content-wide">
-        <div id="browse-container">
-          <div id="browse-stats" class="browse-stats">Showing 1-30 of 42 tools</div>
-          <div id="browse-list" class="browse-list">
+        <div class="filter-group" id="filter-group-freeTier">
+          <h3 class="filter-group-title">Access</h3>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="freeTier" value="has_free_tier"> Has Free Tier
+          </label>
+          <label class="filter-checkbox-label">
+            <input type="checkbox" name="freeTier" value="no_free_tier"> No Free Tier
+          </label>
+        </div>
+
+        <div class="filter-group" id="filter-group-pricing">
+          <h3 class="filter-group-title">Pricing Model</h3>
+          <div id="pricing-checkboxes">
+             <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <div class="filter-group" id="filter-group-category" style="display: none;">
+          <h3 class="filter-group-title">Category</h3>
+          <div id="category-checkboxes" class="scrollable-checkboxes">
+             <!-- Injected by JS, hidden since this is a specific category page -->
+          </div>
+        </div>
+
+        <div class="filter-group" id="filter-group-useCase">
+          <h3 class="filter-group-title">Use Case</h3>
+          <div id="usecase-checkboxes" class="scrollable-checkboxes">
+             <!-- Injected by JS -->
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Results Area -->
+      <div class="directory-results">
+        <div class="directory-header mobile-only">
+          <button class="btn btn-secondary mobile-filters-btn" id="mobile-filters-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+            Filters
+          </button>
+        </div>
+
+        <!-- Active Filter Chips -->
+        <div class="active-filters" id="active-filters" style="display: none;">
+          <div class="active-filters-list" id="active-filters-list"></div>
+          <button class="clear-filters-btn" id="clear-filters-btn">Clear all</button>
+        </div>
+
+        <div class="directory-stats-bar">
+          <div id="directory-count" class="directory-count" aria-live="polite">Showing 1-30 of 42 tools</div>
+        </div>
+
+        <div id="directory-empty-state" class="directory-empty-state" style="display: none;">
+          <h3>No tools match your criteria</h3>
+          <p>Try adjusting or clearing your filters to find what you're looking for.</p>
+          <button class="btn btn-primary" id="empty-clear-btn">Clear Filters</button>
+        </div>
+
+        <div id="browse-list" class="browse-list">
           <div class="tool-card">
       
       <div class="tool-card-top tool-card-top--no-badge">
@@ -1299,11 +1343,11 @@
         <a href="https://www.salesforce.com/products/einstein/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Salesforce Einstein website">salesforce.com</a>
       </div>
     </div>
-          </div>
-          <div id="load-more-container" class="load-more-container"></div>
         </div>
+        
+        <div id="load-more-container" class="load-more-container"></div>
       </div>
-    </section>
+    </div>
 
     <!-- FAQ -->
     <section class="section-spaced">

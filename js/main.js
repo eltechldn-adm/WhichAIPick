@@ -305,7 +305,9 @@ function renderToolCard(tool, recommendedIds = [], source = 'list') {
     const pricingEntry = PRICING_MAP[rawModel];
 
     let pricingBadgeHTML = '';
-    if (pricingEntry) {
+    if (tool.operationalStatus === 'discontinued') {
+        pricingBadgeHTML = `<span class="badge-discontinued">Discontinued</span>`;
+    } else if (pricingEntry) {
         // Known model → full badge
         pricingBadgeHTML = `<span class="pricing-badge ${pricingEntry.cls}">${pricingEntry.label}</span>`;
     } else if (tool.has_free_tier === true) {
