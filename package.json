@@ -15,7 +15,7 @@
     "inject:footer": "node scripts/inject-footer.mjs",
     "generate:build-info": "node scripts/generate-build-info.mjs",
     "predeploy": "node scripts/generate-static-pages.mjs && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs",
-    "build:cloudflare": "npm run predeploy"
+    "build:cloudflare": "npm run build:data && npm run predeploy"
   },
   "dependencies": {
     "sharp": "^0.33.0",

@@ -289,8 +289,10 @@ rawData.forEach((row, index) => {
         ...decisionAttrs
     };
 
-    // Normalise legacy pricing_model values (open_source / free_trial are not valid pricing models)
-    if (newTool.pricing_model) {
+    // Keep legacy pricing_model in sync with new pricingModel
+    if (newTool.pricingModel) {
+        newTool.pricing_model = newTool.pricingModel;
+    } else if (newTool.pricing_model) {
         newTool.pricing_model = normalizeLegacyPricingModel(newTool.pricing_model);
     }
 
