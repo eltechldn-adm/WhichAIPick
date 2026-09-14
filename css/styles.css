@@ -2949,3 +2949,93 @@ input:focus+.toggle-slider {
   text-transform: uppercase;
   margin-bottom: 4px;
 }
+
+/* Compare Engine Styles */
+.compare-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-gray-700);
+  border-radius: 8px;
+  background: var(--color-gray-900);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Ensure it scrolls on mobile */
+  text-align: left;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-gray-800);
+  border-right: 1px solid var(--color-gray-800);
+  vertical-align: top;
+}
+
+.compare-table th:last-child,
+.compare-table td:last-child {
+  border-right: none;
+}
+
+.compare-table thead th {
+  background: var(--color-gray-950);
+  position: relative;
+}
+
+.compare-factor-col {
+  width: 20%;
+  min-width: 150px;
+  background: var(--color-gray-950);
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  border-right: 2px solid var(--color-gray-700) !important;
+}
+
+.compare-tool-col {
+  width: 20%;
+  min-width: 250px;
+}
+
+.compare-data-col {
+  font-size: 0.95rem;
+  color: var(--color-gray-300);
+  line-height: 1.5;
+}
+
+.compare-tool-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.unknown-val {
+  color: var(--color-gray-500);
+  font-style: italic;
+}
+
+.selector-result-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: var(--color-gray-800);
+  border: 1px solid var(--color-gray-700);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.selector-result-btn:hover {
+  background: var(--color-gray-700);
+}
+
+@media (max-width: 768px) {
+  .compare-factor-col {
+    min-width: 120px;
+  }
+  .compare-tool-col {
+    min-width: 200px;
+  }
+}
+

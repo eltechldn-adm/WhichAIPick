@@ -136,54 +136,69 @@
 </div>
 
     <main class="page-shell">
-        <!-- Hero -->
-        <section class="hero-shell">
+        <!-- Empty State & Static Links -->
+        <section class="hero-shell" id="compare-empty-state" style="text-align: center; margin-bottom: 2rem;">
             <h1>Compare AI Tools</h1>
             <div class="content-narrow">
-                <p>Struggling to choose between two AI tools? Our side-by-side comparisons break down what each does
-                    best, who it's for, and which you should pick for your needs.</p>
+                <p>Choose 2–4 tools to compare their pricing, strengths, limitations and best-fit use cases side by side.</p>
+                <button class="btn btn-primary" onclick="window.CompareEngine && window.CompareEngine.openSelector()">Select tools to compare</button>
             </div>
         </section>
 
-        <!-- Comparisons Grid -->
-        <section class="section-spaced">
-            <h2 style="text-align: center; color: var(--c-accent); margin-bottom: 40px;">All Comparisons</h2>
-            <div class="content-grid">
-                <a href="/compare/chatgpt-vs-claude-vs-gemini/" class="content-card">
-                    <h3>ChatGPT vs Claude vs Gemini</h3>
-                    <p>The three dominant AI assistants compared head-to-head — capabilities, pricing, use cases, and
-                        which one to pick for your workflow.</p>
-                </a>
-                <a href="/compare/midjourney-vs-dalle/" class="content-card">
-                    <h3>Midjourney vs DALL-E</h3>
-                    <p>Two of the most powerful AI image generators compared — quality, style, pricing, and which is
-                        right for designers and creators.</p>
-                </a>
-                <a href="/compare/replit-vs-lovable/" class="content-card">
-                    <h3>Replit vs Lovable</h3>
-                    <p>Two leading AI coding platforms compared — collaboration features, deployment options, and which
-                        suits your development workflow.</p>
-                </a>
-                <a href="/compare/sora-vs-runway/" class="content-card">
-                    <h3>Sora vs Runway</h3>
-                    <p>AI video generation head to head — OpenAI's Sora vs Runway Gen-3. Quality, creative control,
-                        and cost compared for video creators.</p>
-                </a>
-            </div>
+        <!-- Dynamic Comparison Table -->
+        <section class="section-spaced" id="compare-table-container" style="display: none;" aria-live="polite">
+            <!-- Injected by compare-engine.js -->
         </section>
+        
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <button id="copy-compare-link" class="btn btn-secondary" style="display: none; align-items: center; justify-content: center; margin: 0 auto;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                Copy comparison link
+            </button>
+        </div>
 
-        <!-- CTA -->
-        <section class="section-spaced" style="background: rgba(255, 255, 255, 0.02);">
-            <div style="text-align: center;">
-                <h2 style="color: var(--c-accent); margin-bottom: 16px;">Not Sure Which Tool to Choose?</h2>
-                <p style="color: var(--c-text-muted); margin-bottom: 32px;">Take our 2-minute quiz to get a
-                    personalised AI tool recommendation based on your goals and budget.</p>
-                <a href="/find.html" class="btn btn-primary" style="margin: 0 8px 12px 8px; display: inline-block;">Take
-                    the Tool Quiz</a>
-                <a href="/tools/" class="btn btn-secondary"
-                    style="margin: 0 8px 12px 8px; display: inline-block;">Browse All Tools</a>
+        <!-- Static Links Section (Only shown when empty) -->
+        <div id="compare-static-links">
+            <section class="section-spaced">
+                <h2 style="text-align: center; color: var(--c-accent); margin-bottom: 40px;">Featured Comparisons</h2>
+                <div class="content-grid">
+                    <a href="/compare/chatgpt-vs-claude-vs-gemini/" class="content-card">
+                        <h3>ChatGPT vs Claude vs Gemini</h3>
+                        <p>The three dominant AI assistants compared head-to-head — capabilities, pricing, use cases, and which one to pick for your workflow.</p>
+                    </a>
+                    <a href="/compare/midjourney-vs-dalle/" class="content-card">
+                        <h3>Midjourney vs DALL-E</h3>
+                        <p>Two of the most powerful AI image generators compared — quality, style, pricing, and which is right for designers and creators.</p>
+                    </a>
+                    <a href="/compare/replit-vs-lovable/" class="content-card">
+                        <h3>Replit vs Lovable</h3>
+                        <p>Two leading AI coding platforms compared — collaboration features, deployment options, and which suits your development workflow.</p>
+                    </a>
+                    <a href="/compare/sora-vs-runway/" class="content-card">
+                        <h3>Sora vs Runway</h3>
+                        <p>AI video generation head to head — OpenAI's Sora vs Runway Gen-3. Quality, creative control, and cost compared for video creators.</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Selector Modal -->
+        <div id="compare-selector-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: flex-start; padding: 5vh 1rem;">
+            <div style="background: var(--color-gray-900); width: 100%; max-width: 600px; border-radius: 12px; padding: 1.5rem; border: 1px solid var(--color-gray-700); display: flex; flex-direction: column; max-height: 90vh;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 style="margin: 0;">Search for a tool</h3>
+                    <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine && window.CompareEngine.closeSelector()">Close</button>
+                </div>
+                <input type="text" id="compare-selector-input" placeholder="Type a tool name..." class="form-input" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--color-gray-600); background: var(--color-gray-800); color: white; margin-bottom: 1rem;">
+                <div id="compare-selector-results" style="overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem; flex-grow: 1;">
+                    <!-- Results injected here -->
+                </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <div id="site-footer">
@@ -239,6 +254,7 @@
 
     <script src="/js/main.js?v=6.4"></script>
     <script src="/js/layout.js?v=1.8" defer></script>
+    <script src="/js/compare-engine.js" defer></script>
 </body>
 
 </html>
