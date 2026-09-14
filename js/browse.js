@@ -9,22 +9,25 @@ window.Analytics = window.Analytics || {
 };
 
 const USE_CASE_TAXONOMY = {
-    'Writing & Content': ['writing', 'content', 'copywriting', 'blog', 'essay', 'summarize', 'text generation'],
-    'Coding & Development': ['code', 'coding', 'development', 'programming', 'developer', 'sql', 'html', 'css', 'python'],
-    'Image Creation': ['image', 'photo', 'art', 'generation', 'picture', 'avatar', 'logo', 'drawing'],
-    'Video Creation': ['video', 'animation', 'editing', 'youtube', 'tiktok', 'reel'],
-    'Audio & Voice': ['audio', 'voice', 'speech', 'music', 'sound', 'text-to-speech', 'podcast'],
-    'Research': ['research', 'academic', 'science', 'search', 'discovery', 'analysis', 'paper'],
-    'Productivity': ['productivity', 'workflow', 'task', 'time management', 'automation', 'organization'],
-    'Meetings & Transcription': ['meeting', 'transcription', 'notes', 'zoom', 'teams', 'summarization'],
-    'Marketing': ['marketing', 'seo', 'sales', 'advertising', 'campaign', 'email marketing', 'social media'],
-    'Automation': ['automation', 'zapier', 'workflow', 'bot', 'agent'],
-    'Design': ['design', 'ui', 'ux', 'web design', 'graphic', 'presentation', 'slides'],
-    'Data & Analytics': ['data', 'analytics', 'spreadsheet', 'excel', 'csv', 'chart', 'graph'],
-    'Customer Support': ['customer support', 'chatbot', 'service', 'helpdesk'],
-    'Education': ['education', 'learning', 'student', 'teacher', 'course', 'quiz', 'study'],
-    'Business Operations': ['business', 'finance', 'hr', 'legal', 'contract', 'invoice', 'operations']
+    'Writing & Content': ['writing', 'content', 'copywriting', 'blog', 'essay', 'summarize', 'text generation', 'translation', 'grammar', 'proofreading', 'fiction', 'novel', 'article', 'seo writing'],
+    'Coding & Development': ['code', 'coding', 'development', 'programming', 'developer', 'sql', 'html', 'css', 'python', 'llm', 'model', 'embedding', 'vector', 'inference', 'annotation', 'labelling', 'mlops', 'rag', 'agent framework', 'test automation', 'code review', 'code generation', 'ide', 'repository', 'deployment'],
+    'Image Creation': ['image', 'photo', 'art', 'generation', 'picture', 'avatar', 'logo', 'drawing', 'illustration', 'rendering', 'background removal', 'upscaling', 'retouching', '3d model', 'interior design', 'architectural'],
+    'Video Creation': ['video', 'animation', 'editing', 'youtube', 'tiktok', 'reel', 'avatar video', 'text-to-video', 'video generation', 'clip', 'dubbing', 'subtitle', 'caption'],
+    'Audio & Voice': ['audio', 'voice', 'speech', 'music', 'sound', 'text-to-speech', 'podcast', 'transcription', 'voiceover', 'voice cloning', 'mastering', 'stem'],
+    'Research': ['research', 'academic', 'science', 'search', 'discovery', 'analysis', 'paper', 'citation', 'literature', 'pdf', 'document', 'fact-checking'],
+    'Productivity': ['productivity', 'workflow', 'task', 'time management', 'automation', 'organization', 'note-taking', 'meeting notes', 'scheduling', 'calendar', 'email management', 'mind mapping', 'knowledge management', 'ai assistant', 'ai chat', 'journaling', 'email filtering', 'inbox', 'browser', 'personal assistant', 'tutoring', 'language practice'],
+    'Meetings & Transcription': ['meeting', 'transcription', 'notes', 'zoom', 'teams', 'summarization', 'meeting summary', 'meeting notes', 'action item'],
+    'Marketing': ['marketing', 'seo', 'sales', 'advertising', 'campaign', 'email marketing', 'social media', 'landing page', 'newsletter', 'outreach', 'lead', 'brand'],
+    'Automation': ['automation', 'zapier', 'workflow', 'bot', 'agent', 'scraping', 'extraction', 'parsing', 'rpa', 'robotic process', 'web crawling', 'no-code automation', 'data pipeline'],
+    'Design': ['design', 'ui', 'ux', 'web design', 'graphic', 'presentation', 'slides', '3d', 'product photo', 'floor plan', 'room design', 'design-to-code'],
+    'Data & Analytics': ['data', 'analytics', 'spreadsheet', 'excel', 'csv', 'chart', 'graph', 'insight', 'intelligence', 'reporting', 'forecasting'],
+    'Customer Support': ['customer support', 'chatbot', 'service', 'helpdesk', 'support automation', 'contact centre', 'ticketing', 'live chat', 'omnichannel'],
+    'Education': ['education', 'learning', 'student', 'teacher', 'course', 'quiz', 'study', 'language learning', 'flashcard', 'lesson plan'],
+    'Business Operations': ['business', 'finance', 'hr', 'legal', 'contract', 'invoice', 'operations', 'recruiting', 'hiring', 'crm', 'revenue', 'healthcare', 'clinical', 'medical', 'employee', 'talent', 'interview']
 };
+
+
+
 
 class DirectoryEngine {
     constructor() {

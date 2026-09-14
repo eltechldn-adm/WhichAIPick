@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best AI Development Tools in 2026 | WhichAIPick</title>
-  <meta name="description" content="AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 54 AI tools with detailed feature breakdowns and p…">
+  <meta name="description" content="AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 158 AI tools with detailed feature breakdowns and…">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://whichaipick.com/category/development/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Best AI Development Tools in 2026 | WhichAIPick">
-  <meta property="og:description" content="AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 54 AI tools with detailed feature breakdowns and p…">
+  <meta property="og:description" content="AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 158 AI tools with detailed feature breakdowns and…">
   <meta property="og:url" content="https://whichaipick.com/category/development/">
   <meta property="og:image" content="https://whichaipick.com/assets/logo/logo-final.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary">
   <meta property="twitter:title" content="Best AI Development Tools in 2026 | WhichAIPick">
-  <meta property="twitter:description" content="AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 54 AI tools with detailed feature breakdowns and p…">
+  <meta property="twitter:description" content="AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 158 AI tools with detailed feature breakdowns and…">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
@@ -44,7 +44,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Best AI Development Tools in 2026 | WhichAIPick",
-  "description": "AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 54 AI tools with detailed feature breakdowns and p…",
+  "description": "AI tools that assist developers with writing code, debugging, testing, documentation, and deployment. Browse 158 AI tools with detailed feature breakdowns and…",
   "url": "https://whichaipick.com/category/development/",
   "publisher": {
     "@type": "Organization",
@@ -54,7 +54,7 @@
   "mainEntity": {
     "@type": "ItemList",
     "name": "AI Development Tools",
-    "numberOfItems": 54,
+    "numberOfItems": 158,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -182,7 +182,100 @@
 </head>
 
 <body data-bg="browse">
-  <div id="site-header"></div>
+  <div id="site-header">
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="brand" aria-label="WhichAIPick — Home">
+            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
+            <span class="brand-name">WhichAIPick</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <!-- Browse Tools with Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Browse Tools
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/tools/" class="dropdown-item">Browse All Tools</a>
+                    <a href="/category.html" class="dropdown-item">Browse by Category</a>
+                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
+                    <a href="/search.html" class="dropdown-item">Search Tools</a>
+                </div>
+            </div>
+
+            <!-- Compare (Simple Link) -->
+            <a href="/compare.html" class="nav-link">Compare</a>
+
+            <!-- Learn Dropdown -->
+            <div class="nav-item-dropdown">
+                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                    Learn
+                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
+                    <a href="/blog.html" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Search Icon -->
+            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <!-- Shortlist Icon -->
+            <a href="/shortlist/" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
+            </a>
+            <!-- Primary CTA -->
+            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger-box" aria-hidden="true">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <div class="mobile-nav-inner">
+            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <nav aria-label="Mobile navigation">
+                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
+                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <hr class="mobile-nav-divider" aria-hidden="true">
+                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
+            </nav>
+        </div>
+    </div>
+    <script src="/js/shortlist.js" defer></script>
+</header>
+</div>
 
   <main class="page-shell">
 
@@ -194,7 +287,7 @@
           <div class="content-narrow">
             <p style="font-size: 1.1rem; margin-top: 0; margin-bottom: 12px;">AI tools that assist developers with writing code, debugging, testing, documentation, and deployment.</p>
             <p class="category-description" style="margin-top: 0; margin-bottom: 12px; font-size: 0.95rem;">Modern AI development tools go far beyond simple autocomplete. They understand entire codebases, generate working components from natural language descriptions, identify security vulnerabilities, write unit tests automatically, and explain legacy code. From solo developers to enterprise engineering teams, these tools meaningfully accelerate every stage of the software development lifecycle.</p>
-            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">54 tools researched and verified for feature accuracy and pricing.</p>
+            <p style="color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0; margin-bottom: 0;">158 tools researched and verified for feature accuracy and pricing.</p>
           </div>
         </div>
       </div>
@@ -273,7 +366,7 @@
         </div>
 
         <div class="directory-stats-bar">
-          <div id="directory-count" class="directory-count" aria-live="polite">Showing 1-30 of 54 tools</div>
+          <div id="directory-count" class="directory-count" aria-live="polite">Showing 1-30 of 158 tools</div>
         </div>
 
         <div id="directory-empty-state" class="directory-empty-state" style="display: none;">
@@ -721,6 +814,26 @@
       <div class="tool-card-actions">
         <a href="/tools/flutterflow/" class="tc-btn-primary" aria-label="View full details for FlutterFlow">View Details</a>
         <a href="https://www.flutterflow.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit FlutterFlow website">flutterflow.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      <div class="tool-card-badge">Free Tier</div>
+      <div class="tool-card-top ">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=stitch.withgoogle.com&amp;sz=128" alt="Google Stitch (formerly Galileo AI) logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">GS</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/galileo-ai/" aria-label="View details for Google Stitch (formerly Galileo AI)">Google Stitch (formerly Galileo AI)</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">Galileo AI functions as a &quot;text-to-UI&quot; generative design platform, targeting Product Designers, UI/UX professionals, an…</p>
+      <div class="tool-card-actions">
+        <a href="/tools/galileo-ai/" class="tc-btn-primary" aria-label="View full details for Google Stitch (formerly Galileo AI)">View Details</a>
+        <a href="https://stitch.withgoogle.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Google Stitch (formerly Galileo AI) website">stitch.withgoogle.com</a>
       </div>
     </div>
         <div class="tool-card">
@@ -1361,6 +1474,2066 @@
       <div class="tool-card-actions">
         <a href="/tools/cloudflare-workers-ai/" class="tc-btn-primary" aria-label="View full details for Cloudflare Workers AI">View Details</a>
         <a href="https://developers.cloudflare.com/workers-ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Cloudflare Workers AI website">developers.cloudflare.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=quadratichq.com&amp;sz=128" alt="Quadratic logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">Q</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/quadratic/" aria-label="View details for Quadratic">Quadratic</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/quadratic/" class="tc-btn-primary" aria-label="View full details for Quadratic">View Details</a>
+        <a href="https://www.quadratichq.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Quadratic website">quadratichq.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=vectorshift.ai&amp;sz=128" alt="VectorShift logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">V</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/vectorshift/" aria-label="View details for VectorShift">VectorShift</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/vectorshift/" class="tc-btn-primary" aria-label="View full details for VectorShift">View Details</a>
+        <a href="https://vectorshift.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit VectorShift website">vectorshift.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=agno.com&amp;sz=128" alt="Agno logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/agno/" aria-label="View details for Agno">Agno</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/agno/" class="tc-btn-primary" aria-label="View full details for Agno">View Details</a>
+        <a href="https://www.agno.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Agno website">agno.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=aider.chat&amp;sz=128" alt="Aider logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/aider/" aria-label="View details for Aider">Aider</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/aider/" class="tc-btn-primary" aria-label="View full details for Aider">View Details</a>
+        <a href="https://aider.chat/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Aider website">aider.chat</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=animaapp.com&amp;sz=128" alt="Anima logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/anima/" aria-label="View details for Anima">Anima</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/anima/" class="tc-btn-primary" aria-label="View full details for Anima">View Details</a>
+        <a href="https://www.animaapp.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Anima website">animaapp.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=anythingllm.com&amp;sz=128" alt="AnythingLLM logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">A</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/anythingllm/" aria-label="View details for AnythingLLM">AnythingLLM</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/anythingllm/" class="tc-btn-primary" aria-label="View full details for AnythingLLM">View Details</a>
+        <a href="https://anythingllm.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit AnythingLLM website">anythingllm.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=arize.com&amp;sz=128" alt="Arize AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">AA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/arize-ai/" aria-label="View details for Arize AI">Arize AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/arize-ai/" class="tc-btn-primary" aria-label="View full details for Arize AI">View Details</a>
+        <a href="https://arize.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Arize AI website">arize.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=arthur.ai&amp;sz=128" alt="Arthur AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">AA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/arthur-ai/" aria-label="View details for Arthur AI">Arthur AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/arthur-ai/" class="tc-btn-primary" aria-label="View full details for Arthur AI">View Details</a>
+        <a href="https://www.arthur.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Arthur AI website">arthur.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=augmentcode.com&amp;sz=128" alt="Augment Code logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">AC</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/augment-code/" aria-label="View details for Augment Code">Augment Code</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/augment-code/" class="tc-btn-primary" aria-label="View full details for Augment Code">View Details</a>
+        <a href="https://www.augmentcode.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Augment Code website">augmentcode.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=baseten.co&amp;sz=128" alt="Baseten logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/baseten/" aria-label="View details for Baseten">Baseten</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/baseten/" class="tc-btn-primary" aria-label="View full details for Baseten">View Details</a>
+        <a href="https://www.baseten.co/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Baseten website">baseten.co</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=bito.ai&amp;sz=128" alt="Bito logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/bito/" aria-label="View details for Bito">Bito</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/bito/" class="tc-btn-primary" aria-label="View full details for Bito">View Details</a>
+        <a href="https://bito.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Bito website">bito.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=braintrust.dev&amp;sz=128" alt="Braintrust logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/braintrust/" aria-label="View details for Braintrust">Braintrust</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/braintrust/" class="tc-btn-primary" aria-label="View full details for Braintrust">View Details</a>
+        <a href="https://www.braintrust.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Braintrust website">braintrust.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=builder.io&amp;sz=128" alt="Builder.io logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">B</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/builder-io/" aria-label="View details for Builder.io">Builder.io</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/builder-io/" class="tc-btn-primary" aria-label="View full details for Builder.io">View Details</a>
+        <a href="https://www.builder.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Builder.io website">builder.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=cerebras.ai&amp;sz=128" alt="Cerebras logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/cerebras/" aria-label="View details for Cerebras">Cerebras</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/cerebras/" class="tc-btn-primary" aria-label="View full details for Cerebras">View Details</a>
+        <a href="https://www.cerebras.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Cerebras website">cerebras.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=trychroma.com&amp;sz=128" alt="Chroma logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/chroma/" aria-label="View details for Chroma">Chroma</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/chroma/" class="tc-btn-primary" aria-label="View full details for Chroma">View Details</a>
+        <a href="https://www.trychroma.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Chroma website">trychroma.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=cleanlab.ai&amp;sz=128" alt="Cleanlab logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/cleanlab/" aria-label="View details for Cleanlab">Cleanlab</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/cleanlab/" class="tc-btn-primary" aria-label="View full details for Cleanlab">View Details</a>
+        <a href="https://cleanlab.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Cleanlab website">cleanlab.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=cline.bot&amp;sz=128" alt="Cline logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/cline/" aria-label="View details for Cline">Cline</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/cline/" class="tc-btn-primary" aria-label="View full details for Cline">View Details</a>
+        <a href="https://cline.bot/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Cline website">cline.bot</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=codeant.ai&amp;sz=128" alt="CodeAnt AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">CA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/codeant-ai/" aria-label="View details for CodeAnt AI">CodeAnt AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/codeant-ai/" class="tc-btn-primary" aria-label="View full details for CodeAnt AI">View Details</a>
+        <a href="https://codeant.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit CodeAnt AI website">codeant.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=coderabbit.ai&amp;sz=128" alt="CodeRabbit logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/coderabbit/" aria-label="View details for CodeRabbit">CodeRabbit</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/coderabbit/" class="tc-btn-primary" aria-label="View full details for CodeRabbit">View Details</a>
+        <a href="https://www.coderabbit.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit CodeRabbit website">coderabbit.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=codescene.com&amp;sz=128" alt="CodeScene logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/codescene/" aria-label="View details for CodeScene">CodeScene</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/codescene/" class="tc-btn-primary" aria-label="View full details for CodeScene">View Details</a>
+        <a href="https://codescene.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit CodeScene website">codescene.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=cosine.sh&amp;sz=128" alt="Cosine logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/cosine/" aria-label="View details for Cosine">Cosine</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/cosine/" class="tc-btn-primary" aria-label="View full details for Cosine">View Details</a>
+        <a href="https://cosine.sh/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Cosine website">cosine.sh</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=crewai.com&amp;sz=128" alt="CrewAI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">C</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/crewai/" aria-label="View details for CrewAI">CrewAI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/crewai/" class="tc-btn-primary" aria-label="View full details for CrewAI">View Details</a>
+        <a href="https://crewai.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit CrewAI website">crewai.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=dataiku.com&amp;sz=128" alt="Dataiku logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/dataiku/" aria-label="View details for Dataiku">Dataiku</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/dataiku/" class="tc-btn-primary" aria-label="View full details for Dataiku">View Details</a>
+        <a href="https://www.dataiku.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Dataiku website">dataiku.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=dataloop.ai&amp;sz=128" alt="Dataloop logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/dataloop/" aria-label="View details for Dataloop">Dataloop</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/dataloop/" class="tc-btn-primary" aria-label="View full details for Dataloop">View Details</a>
+        <a href="https://dataloop.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Dataloop website">dataloop.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=deepinfra.com&amp;sz=128" alt="DeepInfra logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/deepinfra/" aria-label="View details for DeepInfra">DeepInfra</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/deepinfra/" class="tc-btn-primary" aria-label="View full details for DeepInfra">View Details</a>
+        <a href="https://deepinfra.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit DeepInfra website">deepinfra.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=dify.ai&amp;sz=128" alt="Dify logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/dify/" aria-label="View details for Dify">Dify</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/dify/" class="tc-btn-primary" aria-label="View full details for Dify">View Details</a>
+        <a href="https://dify.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Dify website">dify.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=docling.ai&amp;sz=128" alt="Docling logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/docling/" aria-label="View details for Docling">Docling</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/docling/" class="tc-btn-primary" aria-label="View full details for Docling">View Details</a>
+        <a href="https://docling.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Docling website">docling.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=dust.tt&amp;sz=128" alt="Dust logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/dust/" aria-label="View details for Dust">Dust</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/dust/" class="tc-btn-primary" aria-label="View full details for Dust">View Details</a>
+        <a href="https://dust.tt/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Dust website">dust.tt</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=dyad.sh&amp;sz=128" alt="Dyad logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">D</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/dyad/" aria-label="View details for Dyad">Dyad</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/dyad/" class="tc-btn-primary" aria-label="View full details for Dyad">View Details</a>
+        <a href="https://www.dyad.sh/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Dyad website">dyad.sh</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=e2b.dev&amp;sz=128" alt="E2B logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">E</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/e2b/" aria-label="View details for E2B">E2B</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/e2b/" class="tc-btn-primary" aria-label="View full details for E2B">View Details</a>
+        <a href="https://e2b.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit E2B website">e2b.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=edgeimpulse.com&amp;sz=128" alt="Edge Impulse logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">EI</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/edge-impulse/" aria-label="View details for Edge Impulse">Edge Impulse</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/edge-impulse/" class="tc-btn-primary" aria-label="View full details for Edge Impulse">View Details</a>
+        <a href="https://www.edgeimpulse.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Edge Impulse website">edgeimpulse.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=ellipsis.dev&amp;sz=128" alt="Ellipsis logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">E</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/ellipsis/" aria-label="View details for Ellipsis">Ellipsis</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/ellipsis/" class="tc-btn-primary" aria-label="View full details for Ellipsis">View Details</a>
+        <a href="https://www.ellipsis.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Ellipsis website">ellipsis.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=encord.com&amp;sz=128" alt="Encord logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">E</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/encord/" aria-label="View details for Encord">Encord</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/encord/" class="tc-btn-primary" aria-label="View full details for Encord">View Details</a>
+        <a href="https://encord.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Encord website">encord.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=exa.ai&amp;sz=128" alt="Exa logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">E</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/exa/" aria-label="View details for Exa">Exa</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/exa/" class="tc-btn-primary" aria-label="View full details for Exa">View Details</a>
+        <a href="https://exa.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Exa website">exa.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=factory.ai&amp;sz=128" alt="Factory logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">F</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/factory/" aria-label="View details for Factory">Factory</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/factory/" class="tc-btn-primary" aria-label="View full details for Factory">View Details</a>
+        <a href="https://factory.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Factory website">factory.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=fal.ai&amp;sz=128" alt="fal logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">F</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/fal/" aria-label="View details for fal">fal</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/fal/" class="tc-btn-primary" aria-label="View full details for fal">View Details</a>
+        <a href="https://fal.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit fal website">fal.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=fiddler.ai&amp;sz=128" alt="Fiddler AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">FA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/fiddler-ai/" aria-label="View details for Fiddler AI">Fiddler AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/fiddler-ai/" class="tc-btn-primary" aria-label="View full details for Fiddler AI">View Details</a>
+        <a href="https://www.fiddler.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Fiddler AI website">fiddler.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=fireworks.ai&amp;sz=128" alt="Fireworks AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">FA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/fireworks-ai/" aria-label="View details for Fireworks AI">Fireworks AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/fireworks-ai/" class="tc-btn-primary" aria-label="View full details for Fireworks AI">View Details</a>
+        <a href="https://fireworks.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Fireworks AI website">fireworks.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=friendli.ai&amp;sz=128" alt="FriendliAI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">F</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/friendliai/" aria-label="View details for FriendliAI">FriendliAI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/friendliai/" class="tc-btn-primary" aria-label="View full details for FriendliAI">View Details</a>
+        <a href="https://friendli.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit FriendliAI website">friendli.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=functionize.com&amp;sz=128" alt="Functionize logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">F</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/functionize/" aria-label="View details for Functionize">Functionize</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/functionize/" class="tc-btn-primary" aria-label="View full details for Functionize">View Details</a>
+        <a href="https://www.functionize.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Functionize website">functionize.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=galileo.ai&amp;sz=128" alt="Galileo logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">G</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/galileo/" aria-label="View details for Galileo">Galileo</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/galileo/" class="tc-btn-primary" aria-label="View full details for Galileo">View Details</a>
+        <a href="https://galileo.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Galileo website">galileo.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=giskard.ai&amp;sz=128" alt="Giskard logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">G</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/giskard/" aria-label="View details for Giskard">Giskard</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/giskard/" class="tc-btn-primary" aria-label="View full details for Giskard">View Details</a>
+        <a href="https://www.giskard.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Giskard website">giskard.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=about.gitlab.com&amp;sz=128" alt="GitLab Duo logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">GD</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/gitlab-duo/" aria-label="View details for GitLab Duo">GitLab Duo</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/gitlab-duo/" class="tc-btn-primary" aria-label="View full details for GitLab Duo">View Details</a>
+        <a href="https://about.gitlab.com/gitlab-duo-agent-platform/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit GitLab Duo website">about.gitlab.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=nomic.ai&amp;sz=128" alt="GPT4All logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">G</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/gpt4all/" aria-label="View details for GPT4All">GPT4All</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/gpt4all/" class="tc-btn-primary" aria-label="View full details for GPT4All">View Details</a>
+        <a href="https://www.nomic.ai/gpt4all" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit GPT4All website">nomic.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=greptile.com&amp;sz=128" alt="Greptile logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">G</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/greptile/" aria-label="View details for Greptile">Greptile</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/greptile/" class="tc-btn-primary" aria-label="View full details for Greptile">View Details</a>
+        <a href="https://www.greptile.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Greptile website">greptile.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=groq.com&amp;sz=128" alt="Groq logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">G</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/groq/" aria-label="View details for Groq">Groq</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/groq/" class="tc-btn-primary" aria-label="View full details for Groq">View Details</a>
+        <a href="https://groq.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Groq website">groq.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=guardrailsai.com&amp;sz=128" alt="Guardrails AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">GA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/guardrails-ai/" aria-label="View details for Guardrails AI">Guardrails AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/guardrails-ai/" class="tc-btn-primary" aria-label="View full details for Guardrails AI">View Details</a>
+        <a href="https://guardrailsai.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Guardrails AI website">guardrailsai.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=h2o.ai&amp;sz=128" alt="H2O.ai logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">H</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/h2o-ai/" aria-label="View details for H2O.ai">H2O.ai</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/h2o-ai/" class="tc-btn-primary" aria-label="View full details for H2O.ai">View Details</a>
+        <a href="https://h2o.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit H2O.ai website">h2o.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=haystack.deepset.ai&amp;sz=128" alt="Haystack logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">H</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/haystack/" aria-label="View details for Haystack">Haystack</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/haystack/" class="tc-btn-primary" aria-label="View full details for Haystack">View Details</a>
+        <a href="https://haystack.deepset.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Haystack website">haystack.deepset.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=helicone.ai&amp;sz=128" alt="Helicone logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">H</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/helicone/" aria-label="View details for Helicone">Helicone</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/helicone/" class="tc-btn-primary" aria-label="View full details for Helicone">View Details</a>
+        <a href="https://www.helicone.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Helicone website">helicone.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=jan.ai&amp;sz=128" alt="Jan logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">J</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/jan/" aria-label="View details for Jan">Jan</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/jan/" class="tc-btn-primary" aria-label="View full details for Jan">View Details</a>
+        <a href="https://www.jan.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Jan website">jan.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=junie.jetbrains.com&amp;sz=128" alt="JetBrains Junie logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">JJ</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/jetbrains-junie/" aria-label="View details for JetBrains Junie">JetBrains Junie</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/jetbrains-junie/" class="tc-btn-primary" aria-label="View full details for JetBrains Junie">View Details</a>
+        <a href="https://junie.jetbrains.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit JetBrains Junie website">junie.jetbrains.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=jina.ai&amp;sz=128" alt="Jina AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">JA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/jina-ai/" aria-label="View details for Jina AI">Jina AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/jina-ai/" class="tc-btn-primary" aria-label="View full details for Jina AI">View Details</a>
+        <a href="https://jina.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Jina AI website">jina.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=khoj.dev&amp;sz=128" alt="Khoj logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">K</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/khoj/" aria-label="View details for Khoj">Khoj</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/khoj/" class="tc-btn-primary" aria-label="View full details for Khoj">View Details</a>
+        <a href="https://khoj.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Khoj website">khoj.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=kilo.ai&amp;sz=128" alt="Kilo logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">K</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/kilo/" aria-label="View details for Kilo">Kilo</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/kilo/" class="tc-btn-primary" aria-label="View full details for Kilo">View Details</a>
+        <a href="https://kilo.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Kilo website">kilo.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=kiro.dev&amp;sz=128" alt="Kiro logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">K</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/kiro/" aria-label="View details for Kiro">Kiro</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/kiro/" class="tc-btn-primary" aria-label="View full details for Kiro">View Details</a>
+        <a href="https://kiro.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Kiro website">kiro.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=labelstud.io&amp;sz=128" alt="Label Studio logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">LS</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/label-studio/" aria-label="View details for Label Studio">Label Studio</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/label-studio/" class="tc-btn-primary" aria-label="View full details for Label Studio">View Details</a>
+        <a href="https://labelstud.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Label Studio website">labelstud.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=labelbox.com&amp;sz=128" alt="Labelbox logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/labelbox/" aria-label="View details for Labelbox">Labelbox</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/labelbox/" class="tc-btn-primary" aria-label="View full details for Labelbox">View Details</a>
+        <a href="https://labelbox.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Labelbox website">labelbox.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=lancedb.com&amp;sz=128" alt="LanceDB logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/lancedb/" aria-label="View details for LanceDB">LanceDB</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/lancedb/" class="tc-btn-primary" aria-label="View full details for LanceDB">View Details</a>
+        <a href="https://www.lancedb.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit LanceDB website">lancedb.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=landing.ai&amp;sz=128" alt="LandingAI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/landingai/" aria-label="View details for LandingAI">LandingAI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/landingai/" class="tc-btn-primary" aria-label="View full details for LandingAI">View Details</a>
+        <a href="https://landing.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit LandingAI website">landing.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=langflow.org&amp;sz=128" alt="Langflow logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/langflow/" aria-label="View details for Langflow">Langflow</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/langflow/" class="tc-btn-primary" aria-label="View full details for Langflow">View Details</a>
+        <a href="https://www.langflow.org/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Langflow website">langflow.org</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=langfuse.com&amp;sz=128" alt="Langfuse logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/langfuse/" aria-label="View details for Langfuse">Langfuse</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/langfuse/" class="tc-btn-primary" aria-label="View full details for Langfuse">View Details</a>
+        <a href="https://langfuse.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Langfuse website">langfuse.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=letta.com&amp;sz=128" alt="Letta logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/letta/" aria-label="View details for Letta">Letta</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/letta/" class="tc-btn-primary" aria-label="View full details for Letta">View Details</a>
+        <a href="https://www.letta.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Letta website">letta.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=librechat.ai&amp;sz=128" alt="LibreChat logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/librechat/" aria-label="View details for LibreChat">LibreChat</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/librechat/" class="tc-btn-primary" aria-label="View full details for LibreChat">View Details</a>
+        <a href="https://www.librechat.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit LibreChat website">librechat.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=litellm.ai&amp;sz=128" alt="LiteLLM logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/litellm/" aria-label="View details for LiteLLM">LiteLLM</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/litellm/" class="tc-btn-primary" aria-label="View full details for LiteLLM">View Details</a>
+        <a href="https://www.litellm.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit LiteLLM website">litellm.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=lmstudio.ai&amp;sz=128" alt="LM Studio logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">LS</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/lm-studio/" aria-label="View details for LM Studio">LM Studio</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/lm-studio/" class="tc-btn-primary" aria-label="View full details for LM Studio">View Details</a>
+        <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit LM Studio website">lmstudio.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=locofy.ai&amp;sz=128" alt="Locofy logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">L</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/locofy/" aria-label="View details for Locofy">Locofy</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/locofy/" class="tc-btn-primary" aria-label="View full details for Locofy">View Details</a>
+        <a href="https://www.locofy.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Locofy website">locofy.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=mabl.com&amp;sz=128" alt="mabl logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/mabl/" aria-label="View details for mabl">mabl</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/mabl/" class="tc-btn-primary" aria-label="View full details for mabl">View Details</a>
+        <a href="https://www.mabl.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit mabl website">mabl.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=magicpatterns.com&amp;sz=128" alt="Magic Patterns logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">MP</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/magic-patterns/" aria-label="View details for Magic Patterns">Magic Patterns</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/magic-patterns/" class="tc-btn-primary" aria-label="View full details for Magic Patterns">View Details</a>
+        <a href="https://www.magicpatterns.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Magic Patterns website">magicpatterns.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=mastra.ai&amp;sz=128" alt="Mastra logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/mastra/" aria-label="View details for Mastra">Mastra</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/mastra/" class="tc-btn-primary" aria-label="View full details for Mastra">View Details</a>
+        <a href="https://mastra.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Mastra website">mastra.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=metabob.com&amp;sz=128" alt="Metabob logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/metabob/" aria-label="View details for Metabob">Metabob</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/metabob/" class="tc-btn-primary" aria-label="View full details for Metabob">View Details</a>
+        <a href="https://metabob.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Metabob website">metabob.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=mindstudio.ai&amp;sz=128" alt="MindStudio logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/mindstudio/" aria-label="View details for MindStudio">MindStudio</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/mindstudio/" class="tc-btn-primary" aria-label="View full details for MindStudio">View Details</a>
+        <a href="https://www.mindstudio.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit MindStudio website">mindstudio.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=mixedbread.com&amp;sz=128" alt="Mixedbread logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/mixedbread/" aria-label="View details for Mixedbread">Mixedbread</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/mixedbread/" class="tc-btn-primary" aria-label="View full details for Mixedbread">View Details</a>
+        <a href="https://www.mixedbread.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Mixedbread website">mixedbread.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=modal.com&amp;sz=128" alt="Modal logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/modal/" aria-label="View details for Modal">Modal</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/modal/" class="tc-btn-primary" aria-label="View full details for Modal">View Details</a>
+        <a href="https://modal.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Modal website">modal.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=momentic.ai&amp;sz=128" alt="Momentic logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">M</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/momentic/" aria-label="View details for Momentic">Momentic</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/momentic/" class="tc-btn-primary" aria-label="View full details for Momentic">View Details</a>
+        <a href="https://momentic.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Momentic website">momentic.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=mostly.ai&amp;sz=128" alt="MOSTLY AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">MA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/mostly-ai/" aria-label="View details for MOSTLY AI">MOSTLY AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/mostly-ai/" class="tc-btn-primary" aria-label="View full details for MOSTLY AI">View Details</a>
+        <a href="https://mostly.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit MOSTLY AI website">mostly.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=novita.ai&amp;sz=128" alt="Novita AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">NA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/novita-ai/" aria-label="View details for Novita AI">Novita AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/novita-ai/" class="tc-btn-primary" aria-label="View full details for Novita AI">View Details</a>
+        <a href="https://novita.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Novita AI website">novita.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=obviously.ai&amp;sz=128" alt="Obviously AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">OA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/obviously-ai/" aria-label="View details for Obviously AI">Obviously AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/obviously-ai/" class="tc-btn-primary" aria-label="View full details for Obviously AI">View Details</a>
+        <a href="https://obviously.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Obviously AI website">obviously.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=ollama.com&amp;sz=128" alt="Ollama logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">O</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/ollama/" aria-label="View details for Ollama">Ollama</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/ollama/" class="tc-btn-primary" aria-label="View full details for Ollama">View Details</a>
+        <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Ollama website">ollama.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=onlook.com&amp;sz=128" alt="Onlook logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">O</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/onlook/" aria-label="View details for Onlook">Onlook</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/onlook/" class="tc-btn-primary" aria-label="View full details for Onlook">View Details</a>
+        <a href="https://www.onlook.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Onlook website">onlook.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=openwebui.com&amp;sz=128" alt="Open WebUI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">OW</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/open-webui/" aria-label="View details for Open WebUI">Open WebUI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/open-webui/" class="tc-btn-primary" aria-label="View full details for Open WebUI">View Details</a>
+        <a href="https://openwebui.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Open WebUI website">openwebui.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=opencode.ai&amp;sz=128" alt="OpenCode logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">O</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/opencode/" aria-label="View details for OpenCode">OpenCode</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/opencode/" class="tc-btn-primary" aria-label="View full details for OpenCode">View Details</a>
+        <a href="https://opencode.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit OpenCode website">opencode.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=roboflow.com&amp;sz=128" alt="Roboflow logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/roboflow/" aria-label="View details for Roboflow">Roboflow</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/roboflow/" class="tc-btn-primary" aria-label="View full details for Roboflow">View Details</a>
+        <a href="https://roboflow.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Roboflow website">roboflow.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=runpod.io&amp;sz=128" alt="RunPod logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/runpod/" aria-label="View details for RunPod">RunPod</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/runpod/" class="tc-btn-primary" aria-label="View full details for RunPod">View Details</a>
+        <a href="https://www.runpod.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit RunPod website">runpod.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=sambanova.ai&amp;sz=128" alt="SambaNova logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/sambanova/" aria-label="View details for SambaNova">SambaNova</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/sambanova/" class="tc-btn-primary" aria-label="View full details for SambaNova">View Details</a>
+        <a href="https://sambanova.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit SambaNova website">sambanova.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=siliconflow.com&amp;sz=128" alt="SiliconFlow logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/siliconflow/" aria-label="View details for SiliconFlow">SiliconFlow</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/siliconflow/" class="tc-btn-primary" aria-label="View full details for SiliconFlow">View Details</a>
+        <a href="https://www.siliconflow.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit SiliconFlow website">siliconflow.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=snyk.io&amp;sz=128" alt="Snyk logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/snyk/" aria-label="View details for Snyk">Snyk</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/snyk/" class="tc-btn-primary" aria-label="View full details for Snyk">View Details</a>
+        <a href="https://snyk.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Snyk website">snyk.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=sourcery.ai&amp;sz=128" alt="Sourcery logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/sourcery/" aria-label="View details for Sourcery">Sourcery</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/sourcery/" class="tc-btn-primary" aria-label="View full details for Sourcery">View Details</a>
+        <a href="https://www.sourcery.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Sourcery website">sourcery.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=stackai.com&amp;sz=128" alt="Stack AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">SA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/stack-ai/" aria-label="View details for Stack AI">Stack AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/stack-ai/" class="tc-btn-primary" aria-label="View full details for Stack AI">View Details</a>
+        <a href="https://www.stackai.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Stack AI website">stackai.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=superannotate.com&amp;sz=128" alt="SuperAnnotate logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/superannotate/" aria-label="View details for SuperAnnotate">SuperAnnotate</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/superannotate/" class="tc-btn-primary" aria-label="View full details for SuperAnnotate">View Details</a>
+        <a href="https://www.superannotate.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit SuperAnnotate website">superannotate.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=sweep.dev&amp;sz=128" alt="Sweep logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">S</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/sweep/" aria-label="View details for Sweep">Sweep</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/sweep/" class="tc-btn-primary" aria-label="View full details for Sweep">View Details</a>
+        <a href="https://sweep.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Sweep website">sweep.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=tabbyml.com&amp;sz=128" alt="Tabby logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">T</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/tabby/" aria-label="View details for Tabby">Tabby</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/tabby/" class="tc-btn-primary" aria-label="View full details for Tabby">View Details</a>
+        <a href="https://www.tabbyml.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Tabby website">tabbyml.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=testim.io&amp;sz=128" alt="Testim logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">T</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/testim/" aria-label="View details for Testim">Testim</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/testim/" class="tc-btn-primary" aria-label="View full details for Testim">View Details</a>
+        <a href="https://www.testim.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Testim website">testim.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=trae.ai&amp;sz=128" alt="Trae logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">T</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/trae/" aria-label="View details for Trae">Trae</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/trae/" class="tc-btn-primary" aria-label="View full details for Trae">View Details</a>
+        <a href="https://www.trae.ai/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Trae website">trae.ai</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=ultralytics.com&amp;sz=128" alt="Ultralytics logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">U</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/ultralytics/" aria-label="View details for Ultralytics">Ultralytics</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/ultralytics/" class="tc-btn-primary" aria-label="View full details for Ultralytics">View Details</a>
+        <a href="https://www.ultralytics.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Ultralytics website">ultralytics.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=voideditor.com&amp;sz=128" alt="Void logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">V</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/void/" aria-label="View details for Void">Void</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/void/" class="tc-btn-primary" aria-label="View full details for Void">View Details</a>
+        <a href="https://voideditor.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Void website">voideditor.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=voyageai.com&amp;sz=128" alt="Voyage AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">VA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/voyage-ai/" aria-label="View details for Voyage AI">Voyage AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/voyage-ai/" class="tc-btn-primary" aria-label="View full details for Voyage AI">View Details</a>
+        <a href="https://www.voyageai.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Voyage AI website">voyageai.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=weaviate.io&amp;sz=128" alt="Weaviate logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">W</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/weaviate/" aria-label="View details for Weaviate">Weaviate</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/weaviate/" class="tc-btn-primary" aria-label="View full details for Weaviate">View Details</a>
+        <a href="https://weaviate.io/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Weaviate website">weaviate.io</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=zed.dev&amp;sz=128" alt="Zed logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">Z</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/zed/" aria-label="View details for Zed">Zed</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/zed/" class="tc-btn-primary" aria-label="View full details for Zed">View Details</a>
+        <a href="https://zed.dev/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Zed website">zed.dev</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=getzep.com&amp;sz=128" alt="Zep logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">Z</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/zep/" aria-label="View details for Zep">Zep</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/zep/" class="tc-btn-primary" aria-label="View full details for Zep">View Details</a>
+        <a href="https://www.getzep.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Zep website">getzep.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=zilliz.com&amp;sz=128" alt="Zilliz logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">Z</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/zilliz/" aria-label="View details for Zilliz">Zilliz</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/zilliz/" class="tc-btn-primary" aria-label="View full details for Zilliz">View Details</a>
+        <a href="https://zilliz.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Zilliz website">zilliz.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=scrunch.com&amp;sz=128" alt="Scrunch AI logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">SA</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/scrunch-ai/" aria-label="View details for Scrunch AI">Scrunch AI</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/scrunch-ai/" class="tc-btn-primary" aria-label="View full details for Scrunch AI">View Details</a>
+        <a href="https://scrunch.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Scrunch AI website">scrunch.com</a>
+      </div>
+    </div>
+        <div class="tool-card">
+      
+      <div class="tool-card-top tool-card-top--no-badge">
+        <div class="tool-logo-wrap"><img class="tool-logo" src="https://www.google.com/s2/favicons?domain=recall.it&amp;sz=128" alt="Recall logo" width="44" height="44" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="tool-logo-initials" style="display:none;">R</div></div>
+        <div class="tool-card-meta">
+          <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <h3 class="tool-name" style="margin: 0;">
+              <a href="/tools/recall/" aria-label="View details for Recall">Recall</a>
+            </h3>
+          </div>
+          <div class="tool-category" style="margin-top: 4px;">Development</div>
+        </div>
+      </div>
+      <p class="tool-description">&nbsp;</p>
+      <div class="tool-card-actions">
+        <a href="/tools/recall/" class="tc-btn-primary" aria-label="View full details for Recall">View Details</a>
+        <a href="https://www.recall.it/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Recall website">recall.it</a>
       </div>
     </div>
         </div>
