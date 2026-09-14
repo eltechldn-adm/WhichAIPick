@@ -1,28 +1,31 @@
-// Find My Tool Quiz Logic - Phase 4E.2 Recommendation Engine
+// Find My Tool Quiz Logic - Phase 4E.3 Recommendation Engine
 
 // Persistence Constants
-const STORAGE_KEY = 'whichaipick_quiz_state_v4e2';
+const STORAGE_KEY = 'whichaipick_quiz_state_v4e3';
 const EXPIRY_DAYS = 7;
 
 // Finder Intent Taxonomy (Maps primaryUseCases to exact intent tags)
 const INTENT_TAXONOMY = {
     // Writing & Content
-    'writing.generate_text': ['copywriting', 'content creation', 'writing', 'ad copy generation', 'ai writing assistant', 'blog writing'],
+    'writing.generate_text': ['copywriting', 'content creation', 'ad copy generation', 'ai writing assistant', 'blog writing'],
     'writing.rewrite': ['rephrasing', 'rewriting', 'paraphrasing'],
     'writing.longform': ['long-form content', 'book writing', 'essay writing'],
     
     // Coding & Development
-    'coding.write_code': ['writing code', 'code generation', 'programming', 'ai powered code editor', 'coding assistant'],
-    'coding.debug_code': ['debugging code', 'finding bugs', 'code analysis'],
-    'coding.build_apps': ['app building', 'web development', 'building apps'],
-    'coding.no_code_apps': ['no code app building', 'no-code website builder', 'no-code app builder'],
+    'coding.code_generation': ['writing code', 'code generation', 'programming', 'ai powered code editor', 'coding assistant', 'code completion', 'generating code'],
+    'coding.debugging': ['debugging code', 'finding bugs', 'code analysis', 'debugging & fixing code', 'explaining codebase'],
+    
+    // Building Apps & Sites
+    'building.ai_app_builder': ['building ai apps', 'building llm applications', 'building nlp applications', 'building custom chatbots'],
+    'building.no_code_app': ['no-code development', 'building apps from sheets', 'no code app building', 'building mobile apps without code', 'no code bot builder'],
+    'building.website_builder': ['ai website builder', 'visual web development', 'building responsive sites', 'generating websites', 'automated wordpress building', 'building landing pages'],
     
     // Research & Data Analysis
-    'research.web_search': ['search', 'searching the web', 'answering questions'],
+    'research.web_search': ['searching the web', 'answering questions', 'answering complex questions'],
     'research.academic_papers': ['searching scientific literature', 'finding evidence from research papers', 'academic research', 'academic discovery'],
     'research.document_analysis': ['analyzing long documents', 'document analysis', 'pdf analysis'],
     'research.data_analysis': ['data analysis', 'analyzing data sets', 'analyzing spreadsheets', 'analyzing excel files'],
-    'research.summarization': ['summarizing articles', 'summarizing long texts', 'summarization'],
+    'research.summarization': ['summarizing articles', 'summarizing long texts'],
     
     // Image Creation
     'image.generate': ['image generation', 'artistic image generation', 'creating ai art'],
@@ -38,24 +41,45 @@ const INTENT_TAXONOMY = {
     'audio.voice_generation': ['voice generation', 'text to speech', 'voice cloning'],
     
     // Workflow Automation
-    'automation.workflow': ['automation', 'workflow automation', 'automating tasks'],
-    'automation.app_integration': ['api integration', 'app integration', 'connecting apps'],
+    'automation.workflow': ['workflow automation', 'automating business workflows', 'automating tasks', 'marketing automation flows', 'open source automation'],
+    'automation.app_integration': ['api integration', 'app integration', 'connecting apps', 'connecting multiple apps'],
     
     // Meetings & Transcription
     'meetings.transcription': ['audio transcription', 'meeting transcription', 'transcribing audio'],
-    'meetings.notes': ['meeting notes', 'meeting summaries']
+    'meetings.notes': ['meeting notes', 'meeting summaries'],
+    
+    // Education
+    'education.teaching': ['grading student work', 'creating lesson plans', 'generating course structures', 'creating educational resources', 'lesson planning'],
+    'education.learning': ['learning programming', 'tutoring', 'active recall', 'learning new topics', 'learning medicine', 'studying flashcards']
 };
 
 function getToolIntents(tool) {
-    const intents = new Set();
+    const intents = [];
     const useCases = (tool.primaryUseCases || []).map(uc => uc.toLowerCase());
     
     for (const [intentKey, keywords] of Object.entries(INTENT_TAXONOMY)) {
-        if (useCases.some(uc => keywords.some(kw => uc.includes(kw)))) {
-            intents.add(intentKey);
+        for (const uc of useCases) {
+            const matchingKeyword = keywords.find(kw => uc.includes(kw));
+            if (matchingKeyword) {
+                intents.push({
+                    intent: intentKey,
+                    sourcePhrase: uc,
+                    matchedKeyword: matchingKeyword
+                });
+            }
         }
     }
-    return Array.from(intents);
+    
+    // Deduplicate by intent (keep first match)
+    const uniqueIntents = [];
+    const seen = new Set();
+    for (const i of intents) {
+        if (!seen.has(i.intent)) {
+            seen.add(i.intent);
+            uniqueIntents.push(i);
+        }
+    }
+    return uniqueIntents;
 }
 
 // Configuration
@@ -72,7 +96,8 @@ const quizConfig = [
             { text: "Video Creation", value: "video" },
             { text: "Audio / Voice / Music", value: "audio" },
             { text: "Workflow Automation", value: "automation" },
-            { text: "Meetings & Transcription", value: "meetings" }
+            { text: "Meetings & Transcription", value: "meetings" },
+            { text: "Education & Learning", value: "education" }
         ]
     },
     {
@@ -88,10 +113,11 @@ const quizConfig = [
                     { text: "Write long-form (books, essays)", value: "writing.longform" }
                 ];
                 case 'coding': return [
-                    { text: "Write or complete code", value: "coding.write_code" },
-                    { text: "Debug or fix code", value: "coding.debug_code" },
-                    { text: "Build apps with AI", value: "coding.build_apps" },
-                    { text: "Build apps without code", value: "coding.no_code_apps" }
+                    { text: "Write or complete code", value: "coding.code_generation" },
+                    { text: "Debug or fix code", value: "coding.debugging" },
+                    { text: "Build an app with an AI builder", value: "building.ai_app_builder" },
+                    { text: "Build an app without coding", value: "building.no_code_app" },
+                    { text: "Build a website", value: "building.website_builder" }
                 ];
                 case 'research': return [
                     { text: "Web research", value: "research.web_search" },
@@ -120,6 +146,10 @@ const quizConfig = [
                 case 'meetings': return [
                     { text: "Meeting transcription", value: "meetings.transcription" },
                     { text: "Meeting notes", value: "meetings.notes" }
+                ];
+                case 'education': return [
+                    { text: "Lesson planning & grading", value: "education.teaching" },
+                    { text: "Tutoring & studying", value: "education.learning" }
                 ];
                 default: return [];
             }
@@ -245,8 +275,8 @@ async function recommendTools(userAnswers) {
     topResults.forEach(r => {
         console.log(`Tool: ${r.tool.name} (${r.tool.id})`);
         console.log(`Score: ${r.score}`);
-        console.log(`Matched Finder Intents: ${JSON.stringify(r.debug.matchedIntents)}`);
-        console.log(`Source primaryUseCases: ${JSON.stringify(r.tool.primaryUseCases)}`);
+        console.log(`Matched Finder Intents:`, r.debug.matchedIntents);
+        console.log(`Source primaryUseCases:`, r.tool.primaryUseCases);
         console.log(`Budget Adj: ${r.debug.budgetAdjust} | Specialist Boost: ${r.debug.specialistBoost}`);
         console.log("---------------------------------");
     });
@@ -285,12 +315,13 @@ function calculateToolScore(tool, userAnswers) {
 
     // 2. EXPLICIT WORKFLOW RELEVANCE (Must have at least one match to Q2)
     const toolIntents = getToolIntents(tool);
-    if (!workflow || !toolIntents.includes(workflow)) {
+    const matchedIntentObj = toolIntents.find(i => i.intent === workflow);
+    if (!workflow || !matchedIntentObj) {
         return { score: -1, debug }; // Hard Relevance Floor
     }
     
     score += 10;
-    debug.matchedIntents.push(workflow);
+    debug.matchedIntents.push(matchedIntentObj);
 
     // 3. SECONDARY GOAL MATCH
     const goalMapping = {
@@ -301,7 +332,8 @@ function calculateToolScore(tool, userAnswers) {
         'video': ['Video Generation', 'Video & Audio'],
         'audio': ['Audio Generation', 'Video & Audio', 'Music'],
         'automation': ['Automation', 'Productivity'],
-        'meetings': ['Meetings', 'Productivity', 'Transcription']
+        'meetings': ['Meetings', 'Productivity', 'Transcription'],
+        'education': ['Education']
     };
     if (goal && goalMapping[goal] && tool.category && goalMapping[goal].includes(tool.category)) {
         score += 3;
@@ -318,7 +350,6 @@ function calculateToolScore(tool, userAnswers) {
 
     // 5. SPECIALIST BOOST
     if (specialist === 'specialist') {
-        // Boost if it exactly matches the category mapping and doesn't have too many extraneous use cases
         if (goal && goalMapping[goal] && tool.category && goalMapping[goal].includes(tool.category)) {
             score += 2;
             debug.specialistBoost = true;
@@ -397,7 +428,6 @@ function renderQuestion() {
     }
     
     if (!options || options.length === 0) {
-        // Fallback or error state
         return;
     }
 
@@ -433,7 +463,9 @@ function renderQuestion() {
     container.innerHTML = html;
     
     const questionContainer = document.getElementById('current-question-container');
-    if (questionContainer) questionContainer.focus();
+    if (questionContainer) {
+        questionContainer.focus();
+    }
 
     // Trigger reveal animation
     if (window.WhompRevealObserver) {
@@ -540,10 +572,7 @@ async function calculateAndShowResults() {
 async function showStoredResults(resultIds) {
     if (!window.loadTools) return;
     allTools = await window.loadTools();
-    const recommendations = [];
 
-    // Need full recalculation for proper labels and debug text
-    // since resultIds only has the IDs
     const currentRecs = await recommendTools(answers);
     
     if (currentRecs.length === 0) {
@@ -575,7 +604,6 @@ function renderResultsPage(recommendations) {
 
     let toolsHtml = '';
     
-    // Quick Compare Header Action
     const compareIds = recommendations.map(r => r.tool.id).join(',');
     toolsHtml += `
         <div class="results-compare-header">
