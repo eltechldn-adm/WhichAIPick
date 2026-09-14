@@ -35,6 +35,8 @@ const validTransitionTypes     = new Set(['none', 'rebranded', 'acquired', 'merg
 // lifecycleStatus is now DERIVED; keep enum for backwards-compat check only
 const validLifecycleStatuses  = new Set(['active', 'rebranded', 'acquired', 'merged', 'discontinued', 'unavailable', 'needs_review']);
 const allowedPlatformTokens   = new Set(['web', 'macos', 'windows', 'linux', 'ios', 'android', 'api', 'cli', 'extension', 'cloud', 'discord']);
+// 4A.2: dataProvenance valid values
+const validProvenanceValues   = new Set(['audited_source', 'existing_editorial', 'official_source_verified', 'derived', 'unknown']);
 
 const seenIds = new Set();
 const seenUrls = new Set();
@@ -51,6 +53,7 @@ const coverage = {
     aliases:              { populated: 0, empty: 0 },
     previousName:         { populated: 0, empty: 0 },
     pricingModel:         { known: 0, unknown: 0, details: {} },
+    pricingNeedsReview:   { needsReview: 0, ok: 0 },
     hasFreeTier:          { known: 0, unknown: 0, details: {} },
     hasFreeTrial:         { known: 0, unknown: 0, details: {} },
     experienceLevel:      { known: 0, unknown: 0, details: {} },
@@ -62,7 +65,8 @@ const coverage = {
     primaryUseCases:      { populated: 0, empty: 0 },
     bestFor:              { populated: 0, empty: 0 },
     notIdealFor:          { populated: 0, empty: 0 },
-    lastVerifiedAt:       { verified: 0, unverified: 0 }
+    lastVerifiedAt:       { verified: 0, unverified: 0 },
+    dataProvenance:       { present: 0, missing: 0 }
 };
 
 toolsJson.forEach((tool, index) => {
@@ -179,6 +183,37 @@ toolsJson.forEach((tool, index) => {
         if (tool.contentReviewRequired) coverage.contentReviewRequired.flagged++;
         else coverage.contentReviewRequired.clean++;
     }
+
+    // 4A.2: INTEGRITY RULE — contentReviewRequired=true must NOT be recommendationEligible
+    if (tool.contentReviewRequired === true && tool.recommendationEligible === true) {
+        console.error(`[ERROR] Tool ${tool.id}: contentReviewRequired=true but recommendationEligible=true. Unverified content must not be recommended.`);
+        errors++;
+    }
+
+    // 4A.2: INTEGRITY RULE — discontinued/unavailable tools must NOT be recommendationEligible
+    if (['discontinued', 'unavailable'].includes(tool.operationalStatus) && tool.recommendationEligible === true) {
+        console.error(`[ERROR] Tool ${tool.id}: operationalStatus=${tool.operationalStatus} but recommendationEligible=true. Inactive products must not be recommended.`);
+        errors++;
+    }
+
+    // 4A.2: dataProvenance validation
+    if (tool.dataProvenance && typeof tool.dataProvenance === 'object') {
+        coverage.dataProvenance.present++;
+        ['identity', 'pricing', 'useCases', 'lifecycle'].forEach(key => {
+            const val = tool.dataProvenance[key];
+            if (val !== undefined && !validProvenanceValues.has(val)) {
+                console.error(`[ERROR] Tool ${tool.id} has invalid dataProvenance.${key} value: "${val}"`);
+                errors++;
+            }
+        });
+    } else {
+        coverage.dataProvenance.missing++;
+        // dataProvenance is not required for tools without decision attributes
+    }
+
+    // 4A.2: pricingNeedsReview coverage
+    if (tool.pricingNeedsReview === true) coverage.pricingNeedsReview.needsReview++;
+    else if (tool.pricingNeedsReview === false) coverage.pricingNeedsReview.ok++;
 
     // ─ lifecycleStatus (DERIVED — backwards-compat only, not primary) ─────────────
     if (tool.lifecycleStatus !== undefined && tool.lifecycleStatus !== null) {
@@ -378,19 +413,27 @@ toolsJson.forEach(tool => {
 
 // contentReviewRequired — list flagged records as warnings
 toolsJson.filter(t => t.contentReviewRequired).forEach(t => {
-    console.warn(`[WARNING] Tool ${t.id} ("${t.name}") is flagged contentReviewRequired=true. Editorial review needed.`);
+    const reason = t.contentReviewReason ? ` Reason: ${t.contentReviewReason}` : '';
+    console.warn(`[WARNING] Tool ${t.id} ("${t.name}") is flagged contentReviewRequired=true.${reason} Editorial review needed before Phase 5.`);
     warnings++;
 });
+
+// 4A.2: Warn on stale/unverified pricing
+toolsJson.filter(t => t.pricingNeedsReview === true).length > 0 &&
+    console.warn(`[WARNING] ${toolsJson.filter(t => t.pricingNeedsReview === true).length} tools have pricingNeedsReview=true. Pricing data requires editorial verification.`);
+if (toolsJson.filter(t => t.pricingNeedsReview === true).length > 0) warnings++;
 
 // PRINT DATA COVERAGE REPORT
 const totalEligible = coverage.recommendationEligible.eligible;
 const totalIneligible = coverage.recommendationEligible.ineligible;
 
 console.log(`\n==================================================`);
-console.log(`WHICHAIPICK DECISION DATA COVERAGE REPORT (4A.1)`);
+console.log(`WHICHAIPICK DECISION DATA COVERAGE REPORT (4A.2)`);
 console.log(`Total Tools: ${totalTools}`);
 console.log(`Recommendation Eligible: ${totalEligible} | Ineligible: ${totalIneligible}`);
 console.log(`Content Review Required: ${coverage.contentReviewRequired.flagged}`);
+console.log(`Pricing Needs Review:    ${coverage.pricingNeedsReview.needsReview}`);
+console.log(`Data Provenance Present: ${coverage.dataProvenance.present} | Missing: ${coverage.dataProvenance.missing}`);
 console.log(`==================================================`);
 
 const reportRow = (name, known, unknown, details = '') => {
@@ -404,8 +447,10 @@ reportRow('Transition Type',       coverage.transitionType.known, coverage.trans
 reportRow('Successor Tool ID',     coverage.successorToolId.set, coverage.successorToolId.unset);
 reportRow('Lifecycle (derived)',   coverage.lifecycleStatus.known, 0, JSON.stringify(coverage.lifecycleStatus.details));
 
-console.log('\n── Pricing & Accessibility ───────────────────────────────────────────────');
-reportRow('Pricing Model',         coverage.pricingModel.known, coverage.pricingModel.unknown, JSON.stringify(coverage.pricingModel.details));
+console.log('\n── Pricing & Accessibility ──────────────────────────────────────────────');
+// Pricing framing: POPULATED = have a known enum | UNKNOWN = pricingModel=unknown | NEEDS REVIEW = pricingNeedsReview=true
+console.log(`Pricing Model (populated):    ${coverage.pricingModel.known}/${totalTools} (${((coverage.pricingModel.known/totalTools)*100).toFixed(1)}%) | Unknown: ${coverage.pricingModel.unknown} | Detail: ${JSON.stringify(coverage.pricingModel.details)}`);
+console.log(`Pricing Needs Review:         ${coverage.pricingNeedsReview.needsReview} tools need editorial pricing verification`);
 reportRow('Free Tier',             coverage.hasFreeTier.known, coverage.hasFreeTier.unknown, `true:${coverage.hasFreeTier.details['true'] || 0}, false:${coverage.hasFreeTier.details['false'] || 0}`);
 reportRow('Free Trial',            coverage.hasFreeTrial.known, coverage.hasFreeTrial.unknown, `true:${coverage.hasFreeTrial.details['true'] || 0}`);
 reportRow('API Available',         coverage.apiAvailable.known, coverage.apiAvailable.unknown);
@@ -424,6 +469,7 @@ reportRow('Aliases / Rebrands',    coverage.aliases.populated, coverage.aliases.
 reportRow('Previous Name',         coverage.previousName.populated, coverage.previousName.empty);
 reportRow('Platforms',             coverage.platforms.known, coverage.platforms.unknown);
 reportRow('Verification Date',     coverage.lastVerifiedAt.verified, coverage.lastVerifiedAt.unverified);
+console.log(`Data Provenance:              Present: ${coverage.dataProvenance.present} | Missing: ${coverage.dataProvenance.missing}`);
 console.log(`==================================================\n`);
 
 

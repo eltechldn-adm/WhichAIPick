@@ -87,14 +87,21 @@ function deriveLegacyLifecycleStatus(operationalStatus, transitionType) {
 /**
  * A tool is eligible for recommendation when:
  *   1. It is currently operational (operationalStatus === 'active'), AND
- *   2. There is no separate, superior canonical record in the DB (successorToolId is empty).
+ *   2. There is no separate, superior canonical record in the DB (successorToolId is empty), AND
+ *   3. Its editorial content has been confirmed to accurately describe the current product
+ *      (contentReviewRequired !== true).
  *
  * If successorToolId is set (e.g. bing-chat → microsoft-copilot), the successor
  * record will be shown instead, preventing duplicate recommendations.
+ *
+ * If contentReviewRequired is true, the editorial body may mismatch the product
+ * being described (e.g. legacy content after rebrand/acquisition). These tools
+ * must not appear in active recommendations until Phase 5 editorial refresh.
  */
-function deriveRecommendationEligible(operationalStatus, successorToolId) {
+function deriveRecommendationEligible(operationalStatus, successorToolId, contentReviewRequired) {
     if (operationalStatus !== 'active') return false;
     if (successorToolId && successorToolId.trim()) return false;
+    if (contentReviewRequired === true) return false;
     return true;
 }
 
@@ -120,9 +127,12 @@ if (fs.existsSync(DECISION_FILE)) {
     if (lines.length > 0) {
         const headers = lines[0].split(',').map(h => h.trim());
 
-        // Detect schema version: 4A.1 uses operationalStatus; legacy used lifecycleStatus
+        // Detect schema version: 4A.2 adds provenance + pricingNeedsReview columns
         const isV2Schema = headers.includes('operationalStatus');
-        if (isV2Schema) {
+        const isV2_2Schema = headers.includes('contentReviewReason');
+        if (isV2_2Schema) {
+            console.log('  📋 Detected 4A.2 schema (provenance + pricingNeedsReview columns)');
+        } else if (isV2Schema) {
             console.log('  📋 Detected 4A.1 schema (operationalStatus + transitionType)');
         } else {
             console.warn('  ⚠️  Legacy schema detected (lifecycleStatus). Run CSV migration first.');
@@ -146,12 +156,28 @@ if (fs.existsSync(DECISION_FILE)) {
                     else attrs[header] = null;
                 } else if (header === 'contentReviewRequired') {
                     attrs[header] = val === 'true';
-                } else if (['previousName','lastVerifiedAt','successorToolId'].includes(header)) {
+                } else if (header === 'pricingNeedsReview') {
+                    attrs[header] = val === 'true';
+                } else if (['previousName','lastVerifiedAt','successorToolId','contentReviewReason'].includes(header)) {
                     attrs[header] = val && val !== 'null' && val !== 'unknown' ? val : null;
+                } else if (header.startsWith('provenance_')) {
+                    // Collected below into dataProvenance object
+                    attrs[header] = val || 'existing_editorial';
                 } else {
                     attrs[header] = val || 'unknown';
                 }
             }
+
+            // ── Build dataProvenance object from individual columns ───────────────────────────
+            const VALID_PROVENANCE = new Set(['audited_source','existing_editorial','official_source_verified','derived','unknown']);
+            attrs.dataProvenance = {
+                identity:  VALID_PROVENANCE.has(attrs.provenance_identity)  ? attrs.provenance_identity  : 'existing_editorial',
+                pricing:   VALID_PROVENANCE.has(attrs.provenance_pricing)   ? attrs.provenance_pricing   : (attrs.pricingModel && attrs.pricingModel !== 'unknown' ? 'existing_editorial' : 'unknown'),
+                useCases:  VALID_PROVENANCE.has(attrs.provenance_useCases)  ? attrs.provenance_useCases  : 'existing_editorial',
+                lifecycle: VALID_PROVENANCE.has(attrs.provenance_lifecycle) ? attrs.provenance_lifecycle : 'existing_editorial',
+            };
+            // Clean up individual provenance columns from the attrs object
+            ['provenance_identity','provenance_pricing','provenance_useCases','provenance_lifecycle'].forEach(k => delete attrs[k]);
 
             // ── Derived fields ──────────────────────────────────────────────────
             const opSt  = attrs.operationalStatus || 'active';
@@ -161,8 +187,8 @@ if (fs.existsSync(DECISION_FILE)) {
             // 1. Backwards-compat lifecycleStatus (derived)
             attrs.lifecycleStatus = deriveLegacyLifecycleStatus(opSt, trTyp);
 
-            // 2. recommendationEligible (derived)
-            attrs.recommendationEligible = deriveRecommendationEligible(opSt, sucId);
+            // 2. recommendationEligible (derived) — 4A.2 rule
+            attrs.recommendationEligible = deriveRecommendationEligible(opSt, sucId, attrs.contentReviewRequired);
 
             decisionMap.set(id, attrs);
         }

@@ -6,13 +6,21 @@
  * and to confirm the Cloudflare build succeeded.
  *
  * Fields:
+ *   environment    - 'preview' (Cloudflare) | 'local' (local build)
  *   buildTime      - ISO 8601 UTC timestamp of when this build ran
- *   schemaVersion  - The decision-data schema version (4A.1, 4B, etc.)
+ *   schemaVersion  - The decision-data schema version (4A.2, 4B, etc.)
  *   branch         - Git branch name (from CF_PAGES_BRANCH or fallback)
- *   commitHash     - Git commit SHA (from CF_PAGES_COMMIT_SHA or fallback)
+ *   commitHash     - Git commit SHA. Fallback order:
+ *                    1. CF_PAGES_COMMIT_SHA (set by Cloudflare during build)
+ *                    2. git rev-parse HEAD (local development)
+ *                    Note: If Cloudflare Pages is configured with no build command,
+ *                    this will be the local git HEAD at predeploy time, not the
+ *                    deployed commit. Set Build Command = "npm run build:cloudflare"
+ *                    in Cloudflare Pages settings to get the correct commit hash.
  *   toolCount      - Number of tools in the published database
  *   eligibleCount  - Number of tools with recommendationEligible=true
  *   contentReviewCount - Number of tools flagged for editorial review
+ *   pricingNeedsReviewCount - Number of tools with pricingNeedsReview=true
  *   dataFile       - Relative path to the source data file
  */
 import fs from 'fs';
@@ -44,27 +52,34 @@ if (!fs.existsSync(TOOLS_FILE)) {
 }
 
 const tools = JSON.parse(fs.readFileSync(TOOLS_FILE, 'utf8'));
-const toolCount          = tools.length;
-const eligibleCount      = tools.filter(t => t.recommendationEligible === true).length;
-const contentReviewCount = tools.filter(t => t.contentReviewRequired  === true).length;
+const toolCount                = tools.length;
+const eligibleCount            = tools.filter(t => t.recommendationEligible === true).length;
+const contentReviewCount       = tools.filter(t => t.contentReviewRequired  === true).length;
+const pricingNeedsReviewCount  = tools.filter(t => t.pricingNeedsReview     === true).length;
+
+// Determine environment: Cloudflare sets CF_PAGES_COMMIT_SHA during its build step
+const environment = process.env.CF_PAGES_COMMIT_SHA ? 'preview' : 'local';
 
 // ─── Write build-info.json ────────────────────────────────────────────────────
 const buildInfo = {
-    buildTime:          new Date().toISOString(),
-    schemaVersion:      '4A.1',
+    environment,
+    buildTime:              new Date().toISOString(),
+    schemaVersion:          '4A.2',
     branch,
     commitHash,
     toolCount,
     eligibleCount,
     contentReviewCount,
-    dataFile:           'data/tools.json',
+    pricingNeedsReviewCount,
+    dataFile:               'data/tools.json',
 };
 
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(buildInfo, null, 2), 'utf8');
 
 console.log('📦 build-info.json written:');
+console.log(`   Environment:    ${environment}`);
 console.log(`   Branch:         ${branch}`);
 console.log(`   Commit:         ${commitHash.slice(0, 8)}`);
 console.log(`   Schema:         ${buildInfo.schemaVersion}`);
-console.log(`   Tools:          ${toolCount} (${eligibleCount} eligible, ${contentReviewCount} need review)`);
+console.log(`   Tools:          ${toolCount} (${eligibleCount} eligible, ${contentReviewCount} need review, ${pricingNeedsReviewCount} pricing review)`);
 console.log(`   Build time:     ${buildInfo.buildTime}`);

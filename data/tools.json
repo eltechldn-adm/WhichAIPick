@@ -113,7 +113,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "activepieces",
@@ -192,7 +200,7 @@
     "pricing_overview": "<p>Activepieces offers a generous Free tier on their cloud-hosted SaaS platform. Pro plans are tiered based on the number of generated \"tasks\" per month. Alternatively, developers can self-host the community edition completely for free using Docker, paying only for their own server costs.</p>",
     "comparison_summary": "<p>Activepieces competes directly with Zapier, Make, and n8n. Zapier is simpler but astronomically expensive at scale. Make offers established visual complexity for data routing. Activepieces is strategically closest to n8n, as both target the open-source and self-hosting market. While n8n appeals heavily to hardcore software engineers due to its highly technical node structure, Activepieces differentiates itself by providing a Zapier-like, user-friendly UI on top of an open-source backend, bridging the gap between developers and ops teams.</p>",
     "pricing_last_verified": "2026-02-20",
-    "pricingModel": "free",
+    "pricingModel": "freemium",
     "hasFreeTier": true,
     "experienceLevel": "unknown",
     "platforms": [],
@@ -229,7 +237,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "ada",
@@ -345,7 +361,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "adalo",
@@ -461,7 +485,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "adcreativeai",
@@ -577,7 +609,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "adobe-firefly",
@@ -700,7 +740,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "ai21-labs",
@@ -816,7 +864,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "aiva",
@@ -932,7 +988,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "akkio",
@@ -1048,7 +1112,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "amazon-codewhisperer",
@@ -1168,7 +1240,15 @@
     "transitionType": "rebranded",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "anthropic-claude-api",
@@ -1284,7 +1364,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "anyword",
@@ -1400,7 +1488,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "appgyver",
@@ -1520,7 +1616,15 @@
     "transitionType": "acquired",
     "successorToolId": null,
     "contentReviewRequired": true,
-    "recommendationEligible": true
+    "recommendationEligible": false,
+    "contentReviewReason": "legacy_content_after_acquisition",
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "artbreeder",
@@ -1636,7 +1740,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "askcodi",
@@ -1752,7 +1864,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "assemblyai",
@@ -1868,7 +1988,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "attention-insight",
@@ -1984,7 +2112,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "automator",
@@ -2100,7 +2236,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "avoma",
@@ -2216,7 +2360,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "bardeen",
@@ -2332,7 +2484,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "beatoven",
@@ -2448,7 +2608,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "beautifulai",
@@ -2564,7 +2732,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "bildr",
@@ -2680,7 +2856,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "bing-chat",
@@ -2801,7 +2985,15 @@
     "transitionType": "rebranded",
     "successorToolId": "microsoft-copilot",
     "contentReviewRequired": false,
-    "recommendationEligible": false
+    "recommendationEligible": false,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "blackbox-ai",
@@ -2917,7 +3109,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "bluewillow",
@@ -3033,7 +3233,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "booke-ai",
@@ -3149,7 +3357,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "boomy",
@@ -3265,7 +3481,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "botpress",
@@ -3381,7 +3605,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "brandmark",
@@ -3497,7 +3729,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "breeze-ai",
@@ -3613,7 +3853,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "brisk-teaching",
@@ -3729,7 +3977,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "bubble",
@@ -3845,7 +4101,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "buffer-ai-assistant",
@@ -3961,7 +4225,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "canva-ai",
@@ -4084,7 +4356,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "casetext-cocounsel",
@@ -4200,7 +4480,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "chatfuel",
@@ -4316,7 +4604,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "chatgpt",
@@ -4441,7 +4737,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "chatgpt-advanced-data-analysis",
@@ -4557,7 +4861,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "chorusai",
@@ -4673,7 +4985,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "claude",
@@ -4798,7 +5118,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "cleanuppictures",
@@ -4914,7 +5242,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "clearscope",
@@ -5030,7 +5366,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "cleo",
@@ -5146,7 +5490,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "clerkio",
@@ -5262,7 +5614,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "clickup-ai",
@@ -5378,7 +5738,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "clipchamp",
@@ -5494,7 +5862,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "clipdrop",
@@ -5610,7 +5986,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "coda-ai",
@@ -5726,7 +6110,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "codeium",
@@ -5841,16 +6233,24 @@
       "Community and plugin ecosystem smaller than GitHub Copilot",
       "Chat feature less capable than Copilot Chat in complex scenarios"
     ],
-    "lifecycleStatus": "active",
+    "lifecycleStatus": "acquired",
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
     "verificationSources": [],
     "operationalStatus": "active",
-    "transitionType": "none",
+    "transitionType": "acquired",
     "successorToolId": null,
     "contentReviewRequired": true,
-    "recommendationEligible": true
+    "recommendationEligible": false,
+    "contentReviewReason": "successor_product_mismatch",
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "codex-openai",
@@ -5964,7 +6364,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "cognii",
@@ -6080,7 +6488,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "cohere-api",
@@ -6196,7 +6612,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "colormind",
@@ -6312,7 +6736,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "colossyan",
@@ -6428,7 +6860,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "consensus",
@@ -6544,7 +6984,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "contentbot",
@@ -6660,7 +7108,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "contentshake-ai",
@@ -6776,7 +7232,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "contentstudio",
@@ -6892,7 +7356,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "continue",
@@ -7010,7 +7482,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "copyai",
@@ -7128,7 +7608,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "copysmith",
@@ -7244,7 +7732,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "coursebox",
@@ -7360,7 +7856,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "craft",
@@ -7476,7 +7980,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "craiyon",
@@ -7592,7 +8104,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "creatify",
@@ -7708,7 +8228,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "cursor",
@@ -7836,7 +8364,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "d-id",
@@ -7952,7 +8488,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "dall-e-3",
@@ -8075,7 +8619,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "datarobot",
@@ -8191,7 +8743,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "debuild",
@@ -8307,7 +8867,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "decktopus",
@@ -8423,7 +8991,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "deepai",
@@ -8539,7 +9115,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "describely",
@@ -8655,7 +9239,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "descript",
@@ -8778,7 +9370,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "descript-overdub",
@@ -8894,7 +9494,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "diagram",
@@ -9010,7 +9618,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "docyt",
@@ -9126,7 +9742,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "donotpay",
@@ -9242,7 +9866,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "dreamstudio",
@@ -9358,7 +9990,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "drift",
@@ -9474,7 +10114,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "duolingo-max",
@@ -9591,7 +10239,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "durable",
@@ -9707,7 +10363,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "educaidor",
@@ -9823,7 +10487,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "elevenlabs",
@@ -9946,7 +10618,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "elicit",
@@ -10062,7 +10742,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "fathom",
@@ -10178,7 +10866,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "feedhive",
@@ -10294,7 +10990,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "fig",
@@ -10415,7 +11119,15 @@
     "transitionType": "acquired",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "finalround-ai",
@@ -10531,7 +11243,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "finance-pal",
@@ -10647,7 +11367,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "finch",
@@ -10763,7 +11491,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "firefliesai",
@@ -10886,7 +11622,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "fliki",
@@ -11002,7 +11746,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "flutterflow",
@@ -11119,7 +11871,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "forethought",
@@ -11235,7 +11995,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "framer",
@@ -11358,7 +12126,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "framer-ai",
@@ -11474,7 +12250,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "frase",
@@ -11590,7 +12374,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "freshdesk-ai",
@@ -11706,7 +12498,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "galileo-ai",
@@ -11826,7 +12626,15 @@
     "transitionType": "acquired",
     "successorToolId": null,
     "contentReviewRequired": true,
-    "recommendationEligible": true
+    "recommendationEligible": false,
+    "contentReviewReason": "legacy_content_after_acquisition",
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "gamma",
@@ -11949,7 +12757,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "github-copilot",
@@ -12072,7 +12888,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "glass-health",
@@ -12188,7 +13012,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "glide",
@@ -12304,7 +13136,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "gong",
@@ -12420,7 +13260,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "google-ai-studio",
@@ -12536,7 +13384,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "gradescope-ai",
@@ -12652,7 +13508,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "grain",
@@ -12768,7 +13632,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "grammarly",
@@ -12891,7 +13763,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "gridlex",
@@ -13007,7 +13887,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "growthbar",
@@ -13123,7 +14011,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "happy-scribe",
@@ -13239,7 +14135,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "harvey-ai",
@@ -13355,7 +14259,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "help-scout-ai",
@@ -13471,7 +14383,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hex",
@@ -13587,7 +14507,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "heygen",
@@ -13710,7 +14638,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hootsuite-insights",
@@ -13826,7 +14762,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hostinger-ai-builder",
@@ -13942,7 +14886,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hugging-face",
@@ -14021,7 +14973,7 @@
     "pricing_overview": "<p>The core Hugging Face Hub, including public model and dataset hosting, is free. Paid tiers exist for Pro accounts providing higher usage limits and compute resources for Spaces. Enterprise Hub plans offer private infrastructure, SSO, and dedicated support for organizations.</p>",
     "comparison_summary": "<p>Hugging Face has no direct 1:1 equivalent in scale and community adoption within the open-source AI model ecosystem. It is conceptually similar to GitHub, but for machine learning. While cloud providers like AWS (SageMaker) or Google Cloud (Vertex AI) offer model hosting, they are deployment platforms rather than community collaborative hubs. Hugging Face integrates with these cloud providers rather than competing directly.</p>",
     "pricing_last_verified": "2026-02-20",
-    "pricingModel": "free",
+    "pricingModel": "freemium",
     "hasFreeTier": true,
     "experienceLevel": "unknown",
     "platforms": [],
@@ -14058,7 +15010,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hyperwrite",
@@ -14174,7 +15134,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hypotenuse-ai",
@@ -14290,7 +15258,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "ideogram",
@@ -14406,7 +15382,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "instantlyai",
@@ -14522,7 +15506,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "intercom-fin",
@@ -14645,7 +15637,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "invideo",
@@ -14768,7 +15768,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "jasper-ai",
@@ -14891,7 +15899,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "jenni-ai",
@@ -15007,7 +16023,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "julius-ai",
@@ -15123,7 +16147,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "kapwing",
@@ -15239,7 +16271,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "khan-academy-khanmigo",
@@ -15355,7 +16395,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "khroma",
@@ -15471,7 +16519,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "kickresume",
@@ -15587,7 +16643,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "krisp",
@@ -15703,7 +16767,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "kustomer-ai",
@@ -15819,7 +16891,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lalalai",
@@ -15935,7 +17015,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "landbot",
@@ -16051,7 +17139,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lately",
@@ -16167,7 +17263,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lavender",
@@ -16283,7 +17387,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lawgeex",
@@ -16399,7 +17511,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lazyapply",
@@ -16515,7 +17635,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "legalmation",
@@ -16631,7 +17759,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lemlist",
@@ -16747,7 +17883,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "leonardo-ai",
@@ -16870,7 +18014,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "let's-enhance",
@@ -16986,7 +18138,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lex",
@@ -17102,7 +18262,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "looka",
@@ -17218,7 +18386,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lumen5",
@@ -17334,7 +18510,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "luminar-neo",
@@ -17450,7 +18634,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "magical",
@@ -17566,7 +18758,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "magician-figma",
@@ -17682,7 +18882,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "magicschool-ai",
@@ -17798,7 +19006,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "make-integromat",
@@ -17914,7 +19130,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "manychat",
@@ -18030,7 +19254,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "marketmuse",
@@ -18146,7 +19378,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "mem",
@@ -18262,7 +19502,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "memorable",
@@ -18378,7 +19626,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "microsoft-power-automate",
@@ -18494,7 +19750,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "midjourney",
@@ -18617,7 +19881,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "mintlify-writer",
@@ -18733,7 +20005,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "mockup-ai",
@@ -18849,7 +20129,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "monarch-money",
@@ -18965,7 +20253,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "monkeylearn",
@@ -19084,7 +20380,15 @@
     "transitionType": "acquired",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "motion",
@@ -19200,7 +20504,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "murf-ai",
@@ -19323,7 +20635,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "n8n",
@@ -19402,7 +20722,7 @@
     "pricing_overview": "<p>n8n offers a cloud-hosted version with tiered subscription pricing based on workflow executions and active workflows. Alternatively, the source-available version can be self-hosted for free or with an enterprise license for supported, large-scale deployment.</p>",
     "comparison_summary": "<p>n8n competes with Zapier, make (Integromat), and ActivePieces. Zapier is the market leader for non-technical business users due to its simplicity and integrations breadth. Make offers better visual complexity than Zapier. n8n differentiates itself by serving a more technical developer audience, offering source-availability for self-hosting, and providing advanced logic capabilities that appeal to engineers rather than marketers.</p>",
     "pricing_last_verified": "2026-02-20",
-    "pricingModel": "free",
+    "pricingModel": "freemium",
     "hasFreeTier": true,
     "experienceLevel": "unknown",
     "platforms": [],
@@ -19439,7 +20759,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "nabla-copilot",
@@ -19551,7 +20879,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "neuronwriter",
@@ -19667,7 +21003,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "nightcafe",
@@ -19783,7 +21127,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "nosto",
@@ -19899,7 +21251,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "notion-ai",
@@ -20022,7 +21382,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "ocoya",
@@ -20138,7 +21506,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "octane-ai",
@@ -20254,7 +21630,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "omneky",
@@ -20370,7 +21754,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "openai-api",
@@ -20486,7 +21878,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "otterai",
@@ -20609,7 +22009,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pencil",
@@ -20725,7 +22133,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "perplexity-ai",
@@ -20841,7 +22257,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "phind",
@@ -20957,7 +22381,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "photor",
@@ -21069,7 +22501,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pictory",
@@ -21185,7 +22625,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pieces",
@@ -21301,7 +22749,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pitch",
@@ -21417,7 +22873,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pixlr-ai",
@@ -21533,7 +22997,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pixray",
@@ -21645,7 +23117,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "playground-ai",
@@ -21761,7 +23241,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "polyai",
@@ -21877,7 +23365,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "polymer",
@@ -21993,7 +23489,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "postwise",
@@ -22109,7 +23613,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "predisai",
@@ -22225,7 +23737,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "presentationsai",
@@ -22341,7 +23861,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "prowritingaid",
@@ -22457,7 +23985,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "quickads",
@@ -22573,7 +24109,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "quillbot",
@@ -22696,7 +24240,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "quizizz-ai",
@@ -22816,7 +24368,15 @@
     "transitionType": "rebranded",
     "successorToolId": null,
     "contentReviewRequired": true,
-    "recommendationEligible": true
+    "recommendationEligible": false,
+    "contentReviewReason": "legacy_content_after_rebrand",
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "quizlet-q-chat",
@@ -22932,7 +24492,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "rasa",
@@ -23048,7 +24616,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "readai",
@@ -23164,7 +24740,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "rebuy",
@@ -23280,7 +24864,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "reclaim",
@@ -23396,7 +24988,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "reflect",
@@ -23512,7 +25112,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "regieai",
@@ -23628,7 +25236,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "relay",
@@ -23744,7 +25360,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "relume",
@@ -23860,7 +25484,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "remini",
@@ -23976,7 +25608,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "removebg",
@@ -24092,7 +25732,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "replai",
@@ -24186,7 +25834,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "replicate",
@@ -24280,7 +25936,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "replika",
@@ -24396,7 +26060,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "replit-ai",
@@ -24490,7 +26162,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "replyio",
@@ -24597,7 +26277,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "research-rabbit",
@@ -24703,7 +26391,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "resemble-ai",
@@ -24817,7 +26513,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "resume-worded",
@@ -24933,7 +26637,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "retool",
@@ -25039,7 +26751,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "rev-ai",
@@ -25148,7 +26868,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "rezi",
@@ -25255,7 +26983,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "rows",
@@ -25364,7 +27100,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "runway",
@@ -25487,7 +27231,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "rytr",
@@ -25603,7 +27355,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "scalenut",
@@ -25719,7 +27479,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "scholarcy",
@@ -25835,7 +27603,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "scispace",
@@ -25951,7 +27727,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "sembly",
@@ -26067,7 +27851,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "semrush",
@@ -26183,7 +27975,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "shopify-magic",
@@ -26299,7 +28099,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "shortly-ai",
@@ -26415,7 +28223,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "shortwave",
@@ -26531,7 +28347,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "simplified",
@@ -26647,7 +28471,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "sivi-ai",
@@ -26763,7 +28595,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "slidesai",
@@ -26879,7 +28719,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "slidespeak",
@@ -26995,7 +28843,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "smartwriter",
@@ -27111,7 +28967,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "softr",
@@ -27227,7 +29091,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "sonara",
@@ -27343,7 +29215,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "soundraw",
@@ -27459,7 +29339,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "sourcegraph-cody",
@@ -27575,7 +29463,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "spark",
@@ -27691,7 +29587,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "speechify",
@@ -27807,7 +29711,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "speedy-brand",
@@ -27923,7 +29835,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "spellbook",
@@ -28039,7 +29959,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "stable-diffusion",
@@ -28162,7 +30090,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "starryai",
@@ -28278,7 +30214,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "sudowrite",
@@ -28394,7 +30338,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "superhuman",
@@ -28510,7 +30462,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "surfer-seo",
@@ -28633,7 +30593,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "synthesia",
@@ -28756,7 +30724,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tableau-ai",
@@ -28872,7 +30848,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tabnine",
@@ -28995,7 +30979,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tana",
@@ -29111,7 +31103,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "taplio",
@@ -29227,7 +31227,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "taskade",
@@ -29343,7 +31351,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "teal",
@@ -29459,7 +31475,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "textcortex",
@@ -29575,7 +31599,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "thoughtspot",
@@ -29691,7 +31723,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tidio",
@@ -29807,7 +31847,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tl;dv",
@@ -29923,7 +31971,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "together-ai",
@@ -30039,7 +32095,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tome",
@@ -30146,16 +32210,24 @@
       "Exporting a large-scale Tome narrative *out* of the ecosystem (like downloading it as a standard PDF to print it) occasionally strips away the capability, removing the fluid transitions and interactive web embeds that make the tool powerful",
       "If a user specifically demands established, complex, pixel-accurately microscopic control over exactly where a line breaks or an image rests (like using Adobe InDesign), they will find Tome's autonomous grid layouts highly frustrating and unyielding"
     ],
-    "lifecycleStatus": "active",
+    "lifecycleStatus": "discontinued",
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
     "verificationSources": [],
-    "operationalStatus": "active",
+    "operationalStatus": "discontinued",
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": false,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "audited_source"
+    }
   },
   {
     "id": "topaz-ai",
@@ -30271,7 +32343,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "trayio",
@@ -30387,7 +32467,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "trint",
@@ -30503,7 +32591,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "twain",
@@ -30619,7 +32715,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "tweet-hunter",
@@ -30726,7 +32830,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "uizard",
@@ -30833,7 +32945,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "ultimateai",
@@ -30943,7 +33063,15 @@
     "transitionType": "acquired",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "unicorn-platform",
@@ -31050,7 +33178,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "upscalemedia",
@@ -31157,7 +33293,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "v0-by-vercel",
@@ -31280,7 +33424,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "vicai",
@@ -31386,7 +33538,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "visenze",
@@ -31492,7 +33652,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "voiceflow",
@@ -31599,7 +33767,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "warmerai",
@@ -31700,7 +33876,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "warp",
@@ -31806,7 +33990,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "webflow",
@@ -31929,7 +34121,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "wix-ai",
@@ -32035,7 +34235,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "woebot",
@@ -32131,16 +34339,24 @@
       "The constrained, scripted nature of the interactions can feel repetitive or inflexible during highly nuanced distress",
       "It struggles to parse highly complex, multi-layered human emotional context, operating optimally only within defined parameters"
     ],
-    "lifecycleStatus": "active",
+    "lifecycleStatus": "discontinued",
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
     "verificationSources": [],
-    "operationalStatus": "active",
+    "operationalStatus": "discontinued",
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": false,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "audited_source"
+    }
   },
   {
     "id": "wordtune",
@@ -32246,7 +34462,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "workato",
@@ -32352,7 +34576,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "writecream",
@@ -32457,7 +34689,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "writesonic",
@@ -32573,7 +34813,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "wysa",
@@ -32689,7 +34937,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "yellowai",
@@ -32805,7 +35061,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "yoodli",
@@ -32921,7 +35185,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "youcom",
@@ -33037,7 +35309,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "youper",
@@ -33153,7 +35433,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "zapier-ai",
@@ -33269,7 +35557,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "zendesk-ai",
@@ -33385,7 +35681,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "zipchat",
@@ -33501,7 +35805,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "sora",
@@ -33617,7 +35929,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "replit",
@@ -33733,7 +36053,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "lovable",
@@ -33849,7 +36177,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "bolt",
@@ -33965,7 +36301,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "dora-run",
@@ -34081,7 +36425,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "base44",
@@ -34197,7 +36549,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "manus",
@@ -34313,7 +36673,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "readdy-ai",
@@ -34429,7 +36797,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "perplexity",
@@ -34545,7 +36921,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pika",
@@ -34661,7 +37045,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "suno",
@@ -34777,7 +37169,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "nano-banana",
@@ -34883,7 +37283,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "canva",
@@ -34991,7 +37399,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "notion",
@@ -35114,7 +37530,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "figma",
@@ -35237,7 +37661,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "capcut",
@@ -35360,7 +37792,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "google-gemini",
@@ -35481,7 +37921,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "openai-playground",
@@ -35586,7 +38034,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "microsoft-copilot",
@@ -35714,7 +38170,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "perplexity-pages",
@@ -35819,7 +38283,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "unknown",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "meta-ai",
@@ -35940,7 +38412,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "amazon-q",
@@ -36049,7 +38529,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "apple-intelligence",
@@ -36154,7 +38642,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "antigravity",
@@ -36259,7 +38755,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "vercel-ai-sdk",
@@ -36364,7 +38868,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "langchain",
@@ -36469,7 +38981,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "llamaindex",
@@ -36574,7 +39094,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": true,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "cloudflare-workers-ai",
@@ -36679,7 +39207,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "udio",
@@ -36784,7 +39320,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "luma-ai",
@@ -36907,7 +39451,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "pika-labs",
@@ -37012,7 +39564,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "hubspot-ai",
@@ -37117,7 +39677,15 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   },
   {
     "id": "salesforce-einstein",
@@ -37240,6 +39808,14 @@
     "transitionType": "none",
     "successorToolId": null,
     "contentReviewRequired": false,
-    "recommendationEligible": true
+    "recommendationEligible": true,
+    "contentReviewReason": null,
+    "pricingNeedsReview": false,
+    "dataProvenance": {
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
+    }
   }
 ]
