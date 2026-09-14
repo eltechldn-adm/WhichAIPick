@@ -64,7 +64,7 @@ const environment = process.env.CF_PAGES_COMMIT_SHA ? 'preview' : 'local';
 const buildInfo = {
     environment,
     buildTime:              new Date().toISOString(),
-    schemaVersion:          '4E.3',
+    schemaVersion:          '4F.0',
     branch,
     commitHash,
     toolCount,

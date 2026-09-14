@@ -21,7 +21,7 @@ const INTENT_TAXONOMY = {
     'building.website_builder': ['ai website builder', 'visual web development', 'building responsive sites', 'generating websites', 'automated wordpress building', 'building landing pages'],
     
     // Research & Data Analysis
-    'research.web_search': ['searching the web', 'answering questions', 'answering complex questions'],
+    'research.web_search': ['searching the web', 'web research', 'research with sources', 'online research', 'source discovery'],
     'research.academic_papers': ['searching scientific literature', 'finding evidence from research papers', 'academic research', 'academic discovery'],
     'research.document_analysis': ['analyzing long documents', 'document analysis', 'pdf analysis'],
     'research.data_analysis': ['data analysis', 'analyzing data sets', 'analyzing spreadsheets', 'analyzing excel files'],
@@ -115,7 +115,7 @@ const quizConfig = [
                 case 'coding': return [
                     { text: "Write or complete code", value: "coding.code_generation" },
                     { text: "Debug or fix code", value: "coding.debugging" },
-                    { text: "Build an app with an AI builder", value: "building.ai_app_builder" },
+                    { text: "Build an AI/LLM application", value: "building.ai_app_builder" },
                     { text: "Build an app without coding", value: "building.no_code_app" },
                     { text: "Build a website", value: "building.website_builder" }
                 ];
