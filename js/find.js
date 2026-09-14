@@ -1,36 +1,129 @@
-// Find My Tool Quiz Logic - Phase 4E Recommendation Engine
+// Find My Tool Quiz Logic - Phase 4E.2 Recommendation Engine
 
 // Persistence Constants
-const STORAGE_KEY = 'whichaipick_quiz_state_v4e';
+const STORAGE_KEY = 'whichaipick_quiz_state_v4e2';
 const EXPIRY_DAYS = 7;
+
+// Finder Intent Taxonomy (Maps primaryUseCases to exact intent tags)
+const INTENT_TAXONOMY = {
+    // Writing & Content
+    'writing.generate_text': ['copywriting', 'content creation', 'writing', 'ad copy generation', 'ai writing assistant', 'blog writing'],
+    'writing.rewrite': ['rephrasing', 'rewriting', 'paraphrasing'],
+    'writing.longform': ['long-form content', 'book writing', 'essay writing'],
+    
+    // Coding & Development
+    'coding.write_code': ['writing code', 'code generation', 'programming', 'ai powered code editor', 'coding assistant'],
+    'coding.debug_code': ['debugging code', 'finding bugs', 'code analysis'],
+    'coding.build_apps': ['app building', 'web development', 'building apps'],
+    'coding.no_code_apps': ['no code app building', 'no-code website builder', 'no-code app builder'],
+    
+    // Research & Data Analysis
+    'research.web_search': ['search', 'searching the web', 'answering questions'],
+    'research.academic_papers': ['searching scientific literature', 'finding evidence from research papers', 'academic research', 'academic discovery'],
+    'research.document_analysis': ['analyzing long documents', 'document analysis', 'pdf analysis'],
+    'research.data_analysis': ['data analysis', 'analyzing data sets', 'analyzing spreadsheets', 'analyzing excel files'],
+    'research.summarization': ['summarizing articles', 'summarizing long texts', 'summarization'],
+    
+    // Image Creation
+    'image.generate': ['image generation', 'artistic image generation', 'creating ai art'],
+    'image.edit': ['image editing', 'ai photo editing', 'photo editing'],
+    
+    // Video Creation
+    'video.generate': ['video generation', 'creating videos', 'text to video'],
+    'video.edit': ['video editing', 'video production'],
+    'video.avatar': ['ai avatars', 'avatar video generation'],
+    
+    // Audio / Voice / Music
+    'audio.music_generation': ['music generation', 'audio generation', 'generating music'],
+    'audio.voice_generation': ['voice generation', 'text to speech', 'voice cloning'],
+    
+    // Workflow Automation
+    'automation.workflow': ['automation', 'workflow automation', 'automating tasks'],
+    'automation.app_integration': ['api integration', 'app integration', 'connecting apps'],
+    
+    // Meetings & Transcription
+    'meetings.transcription': ['audio transcription', 'meeting transcription', 'transcribing audio'],
+    'meetings.notes': ['meeting notes', 'meeting summaries']
+};
+
+function getToolIntents(tool) {
+    const intents = new Set();
+    const useCases = (tool.primaryUseCases || []).map(uc => uc.toLowerCase());
+    
+    for (const [intentKey, keywords] of Object.entries(INTENT_TAXONOMY)) {
+        if (useCases.some(uc => keywords.some(kw => uc.includes(kw)))) {
+            intents.add(intentKey);
+        }
+    }
+    return Array.from(intents);
+}
 
 // Configuration
 const quizConfig = [
     {
         id: 'goal',
-        text: "What do you mainly want AI to help with?",
+        text: "What do you want help with?",
         helper: "This determines the broad category of tools we recommend.",
         options: [
             { text: "Writing & Content", value: "content" },
             { text: "Coding & Development", value: "coding" },
-            { text: "Research & Analysis", value: "research" },
-            { text: "Image & Video Creation", value: "media" },
-            { text: "Productivity & Operations", value: "productivity" },
-            { text: "Business & Marketing", value: "business" }
+            { text: "Research & Data Analysis", value: "research" },
+            { text: "Image Creation", value: "image" },
+            { text: "Video Creation", value: "video" },
+            { text: "Audio / Voice / Music", value: "audio" },
+            { text: "Workflow Automation", value: "automation" },
+            { text: "Meetings & Transcription", value: "meetings" }
         ]
     },
     {
         id: 'workflow',
-        text: "What specific action are you focused on?",
+        text: "What exactly do you want to do?",
         helper: "Helps us find tools that match your exact use case.",
-        options: [
-            { text: "Generate original text or copy", value: "generate_text" },
-            { text: "Write or debug code", value: "write_code" },
-            { text: "Analyse data or documents", value: "analyse_data" },
-            { text: "Create or edit images/video", value: "create_media" },
-            { text: "Automate repetitive tasks", value: "automate" },
-            { text: "Search the web or learn", value: "search_learn" }
-        ]
+        getOptions: (answers) => {
+            const goal = answers.goal;
+            switch(goal) {
+                case 'content': return [
+                    { text: "Generate text and copy", value: "writing.generate_text" },
+                    { text: "Rewrite or paraphrase", value: "writing.rewrite" },
+                    { text: "Write long-form (books, essays)", value: "writing.longform" }
+                ];
+                case 'coding': return [
+                    { text: "Write or complete code", value: "coding.write_code" },
+                    { text: "Debug or fix code", value: "coding.debug_code" },
+                    { text: "Build apps with AI", value: "coding.build_apps" },
+                    { text: "Build apps without code", value: "coding.no_code_apps" }
+                ];
+                case 'research': return [
+                    { text: "Web research", value: "research.web_search" },
+                    { text: "Research papers / evidence", value: "research.academic_papers" },
+                    { text: "Document analysis (PDFs)", value: "research.document_analysis" },
+                    { text: "Data analysis (Spreadsheets)", value: "research.data_analysis" },
+                    { text: "Summarize articles", value: "research.summarization" }
+                ];
+                case 'image': return [
+                    { text: "Image generation", value: "image.generate" },
+                    { text: "Image editing", value: "image.edit" }
+                ];
+                case 'video': return [
+                    { text: "Video generation", value: "video.generate" },
+                    { text: "Video editing", value: "video.edit" },
+                    { text: "Avatar video generation", value: "video.avatar" }
+                ];
+                case 'audio': return [
+                    { text: "Music generation", value: "audio.music_generation" },
+                    { text: "Voice generation / TTS", value: "audio.voice_generation" }
+                ];
+                case 'automation': return [
+                    { text: "Automate app/business workflows", value: "automation.workflow" },
+                    { text: "App integration", value: "automation.app_integration" }
+                ];
+                case 'meetings': return [
+                    { text: "Meeting transcription", value: "meetings.transcription" },
+                    { text: "Meeting notes", value: "meetings.notes" }
+                ];
+                default: return [];
+            }
+        }
     },
     {
         id: 'budget',
@@ -44,22 +137,11 @@ const quizConfig = [
         ]
     },
     {
-        id: 'priority',
-        text: "What matters most to you in a tool?",
+        id: 'specialist',
+        text: "What kind of match do you prefer?",
         options: [
-            { text: "Ease of use (Beginner friendly)", value: "ease" },
-            { text: "Advanced capability (Powerful features)", value: "advanced" },
-            { text: "Broad versatility (All-in-one)", value: "versatile" },
-            { text: "Specialist fit (Does one thing perfectly)", value: "specialist" }
-        ]
-    },
-    {
-        id: 'context',
-        text: "How will you be using this tool?",
-        options: [
-            { text: "Solo / Personal use", value: "solo" },
-            { text: "Team / Business use", value: "team" },
-            { text: "Academic / Student", value: "academic" }
+            { text: "Specialist for this exact task", value: "specialist" },
+            { text: "Open to broader tools that also do this task", value: "broad" }
         ]
     }
 ];
@@ -98,13 +180,15 @@ function restoreQuizState() {
         currentQuestionIndex = state.currentQuestionIndex || 0;
 
         if (state.resultToolIds && state.resultToolIds.length > 0) {
-            // Wait for tools to load, then reconstruct
-            setTimeout(() => showStoredResults(state.resultToolIds), 100);
+            showStoredResults(state.resultToolIds);
             return true;
         }
 
+        renderQuestion();
+        updateProgress();
+        updateNavigation();
         return true;
-    } catch (e) {
+    } catch(e) {
         localStorage.removeItem(STORAGE_KEY);
         return false;
     }
@@ -112,184 +196,181 @@ function restoreQuizState() {
 
 function resetQuiz() {
     localStorage.removeItem(STORAGE_KEY);
-    location.reload();
+    answers = {};
+    currentQuestionIndex = 0;
+    
+    const quizContainer = document.getElementById('quiz-container');
+    const resultsContainer = document.getElementById('results-container');
+    if(quizContainer) quizContainer.style.display = 'block';
+    if(resultsContainer) resultsContainer.style.display = 'none';
+
+    renderQuestion();
+    updateProgress();
+    updateNavigation();
 }
 
-// --- Recommendation Engine ---
-
-function calculateToolScore(tool, userAnswers) {
-    let score = 0;
-    const { goal, workflow, budget, priority, context } = userAnswers;
-
-    // 1. HARD CONSTRAINTS
-    if (budget === 'hard_free') {
-        const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
-        if (!hasFree) return -1; // Disqualify
-    }
-    
-    // Eligibility checks (Safety nets)
-    if (tool.recommendationEligible !== true) return -1;
-    if (tool.contentReviewRequired === true) return -1;
-    if (tool.operationalStatus === 'discontinued' || tool.lifecycleStatus === 'discontinued') return -1;
-    if (tool.successorToolId) return -1; // If it has a successor, don't recommend the old one
-
-    // 2. SOFT SCORING
-    
-    // Goal Mapping
-    const goalMapping = {
-        'content': ['Content Creation', 'Writing'],
-        'coding': ['Development', 'Code'],
-        'research': ['Research', 'Education'],
-        'media': ['Design', 'Video & Audio', 'Image Generation'],
-        'productivity': ['Productivity', 'Automation', 'Meetings'],
-        'business': ['Business', 'Marketing', 'Sales', 'Customer Support']
-    };
-    if (goal && goalMapping[goal] && tool.category && goalMapping[goal].includes(tool.category)) {
-        score += 5; // Strong primary match
-    }
-
-    // Workflow Mapping (Check primaryUseCases)
-    const workflowMapping = {
-        'generate_text': ['Copywriting', 'Content Creation', 'Writing'],
-        'write_code': ['Code Generation', 'Web Development', 'Programming'],
-        'analyse_data': ['Data Analysis', 'Document Analysis', 'Research'],
-        'create_media': ['Image Generation', 'Video Generation', 'Audio Generation', 'Design'],
-        'automate': ['Automation', 'Workflow', 'Productivity'],
-        'search_learn': ['Search', 'Education', 'Learning', 'Research']
-    };
-    if (workflow && workflowMapping[workflow] && Array.isArray(tool.primaryUseCases)) {
-        const matches = tool.primaryUseCases.some(uc => workflowMapping[workflow].includes(uc));
-        if (matches) score += 4;
-    }
-
-    // Budget Preference
-    if (budget === 'soft_free') {
-        const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
-        if (hasFree) score += 2;
-    }
-
-    // Priority Mapping (Qualitative)
-    if (priority === 'ease' && ['Productivity', 'Content Creation', 'Design'].includes(tool.category)) score += 1;
-    if (priority === 'advanced' && ['Development', 'Automation', 'Research'].includes(tool.category)) score += 1;
-    if (priority === 'versatile' && tool.primaryUseCases && tool.primaryUseCases.length > 3) score += 1;
-    if (priority === 'specialist' && tool.primaryUseCases && tool.primaryUseCases.length <= 2) score += 1;
-
-    // Context Mapping
-    if (context === 'team' && tool.targetUsers && Array.isArray(tool.targetUsers) && tool.targetUsers.some(u => u.toLowerCase().includes('team') || u.toLowerCase().includes('enterprise'))) {
-        score += 2;
-    }
-    if (context === 'academic' && ['Education', 'Research'].includes(tool.category)) {
-        score += 2;
-    }
-
-    return score;
-}
-
-function generateExplanation(tool, userAnswers) {
-    const reasons = [];
-    const { goal, workflow, budget } = userAnswers;
-
-    // Workflow reasoning
-    const workflowMap = {
-        'generate_text': 'generating text and copy',
-        'write_code': 'writing and debugging code',
-        'analyse_data': 'analysing data and documents',
-        'create_media': 'creating visual media',
-        'automate': 'automating repetitive tasks',
-        'search_learn': 'searching and learning'
-    };
-    
-    if (workflow && workflowMap[workflow]) {
-        reasons.push(`Matches your need for ${workflowMap[workflow]}.`);
-    } else if (tool.category) {
-        reasons.push(`Strong fit in the ${tool.category} category.`);
-    }
-
-    // Budget reasoning
-    if (budget === 'hard_free' || budget === 'soft_free') {
-        const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
-        if (hasFree) {
-            reasons.push(`Offers a verified free tier.`);
-        }
-    }
-    
-    // Best For reasoning
-    if (tool.bestFor && tool.bestFor.length > 0) {
-        reasons.push(`Designed specifically for: ${tool.bestFor[0]}.`);
-    }
-
-    return reasons;
-}
-
-function generateTradeOff(tool) {
-    if (tool.limitations && tool.limitations.length > 0) {
-        return tool.limitations[0];
-    }
-    if (tool.notIdealFor && tool.notIdealFor.length > 0) {
-        return `Not ideal for: ${tool.notIdealFor[0]}`;
-    }
-    if (tool.pricingNeedsReview) {
-        return "Pricing structure may have recently changed.";
-    }
-    return null;
-}
+// --- Scoring & Recommendation Engine ---
 
 async function recommendTools(userAnswers) {
     if (!window.loadTools) {
         console.error("Tool catalog is not available.");
         return [];
     }
+    
     allTools = await window.loadTools();
     
-    const validTools = allTools.filter(tool => tool.website_url && tool.category && tool.category !== 'Uncategorized');
+    const validTools = allTools.filter(tool => 
+        tool.website_url && 
+        tool.category && 
+        tool.category !== 'Uncategorized'
+    );
 
-    const scoredTools = validTools.map(tool => ({
-        tool,
-        score: calculateToolScore(tool, userAnswers)
-    })).filter(item => item.score > 0); // Must have at least some match
+    const scoredTools = validTools.map(tool => {
+        const scoreInfo = calculateToolScore(tool, userAnswers);
+        return {
+            tool,
+            score: scoreInfo.score,
+            debug: scoreInfo.debug
+        };
+    }).filter(item => item.score > 0);
 
-    // Sort by score desc, then name A-Z
     scoredTools.sort((a, b) => {
         if (b.score !== a.score) return b.score - a.score;
         return a.tool.name.localeCompare(b.tool.name);
     });
-    
-    // Result Diversity: If top 2 are same category, try to bump a different category to #2 if scores are close
-    if (scoredTools.length > 2) {
-        const topCat = scoredTools[0].tool.category;
-        const secondCat = scoredTools[1].tool.category;
-        if (topCat === secondCat) {
-            // Find next highest score with different category within 2 points
-            const divIdx = scoredTools.findIndex((item, idx) => idx > 1 && item.tool.category !== topCat && (scoredTools[1].score - item.score <= 2));
-            if (divIdx !== -1) {
-                // Swap
-                const temp = scoredTools[1];
-                scoredTools[1] = scoredTools[divIdx];
-                scoredTools[divIdx] = temp;
-            }
-        }
-    }
 
-    const topResults = scoredTools.slice(0, 3).map((item, index) => {
-        let label = "Strong Fit";
+    // Output Debug Evidence for QA
+    console.log("=== RECOMMENDATION QA EVIDENCE ===");
+    const topResults = scoredTools.slice(0, 3);
+    topResults.forEach(r => {
+        console.log(`Tool: ${r.tool.name} (${r.tool.id})`);
+        console.log(`Score: ${r.score}`);
+        console.log(`Matched Finder Intents: ${JSON.stringify(r.debug.matchedIntents)}`);
+        console.log(`Source primaryUseCases: ${JSON.stringify(r.tool.primaryUseCases)}`);
+        console.log(`Budget Adj: ${r.debug.budgetAdjust} | Specialist Boost: ${r.debug.specialistBoost}`);
+        console.log("---------------------------------");
+    });
+
+    // Generate explanations and labels
+    return topResults.map((result, index) => {
+        let label = "Strong Match";
         if (index === 1) label = "Good Alternative";
         if (index === 2) label = "Also Consider";
         
         return {
-            tool: item.tool,
-            score: item.score,
+            tool: result.tool,
+            score: result.score,
             label: label,
-            reasons: generateExplanation(item.tool, userAnswers),
-            tradeOff: generateTradeOff(item.tool)
+            reasons: generateExplanation(result.tool, userAnswers, result.debug),
+            tradeOff: generateTradeOff(result.tool)
         };
     });
+}
 
-    return topResults;
+function calculateToolScore(tool, userAnswers) {
+    let score = 0;
+    const { goal, workflow, budget, specialist } = userAnswers;
+    const debug = { matchedIntents: [], budgetAdjust: false, specialistBoost: false };
+
+    // 1. HARD CONSTRAINTS
+    if (budget === 'hard_free') {
+        const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
+        if (!hasFree) return { score: -1, debug };
+    }
+    
+    if (tool.recommendationEligible !== true) return { score: -1, debug };
+    if (tool.contentReviewRequired === true) return { score: -1, debug };
+    if (tool.operationalStatus === 'discontinued' || tool.lifecycleStatus === 'discontinued') return { score: -1, debug };
+    if (tool.successorToolId) return { score: -1, debug };
+
+    // 2. EXPLICIT WORKFLOW RELEVANCE (Must have at least one match to Q2)
+    const toolIntents = getToolIntents(tool);
+    if (!workflow || !toolIntents.includes(workflow)) {
+        return { score: -1, debug }; // Hard Relevance Floor
+    }
+    
+    score += 10;
+    debug.matchedIntents.push(workflow);
+
+    // 3. SECONDARY GOAL MATCH
+    const goalMapping = {
+        'content': ['Content Creation', 'Writing'],
+        'coding': ['Development', 'Code'],
+        'research': ['Research', 'Education'],
+        'image': ['Image Generation', 'Design'],
+        'video': ['Video Generation', 'Video & Audio'],
+        'audio': ['Audio Generation', 'Video & Audio', 'Music'],
+        'automation': ['Automation', 'Productivity'],
+        'meetings': ['Meetings', 'Productivity', 'Transcription']
+    };
+    if (goal && goalMapping[goal] && tool.category && goalMapping[goal].includes(tool.category)) {
+        score += 3;
+    }
+
+    // 4. BUDGET SOFT PREFERENCE
+    if (budget === 'soft_free') {
+        const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
+        if (hasFree) {
+            score += 2;
+            debug.budgetAdjust = true;
+        }
+    }
+
+    // 5. SPECIALIST BOOST
+    if (specialist === 'specialist') {
+        // Boost if it exactly matches the category mapping and doesn't have too many extraneous use cases
+        if (goal && goalMapping[goal] && tool.category && goalMapping[goal].includes(tool.category)) {
+            score += 2;
+            debug.specialistBoost = true;
+        }
+    }
+
+    return { score, debug };
+}
+
+function generateExplanation(tool, userAnswers, debug = null) {
+    const reasons = [];
+    
+    let taskDesc = "Matches your selected task";
+    const q2 = quizConfig.find(q => q.id === 'workflow');
+    const q2Options = q2.getOptions(userAnswers);
+    const selectedWorkflow = q2Options.find(o => o.value === userAnswers.workflow);
+    if (selectedWorkflow) {
+        taskDesc = `Matches your need to ${selectedWorkflow.text.toLowerCase()}`;
+    }
+    
+    if (debug && debug.specialistBoost) {
+        taskDesc += ` with a specialist focus`;
+    }
+    reasons.push(taskDesc + ".");
+
+    if (userAnswers.budget === 'soft_free' && (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes')) {
+        reasons.push("Aligns with your preference for a free option.");
+    } else if (userAnswers.budget === 'hard_free') {
+        reasons.push("Provides a free option as requested.");
+    }
+
+    return reasons;
+}
+
+function generateTradeOff(tool) {
+    if (tool.pricingNeedsReview === true) {
+        if (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes') {
+            return "Free tier listed — pricing information may need rechecking.";
+        }
+        return "Pricing structure may have recently changed.";
+    }
+    return null;
 }
 
 // --- UI Rendering ---
 
 function initQuiz() {
+    const qCountSpan = document.getElementById('dynamic-question-count');
+    if (qCountSpan) {
+        qCountSpan.textContent = quizConfig.length;
+    }
+
     if (restoreQuizState()) {
         if (document.getElementById('results-container').style.display === 'block') {
             return;
@@ -298,7 +379,7 @@ function initQuiz() {
         currentQuestionIndex = 0;
         answers = {};
     }
-
+    
     renderQuestion();
     updateProgress();
     updateNavigation();
@@ -307,38 +388,54 @@ function initQuiz() {
 function renderQuestion() {
     const container = document.getElementById('question-container');
     if (!container) return;
-    
+
     const question = quizConfig[currentQuestionIndex];
+    
+    let options = question.options;
+    if (question.getOptions) {
+        options = question.getOptions(answers);
+    }
+    
+    if (!options || options.length === 0) {
+        // Fallback or error state
+        return;
+    }
+
     const currentAnswer = answers[question.id];
 
     let html = `
         <div class="question" tabindex="-1" id="current-question-container">
             <h2>${question.text}</h2>
             ${question.helper ? `<p class="question-helper">${question.helper}</p>` : ''}
-            <div class="answers" role="radiogroup" aria-label="${question.text}">
+            <div class="options-grid" role="radiogroup" aria-labelledby="q-title-${currentQuestionIndex}">
+                <span id="q-title-${currentQuestionIndex}" class="sr-only">${question.text}</span>
     `;
 
-    question.options.forEach((option) => {
+    options.forEach(option => {
         const isSelected = currentAnswer === option.value;
         html += `
-            <div class="answer-option ${isSelected ? 'selected' : ''}" 
-                 data-value="${option.value}"
-                 tabindex="0"
-                 role="radio"
-                 aria-checked="${isSelected}"
-                 onclick="window.selectAnswer('${option.value}')"
-                 onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault(); window.selectAnswer('${option.value}');}">
+            <button class="answer-option ${isSelected ? 'selected' : ''}" 
+                    data-value="${option.value}"
+                    onclick="window.selectAnswer('${option.value}')"
+                    role="radio"
+                    aria-checked="${isSelected}"
+                    tabindex="0">
                 ${option.text}
-            </div>
+            </button>
         `;
     });
 
-    html += `</div></div>`;
+    html += `
+            </div>
+        </div>
+    `;
+
     container.innerHTML = html;
     
     const questionContainer = document.getElementById('current-question-container');
     if (questionContainer) questionContainer.focus();
 
+    // Trigger reveal animation
     if (window.WhompRevealObserver) {
         setTimeout(() => {
             const newQ = container.querySelector('.question');
@@ -359,8 +456,10 @@ function selectAnswer(value) {
     options.forEach(option => {
         if (option.dataset.value === value) {
             option.classList.add('selected');
+            option.setAttribute('aria-checked', 'true');
         } else {
             option.classList.remove('selected');
+            option.setAttribute('aria-checked', 'false');
         }
     });
 
@@ -443,29 +542,16 @@ async function showStoredResults(resultIds) {
     allTools = await window.loadTools();
     const recommendations = [];
 
-    resultIds.forEach((id, index) => {
-        const tool = allTools.find(t => t.id === id);
-        if (tool) {
-            let label = "Strong Fit";
-            if (index === 1) label = "Good Alternative";
-            if (index === 2) label = "Also Consider";
-            
-            recommendations.push({
-                tool: tool,
-                score: 0,
-                label: label,
-                reasons: generateExplanation(tool, answers),
-                tradeOff: generateTradeOff(tool)
-            });
-        }
-    });
-
-    if (recommendations.length === 0) {
+    // Need full recalculation for proper labels and debug text
+    // since resultIds only has the IDs
+    const currentRecs = await recommendTools(answers);
+    
+    if (currentRecs.length === 0) {
         resetQuiz();
         return;
     }
 
-    renderResultsPage(recommendations);
+    renderResultsPage(currentRecs);
 }
 
 function renderResultsPage(recommendations) {
@@ -506,7 +592,7 @@ function renderResultsPage(recommendations) {
 
     recommendations.forEach(({ tool, label, reasons, tradeOff }) => {
         const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
-        const priceBadge = hasFree ? `<span class="badge badge-success tool-price-badge">Our data shows a free tier</span>` : '';
+        const priceBadge = hasFree ? `<span class="badge badge-success tool-price-badge">Our current data lists a free tier</span>` : '';
         
         let reasonsHtml = '';
         if (reasons && reasons.length > 0) {
@@ -543,6 +629,8 @@ function renderResultsPage(recommendations) {
                 </div>
             </div>
         `;
+        
+        if (window.Analytics) Analytics.track('finder_result_viewed', { tool_id: tool.id });
     });
     
     toolsHtml += '</div>';
@@ -572,4 +660,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Globals
 window.selectAnswer = selectAnswer;
-
