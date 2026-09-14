@@ -275,6 +275,8 @@ function buildToolPage(tool) {
   // Remove undefined keys
   Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
 
+  const robotsMeta = tool.contentReviewRequired ? 'noindex,follow' : 'index,follow';
+
   return `<!DOCTYPE html>
 <html lang="en">
 
@@ -283,7 +285,7 @@ function buildToolPage(tool) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escAttr(metaTitle)}</title>
   <meta name="description" content="${escAttr(metaDesc)}">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="${robotsMeta}">
   <link rel="canonical" href="${canonicalUrl}">
 
   <!-- Open Graph -->

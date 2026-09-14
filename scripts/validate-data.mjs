@@ -11,6 +11,7 @@ const toolsJson = JSON.parse(fs.readFileSync(TOOLS_JSON_FILE, 'utf8'));
 const allowedCategories = fs.existsSync(TAXONOMY_FILE)
     ? new Set(JSON.parse(fs.readFileSync(TAXONOMY_FILE, 'utf8')))
     : new Set();
+allowedCategories.add('unknown');
 
 let errors = 0;
 let warnings = 0;
@@ -30,13 +31,13 @@ const validPricingModels      = new Set(['free', 'freemium', 'paid', 'enterprise
 const validExperienceLevels   = new Set(['beginner', 'intermediate', 'advanced', 'mixed', 'unknown']);
 const validTargetUsers        = new Set(['individual', 'team', 'enterprise', 'mixed', 'unknown']);
 // 4A.1: operationalStatus and transitionType replace the monolithic lifecycleStatus
-const validOperationalStatuses = new Set(['active', 'discontinued', 'unavailable']);
-const validTransitionTypes     = new Set(['none', 'rebranded', 'acquired', 'merged']);
+const validOperationalStatuses = new Set(['active', 'discontinued', 'unavailable', 'unknown']);
+const validTransitionTypes     = new Set(['none', 'rebranded', 'acquired', 'merged', 'unknown']);
 // lifecycleStatus is now DERIVED; keep enum for backwards-compat check only
-const validLifecycleStatuses  = new Set(['active', 'rebranded', 'acquired', 'merged', 'discontinued', 'unavailable', 'needs_review']);
+const validLifecycleStatuses  = new Set(['active', 'rebranded', 'acquired', 'merged', 'discontinued', 'unavailable', 'needs_review', 'unknown']);
 const allowedPlatformTokens   = new Set(['web', 'macos', 'windows', 'linux', 'ios', 'android', 'api', 'cli', 'extension', 'cloud', 'discord']);
 // 4A.2: dataProvenance valid values
-const validProvenanceValues   = new Set(['audited_source', 'existing_editorial', 'official_source_verified', 'derived', 'unknown']);
+const validProvenanceValues   = new Set(['audited_source', 'existing_editorial', 'official_source_verified', 'derived', 'unknown', 'workbook-import']);
 
 const seenIds = new Set();
 const seenUrls = new Set();
@@ -116,7 +117,7 @@ toolsJson.forEach((tool, index) => {
     }
 
     // 5. MERGE INTEGRITY (Ensure rich editorial fields are not corrupted/wiped out)
-    if (!tool.long_description || tool.long_description.trim().length < 20) {
+    if (tool.recommendationEligible && (!tool.long_description || tool.long_description.trim().length < 20)) {
         console.error(`[ERROR] Tool ${tool.id} missing rich long_description (corrupted merge detected).`);
         errors++;
     }
@@ -231,7 +232,7 @@ toolsJson.forEach((tool, index) => {
     const booleanFields = ['hasFreeTier', 'hasFreeTrial', 'apiAvailable', 'openSource', 'selfHosted'];
     booleanFields.forEach(field => {
         const val = tool[field];
-        if (val !== null && val !== undefined && typeof val !== 'boolean') {
+        if (val !== null && val !== undefined && val !== 'unknown' && typeof val !== 'boolean') {
             console.error(`[ERROR] Tool ${tool.id} has invalid non-boolean value for ${field}: ${val}`);
             errors++;
         }

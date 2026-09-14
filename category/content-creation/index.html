@@ -182,100 +182,7 @@
 </head>
 
 <body data-bg="browse">
-  <div id="site-header">
-<header class="site-header">
-    <div class="header-container">
-        <a href="/" class="brand" aria-label="WhichAIPick — Home">
-            <img src="/assets/logo/logo-final.png" alt="WhichAIPick" class="brand-logo" width="120" height="40">
-            <span class="brand-name">WhichAIPick</span>
-        </a>
-
-        <nav class="main-nav" aria-label="Main navigation">
-            <!-- Browse Tools with Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/tools/" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Browse Tools
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/tools/" class="dropdown-item">Browse All Tools</a>
-                    <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
-                    <a href="/search.html" class="dropdown-item">Search Tools</a>
-                </div>
-            </div>
-
-            <!-- Compare (Simple Link) -->
-            <a href="/compare.html" class="nav-link">Compare</a>
-
-            <!-- Learn Dropdown -->
-            <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
-                    Learn
-                    <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    </svg>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
-                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
-                    <a href="/blog.html" class="dropdown-item">Blog</a>
-                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="header-actions">
-            <!-- Search Icon -->
-            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-            </a>
-            <!-- Shortlist Icon -->
-            <a href="/shortlist/" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg>
-                <span class="shortlist-badge" id="header-shortlist-badge">0</span>
-            </a>
-            <!-- Primary CTA -->
-            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
-        </div>
-
-        <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
-            <span class="hamburger-box" aria-hidden="true">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-    </div>
-
-    <!-- Mobile Navigation Panel -->
-    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
-        <div class="mobile-nav-inner">
-            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
-            <nav aria-label="Mobile navigation">
-                <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
-                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
-                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
-                <a href="/search.html" class="mobile-nav-link">Search</a>
-                <hr class="mobile-nav-divider" aria-hidden="true">
-                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
-                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
-                <a href="/blog.html" class="mobile-nav-link">Blog</a>
-                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
-                <hr class="mobile-nav-divider" aria-hidden="true">
-                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
-                <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
-            </nav>
-        </div>
-    </div>
-    <script src="/js/shortlist.js" defer></script>
-</header>
-</div>
+  <div id="site-header"></div>
 
   <main class="page-shell">
 
@@ -386,11 +293,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/anyword/" aria-label="View details for Anyword">Anyword</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="anyword" aria-label="Save Anyword to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -411,11 +313,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/contentbot/" aria-label="View details for ContentBot">ContentBot</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="contentbot" aria-label="Save ContentBot to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -436,11 +333,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/contentshake-ai/" aria-label="View details for ContentShake AI">ContentShake AI</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="contentshake-ai" aria-label="Save ContentShake AI to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -461,11 +353,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/contentstudio/" aria-label="View details for ContentStudio">ContentStudio</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="contentstudio" aria-label="Save ContentStudio to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -486,11 +373,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/copyai/" aria-label="View details for Copy.ai">Copy.ai</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="copyai" aria-label="Save Copy.ai to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -511,11 +393,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/copysmith/" aria-label="View details for Copysmith">Copysmith</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="copysmith" aria-label="Save Copysmith to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -536,11 +413,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/describely/" aria-label="View details for Describely">Describely</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="describely" aria-label="Save Describely to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -561,11 +433,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/frase/" aria-label="View details for Frase">Frase</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="frase" aria-label="Save Frase to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -586,11 +453,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/grammarly/" aria-label="View details for Grammarly">Grammarly</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="grammarly" aria-label="Save Grammarly to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -611,11 +473,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/hyperwrite/" aria-label="View details for HyperWrite">HyperWrite</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="hyperwrite" aria-label="Save HyperWrite to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -636,11 +493,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/hypotenuse-ai/" aria-label="View details for Hypotenuse AI">Hypotenuse AI</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="hypotenuse-ai" aria-label="Save Hypotenuse AI to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -661,11 +513,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/jasper-ai/" aria-label="View details for Jasper AI">Jasper AI</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="jasper-ai" aria-label="Save Jasper AI to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -686,11 +533,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/lex/" aria-label="View details for Lex">Lex</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="lex" aria-label="Save Lex to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -711,11 +553,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/marketmuse/" aria-label="View details for MarketMuse">MarketMuse</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="marketmuse" aria-label="Save MarketMuse to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -736,11 +573,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/neuronwriter/" aria-label="View details for NeuronWriter">NeuronWriter</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="neuronwriter" aria-label="Save NeuronWriter to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -761,11 +593,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/prowritingaid/" aria-label="View details for ProWritingAid">ProWritingAid</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="prowritingaid" aria-label="Save ProWritingAid to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -786,11 +613,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/quillbot/" aria-label="View details for QuillBot">QuillBot</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="quillbot" aria-label="Save QuillBot to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -811,11 +633,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/rytr/" aria-label="View details for Rytr">Rytr</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="rytr" aria-label="Save Rytr to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -836,11 +653,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/scalenut/" aria-label="View details for Scalenut">Scalenut</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="scalenut" aria-label="Save Scalenut to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -861,11 +673,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/shortly-ai/" aria-label="View details for Shortly AI">Shortly AI</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="shortly-ai" aria-label="Save Shortly AI to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -886,11 +693,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/sudowrite/" aria-label="View details for Sudowrite">Sudowrite</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="sudowrite" aria-label="Save Sudowrite to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -911,11 +713,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/textcortex/" aria-label="View details for TextCortex">TextCortex</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="textcortex" aria-label="Save TextCortex to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -936,11 +733,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/wordtune/" aria-label="View details for Wordtune">Wordtune</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="wordtune" aria-label="Save Wordtune to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -961,11 +753,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/writecream/" aria-label="View details for Writecream">Writecream</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="writecream" aria-label="Save Writecream to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -986,11 +773,6 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/writesonic/" aria-label="View details for Writesonic">Writesonic</a>
             </h3>
-            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="writesonic" aria-label="Save Writesonic to Shortlist">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg> Save
-            </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
         </div>
@@ -998,7 +780,7 @@
       <p class="tool-description">Writesonic is a fiercely competitive, highly proactive generative AI content creation platform engineered specifically…</p>
       <div class="tool-card-actions">
         <a href="/tools/writesonic/" class="tc-btn-primary" aria-label="View full details for Writesonic">View Details</a>
-        <a href="https://writesonic.com/?ref=whichaipick" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Writesonic website">writesonic.com</a>
+        <a href="https://writesonic.com/" target="_blank" rel="noopener noreferrer" class="tc-btn-secondary" aria-label="Visit Writesonic website">writesonic.com</a>
       </div>
     </div>
         </div>

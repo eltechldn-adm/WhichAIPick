@@ -110,8 +110,15 @@ function generateSitemap() {
         urls = [...urls, ...scanDirectory(dir)];
     });
 
+    // Load tools to filter out noindex ones
+    const toolsJson = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'data', 'tools.json'), 'utf8'));
+    const indexableToolIds = new Set(toolsJson.filter(t => !t.contentReviewRequired).map(t => t.id));
+
     // Phase 3: generated tool pages
-    const toolPages = scanGeneratedPages('tools', PRIORITY.TOOLS);
+    const toolPages = scanGeneratedPages('tools', PRIORITY.TOOLS).filter(p => {
+        const id = p.loc.split('/')[2];
+        return indexableToolIds.has(id);
+    });
     urls = [...urls, ...toolPages];
     console.log(`  Added ${toolPages.length} tool pages`);
 
