@@ -277,7 +277,7 @@ if (pageRequiresDatabase()) {
  * @param {String} source - Analytics source context (default: 'list')
  * @returns {HTMLElement} - The fully constructed card element
  */
-function renderToolCard(tool, recommendedIds = [], source = 'list') {
+function renderToolCard(tool, source = 'list') {
     const card = document.createElement('div');
     card.className = 'tool-card';
 

@@ -1,17 +1,41 @@
 // Browse Engine
 const BROWSE_CONFIG = window.BROWSE_CONFIG || {};
 
+// Mock Analytics for Phase 8 preparation
+window.Analytics = window.Analytics || {
+    track: (event, data) => {
+        // console.log('Analytics Event:', event, data);
+    }
+};
+
+const USE_CASE_TAXONOMY = {
+    'Writing & Content': ['writing', 'content', 'copywriting', 'blog', 'essay', 'summarize', 'text generation'],
+    'Coding & Development': ['code', 'coding', 'development', 'programming', 'developer', 'sql', 'html', 'css', 'python'],
+    'Image Creation': ['image', 'photo', 'art', 'generation', 'picture', 'avatar', 'logo', 'drawing'],
+    'Video Creation': ['video', 'animation', 'editing', 'youtube', 'tiktok', 'reel'],
+    'Audio & Voice': ['audio', 'voice', 'speech', 'music', 'sound', 'text-to-speech', 'podcast'],
+    'Research': ['research', 'academic', 'science', 'search', 'discovery', 'analysis', 'paper'],
+    'Productivity': ['productivity', 'workflow', 'task', 'time management', 'automation', 'organization'],
+    'Meetings & Transcription': ['meeting', 'transcription', 'notes', 'zoom', 'teams', 'summarization'],
+    'Marketing': ['marketing', 'seo', 'sales', 'advertising', 'campaign', 'email marketing', 'social media'],
+    'Automation': ['automation', 'zapier', 'workflow', 'bot', 'agent'],
+    'Design': ['design', 'ui', 'ux', 'web design', 'graphic', 'presentation', 'slides'],
+    'Data & Analytics': ['data', 'analytics', 'spreadsheet', 'excel', 'csv', 'chart', 'graph'],
+    'Customer Support': ['customer support', 'chatbot', 'service', 'helpdesk'],
+    'Education': ['education', 'learning', 'student', 'teacher', 'course', 'quiz', 'study'],
+    'Business Operations': ['business', 'finance', 'hr', 'legal', 'contract', 'invoice', 'operations']
+};
+
 class DirectoryEngine {
     constructor() {
         this.tools = [];
-        this.recommendedIds = [];
         this.filteredTools = [];
         this.currentPage = 1;
         this.itemsPerPage = 30;
 
         // UI State
         this.searchTerm = '';
-        this.sortOrder = 'recommended';
+        this.sortOrder = 'az'; // Default is now A-Z
         this.activeFilters = {
             freeTier: [],
             pricing: [],
@@ -32,12 +56,11 @@ class DirectoryEngine {
             clearFiltersBtn: document.getElementById('clear-filters-btn'),
             emptyClearBtn: document.getElementById('empty-clear-btn'),
             
-            // Checkbox containers
             pricingBox: document.getElementById('pricing-checkboxes'),
             categoryBox: document.getElementById('category-checkboxes'),
             useCaseBox: document.getElementById('usecase-checkboxes'),
+            categoryGroup: document.getElementById('filter-group-category'),
             
-            // Mobile toggle
             mobileFiltersBtn: document.getElementById('mobile-filters-btn'),
             sidebar: document.getElementById('directory-sidebar'),
             closeSidebarBtn: document.getElementById('close-sidebar-btn')
@@ -52,13 +75,17 @@ class DirectoryEngine {
             ]);
             
             this.tools = getAllTools();
-            
-            const recData = await loadRecommendedList();
-            this.recommendedIds = recData ? recData.recommended_ids : [];
 
             this.setupFilterOptions();
             this.bindEvents();
             this.readUrlState();
+            
+            // Lock category if BROWSE_CONFIG is set
+            if (BROWSE_CONFIG.category) {
+                if (this.elements.categoryGroup) {
+                    this.elements.categoryGroup.style.display = 'none';
+                }
+            }
             
             this.applyFilters();
         } catch (error) {
@@ -80,28 +107,20 @@ class DirectoryEngine {
             ).join('');
         }
 
-        // Extract Pricing Models
-        const actualModels = [...new Set(this.tools.map(t => (t.pricingModel || t.pricing_model || '').trim().toLowerCase()).filter(Boolean))];
-        const uniqueModels = [...new Set(actualModels.map(m => m === 'free trial' || m === 'free_trial' ? 'Paid' : m.charAt(0).toUpperCase() + m.slice(1)))].sort();
-        
+        // Hardcode explicit pricing models
+        const explicitPricing = ['Free', 'Freemium', 'Paid', 'Enterprise'];
         if (this.elements.pricingBox) {
-            this.elements.pricingBox.innerHTML = uniqueModels.map(model => 
+            this.elements.pricingBox.innerHTML = explicitPricing.map(model => 
                 `<label class="filter-checkbox-label">
                     <input type="checkbox" name="pricing" value="${model.toLowerCase()}"> ${model}
                 </label>`
             ).join('');
         }
 
-        // Extract Use Cases
-        const useCases = new Set();
-        this.tools.forEach(t => {
-            if (t.primaryUseCases && Array.isArray(t.primaryUseCases)) {
-                t.primaryUseCases.forEach(uc => useCases.add(uc.trim()));
-            }
-        });
-        const sortedUseCases = [...useCases].sort();
+        // Use-Case Grouping
+        const useCaseGroups = Object.keys(USE_CASE_TAXONOMY).sort();
         if (this.elements.useCaseBox) {
-            this.elements.useCaseBox.innerHTML = sortedUseCases.map(uc => 
+            this.elements.useCaseBox.innerHTML = useCaseGroups.map(uc => 
                 `<label class="filter-checkbox-label">
                     <input type="checkbox" name="useCase" value="${uc}"> ${uc}
                 </label>`
@@ -109,20 +128,41 @@ class DirectoryEngine {
         }
     }
 
+    mapUseCasesToGroups(tool) {
+        const groups = new Set();
+        const rawCases = Array.isArray(tool.primaryUseCases) ? tool.primaryUseCases.map(c => c.toLowerCase()) : [];
+        const description = (tool.description || '').toLowerCase();
+        
+        Object.entries(USE_CASE_TAXONOMY).forEach(([groupName, keywords]) => {
+            const matches = rawCases.some(rc => keywords.some(kw => rc.includes(kw))) || 
+                            keywords.some(kw => description.includes(kw));
+            if (matches) {
+                groups.add(groupName);
+            }
+        });
+        
+        return Array.from(groups);
+    }
+
     bindEvents() {
-        // Search & Sort
+        // Search
         if (this.elements.searchInput) {
             this.elements.searchInput.addEventListener('input', (e) => {
-                this.searchTerm = e.target.value.toLowerCase();
-                if (this.searchTerm && this.sortOrder === 'recommended') {
+                const newTerm = e.target.value.trim().toLowerCase();
+                
+                // If user starts typing and hasn't explicitly chosen a sort, switch to relevance.
+                // If they clear the search, revert to az if they were on relevance.
+                if (newTerm && !this.searchTerm && this.sortOrder === 'az') {
                     this.sortOrder = 'relevance';
-                } else if (!this.searchTerm && this.sortOrder === 'relevance') {
-                    this.sortOrder = 'recommended';
+                } else if (!newTerm && this.sortOrder === 'relevance') {
+                    this.sortOrder = 'az';
                 }
+                
+                this.searchTerm = newTerm;
+                
                 this.updateUrlState();
                 this.applyFilters();
                 
-                // Track search
                 clearTimeout(this._searchTimer);
                 this._searchTimer = setTimeout(() => {
                     if (this.searchTerm && window.Analytics) {
@@ -137,10 +177,10 @@ class DirectoryEngine {
                 this.sortOrder = e.target.value;
                 this.updateUrlState();
                 this.applyFilters();
+                Analytics.track('sort_changed', { sort: this.sortOrder });
             });
         }
 
-        // Checkboxes delegation
         if (this.elements.sidebar) {
             this.elements.sidebar.addEventListener('change', (e) => {
                 if (e.target.type === 'checkbox') {
@@ -148,20 +188,24 @@ class DirectoryEngine {
                     this.updateUrlState();
                     this.applyFilters();
                     
-                    if (window.Analytics) {
-                        Analytics.track('filter_applied', { filter: e.target.name, value: e.target.value, checked: e.target.checked });
+                    if (e.target.checked) {
+                        Analytics.track('filter_applied', { filter: e.target.name, value: e.target.value });
+                    } else {
+                        Analytics.track('filter_removed', { filter: e.target.name, value: e.target.value });
                     }
                 }
             });
         }
 
-        // Clear all buttons
         const clearAll = () => {
             this.activeFilters = { freeTier: [], pricing: [], category: [], useCase: [] };
+            if (BROWSE_CONFIG.category) {
+                this.activeFilters.category = [BROWSE_CONFIG.category];
+            }
             this.searchTerm = '';
             if (this.elements.searchInput) this.elements.searchInput.value = '';
-            this.sortOrder = 'recommended';
-            if (this.elements.sortSelect) this.elements.sortSelect.value = 'recommended';
+            this.sortOrder = 'az';
+            if (this.elements.sortSelect) this.elements.sortSelect.value = 'az';
             
             if (this.elements.sidebar) {
                 this.elements.sidebar.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
@@ -169,32 +213,53 @@ class DirectoryEngine {
             
             this.updateUrlState();
             this.applyFilters();
+            Analytics.track('filters_cleared', {});
         };
 
         if (this.elements.clearFiltersBtn) this.elements.clearFiltersBtn.addEventListener('click', clearAll);
         if (this.elements.emptyClearBtn) this.elements.emptyClearBtn.addEventListener('click', clearAll);
 
         // Mobile Sidebar Toggles
+        const openSidebar = () => {
+            this.elements.sidebar.classList.add('is-open');
+            this.elements.sidebar.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus trap - focus first input
+            const firstInput = this.elements.sidebar.querySelector('input, button');
+            if (firstInput) firstInput.focus();
+        };
+        
+        const closeSidebar = () => {
+            this.elements.sidebar.classList.remove('is-open');
+            this.elements.sidebar.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            
+            if (this.elements.mobileFiltersBtn) {
+                this.elements.mobileFiltersBtn.focus();
+            }
+        };
+
         if (this.elements.mobileFiltersBtn) {
-            this.elements.mobileFiltersBtn.addEventListener('click', () => {
-                this.elements.sidebar.classList.add('is-open');
-                document.body.style.overflow = 'hidden';
-            });
+            this.elements.mobileFiltersBtn.setAttribute('aria-controls', 'directory-sidebar');
+            this.elements.mobileFiltersBtn.addEventListener('click', openSidebar);
         }
         if (this.elements.closeSidebarBtn) {
-            this.elements.closeSidebarBtn.addEventListener('click', () => {
-                this.elements.sidebar.classList.remove('is-open');
-                document.body.style.overflow = '';
-            });
+            this.elements.closeSidebarBtn.addEventListener('click', closeSidebar);
         }
+        
+        // Escape key to close sidebar
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.elements.sidebar && this.elements.sidebar.classList.contains('is-open')) {
+                closeSidebar();
+            }
+        });
 
-        // History API
         window.addEventListener('popstate', () => {
             this.readUrlState();
             this.applyFilters();
         });
         
-        // Delegated remove chip
         if (this.elements.activeFiltersList) {
             this.elements.activeFiltersList.addEventListener('click', (e) => {
                 const btn = e.target.closest('button');
@@ -208,7 +273,19 @@ class DirectoryEngine {
                         
                         this.updateUrlState();
                         this.applyFilters();
+                        Analytics.track('filter_removed', { filter: group, value: value });
                     }
+                }
+            });
+        }
+        
+        // Track Tool Clicks
+        if (this.elements.container) {
+            this.elements.container.addEventListener('click', (e) => {
+                const card = e.target.closest('.tool-card');
+                if (card) {
+                    const toolName = card.querySelector('h3')?.textContent || 'Unknown Tool';
+                    Analytics.track('tool_card_clicked', { tool: toolName });
                 }
             });
         }
@@ -216,11 +293,14 @@ class DirectoryEngine {
 
     updateStateFromUI() {
         this.activeFilters = { freeTier: [], pricing: [], category: [], useCase: [] };
+        if (BROWSE_CONFIG.category) {
+            this.activeFilters.category = [BROWSE_CONFIG.category];
+        }
         if (!this.elements.sidebar) return;
 
         this.elements.sidebar.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
             const group = cb.name || cb.closest('.filter-group').id.replace('filter-group-', '');
-            if (this.activeFilters[group]) {
+            if (this.activeFilters[group] && !this.activeFilters[group].includes(cb.value)) {
                 this.activeFilters[group].push(cb.value);
             }
         });
@@ -235,15 +315,51 @@ class DirectoryEngine {
         });
         
         if (this.elements.searchInput) this.elements.searchInput.value = this.searchTerm;
-        if (this.elements.sortSelect && this.sortOrder !== 'relevance') {
-            this.elements.sortSelect.value = this.sortOrder;
+        if (this.elements.sortSelect) {
+            if (this.sortOrder === 'relevance' && ![...this.elements.sortSelect.options].some(o => o.value === 'relevance')) {
+                // If relevance isn't an option, just leave it as az visually but logic handles it
+            } else {
+                this.elements.sortSelect.value = this.sortOrder === 'relevance' ? 'az' : this.sortOrder;
+            }
         }
+        
+        this.updateMobileFilterCount();
+    }
+    
+    updateMobileFilterCount() {
+        if (!this.elements.mobileFiltersBtn) return;
+        let count = 0;
+        count += this.activeFilters.freeTier.length;
+        count += this.activeFilters.pricing.length;
+        count += this.activeFilters.useCase.length;
+        
+        // Don't count category if it's fixed
+        if (BROWSE_CONFIG.category) {
+            count += Math.max(0, this.activeFilters.category.length - 1);
+        } else {
+            count += this.activeFilters.category.length;
+        }
+        
+        this.elements.mobileFiltersBtn.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+            Filters ${count > 0 ? `(${count})` : ''}
+        `;
     }
 
     readUrlState() {
         const params = new URLSearchParams(window.location.search);
-        this.searchTerm = params.get('q') || '';
-        this.sortOrder = params.get('sort') || (this.searchTerm ? 'relevance' : 'recommended');
+        this.searchTerm = (params.get('q') || '').trim().toLowerCase();
+        
+        // Safely parse sort
+        const allowedSorts = ['az', 'za', 'free_first'];
+        const urlSort = params.get('sort');
+        if (urlSort && allowedSorts.includes(urlSort)) {
+            this.sortOrder = urlSort;
+        } else if (this.searchTerm) {
+            this.sortOrder = 'relevance';
+        } else {
+            this.sortOrder = 'az';
+        }
         
         const parseList = (val) => val ? val.split(',').filter(Boolean) : [];
         this.activeFilters.category = parseList(params.get('category'));
@@ -261,7 +377,7 @@ class DirectoryEngine {
     updateUrlState() {
         const params = new URLSearchParams();
         if (this.searchTerm) params.set('q', this.searchTerm);
-        if (this.sortOrder && this.sortOrder !== 'recommended' && this.sortOrder !== 'relevance') params.set('sort', this.sortOrder);
+        if (this.sortOrder && this.sortOrder !== 'az' && this.sortOrder !== 'relevance') params.set('sort', this.sortOrder);
         
         if (this.activeFilters.category.length > 0) {
              const cats = this.activeFilters.category.filter(c => c !== BROWSE_CONFIG.category);
@@ -273,6 +389,8 @@ class DirectoryEngine {
         
         const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
         window.history.pushState({}, '', newUrl);
+        
+        this.updateMobileFilterCount();
     }
     
     renderFilterChips() {
@@ -318,7 +436,7 @@ class DirectoryEngine {
         else if (name.startsWith(term)) score += 60;
         else if (name.includes(term)) score += 30;
 
-        const aliases = Array.isArray(tool.aliases) ? tool.aliases : [];
+        const aliases = [...(tool.aliases || [])];
         if (tool.previousName) aliases.push(tool.previousName);
         
         if (aliases.some(a => a.toLowerCase() === term)) score += 80;
@@ -336,8 +454,24 @@ class DirectoryEngine {
         this.currentPage = 1;
         this.renderFilterChips();
 
+        let searchScores = {};
+        if (this.searchTerm) {
+            this.tools.forEach(t => {
+                searchScores[t.id] = this.computeSearchScore(t, this.searchTerm);
+            });
+            // Propagate successor boosting
+            this.tools.forEach(t => {
+                if (searchScores[t.id] > 0 && t.successorToolId) {
+                    if (searchScores[t.successorToolId] !== undefined) {
+                        searchScores[t.successorToolId] = (searchScores[t.successorToolId] || 0) + Math.max(searchScores[t.id], 100);
+                        searchScores[t.id] = Math.max(0, searchScores[t.id] - 50);
+                    }
+                }
+            });
+        }
+
         this.filteredTools = this.tools.filter(tool => {
-            if (this.searchTerm && this.computeSearchScore(tool, this.searchTerm) === 0) {
+            if (this.searchTerm && (searchScores[tool.id] || 0) === 0) {
                 return false;
             }
 
@@ -366,8 +500,8 @@ class DirectoryEngine {
             }
             
             if (this.activeFilters.useCase.length > 0) {
-                if (!tool.primaryUseCases || !Array.isArray(tool.primaryUseCases)) return false;
-                const matches = tool.primaryUseCases.some(uc => this.activeFilters.useCase.includes(uc.trim()));
+                const toolGroups = this.mapUseCasesToGroups(tool);
+                const matches = toolGroups.some(g => this.activeFilters.useCase.includes(g));
                 if (!matches) return false;
             }
 
@@ -375,34 +509,15 @@ class DirectoryEngine {
         });
 
         if (this.searchTerm && this.sortOrder === 'relevance') {
-            this.filteredTools.forEach(t => {
-                t._searchScore = this.computeSearchScore(t, this.searchTerm);
-                if (t.successorToolId) {
-                    const successor = this.filteredTools.find(s => s.id === t.successorToolId);
-                    if (successor) {
-                        successor._searchScore = (successor._searchScore || 0) + Math.max(t._searchScore, 10);
-                        t._searchScore = Math.max(0, t._searchScore - 50);
-                    }
-                }
-            });
+            this.filteredTools.forEach(t => t._searchScore = searchScores[t.id]);
             this.filteredTools.sort((a, b) => b._searchScore - a._searchScore);
-        } else if (this.sortOrder === 'recommended') {
-            const recommendedMap = new Map();
-            this.recommendedIds.forEach((id, index) => recommendedMap.set(id, index));
-            
+        } else if (this.sortOrder === 'free_first') {
             this.filteredTools.sort((a, b) => {
-                const aEligible = a.recommendationEligible !== false;
-                const bEligible = b.recommendationEligible !== false;
-                if (aEligible !== bEligible) return aEligible ? -1 : 1;
-
-                const aIndex = recommendedMap.has(a.id) ? recommendedMap.get(a.id) : 999999;
-                const bIndex = recommendedMap.has(b.id) ? recommendedMap.get(b.id) : 999999;
-                
-                if (aIndex !== bIndex) return aIndex - bIndex;
+                const aFree = (a.hasFreeTier === true || a.has_free_tier === true);
+                const bFree = (b.hasFreeTier === true || b.has_free_tier === true);
+                if (aFree !== bFree) return aFree ? -1 : 1;
                 return a.name.localeCompare(b.name);
             });
-        } else if (this.sortOrder === 'free_first') {
-            this.filteredTools = sortToolsFreeFirst(this.filteredTools);
         } else if (this.sortOrder === 'az') {
             this.filteredTools.sort((a, b) => a.name.localeCompare(b.name));
         } else if (this.sortOrder === 'za') {
@@ -435,7 +550,7 @@ class DirectoryEngine {
         const fragment = document.createDocumentFragment();
         for (let i = start; i < end; i++) {
             const tool = this.filteredTools[i];
-            const card = renderToolCard(tool, this.recommendedIds, 'browse');
+            const card = renderToolCard(tool, 'browse');
             fragment.appendChild(card);
         }
 

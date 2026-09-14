@@ -584,7 +584,6 @@ function buildCategoryPage(categoryName, categoryTools) {
         <div class="filter-group">
           <label for="sort-select" class="filter-group-title">Sort By</label>
           <select id="sort-select" class="directory-sort-select" aria-label="Sort tools">
-            <option value="recommended">Recommended</option>
             <option value="az">A–Z</option>
             <option value="za">Z–A</option>
             <option value="free_first">Free First</option>
