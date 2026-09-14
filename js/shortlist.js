@@ -9,6 +9,7 @@ class ShortlistManager {
     constructor() {
         this.STORAGE_KEY = 'whichaipick_shortlist';
         this.MAX_ITEMS = 10;
+        this.CURRENT_VERSION = 1;
         this.items = this.load();
         
         // Wait for DOM
@@ -22,7 +23,21 @@ class ShortlistManager {
     load() {
         try {
             const data = localStorage.getItem(this.STORAGE_KEY);
-            return data ? JSON.parse(data) : [];
+            if (!data) return [];
+            
+            const parsed = JSON.parse(data);
+            
+            // Migration: if it's an array (old version)
+            if (Array.isArray(parsed)) {
+                return parsed;
+            }
+            
+            // New version: { version: 1, toolIds: [...] }
+            if (parsed && typeof parsed === 'object' && Array.isArray(parsed.toolIds)) {
+                return parsed.toolIds;
+            }
+            
+            return [];
         } catch (e) {
             console.warn('Could not read shortlist from localStorage', e);
             return [];
@@ -31,8 +46,15 @@ class ShortlistManager {
 
     save() {
         try {
-            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.items));
+            const data = {
+                version: this.CURRENT_VERSION,
+                toolIds: this.items
+            };
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
             this.updateGlobalUI();
+            
+            // Dispatch a custom event for local page components if needed
+            window.dispatchEvent(new CustomEvent('shortlist_updated', { detail: { items: this.items } }));
         } catch (e) {
             console.warn('Could not save shortlist to localStorage', e);
         }
@@ -41,11 +63,12 @@ class ShortlistManager {
     add(toolId) {
         if (!this.items.includes(toolId)) {
             if (this.items.length >= this.MAX_ITEMS) {
-                alert(`You can only shortlist up to ${this.MAX_ITEMS} tools. Please remove some before adding more.`);
+                alert(`Your shortlist is full. Remove a tool before adding another.`);
                 return false;
             }
             this.items.push(toolId);
             this.save();
+            if (window.Analytics) Analytics.track('shortlist_added', { toolId });
             return true;
         }
         return false;
@@ -56,6 +79,7 @@ class ShortlistManager {
         if (index > -1) {
             this.items.splice(index, 1);
             this.save();
+            if (window.Analytics) Analytics.track('shortlist_removed', { toolId });
             return true;
         }
         return false;
@@ -73,6 +97,7 @@ class ShortlistManager {
     clear() {
         this.items = [];
         this.save();
+        if (window.Analytics) Analytics.track('shortlist_cleared', {});
     }
 
     // Update the header indicator and all active buttons on the page
@@ -127,6 +152,15 @@ class ShortlistManager {
                 if (toolId) {
                     this.toggle(toolId);
                 }
+            }
+        });
+        
+        // Listen for storage events from other tabs
+        window.addEventListener('storage', (e) => {
+            if (e.key === this.STORAGE_KEY) {
+                this.items = this.load();
+                this.updateGlobalUI();
+                window.dispatchEvent(new CustomEvent('shortlist_updated', { detail: { items: this.items } }));
             }
         });
     }

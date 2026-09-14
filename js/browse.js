@@ -131,11 +131,9 @@ class DirectoryEngine {
     mapUseCasesToGroups(tool) {
         const groups = new Set();
         const rawCases = Array.isArray(tool.primaryUseCases) ? tool.primaryUseCases.map(c => c.toLowerCase()) : [];
-        const description = (tool.description || '').toLowerCase();
         
         Object.entries(USE_CASE_TAXONOMY).forEach(([groupName, keywords]) => {
-            const matches = rawCases.some(rc => keywords.some(kw => rc.includes(kw))) || 
-                            keywords.some(kw => description.includes(kw));
+            const matches = rawCases.some(rc => keywords.some(kw => rc.includes(kw)));
             if (matches) {
                 groups.add(groupName);
             }
