@@ -97,34 +97,85 @@ class DirectoryEngine {
     }
 
     setupFilterOptions() {
-        // Extract Categories
+        // Helper to generate checkboxes with Show More
+        const generateCheckboxes = (items, name, counts) => {
+            const VISIBLE_COUNT = 6;
+            const visibleItems = items.slice(0, VISIBLE_COUNT);
+            const hiddenItems = items.slice(VISIBLE_COUNT);
+            
+            let html = visibleItems.map(item => {
+                const countStr = counts && counts[item] !== undefined ? `<span class="filter-count">${counts[item]}</span>` : '';
+                return `<label class="filter-checkbox-label">
+                    <input type="checkbox" name="${name}" value="${item}"> 
+                    <span class="filter-label-text">${item}</span>
+                    ${countStr}
+                </label>`;
+            }).join('');
+            
+            if (hiddenItems.length > 0) {
+                html += `<div class="hidden-options" style="display: none;">
+                    ${hiddenItems.map(item => {
+                        const countStr = counts && counts[item] !== undefined ? `<span class="filter-count">${counts[item]}</span>` : '';
+                        return `<label class="filter-checkbox-label">
+                            <input type="checkbox" name="${name}" value="${item}"> 
+                            <span class="filter-label-text">${item}</span>
+                            ${countStr}
+                        </label>`;
+                    }).join('')}
+                </div>
+                <button type="button" class="show-more-btn" data-target="${name}" style="background:none; border:none; color:var(--c-accent); font-size:0.85rem; cursor:pointer; padding:4px 0; margin-top:4px;">Show more</button>`;
+            }
+            return html;
+        };
+
+        // Extract Categories & counts
+        const catCounts = {};
+        this.tools.forEach(t => {
+            if (t.category) catCounts[t.category] = (catCounts[t.category] || 0) + 1;
+        });
         const categories = [...new Set(this.tools.map(t => t.category).filter(Boolean))].sort();
         if (this.elements.categoryBox) {
-            this.elements.categoryBox.innerHTML = categories.map(cat => 
-                `<label class="filter-checkbox-label">
-                    <input type="checkbox" name="category" value="${cat}"> ${cat}
-                </label>`
-            ).join('');
+            this.elements.categoryBox.innerHTML = generateCheckboxes(categories, 'category', catCounts);
         }
 
-        // Hardcode explicit pricing models
+        // Pricing Models & counts
         const explicitPricing = ['Free', 'Freemium', 'Paid', 'Enterprise'];
+        const priceCounts = {};
+        this.tools.forEach(t => {
+            const model = (t.pricing_model || '').trim().toLowerCase();
+            const matched = explicitPricing.find(p => p.toLowerCase() === model);
+            if (matched) priceCounts[matched] = (priceCounts[matched] || 0) + 1;
+        });
         if (this.elements.pricingBox) {
-            this.elements.pricingBox.innerHTML = explicitPricing.map(model => 
-                `<label class="filter-checkbox-label">
-                    <input type="checkbox" name="pricing" value="${model.toLowerCase()}"> ${model}
-                </label>`
-            ).join('');
+            this.elements.pricingBox.innerHTML = generateCheckboxes(explicitPricing, 'pricing', priceCounts);
         }
 
-        // Use-Case Grouping
+        // Use-Case Grouping & counts
         const useCaseGroups = Object.keys(USE_CASE_TAXONOMY).sort();
+        const ucCounts = {};
+        this.tools.forEach(t => {
+            const groups = this.mapUseCasesToGroups(t);
+            groups.forEach(g => ucCounts[g] = (ucCounts[g] || 0) + 1);
+        });
         if (this.elements.useCaseBox) {
-            this.elements.useCaseBox.innerHTML = useCaseGroups.map(uc => 
-                `<label class="filter-checkbox-label">
-                    <input type="checkbox" name="useCase" value="${uc}"> ${uc}
-                </label>`
-            ).join('');
+            this.elements.useCaseBox.innerHTML = generateCheckboxes(useCaseGroups, 'useCase', ucCounts);
+        }
+        
+        // Bind Show More buttons
+        if (this.elements.sidebar) {
+            this.elements.sidebar.querySelectorAll('.show-more-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const hiddenDiv = e.target.previousElementSibling;
+                    if (hiddenDiv.style.display === 'none') {
+                        hiddenDiv.style.display = 'block';
+                        e.target.textContent = 'Show less';
+                    } else {
+                        hiddenDiv.style.display = 'none';
+                        e.target.textContent = 'Show more';
+                    }
+                });
+            });
         }
     }
 
@@ -396,10 +447,40 @@ class DirectoryEngine {
         
         let chips = [];
         
+        // Remove existing clear buttons from sidebar headers
+        if (this.elements.sidebar) {
+            this.elements.sidebar.querySelectorAll('.filter-group-clear').forEach(el => el.remove());
+        }
+        
         Object.entries(this.activeFilters).forEach(([group, values]) => {
             const displayValues = group === 'category' && BROWSE_CONFIG.category 
                 ? values.filter(v => v !== BROWSE_CONFIG.category) 
                 : values;
+                
+            if (displayValues.length > 0 && this.elements.sidebar) {
+                const groupEl = this.elements.sidebar.querySelector(`#filter-group-${group} summary`);
+                if (groupEl) {
+                    const clearBtn = document.createElement('button');
+                    clearBtn.className = 'filter-group-clear';
+                    clearBtn.textContent = 'Clear';
+                    clearBtn.setAttribute('aria-label', `Clear ${group} filters`);
+                    clearBtn.onclick = (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.activeFilters[group] = group === 'category' && BROWSE_CONFIG.category ? [BROWSE_CONFIG.category] : [];
+                        this.updateUrlState();
+                        this.applyFilters();
+                        Analytics.track('filter_group_cleared', { group });
+                    };
+                    // Insert before the chevron
+                    const chevron = groupEl.querySelector('.chevron');
+                    if (chevron) {
+                        groupEl.insertBefore(clearBtn, chevron);
+                    } else {
+                        groupEl.appendChild(clearBtn);
+                    }
+                }
+            }
                 
             displayValues.forEach(val => {
                 let label = val;

@@ -135,7 +135,7 @@
   <main>
     <div class="page-container directory-layout">
       
-      <!-- Filter Sidebar (Desktop) -->
+      <!-- Filter Sidebar (Desktop/Mobile overlay) -->
       <aside class="directory-sidebar" id="directory-sidebar">
         <div class="directory-sidebar-header mobile-only">
           <h2>Filters</h2>
@@ -144,50 +144,43 @@
           </button>
         </div>
 
-        <div class="filter-group">
+        <div class="filter-group filter-group-search">
           <label for="search-input" class="filter-group-title">Search</label>
           <input type="search" id="search-input" class="directory-search-input" placeholder="Search tools..." aria-label="Search tools by name or description">
         </div>
 
-        <div class="filter-group">
-          <label for="sort-select" class="filter-group-title">Sort By</label>
-          <select id="sort-select" class="directory-sort-select" aria-label="Sort tools">
-            <option value="az">A–Z</option>
-            <option value="za">Z–A</option>
-            <option value="free_first">Free First</option>
-          </select>
-        </div>
+        <details class="filter-group" id="filter-group-freeTier" open>
+          <summary class="filter-group-title">Access <span class="chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <div class="filter-group-content">
+            <label class="filter-checkbox-label">
+              <input type="checkbox" name="freeTier" value="has_free_tier"> Has Free Tier
+            </label>
+            <label class="filter-checkbox-label">
+              <input type="checkbox" name="freeTier" value="no_free_tier"> No Free Tier
+            </label>
+          </div>
+        </details>
 
-        <div class="filter-group" id="filter-group-freeTier">
-          <h3 class="filter-group-title">Access</h3>
-          <label class="filter-checkbox-label">
-            <input type="checkbox" name="freeTier" value="has_free_tier"> Has Free Tier
-          </label>
-          <label class="filter-checkbox-label">
-            <input type="checkbox" name="freeTier" value="no_free_tier"> No Free Tier
-          </label>
-        </div>
-
-        <div class="filter-group" id="filter-group-pricing">
-          <h3 class="filter-group-title">Pricing Model</h3>
-          <div id="pricing-checkboxes">
+        <details class="filter-group" id="filter-group-pricing" open>
+          <summary class="filter-group-title">Pricing Model <span class="chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <div id="pricing-checkboxes" class="filter-group-content">
              <!-- Injected by JS -->
           </div>
-        </div>
+        </details>
 
-        <div class="filter-group" id="filter-group-category">
-          <h3 class="filter-group-title">Category</h3>
-          <div id="category-checkboxes" class="scrollable-checkboxes">
+        <details class="filter-group" id="filter-group-category" open>
+          <summary class="filter-group-title">Category <span class="chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <div id="category-checkboxes" class="filter-group-content">
              <!-- Injected by JS -->
           </div>
-        </div>
+        </details>
 
-        <div class="filter-group" id="filter-group-useCase">
-          <h3 class="filter-group-title">Use Case</h3>
-          <div id="usecase-checkboxes" class="scrollable-checkboxes">
+        <details class="filter-group" id="filter-group-useCase" open>
+          <summary class="filter-group-title">Use Case <span class="chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+          <div id="usecase-checkboxes" class="filter-group-content">
              <!-- Injected by JS -->
           </div>
-        </div>
+        </details>
       </aside>
 
       <!-- Main Results Area -->
@@ -203,14 +196,22 @@
           </button>
         </div>
 
+        <div class="directory-toolbar">
+          <div id="directory-count" class="directory-count" aria-live="polite">Loading tools...</div>
+          <div class="directory-sort">
+            <label for="sort-select" class="visually-hidden">Sort By</label>
+            <select id="sort-select" class="directory-sort-select" aria-label="Sort tools">
+              <option value="az">A–Z</option>
+              <option value="za">Z–A</option>
+              <option value="free_first">Free First</option>
+            </select>
+          </div>
+        </div>
+
         <!-- Active Filter Chips -->
         <div class="active-filters" id="active-filters" style="display: none;">
           <div class="active-filters-list" id="active-filters-list"></div>
           <button class="clear-filters-btn" id="clear-filters-btn">Clear all</button>
-        </div>
-
-        <div class="directory-stats-bar">
-          <div id="directory-count" class="directory-count" aria-live="polite">Loading tools...</div>
         </div>
 
         <div id="directory-empty-state" class="directory-empty-state" style="display: none;">
@@ -231,8 +232,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/chatgpt/" aria-label="View details for ChatGPT">ChatGPT</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="chatgpt" aria-label="Save ChatGPT to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="chatgpt" aria-label="Save ChatGPT to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -254,8 +257,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/claude/" aria-label="View details for Claude">Claude</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="claude" aria-label="Save Claude to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="claude" aria-label="Save Claude to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -277,8 +282,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/google-gemini/" aria-label="View details for Google Gemini">Google Gemini</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="google-gemini" aria-label="Save Google Gemini to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="google-gemini" aria-label="Save Google Gemini to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -300,8 +307,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/perplexity/" aria-label="View details for Perplexity">Perplexity</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="perplexity" aria-label="Save Perplexity to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="perplexity" aria-label="Save Perplexity to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Research</div>
@@ -323,8 +332,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/microsoft-copilot/" aria-label="View details for Microsoft Copilot">Microsoft Copilot</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="microsoft-copilot" aria-label="Save Microsoft Copilot to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="microsoft-copilot" aria-label="Save Microsoft Copilot to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -346,8 +357,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/midjourney/" aria-label="View details for Midjourney">Midjourney</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="midjourney" aria-label="Save Midjourney to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="midjourney" aria-label="Save Midjourney to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Design</div>
@@ -369,8 +382,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/suno/" aria-label="View details for Suno">Suno</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="suno" aria-label="Save Suno to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="suno" aria-label="Save Suno to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
@@ -392,8 +407,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/bolt/" aria-label="View details for Bolt.new">Bolt.new</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="bolt" aria-label="Save Bolt.new to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="bolt" aria-label="Save Bolt.new to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -415,8 +432,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/luma-ai/" aria-label="View details for Luma AI">Luma AI</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="luma-ai" aria-label="Save Luma AI to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="luma-ai" aria-label="Save Luma AI to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
@@ -438,8 +457,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/elevenlabs/" aria-label="View details for ElevenLabs">ElevenLabs</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="elevenlabs" aria-label="Save ElevenLabs to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="elevenlabs" aria-label="Save ElevenLabs to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
@@ -461,8 +482,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/runway/" aria-label="View details for Runway">Runway</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="runway" aria-label="Save Runway to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="runway" aria-label="Save Runway to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
@@ -484,8 +507,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/canva/" aria-label="View details for Canva">Canva</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="canva" aria-label="Save Canva to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="canva" aria-label="Save Canva to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Design</div>
@@ -507,8 +532,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/notion/" aria-label="View details for Notion">Notion</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="notion" aria-label="Save Notion to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="notion" aria-label="Save Notion to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -530,8 +557,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/cursor/" aria-label="View details for Cursor">Cursor</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="cursor" aria-label="Save Cursor to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="cursor" aria-label="Save Cursor to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -553,8 +582,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/github-copilot/" aria-label="View details for GitHub Copilot">GitHub Copilot</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="github-copilot" aria-label="Save GitHub Copilot to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="github-copilot" aria-label="Save GitHub Copilot to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -576,8 +607,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/grammarly/" aria-label="View details for Grammarly">Grammarly</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="grammarly" aria-label="Save Grammarly to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="grammarly" aria-label="Save Grammarly to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Content Creation</div>
@@ -599,8 +632,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/vercel-ai-sdk/" aria-label="View details for Vercel AI SDK">Vercel AI SDK</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="vercel-ai-sdk" aria-label="Save Vercel AI SDK to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="vercel-ai-sdk" aria-label="Save Vercel AI SDK to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -622,8 +657,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/lovable/" aria-label="View details for Lovable">Lovable</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="lovable" aria-label="Save Lovable to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="lovable" aria-label="Save Lovable to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -645,8 +682,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/adobe-firefly/" aria-label="View details for Adobe Firefly">Adobe Firefly</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="adobe-firefly" aria-label="Save Adobe Firefly to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="adobe-firefly" aria-label="Save Adobe Firefly to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Design</div>
@@ -668,8 +707,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/leonardo-ai/" aria-label="View details for Leonardo AI">Leonardo AI</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="leonardo-ai" aria-label="Save Leonardo AI to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="leonardo-ai" aria-label="Save Leonardo AI to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Design</div>
@@ -691,8 +732,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/ideogram/" aria-label="View details for Ideogram">Ideogram</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="ideogram" aria-label="Save Ideogram to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="ideogram" aria-label="Save Ideogram to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Design</div>
@@ -714,8 +757,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/pika-labs/" aria-label="View details for Pika Labs">Pika Labs</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="pika-labs" aria-label="Save Pika Labs to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="pika-labs" aria-label="Save Pika Labs to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
@@ -737,8 +782,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/udio/" aria-label="View details for Udio">Udio</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="udio" aria-label="Save Udio to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="udio" aria-label="Save Udio to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Video &amp; Audio</div>
@@ -760,8 +807,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/otterai/" aria-label="View details for Otter.ai">Otter.ai</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="otterai" aria-label="Save Otter.ai to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="otterai" aria-label="Save Otter.ai to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -783,8 +832,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/firefliesai/" aria-label="View details for Fireflies.ai">Fireflies.ai</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="firefliesai" aria-label="Save Fireflies.ai to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="firefliesai" aria-label="Save Fireflies.ai to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
@@ -806,8 +857,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/google-ai-studio/" aria-label="View details for Google AI Studio">Google AI Studio</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="google-ai-studio" aria-label="Save Google AI Studio to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="google-ai-studio" aria-label="Save Google AI Studio to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -829,8 +882,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/openai-playground/" aria-label="View details for OpenAI Playground">OpenAI Playground</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="openai-playground" aria-label="Save OpenAI Playground to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="openai-playground" aria-label="Save OpenAI Playground to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Development</div>
@@ -852,8 +907,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/meta-ai/" aria-label="View details for Meta AI">Meta AI</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="meta-ai" aria-label="Save Meta AI to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="meta-ai" aria-label="Save Meta AI to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Research</div>
@@ -875,8 +932,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/amazon-q/" aria-label="View details for Amazon Q">Amazon Q</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="amazon-q" aria-label="Save Amazon Q to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="amazon-q" aria-label="Save Amazon Q to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Business</div>
@@ -898,8 +957,10 @@
             <h3 class="tool-name" style="margin: 0;">
               <a href="/tools/apple-intelligence/" aria-label="View details for Apple Intelligence">Apple Intelligence</a>
             </h3>
-            <button class="shortlist-toggle-btn" data-tool-id="apple-intelligence" aria-label="Save Apple Intelligence to Shortlist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <button class="btn btn-secondary btn-sm shortlist-toggle-btn" data-tool-id="apple-intelligence" aria-label="Save Apple Intelligence to Shortlist">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg> Save
             </button>
           </div>
           <div class="tool-category" style="margin-top: 4px;">Productivity</div>
