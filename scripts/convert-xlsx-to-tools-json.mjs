@@ -11,6 +11,7 @@ const OUTPUT_FILE = path.join(__dirname, '../data/tools.json');
 const TAXONOMY_FILE = path.join(__dirname, '../data/category-taxonomy.json');
 const MAPPING_FILE = path.join(__dirname, '../data/tool-categories.csv');
 const DECISION_FILE = path.join(__dirname, '../data/decision-attributes.csv');
+const USE_CASES_FILE = path.join(__dirname, '../data/tool-use-cases.csv');
 
 // Load category taxonomy
 let allowedCategories = [];
@@ -47,6 +48,25 @@ if (fs.existsSync(MAPPING_FILE)) {
     console.log('⚠️  No mapping file found, all tools will be Uncategorized');
 }
 
+// Load tool use cases
+const useCasesMap = new Map();
+if (fs.existsSync(USE_CASES_FILE)) {
+    console.log('🎯 Loading primary use cases...');
+    const ucData = fs.readFileSync(USE_CASES_FILE, 'utf8');
+    const lines = ucData.split('\n').filter(l => l.trim());
+    for (let i = 1; i < lines.length; i++) {
+        const firstComma = lines[i].indexOf(',');
+        if (firstComma !== -1) {
+            const id = lines[i].slice(0, firstComma).trim();
+            const casesStr = lines[i].slice(firstComma + 1).trim();
+            if (id && casesStr) {
+                useCasesMap.set(id, casesStr.split('|').map(s => s.trim()).filter(Boolean));
+            }
+        }
+    }
+    console.log(`✅ Loaded ${useCasesMap.size} primary use cases`);
+}
+
 // Load decision attributes
 const decisionMap = new Map();
 if (fs.existsSync(DECISION_FILE)) {
@@ -54,17 +74,27 @@ if (fs.existsSync(DECISION_FILE)) {
     const decisionData = fs.readFileSync(DECISION_FILE, 'utf8');
     const lines = decisionData.split('\n').filter(line => line.trim());
     if (lines.length > 0) {
-        const headers = lines[0].split(',');
+        const headers = lines[0].split(',').map(h => h.trim());
         for (let i = 1; i < lines.length; i++) {
-            const cols = lines[i].split(',');
+            const cols = lines[i].split(',').map(c => c.trim());
             const id = cols[0];
             if (id) {
                 const attrs = {};
                 for (let j = 1; j < headers.length; j++) {
-                    let val = cols[j];
-                    if (val === 'true') val = true;
-                    if (val === 'false') val = false;
-                    attrs[headers[j]] = val;
+                    const header = headers[j];
+                    let val = cols[j] !== undefined ? cols[j] : '';
+                    
+                    if (header === 'aliases' || header === 'platforms' || header === 'verificationSources') {
+                        attrs[header] = val && val !== 'unknown' ? val.split('|').map(s => s.trim()).filter(Boolean) : [];
+                    } else if (header === 'hasFreeTier' || header === 'hasFreeTrial' || header === 'apiAvailable' || header === 'openSource' || header === 'selfHosted') {
+                        if (val === 'true') attrs[header] = true;
+                        else if (val === 'false') attrs[header] = false;
+                        else attrs[header] = null;
+                    } else if (header === 'previousName' || header === 'lastVerifiedAt') {
+                        attrs[header] = val && val !== 'null' && val !== 'unknown' ? val : null;
+                    } else {
+                        attrs[header] = val || 'unknown';
+                    }
                 }
                 decisionMap.set(id, attrs);
             }
@@ -145,6 +175,9 @@ rawData.forEach((row, index) => {
     // Build tool object by merging with existing data if available
     const existingTool = existingToolsMap ? existingToolsMap.get(baseId) : null;
     const decisionAttrs = decisionMap.has(baseId) ? decisionMap.get(baseId) : {};
+    const primaryUseCases = useCasesMap.has(baseId) ? useCasesMap.get(baseId) : (existingTool && existingTool.primaryUseCases ? existingTool.primaryUseCases : []);
+    const bestFor = (existingTool && (existingTool.bestFor || existingTool.best_for)) || [];
+    const notIdealFor = (existingTool && (existingTool.notIdealFor || existingTool.cons)) || [];
     
     const newTool = {
         ...(existingTool || {}),
@@ -157,6 +190,9 @@ rawData.forEach((row, index) => {
         pricing: existingTool ? existingTool.pricing : pricing,
         tags: existingTool && existingTool.tags ? existingTool.tags : tags,
         source_row: index + 2, // +2 because Excel is 1-indexed and has header row
+        primaryUseCases: primaryUseCases,
+        bestFor: bestFor,
+        notIdealFor: notIdealFor,
         ...decisionAttrs
     };
 
@@ -200,6 +236,9 @@ manualTools.forEach(tool => {
     const existing = toolsMap.get(tool.id);
     const prevData = existing || (existingToolsMap ? existingToolsMap.get(tool.id) : null);
     const decisionAttrs = decisionMap.has(tool.id) ? decisionMap.get(tool.id) : {};
+    const primaryUseCases = useCasesMap.has(tool.id) ? useCasesMap.get(tool.id) : (prevData && prevData.primaryUseCases ? prevData.primaryUseCases : []);
+    const bestFor = (prevData && (prevData.bestFor || prevData.best_for)) || [];
+    const notIdealFor = (prevData && (prevData.notIdealFor || prevData.cons)) || [];
     
     const merged = {
         ...(prevData || {}),
@@ -209,6 +248,9 @@ manualTools.forEach(tool => {
         pricing: prevData ? prevData.pricing : null,
         tags: prevData && prevData.tags ? prevData.tags : [],
         source_row: prevData ? prevData.source_row : 'manual-injection-a2',
+        primaryUseCases: primaryUseCases,
+        bestFor: bestFor,
+        notIdealFor: notIdealFor,
         ...decisionAttrs
     };
     toolsMap.set(tool.id, merged);
