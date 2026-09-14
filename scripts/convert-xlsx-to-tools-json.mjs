@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const INPUT_FILE = path.join(__dirname, '../data/URLs_for_Which_AI_Tool_AUDITED_2026-09-11.xlsx');
+const INPUT_FILE = path.join(__dirname, '../data/URLs_for_Which_AI_Tool_EXPANDED_2026-09-14.xlsx');
 const OUTPUT_FILE = path.join(__dirname, '../data/tools.json');
 const TAXONOMY_FILE = path.join(__dirname, '../data/category-taxonomy.json');
 const MAPPING_FILE = path.join(__dirname, '../data/tool-categories.csv');

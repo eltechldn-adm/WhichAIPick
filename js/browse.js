@@ -9,21 +9,21 @@ window.Analytics = window.Analytics || {
 };
 
 const USE_CASE_TAXONOMY = {
-    'Writing & Content': ['writing', 'content', 'copywriting', 'blog', 'essay', 'summarize', 'text generation', 'translation', 'grammar', 'proofreading', 'fiction', 'novel', 'article', 'seo writing'],
-    'Coding & Development': ['code', 'coding', 'development', 'programming', 'developer', 'sql', 'html', 'css', 'python', 'llm', 'model', 'embedding', 'vector', 'inference', 'annotation', 'labelling', 'mlops', 'rag', 'agent framework', 'test automation', 'code review', 'code generation', 'ide', 'repository', 'deployment'],
-    'Image Creation': ['image', 'photo', 'art', 'generation', 'picture', 'avatar', 'logo', 'drawing', 'illustration', 'rendering', 'background removal', 'upscaling', 'retouching', '3d model', 'interior design', 'architectural'],
-    'Video Creation': ['video', 'animation', 'editing', 'youtube', 'tiktok', 'reel', 'avatar video', 'text-to-video', 'video generation', 'clip', 'dubbing', 'subtitle', 'caption'],
-    'Audio & Voice': ['audio', 'voice', 'speech', 'music', 'sound', 'text-to-speech', 'podcast', 'transcription', 'voiceover', 'voice cloning', 'mastering', 'stem'],
-    'Research': ['research', 'academic', 'science', 'search', 'discovery', 'analysis', 'paper', 'citation', 'literature', 'pdf', 'document', 'fact-checking'],
-    'Productivity': ['productivity', 'workflow', 'task', 'time management', 'automation', 'organization', 'note-taking', 'meeting notes', 'scheduling', 'calendar', 'email management', 'mind mapping', 'knowledge management', 'ai assistant', 'ai chat', 'journaling', 'email filtering', 'inbox', 'browser', 'personal assistant', 'tutoring', 'language practice'],
-    'Meetings & Transcription': ['meeting', 'transcription', 'notes', 'zoom', 'teams', 'summarization', 'meeting summary', 'meeting notes', 'action item'],
-    'Marketing': ['marketing', 'seo', 'sales', 'advertising', 'campaign', 'email marketing', 'social media', 'landing page', 'newsletter', 'outreach', 'lead', 'brand'],
-    'Automation': ['automation', 'zapier', 'workflow', 'bot', 'agent', 'scraping', 'extraction', 'parsing', 'rpa', 'robotic process', 'web crawling', 'no-code automation', 'data pipeline'],
-    'Design': ['design', 'ui', 'ux', 'web design', 'graphic', 'presentation', 'slides', '3d', 'product photo', 'floor plan', 'room design', 'design-to-code'],
-    'Data & Analytics': ['data', 'analytics', 'spreadsheet', 'excel', 'csv', 'chart', 'graph', 'insight', 'intelligence', 'reporting', 'forecasting'],
-    'Customer Support': ['customer support', 'chatbot', 'service', 'helpdesk', 'support automation', 'contact centre', 'ticketing', 'live chat', 'omnichannel'],
-    'Education': ['education', 'learning', 'student', 'teacher', 'course', 'quiz', 'study', 'language learning', 'flashcard', 'lesson plan'],
-    'Business Operations': ['business', 'finance', 'hr', 'legal', 'contract', 'invoice', 'operations', 'recruiting', 'hiring', 'crm', 'revenue', 'healthcare', 'clinical', 'medical', 'employee', 'talent', 'interview']
+    'Writing & Content': ['writing', 'copywriting', 'blog', 'essay', 'summarize', 'text generation', 'translation', 'grammar', 'proofreading', 'fiction', 'novel', 'article', 'seo writing'],
+    'Coding & Development': ['code', 'coding', 'development', 'programming', 'developer', 'sql', 'html', 'css', 'python', 'llm', 'embedding', 'vector database', 'inference', 'annotation', 'labelling', 'mlops', 'rag', 'agent framework', 'test automation', 'code review', 'code generation', 'ide', 'repository', 'deployment', 'ai coding agent'],
+    'Image Creation': ['image generation', 'text-to-image', 'ai art generation', 'photo editing', 'avatar generation', 'logo generation', 'drawing', 'illustration', 'rendering', 'background removal', 'image upscaling', 'photo retouching', '3d model', 'interior design', 'architectural design'],
+    'Video Creation': ['video editing', 'animation', 'youtube', 'tiktok', 'reel', 'avatar video', 'text-to-video', 'video generation', 'video clip', 'dubbing', 'subtitle', 'video caption'],
+    'Audio & Voice': ['audio generation', 'voice cloning', 'speech synthesis', 'music generation', 'sound effect', 'text-to-speech', 'podcast editing', 'audio transcription', 'voiceover', 'audio mastering', 'stem splitting'],
+    'Research': ['academic research', 'scientific research', 'research discovery', 'document analysis', 'paper analysis', 'citation analysis', 'literature review', 'pdf q&a', 'fact-checking'],
+    'Productivity': ['productivity', 'task management', 'time management', 'workflow automation', 'organization', 'note-taking', 'meeting scheduling', 'calendar optimization', 'email management', 'mind mapping', 'knowledge management', 'ai personal assistant', 'ai chat', 'journaling', 'email filtering', 'inbox management', 'browser assistant'],
+    'Meetings & Transcription': ['meeting transcription', 'meeting notes', 'zoom transcription', 'teams transcription', 'meeting summarization', 'meeting summary', 'action item extraction'],
+    'Marketing': ['marketing', 'seo', 'sales enablement', 'advertising automation', 'campaign management', 'email marketing', 'social media management', 'landing page builder', 'newsletter automation', 'outbound outreach', 'lead generation', 'brand identity'],
+    'Automation': ['workflow automation', 'zapier', 'automation bot', 'ai agent automation', 'web scraping', 'data extraction', 'document parsing', 'rpa', 'robotic process automation', 'web crawling', 'no-code automation', 'data pipeline automation'],
+    'Design': ['ui design', 'ux design', 'web design', 'graphic design', 'presentation generation', 'slide formatting', '3d design', 'product photography', 'floor plan generation', 'room design', 'design-to-code'],
+    'Data & Analytics': ['data analysis', 'predictive analytics', 'spreadsheet automation', 'excel formulas', 'csv analysis', 'chart generation', 'graph creation', 'business intelligence', 'reporting automation', 'forecasting'],
+    'Customer Support': ['customer support', 'support chatbot', 'customer service', 'it helpdesk', 'support automation', 'contact centre ai', 'ticketing automation', 'live chat', 'omnichannel support'],
+    'Education': ['education', 'learning platform', 'student assistant', 'teacher assistant', 'course generation', 'quiz generation', 'study assistant', 'language learning', 'flashcard generation', 'lesson planning'],
+    'Business Operations': ['business operations', 'financial analysis', 'hr automation', 'legal research', 'contract management', 'invoice processing', 'recruiting automation', 'hiring process', 'crm automation', 'revenue operations', 'healthcare ai', 'clinical documentation', 'medical notes', 'employee support', 'talent sourcing', 'interview intelligence']
 };
 
 
@@ -168,7 +168,11 @@ class DirectoryEngine {
         const rawCases = Array.isArray(tool.primaryUseCases) ? tool.primaryUseCases.map(c => c.toLowerCase()) : [];
         
         Object.entries(USE_CASE_TAXONOMY).forEach(([groupName, keywords]) => {
-            const matches = rawCases.some(rc => keywords.some(kw => rc.includes(kw)));
+            const matches = rawCases.some(rc => keywords.some(kw => {
+                const escapedKw = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp(`\\b${escapedKw}\\b`, 'i');
+                return regex.test(rc);
+            }));
             if (matches) {
                 groups.add(groupName);
             }

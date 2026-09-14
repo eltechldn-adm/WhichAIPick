@@ -178,9 +178,7 @@ const CLASSIFICATION_MAP = {
   'coefficient':      { category: 'Business', primaryUseCases: ['live data in spreadsheets', 'business data sync', 'Google Sheets automation'] },
   'dovetail':         { category: 'Business', primaryUseCases: ['user research platform', 'qualitative research analysis', 'customer insights'] },
   'condens':          { category: 'Business', primaryUseCases: ['user research analysis', 'qualitative data synthesis', 'research insights'] },
-  'botsonic':         { category: 'Business', primaryUseCases: ['custom AI chatbot', 'customer support automation', 'website chatbot'] },
-  'chatbase':         { category: 'Business', primaryUseCases: ['custom AI chatbot', 'customer support automation', 'document-based Q&A bot'] },
-  'chattermill':      { category: 'Business', primaryUseCases: ['customer feedback analysis', 'sentiment analysis', 'CX intelligence'] },
+
   'gong':             { category: 'Business', primaryUseCases: ['revenue intelligence', 'sales call analysis', 'pipeline forecasting'] },
   'guru':             { category: 'Business', primaryUseCases: ['AI company knowledge base', 'internal knowledge management', 'enterprise wiki'] },
   'highspot':         { category: 'Business', primaryUseCases: ['sales enablement', 'content management for sales', 'AI sales coaching'] },
@@ -189,7 +187,7 @@ const CLASSIFICATION_MAP = {
   'insight7':         { category: 'Business', primaryUseCases: ['customer research AI', 'interview analysis', 'user insights generation'] },
   'kustomer':         { category: 'Business', primaryUseCases: ['AI customer service platform', 'CRM automation', 'omnichannel support'] },
   'laxis':            { category: 'Business', primaryUseCases: ['AI meeting notes', 'sales call summarization', 'CRM update automation'] },
-  'listen-labs':      { category: 'Business', primaryUseCases: ['qualitative research AI', 'user interview automation', 'insight synthesis'] },
+
   'looppanel':        { category: 'Business', primaryUseCases: ['user research analysis', 'interview transcription', 'qualitative insights'] },
   'marvin':           { category: 'Business', primaryUseCases: ['user research repository', 'qualitative data analysis', 'customer insights'] },
   'moveworks':        { category: 'Business', primaryUseCases: ['AI IT helpdesk', 'enterprise employee support', 'service request automation'] },
@@ -216,7 +214,7 @@ const CLASSIFICATION_MAP = {
   'uniphore':         { category: 'Business', primaryUseCases: ['AI contact centre platform', 'conversation intelligence', 'customer experience AI'] },
   'upheal':           { category: 'Business', primaryUseCases: ['AI therapy session notes', 'mental health documentation', 'clinical AI scribe'] },
   'usergems':         { category: 'Business', primaryUseCases: ['sales signal tracking', 'buyer intent data', 'pipeline intelligence'] },
-  'warmly':           { category: 'Business', primaryUseCases: ['AI website visitor intelligence', 'sales intent signals', 'B2B pipeline generation'] },
+
   'warmerai':         { category: 'Business', primaryUseCases: ['email warm-up', 'email deliverability improvement', 'cold email preparation'] },
   'wati':             { category: 'Business', primaryUseCases: ['WhatsApp business automation', 'AI customer messaging', 'WhatsApp CRM'] },
   'wotnot':           { category: 'Business', primaryUseCases: ['no-code chatbot builder', 'customer support chatbot', 'lead generation chatbot'] },
@@ -504,7 +502,8 @@ tools.forEach(tool => {
     tool.dataProvenance = {
       identity: 'official_source_verified',
       pricing: 'unknown',
-      useCases: 'official_source_verified',
+      useCases: 'derived',
+      category: 'derived',
       lifecycle: 'unknown'
     };
     classified++;
