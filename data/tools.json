@@ -108,7 +108,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "activepieces",
@@ -122,7 +127,7 @@
     "source_row": 3,
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -219,7 +224,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": true,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "ada",
@@ -330,7 +340,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "adalo",
@@ -441,7 +456,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "adcreativeai",
@@ -552,7 +572,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "adobe-firefly",
@@ -670,7 +695,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "ai21-labs",
@@ -781,7 +811,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "aiva",
@@ -892,7 +927,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "akkio",
@@ -1003,7 +1043,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "amazon-codewhisperer",
@@ -1118,7 +1163,12 @@
     "previousName": "Amazon CodeWhisperer",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "rebranded",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "anthropic-claude-api",
@@ -1229,7 +1279,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "anyword",
@@ -1243,7 +1298,7 @@
     "source_row": 13,
     "pricing_detected": true,
     "has_free_tier": false,
-    "pricing_model": "free_trial",
+    "pricing_model": "paid",
     "pricing_confidence": 3,
     "pricing_source": "homepage",
     "pricing_checked_at": "2026-02-15",
@@ -1340,7 +1395,12 @@
     "previousName": null,
     "hasFreeTrial": true,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "appgyver",
@@ -1455,7 +1515,12 @@
     "previousName": "AppGyver",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "acquired",
+    "successorToolId": null,
+    "contentReviewRequired": true,
+    "recommendationEligible": true
   },
   {
     "id": "artbreeder",
@@ -1566,7 +1631,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "askcodi",
@@ -1677,7 +1747,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "assemblyai",
@@ -1788,7 +1863,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "attention-insight",
@@ -1899,7 +1979,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "automator",
@@ -2010,7 +2095,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "avoma",
@@ -2121,7 +2211,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "bardeen",
@@ -2232,7 +2327,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "beatoven",
@@ -2343,7 +2443,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "beautifulai",
@@ -2454,7 +2559,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "bildr",
@@ -2565,7 +2675,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "bing-chat",
@@ -2681,7 +2796,12 @@
     "previousName": "Bing Chat",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "rebranded",
+    "successorToolId": "microsoft-copilot",
+    "contentReviewRequired": false,
+    "recommendationEligible": false
   },
   {
     "id": "blackbox-ai",
@@ -2792,7 +2912,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "bluewillow",
@@ -2903,7 +3028,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "booke-ai",
@@ -3014,7 +3144,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "boomy",
@@ -3125,7 +3260,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "botpress",
@@ -3236,7 +3376,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "brandmark",
@@ -3347,7 +3492,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "breeze-ai",
@@ -3458,7 +3608,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "brisk-teaching",
@@ -3569,7 +3724,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "bubble",
@@ -3680,7 +3840,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "buffer-ai-assistant",
@@ -3791,7 +3956,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "canva-ai",
@@ -3909,7 +4079,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "casetext-cocounsel",
@@ -4020,7 +4195,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "chatfuel",
@@ -4131,7 +4311,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "chatgpt",
@@ -4251,7 +4436,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "chatgpt-advanced-data-analysis",
@@ -4362,7 +4552,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "chorusai",
@@ -4473,7 +4668,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "claude",
@@ -4593,7 +4793,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "cleanuppictures",
@@ -4704,7 +4909,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "clearscope",
@@ -4815,7 +5025,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "cleo",
@@ -4926,7 +5141,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "clerkio",
@@ -5037,7 +5257,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "clickup-ai",
@@ -5148,7 +5373,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "clipchamp",
@@ -5259,7 +5489,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "clipdrop",
@@ -5370,7 +5605,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "coda-ai",
@@ -5481,7 +5721,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "codeium",
@@ -5600,7 +5845,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": true,
+    "recommendationEligible": true
   },
   {
     "id": "codex-openai",
@@ -5709,7 +5959,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "cognii",
@@ -5820,7 +6075,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "cohere-api",
@@ -5931,7 +6191,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "colormind",
@@ -6042,7 +6307,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "colossyan",
@@ -6153,7 +6423,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "consensus",
@@ -6264,7 +6539,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "contentbot",
@@ -6375,7 +6655,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "contentshake-ai",
@@ -6486,7 +6771,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "contentstudio",
@@ -6597,7 +6887,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "continue",
@@ -6611,7 +6906,7 @@
     "source_row": 61,
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -6710,7 +7005,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "copyai",
@@ -6823,7 +7123,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "copysmith",
@@ -6837,7 +7142,7 @@
     "source_row": 63,
     "pricing_detected": true,
     "has_free_tier": false,
-    "pricing_model": "free_trial",
+    "pricing_model": "paid",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -6934,7 +7239,12 @@
     "previousName": null,
     "hasFreeTrial": true,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "coursebox",
@@ -7045,7 +7355,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "craft",
@@ -7156,7 +7471,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "craiyon",
@@ -7267,7 +7587,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "creatify",
@@ -7378,7 +7703,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "cursor",
@@ -7501,7 +7831,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "d-id",
@@ -7515,7 +7850,7 @@
     "source_row": 70,
     "pricing_detected": true,
     "has_free_tier": false,
-    "pricing_model": "free_trial",
+    "pricing_model": "paid",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -7612,7 +7947,12 @@
     "previousName": null,
     "hasFreeTrial": true,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "dall-e-3",
@@ -7730,7 +8070,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "datarobot",
@@ -7841,7 +8186,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "debuild",
@@ -7952,7 +8302,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "decktopus",
@@ -8063,7 +8418,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "deepai",
@@ -8174,7 +8534,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "describely",
@@ -8285,7 +8650,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "descript",
@@ -8403,7 +8773,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "descript-overdub",
@@ -8514,7 +8889,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "diagram",
@@ -8625,7 +9005,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "docyt",
@@ -8736,7 +9121,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "donotpay",
@@ -8847,7 +9237,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "dreamstudio",
@@ -8958,7 +9353,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "drift",
@@ -9069,7 +9469,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "duolingo-max",
@@ -9181,7 +9586,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "durable",
@@ -9292,7 +9702,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "educaidor",
@@ -9403,7 +9818,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "elevenlabs",
@@ -9521,7 +9941,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "elicit",
@@ -9632,7 +10057,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "fathom",
@@ -9743,7 +10173,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "feedhive",
@@ -9854,7 +10289,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "fig",
@@ -9970,7 +10410,12 @@
     "previousName": "Fig",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "acquired",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "finalround-ai",
@@ -10081,7 +10526,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "finance-pal",
@@ -10192,7 +10642,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "finch",
@@ -10303,7 +10758,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "firefliesai",
@@ -10421,7 +10881,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "fliki",
@@ -10532,7 +10997,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "flutterflow",
@@ -10644,7 +11114,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "forethought",
@@ -10755,7 +11230,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "framer",
@@ -10873,7 +11353,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "framer-ai",
@@ -10984,7 +11469,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "frase",
@@ -11095,7 +11585,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "freshdesk-ai",
@@ -11206,7 +11701,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "galileo-ai",
@@ -11321,7 +11821,12 @@
     "previousName": "Galileo AI",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "acquired",
+    "successorToolId": null,
+    "contentReviewRequired": true,
+    "recommendationEligible": true
   },
   {
     "id": "gamma",
@@ -11439,7 +11944,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "github-copilot",
@@ -11557,7 +12067,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "glass-health",
@@ -11668,7 +12183,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "glide",
@@ -11779,7 +12299,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "gong",
@@ -11890,7 +12415,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "google-ai-studio",
@@ -12001,7 +12531,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "gradescope-ai",
@@ -12112,7 +12647,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "grain",
@@ -12223,7 +12763,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "grammarly",
@@ -12341,7 +12886,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "gridlex",
@@ -12452,7 +13002,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "growthbar",
@@ -12563,7 +13118,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "happy-scribe",
@@ -12674,7 +13234,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "harvey-ai",
@@ -12785,7 +13350,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "help-scout-ai",
@@ -12896,7 +13466,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hex",
@@ -13007,7 +13582,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "heygen",
@@ -13125,7 +13705,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hootsuite-insights",
@@ -13236,7 +13821,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hostinger-ai-builder",
@@ -13347,7 +13937,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hugging-face",
@@ -13361,7 +13956,7 @@
     "source_row": 122,
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -13458,7 +14053,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hyperwrite",
@@ -13569,7 +14169,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hypotenuse-ai",
@@ -13680,7 +14285,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "ideogram",
@@ -13791,7 +14401,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "instantlyai",
@@ -13902,7 +14517,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "intercom-fin",
@@ -14020,7 +14640,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "invideo",
@@ -14138,7 +14763,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "jasper-ai",
@@ -14152,7 +14782,7 @@
     "source_row": 129,
     "pricing_detected": true,
     "has_free_tier": false,
-    "pricing_model": "free_trial",
+    "pricing_model": "paid",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -14256,7 +14886,12 @@
     "previousName": null,
     "hasFreeTrial": true,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "jenni-ai",
@@ -14367,7 +15002,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "julius-ai",
@@ -14478,7 +15118,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "kapwing",
@@ -14589,7 +15234,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "khan-academy-khanmigo",
@@ -14700,7 +15350,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "khroma",
@@ -14811,7 +15466,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "kickresume",
@@ -14922,7 +15582,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "krisp",
@@ -15033,7 +15698,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "kustomer-ai",
@@ -15144,7 +15814,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lalalai",
@@ -15255,7 +15930,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "landbot",
@@ -15366,7 +16046,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lately",
@@ -15477,7 +16162,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lavender",
@@ -15588,7 +16278,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lawgeex",
@@ -15699,7 +16394,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lazyapply",
@@ -15810,7 +16510,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "legalmation",
@@ -15921,7 +16626,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lemlist",
@@ -16032,7 +16742,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "leonardo-ai",
@@ -16150,7 +16865,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "let's-enhance",
@@ -16261,7 +16981,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lex",
@@ -16372,7 +17097,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "looka",
@@ -16483,7 +17213,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lumen5",
@@ -16594,7 +17329,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "luminar-neo",
@@ -16705,7 +17445,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "magical",
@@ -16816,7 +17561,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "magician-figma",
@@ -16927,7 +17677,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "magicschool-ai",
@@ -17038,7 +17793,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "make-integromat",
@@ -17149,7 +17909,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "manychat",
@@ -17260,7 +18025,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "marketmuse",
@@ -17371,7 +18141,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "mem",
@@ -17482,7 +18257,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "memorable",
@@ -17593,7 +18373,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "microsoft-power-automate",
@@ -17704,7 +18489,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "midjourney",
@@ -17822,7 +18612,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "mintlify-writer",
@@ -17933,7 +18728,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "mockup-ai",
@@ -18044,7 +18844,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "monarch-money",
@@ -18155,7 +18960,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "monkeylearn",
@@ -18269,7 +19079,12 @@
     "previousName": "MonkeyLearn",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "acquired",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "motion",
@@ -18380,7 +19195,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "murf-ai",
@@ -18498,7 +19318,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "n8n",
@@ -18512,7 +19337,7 @@
     "source_row": 168,
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -18609,7 +19434,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": true,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "nabla-copilot",
@@ -18716,7 +19546,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "neuronwriter",
@@ -18827,7 +19662,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "nightcafe",
@@ -18938,7 +19778,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "nosto",
@@ -19049,7 +19894,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "notion-ai",
@@ -19167,7 +20017,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "ocoya",
@@ -19278,7 +20133,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "octane-ai",
@@ -19389,7 +20249,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "omneky",
@@ -19500,7 +20365,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "openai-api",
@@ -19611,7 +20481,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "otterai",
@@ -19729,7 +20604,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pencil",
@@ -19840,7 +20720,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "perplexity-ai",
@@ -19951,7 +20836,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "phind",
@@ -20062,7 +20952,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "photor",
@@ -20169,7 +21064,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pictory",
@@ -20280,7 +21180,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pieces",
@@ -20391,7 +21296,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pitch",
@@ -20502,7 +21412,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pixlr-ai",
@@ -20613,7 +21528,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pixray",
@@ -20720,7 +21640,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "playground-ai",
@@ -20831,7 +21756,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "polyai",
@@ -20942,7 +21872,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "polymer",
@@ -21053,7 +21988,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "postwise",
@@ -21164,7 +22104,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "predisai",
@@ -21275,7 +22220,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "presentationsai",
@@ -21386,7 +22336,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "prowritingaid",
@@ -21497,7 +22452,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "quickads",
@@ -21608,7 +22568,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "quillbot",
@@ -21726,7 +22691,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "quizizz-ai",
@@ -21841,7 +22811,12 @@
     "previousName": "Quizizz AI",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "rebranded",
+    "successorToolId": null,
+    "contentReviewRequired": true,
+    "recommendationEligible": true
   },
   {
     "id": "quizlet-q-chat",
@@ -21952,7 +22927,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "rasa",
@@ -22063,7 +23043,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "readai",
@@ -22174,7 +23159,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "rebuy",
@@ -22285,7 +23275,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "reclaim",
@@ -22396,7 +23391,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "reflect",
@@ -22507,7 +23507,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "regieai",
@@ -22618,7 +23623,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "relay",
@@ -22729,7 +23739,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "relume",
@@ -22840,7 +23855,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "remini",
@@ -22951,7 +23971,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "removebg",
@@ -23062,7 +24087,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "replai",
@@ -23151,7 +24181,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "replicate",
@@ -23240,7 +24275,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "replika",
@@ -23351,7 +24391,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "replit-ai",
@@ -23440,7 +24485,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "replyio",
@@ -23542,7 +24592,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "research-rabbit",
@@ -23643,7 +24698,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "resemble-ai",
@@ -23752,7 +24812,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "resume-worded",
@@ -23863,7 +24928,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "retool",
@@ -23964,7 +25034,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "rev-ai",
@@ -24068,7 +25143,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "rezi",
@@ -24170,7 +25250,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "rows",
@@ -24274,7 +25359,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "runway",
@@ -24392,7 +25482,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "rytr",
@@ -24503,7 +25598,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "scalenut",
@@ -24517,7 +25617,7 @@
     "source_row": 224,
     "pricing_detected": true,
     "has_free_tier": false,
-    "pricing_model": "free_trial",
+    "pricing_model": "paid",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -24614,7 +25714,12 @@
     "previousName": null,
     "hasFreeTrial": true,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "scholarcy",
@@ -24725,7 +25830,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "scispace",
@@ -24836,7 +25946,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "sembly",
@@ -24947,7 +26062,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "semrush",
@@ -25058,7 +26178,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "shopify-magic",
@@ -25169,7 +26294,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "shortly-ai",
@@ -25280,7 +26410,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "shortwave",
@@ -25391,7 +26526,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "simplified",
@@ -25502,7 +26642,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "sivi-ai",
@@ -25613,7 +26758,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "slidesai",
@@ -25724,7 +26874,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "slidespeak",
@@ -25835,7 +26990,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "smartwriter",
@@ -25849,7 +27009,7 @@
     "source_row": 236,
     "pricing_detected": true,
     "has_free_tier": false,
-    "pricing_model": "free_trial",
+    "pricing_model": "paid",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -25946,7 +27106,12 @@
     "previousName": null,
     "hasFreeTrial": true,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "softr",
@@ -26057,7 +27222,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "sonara",
@@ -26168,7 +27338,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "soundraw",
@@ -26279,7 +27454,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "sourcegraph-cody",
@@ -26390,7 +27570,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "spark",
@@ -26501,7 +27686,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "speechify",
@@ -26612,7 +27802,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "speedy-brand",
@@ -26723,7 +27918,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "spellbook",
@@ -26834,7 +28034,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "stable-diffusion",
@@ -26848,7 +28053,7 @@
     "source_row": 245,
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "pricing_page",
     "pricing_checked_at": "2026-02-15",
@@ -26952,7 +28157,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "starryai",
@@ -27063,7 +28273,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "sudowrite",
@@ -27174,7 +28389,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "superhuman",
@@ -27285,7 +28505,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "surfer-seo",
@@ -27403,7 +28628,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "synthesia",
@@ -27521,7 +28751,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tableau-ai",
@@ -27632,7 +28867,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tabnine",
@@ -27750,7 +28990,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tana",
@@ -27861,7 +29106,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "taplio",
@@ -27972,7 +29222,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "taskade",
@@ -28083,7 +29338,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "teal",
@@ -28194,7 +29454,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "textcortex",
@@ -28305,7 +29570,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "thoughtspot",
@@ -28416,7 +29686,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tidio",
@@ -28527,7 +29802,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tl;dv",
@@ -28638,7 +29918,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "together-ai",
@@ -28749,7 +30034,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tome",
@@ -28860,7 +30150,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "topaz-ai",
@@ -28971,7 +30266,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "trayio",
@@ -29082,7 +30382,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "trint",
@@ -29193,7 +30498,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "twain",
@@ -29304,7 +30614,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "tweet-hunter",
@@ -29406,7 +30721,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "uizard",
@@ -29508,7 +30828,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "ultimateai",
@@ -29613,7 +30938,12 @@
     "previousName": "Ultimate.ai",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "acquired",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "unicorn-platform",
@@ -29715,7 +31045,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "upscalemedia",
@@ -29817,7 +31152,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "v0-by-vercel",
@@ -29935,7 +31275,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "vicai",
@@ -30036,7 +31381,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "visenze",
@@ -30137,7 +31487,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "voiceflow",
@@ -30239,7 +31594,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "warmerai",
@@ -30335,7 +31695,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "warp",
@@ -30436,7 +31801,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "webflow",
@@ -30554,7 +31924,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "wix-ai",
@@ -30655,7 +32030,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "woebot",
@@ -30755,7 +32135,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "wordtune",
@@ -30856,7 +32241,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "workato",
@@ -30957,7 +32347,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "writecream",
@@ -31057,7 +32452,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "writesonic",
@@ -31168,7 +32568,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "wysa",
@@ -31279,7 +32684,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "yellowai",
@@ -31390,7 +32800,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "yoodli",
@@ -31501,7 +32916,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "youcom",
@@ -31612,7 +33032,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "youper",
@@ -31723,7 +33148,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "zapier-ai",
@@ -31834,7 +33264,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "zendesk-ai",
@@ -31945,7 +33380,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "zipchat",
@@ -32056,7 +33496,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "sora",
@@ -32167,7 +33612,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "replit",
@@ -32278,7 +33728,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "lovable",
@@ -32389,7 +33844,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "bolt",
@@ -32500,7 +33960,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "dora-run",
@@ -32611,7 +34076,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "base44",
@@ -32722,7 +34192,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "manus",
@@ -32833,7 +34308,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "readdy-ai",
@@ -32944,7 +34424,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "perplexity",
@@ -33055,7 +34540,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pika",
@@ -33166,7 +34656,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "suno",
@@ -33277,7 +34772,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "nano-banana",
@@ -33378,7 +34878,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "canva",
@@ -33481,7 +34986,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "notion",
@@ -33599,7 +35109,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "figma",
@@ -33717,7 +35232,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "capcut",
@@ -33835,7 +35355,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "google-gemini",
@@ -33951,7 +35476,12 @@
     "previousName": "Google Bard",
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "openai-playground",
@@ -34051,7 +35581,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "microsoft-copilot",
@@ -34174,7 +35709,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "perplexity-pages",
@@ -34274,7 +35814,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "meta-ai",
@@ -34390,7 +35935,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "amazon-q",
@@ -34494,7 +36044,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "apple-intelligence",
@@ -34594,7 +36149,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "antigravity",
@@ -34694,7 +36254,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "vercel-ai-sdk",
@@ -34708,7 +36273,7 @@
     "source_row": "manual-injection-a2",
     "pricing_detected": false,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "unknown",
     "pricing_checked_at": "2026-02-15",
@@ -34794,7 +36359,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "langchain",
@@ -34808,7 +36378,7 @@
     "source_row": "manual-injection-a2",
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "homepage",
     "pricing_checked_at": "2026-02-15",
@@ -34894,7 +36464,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "llamaindex",
@@ -34908,7 +36483,7 @@
     "source_row": "manual-injection-a2",
     "pricing_detected": true,
     "has_free_tier": true,
-    "pricing_model": "open_source",
+    "pricing_model": "free",
     "pricing_confidence": 3,
     "pricing_source": "homepage",
     "pricing_checked_at": "2026-02-15",
@@ -34994,7 +36569,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "cloudflare-workers-ai",
@@ -35094,7 +36674,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "udio",
@@ -35194,7 +36779,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "luma-ai",
@@ -35312,7 +36902,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "pika-labs",
@@ -35412,7 +37007,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "hubspot-ai",
@@ -35512,7 +37112,12 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   },
   {
     "id": "salesforce-einstein",
@@ -35630,6 +37235,11 @@
     "previousName": null,
     "hasFreeTrial": null,
     "selfHosted": null,
-    "verificationSources": []
+    "verificationSources": [],
+    "operationalStatus": "active",
+    "transitionType": "none",
+    "successorToolId": null,
+    "contentReviewRequired": false,
+    "recommendationEligible": true
   }
 ]

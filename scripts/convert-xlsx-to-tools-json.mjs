@@ -67,37 +67,104 @@ if (fs.existsSync(USE_CASES_FILE)) {
     console.log(`✅ Loaded ${useCasesMap.size} primary use cases`);
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Helpers: derived / normalised decision fields
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Derive the legacy lifecycleStatus value from the new split fields.
+ * Kept for backwards compatibility with frontend consumers that still read it.
+ */
+function deriveLegacyLifecycleStatus(operationalStatus, transitionType) {
+    if (transitionType === 'rebranded')    return 'rebranded';
+    if (transitionType === 'acquired')     return 'acquired';
+    if (transitionType === 'merged')       return 'merged';
+    if (operationalStatus === 'discontinued') return 'discontinued';
+    if (operationalStatus === 'unavailable')  return 'unavailable';
+    return 'active';
+}
+
+/**
+ * A tool is eligible for recommendation when:
+ *   1. It is currently operational (operationalStatus === 'active'), AND
+ *   2. There is no separate, superior canonical record in the DB (successorToolId is empty).
+ *
+ * If successorToolId is set (e.g. bing-chat → microsoft-copilot), the successor
+ * record will be shown instead, preventing duplicate recommendations.
+ */
+function deriveRecommendationEligible(operationalStatus, successorToolId) {
+    if (operationalStatus !== 'active') return false;
+    if (successorToolId && successorToolId.trim()) return false;
+    return true;
+}
+
+/**
+ * Normalise legacy pricing_model values that do not map to the current enum.
+ *   open_source → free  (licensing model, not a pricing model)
+ *   free_trial  → paid  (tools with trials are commercially priced)
+ */
+function normalizeLegacyPricingModel(val) {
+    if (!val) return val;
+    const lower = val.toLowerCase().trim();
+    if (lower === 'open_source') return 'free';
+    if (lower === 'free_trial')  return 'paid';
+    return val;
+}
+
 // Load decision attributes
 const decisionMap = new Map();
 if (fs.existsSync(DECISION_FILE)) {
-    console.log('🧠 Loading decision attributes...');
+    console.log('🧠 Loading decision attributes (4A.1 schema)...');
     const decisionData = fs.readFileSync(DECISION_FILE, 'utf8');
     const lines = decisionData.split('\n').filter(line => line.trim());
     if (lines.length > 0) {
         const headers = lines[0].split(',').map(h => h.trim());
+
+        // Detect schema version: 4A.1 uses operationalStatus; legacy used lifecycleStatus
+        const isV2Schema = headers.includes('operationalStatus');
+        if (isV2Schema) {
+            console.log('  📋 Detected 4A.1 schema (operationalStatus + transitionType)');
+        } else {
+            console.warn('  ⚠️  Legacy schema detected (lifecycleStatus). Run CSV migration first.');
+        }
+
         for (let i = 1; i < lines.length; i++) {
             const cols = lines[i].split(',').map(c => c.trim());
             const id = cols[0];
-            if (id) {
-                const attrs = {};
-                for (let j = 1; j < headers.length; j++) {
-                    const header = headers[j];
-                    let val = cols[j] !== undefined ? cols[j] : '';
-                    
-                    if (header === 'aliases' || header === 'platforms' || header === 'verificationSources') {
-                        attrs[header] = val && val !== 'unknown' ? val.split('|').map(s => s.trim()).filter(Boolean) : [];
-                    } else if (header === 'hasFreeTier' || header === 'hasFreeTrial' || header === 'apiAvailable' || header === 'openSource' || header === 'selfHosted') {
-                        if (val === 'true') attrs[header] = true;
-                        else if (val === 'false') attrs[header] = false;
-                        else attrs[header] = null;
-                    } else if (header === 'previousName' || header === 'lastVerifiedAt') {
-                        attrs[header] = val && val !== 'null' && val !== 'unknown' ? val : null;
-                    } else {
-                        attrs[header] = val || 'unknown';
-                    }
+            if (!id) continue;
+
+            const attrs = {};
+            for (let j = 1; j < headers.length; j++) {
+                const header = headers[j];
+                let val = cols[j] !== undefined ? cols[j] : '';
+
+                if (header === 'aliases' || header === 'platforms' || header === 'verificationSources') {
+                    attrs[header] = val && val !== 'unknown' ? val.split('|').map(s => s.trim()).filter(Boolean) : [];
+                } else if (['hasFreeTier','hasFreeTrial','apiAvailable','openSource','selfHosted'].includes(header)) {
+                    if (val === 'true') attrs[header] = true;
+                    else if (val === 'false') attrs[header] = false;
+                    else attrs[header] = null;
+                } else if (header === 'contentReviewRequired') {
+                    attrs[header] = val === 'true';
+                } else if (['previousName','lastVerifiedAt','successorToolId'].includes(header)) {
+                    attrs[header] = val && val !== 'null' && val !== 'unknown' ? val : null;
+                } else {
+                    attrs[header] = val || 'unknown';
                 }
-                decisionMap.set(id, attrs);
             }
+
+            // ── Derived fields ──────────────────────────────────────────────────
+            const opSt  = attrs.operationalStatus || 'active';
+            const trTyp = attrs.transitionType    || 'none';
+            const sucId = attrs.successorToolId   || null;
+
+            // 1. Backwards-compat lifecycleStatus (derived)
+            attrs.lifecycleStatus = deriveLegacyLifecycleStatus(opSt, trTyp);
+
+            // 2. recommendationEligible (derived)
+            attrs.recommendationEligible = deriveRecommendationEligible(opSt, sucId);
+
+            decisionMap.set(id, attrs);
         }
     }
     console.log(`✅ Loaded ${decisionMap.size} decision attributes`);
@@ -196,6 +263,11 @@ rawData.forEach((row, index) => {
         ...decisionAttrs
     };
 
+    // Normalise legacy pricing_model values (open_source / free_trial are not valid pricing models)
+    if (newTool.pricing_model) {
+        newTool.pricing_model = normalizeLegacyPricingModel(newTool.pricing_model);
+    }
+
     // Use Map to enforce unique IDs
     toolsMap.set(newTool.id, newTool);
 });
@@ -253,6 +325,12 @@ manualTools.forEach(tool => {
         notIdealFor: notIdealFor,
         ...decisionAttrs
     };
+
+    // Normalise legacy pricing_model values
+    if (merged.pricing_model) {
+        merged.pricing_model = normalizeLegacyPricingModel(merged.pricing_model);
+    }
+
     toolsMap.set(tool.id, merged);
 });
 

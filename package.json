@@ -13,7 +13,8 @@
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "inject:header": "node scripts/inject-header.mjs",
     "inject:footer": "node scripts/inject-footer.mjs",
-    "predeploy": "node scripts/generate-static-pages.mjs && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/generate-sitemap.mjs"
+    "generate:build-info": "node scripts/generate-build-info.mjs",
+    "predeploy": "node scripts/generate-static-pages.mjs && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs"
   },
   "dependencies": {
     "sharp": "^0.33.0",

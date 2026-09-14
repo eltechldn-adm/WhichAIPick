@@ -1,0 +1,10 @@
+{
+  "buildTime": "2026-09-14T00:31:53.311Z",
+  "schemaVersion": "4A.1",
+  "branch": "phase-review",
+  "commitHash": "a2fd8c8c50c3f83f5812eb114a92273c0f2c187e",
+  "toolCount": 322,
+  "eligibleCount": 321,
+  "contentReviewCount": 4,
+  "dataFile": "data/tools.json"
+}
