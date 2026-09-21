@@ -127,6 +127,23 @@ function generateSitemap() {
     urls = [...urls, ...catPages];
     console.log(`  Added ${catPages.length} category pages`);
 
+    // Phase 6: SEO Pages
+    const bestToolsPages = scanGeneratedPages('best-ai-tools', PRIORITY.HUBS);
+    urls = [...urls, ...bestToolsPages];
+    console.log(`  Added ${bestToolsPages.length} best-ai-tools pages`);
+
+    const altPages = scanGeneratedPages('alternatives', PRIORITY.HUBS);
+    urls = [...urls, ...altPages];
+    console.log(`  Added ${altPages.length} alternatives pages`);
+
+    const comparePages = scanGeneratedPages('compare', PRIORITY.HUBS);
+    urls = [...urls, ...comparePages];
+    console.log(`  Added ${comparePages.length} compare pages`);
+
+    const guidesPages = scanGeneratedPages('guides', PRIORITY.AUTHORITY);
+    urls = [...urls, ...guidesPages];
+    console.log(`  Added ${guidesPages.length} guides pages`);
+
     // Build XML
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';

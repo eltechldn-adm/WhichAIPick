@@ -1,0 +1,29 @@
+[
+    {
+        "id": "backstory",
+        "category": "Sales",
+        "long_description": "Backstory is an AI revenue platform designed for sales teams. It captures activity from emails, meetings, and chats to identify deal risk, monitor pipeline health, and assist with revenue forecasting.",
+        "primaryUseCases": ["revenue intelligence", "pipeline management", "sales forecasting"],
+        "bestFor": ["Sales teams", "Revenue leaders"],
+        "notIdealFor": ["Individuals", "Non-sales use cases"],
+        "pricing_model": "enterprise"
+    },
+    {
+        "id": "cognigy",
+        "category": "Customer Support",
+        "long_description": "Cognigy powers enterprise customer service with generative and conversational AI agents across voice and chat, enabling automated, scalable support solutions.",
+        "primaryUseCases": ["customer service", "conversational ai", "ai agents"],
+        "bestFor": ["Enterprise customer support", "Call centers"],
+        "notIdealFor": ["Small businesses needing basic chatbots"],
+        "pricing_model": "enterprise"
+    },
+    {
+        "id": "customgpt",
+        "category": "Business",
+        "long_description": "CustomGPT is a no-code platform that empowers businesses to create custom AI agents using their own content and knowledge bases, without any coding skills required.",
+        "primaryUseCases": ["customer support", "knowledge base search", "ai agents"],
+        "bestFor": ["Businesses", "Non-technical users"],
+        "notIdealFor": ["Developers looking for API-first LLM orchestration"],
+        "pricing_model": "paid"
+    }
+]

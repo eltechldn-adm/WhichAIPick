@@ -29,7 +29,7 @@ const aiBoilerplate = [
 // Documented Machine-Readable Enums
 const validPricingModels      = new Set(['free', 'freemium', 'paid', 'enterprise', 'unknown']);
 const validExperienceLevels   = new Set(['beginner', 'intermediate', 'advanced', 'mixed', 'unknown']);
-const validTargetUsers        = new Set(['individual', 'team', 'enterprise', 'mixed', 'unknown']);
+const validTargetUsers        = new Set(['individual', 'team', 'enterprise', 'mixed', 'unknown', 'developers', 'professionals', 'researchers', 'designers', 'marketers', 'creators']);
 // 4A.1: operationalStatus and transitionType replace the monolithic lifecycleStatus
 const validOperationalStatuses = new Set(['active', 'discontinued', 'unavailable', 'unknown']);
 const validTransitionTypes     = new Set(['none', 'rebranded', 'acquired', 'merged', 'unknown']);
@@ -41,7 +41,19 @@ const validProvenanceValues   = new Set(['audited_source', 'existing_editorial',
 
 const seenIds = new Set();
 const seenUrls = new Set();
+const seenDescriptions = new Set();
+const seenPrimaryUseCases = new Set();
 const verificationDates = {};
+
+const forbiddenUrls = new Set(['https://example.com', 'http://example.com']);
+const genericFillerSnippets = [
+    'automate repetitive tasks and save time',
+    'powerful ai platform',
+    'innovative ai solution',
+    'streamline workflows',
+    'game changer',
+    'this is an ai-powered productivity tool designed to help professionals'
+];
 
 // Coverage counters
 const coverage = {
@@ -98,6 +110,10 @@ toolsJson.forEach((tool, index) => {
         console.error(`[ERROR] Tool ${tool.id} has malformed or missing official URL: ${tool.website_url}`);
         errors++;
     } else {
+        if (forbiddenUrls.has(tool.website_url.toLowerCase())) {
+            console.error(`[FATAL ERROR] Tool ${tool.id} is using a fabricated/placeholder URL: ${tool.website_url}`);
+            errors++;
+        }
         if (seenUrls.has(tool.website_url)) {
             console.warn(`[WARNING] Duplicate official URL found for ${tool.id}: ${tool.website_url}`);
             warnings++;
@@ -111,15 +127,37 @@ toolsJson.forEach((tool, index) => {
     }
 
     // 4. CATEGORY TAXONOMY VALIDATION
-    if (!tool.category || !allowedCategories.has(tool.category)) {
+    if (!tool.category || (!allowedCategories.has(tool.category) && !(tool.category === 'Uncategorized' && tool.contentReviewRequired))) {
         console.error(`[ERROR] Tool ${tool.id} has invalid or unauthorized category: "${tool.category}"`);
         errors++;
     }
 
-    // 5. MERGE INTEGRITY (Ensure rich editorial fields are not corrupted/wiped out)
+    // 5. MERGE INTEGRITY & ANTI-FABRICATION
     if (tool.recommendationEligible && (!tool.long_description || tool.long_description.trim().length < 20)) {
         console.error(`[ERROR] Tool ${tool.id} missing rich long_description (corrupted merge detected).`);
         errors++;
+    }
+    if (tool.long_description) {
+        const descLower = tool.long_description.toLowerCase();
+        for (const snippet of genericFillerSnippets) {
+            if (descLower.includes(snippet)) {
+                console.error(`[FATAL ERROR] Tool ${tool.id} contains fabricated/generic filler description: "${snippet}"`);
+                errors++;
+            }
+        }
+        if (seenDescriptions.has(descLower)) {
+            console.error(`[FATAL ERROR] Tool ${tool.id} contains an exact duplicate description (possible bulk fabrication).`);
+            errors++;
+        }
+        seenDescriptions.add(descLower);
+    }
+    
+    if (tool.primaryUseCases && Array.isArray(tool.primaryUseCases) && tool.primaryUseCases.length > 0) {
+        const useCasesSig = [...tool.primaryUseCases].sort().join('|').toLowerCase();
+        if (useCasesSig === 'productivity|workflow automation') {
+            console.error(`[FATAL ERROR] Tool ${tool.id} contains fabricated use case signature: "productivity|workflow automation"`);
+            errors++;
+        }
     }
     if (!Array.isArray(tool.best_for) || tool.best_for.length === 0) {
         console.warn(`[WARNING] Tool ${tool.id} is missing best_for editorial guidance.`);
@@ -179,10 +217,25 @@ toolsJson.forEach((tool, index) => {
         coverage.successorToolId.unset++;
     }
 
-    // ─ contentReviewRequired (boolean) ─────────────────────────────────────────
-    if (typeof tool.contentReviewRequired === 'boolean') {
-        if (tool.contentReviewRequired) coverage.contentReviewRequired.flagged++;
-        else coverage.contentReviewRequired.clean++;
+    // ─ contentReviewRequired (trust gate check) ─────────────────────────
+    if (tool.contentReviewRequired === true) {
+        coverage.contentReviewRequired.flagged++;
+    } else if (tool.contentReviewRequired === false) {
+        // Enforce evidence requirement: If it's not pending, it MUST have legitimate provenance
+        const hasValidProvenance = tool.dataProvenance && (
+            tool.dataProvenance.identity === 'official_source_verified' || 
+            tool.dataProvenance.identity === 'audited_source' ||
+            tool.dataProvenance.identity === 'existing_editorial'
+        );
+        if (!hasValidProvenance) {
+            console.error(`[FATAL ERROR] Tool ${tool.id} has contentReviewRequired=false but lacks legitimate verifiable provenance. Possible fabrication.`);
+            errors++;
+        }
+        coverage.contentReviewRequired.clean++;
+    } else {
+        coverage.contentReviewRequired.flagged++;
+        console.error(`[ERROR] Tool ${tool.id} has missing contentReviewRequired boolean.`);
+        errors++;
     }
 
     // 4A.2: INTEGRITY RULE — contentReviewRequired=true must NOT be recommendationEligible

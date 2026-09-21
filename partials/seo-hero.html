@@ -1,0 +1,89 @@
+<section class="seo-hero">
+    <div class="container">
+        <!-- Breadcrumbs will be injected here -->
+        <div id="seo-breadcrumbs" class="seo-breadcrumbs">
+            {{BREADCRUMBS}}
+        </div>
+        
+        <h1 class="seo-hero-title">{{TITLE}}</h1>
+        <p class="seo-hero-subtitle">{{SUBTITLE}}</p>
+        
+        {{#if HAS_CTA}}
+        <div class="seo-hero-ctas">
+            <a href="{{CTA_PRIMARY_LINK}}" class="btn btn-primary">{{CTA_PRIMARY_TEXT}}</a>
+            {{#if CTA_SECONDARY_TEXT}}
+            <a href="{{CTA_SECONDARY_LINK}}" class="btn btn-secondary">{{CTA_SECONDARY_TEXT}}</a>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{#if STATS}}
+        <div class="seo-hero-stats">
+            {{STATS}}
+        </div>
+        {{/if}}
+    </div>
+</section>
+
+<style>
+.seo-hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(0, 240, 255, 0.05) 0%, transparent 70%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.seo-breadcrumbs {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.seo-breadcrumbs a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.seo-breadcrumbs a:hover {
+    color: var(--accent-cyan-glow);
+}
+.seo-breadcrumbs .separator {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+.seo-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.seo-hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+.seo-hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.seo-hero-stats {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+</style>

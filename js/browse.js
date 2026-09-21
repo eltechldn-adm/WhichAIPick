@@ -1,6 +1,22 @@
 // Browse Engine
 const BROWSE_CONFIG = window.BROWSE_CONFIG || {};
 
+// Dynamic SEO indexability for filtered states
+(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasFilters = ['category', 'pricing', 'freeTier', 'usecase', 'sort'].some(param => urlParams.has(param));
+    
+    if (hasFilters) {
+        let robotsMeta = document.querySelector('meta[name="robots"]');
+        if (!robotsMeta) {
+            robotsMeta = document.createElement('meta');
+            robotsMeta.name = 'robots';
+            document.head.appendChild(robotsMeta);
+        }
+        robotsMeta.content = 'noindex,follow';
+    }
+})();
+
 // Mock Analytics for Phase 8 preparation
 window.Analytics = window.Analytics || {
     track: (event, data) => {

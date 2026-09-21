@@ -1,0 +1,47 @@
+[
+    {
+        "slug": "cursor",
+        "targetTool": "cursor",
+        "title": "Best Cursor Alternatives in 2026",
+        "metaDescription": "Compare the best alternatives to Cursor for AI coding. Evaluate BYOK, open-source, and performance-focused IDEs like Zed, Cline, and Windsurf.",
+        "intentDescription": "Cursor has revolutionized AI coding, but it's not the only option. Whether you are looking for an open-source alternative, want to use your own API keys to save costs, or simply prefer a more lightweight editor, there are powerful agentic coding alternatives available.",
+        "minToolsToMap": 3,
+        "searchTerms": ["code", "developer", "ide"]
+    },
+    {
+        "slug": "perplexity",
+        "targetTool": "perplexity",
+        "title": "Best Perplexity AI Alternatives in 2026",
+        "metaDescription": "Looking for Perplexity alternatives? Compare top AI search engines and research assistants for academic, coding, and general web search.",
+        "intentDescription": "Perplexity leads the AI search space, but privacy concerns, subscription costs, or the need for specific integrations might have you looking elsewhere. Explore alternatives that specialize in academic research or offer open-source flexibility.",
+        "minToolsToMap": 3,
+        "searchTerms": ["search", "research", "agent"]
+    },
+    {
+        "slug": "claude",
+        "targetTool": "claude",
+        "title": "Best Claude Alternatives in 2026",
+        "metaDescription": "Compare the best alternatives to Anthropic's Claude. Find top-tier LLMs for writing, coding, and large context windows.",
+        "intentDescription": "Claude's massive context window and nuanced writing style make it a favorite, but usage limits and regional availability can be restrictive. Discover alternatives that excel in coding, creative writing, or offer unrestricted access.",
+        "minToolsToMap": 3,
+        "searchTerms": ["chat", "llm", "assistant"]
+    },
+    {
+        "slug": "chatgpt",
+        "targetTool": "chatgpt",
+        "title": "Best ChatGPT Alternatives in 2026",
+        "metaDescription": "Explore the best alternatives to ChatGPT. Compare AI models for coding, writing, privacy, and open-source deployment.",
+        "intentDescription": "While ChatGPT is the most recognized AI assistant, specialized models often outperform it in specific tasks. Whether you need better coding support, enhanced data privacy, or an uncensored open-source model, these alternatives deliver.",
+        "minToolsToMap": 3,
+        "searchTerms": ["chat", "llm", "assistant"]
+    },
+    {
+        "slug": "midjourney",
+        "targetTool": "midjourney",
+        "title": "Best Midjourney Alternatives in 2026",
+        "metaDescription": "Find the best Midjourney alternatives. Compare AI image generators for easier workflows, free tiers, and API access.",
+        "intentDescription": "Midjourney produces stunning visuals but its Discord-based workflow and lack of a free tier can be frustrating. Explore top image generators that offer intuitive web interfaces, API access, and open-source models.",
+        "minToolsToMap": 3,
+        "searchTerms": ["image", "generator", "art"]
+    }
+]

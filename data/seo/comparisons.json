@@ -1,0 +1,26 @@
+[
+    {
+        "slug": "chatgpt-vs-claude",
+        "toolA": "chatgpt",
+        "toolB": "claude",
+        "title": "ChatGPT vs Claude: Compare Features & Pricing | WhichAIPick",
+        "metaDescription": "A factual, side-by-side comparison of ChatGPT and Claude. Compare context windows, coding capabilities, writing styles, and pricing models to find the right AI for you.",
+        "editorialGuidance": "ChatGPT and Claude are the two leading frontier models. ChatGPT generally excels in multimodal tasks (voice, image generation) and internet browsing, making it a stronger general-purpose assistant. Claude, particularly the Sonnet model, is widely preferred by developers for its superior coding abilities, large context window, and more natural, less 'robotic' writing style."
+    },
+    {
+        "slug": "cursor-vs-github-copilot",
+        "toolA": "cursor",
+        "toolB": "github-copilot",
+        "title": "Cursor vs GitHub Copilot: Which AI Coding Assistant is Better?",
+        "metaDescription": "Compare Cursor and GitHub Copilot. See which AI coding tool offers better context awareness, agentic workflows, and value for money.",
+        "editorialGuidance": "GitHub Copilot is the enterprise standard, offering seamless integration across multiple IDEs and strong corporate compliance. Cursor is an entirely separate AI-first IDE (forked from VS Code) that offers deeper 'agentic' workflows, meaning it can autonomously plan and execute multi-file changes much more effectively than Copilot's current autocomplete and chat features."
+    },
+    {
+        "slug": "midjourney-vs-leonardo-ai",
+        "toolA": "midjourney",
+        "toolB": "leonardo-ai",
+        "title": "Midjourney vs Leonardo AI: Image Generator Comparison",
+        "metaDescription": "Compare Midjourney and Leonardo AI. Evaluate image quality, user interface, free tiers, and advanced control features like ControlNet.",
+        "editorialGuidance": "Midjourney is widely considered the gold standard for artistic and photorealistic image generation, but it requires using Discord and lacks a free tier. Leonardo AI offers a much more intuitive web interface, generous free daily tokens, and advanced features like granular style control and integrated canvas editing, making it highly versatile for creative workflows."
+    }
+]

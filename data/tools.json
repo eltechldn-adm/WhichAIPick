@@ -1589,9 +1589,11 @@
     ],
     "lastVerifiedAt": null,
     "primaryUseCases": [
-      "low-code app development",
-      "enterprise application building",
-      "SAP build platform"
+      "professional app development",
+      "visual logic flow",
+      "sap integration",
+      "cross-platform deployment",
+      "enterprise mobile apps"
     ],
     "bestFor": [
       "Enterprise IT and business analysts using the SAP ecosystem",
@@ -1618,11 +1620,10 @@
     "contentReviewReason": "legacy_content_after_acquisition",
     "pricingNeedsReview": false,
     "dataProvenance": {
-      "identity": "official_source_verified",
-      "pricing": "unknown",
-      "useCases": "derived",
-      "category": "derived",
-      "lifecycle": "unknown"
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
     }
   },
   {
@@ -6213,9 +6214,11 @@
     ],
     "lastVerifiedAt": null,
     "primaryUseCases": [
-      "AI coding assistant",
-      "code completion",
-      "AI-powered IDE"
+      "free code completion",
+      "refactoring code",
+      "explaining functions",
+      "generating unit tests",
+      "context aware suggestions"
     ],
     "bestFor": [
       "Individual developers seeking a free Copilot alternative",
@@ -6243,11 +6246,10 @@
     "contentReviewReason": "successor_product_mismatch",
     "pricingNeedsReview": false,
     "dataProvenance": {
-      "identity": "official_source_verified",
-      "pricing": "unknown",
-      "useCases": "derived",
-      "category": "derived",
-      "lifecycle": "unknown"
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
     }
   },
   {
@@ -12511,7 +12513,7 @@
     "name": "Google Stitch (formerly Galileo AI)",
     "website_url": "https://stitch.withgoogle.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Design",
     "description": null,
     "pricing": null,
     "tags": [],
@@ -12597,9 +12599,11 @@
     ],
     "lastVerifiedAt": null,
     "primaryUseCases": [
-      "UI design generation",
-      "design-to-code",
-      "AI UI prototyping"
+      "generating ui designs",
+      "mobile app screens",
+      "figma editable designs",
+      "prototyping flows",
+      "text to ui"
     ],
     "bestFor": [
       "UI/UX and Product Designers",
@@ -12626,11 +12630,10 @@
     "contentReviewReason": "legacy_content_after_acquisition",
     "pricingNeedsReview": false,
     "dataProvenance": {
-      "identity": "official_source_verified",
-      "pricing": "unknown",
-      "useCases": "derived",
-      "category": "derived",
-      "lifecycle": "unknown"
+      "identity": "existing_editorial",
+      "pricing": "existing_editorial",
+      "useCases": "existing_editorial",
+      "lifecycle": "existing_editorial"
     }
   },
   {
@@ -37804,7 +37807,7 @@
     "name": "Apify",
     "website_url": "https://apify.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -37838,7 +37841,7 @@
     "name": "Automation Anywhere",
     "website_url": "https://www.automationanywhere.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -37872,7 +37875,7 @@
     "name": "Bika.ai",
     "website_url": "https://bika.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -37906,7 +37909,7 @@
     "name": "Bland AI",
     "website_url": "https://www.bland.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -37940,7 +37943,7 @@
     "name": "Browse AI",
     "website_url": "https://www.browse.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -37974,7 +37977,7 @@
     "name": "Docsumo",
     "website_url": "https://www.docsumo.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38008,7 +38011,7 @@
     "name": "Extend",
     "website_url": "https://www.extend.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38042,7 +38045,7 @@
     "name": "Gumloop",
     "website_url": "https://www.gumloop.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38076,7 +38079,7 @@
     "name": "Levity",
     "website_url": "https://levity.ai/en",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38110,7 +38113,7 @@
     "name": "Lindy",
     "website_url": "https://www.lindy.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38144,7 +38147,7 @@
     "name": "Lutra",
     "website_url": "https://lutra.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38178,7 +38181,7 @@
     "name": "Nanonets",
     "website_url": "https://nanonets.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38212,7 +38215,7 @@
     "name": "Octoparse",
     "website_url": "https://www.octoparse.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38246,7 +38249,7 @@
     "name": "Parseur",
     "website_url": "https://parseur.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38280,7 +38283,7 @@
     "name": "Pazi",
     "website_url": "https://pazi.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38313,7 +38316,7 @@
     "name": "Pipedream",
     "website_url": "https://pipedream.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38347,7 +38350,7 @@
     "name": "Reducto",
     "website_url": "https://reducto.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38381,7 +38384,7 @@
     "name": "Relevance AI",
     "website_url": "https://relevanceai.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38415,7 +38418,7 @@
     "name": "Retell AI",
     "website_url": "https://www.retellai.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38449,7 +38452,7 @@
     "name": "Rossum",
     "website_url": "https://rossum.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38483,7 +38486,7 @@
     "name": "Sim",
     "website_url": "https://www.sim.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38517,7 +38520,7 @@
     "name": "Synthflow",
     "website_url": "https://synthflow.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38551,7 +38554,7 @@
     "name": "UiPath",
     "website_url": "https://www.uipath.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38585,7 +38588,7 @@
     "name": "V7",
     "website_url": "https://www.v7labs.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38619,7 +38622,7 @@
     "name": "Veryfi",
     "website_url": "https://www.veryfi.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38653,7 +38656,7 @@
     "name": "Abridge",
     "website_url": "https://www.abridge.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38687,7 +38690,7 @@
     "name": "AI2sql",
     "website_url": "https://ai2sql.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38721,7 +38724,7 @@
     "name": "Aisera",
     "website_url": "https://aisera.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38755,7 +38758,7 @@
     "name": "Ambience Healthcare",
     "website_url": "https://www.ambiencehealthcare.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38789,7 +38792,7 @@
     "name": "Ashby",
     "website_url": "https://www.ashbyhq.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38823,7 +38826,7 @@
     "name": "Assembled",
     "website_url": "https://www.assembled.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38857,7 +38860,7 @@
     "name": "Atomicwork",
     "website_url": "https://www.atomicwork.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38891,7 +38894,7 @@
     "name": "Attention",
     "website_url": "https://www.attention.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38925,7 +38928,7 @@
     "name": "Augmedix",
     "website_url": "https://www.augmedix.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -38959,13 +38962,19 @@
     "name": "Backstory",
     "website_url": "https://www.backstory.ai/",
     "affiliate_url": null,
-    "category": "Uncategorized",
+    "category": "Sales",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
-    "primaryUseCases": [],
+    "primaryUseCases": [
+      "revenue intelligence",
+      "pipeline management",
+      "sales forecasting"
+    ],
     "recommendationEligible": false,
-    "contentReviewRequired": true,
-    "dataProvenance": "workbook-import",
+    "contentReviewRequired": false,
+    "dataProvenance": {
+      "identity": "official_source_verified"
+    },
     "description": null,
     "tags": [],
     "aliases": [],
@@ -38974,16 +38983,23 @@
     "operationalStatus": "unknown",
     "transitionType": "unknown",
     "source_row": 345,
-    "bestFor": [],
-    "notIdealFor": [],
-    "pricing_model": "unknown"
+    "bestFor": [
+      "Sales teams",
+      "Revenue leaders"
+    ],
+    "notIdealFor": [
+      "Individuals",
+      "Non-sales use cases"
+    ],
+    "pricing_model": "enterprise",
+    "long_description": "Backstory is an AI revenue platform designed for sales teams. It captures activity from emails, meetings, and chats to identify deal risk, monitor pipeline health, and assist with revenue forecasting."
   },
   {
     "id": "balto",
     "name": "Balto",
     "website_url": "https://www.balto.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39017,7 +39033,7 @@
     "name": "Better Analyst",
     "website_url": "https://betteranalyst.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39075,7 +39091,7 @@
     "name": "Botsonic",
     "website_url": "https://botsonic.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39109,7 +39125,7 @@
     "name": "Bricks",
     "website_url": "https://www.thebricks.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39143,7 +39159,7 @@
     "name": "BrightHire",
     "website_url": "https://brighthire.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39177,7 +39193,7 @@
     "name": "Certainly",
     "website_url": "https://certainly.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39211,7 +39227,7 @@
     "name": "Chatbase",
     "website_url": "https://www.chatbase.co/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39245,7 +39261,7 @@
     "name": "Chattermill",
     "website_url": "https://chattermill.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39279,7 +39295,7 @@
     "name": "Clari",
     "website_url": "https://www.clari.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39313,7 +39329,7 @@
     "name": "Coefficient",
     "website_url": "https://coefficient.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -39347,13 +39363,19 @@
     "name": "Cognigy",
     "website_url": "https://www.cognigy.com/",
     "affiliate_url": null,
-    "category": "Uncategorized",
+    "category": "Customer Support",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
-    "primaryUseCases": [],
+    "primaryUseCases": [
+      "customer service",
+      "conversational ai",
+      "ai agents"
+    ],
     "recommendationEligible": false,
-    "contentReviewRequired": true,
-    "dataProvenance": "workbook-import",
+    "contentReviewRequired": false,
+    "dataProvenance": {
+      "identity": "official_source_verified"
+    },
     "description": null,
     "tags": [],
     "aliases": [],
@@ -39362,9 +39384,15 @@
     "operationalStatus": "unknown",
     "transitionType": "unknown",
     "source_row": 357,
-    "bestFor": [],
-    "notIdealFor": [],
-    "pricing_model": "unknown"
+    "bestFor": [
+      "Enterprise customer support",
+      "Call centers"
+    ],
+    "notIdealFor": [
+      "Small businesses needing basic chatbots"
+    ],
+    "pricing_model": "enterprise",
+    "long_description": "Cognigy powers enterprise customer service with generative and conversational AI agents across voice and chat, enabling automated, scalable support solutions."
   },
   {
     "id": "cresta",
@@ -39395,13 +39423,19 @@
     "name": "CustomGPT",
     "website_url": "https://customgpt.ai/",
     "affiliate_url": null,
-    "category": "Uncategorized",
+    "category": "Business",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
-    "primaryUseCases": [],
+    "primaryUseCases": [
+      "customer support",
+      "knowledge base search",
+      "ai agents"
+    ],
     "recommendationEligible": false,
-    "contentReviewRequired": true,
-    "dataProvenance": "workbook-import",
+    "contentReviewRequired": false,
+    "dataProvenance": {
+      "identity": "official_source_verified"
+    },
     "description": null,
     "tags": [],
     "aliases": [],
@@ -39410,9 +39444,15 @@
     "operationalStatus": "unknown",
     "transitionType": "unknown",
     "source_row": 359,
-    "bestFor": [],
-    "notIdealFor": [],
-    "pricing_model": "unknown"
+    "bestFor": [
+      "Businesses",
+      "Non-technical users"
+    ],
+    "notIdealFor": [
+      "Developers looking for API-first LLM orchestration"
+    ],
+    "pricing_model": "paid",
+    "long_description": "CustomGPT is a no-code platform that empowers businesses to create custom AI agents using their own content and knowledge bases, without any coding skills required."
   },
   {
     "id": "darrow",
@@ -39995,7 +40035,7 @@
     "name": "Inkeep",
     "website_url": "https://inkeep.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40533,7 +40573,7 @@
     "name": "Moveworks",
     "website_url": "https://www.moveworks.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40591,7 +40631,7 @@
     "name": "Observe.AI",
     "website_url": "https://www.observe.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40769,7 +40809,7 @@
     "name": "Quadratic",
     "website_url": "https://www.quadratichq.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40803,7 +40843,7 @@
     "name": "Rattle",
     "website_url": "https://www.gorattle.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40861,7 +40901,7 @@
     "name": "Rezolve.ai",
     "website_url": "https://www.rezolve.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40895,7 +40935,7 @@
     "name": "Richpanel",
     "website_url": "https://www.richpanel.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -40977,7 +41017,7 @@
     "name": "Screenloop",
     "website_url": "https://www.screenloop.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41011,7 +41051,7 @@
     "name": "SeekOut",
     "website_url": "https://www.seekout.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41045,7 +41085,7 @@
     "name": "SentiSum",
     "website_url": "https://www.sentisum.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41079,7 +41119,7 @@
     "name": "SheetAI",
     "website_url": "https://www.sheetai.app/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41113,7 +41153,7 @@
     "name": "Sierra",
     "website_url": "https://sierra.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41147,7 +41187,7 @@
     "name": "SiteGPT",
     "website_url": "https://sitegpt.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41181,7 +41221,7 @@
     "name": "SleekFlow",
     "website_url": "https://sleekflow.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41215,7 +41255,7 @@
     "name": "Sourcetable",
     "website_url": "https://sourcetable.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41249,7 +41289,7 @@
     "name": "SpotDraft",
     "website_url": "https://www.spotdraft.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41283,7 +41323,7 @@
     "name": "SQLAI.ai",
     "website_url": "https://www.sqlai.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41317,7 +41357,7 @@
     "name": "Suki",
     "website_url": "https://www.suki.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41351,7 +41391,7 @@
     "name": "Supio",
     "website_url": "https://www.supio.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41385,7 +41425,7 @@
     "name": "Sybill",
     "website_url": "https://www.sybill.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41419,7 +41459,7 @@
     "name": "Tali AI",
     "website_url": "https://tali.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41477,7 +41517,7 @@
     "name": "Thematic",
     "website_url": "https://getthematic.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41511,7 +41551,7 @@
     "name": "Thena",
     "website_url": "https://www.thena.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41545,7 +41585,7 @@
     "name": "Tiledesk",
     "website_url": "https://tiledesk.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41603,7 +41643,7 @@
     "name": "Trengo",
     "website_url": "https://trengo.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41637,7 +41677,7 @@
     "name": "Uniphore",
     "website_url": "https://www.uniphore.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41671,7 +41711,7 @@
     "name": "Upheal",
     "website_url": "https://www.upheal.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41705,7 +41745,7 @@
     "name": "Vanna AI",
     "website_url": "https://vanna.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41739,7 +41779,7 @@
     "name": "VectorShift",
     "website_url": "https://vectorshift.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41773,7 +41813,7 @@
     "name": "WATI",
     "website_url": "https://www.wati.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41807,7 +41847,7 @@
     "name": "WotNot",
     "website_url": "https://wotnot.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41841,7 +41881,7 @@
     "name": "Wren AI",
     "website_url": "https://www.getwren.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41875,7 +41915,7 @@
     "name": "Yuma AI",
     "website_url": "https://yuma.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41909,7 +41949,7 @@
     "name": "Zowie",
     "website_url": "https://getzowie.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41943,7 +41983,7 @@
     "name": "AirOps",
     "website_url": "https://www.airops.com/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -41977,7 +42017,7 @@
     "name": "Byword",
     "website_url": "https://byword.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42011,7 +42051,7 @@
     "name": "Copymatic",
     "website_url": "https://copymatic.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42045,7 +42085,7 @@
     "name": "DeepL",
     "website_url": "https://www.deepl.com/en",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42079,7 +42119,7 @@
     "name": "Easy-Peasy.AI",
     "website_url": "https://easy-peasy.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42113,7 +42153,7 @@
     "name": "Junia AI",
     "website_url": "https://www.junia.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42147,7 +42187,7 @@
     "name": "LanguageTool",
     "website_url": "https://languagetool.org/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42181,7 +42221,7 @@
     "name": "LogicBalls",
     "website_url": "https://logicballs.com/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42215,7 +42255,7 @@
     "name": "NovelAI",
     "website_url": "https://novelai.net/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42249,7 +42289,7 @@
     "name": "Novelcrafter",
     "website_url": "https://www.novelcrafter.com/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42283,7 +42323,7 @@
     "name": "Paperpal",
     "website_url": "https://paperpal.com/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42317,7 +42357,7 @@
     "name": "Penfriend",
     "website_url": "https://penfriend.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42351,7 +42391,7 @@
     "name": "SEO.ai",
     "website_url": "https://seo.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42385,7 +42425,7 @@
     "name": "SEOWriting.ai",
     "website_url": "https://seowriting.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42419,7 +42459,7 @@
     "name": "Squibler",
     "website_url": "https://www.squibler.io/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42453,7 +42493,7 @@
     "name": "Trinka",
     "website_url": "https://www.trinka.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42487,7 +42527,7 @@
     "name": "Type",
     "website_url": "https://type.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42521,7 +42561,7 @@
     "name": "Typeface",
     "website_url": "https://www.typeface.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42555,7 +42595,7 @@
     "name": "WordHero",
     "website_url": "https://aivolut.com/wordhero",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42589,7 +42629,7 @@
     "name": "Writefull",
     "website_url": "https://www.writefull.com/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42623,7 +42663,7 @@
     "name": "Writer",
     "website_url": "https://writer.com/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42657,7 +42697,7 @@
     "name": "Aftershoot",
     "website_url": "https://aftershoot.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42691,7 +42731,7 @@
     "name": "Aiarty Image Enhancer",
     "website_url": "https://www.aiarty.com/ai-image-enhancer/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42725,7 +42765,7 @@
     "name": "Arko AI",
     "website_url": "https://arko.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42759,7 +42799,7 @@
     "name": "Botika",
     "website_url": "https://botika.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42793,7 +42833,7 @@
     "name": "Claid",
     "website_url": "https://claid.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42827,7 +42867,7 @@
     "name": "Clipping Magic",
     "website_url": "https://clippingmagic.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42861,7 +42901,7 @@
     "name": "Coohom",
     "website_url": "https://www.coohom.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42895,7 +42935,7 @@
     "name": "Cutout.Pro",
     "website_url": "https://www.cutout.pro/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42929,7 +42969,7 @@
     "name": "Deep Image",
     "website_url": "https://deep-image.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42963,7 +43003,7 @@
     "name": "Dzine",
     "website_url": "https://www.dzine.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -42997,7 +43037,7 @@
     "name": "Erase.bg",
     "website_url": "https://www.erase.bg/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43031,7 +43071,7 @@
     "name": "Evoto",
     "website_url": "https://www.evoto.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43065,7 +43105,7 @@
     "name": "Flair AI",
     "website_url": "https://flair.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43099,7 +43139,7 @@
     "name": "HitPaw FotorPea",
     "website_url": "https://www.hitpaw.com/fotorpea-photo-enhancer.html",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43133,7 +43173,7 @@
     "name": "Homestyler",
     "website_url": "https://www.homestyler.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43167,7 +43207,7 @@
     "name": "Interior AI",
     "website_url": "https://interiorai.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43201,7 +43241,7 @@
     "name": "Kaedim",
     "website_url": "https://www.kaedim3d.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43235,7 +43275,7 @@
     "name": "Layer AI",
     "website_url": "https://layer.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43269,7 +43309,7 @@
     "name": "LookX",
     "website_url": "https://www.lookx.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43303,7 +43343,7 @@
     "name": "Maket",
     "website_url": "https://www.maket.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43337,7 +43377,7 @@
     "name": "Meshy",
     "website_url": "https://www.meshy.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43371,7 +43411,7 @@
     "name": "mnml.ai",
     "website_url": "https://mnml.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43405,7 +43445,7 @@
     "name": "Mokker",
     "website_url": "https://mokker.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43439,7 +43479,7 @@
     "name": "Narrative",
     "website_url": "https://narrative.so/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43473,7 +43513,7 @@
     "name": "Palette.fm",
     "website_url": "https://palette.fm/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43507,7 +43547,7 @@
     "name": "Pebblely",
     "website_url": "https://pebblely.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43575,7 +43615,7 @@
     "name": "PicCopilot",
     "website_url": "https://www.piccopilot.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43609,7 +43649,7 @@
     "name": "PicWish",
     "website_url": "https://picwish.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43643,7 +43683,7 @@
     "name": "Pixelcut",
     "website_url": "https://www.pixelcut.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43677,7 +43717,7 @@
     "name": "Planner 5D",
     "website_url": "https://planner5d.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43711,7 +43751,7 @@
     "name": "Promethean AI",
     "website_url": "https://www.prometheanai.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43745,7 +43785,7 @@
     "name": "Recraft",
     "website_url": "https://www.recraft.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43779,7 +43819,7 @@
     "name": "REimagineHome",
     "website_url": "https://www.reimaginehome.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43813,7 +43853,7 @@
     "name": "Removal.AI",
     "website_url": "https://removal.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43847,7 +43887,7 @@
     "name": "Retouch4me",
     "website_url": "https://retouch4.me/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43881,7 +43921,7 @@
     "name": "Rodin",
     "website_url": "https://hyper3d.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43915,7 +43955,7 @@
     "name": "RoomGPT",
     "website_url": "https://www.roomgpt.io/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43949,7 +43989,7 @@
     "name": "Scenario",
     "website_url": "https://www.scenario.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -43983,7 +44023,7 @@
     "name": "Sloyd",
     "website_url": "https://www.sloyd.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44017,7 +44057,7 @@
     "name": "Spacely AI",
     "website_url": "https://www.spacely.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44051,7 +44091,7 @@
     "name": "Spline AI",
     "website_url": "https://spline.design/ai-generate",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44085,7 +44125,7 @@
     "name": "TestFit",
     "website_url": "https://www.testfit.io/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44119,7 +44159,7 @@
     "name": "Upscayl",
     "website_url": "https://upscayl.org/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44153,7 +44193,7 @@
     "name": "VanceAI",
     "website_url": "https://vanceai.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44187,7 +44227,7 @@
     "name": "Veras",
     "website_url": "https://www.evolvelab.io/veras",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44221,7 +44261,7 @@
     "name": "Vmake",
     "website_url": "https://vmake.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44255,7 +44295,7 @@
     "name": "WorldEngen by Masterpiece X",
     "website_url": "https://masterpiecex.com/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44289,7 +44329,7 @@
     "name": "Agno",
     "website_url": "https://www.agno.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44323,7 +44363,7 @@
     "name": "Aider",
     "website_url": "https://aider.chat/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44357,7 +44397,7 @@
     "name": "Anima",
     "website_url": "https://www.animaapp.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44391,7 +44431,7 @@
     "name": "AnythingLLM",
     "website_url": "https://anythingllm.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44425,7 +44465,7 @@
     "name": "Arize AI",
     "website_url": "https://arize.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44459,7 +44499,7 @@
     "name": "Arthur AI",
     "website_url": "https://www.arthur.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44493,7 +44533,7 @@
     "name": "Augment Code",
     "website_url": "https://www.augmentcode.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44527,7 +44567,7 @@
     "name": "Baseten",
     "website_url": "https://www.baseten.co/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44561,7 +44601,7 @@
     "name": "Bito",
     "website_url": "https://bito.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44595,7 +44635,7 @@
     "name": "Braintrust",
     "website_url": "https://www.braintrust.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44629,7 +44669,7 @@
     "name": "Browser Use",
     "website_url": "https://browser-use.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44663,7 +44703,7 @@
     "name": "Browserbase",
     "website_url": "https://www.browserbase.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44697,7 +44737,7 @@
     "name": "Builder.io",
     "website_url": "https://www.builder.io/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44731,7 +44771,7 @@
     "name": "Cerebras",
     "website_url": "https://www.cerebras.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44765,7 +44805,7 @@
     "name": "Chroma",
     "website_url": "https://www.trychroma.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44799,7 +44839,7 @@
     "name": "Cleanlab",
     "website_url": "https://cleanlab.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44833,7 +44873,7 @@
     "name": "Cline",
     "website_url": "https://cline.bot/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44867,7 +44907,7 @@
     "name": "CodeAnt AI",
     "website_url": "https://codeant.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44901,7 +44941,7 @@
     "name": "CodeRabbit",
     "website_url": "https://www.coderabbit.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44935,7 +44975,7 @@
     "name": "CodeScene",
     "website_url": "https://codescene.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -44969,7 +45009,7 @@
     "name": "Composio",
     "website_url": "https://composio.dev/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45003,7 +45043,7 @@
     "name": "Cosine",
     "website_url": "https://cosine.sh/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45037,7 +45077,7 @@
     "name": "Crawl4AI",
     "website_url": "https://docs.crawl4ai.com/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45071,7 +45111,7 @@
     "name": "CrewAI",
     "website_url": "https://crewai.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45105,7 +45145,7 @@
     "name": "Dataiku",
     "website_url": "https://www.dataiku.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45139,7 +45179,7 @@
     "name": "Dataloop",
     "website_url": "https://dataloop.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45173,7 +45213,7 @@
     "name": "DeepInfra",
     "website_url": "https://deepinfra.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45241,7 +45281,7 @@
     "name": "Docling",
     "website_url": "https://docling.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45275,7 +45315,7 @@
     "name": "Dust",
     "website_url": "https://dust.tt/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45309,7 +45349,7 @@
     "name": "Dyad",
     "website_url": "https://www.dyad.sh/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45343,7 +45383,7 @@
     "name": "E2B",
     "website_url": "https://e2b.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45377,7 +45417,7 @@
     "name": "Edge Impulse",
     "website_url": "https://www.edgeimpulse.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45411,7 +45451,7 @@
     "name": "Ellipsis",
     "website_url": "https://www.ellipsis.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45445,7 +45485,7 @@
     "name": "Encord",
     "website_url": "https://encord.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45479,7 +45519,7 @@
     "name": "Exa",
     "website_url": "https://exa.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45513,7 +45553,7 @@
     "name": "Factory",
     "website_url": "https://factory.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45547,7 +45587,7 @@
     "name": "fal",
     "website_url": "https://fal.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45581,7 +45621,7 @@
     "name": "Fiddler AI",
     "website_url": "https://www.fiddler.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45615,7 +45655,7 @@
     "name": "Firecrawl",
     "website_url": "https://www.firecrawl.dev/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45649,7 +45689,7 @@
     "name": "Fireworks AI",
     "website_url": "https://fireworks.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45683,7 +45723,7 @@
     "name": "FriendliAI",
     "website_url": "https://friendli.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45717,7 +45757,7 @@
     "name": "Functionize",
     "website_url": "https://www.functionize.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45751,7 +45791,7 @@
     "name": "Galileo",
     "website_url": "https://galileo.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45785,7 +45825,7 @@
     "name": "Giskard",
     "website_url": "https://www.giskard.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45819,7 +45859,7 @@
     "name": "GitLab Duo",
     "website_url": "https://about.gitlab.com/gitlab-duo-agent-platform/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45853,7 +45893,7 @@
     "name": "GPT Researcher",
     "website_url": "https://gptr.dev/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45887,7 +45927,7 @@
     "name": "GPT4All",
     "website_url": "https://www.nomic.ai/gpt4all",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45921,7 +45961,7 @@
     "name": "Greptile",
     "website_url": "https://www.greptile.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45955,7 +45995,7 @@
     "name": "Groq",
     "website_url": "https://groq.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -45989,7 +46029,7 @@
     "name": "Guardrails AI",
     "website_url": "https://guardrailsai.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46023,7 +46063,7 @@
     "name": "H2O.ai",
     "website_url": "https://h2o.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46057,7 +46097,7 @@
     "name": "Haystack",
     "website_url": "https://haystack.deepset.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46091,7 +46131,7 @@
     "name": "Helicone",
     "website_url": "https://www.helicone.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46125,7 +46165,7 @@
     "name": "Jan",
     "website_url": "https://www.jan.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46159,7 +46199,7 @@
     "name": "JetBrains Junie",
     "website_url": "https://junie.jetbrains.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46193,7 +46233,7 @@
     "name": "Jina AI",
     "website_url": "https://jina.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46227,7 +46267,7 @@
     "name": "Khoj",
     "website_url": "https://khoj.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46261,7 +46301,7 @@
     "name": "Kilo",
     "website_url": "https://kilo.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46295,7 +46335,7 @@
     "name": "Kiro",
     "website_url": "https://kiro.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46329,7 +46369,7 @@
     "name": "Label Studio",
     "website_url": "https://labelstud.io/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46363,7 +46403,7 @@
     "name": "Labelbox",
     "website_url": "https://labelbox.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46397,7 +46437,7 @@
     "name": "LanceDB",
     "website_url": "https://www.lancedb.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46431,7 +46471,7 @@
     "name": "LandingAI",
     "website_url": "https://landing.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46465,7 +46505,7 @@
     "name": "Langflow",
     "website_url": "https://www.langflow.org/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46499,7 +46539,7 @@
     "name": "Langfuse",
     "website_url": "https://langfuse.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46533,7 +46573,7 @@
     "name": "Letta",
     "website_url": "https://www.letta.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46567,7 +46607,7 @@
     "name": "LibreChat",
     "website_url": "https://www.librechat.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46601,7 +46641,7 @@
     "name": "LiteLLM",
     "website_url": "https://www.litellm.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46635,7 +46675,7 @@
     "name": "LM Studio",
     "website_url": "https://lmstudio.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46669,7 +46709,7 @@
     "name": "Locofy",
     "website_url": "https://www.locofy.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46703,7 +46743,7 @@
     "name": "mabl",
     "website_url": "https://www.mabl.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46737,7 +46777,7 @@
     "name": "Magic Patterns",
     "website_url": "https://www.magicpatterns.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46771,7 +46811,7 @@
     "name": "Mastra",
     "website_url": "https://mastra.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46805,7 +46845,7 @@
     "name": "Mem0",
     "website_url": "https://mem0.ai/",
     "affiliate_url": null,
-    "category": "Automation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46839,7 +46879,7 @@
     "name": "Metabob",
     "website_url": "https://metabob.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46873,7 +46913,7 @@
     "name": "MindStudio",
     "website_url": "https://www.mindstudio.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46907,7 +46947,7 @@
     "name": "Mixedbread",
     "website_url": "https://www.mixedbread.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46941,7 +46981,7 @@
     "name": "Modal",
     "website_url": "https://modal.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -46975,7 +47015,7 @@
     "name": "Momentic",
     "website_url": "https://momentic.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47009,7 +47049,7 @@
     "name": "MOSTLY AI",
     "website_url": "https://mostly.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47043,7 +47083,7 @@
     "name": "Novita AI",
     "website_url": "https://novita.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47077,7 +47117,7 @@
     "name": "Obviously AI",
     "website_url": "https://obviously.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47111,7 +47151,7 @@
     "name": "Ollama",
     "website_url": "https://ollama.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47145,7 +47185,7 @@
     "name": "Onlook",
     "website_url": "https://www.onlook.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47179,7 +47219,7 @@
     "name": "Open WebUI",
     "website_url": "https://openwebui.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47213,7 +47253,7 @@
     "name": "OpenCode",
     "website_url": "https://opencode.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47607,7 +47647,7 @@
     "name": "Roboflow",
     "website_url": "https://roboflow.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47665,7 +47705,7 @@
     "name": "RunPod",
     "website_url": "https://www.runpod.io/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47699,7 +47739,7 @@
     "name": "SambaNova",
     "website_url": "https://sambanova.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47733,7 +47773,7 @@
     "name": "SiliconFlow",
     "website_url": "https://www.siliconflow.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47767,7 +47807,7 @@
     "name": "Snyk",
     "website_url": "https://snyk.io/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47801,7 +47841,7 @@
     "name": "Sourcery",
     "website_url": "https://www.sourcery.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47835,7 +47875,7 @@
     "name": "Stack AI",
     "website_url": "https://www.stackai.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47869,7 +47909,7 @@
     "name": "SuperAnnotate",
     "website_url": "https://www.superannotate.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47903,7 +47943,7 @@
     "name": "Sweep",
     "website_url": "https://sweep.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -47937,7 +47977,7 @@
     "name": "Tabby",
     "website_url": "https://www.tabbyml.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48019,7 +48059,7 @@
     "name": "Testim",
     "website_url": "https://www.testim.io/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48053,7 +48093,7 @@
     "name": "Trae",
     "website_url": "https://www.trae.ai/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48087,7 +48127,7 @@
     "name": "Ultralytics",
     "website_url": "https://www.ultralytics.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48169,7 +48209,7 @@
     "name": "Void",
     "website_url": "https://voideditor.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48203,7 +48243,7 @@
     "name": "Voyage AI",
     "website_url": "https://www.voyageai.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48295,7 +48335,7 @@
     "name": "Zed",
     "website_url": "https://zed.dev/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48329,7 +48369,7 @@
     "name": "Zep",
     "website_url": "https://www.getzep.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48363,7 +48403,7 @@
     "name": "Zilliz",
     "website_url": "https://zilliz.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -48973,7 +49013,7 @@
     "name": "QuestionWell",
     "website_url": "https://questionwell.org/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49031,7 +49071,7 @@
     "name": "Revisely",
     "website_url": "https://www.revisely.com/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49065,7 +49105,7 @@
     "name": "Sana Learn",
     "website_url": "https://sanalabs.com/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49099,7 +49139,7 @@
     "name": "SchoolAI",
     "website_url": "https://schoolai.com/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49133,7 +49173,7 @@
     "name": "SmallTalk2Me",
     "website_url": "https://smalltalk2.me/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49167,7 +49207,7 @@
     "name": "Speak",
     "website_url": "https://www.speak.com/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49201,7 +49241,7 @@
     "name": "Studyable",
     "website_url": "https://studyable.app/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49235,7 +49275,7 @@
     "name": "Talkpal",
     "website_url": "https://talkpal.ai/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49269,7 +49309,7 @@
     "name": "Teachmate",
     "website_url": "https://www.teachmate.com/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49303,7 +49343,7 @@
     "name": "Teachy",
     "website_url": "https://teachy.ai/en",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49337,7 +49377,7 @@
     "name": "Twee",
     "website_url": "https://twee.com/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -49371,7 +49411,7 @@
     "name": "Univerbal",
     "website_url": "https://www.univerbal.app/",
     "affiliate_url": null,
-    "category": "Education",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50341,7 +50381,7 @@
     "name": "Rasa.io",
     "website_url": "https://rasa.io/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50375,7 +50415,7 @@
     "name": "Scrunch AI",
     "website_url": "https://scrunch.com/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50409,7 +50449,7 @@
     "name": "Seventh Sense",
     "website_url": "https://www.theseventhsense.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50443,7 +50483,7 @@
     "name": "Smartlead",
     "website_url": "https://www.smartlead.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50477,7 +50517,7 @@
     "name": "Smartly",
     "website_url": "https://www.smartly.io/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50511,7 +50551,7 @@
     "name": "SocialBee",
     "website_url": "https://socialbee.com/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50545,7 +50585,7 @@
     "name": "Sprout Social",
     "website_url": "https://sproutsocial.com/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50579,7 +50619,7 @@
     "name": "Texta",
     "website_url": "https://www.texta.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50637,7 +50677,7 @@
     "name": "Tugan",
     "website_url": "https://tugan.ai/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50671,7 +50711,7 @@
     "name": "Typefully",
     "website_url": "https://typefully.com/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Content Creation",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50705,7 +50745,7 @@
     "name": "Unbounce",
     "website_url": "https://unbounce.com/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50739,7 +50779,7 @@
     "name": "Unify",
     "website_url": "https://www.unifygtm.com/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50773,7 +50813,7 @@
     "name": "UserGems",
     "website_url": "https://www.usergems.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50807,7 +50847,7 @@
     "name": "Vista Social",
     "website_url": "https://vistasocial.com/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50841,7 +50881,7 @@
     "name": "Warmly",
     "website_url": "https://www.warmly.ai/",
     "affiliate_url": null,
-    "category": "Marketing",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50875,7 +50915,7 @@
     "name": "Akiflow",
     "website_url": "https://akiflow.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50909,7 +50949,7 @@
     "name": "Aqua Voice",
     "website_url": "https://aquavoice.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50943,7 +50983,7 @@
     "name": "AudioPen",
     "website_url": "https://www.audiopen.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -50977,7 +51017,7 @@
     "name": "Bee",
     "website_url": "https://bee.computer/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51011,7 +51051,7 @@
     "name": "BeforeSunset AI",
     "website_url": "https://www.beforesunset.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51045,7 +51085,7 @@
     "name": "Bluedot",
     "website_url": "https://www.bluedothq.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51079,7 +51119,7 @@
     "name": "Brave Leo",
     "website_url": "https://brave.com/leo/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51113,7 +51153,7 @@
     "name": "Capacities",
     "website_url": "https://capacities.io/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51147,7 +51187,7 @@
     "name": "Chatbox",
     "website_url": "https://chatboxai.app/en",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51181,7 +51221,7 @@
     "name": "ChatHub",
     "website_url": "https://chathub.gg/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51215,7 +51255,7 @@
     "name": "Cleft",
     "website_url": "https://cleftnotes.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51249,7 +51289,7 @@
     "name": "Duck.ai",
     "website_url": "https://duck.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51283,7 +51323,7 @@
     "name": "Fellow",
     "website_url": "https://fellow.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51317,7 +51357,7 @@
     "name": "Fyxer",
     "website_url": "https://www.fyxer.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51351,7 +51391,7 @@
     "name": "Granola",
     "website_url": "https://www.granola.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51385,7 +51425,7 @@
     "name": "Grok",
     "website_url": "https://grok.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51419,7 +51459,7 @@
     "name": "Heptabase",
     "website_url": "https://heptabase.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51453,7 +51493,7 @@
     "name": "Inbox Zero",
     "website_url": "https://www.getinboxzero.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51487,7 +51527,7 @@
     "name": "Jamie",
     "website_url": "https://www.meetjamie.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51521,7 +51561,7 @@
     "name": "Kimi",
     "website_url": "https://www.kimi.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51555,7 +51595,7 @@
     "name": "Letterly",
     "website_url": "https://letterly.app/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51589,7 +51629,7 @@
     "name": "MacWhisper",
     "website_url": "https://www.macwhisper.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51623,7 +51663,7 @@
     "name": "Mapify",
     "website_url": "https://mapify.so/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51657,7 +51697,7 @@
     "name": "MaxAI",
     "website_url": "https://www.maxai.me/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51691,7 +51731,7 @@
     "name": "MeetGeek",
     "website_url": "https://meetgeek.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51725,7 +51765,7 @@
     "name": "MinutesLink",
     "website_url": "https://minuteslink.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51759,7 +51799,7 @@
     "name": "Miro AI",
     "website_url": "https://miro.com/ai/ai-overview/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51793,7 +51833,7 @@
     "name": "Monica",
     "website_url": "https://monica.im/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51827,7 +51867,7 @@
     "name": "Msty",
     "website_url": "https://msty.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51861,7 +51901,7 @@
     "name": "MyMind",
     "website_url": "https://mymind.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51895,7 +51935,7 @@
     "name": "Napkin AI",
     "website_url": "https://www.napkin.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51929,7 +51969,7 @@
     "name": "Notta",
     "website_url": "https://www.notta.ai/en/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51963,7 +52003,7 @@
     "name": "Oasis",
     "website_url": "https://www.theoasis.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -51997,7 +52037,7 @@
     "name": "Opera AI",
     "website_url": "https://www.opera.com/features/opera-ai",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52031,7 +52071,7 @@
     "name": "Plaud",
     "website_url": "https://www.plaud.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52065,7 +52105,7 @@
     "name": "Raycast",
     "website_url": "https://www.raycast.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52099,7 +52139,7 @@
     "name": "Recall",
     "website_url": "https://www.recall.it/",
     "affiliate_url": null,
-    "category": "Development",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52133,7 +52173,7 @@
     "name": "SaneBox",
     "website_url": "https://www.sanebox.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52167,7 +52207,7 @@
     "name": "Saner.AI",
     "website_url": "https://www.saner.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52201,7 +52241,7 @@
     "name": "SkedPal",
     "website_url": "https://www.skedpal.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52235,7 +52275,7 @@
     "name": "Superwhisper",
     "website_url": "https://superwhisper.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52269,7 +52309,7 @@
     "name": "Tactiq",
     "website_url": "https://tactiq.io/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52303,7 +52343,7 @@
     "name": "Tasklet",
     "website_url": "https://tasklet.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52337,7 +52377,7 @@
     "name": "Trevor AI",
     "website_url": "https://www.trevorai.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52371,7 +52411,7 @@
     "name": "TypingMind",
     "website_url": "https://www.typingmind.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52405,7 +52445,7 @@
     "name": "Vellum",
     "website_url": "https://www.vellum.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52439,7 +52479,7 @@
     "name": "Voicenotes",
     "website_url": "https://voicenotes.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52473,7 +52513,7 @@
     "name": "Whimsical",
     "website_url": "https://whimsical.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52507,7 +52547,7 @@
     "name": "Wispr Flow",
     "website_url": "https://wisprflow.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52541,7 +52581,7 @@
     "name": "Xmind AI",
     "website_url": "https://app.xmind.com/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52575,7 +52615,7 @@
     "name": "Z.ai",
     "website_url": "https://chat.z.ai/",
     "affiliate_url": null,
-    "category": "Productivity",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52609,7 +52649,7 @@
     "name": "AlphaSense",
     "website_url": "https://www.alpha-sense.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52643,7 +52683,7 @@
     "name": "Anara",
     "website_url": "https://anara.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52677,7 +52717,7 @@
     "name": "AnswerThis",
     "website_url": "https://answerthis.io/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52711,7 +52751,7 @@
     "name": "AskYourPDF",
     "website_url": "https://askyourpdf.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52745,7 +52785,7 @@
     "name": "ChatPDF",
     "website_url": "https://www.chatpdf.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52779,7 +52819,7 @@
     "name": "Condens",
     "website_url": "https://condens.io/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52813,7 +52853,7 @@
     "name": "Dimensions",
     "website_url": "https://www.dimensions.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52847,7 +52887,7 @@
     "name": "Dovetail",
     "website_url": "https://dovetail.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52881,7 +52921,7 @@
     "name": "Explainpaper",
     "website_url": "https://www.explainpaper.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52915,7 +52955,7 @@
     "name": "Gemini Notebook",
     "website_url": "https://notebook.google/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52949,7 +52989,7 @@
     "name": "Hebbia",
     "website_url": "https://www.hebbia.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -52983,7 +53023,7 @@
     "name": "Humata",
     "website_url": "https://www.humata.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53017,7 +53057,7 @@
     "name": "Iris.ai",
     "website_url": "https://iris.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53051,7 +53091,7 @@
     "name": "Keenious",
     "website_url": "https://keenious.com/landing",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53085,7 +53125,7 @@
     "name": "Listen Labs",
     "website_url": "https://listenlabs.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53119,7 +53159,7 @@
     "name": "Logically",
     "website_url": "https://logically.app/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53153,7 +53193,7 @@
     "name": "Looppanel",
     "website_url": "https://www.looppanel.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53187,7 +53227,7 @@
     "name": "Marvin",
     "website_url": "https://heymarvin.com/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53221,7 +53261,7 @@
     "name": "OpenRead",
     "website_url": "https://www.openread.academy/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53255,7 +53295,7 @@
     "name": "Outset",
     "website_url": "https://outset.ai/",
     "affiliate_url": null,
-    "category": "Business",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53289,7 +53329,7 @@
     "name": "Paper Digest",
     "website_url": "https://www.paperdigest.org/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53323,7 +53363,7 @@
     "name": "Paperguide",
     "website_url": "https://paperguide.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53357,7 +53397,7 @@
     "name": "PDF.ai",
     "website_url": "https://pdf.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53391,7 +53431,7 @@
     "name": "Quartr",
     "website_url": "https://quartr.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53425,7 +53465,7 @@
     "name": "Quilt",
     "website_url": "https://www.quilt.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53459,7 +53499,7 @@
     "name": "Rogo",
     "website_url": "https://rogo.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53493,7 +53533,7 @@
     "name": "ScholarAI",
     "website_url": "https://scholarai.io/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53527,7 +53567,7 @@
     "name": "SciSummary",
     "website_url": "https://scisummary.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53561,7 +53601,7 @@
     "name": "Scite",
     "website_url": "https://scite.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53595,7 +53635,7 @@
     "name": "Semantic Scholar",
     "website_url": "https://www.semanticscholar.org/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53629,7 +53669,7 @@
     "name": "Sourcely",
     "website_url": "https://www.sourcely.net/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53663,7 +53703,7 @@
     "name": "Undermind",
     "website_url": "https://www.undermind.ai/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53697,7 +53737,7 @@
     "name": "Wolfram Alpha",
     "website_url": "https://www.wolframalpha.com/",
     "affiliate_url": null,
-    "category": "Research",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53731,7 +53771,7 @@
     "name": "AI Studios",
     "website_url": "https://www.aistudios.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53765,7 +53805,7 @@
     "name": "Akool",
     "website_url": "https://akool.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53799,7 +53839,7 @@
     "name": "Altered",
     "website_url": "https://www.altered.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53833,7 +53873,7 @@
     "name": "Async",
     "website_url": "https://async.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53867,7 +53907,7 @@
     "name": "Audimee",
     "website_url": "https://audimee.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53901,7 +53941,7 @@
     "name": "AudioShake",
     "website_url": "https://www.audioshake.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53935,7 +53975,7 @@
     "name": "Auphonic",
     "website_url": "https://auphonic.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -53969,7 +54009,7 @@
     "name": "BHuman",
     "website_url": "https://www.bhuman.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54003,7 +54043,7 @@
     "name": "Captions",
     "website_url": "https://captions.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54037,7 +54077,7 @@
     "name": "Cartesia",
     "website_url": "https://www.cartesia.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54071,7 +54111,7 @@
     "name": "Castmagic",
     "website_url": "https://www.castmagic.io/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54105,7 +54145,7 @@
     "name": "Checksub",
     "website_url": "https://www.checksub.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54139,7 +54179,7 @@
     "name": "Cleanvoice",
     "website_url": "https://cleanvoice.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54207,7 +54247,7 @@
     "name": "Digen",
     "website_url": "https://digen.ai/en/explore",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54241,7 +54281,7 @@
     "name": "Dubverse",
     "website_url": "https://dubverse.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54275,7 +54315,7 @@
     "name": "Elai",
     "website_url": "https://elai.io/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54309,7 +54349,7 @@
     "name": "eMastered",
     "website_url": "https://emastered.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54343,7 +54383,7 @@
     "name": "Fadr",
     "website_url": "https://fadr.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54377,7 +54417,7 @@
     "name": "Genmo",
     "website_url": "https://www.genmo.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54411,7 +54451,7 @@
     "name": "Gling",
     "website_url": "https://www.gling.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54445,7 +54485,7 @@
     "name": "Google Flow Music",
     "website_url": "https://www.flowmusic.app/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54479,7 +54519,7 @@
     "name": "Hailuo AI",
     "website_url": "https://hailuoai.video/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54513,7 +54553,7 @@
     "name": "Hedra",
     "website_url": "https://www.hedra.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54547,7 +54587,7 @@
     "name": "Higgsfield",
     "website_url": "https://higgsfield.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54581,7 +54621,7 @@
     "name": "Hume AI",
     "website_url": "https://www.hume.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54615,7 +54655,7 @@
     "name": "Immersive Translate",
     "website_url": "https://immersivetranslate.com/en/",
     "affiliate_url": null,
-    "category": "Content Creation",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54683,7 +54723,7 @@
     "name": "Kits AI",
     "website_url": "https://www.kits.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54717,7 +54757,7 @@
     "name": "Klap",
     "website_url": "https://klap.app/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54751,7 +54791,7 @@
     "name": "Kling AI",
     "website_url": "https://kling.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54785,7 +54825,7 @@
     "name": "Krea",
     "website_url": "https://www.krea.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54819,7 +54859,7 @@
     "name": "LANDR",
     "website_url": "https://www.landr.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54853,7 +54893,7 @@
     "name": "Listnr",
     "website_url": "https://listnr.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54887,7 +54927,7 @@
     "name": "Loudly",
     "website_url": "https://www.loudly.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54921,7 +54961,7 @@
     "name": "LTX Studio",
     "website_url": "https://ltx.io/studio",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54955,7 +54995,7 @@
     "name": "Maestra",
     "website_url": "https://maestra.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -54989,7 +55029,7 @@
     "name": "Moises",
     "website_url": "https://moises.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55023,7 +55063,7 @@
     "name": "Mubert",
     "website_url": "https://mubert.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55057,7 +55097,7 @@
     "name": "Musicfy",
     "website_url": "https://musicfy.lol/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55091,7 +55131,7 @@
     "name": "Narakeet",
     "website_url": "https://www.narakeet.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55125,7 +55165,7 @@
     "name": "OpenArt",
     "website_url": "https://openart.ai/",
     "affiliate_url": null,
-    "category": "Design",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55159,7 +55199,7 @@
     "name": "OpusClip",
     "website_url": "https://www.opus.pro/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55193,7 +55233,7 @@
     "name": "PixVerse",
     "website_url": "https://pixverse.ai/en",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55227,7 +55267,7 @@
     "name": "Podsqueeze",
     "website_url": "https://podsqueeze.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55261,7 +55301,7 @@
     "name": "quso.ai",
     "website_url": "https://quso.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55295,7 +55335,7 @@
     "name": "Rask AI",
     "website_url": "https://www.rask.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55329,7 +55369,7 @@
     "name": "Recast Studio",
     "website_url": "https://recast.studio/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55363,7 +55403,7 @@
     "name": "Riverside",
     "website_url": "https://riverside.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55397,7 +55437,7 @@
     "name": "Soundful",
     "website_url": "https://soundful.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55431,7 +55471,7 @@
     "name": "SpeechGen",
     "website_url": "https://speechgen.io/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55465,7 +55505,7 @@
     "name": "Speechmatics",
     "website_url": "https://www.speechmatics.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55499,7 +55539,7 @@
     "name": "Stable Audio",
     "website_url": "https://stableaudio.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55533,7 +55573,7 @@
     "name": "Submagic",
     "website_url": "https://www.submagic.co/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55567,7 +55607,7 @@
     "name": "Supertone",
     "website_url": "https://www.supertone.ai/en",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55601,7 +55641,7 @@
     "name": "Tavus",
     "website_url": "https://www.tavus.io/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55635,7 +55675,7 @@
     "name": "TimeBolt",
     "website_url": "https://www.timebolt.io/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55669,7 +55709,7 @@
     "name": "Vapi",
     "website_url": "https://vapi.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55737,7 +55777,7 @@
     "name": "Vidu",
     "website_url": "https://www.vidu.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55771,7 +55811,7 @@
     "name": "Vizard",
     "website_url": "https://vizard.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55805,7 +55845,7 @@
     "name": "Voicemaker",
     "website_url": "https://voicemaker.in/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55839,7 +55879,7 @@
     "name": "Voicemod",
     "website_url": "https://www.voicemod.net/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55873,7 +55913,7 @@
     "name": "Wavel AI",
     "website_url": "https://wavel.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55907,7 +55947,7 @@
     "name": "WellSaid",
     "website_url": "https://www.wellsaid.io/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55941,7 +55981,7 @@
     "name": "Wisecut",
     "website_url": "https://wisecut.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -55975,7 +56015,7 @@
     "name": "Wondercraft",
     "website_url": "https://www.wondercraft.ai/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [
@@ -56009,7 +56049,7 @@
     "name": "Zencastr",
     "website_url": "https://zencastr.com/",
     "affiliate_url": null,
-    "category": "Video & Audio",
+    "category": "Uncategorized",
     "pricingModel": "unknown",
     "hasFreeTier": "unknown",
     "primaryUseCases": [

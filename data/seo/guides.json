@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "how-to-choose-ai-coding-assistant",
+        "title": "How to Choose an AI Coding Assistant in 2026",
+        "metaDescription": "A complete guide to choosing an AI coding assistant. Compare Cursor, Copilot, and open-source BYOK solutions like Cline.",
+        "contentHTML": "<p>Choosing the right AI coding assistant has become one of the most critical workflow decisions for developers. In 2026, the market has segmented into three main categories:</p><h2>1. Enterprise Standard (GitHub Copilot)</h2><p>Best for large teams that need standardized tooling across multiple IDEs (Visual Studio, JetBrains, VS Code). It offers strong IP indemnification.</p><h2>2. Agentic IDEs (Cursor, Windsurf)</h2><p>These are standalone forks of VS Code built entirely around AI. They excel at 'agentic' workflows—planning and executing multi-file refactors autonomously.</p><h2>3. BYOK Open-Source (Cline, Aider)</h2><p>Bring Your Own Key (BYOK) solutions are extensions that live in your editor and allow you to plug in your own API keys for Claude or OpenAI. This offers maximum privacy and the lowest cost.</p>"
+    },
+    {
+        "slug": "free-vs-paid-ai-tools",
+        "title": "Free vs Paid AI Tools: What Actually Changes?",
+        "metaDescription": "Understand the real differences between free tiers and paid subscriptions for AI tools, and when you actually need to upgrade.",
+        "contentHTML": "<p>It's easy to get overwhelmed by subscription fatigue when building your AI tool stack. But do you always need to pay?</p><h2>The Free Tier Illusion</h2><p>Many 'free' AI tools are strictly lead-generation. They often restrict the most important feature: the model itself. For example, a free tier might use an older model (like GPT-3.5) while reserving the cutting-edge reasoning models for paid users.</p><h2>When to Pay</h2><p>1. <strong>Privacy:</strong> Paid enterprise tiers often explicitly state they will not train on your data.<br>2. <strong>Context Window:</strong> Free tiers usually cap how much data you can feed the AI at once.<br>3. <strong>Agentic Features:</strong> Advanced autonomous features require massive compute, which is rarely free.</p>"
+    }
+]

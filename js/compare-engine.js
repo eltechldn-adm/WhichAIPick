@@ -6,6 +6,20 @@
  * using the local data/tools.json catalog.
  */
 
+// Dynamic SEO indexability for filtered states
+(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('tools')) {
+        let robotsMeta = document.querySelector('meta[name="robots"]');
+        if (!robotsMeta) {
+            robotsMeta = document.createElement('meta');
+            robotsMeta.name = 'robots';
+            document.head.appendChild(robotsMeta);
+        }
+        robotsMeta.content = 'noindex,follow';
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', async () => {
     const tableContainer = document.getElementById('compare-table-container');
     const emptyState = document.getElementById('compare-empty-state');

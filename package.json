@@ -9,7 +9,8 @@
     "validate:data": "node scripts/validate-data.mjs",
     "validate:seo": "node scripts/validate-seo.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",
-    "generate:pages": "node scripts/generate-static-pages.mjs",
+    "generate:pages": "node scripts/generate-static-pages.mjs && npm run generate:seo",
+    "generate:seo": "node scripts/seo/generate-best-tools.mjs && node scripts/seo/generate-alternatives.mjs && node scripts/seo/generate-comparisons.mjs && node scripts/seo/generate-guides.mjs",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "inject:header": "node scripts/inject-header.mjs",
     "inject:footer": "node scripts/inject-footer.mjs",
@@ -22,6 +23,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "cheerio": "^1.2.0",
     "wrangler": "^3.0.0"
   }
 }

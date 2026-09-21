@@ -1,0 +1,1286 @@
+
+> validate:data
+> node scripts/validate-data.mjs
+
+[WARNING] Tool diagram contains suspicious boilerplate: "lorem ipsum"
+[WARNING] Duplicate official URL found for fig: https://aws.amazon.com/q/developer/
+[WARNING] Tool magician-figma contains suspicious boilerplate: "lorem ipsum"
+[WARNING] Tool reclaim contains suspicious boilerplate: "todo"
+[WARNING] Duplicate official URL found for perplexity: https://www.perplexity.ai/
+[WARNING] Duplicate official URL found for canva: https://www.canva.com/
+[WARNING] Tool apify is missing best_for editorial guidance.
+[ERROR] Tool apify has invalid targetUsers enum: "Developers"
+[WARNING] Tool automation-anywhere is missing best_for editorial guidance.
+[ERROR] Tool automation-anywhere has invalid targetUsers enum: "Enterprise"
+[WARNING] Tool bika-ai is missing best_for editorial guidance.
+[ERROR] Tool bika-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for bland-ai: https://example.com
+[WARNING] Tool bland-ai is missing best_for editorial guidance.
+[ERROR] Tool bland-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Tool browse-ai is missing best_for editorial guidance.
+[ERROR] Tool browse-ai has invalid targetUsers enum: "Marketers"
+[WARNING] Duplicate official URL found for docsumo: https://example.com
+[WARNING] Tool docsumo is missing best_for editorial guidance.
+[ERROR] Tool docsumo has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for extend: https://example.com
+[WARNING] Tool extend is missing best_for editorial guidance.
+[ERROR] Tool extend has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for gumloop: https://example.com
+[WARNING] Tool gumloop is missing best_for editorial guidance.
+[ERROR] Tool gumloop has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for levity: https://example.com
+[WARNING] Tool levity is missing best_for editorial guidance.
+[ERROR] Tool levity has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for lindy: https://example.com
+[WARNING] Tool lindy is missing best_for editorial guidance.
+[ERROR] Tool lindy has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for lutra: https://example.com
+[WARNING] Tool lutra is missing best_for editorial guidance.
+[ERROR] Tool lutra has invalid targetUsers enum: "Professionals"
+[WARNING] Tool nanonets is missing best_for editorial guidance.
+[ERROR] Tool nanonets has invalid targetUsers enum: "Operations"
+[WARNING] Tool octoparse is missing best_for editorial guidance.
+[ERROR] Tool octoparse has invalid targetUsers enum: "Researchers"
+[ERROR] Tool octoparse has invalid platform token: "macOS"
+[WARNING] Duplicate official URL found for parseur: https://example.com
+[WARNING] Tool parseur is missing best_for editorial guidance.
+[ERROR] Tool parseur has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for pazi: https://example.com
+[WARNING] Tool pazi is missing best_for editorial guidance.
+[ERROR] Tool pazi has invalid targetUsers enum: "Professionals"
+[WARNING] Tool pipedream is missing best_for editorial guidance.
+[ERROR] Tool pipedream has invalid targetUsers enum: "Developers"
+[WARNING] Duplicate official URL found for reducto: https://example.com
+[WARNING] Tool reducto is missing best_for editorial guidance.
+[ERROR] Tool reducto has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for relevance-ai: https://example.com
+[WARNING] Tool relevance-ai is missing best_for editorial guidance.
+[ERROR] Tool relevance-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for retell-ai: https://example.com
+[WARNING] Tool retell-ai is missing best_for editorial guidance.
+[ERROR] Tool retell-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for rossum: https://example.com
+[WARNING] Tool rossum is missing best_for editorial guidance.
+[ERROR] Tool rossum has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for sim: https://example.com
+[WARNING] Tool sim is missing best_for editorial guidance.
+[ERROR] Tool sim has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for synthflow: https://example.com
+[WARNING] Tool synthflow is missing best_for editorial guidance.
+[ERROR] Tool synthflow has invalid targetUsers enum: "Professionals"
+[WARNING] Tool uipath is missing best_for editorial guidance.
+[ERROR] Tool uipath has invalid targetUsers enum: "Enterprise"
+[WARNING] Duplicate official URL found for v7: https://example.com
+[WARNING] Tool v7 is missing best_for editorial guidance.
+[ERROR] Tool v7 has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for veryfi: https://example.com
+[WARNING] Tool veryfi is missing best_for editorial guidance.
+[ERROR] Tool veryfi has invalid targetUsers enum: "Professionals"
+[WARNING] Tool abridge is missing best_for editorial guidance.
+[ERROR] Tool abridge has invalid targetUsers enum: "Physicians"
+[WARNING] Duplicate official URL found for ai2sql: https://example.com
+[WARNING] Tool ai2sql is missing best_for editorial guidance.
+[ERROR] Tool ai2sql has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for aisera: https://example.com
+[WARNING] Tool aisera is missing best_for editorial guidance.
+[ERROR] Tool aisera has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for ambience-healthcare: https://example.com
+[WARNING] Tool ambience-healthcare is missing best_for editorial guidance.
+[ERROR] Tool ambience-healthcare has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for ashby: https://example.com
+[WARNING] Tool ashby is missing best_for editorial guidance.
+[ERROR] Tool ashby has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for assembled: https://example.com
+[WARNING] Tool assembled is missing best_for editorial guidance.
+[ERROR] Tool assembled has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for atomicwork: https://example.com
+[WARNING] Tool atomicwork is missing best_for editorial guidance.
+[ERROR] Tool atomicwork has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for attention: https://example.com
+[WARNING] Tool attention is missing best_for editorial guidance.
+[ERROR] Tool attention has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for augmedix: https://example.com
+[WARNING] Tool augmedix is missing best_for editorial guidance.
+[ERROR] Tool augmedix has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for backstory: https://example.com
+[WARNING] Tool backstory is missing best_for editorial guidance.
+[ERROR] Tool backstory has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for balto: https://example.com
+[WARNING] Tool balto is missing best_for editorial guidance.
+[ERROR] Tool balto has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for better-analyst: https://example.com
+[WARNING] Tool better-analyst is missing best_for editorial guidance.
+[ERROR] Tool better-analyst has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for blueprint: https://example.com
+[WARNING] Tool blueprint is missing best_for editorial guidance.
+[ERROR] Tool blueprint has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for botsonic: https://example.com
+[WARNING] Tool botsonic is missing best_for editorial guidance.
+[ERROR] Tool botsonic has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for bricks: https://example.com
+[WARNING] Tool bricks is missing best_for editorial guidance.
+[ERROR] Tool bricks has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for brighthire: https://example.com
+[WARNING] Tool brighthire is missing best_for editorial guidance.
+[ERROR] Tool brighthire has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for certainly: https://example.com
+[WARNING] Tool certainly is missing best_for editorial guidance.
+[ERROR] Tool certainly has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for chatbase: https://example.com
+[WARNING] Tool chatbase is missing best_for editorial guidance.
+[ERROR] Tool chatbase has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for chattermill: https://example.com
+[WARNING] Tool chattermill is missing best_for editorial guidance.
+[ERROR] Tool chattermill has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for clari: https://example.com
+[WARNING] Tool clari is missing best_for editorial guidance.
+[ERROR] Tool clari has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for coefficient: https://example.com
+[WARNING] Tool coefficient is missing best_for editorial guidance.
+[ERROR] Tool coefficient has invalid targetUsers enum: "Professionals"
+[WARNING] Tool cognigy is missing best_for editorial guidance.
+[ERROR] Tool cognigy has invalid targetUsers enum: "Enterprise"
+[WARNING] Tool cresta is missing best_for editorial guidance.
+[ERROR] Tool cresta has invalid targetUsers enum: "Enterprise"
+[WARNING] Duplicate official URL found for customgpt: https://example.com
+[WARNING] Tool customgpt is missing best_for editorial guidance.
+[ERROR] Tool customgpt has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for darrow: https://example.com
+[WARNING] Tool darrow is missing best_for editorial guidance.
+[ERROR] Tool darrow has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for decagon: https://example.com
+[WARNING] Tool decagon is missing best_for editorial guidance.
+[ERROR] Tool decagon has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for deepscribe: https://example.com
+[WARNING] Tool deepscribe is missing best_for editorial guidance.
+[ERROR] Tool deepscribe has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for defog: https://example.com
+[WARNING] Tool defog is missing best_for editorial guidance.
+[ERROR] Tool defog has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for dixa: https://example.com
+[WARNING] Tool dixa is missing best_for editorial guidance.
+[ERROR] Tool dixa has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for docsbot: https://example.com
+[WARNING] Tool docsbot is missing best_for editorial guidance.
+[ERROR] Tool docsbot has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for eightfold-ai: https://example.com
+[WARNING] Tool eightfold-ai is missing best_for editorial guidance.
+[ERROR] Tool eightfold-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for eleos-health: https://example.com
+[WARNING] Tool eleos-health is missing best_for editorial guidance.
+[ERROR] Tool eleos-health has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for enterpret: https://example.com
+[WARNING] Tool enterpret is missing best_for editorial guidance.
+[ERROR] Tool enterpret has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for equals: https://example.com
+[WARNING] Tool equals is missing best_for editorial guidance.
+[ERROR] Tool equals has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for eve: https://example.com
+[WARNING] Tool eve is missing best_for editorial guidance.
+[ERROR] Tool eve has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for evenup: https://example.com
+[WARNING] Tool evenup is missing best_for editorial guidance.
+[ERROR] Tool evenup has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for filevine: https://example.com
+[WARNING] Tool filevine is missing best_for editorial guidance.
+[ERROR] Tool filevine has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for findem: https://example.com
+[WARNING] Tool findem is missing best_for editorial guidance.
+[ERROR] Tool findem has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for freed: https://example.com
+[WARNING] Tool freed is missing best_for editorial guidance.
+[ERROR] Tool freed has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for glean: https://example.com
+[WARNING] Tool glean is missing best_for editorial guidance.
+[ERROR] Tool glean has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for gorgias: https://example.com
+[WARNING] Tool gorgias is missing best_for editorial guidance.
+[ERROR] Tool gorgias has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for gpt-for-work: https://example.com
+[WARNING] Tool gpt-for-work is missing best_for editorial guidance.
+[ERROR] Tool gpt-for-work has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for gupshup: https://example.com
+[WARNING] Tool gupshup is missing best_for editorial guidance.
+[ERROR] Tool gupshup has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for haptik: https://example.com
+[WARNING] Tool haptik is missing best_for editorial guidance.
+[ERROR] Tool haptik has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for heidi: https://example.com
+[WARNING] Tool heidi is missing best_for editorial guidance.
+[ERROR] Tool heidi has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for hireez: https://example.com
+[WARNING] Tool hireez is missing best_for editorial guidance.
+[ERROR] Tool hireez has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for hirevue: https://example.com
+[WARNING] Tool hirevue is missing best_for editorial guidance.
+[ERROR] Tool hirevue has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for icertis: https://example.com
+[WARNING] Tool icertis is missing best_for editorial guidance.
+[ERROR] Tool icertis has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for inkeep: https://example.com
+[WARNING] Tool inkeep is missing best_for editorial guidance.
+[ERROR] Tool inkeep has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for ironclad: https://example.com
+[WARNING] Tool ironclad is missing best_for editorial guidance.
+[ERROR] Tool ironclad has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for juicebox: https://example.com
+[WARNING] Tool juicebox is missing best_for editorial guidance.
+[ERROR] Tool juicebox has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for juro: https://example.com
+[WARNING] Tool juro is missing best_for editorial guidance.
+[ERROR] Tool juro has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for kapa-ai: https://example.com
+[WARNING] Tool kapa-ai is missing best_for editorial guidance.
+[ERROR] Tool kapa-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for keatext: https://example.com
+[WARNING] Tool keatext is missing best_for editorial guidance.
+[ERROR] Tool keatext has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for kognitos: https://example.com
+[WARNING] Tool kognitos is missing best_for editorial guidance.
+[ERROR] Tool kognitos has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for kommunicate: https://example.com
+[WARNING] Tool kommunicate is missing best_for editorial guidance.
+[ERROR] Tool kommunicate has invalid targetUsers enum: "Professionals"
+[WARNING] Duplicate official URL found for kore-ai: https://example.com
+[WARNING] Tool kore-ai is missing best_for editorial guidance.
+[ERROR] Tool kore-ai has invalid targetUsers enum: "Professionals"
+[WARNING] Tool lawdroid is missing best_for editorial guidance.
+[WARNING] Tool leah is missing best_for editorial guidance.
+[WARNING] Tool leena-ai is missing best_for editorial guidance.
+[WARNING] Tool legalon is missing best_for editorial guidance.
+[WARNING] Tool legora is missing best_for editorial guidance.
+[WARNING] Tool level-ai is missing best_for editorial guidance.
+[WARNING] Tool linksquares is missing best_for editorial guidance.
+[WARNING] Tool lorikeet is missing best_for editorial guidance.
+[WARNING] Tool luminance is missing best_for editorial guidance.
+[WARNING] Tool marqo is missing best_for editorial guidance.
+[WARNING] Tool mentalyc is missing best_for editorial guidance.
+[WARNING] Tool metaview is missing best_for editorial guidance.
+[WARNING] Tool momentum is missing best_for editorial guidance.
+[WARNING] Tool moveworks is missing best_for editorial guidance.
+[WARNING] Tool numerous-ai is missing best_for editorial guidance.
+[WARNING] Tool observe-ai is missing best_for editorial guidance.
+[WARNING] Tool onyx is missing best_for editorial guidance.
+[WARNING] Tool paradox is missing best_for editorial guidance.
+[WARNING] Tool parloa is missing best_for editorial guidance.
+[WARNING] Tool paxton is missing best_for editorial guidance.
+[WARNING] Tool powerdrill is missing best_for editorial guidance.
+[WARNING] Tool pylon is missing best_for editorial guidance.
+[WARNING] Tool quadratic is missing best_for editorial guidance.
+[WARNING] Tool rattle is missing best_for editorial guidance.
+[WARNING] Tool respond-io is missing best_for editorial guidance.
+[WARNING] Tool rezolve-ai is missing best_for editorial guidance.
+[WARNING] Tool richpanel is missing best_for editorial guidance.
+[WARNING] Tool riff is missing best_for editorial guidance.
+[WARNING] Tool scratchpad is missing best_for editorial guidance.
+[WARNING] Tool screenloop is missing best_for editorial guidance.
+[WARNING] Tool seekout is missing best_for editorial guidance.
+[WARNING] Tool sentisum is missing best_for editorial guidance.
+[WARNING] Tool sheetai is missing best_for editorial guidance.
+[WARNING] Tool sierra is missing best_for editorial guidance.
+[WARNING] Tool sitegpt is missing best_for editorial guidance.
+[WARNING] Tool sleekflow is missing best_for editorial guidance.
+[WARNING] Tool sourcetable is missing best_for editorial guidance.
+[WARNING] Tool spotdraft is missing best_for editorial guidance.
+[WARNING] Tool sqlai-ai is missing best_for editorial guidance.
+[WARNING] Tool suki is missing best_for editorial guidance.
+[WARNING] Tool supio is missing best_for editorial guidance.
+[WARNING] Tool sybill is missing best_for editorial guidance.
+[WARNING] Tool tali-ai is missing best_for editorial guidance.
+[WARNING] Tool textio is missing best_for editorial guidance.
+[WARNING] Tool thematic is missing best_for editorial guidance.
+[WARNING] Tool thena is missing best_for editorial guidance.
+[WARNING] Tool tiledesk is missing best_for editorial guidance.
+[WARNING] Tool tortus is missing best_for editorial guidance.
+[WARNING] Tool trengo is missing best_for editorial guidance.
+[WARNING] Tool uniphore is missing best_for editorial guidance.
+[WARNING] Tool upheal is missing best_for editorial guidance.
+[WARNING] Tool vanna-ai is missing best_for editorial guidance.
+[WARNING] Tool vectorshift is missing best_for editorial guidance.
+[WARNING] Tool wati is missing best_for editorial guidance.
+[WARNING] Tool wotnot is missing best_for editorial guidance.
+[WARNING] Tool wren-ai is missing best_for editorial guidance.
+[WARNING] Tool yuma-ai is missing best_for editorial guidance.
+[WARNING] Tool zowie is missing best_for editorial guidance.
+[WARNING] Tool airops is missing best_for editorial guidance.
+[WARNING] Tool byword is missing best_for editorial guidance.
+[WARNING] Tool copymatic is missing best_for editorial guidance.
+[WARNING] Tool deepl is missing best_for editorial guidance.
+[WARNING] Tool easy-peasy-ai is missing best_for editorial guidance.
+[WARNING] Tool junia-ai is missing best_for editorial guidance.
+[WARNING] Tool languagetool is missing best_for editorial guidance.
+[WARNING] Tool logicballs is missing best_for editorial guidance.
+[WARNING] Tool novelai is missing best_for editorial guidance.
+[WARNING] Tool novelcrafter is missing best_for editorial guidance.
+[WARNING] Tool paperpal is missing best_for editorial guidance.
+[WARNING] Tool penfriend is missing best_for editorial guidance.
+[WARNING] Tool seo-ai is missing best_for editorial guidance.
+[WARNING] Tool seowriting-ai is missing best_for editorial guidance.
+[WARNING] Tool squibler is missing best_for editorial guidance.
+[WARNING] Tool trinka is missing best_for editorial guidance.
+[WARNING] Tool type is missing best_for editorial guidance.
+[WARNING] Tool typeface is missing best_for editorial guidance.
+[WARNING] Tool wordhero is missing best_for editorial guidance.
+[WARNING] Tool writefull is missing best_for editorial guidance.
+[WARNING] Tool writer is missing best_for editorial guidance.
+[WARNING] Tool aftershoot is missing best_for editorial guidance.
+[WARNING] Tool aiarty-image-enhancer is missing best_for editorial guidance.
+[WARNING] Tool arko-ai is missing best_for editorial guidance.
+[WARNING] Tool botika is missing best_for editorial guidance.
+[WARNING] Tool claid is missing best_for editorial guidance.
+[WARNING] Tool clipping-magic is missing best_for editorial guidance.
+[WARNING] Tool coohom is missing best_for editorial guidance.
+[WARNING] Tool cutout-pro is missing best_for editorial guidance.
+[WARNING] Tool deep-image is missing best_for editorial guidance.
+[WARNING] Tool dzine is missing best_for editorial guidance.
+[WARNING] Tool erase-bg is missing best_for editorial guidance.
+[WARNING] Tool evoto is missing best_for editorial guidance.
+[WARNING] Tool flair-ai is missing best_for editorial guidance.
+[WARNING] Tool hitpaw-fotorpea is missing best_for editorial guidance.
+[WARNING] Tool homestyler is missing best_for editorial guidance.
+[WARNING] Tool interior-ai is missing best_for editorial guidance.
+[WARNING] Tool kaedim is missing best_for editorial guidance.
+[WARNING] Tool layer-ai is missing best_for editorial guidance.
+[WARNING] Tool lookx is missing best_for editorial guidance.
+[WARNING] Tool maket is missing best_for editorial guidance.
+[WARNING] Tool meshy is missing best_for editorial guidance.
+[WARNING] Tool mnml-ai is missing best_for editorial guidance.
+[WARNING] Tool mokker is missing best_for editorial guidance.
+[WARNING] Tool narrative is missing best_for editorial guidance.
+[WARNING] Tool palette-fm is missing best_for editorial guidance.
+[WARNING] Tool pebblely is missing best_for editorial guidance.
+[WARNING] Tool photoroom is missing best_for editorial guidance.
+[WARNING] Tool piccopilot is missing best_for editorial guidance.
+[WARNING] Tool picwish is missing best_for editorial guidance.
+[WARNING] Tool pixelcut is missing best_for editorial guidance.
+[WARNING] Tool planner-5d is missing best_for editorial guidance.
+[WARNING] Tool promethean-ai is missing best_for editorial guidance.
+[WARNING] Tool recraft is missing best_for editorial guidance.
+[WARNING] Tool reimaginehome is missing best_for editorial guidance.
+[WARNING] Tool removal-ai is missing best_for editorial guidance.
+[WARNING] Tool retouch4me is missing best_for editorial guidance.
+[WARNING] Tool rodin is missing best_for editorial guidance.
+[WARNING] Tool roomgpt is missing best_for editorial guidance.
+[WARNING] Tool scenario is missing best_for editorial guidance.
+[WARNING] Tool sloyd is missing best_for editorial guidance.
+[WARNING] Tool spacely-ai is missing best_for editorial guidance.
+[WARNING] Tool spline-ai is missing best_for editorial guidance.
+[WARNING] Tool testfit is missing best_for editorial guidance.
+[WARNING] Tool upscayl is missing best_for editorial guidance.
+[WARNING] Tool vanceai is missing best_for editorial guidance.
+[WARNING] Tool veras is missing best_for editorial guidance.
+[WARNING] Tool vmake is missing best_for editorial guidance.
+[WARNING] Tool worldengen is missing best_for editorial guidance.
+[WARNING] Tool agno is missing best_for editorial guidance.
+[WARNING] Tool aider is missing best_for editorial guidance.
+[WARNING] Tool anima is missing best_for editorial guidance.
+[WARNING] Tool anythingllm is missing best_for editorial guidance.
+[WARNING] Tool arize-ai is missing best_for editorial guidance.
+[WARNING] Tool arthur-ai is missing best_for editorial guidance.
+[WARNING] Tool augment-code is missing best_for editorial guidance.
+[WARNING] Tool baseten is missing best_for editorial guidance.
+[WARNING] Tool bito is missing best_for editorial guidance.
+[WARNING] Tool braintrust is missing best_for editorial guidance.
+[WARNING] Tool browser-use is missing best_for editorial guidance.
+[WARNING] Tool browserbase is missing best_for editorial guidance.
+[WARNING] Tool builder-io is missing best_for editorial guidance.
+[WARNING] Tool cerebras is missing best_for editorial guidance.
+[WARNING] Tool chroma is missing best_for editorial guidance.
+[WARNING] Tool cleanlab is missing best_for editorial guidance.
+[WARNING] Tool cline is missing best_for editorial guidance.
+[WARNING] Tool codeant-ai is missing best_for editorial guidance.
+[WARNING] Tool coderabbit is missing best_for editorial guidance.
+[WARNING] Tool codescene is missing best_for editorial guidance.
+[WARNING] Tool composio is missing best_for editorial guidance.
+[WARNING] Tool cosine is missing best_for editorial guidance.
+[WARNING] Tool crawl4ai is missing best_for editorial guidance.
+[WARNING] Tool crewai is missing best_for editorial guidance.
+[WARNING] Tool dataiku is missing best_for editorial guidance.
+[WARNING] Tool dataloop is missing best_for editorial guidance.
+[WARNING] Tool deepinfra is missing best_for editorial guidance.
+[WARNING] Tool dify is missing best_for editorial guidance.
+[WARNING] Tool docling is missing best_for editorial guidance.
+[WARNING] Tool dust is missing best_for editorial guidance.
+[WARNING] Tool dyad is missing best_for editorial guidance.
+[WARNING] Tool e2b is missing best_for editorial guidance.
+[WARNING] Tool edge-impulse is missing best_for editorial guidance.
+[WARNING] Tool ellipsis is missing best_for editorial guidance.
+[WARNING] Tool encord is missing best_for editorial guidance.
+[WARNING] Tool exa is missing best_for editorial guidance.
+[WARNING] Tool factory is missing best_for editorial guidance.
+[WARNING] Tool fal is missing best_for editorial guidance.
+[WARNING] Tool fiddler-ai is missing best_for editorial guidance.
+[WARNING] Tool firecrawl is missing best_for editorial guidance.
+[WARNING] Tool fireworks-ai is missing best_for editorial guidance.
+[WARNING] Tool friendliai is missing best_for editorial guidance.
+[WARNING] Tool functionize is missing best_for editorial guidance.
+[WARNING] Tool galileo is missing best_for editorial guidance.
+[WARNING] Tool giskard is missing best_for editorial guidance.
+[WARNING] Tool gitlab-duo is missing best_for editorial guidance.
+[WARNING] Tool gpt-researcher is missing best_for editorial guidance.
+[WARNING] Tool gpt4all is missing best_for editorial guidance.
+[WARNING] Tool greptile is missing best_for editorial guidance.
+[WARNING] Tool groq is missing best_for editorial guidance.
+[WARNING] Tool guardrails-ai is missing best_for editorial guidance.
+[WARNING] Tool h2o-ai is missing best_for editorial guidance.
+[WARNING] Tool haystack is missing best_for editorial guidance.
+[WARNING] Tool helicone is missing best_for editorial guidance.
+[WARNING] Tool jan is missing best_for editorial guidance.
+[WARNING] Tool jetbrains-junie is missing best_for editorial guidance.
+[WARNING] Tool jina-ai is missing best_for editorial guidance.
+[WARNING] Tool khoj is missing best_for editorial guidance.
+[WARNING] Tool kilo is missing best_for editorial guidance.
+[WARNING] Tool kiro is missing best_for editorial guidance.
+[WARNING] Tool label-studio is missing best_for editorial guidance.
+[WARNING] Tool labelbox is missing best_for editorial guidance.
+[WARNING] Tool lancedb is missing best_for editorial guidance.
+[WARNING] Tool landingai is missing best_for editorial guidance.
+[WARNING] Tool langflow is missing best_for editorial guidance.
+[WARNING] Tool langfuse is missing best_for editorial guidance.
+[WARNING] Tool letta is missing best_for editorial guidance.
+[WARNING] Tool librechat is missing best_for editorial guidance.
+[WARNING] Tool litellm is missing best_for editorial guidance.
+[WARNING] Tool lm-studio is missing best_for editorial guidance.
+[WARNING] Tool locofy is missing best_for editorial guidance.
+[WARNING] Tool mabl is missing best_for editorial guidance.
+[WARNING] Tool magic-patterns is missing best_for editorial guidance.
+[WARNING] Tool mastra is missing best_for editorial guidance.
+[WARNING] Tool mem0 is missing best_for editorial guidance.
+[WARNING] Tool metabob is missing best_for editorial guidance.
+[WARNING] Tool mindstudio is missing best_for editorial guidance.
+[WARNING] Tool mixedbread is missing best_for editorial guidance.
+[WARNING] Tool modal is missing best_for editorial guidance.
+[WARNING] Tool momentic is missing best_for editorial guidance.
+[WARNING] Tool mostly-ai is missing best_for editorial guidance.
+[WARNING] Tool novita-ai is missing best_for editorial guidance.
+[WARNING] Tool obviously-ai is missing best_for editorial guidance.
+[WARNING] Tool ollama is missing best_for editorial guidance.
+[WARNING] Tool onlook is missing best_for editorial guidance.
+[WARNING] Tool open-webui is missing best_for editorial guidance.
+[WARNING] Tool opencode is missing best_for editorial guidance.
+[WARNING] Tool openhands is missing best_for editorial guidance.
+[WARNING] Tool openrouter is missing best_for editorial guidance.
+[WARNING] Tool patronus-ai is missing best_for editorial guidance.
+[WARNING] Tool pearai is missing best_for editorial guidance.
+[WARNING] Tool pinecone is missing best_for editorial guidance.
+[WARNING] Tool poolside is missing best_for editorial guidance.
+[WARNING] Tool portkey is missing best_for editorial guidance.
+[WARNING] Tool privategpt is missing best_for editorial guidance.
+[WARNING] Tool promptfoo is missing best_for editorial guidance.
+[WARNING] Tool pydantic-ai is missing best_for editorial guidance.
+[WARNING] Tool qa-wolf is missing best_for editorial guidance.
+[WARNING] Tool qdrant is missing best_for editorial guidance.
+[WARNING] Tool qodo is missing best_for editorial guidance.
+[WARNING] Tool qwiet-ai is missing best_for editorial guidance.
+[WARNING] Tool reweb is missing best_for editorial guidance.
+[WARNING] Tool roboflow is missing best_for editorial guidance.
+[WARNING] Tool roomote is missing best_for editorial guidance.
+[WARNING] Tool runpod is missing best_for editorial guidance.
+[WARNING] Tool sambanova is missing best_for editorial guidance.
+[WARNING] Tool siliconflow is missing best_for editorial guidance.
+[WARNING] Tool snyk is missing best_for editorial guidance.
+[WARNING] Tool sourcery is missing best_for editorial guidance.
+[WARNING] Tool stack-ai is missing best_for editorial guidance.
+[WARNING] Tool superannotate is missing best_for editorial guidance.
+[WARNING] Tool sweep is missing best_for editorial guidance.
+[WARNING] Tool tabby is missing best_for editorial guidance.
+[WARNING] Tool tavily is missing best_for editorial guidance.
+[WARNING] Tool teleporthq is missing best_for editorial guidance.
+[WARNING] Tool testim is missing best_for editorial guidance.
+[WARNING] Tool trae is missing best_for editorial guidance.
+[WARNING] Tool ultralytics is missing best_for editorial guidance.
+[WARNING] Tool unstructured is missing best_for editorial guidance.
+[WARNING] Tool ux-pilot is missing best_for editorial guidance.
+[WARNING] Tool void is missing best_for editorial guidance.
+[WARNING] Tool voyage-ai is missing best_for editorial guidance.
+[WARNING] Tool weaviate is missing best_for editorial guidance.
+[WARNING] Tool ydata is missing best_for editorial guidance.
+[WARNING] Tool zed is missing best_for editorial guidance.
+[WARNING] Tool zep is missing best_for editorial guidance.
+[WARNING] Tool zilliz is missing best_for editorial guidance.
+[WARNING] Tool 360learning is missing best_for editorial guidance.
+[WARNING] Tool algor-education is missing best_for editorial guidance.
+[WARNING] Tool answer-ai is missing best_for editorial guidance.
+[WARNING] Tool boldvoice is missing best_for editorial guidance.
+[WARNING] Tool chalkie is missing best_for editorial guidance.
+[WARNING] Tool coassemble is missing best_for editorial guidance.
+[WARNING] Tool conker is missing best_for editorial guidance.
+[WARNING] Tool curipod is missing best_for editorial guidance.
+[WARNING] Tool diffit is missing best_for editorial guidance.
+[WARNING] Tool elsa-speak is missing best_for editorial guidance.
+[WARNING] Tool gizmo is missing best_for editorial guidance.
+[WARNING] Tool jungle is missing best_for editorial guidance.
+[WARNING] Tool knowt is missing best_for editorial guidance.
+[WARNING] Tool langotalk is missing best_for editorial guidance.
+[WARNING] Tool learnworlds is missing best_for editorial guidance.
+[WARNING] Tool lingolette is missing best_for editorial guidance.
+[WARNING] Tool lingq is missing best_for editorial guidance.
+[WARNING] Tool loora is missing best_for editorial guidance.
+[WARNING] Tool mathpix is missing best_for editorial guidance.
+[WARNING] Tool memrise is missing best_for editorial guidance.
+[WARNING] Tool mindgrasp is missing best_for editorial guidance.
+[WARNING] Tool mindsmith is missing best_for editorial guidance.
+[WARNING] Tool numerade is missing best_for editorial guidance.
+[WARNING] Tool praktika is missing best_for editorial guidance.
+[WARNING] Tool questionwell is missing best_for editorial guidance.
+[WARNING] Tool remnote is missing best_for editorial guidance.
+[WARNING] Tool revisely is missing best_for editorial guidance.
+[WARNING] Tool sana-learn is missing best_for editorial guidance.
+[WARNING] Tool schoolai is missing best_for editorial guidance.
+[WARNING] Tool smalltalk2me is missing best_for editorial guidance.
+[WARNING] Tool speak is missing best_for editorial guidance.
+[WARNING] Tool studyable is missing best_for editorial guidance.
+[WARNING] Tool talkpal is missing best_for editorial guidance.
+[WARNING] Tool teachmate is missing best_for editorial guidance.
+[WARNING] Tool teachy is missing best_for editorial guidance.
+[WARNING] Tool twee is missing best_for editorial guidance.
+[WARNING] Tool univerbal is missing best_for editorial guidance.
+[WARNING] Tool 11x is missing best_for editorial guidance.
+[WARNING] Tool adwisely is missing best_for editorial guidance.
+[WARNING] Tool aisdr is missing best_for editorial guidance.
+[WARNING] Tool albert is missing best_for editorial guidance.
+[WARNING] Tool amplemarket is missing best_for editorial guidance.
+[WARNING] Tool apollo is missing best_for editorial guidance.
+[WARNING] Tool arcads is missing best_for editorial guidance.
+[WARNING] Tool artisan is missing best_for editorial guidance.
+[WARNING] Tool arvow is missing best_for editorial guidance.
+[WARNING] Tool athenahq is missing best_for editorial guidance.
+[WARNING] Tool blaze is missing best_for editorial guidance.
+[WARNING] Tool brand24 is missing best_for editorial guidance.
+[WARNING] Tool brandwatch is missing best_for editorial guidance.
+[WARNING] Tool celtra is missing best_for editorial guidance.
+[WARNING] Tool clay is missing best_for editorial guidance.
+[WARNING] Tool common-room is missing best_for editorial guidance.
+[WARNING] Tool conversica is missing best_for editorial guidance.
+[WARNING] Tool demandbase is missing best_for editorial guidance.
+[WARNING] Tool factors-ai is missing best_for editorial guidance.
+[WARNING] Tool flick is missing best_for editorial guidance.
+[WARNING] Tool goodie is missing best_for editorial guidance.
+[WARNING] Tool hoppy-copy is missing best_for editorial guidance.
+[WARNING] Tool hunch is missing best_for editorial guidance.
+[WARNING] Tool hypefury is missing best_for editorial guidance.
+[WARNING] Tool jacquard is missing best_for editorial guidance.
+[WARNING] Tool joggai is missing best_for editorial guidance.
+[WARNING] Tool koala is missing best_for editorial guidance.
+[WARNING] Tool letterdrop is missing best_for editorial guidance.
+[WARNING] Tool madgicx is missing best_for editorial guidance.
+[WARNING] Tool makeugc is missing best_for editorial guidance.
+[WARNING] Tool marpipe is missing best_for editorial guidance.
+[WARNING] Tool metricool is missing best_for editorial guidance.
+[WARNING] Tool munch-studio is missing best_for editorial guidance.
+[WARNING] Tool mutiny is missing best_for editorial guidance.
+[WARNING] Tool optimonk is missing best_for editorial guidance.
+[WARNING] Tool peec-ai is missing best_for editorial guidance.
+[WARNING] Tool persado is missing best_for editorial guidance.
+[WARNING] Tool profound is missing best_for editorial guidance.
+[WARNING] Tool rankscale is missing best_for editorial guidance.
+[WARNING] Tool rasa-io is missing best_for editorial guidance.
+[WARNING] Tool scrunch-ai is missing best_for editorial guidance.
+[WARNING] Tool seventh-sense is missing best_for editorial guidance.
+[WARNING] Tool smartlead is missing best_for editorial guidance.
+[WARNING] Tool smartly is missing best_for editorial guidance.
+[WARNING] Tool socialbee is missing best_for editorial guidance.
+[WARNING] Tool sprout-social is missing best_for editorial guidance.
+[WARNING] Tool texta is missing best_for editorial guidance.
+[WARNING] Tool the-brief is missing best_for editorial guidance.
+[WARNING] Tool tugan is missing best_for editorial guidance.
+[WARNING] Tool typefully is missing best_for editorial guidance.
+[WARNING] Tool unbounce is missing best_for editorial guidance.
+[WARNING] Tool unify is missing best_for editorial guidance.
+[WARNING] Tool usergems is missing best_for editorial guidance.
+[WARNING] Tool vista-social is missing best_for editorial guidance.
+[WARNING] Tool warmly is missing best_for editorial guidance.
+[WARNING] Tool akiflow is missing best_for editorial guidance.
+[WARNING] Tool aqua-voice is missing best_for editorial guidance.
+[WARNING] Tool audiopen is missing best_for editorial guidance.
+[WARNING] Tool bee is missing best_for editorial guidance.
+[WARNING] Tool beforesunset-ai is missing best_for editorial guidance.
+[WARNING] Tool bluedot is missing best_for editorial guidance.
+[WARNING] Tool brave-leo is missing best_for editorial guidance.
+[WARNING] Tool capacities is missing best_for editorial guidance.
+[WARNING] Tool chatbox is missing best_for editorial guidance.
+[WARNING] Tool chathub is missing best_for editorial guidance.
+[WARNING] Tool cleft is missing best_for editorial guidance.
+[WARNING] Tool duck-ai is missing best_for editorial guidance.
+[WARNING] Tool fellow is missing best_for editorial guidance.
+[WARNING] Tool fyxer is missing best_for editorial guidance.
+[WARNING] Tool granola is missing best_for editorial guidance.
+[WARNING] Tool grok is missing best_for editorial guidance.
+[WARNING] Tool heptabase is missing best_for editorial guidance.
+[WARNING] Tool inbox-zero is missing best_for editorial guidance.
+[WARNING] Tool jamie is missing best_for editorial guidance.
+[WARNING] Tool kimi is missing best_for editorial guidance.
+[WARNING] Tool letterly is missing best_for editorial guidance.
+[WARNING] Tool macwhisper is missing best_for editorial guidance.
+[WARNING] Tool mapify is missing best_for editorial guidance.
+[WARNING] Tool maxai is missing best_for editorial guidance.
+[WARNING] Tool meetgeek is missing best_for editorial guidance.
+[WARNING] Tool minuteslink is missing best_for editorial guidance.
+[WARNING] Tool miro-ai is missing best_for editorial guidance.
+[WARNING] Tool monica is missing best_for editorial guidance.
+[WARNING] Tool msty is missing best_for editorial guidance.
+[WARNING] Tool mymind is missing best_for editorial guidance.
+[WARNING] Tool napkin-ai is missing best_for editorial guidance.
+[WARNING] Tool notta is missing best_for editorial guidance.
+[WARNING] Tool oasis is missing best_for editorial guidance.
+[WARNING] Tool opera-ai is missing best_for editorial guidance.
+[WARNING] Tool plaud is missing best_for editorial guidance.
+[WARNING] Tool raycast is missing best_for editorial guidance.
+[WARNING] Tool recall is missing best_for editorial guidance.
+[WARNING] Tool sanebox is missing best_for editorial guidance.
+[WARNING] Tool saner-ai is missing best_for editorial guidance.
+[WARNING] Tool skedpal is missing best_for editorial guidance.
+[WARNING] Tool superwhisper is missing best_for editorial guidance.
+[WARNING] Tool tactiq is missing best_for editorial guidance.
+[WARNING] Tool tasklet is missing best_for editorial guidance.
+[WARNING] Tool trevor-ai is missing best_for editorial guidance.
+[WARNING] Tool typingmind is missing best_for editorial guidance.
+[WARNING] Tool vellum is missing best_for editorial guidance.
+[WARNING] Tool voicenotes is missing best_for editorial guidance.
+[WARNING] Tool whimsical is missing best_for editorial guidance.
+[WARNING] Tool wispr-flow is missing best_for editorial guidance.
+[WARNING] Tool xmind-ai is missing best_for editorial guidance.
+[WARNING] Tool z-ai is missing best_for editorial guidance.
+[WARNING] Tool alphasense is missing best_for editorial guidance.
+[WARNING] Tool anara is missing best_for editorial guidance.
+[WARNING] Tool answerthis is missing best_for editorial guidance.
+[WARNING] Tool askyourpdf is missing best_for editorial guidance.
+[WARNING] Tool chatpdf is missing best_for editorial guidance.
+[WARNING] Tool condens is missing best_for editorial guidance.
+[WARNING] Tool dimensions is missing best_for editorial guidance.
+[WARNING] Tool dovetail is missing best_for editorial guidance.
+[WARNING] Tool explainpaper is missing best_for editorial guidance.
+[WARNING] Tool gemini-notebook is missing best_for editorial guidance.
+[WARNING] Tool hebbia is missing best_for editorial guidance.
+[WARNING] Tool humata is missing best_for editorial guidance.
+[WARNING] Tool iris-ai is missing best_for editorial guidance.
+[WARNING] Tool keenious is missing best_for editorial guidance.
+[WARNING] Tool listen-labs is missing best_for editorial guidance.
+[WARNING] Tool logically is missing best_for editorial guidance.
+[WARNING] Tool looppanel is missing best_for editorial guidance.
+[WARNING] Tool marvin is missing best_for editorial guidance.
+[WARNING] Tool openread is missing best_for editorial guidance.
+[WARNING] Tool outset is missing best_for editorial guidance.
+[WARNING] Tool paper-digest is missing best_for editorial guidance.
+[WARNING] Tool paperguide is missing best_for editorial guidance.
+[WARNING] Tool pdf-ai is missing best_for editorial guidance.
+[WARNING] Tool quartr is missing best_for editorial guidance.
+[WARNING] Tool quilt is missing best_for editorial guidance.
+[WARNING] Tool rogo is missing best_for editorial guidance.
+[WARNING] Tool scholarai is missing best_for editorial guidance.
+[WARNING] Tool scisummary is missing best_for editorial guidance.
+[WARNING] Tool scite is missing best_for editorial guidance.
+[WARNING] Tool semantic-scholar is missing best_for editorial guidance.
+[WARNING] Tool sourcely is missing best_for editorial guidance.
+[WARNING] Tool undermind is missing best_for editorial guidance.
+[WARNING] Tool wolfram-alpha is missing best_for editorial guidance.
+[WARNING] Tool ai-studios is missing best_for editorial guidance.
+[WARNING] Tool akool is missing best_for editorial guidance.
+[WARNING] Tool altered is missing best_for editorial guidance.
+[WARNING] Tool async is missing best_for editorial guidance.
+[WARNING] Tool audimee is missing best_for editorial guidance.
+[WARNING] Tool audioshake is missing best_for editorial guidance.
+[WARNING] Tool auphonic is missing best_for editorial guidance.
+[WARNING] Tool bhuman is missing best_for editorial guidance.
+[WARNING] Tool captions is missing best_for editorial guidance.
+[WARNING] Tool cartesia is missing best_for editorial guidance.
+[WARNING] Tool castmagic is missing best_for editorial guidance.
+[WARNING] Tool checksub is missing best_for editorial guidance.
+[WARNING] Tool cleanvoice is missing best_for editorial guidance.
+[WARNING] Tool deepgram is missing best_for editorial guidance.
+[WARNING] Tool digen is missing best_for editorial guidance.
+[WARNING] Tool dubverse is missing best_for editorial guidance.
+[WARNING] Tool elai is missing best_for editorial guidance.
+[WARNING] Tool emastered is missing best_for editorial guidance.
+[WARNING] Tool fadr is missing best_for editorial guidance.
+[WARNING] Tool genmo is missing best_for editorial guidance.
+[WARNING] Tool gling is missing best_for editorial guidance.
+[WARNING] Tool google-flow-music is missing best_for editorial guidance.
+[WARNING] Tool hailuo-ai is missing best_for editorial guidance.
+[WARNING] Tool hedra is missing best_for editorial guidance.
+[WARNING] Tool higgsfield is missing best_for editorial guidance.
+[WARNING] Tool hume-ai is missing best_for editorial guidance.
+[WARNING] Tool immersive-translate is missing best_for editorial guidance.
+[WARNING] Tool kaiber is missing best_for editorial guidance.
+[WARNING] Tool kits-ai is missing best_for editorial guidance.
+[WARNING] Tool klap is missing best_for editorial guidance.
+[WARNING] Tool kling-ai is missing best_for editorial guidance.
+[WARNING] Tool krea is missing best_for editorial guidance.
+[WARNING] Tool landr is missing best_for editorial guidance.
+[WARNING] Tool listnr is missing best_for editorial guidance.
+[WARNING] Tool loudly is missing best_for editorial guidance.
+[WARNING] Tool ltx-studio is missing best_for editorial guidance.
+[WARNING] Tool maestra is missing best_for editorial guidance.
+[WARNING] Tool moises is missing best_for editorial guidance.
+[WARNING] Tool mubert is missing best_for editorial guidance.
+[WARNING] Tool musicfy is missing best_for editorial guidance.
+[WARNING] Tool narakeet is missing best_for editorial guidance.
+[WARNING] Tool openart is missing best_for editorial guidance.
+[WARNING] Tool opusclip is missing best_for editorial guidance.
+[WARNING] Tool pixverse is missing best_for editorial guidance.
+[WARNING] Tool podsqueeze is missing best_for editorial guidance.
+[WARNING] Tool quso-ai is missing best_for editorial guidance.
+[WARNING] Tool rask-ai is missing best_for editorial guidance.
+[WARNING] Tool recast-studio is missing best_for editorial guidance.
+[WARNING] Tool riverside is missing best_for editorial guidance.
+[WARNING] Tool soundful is missing best_for editorial guidance.
+[WARNING] Tool speechgen is missing best_for editorial guidance.
+[WARNING] Tool speechmatics is missing best_for editorial guidance.
+[WARNING] Tool stable-audio is missing best_for editorial guidance.
+[WARNING] Tool submagic is missing best_for editorial guidance.
+[WARNING] Tool supertone is missing best_for editorial guidance.
+[WARNING] Tool tavus is missing best_for editorial guidance.
+[WARNING] Tool timebolt is missing best_for editorial guidance.
+[WARNING] Tool vapi is missing best_for editorial guidance.
+[WARNING] Tool veed is missing best_for editorial guidance.
+[WARNING] Tool vidu is missing best_for editorial guidance.
+[WARNING] Tool vizard is missing best_for editorial guidance.
+[WARNING] Tool voicemaker is missing best_for editorial guidance.
+[WARNING] Tool voicemod is missing best_for editorial guidance.
+[WARNING] Tool wavel-ai is missing best_for editorial guidance.
+[WARNING] Tool wellsaid is missing best_for editorial guidance.
+[WARNING] Tool wisecut is missing best_for editorial guidance.
+[WARNING] Tool wondercraft is missing best_for editorial guidance.
+[WARNING] Tool zencastr is missing best_for editorial guidance.
+[WARNING] Tool lawdroid ("LawDroid") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool leah ("Leah") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool leena-ai ("Leena AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool legalon ("LegalOn") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool legora ("Legora") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool level-ai ("Level AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool linksquares ("LinkSquares") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool lorikeet ("Lorikeet") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool luminance ("Luminance") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool marqo ("Marqo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mentalyc ("Mentalyc") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool metaview ("Metaview") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool momentum ("Momentum") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool moveworks ("Moveworks") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool numerous-ai ("Numerous.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool observe-ai ("Observe.AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool onyx ("Onyx") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool paradox ("Paradox") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool parloa ("Parloa") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool paxton ("Paxton") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool powerdrill ("Powerdrill") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pylon ("Pylon") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool quadratic ("Quadratic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rattle ("Rattle") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool respond-io ("Respond.io") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rezolve-ai ("Rezolve.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool richpanel ("Richpanel") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool riff ("Riff") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool scratchpad ("Scratchpad") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool screenloop ("Screenloop") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool seekout ("SeekOut") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sentisum ("SentiSum") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sheetai ("SheetAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sierra ("Sierra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sitegpt ("SiteGPT") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sleekflow ("SleekFlow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sourcetable ("Sourcetable") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool spotdraft ("SpotDraft") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sqlai-ai ("SQLAI.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool suki ("Suki") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool supio ("Supio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sybill ("Sybill") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tali-ai ("Tali AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool textio ("Textio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool thematic ("Thematic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool thena ("Thena") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tiledesk ("Tiledesk") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tortus ("Tortus") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool trengo ("Trengo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool uniphore ("Uniphore") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool upheal ("Upheal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vanna-ai ("Vanna AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vectorshift ("VectorShift") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wati ("WATI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wotnot ("WotNot") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wren-ai ("Wren AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool yuma-ai ("Yuma AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool zowie ("Zowie") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool airops ("AirOps") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool byword ("Byword") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool copymatic ("Copymatic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool deepl ("DeepL") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool easy-peasy-ai ("Easy-Peasy.AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool junia-ai ("Junia AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool languagetool ("LanguageTool") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool logicballs ("LogicBalls") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool novelai ("NovelAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool novelcrafter ("Novelcrafter") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool paperpal ("Paperpal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool penfriend ("Penfriend") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool seo-ai ("SEO.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool seowriting-ai ("SEOWriting.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool squibler ("Squibler") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool trinka ("Trinka") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool type ("Type") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool typeface ("Typeface") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wordhero ("WordHero") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool writefull ("Writefull") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool writer ("Writer") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool aftershoot ("Aftershoot") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool aiarty-image-enhancer ("Aiarty Image Enhancer") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool arko-ai ("Arko AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool botika ("Botika") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool claid ("Claid") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool clipping-magic ("Clipping Magic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool coohom ("Coohom") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cutout-pro ("Cutout.Pro") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool deep-image ("Deep Image") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dzine ("Dzine") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool erase-bg ("Erase.bg") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool evoto ("Evoto") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool flair-ai ("Flair AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hitpaw-fotorpea ("HitPaw FotorPea") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool homestyler ("Homestyler") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool interior-ai ("Interior AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kaedim ("Kaedim") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool layer-ai ("Layer AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool lookx ("LookX") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool maket ("Maket") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool meshy ("Meshy") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mnml-ai ("mnml.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mokker ("Mokker") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool narrative ("Narrative") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool palette-fm ("Palette.fm") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pebblely ("Pebblely") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool photoroom ("Photoroom") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool piccopilot ("PicCopilot") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool picwish ("PicWish") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pixelcut ("Pixelcut") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool planner-5d ("Planner 5D") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool promethean-ai ("Promethean AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool recraft ("Recraft") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool reimaginehome ("REimagineHome") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool removal-ai ("Removal.AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool retouch4me ("Retouch4me") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rodin ("Rodin") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool roomgpt ("RoomGPT") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool scenario ("Scenario") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sloyd ("Sloyd") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool spacely-ai ("Spacely AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool spline-ai ("Spline AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool testfit ("TestFit") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool upscayl ("Upscayl") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vanceai ("VanceAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool veras ("Veras") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vmake ("Vmake") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool worldengen ("WorldEngen by Masterpiece X") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool agno ("Agno") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool aider ("Aider") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool anima ("Anima") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool anythingllm ("AnythingLLM") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool arize-ai ("Arize AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool arthur-ai ("Arthur AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool augment-code ("Augment Code") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool baseten ("Baseten") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool bito ("Bito") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool braintrust ("Braintrust") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool browser-use ("Browser Use") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool browserbase ("Browserbase") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool builder-io ("Builder.io") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cerebras ("Cerebras") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool chroma ("Chroma") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cleanlab ("Cleanlab") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cline ("Cline") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool codeant-ai ("CodeAnt AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool coderabbit ("CodeRabbit") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool codescene ("CodeScene") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool composio ("Composio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cosine ("Cosine") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool crawl4ai ("Crawl4AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool crewai ("CrewAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dataiku ("Dataiku") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dataloop ("Dataloop") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool deepinfra ("DeepInfra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dify ("Dify") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool docling ("Docling") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dust ("Dust") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dyad ("Dyad") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool e2b ("E2B") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool edge-impulse ("Edge Impulse") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ellipsis ("Ellipsis") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool encord ("Encord") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool exa ("Exa") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool factory ("Factory") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool fal ("fal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool fiddler-ai ("Fiddler AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool firecrawl ("Firecrawl") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool fireworks-ai ("Fireworks AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool friendliai ("FriendliAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool functionize ("Functionize") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool galileo ("Galileo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool giskard ("Giskard") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool gitlab-duo ("GitLab Duo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool gpt-researcher ("GPT Researcher") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool gpt4all ("GPT4All") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool greptile ("Greptile") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool groq ("Groq") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool guardrails-ai ("Guardrails AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool h2o-ai ("H2O.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool haystack ("Haystack") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool helicone ("Helicone") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool jan ("Jan") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool jetbrains-junie ("JetBrains Junie") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool jina-ai ("Jina AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool khoj ("Khoj") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kilo ("Kilo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kiro ("Kiro") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool label-studio ("Label Studio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool labelbox ("Labelbox") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool lancedb ("LanceDB") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool landingai ("LandingAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool langflow ("Langflow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool langfuse ("Langfuse") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool letta ("Letta") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool librechat ("LibreChat") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool litellm ("LiteLLM") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool lm-studio ("LM Studio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool locofy ("Locofy") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mabl ("mabl") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool magic-patterns ("Magic Patterns") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mastra ("Mastra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mem0 ("Mem0") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool metabob ("Metabob") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mindstudio ("MindStudio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mixedbread ("Mixedbread") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool modal ("Modal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool momentic ("Momentic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mostly-ai ("MOSTLY AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool novita-ai ("Novita AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool obviously-ai ("Obviously AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ollama ("Ollama") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool onlook ("Onlook") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool open-webui ("Open WebUI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool opencode ("OpenCode") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool openhands ("OpenHands") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool openrouter ("OpenRouter") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool patronus-ai ("Patronus AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pearai ("PearAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pinecone ("Pinecone") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool poolside ("Poolside") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool portkey ("Portkey") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool privategpt ("PrivateGPT") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool promptfoo ("Promptfoo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pydantic-ai ("Pydantic AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool qa-wolf ("QA Wolf") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool qdrant ("Qdrant") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool qodo ("Qodo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool qwiet-ai ("Qwiet AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool reweb ("Reweb") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool roboflow ("Roboflow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool roomote ("Roomote") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool runpod ("RunPod") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sambanova ("SambaNova") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool siliconflow ("SiliconFlow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool snyk ("Snyk") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sourcery ("Sourcery") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool stack-ai ("Stack AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool superannotate ("SuperAnnotate") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sweep ("Sweep") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tabby ("Tabby") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tavily ("Tavily") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool teleporthq ("TeleportHQ") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool testim ("Testim") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool trae ("Trae") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ultralytics ("Ultralytics") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool unstructured ("Unstructured") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ux-pilot ("UX Pilot") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool void ("Void") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool voyage-ai ("Voyage AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool weaviate ("Weaviate") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ydata ("YData") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool zed ("Zed") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool zep ("Zep") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool zilliz ("Zilliz") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool 360learning ("360Learning") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool algor-education ("Algor Education") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool answer-ai ("Answer.AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool boldvoice ("BoldVoice") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool chalkie ("Chalkie") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool coassemble ("Coassemble") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool conker ("Conker") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool curipod ("Curipod") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool diffit ("Diffit") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool elsa-speak ("ELSA Speak") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool gizmo ("Gizmo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool jungle ("Jungle") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool knowt ("Knowt") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool langotalk ("Langotalk") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool learnworlds ("LearnWorlds") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool lingolette ("Lingolette") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool lingq ("LingQ") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool loora ("Loora") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mathpix ("Mathpix") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool memrise ("Memrise") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mindgrasp ("Mindgrasp") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mindsmith ("Mindsmith") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool numerade ("Numerade") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool praktika ("Praktika") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool questionwell ("QuestionWell") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool remnote ("RemNote") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool revisely ("Revisely") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sana-learn ("Sana Learn") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool schoolai ("SchoolAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool smalltalk2me ("SmallTalk2Me") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool speak ("Speak") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool studyable ("Studyable") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool talkpal ("Talkpal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool teachmate ("Teachmate") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool teachy ("Teachy") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool twee ("Twee") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool univerbal ("Univerbal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool 11x ("11x") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool adwisely ("Adwisely") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool aisdr ("AiSDR") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool albert ("Albert") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool amplemarket ("Amplemarket") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool apollo ("Apollo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool arcads ("Arcads") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool artisan ("Artisan") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool arvow ("Arvow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool athenahq ("AthenaHQ") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool blaze ("Blaze") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool brand24 ("Brand24") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool brandwatch ("Brandwatch") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool celtra ("Celtra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool clay ("Clay") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool common-room ("Common Room") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool conversica ("Conversica") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool demandbase ("Demandbase") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool factors-ai ("Factors.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool flick ("Flick") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool goodie ("Goodie") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hoppy-copy ("Hoppy Copy") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hunch ("Hunch") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hypefury ("Hypefury") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool jacquard ("Jacquard") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool joggai ("JoggAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool koala ("Koala") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool letterdrop ("Letterdrop") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool madgicx ("Madgicx") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool makeugc ("MakeUGC") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool marpipe ("Marpipe") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool metricool ("Metricool") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool munch-studio ("Munch Studio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mutiny ("Mutiny") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool optimonk ("OptiMonk") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool peec-ai ("Peec AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool persado ("Persado") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool profound ("Profound") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rankscale ("Rankscale") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rasa-io ("Rasa.io") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool scrunch-ai ("Scrunch AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool seventh-sense ("Seventh Sense") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool smartlead ("Smartlead") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool smartly ("Smartly") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool socialbee ("SocialBee") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sprout-social ("Sprout Social") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool texta ("Texta") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool the-brief ("The Brief") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tugan ("Tugan") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool typefully ("Typefully") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool unbounce ("Unbounce") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool unify ("Unify") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool usergems ("UserGems") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vista-social ("Vista Social") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool warmly ("Warmly") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool akiflow ("Akiflow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool aqua-voice ("Aqua Voice") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool audiopen ("AudioPen") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool bee ("Bee") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool beforesunset-ai ("BeforeSunset AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool bluedot ("Bluedot") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool brave-leo ("Brave Leo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool capacities ("Capacities") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool chatbox ("Chatbox") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool chathub ("ChatHub") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cleft ("Cleft") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool duck-ai ("Duck.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool fellow ("Fellow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool fyxer ("Fyxer") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool granola ("Granola") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool grok ("Grok") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool heptabase ("Heptabase") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool inbox-zero ("Inbox Zero") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool jamie ("Jamie") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kimi ("Kimi") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool letterly ("Letterly") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool macwhisper ("MacWhisper") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mapify ("Mapify") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool maxai ("MaxAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool meetgeek ("MeetGeek") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool minuteslink ("MinutesLink") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool miro-ai ("Miro AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool monica ("Monica") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool msty ("Msty") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mymind ("MyMind") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool napkin-ai ("Napkin AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool notta ("Notta") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool oasis ("Oasis") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool opera-ai ("Opera AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool plaud ("Plaud") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool raycast ("Raycast") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool recall ("Recall") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sanebox ("SaneBox") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool saner-ai ("Saner.AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool skedpal ("SkedPal") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool superwhisper ("Superwhisper") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tactiq ("Tactiq") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tasklet ("Tasklet") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool trevor-ai ("Trevor AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool typingmind ("TypingMind") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vellum ("Vellum") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool voicenotes ("Voicenotes") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool whimsical ("Whimsical") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wispr-flow ("Wispr Flow") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool xmind-ai ("Xmind AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool z-ai ("Z.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool alphasense ("AlphaSense") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool anara ("Anara") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool answerthis ("AnswerThis") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool askyourpdf ("AskYourPDF") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool chatpdf ("ChatPDF") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool condens ("Condens") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dimensions ("Dimensions") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dovetail ("Dovetail") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool explainpaper ("Explainpaper") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool gemini-notebook ("Gemini Notebook") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hebbia ("Hebbia") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool humata ("Humata") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool iris-ai ("Iris.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool keenious ("Keenious") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool listen-labs ("Listen Labs") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool logically ("Logically") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool looppanel ("Looppanel") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool marvin ("Marvin") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool openread ("OpenRead") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool outset ("Outset") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool paper-digest ("Paper Digest") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool paperguide ("Paperguide") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pdf-ai ("PDF.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool quartr ("Quartr") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool quilt ("Quilt") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rogo ("Rogo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool scholarai ("ScholarAI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool scisummary ("SciSummary") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool scite ("Scite") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool semantic-scholar ("Semantic Scholar") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool sourcely ("Sourcely") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool undermind ("Undermind") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wolfram-alpha ("Wolfram Alpha") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ai-studios ("AI Studios") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool akool ("Akool") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool altered ("Altered") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool async ("Async") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool audimee ("Audimee") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool audioshake ("AudioShake") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool auphonic ("Auphonic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool bhuman ("BHuman") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool captions ("Captions") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cartesia ("Cartesia") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool castmagic ("Castmagic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool checksub ("Checksub") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool cleanvoice ("Cleanvoice") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool deepgram ("Deepgram") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool digen ("Digen") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool dubverse ("Dubverse") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool elai ("Elai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool emastered ("eMastered") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool fadr ("Fadr") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool genmo ("Genmo") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool gling ("Gling") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool google-flow-music ("Google Flow Music") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hailuo-ai ("Hailuo AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hedra ("Hedra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool higgsfield ("Higgsfield") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool hume-ai ("Hume AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool immersive-translate ("Immersive Translate") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kaiber ("Kaiber") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kits-ai ("Kits AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool klap ("Klap") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool kling-ai ("Kling AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool krea ("Krea") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool landr ("LANDR") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool listnr ("Listnr") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool loudly ("Loudly") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool ltx-studio ("LTX Studio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool maestra ("Maestra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool moises ("Moises") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool mubert ("Mubert") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool musicfy ("Musicfy") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool narakeet ("Narakeet") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool openart ("OpenArt") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool opusclip ("OpusClip") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool pixverse ("PixVerse") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool podsqueeze ("Podsqueeze") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool quso-ai ("quso.ai") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool rask-ai ("Rask AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool recast-studio ("Recast Studio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool riverside ("Riverside") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool soundful ("Soundful") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool speechgen ("SpeechGen") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool speechmatics ("Speechmatics") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool stable-audio ("Stable Audio") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool submagic ("Submagic") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool supertone ("Supertone") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool tavus ("Tavus") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool timebolt ("TimeBolt") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vapi ("Vapi") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool veed ("VEED") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vidu ("Vidu") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool vizard ("Vizard") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool voicemaker ("Voicemaker") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool voicemod ("Voicemod") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wavel-ai ("Wavel AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wellsaid ("WellSaid") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wisecut ("Wisecut") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool wondercraft ("Wondercraft") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] Tool zencastr ("Zencastr") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
+[WARNING] 110 tools have pricingNeedsReview=true. Pricing data requires editorial verification.
+
+==================================================
+WHICHAIPICK DECISION DATA COVERAGE REPORT (4A.2)
+Total Tools: 902
+Recommendation Eligible: 315 | Ineligible: 587
+Content Review Required: 498
+Pricing Needs Review:    110
+Data Provenance Present: 789 | Missing: 113
+==================================================
+
+── Primary Status Fields (4A.1) ──────────────────────────────────────────
+Operational Status       | Known: 902 (100.0%) | Unknown:   0 | {"active":320,"discontinued":2,"unknown":580}
+Transition Type          | Known: 902 (100.0%) | Unknown:   0 | {"none":313,"rebranded":3,"acquired":6,"unknown":580}
+Successor Tool ID        | Known:   1 (0.1%) | Unknown: 901 
+Lifecycle (derived)      | Known: 322 (35.7%) | Unknown:   0 | {"active":311,"rebranded":3,"acquired":6,"discontinued":2}
+
+── Pricing & Accessibility ──────────────────────────────────────────────
+Pricing Model (populated):    217/902 (24.1%) | Unknown: 685 | Detail: {"freemium":138,"paid":62,"free":9,"enterprise":8}
+Pricing Needs Review:         110 tools need editorial pricing verification
+Free Tier                | Known: 322 (35.7%) | Unknown: 580 | true:147, false:175
+Free Trial               | Known:   6 (0.7%) | Unknown: 896 | true:6
+API Available            | Known:  92 (10.2%) | Unknown: 810 
+Open Source              | Known:   8 (0.9%) | Unknown: 894 
+Self Hosted              | Known:   2 (0.2%) | Unknown: 900 
+
+── Use Case & Editorial ──────────────────────────────────────────────────
+Primary Use Cases        | Known: 791 (87.7%) | Unknown: 111 
+Best For                 | Known: 404 (44.8%) | Unknown: 498 
+Not Ideal For            | Known: 404 (44.8%) | Unknown: 498 
+Target Users             | Known:   8 (0.9%) | Unknown: 812 | {"enterprise":8}
+Experience Level         | Known:   0 (0.0%) | Unknown: 902 
+
+── Identity & Provenance ─────────────────────────────────────────────────
+Aliases / Rebrands       | Known:  12 (1.3%) | Unknown: 890 
+Previous Name            | Known:   9 (1.0%) | Unknown: 893 
+Platforms                | Known:  87 (9.6%) | Unknown: 815 
+Verification Date        | Known:   0 (0.0%) | Unknown: 902 
+Data Provenance:              Present: 789 | Missing: 113
+==================================================
+
+Validation Complete. Errors: 83, Warnings: 1156
+
+[FATAL] Data validation failed. Fix the 83 errors before deploying.

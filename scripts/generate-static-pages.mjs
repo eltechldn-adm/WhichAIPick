@@ -697,7 +697,7 @@ console.log(`  ✓ ${toolsGenerated} tool pages written to /tools/[id]/index.htm
 
 // 2) Category pages
 console.log('Generating category pages…');
-const categories = [...new Set(tools.map(t => t.category).filter(Boolean))];
+const categories = [...new Set(tools.map(t => t.category).filter(c => c && c !== 'Uncategorized' && c !== 'unknown'))];
 for (const cat of categories) {
   const catTools = tools.filter(t => t.category === cat);
   const slug     = categorySlug(cat);

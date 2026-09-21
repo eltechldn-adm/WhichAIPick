@@ -7,7 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const INPUT_FILE = path.join(__dirname, '../data/URLs_for_Which_AI_Tool_EXPANDED_2026-09-14.xlsx');
+const URLS_JSON_FILE = path.join(__dirname, '../data/URLs_for_Which_AI_Tool_Finder.json');
 const OUTPUT_FILE = path.join(__dirname, '../data/tools.json');
+const ENRICHMENT_FILE = path.join(__dirname, '../data/tool-enrichment.json');
 const TAXONOMY_FILE = path.join(__dirname, '../data/category-taxonomy.json');
 const MAPPING_FILE = path.join(__dirname, '../data/tool-categories.csv');
 const DECISION_FILE = path.join(__dirname, '../data/decision-attributes.csv');
@@ -365,11 +367,34 @@ manualTools.forEach(tool => {
 // Convert Map back to array
 const tools = Array.from(toolsMap.values());
 
+// Phase A.3: Apply persistent manual enrichment overrides (tool-enrichment.json)
+if (fs.existsSync(ENRICHMENT_FILE)) {
+    console.log('🔄 Loading manual enrichment overrides from tool-enrichment.json...');
+    const enrichmentData = JSON.parse(fs.readFileSync(ENRICHMENT_FILE, 'utf8'));
+    let enrichmentCount = 0;
+    enrichmentData.forEach(enrichment => {
+        const existingTool = tools.find(t => t.id === enrichment.id);
+        if (existingTool) {
+            Object.assign(existingTool, enrichment);
+            if (typeof existingTool.dataProvenance !== 'object' || existingTool.dataProvenance === null) {
+                existingTool.dataProvenance = { identity: existingTool.dataProvenance || 'official_source_verified' };
+            }
+            existingTool.dataProvenance.identity = 'official_source_verified';
+            // Only unflag contentReviewRequired if they actually provided required fields
+            if (enrichment.long_description && enrichment.category && enrichment.category !== 'Uncategorized') {
+                existingTool.contentReviewRequired = false;
+            }
+            enrichmentCount++;
+        }
+    });
+    console.log(`✅ Applied ${enrichmentCount} manual enrichment records.`);
+}
+
 console.log(`✅ Processed ${tools.length} unique tools`);
 
 // Count categorized vs uncategorized
-const categorized = tools.filter(t => t.category !== 'Uncategorized').length;
-const uncategorized = tools.filter(t => t.category === 'Uncategorized').length;
+const categorized = tools.filter(t => t.category && t.category !== 'Uncategorized').length;
+const uncategorized = tools.filter(t => !t.category || t.category === 'Uncategorized').length;
 console.log(`📊 Categorized: ${categorized}, Uncategorized: ${uncategorized}`);
 
 // Write output
