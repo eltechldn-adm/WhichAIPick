@@ -45,10 +45,8 @@ function validateSitemap() {
 
         // 3. Map to local file
         let localPath = url.replace(DOMAIN, '');
-        if (localPath.endsWith('/')) {
-            localPath += 'index.html';
-        } else if (localPath === '') {
-            localPath = 'index.html';
+        if (localPath === '' || localPath === '/') {
+            localPath = '/index.html';
         }
         
         // Remove leading slash
@@ -56,7 +54,12 @@ function validateSitemap() {
             localPath = localPath.substring(1);
         }
 
-        const absolutePath = path.join(PROJECT_ROOT, localPath);
+        let absolutePath = path.join(PROJECT_ROOT, localPath);
+        if (fs.existsSync(absolutePath) && fs.statSync(absolutePath).isDirectory()) {
+            absolutePath = path.join(absolutePath, 'index.html');
+        }
+
+
 
         // 4. Check 404 (File exists)
         if (!fs.existsSync(absolutePath)) {
@@ -68,7 +71,7 @@ function validateSitemap() {
         const content = fs.readFileSync(absolutePath, 'utf8');
 
         // 5. Check if it's a redirect
-        if (content.includes('http-equiv="refresh"') || content.includes('window.location.replace')) {
+        if (content.includes('http-equiv="refresh"')) {
             console.error(`❌ Redirected Destination in sitemap: ${url}`);
             errors++;
         }

@@ -30,7 +30,8 @@
     // Paths where ads are NEVER shown, regardless of config
     const HARD_EXCLUDED_PATHS = [
         '/find.html',
-        '/shortlist/',
+        '/my-tools/',
+        '/compare-engine',
         '/about.html',
         '/review-methodology.html',
         '/editorial-policy.html',

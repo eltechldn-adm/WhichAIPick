@@ -109,8 +109,8 @@
                     <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
             </a>
-            <!-- Shortlist Icon -->
-            <a href="/shortlist/" class="header-action-btn header-shortlist-btn" aria-label="View shortlist" id="header-shortlist-link" style="display: none;">
+            <!-- My Tools Icon -->
+            <a href="/my-tools/" class="header-action-btn header-shortlist-btn" aria-label="View My Tools" id="header-shortlist-link" style="display: none;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
@@ -147,7 +147,7 @@
             </nav>
         </div>
     </div>
-    <script src="/js/shortlist.js" defer></script>
+    <script src="/js/user-state.js"></script>
 </header>
 </div>
 
@@ -436,6 +436,9 @@
                                 <a id="btn-visit" href="${ctaUrl}" target="_blank" rel="${ctaRel}" class="btn btn-primary btn-lg" onclick="if(window.Outbound) Outbound.track({ toolId: '${tool.id}', url: '${ctaUrl}', isAffiliate: ${ctaIsAffiliate}, network: '${ctaNetwork}' })">${ctaText}</a>
                                 <a href="/find.html" class="btn btn-secondary btn-lg" onclick="Analytics.track('compare_click', { tool_id: '${tool.id}' })">Compare Alternatives</a>
                             </div>
+                            <!-- Phase 8: Retention controls (Save / My Stack / Watch) -->
+                            <div class="tool-retention-controls" id="tool-retention-controls-${tool.id}" aria-label="Save and manage this tool">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -504,6 +507,67 @@
         `;
 
         container.innerHTML = html;
+
+        // Phase 8: Retention Controls injection and Tracking
+        if (window.UserState) {
+            window.UserState.trackRecentView(tool.id);
+
+            const controlsBox = document.getElementById(`tool-retention-controls-${tool.id}`);
+            if (controlsBox) {
+                const isSaved = window.UserState.isSaved(tool.id);
+                const isStack = window.UserState.isInStack(tool.id);
+                const isWatched = window.UserState.isWatched(tool.id);
+
+                const SVG_SAVE_FILL = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`;
+                const SVG_SAVE_LINE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`;
+                const SVG_STACK_FILL = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>`;
+                const SVG_STACK_LINE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>`;
+                const SVG_WATCH_FILL = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3" fill="#0f172a"/></svg>`;
+                const SVG_WATCH_LINE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`;
+
+                controlsBox.innerHTML = `
+                    <button class="btn-retention ${isSaved ? 'active' : ''}" data-action="save">
+                        ${isSaved ? SVG_SAVE_FILL : SVG_SAVE_LINE} ${isSaved ? 'Saved' : 'Save'}
+                    </button>
+                    <button class="btn-retention ${isStack ? 'active' : ''}" data-action="stack">
+                        ${isStack ? SVG_STACK_FILL : SVG_STACK_LINE} ${isStack ? 'In Stack' : 'Add to Stack'}
+                    </button>
+                    <button class="btn-retention ${isWatched ? 'active' : ''}" data-action="watch">
+                        ${isWatched ? SVG_WATCH_FILL : SVG_WATCH_LINE} ${isWatched ? 'Watching' : 'Watch'}
+                    </button>
+                `;
+
+                // Handle clicks and re-render local state
+                controlsBox.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.btn-retention');
+                    if (!btn) return;
+                    const action = btn.getAttribute('data-action');
+                    
+                    if (action === 'save') {
+                        window.UserState.toggleSave(tool.id);
+                    } else if (action === 'stack') {
+                        window.UserState.toggleStack(tool.id);
+                    } else if (action === 'watch') {
+                        window.UserState.toggleWatch(tool.id);
+                    }
+                    
+                    // Small re-render just for buttons
+                    const currentSaved = window.UserState.isSaved(tool.id);
+                    const currentStack = window.UserState.isInStack(tool.id);
+                    const currentWatched = window.UserState.isWatched(tool.id);
+                    
+                    const btns = controlsBox.querySelectorAll('.btn-retention');
+                    btns[0].className = \`btn-retention \${currentSaved ? 'active' : ''}\`;
+                    btns[0].innerHTML = \`\${currentSaved ? SVG_SAVE_FILL : SVG_SAVE_LINE} \${currentSaved ? 'Saved' : 'Save'}\`;
+                    
+                    btns[1].className = \`btn-retention \${currentStack ? 'active' : ''}\`;
+                    btns[1].innerHTML = \`\${currentStack ? SVG_STACK_FILL : SVG_STACK_LINE} \${currentStack ? 'In Stack' : 'Add to Stack'}\`;
+                    
+                    btns[2].className = \`btn-retention \${currentWatched ? 'active' : ''}\`;
+                    btns[2].innerHTML = \`\${currentWatched ? SVG_WATCH_FILL : SVG_WATCH_LINE} \${currentWatched ? 'Watching' : 'Watch'}\`;
+                });
+            }
+        }
 
       } catch (error) {
         container.innerHTML = `

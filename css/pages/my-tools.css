@@ -1,0 +1,526 @@
+/**
+ * WhichAIPick — My Tools Dashboard Styles
+ * Phase 8 — css/pages/my-tools.css
+ *
+ * Follows the MCD design system:
+ *   - Deep navy / charcoal backgrounds
+ *   - Muted orange accent (#f97316)
+ *   - Clean white text
+ *   - Minimal gradients, subtle glow
+ */
+
+/* ── Page Layout ─────────────────────────────────────────────────────────── */
+
+.my-tools-page {
+    min-height: 60vh;
+    padding: var(--space-8, 48px) 0 var(--space-12, 80px);
+}
+
+.my-tools-header {
+    margin-bottom: var(--space-8, 48px);
+}
+
+.my-tools-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--c-text, #f8fafc);
+    margin: 0 0 8px;
+}
+
+.my-tools-header .subtitle {
+    color: var(--c-text-muted, #94a3b8);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.my-tools-device-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--c-text-muted, #94a3b8);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-top: 12px;
+}
+
+/* ── Section Containers ──────────────────────────────────────────────────── */
+
+.my-tools-section {
+    margin-bottom: var(--space-10, 64px);
+}
+
+.my-tools-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: var(--space-4, 24px);
+    padding-bottom: var(--space-3, 16px);
+    border-bottom: 1px solid var(--c-border, #1e293b);
+}
+
+.my-tools-section-header h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--c-text, #f8fafc);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.my-tools-section-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 11px;
+    background: var(--c-accent, #f97316);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.my-tools-section-link {
+    font-size: 0.85rem;
+    color: var(--c-accent, #f97316);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.my-tools-section-link:hover { opacity: 0.75; }
+
+/* ── Empty State ─────────────────────────────────────────────────────────── */
+
+.my-tools-empty {
+    padding: var(--space-6, 36px) var(--space-4, 24px);
+    text-align: center;
+    color: var(--c-text-muted, #94a3b8);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed var(--c-border, #1e293b);
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.my-tools-empty a {
+    color: var(--c-accent, #f97316);
+    text-decoration: underline;
+}
+
+/* ── Tool Grid ───────────────────────────────────────────────────────────── */
+
+.my-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-3, 16px);
+}
+
+/* ── Tool Card (My Tools variant) ────────────────────────────────────────── */
+
+.my-tool-card {
+    background: var(--c-surface, #0f172a);
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 10px;
+    padding: var(--space-3, 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.2s;
+}
+
+.my-tool-card:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
+.my-tool-card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.my-tool-card .tool-logo-wrap {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--c-bg-alt, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-tool-card .tool-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.my-tool-card .tool-logo-initials {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--c-text-muted, #94a3b8);
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-tool-card-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.my-tool-card-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--c-text, #f8fafc);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    display: block;
+}
+
+.my-tool-card-name:hover { color: var(--c-accent, #f97316); }
+
+.my-tool-card-category {
+    font-size: 0.75rem;
+    color: var(--c-text-muted, #94a3b8);
+    margin-top: 2px;
+}
+
+.my-tool-card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.my-tool-card-actions .btn-view {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 6px;
+    color: var(--c-text, #f8fafc);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+.my-tool-card-actions .btn-view:hover {
+    border-color: var(--c-accent, #f97316);
+    background: rgba(249, 115, 22, 0.08);
+}
+
+.my-tool-card-actions .btn-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 6px;
+    color: var(--c-text-muted, #94a3b8);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.my-tool-card-actions .btn-remove:hover {
+    border-color: #e11d48;
+    color: #e11d48;
+}
+
+/* ── Comparison Cards ────────────────────────────────────────────────────── */
+
+.my-comparisons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-3, 16px);
+}
+
+.my-comparison-card {
+    background: var(--c-surface, #0f172a);
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 10px;
+    padding: var(--space-3, 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.2s;
+}
+
+.my-comparison-card:hover { border-color: rgba(249, 115, 22, 0.3); }
+
+.my-comparison-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--c-text, #f8fafc);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.my-comparison-vs {
+    font-size: 0.75rem;
+    color: var(--c-accent, #f97316);
+    font-weight: 700;
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+.my-comparison-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ── Watchlist Note ──────────────────────────────────────────────────────── */
+
+.watchlist-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(148, 163, 184, 0.06);
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 8px;
+    padding: var(--space-3, 16px);
+    margin-bottom: var(--space-4, 24px);
+    font-size: 0.85rem;
+    color: var(--c-text-muted, #94a3b8);
+    line-height: 1.5;
+}
+
+.watchlist-notice svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--c-text-muted, #94a3b8);
+}
+
+/* ── Clear Data Section ──────────────────────────────────────────────────── */
+
+.my-tools-danger-zone {
+    margin-top: var(--space-12, 80px);
+    padding-top: var(--space-6, 36px);
+    border-top: 1px solid var(--c-border, #1e293b);
+}
+
+.my-tools-danger-zone h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--c-text-muted, #94a3b8);
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.my-tools-danger-zone p {
+    font-size: 0.85rem;
+    color: var(--c-text-muted, #94a3b8);
+    margin: 0 0 var(--space-4, 24px);
+}
+
+.btn-danger {
+    background: transparent;
+    border: 1px solid #7f1d1d;
+    color: #fca5a5;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-danger:hover {
+    background: rgba(127, 29, 29, 0.2);
+    border-color: #e11d48;
+}
+
+/* ── Toast Notification ──────────────────────────────────────────────────── */
+
+.waip-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--c-surface-high, #1e293b);
+    color: var(--c-text, #f8fafc);
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 99999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--c-border, #334155);
+    font-size: 0.875rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.waip-toast--visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ── Tool Controls (Save/Stack/Watch) ────────────────────────────────────── */
+
+.tool-retention-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: var(--space-3, 16px);
+}
+
+.btn-retention {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid var(--c-border, #1e293b);
+    background: transparent;
+    color: var(--c-text-muted, #94a3b8);
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.btn-retention:hover {
+    border-color: rgba(249, 115, 22, 0.5);
+    color: var(--c-text, #f8fafc);
+}
+
+.btn-retention.active {
+    border-color: var(--c-accent, #f97316);
+    color: var(--c-accent, #f97316);
+    background: rgba(249, 115, 22, 0.08);
+}
+
+.btn-retention svg { flex-shrink: 0; }
+
+/* ── Returning User Section (homepage) ───────────────────────────────────── */
+
+.returning-user-section {
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--c-border, #1e293b);
+    border-bottom: 1px solid var(--c-border, #1e293b);
+    padding: var(--space-6, 36px) 0;
+}
+
+.returning-user-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: var(--space-4, 24px);
+}
+
+.returning-user-header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--c-text, #f8fafc);
+    margin: 0;
+}
+
+.returning-user-link {
+    font-size: 0.85rem;
+    color: var(--c-accent, #f97316);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.returning-user-link:hover { opacity: 0.75; }
+
+.return-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-2, 12px);
+}
+
+.return-tool-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--c-surface, #0f172a);
+    border: 1px solid var(--c-border, #1e293b);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+}
+
+.return-tool-card:hover { border-color: rgba(249, 115, 22, 0.4); }
+
+.return-tool-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.return-tool-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--c-text, #f8fafc);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.return-tool-category {
+    font-size: 0.72rem;
+    color: var(--c-text-muted, #94a3b8);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .my-tools-grid,
+    .my-comparisons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .return-tools-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tool-retention-controls {
+        gap: 6px;
+    }
+
+    .btn-retention {
+        padding: 6px 11px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .return-tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .my-tools-section-header {
+        flex-wrap: wrap;
+    }
+}

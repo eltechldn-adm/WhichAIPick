@@ -21,7 +21,7 @@
   "_excludedPathsNote": "Paths where ads are never rendered regardless of adsEnabled.",
   "excludedPaths": [
     "/find.html",
-    "/shortlist/",
+    "/my-tools/",
     "/compare-engine",
     "/about.html",
     "/review-methodology.html",

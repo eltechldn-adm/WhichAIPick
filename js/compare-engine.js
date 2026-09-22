@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selectorInput = document.getElementById('compare-selector-input');
     const selectorResults = document.getElementById('compare-selector-results');
     const copyLinkBtn = document.getElementById('copy-compare-link');
+    const saveCompareBtn = document.getElementById('save-compare-btn');
 
     let allTools = [];
     let currentIds = [];
@@ -41,6 +42,35 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error("Failed to load tools catalog for comparison.", e);
         tableContainer.innerHTML = '<p>Failed to load comparison data. Please try again later.</p>';
         return;
+    }
+
+    if (saveCompareBtn && window.UserState) {
+        saveCompareBtn.addEventListener('click', () => {
+            if (currentIds.length < 2) return;
+            const isSaved = window.UserState.isComparisonSaved(currentIds);
+            if (isSaved) {
+                window.UserState.removeComparison(currentIds);
+            } else {
+                window.UserState.saveComparison(currentIds);
+            }
+            updateSaveCompareBtnState();
+        });
+    }
+
+    function updateSaveCompareBtnState() {
+        if (!saveCompareBtn || !window.UserState || currentIds.length < 2) return;
+        const isSaved = window.UserState.isComparisonSaved(currentIds);
+        const textSpan = saveCompareBtn.querySelector('.save-compare-text');
+        if (textSpan) {
+            textSpan.textContent = isSaved ? 'Saved to My Tools' : 'Save Comparison';
+        }
+        if (isSaved) {
+            saveCompareBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="save-compare-text">Saved to My Tools</span>`;
+            saveCompareBtn.classList.add('saved');
+        } else {
+            saveCompareBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="save-compare-text">Save Comparison</span>`;
+            saveCompareBtn.classList.remove('saved');
+        }
     }
 
     // Initialize from URL
@@ -80,6 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Empty state (0 or 1 tool)
             tableContainer.style.display = 'none';
             if (copyLinkBtn) copyLinkBtn.style.display = 'none';
+            if (saveCompareBtn) saveCompareBtn.style.display = 'none';
             emptyState.style.display = 'block';
             if (currentIds.length === 0 && staticLinks) {
                 staticLinks.style.display = 'block';
@@ -94,6 +125,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (staticLinks) staticLinks.style.display = 'none';
             tableContainer.style.display = 'block';
             if (copyLinkBtn) copyLinkBtn.style.display = 'inline-flex';
+            
+            if (saveCompareBtn && window.UserState) {
+                saveCompareBtn.style.display = 'inline-flex';
+                updateSaveCompareBtnState();
+            }
             
             renderComparisonTable();
         }

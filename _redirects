@@ -15,3 +15,4 @@
 # ── Legacy browse stub ─────────────────────────────────────────
 /browse.html        /tools/               301
 /tool.html          /tools/               301
+/shortlist/         /my-tools/            301
