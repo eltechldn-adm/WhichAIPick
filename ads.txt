@@ -1,0 +1,13 @@
+# WhichAIPick — ads.txt
+# Google AdSense authorisation file
+#
+# OWNER ACTION REQUIRED:
+#   ads.txt is highly recommended by Google for monetisation transparency.
+#   Verify that the publisher ID below matches your active AdSense account exactly.
+#   Publisher ID: pub-7088331504377019
+#   Verify at: https://www.google.com/adsense/
+#
+# Retain the following line ONLY if you confirm the Publisher ID pub-7088331504377019.
+# Format: SSP_DOMAIN, PUBLISHER_ID, ACCOUNT_TYPE, TAG_ID
+#
+google.com, pub-7088331504377019, DIRECT, f08c47fec0942fa0

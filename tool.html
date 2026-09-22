@@ -34,6 +34,24 @@
   <link rel="stylesheet" href="/css/pages/tool.css">
     
     <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+    
+    <!-- Google Consent Mode v2 — Default denied signals (Phase 7) -->
+    <!-- Must appear BEFORE any gtag / AdSense calls. Updated by consent.js on user choice. -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        // Default: deny all consent signals for EEA/UK compliance
+        // consent.js will update these based on user choice
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            analytics_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
+        });
+        gtag('js', new Date());
+    </script>
+    <!-- End Google Consent Mode v2 default signals -->
     <script src="/js/consent.js"></script>
 </head>
 
@@ -138,6 +156,8 @@
       <div id="tool-container">
         <p style="text-align: center;">Loading tool...</p>
       </div>
+      <!-- Ad slot: below tool detail (only renders when adsEnabled=true and unit ID configured) -->
+      <div data-ad-slot="tool-detail" aria-hidden="true"></div>
     </div>
   </main>
 
@@ -329,17 +349,22 @@
         if (twitterTitle) twitterTitle.content = `${tool.name} — WhichAIPick`;
 
 
-        // Determine CTA logic - never show duplicate destinations
-        let ctaUrl, ctaText;
-        if (tool.affiliate_url && tool.affiliate_url !== tool.website_url) {
-          // Show affiliate CTA if it exists and differs from website
-          ctaUrl = tool.affiliate_url;
-          ctaText = `Try ${tool.name}`;
-        } else {
-          // Otherwise show website CTA
-          ctaUrl = tool.website_url || '#';
-          ctaText = 'Visit Website';
+        // Determine CTA logic via affiliate.js (centralised routing module)
+        // Falls back to website_url when affiliate is unverified or disabled
+        let ctaUrl = tool.website_url || '#';
+        let ctaText = 'Visit Website';
+        let ctaIsAffiliate = false;
+        let ctaNetwork = null;
+        if (window.Affiliate) {
+          try {
+            const affResult = await window.Affiliate.getOutboundUrl(tool.id, tool.website_url || '#');
+            ctaUrl = affResult.url;
+            ctaIsAffiliate = affResult.isAffiliate;
+            ctaNetwork = affResult.network;
+            if (ctaIsAffiliate) ctaText = `Try ${tool.name}`;
+          } catch(e) { /* fall back to website_url */ }
         }
+        const ctaRel = window.Affiliate ? window.Affiliate.getLinkRel(ctaIsAffiliate) : 'noopener noreferrer';
 
         // Description or fallback
         const description = tool.description ||
@@ -401,14 +426,14 @@
                                         </span>`
             : ''}
 
-                                    <a id="tool-website" href="${tool.website_url}" target="_blank" rel="noopener" class="tool-link" onclick="Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${tool.website_url}', source: 'header' })">${domain} ↗</a>
+                                    <a id="tool-website" href="${tool.website_url}" target="_blank" rel="noopener noreferrer" class="tool-link" onclick="if(window.Outbound) Outbound.track({ toolId: '${tool.id}', url: '${tool.website_url}', isAffiliate: false })">${domain} ↗</a>
                                 </div>
                             </div>
                         </div>
                         <div class="content-narrow">
                             <p id="tool-summary" class="tool-summary-lg">${displayDescription}</p>
                             <div class="cta-row-hero">
-                                <a id="btn-visit" href="${ctaUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" onclick="Analytics.track('tool_outbound_click', { tool_id: '${tool.id}', url: '${ctaUrl}', source: 'hero_cta' })">${ctaText}</a>
+                                <a id="btn-visit" href="${ctaUrl}" target="_blank" rel="${ctaRel}" class="btn btn-primary btn-lg" onclick="if(window.Outbound) Outbound.track({ toolId: '${tool.id}', url: '${ctaUrl}', isAffiliate: ${ctaIsAffiliate}, network: '${ctaNetwork}' })">${ctaText}</a>
                                 <a href="/find.html" class="btn btn-secondary btn-lg" onclick="Analytics.track('compare_click', { tool_id: '${tool.id}' })">Compare Alternatives</a>
                             </div>
                         </div>

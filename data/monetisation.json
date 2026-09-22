@@ -1,0 +1,47 @@
+{
+  "_comment": "WhichAIPick Monetisation Configuration — Phase 7",
+  "_note": "All feature flags default to false. Activate only when IDs are confirmed and ad review is complete.",
+
+  "adsEnabled": false,
+  "affiliateEnabled": false,
+  "sponsoredEnabled": false,
+
+  "adsensePublisherId": "ca-pub-7088331504377019",
+
+  "_adUnitsNote": "OWNER ACTION REQUIRED: Create ad units in your AdSense dashboard and paste IDs below. Leave empty strings until ready. adsEnabled must remain false until units are confirmed.",
+  "adUnits": {
+    "content-top":    "",
+    "content-mid":    "",
+    "content-bottom": "",
+    "tool-detail":    "",
+    "seo-page-mid":   "",
+    "guide-mid":      ""
+  },
+
+  "_excludedPathsNote": "Paths where ads are never rendered regardless of adsEnabled.",
+  "excludedPaths": [
+    "/find.html",
+    "/shortlist/",
+    "/compare-engine",
+    "/about.html",
+    "/review-methodology.html",
+    "/editorial-policy.html",
+    "/affiliate-disclosure.html",
+    "/pricing-accuracy-policy.html",
+    "/corrections-policy.html",
+    "/data-transparency.html",
+    "/privacy.html",
+    "/terms.html",
+    "/cookies.html",
+    "/accessibility.html",
+    "/contact.html",
+    "/submit-tool.html",
+    "/report-misuse.html"
+  ],
+
+  "_previewNote": "Set previewAdsEnabled to true ONLY for local ad layout testing. Never enable on the public preview URL to avoid invalid traffic.",
+  "previewAdsEnabled": false,
+
+  "_sponsoredNote": "Sponsored placement framework — architecture only. All placements must be active:false until a real campaign is set up. Sponsored content must ALWAYS be visibly labelled and must NEVER affect Finder scores, comparison rankings, or organic recommendations.",
+  "sponsoredPlacements": []
+}

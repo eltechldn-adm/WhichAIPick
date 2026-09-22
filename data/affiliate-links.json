@@ -1,0 +1,50 @@
+[
+  {
+    "_note": "OWNER ACTION REQUIRED — All entries below are UNVERIFIED. These ?ref=whichaipick URLs were found in the tools.json catalogue but have not been confirmed as active affiliate programmes with tracked commissions. Verify each programme, update 'status' to 'active', set 'verifiedAt', and update 'affiliateEnabled' in data/monetisation.json before routing traffic.",
+    "_schema": "This entry is the schema reference — not a real record."
+  },
+  {
+    "toolId": "cursor",
+    "officialUrl": "https://cursor.com",
+    "affiliateUrl": "https://cursor.com/?ref=whichaipick",
+    "network": "direct",
+    "status": "unverified",
+    "verifiedAt": null,
+    "commissionRate": null,
+    "cookieDuration": null,
+    "notes": "Found in tools.json. Verify this is a confirmed referral programme with tracked commissions before activating."
+  },
+  {
+    "toolId": "runway",
+    "officialUrl": "https://runway.com",
+    "affiliateUrl": "https://runway.com/?ref=whichaipick",
+    "network": "direct",
+    "status": "unverified",
+    "verifiedAt": null,
+    "commissionRate": null,
+    "cookieDuration": null,
+    "notes": "Found in tools.json. Verify with Runway's affiliate programme before activating."
+  },
+  {
+    "toolId": "synthesia",
+    "officialUrl": "https://www.synthesia.io",
+    "affiliateUrl": "https://www.synthesia.com/?ref=whichaipick",
+    "network": "direct",
+    "status": "unverified",
+    "verifiedAt": null,
+    "commissionRate": null,
+    "cookieDuration": null,
+    "notes": "Found in tools.json. Note: domain in affiliate URL (.com) differs from official (.io) — verify the correct affiliate landing URL."
+  },
+  {
+    "toolId": "writesonic",
+    "officialUrl": "https://writesonic.com",
+    "affiliateUrl": "https://writesonic.com/?ref=whichaipick",
+    "network": "direct",
+    "status": "unverified",
+    "verifiedAt": null,
+    "commissionRate": null,
+    "cookieDuration": null,
+    "notes": "Found in tools.json. Verify with Writesonic's affiliate programme before activating."
+  }
+]

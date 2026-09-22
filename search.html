@@ -34,8 +34,25 @@
     <link rel="stylesheet" href="/css/pages/search.css">
     
     <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+    
+    <!-- Google Consent Mode v2 — Default denied signals (Phase 7) -->
+    <!-- Must appear BEFORE any gtag / AdSense calls. Updated by consent.js on user choice. -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        // Default: deny all consent signals for EEA/UK compliance
+        // consent.js will update these based on user choice
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            analytics_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
+        });
+        gtag('js', new Date());
+    </script>
+    <!-- End Google Consent Mode v2 default signals -->
     <script src="/js/consent.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088331504377019" crossorigin="anonymous"></script>
 </head>
 
 <body data-bg="search">
