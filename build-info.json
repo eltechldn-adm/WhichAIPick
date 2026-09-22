@@ -1,9 +1,9 @@
 {
   "environment": "local",
-  "buildTime": "2026-09-22T22:53:35.693Z",
+  "buildTime": "2026-09-22T23:12:57.459Z",
   "schemaVersion": "8G",
   "branch": "phase-review",
-  "commitHash": "c61d7954eb0bd5c1dc637bff8b7286ca468e189e",
+  "commitHash": "2b08c95c6f247406e5fbe83fa356a93fd7a48f87",
   "toolCount": 902,
   "eligibleCount": 315,
   "contentReviewCount": 581,
