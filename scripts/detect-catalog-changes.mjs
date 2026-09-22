@@ -14,8 +14,18 @@ let baselineTools = [];
 const args = process.argv.slice(2);
 const baselineArgIndex = args.indexOf('--baseline');
 
+const baselineCommitIndex = args.indexOf('--baseline-commit');
+
 if (baselineArgIndex !== -1 && args[baselineArgIndex + 1]) {
     baselineTools = JSON.parse(fs.readFileSync(path.resolve(args[baselineArgIndex + 1]), 'utf8'));
+} else if (baselineCommitIndex !== -1 && args[baselineCommitIndex + 1]) {
+    try {
+        const commit = args[baselineCommitIndex + 1];
+        const gitOutput = execSync(`git show ${commit}:data/tools.json`, { encoding: 'utf8' });
+        baselineTools = JSON.parse(gitOutput);
+    } catch (e) {
+        console.warn(`Could not read data/tools.json from git commit ${args[baselineCommitIndex + 1]}. Using empty baseline.`);
+    }
 } else {
     try {
         const gitOutput = execSync('git show HEAD:data/tools.json', { encoding: 'utf8' });
@@ -70,9 +80,9 @@ for (const id of baselineMap.keys()) {
 }
 
 console.log(`\nCatalog Change Detection Complete.`);
-console.log(`Added tools: ${added.length}`);
-console.log(`Removed tools: ${removed.length}`);
-console.log(`Modified tools: ${modified.length}`);
+console.log(`[DETECTED CHANGE] Added tools: ${added.length}`);
+console.log(`[DETECTED CHANGE] Removed tools: ${removed.length}`);
+console.log(`[DETECTED CHANGE] Modified tools: ${modified.length}`);
 
 const report = {
     added,

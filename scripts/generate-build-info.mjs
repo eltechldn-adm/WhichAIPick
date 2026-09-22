@@ -61,17 +61,40 @@ const pricingNeedsReviewCount  = tools.filter(t => t.pricingNeedsReview     === 
 const environment = process.env.CF_PAGES_COMMIT_SHA ? 'preview' : 'local';
 
 // ─── Preview Safety Checks ────────────────────────────────────────────────────
+const headersPath = path.join(__dirname, '../_headers');
+let headersContent = '';
+if (fs.existsSync(headersPath)) {
+    headersContent = fs.readFileSync(headersPath, 'utf8');
+}
+
+const previewRobotsTag = '  X-Robots-Tag: noindex, follow\n';
+const legacyRobotsTag = '  X-Robots-Tag: noindex, nofollow\n';
+
+// Clean up any legacy tag
+if (headersContent.includes(legacyRobotsTag)) {
+    headersContent = headersContent.replace(legacyRobotsTag, '');
+}
+
 if (branch !== 'main' && branch !== 'production') {
-    const headersContent = `/*\n  X-Robots-Tag: noindex, nofollow\n`;
-    fs.writeFileSync(path.join(__dirname, '../_headers'), headersContent, 'utf8');
-    console.log('🔒 Preview Environment Detected. Generated _headers to block indexing.');
-} else {
-    // If it's main, remove _headers if it exists so we don't accidentally block prod
-    const headersPath = path.join(__dirname, '../_headers');
-    if (fs.existsSync(headersPath)) {
-        fs.unlinkSync(headersPath);
-        console.log('🌐 Production Environment Detected. Removed _headers (if existed).');
+    if (!headersContent.includes('X-Robots-Tag: noindex, follow')) {
+        if (headersContent.includes('/*')) {
+            headersContent = headersContent.replace('/*', '/*\n' + previewRobotsTag);
+        } else {
+            headersContent += `\n/*\n${previewRobotsTag}`;
+        }
+        fs.writeFileSync(headersPath, headersContent, 'utf8');
     }
+    console.log('🔒 Preview Environment Detected. Appended noindex to _headers.');
+} else {
+    if (headersContent.includes(previewRobotsTag)) {
+        headersContent = headersContent.replace(previewRobotsTag, '');
+    }
+    if (headersContent.trim() !== '') {
+        fs.writeFileSync(headersPath, headersContent, 'utf8');
+    } else if (fs.existsSync(headersPath)) {
+        fs.unlinkSync(headersPath);
+    }
+    console.log('🌐 Production Environment Detected. Ensured no preview robots tag in _headers.');
 }
 
 // ─── Write build-info.json ────────────────────────────────────────────────────

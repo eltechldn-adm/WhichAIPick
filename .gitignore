@@ -34,3 +34,5 @@ all_tool_ids.txt
 missing.txt
 reports/*.json
 reports/*.md
+!PHASE_9_MAINTENANCE_AUDIT.md
+!PHASE_9_AUTOMATION_MAINTENANCE_REPORT.md

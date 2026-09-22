@@ -7,8 +7,19 @@ const __dirname = path.dirname(__filename);
 const TOOLS_JSON_FILE = path.join(__dirname, '../data/tools.json');
 const REPORT_FILE = path.join(__dirname, '../reports/stale-tools.json');
 
-const STALE_THRESHOLD_DAYS = 90;
+// Check args for configurable threshold
+const args = process.argv.slice(2);
+const thresholdArgIndex = args.indexOf('--threshold');
+const STALE_THRESHOLD_DAYS = thresholdArgIndex !== -1 && args[thresholdArgIndex + 1] 
+    ? parseInt(args[thresholdArgIndex + 1], 10) 
+    : 90;
+
 const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+
+console.log(`[DEFERRED] CATALOGUE FRESHNESS AUDIT DEFERRED PENDING APPROVAL OF NEW ENRICHED SPREADSHEET.`);
+fs.mkdirSync(path.dirname(REPORT_FILE), { recursive: true });
+fs.writeFileSync(REPORT_FILE, JSON.stringify([], null, 2), 'utf8');
+process.exit(0);
 
 const toolsJson = JSON.parse(fs.readFileSync(TOOLS_JSON_FILE, 'utf8'));
 
@@ -26,7 +37,7 @@ toolsJson.forEach(tool => {
         staleTools.push({
             id: tool.id,
             name: tool.name,
-            reason: 'missing_date',
+            reason: 'never_verified', // "missing genuine dates must become never_verified"
             recommendationEligible: tool.recommendationEligible
         });
         return;
@@ -53,9 +64,9 @@ staleTools.sort((a, b) => {
     if (a.recommendationEligible !== b.recommendationEligible) {
         return a.recommendationEligible ? -1 : 1;
     }
-    if (a.reason === 'missing_date' && b.reason === 'missing_date') return 0;
-    if (a.reason === 'missing_date') return -1;
-    if (b.reason === 'missing_date') return 1;
+    if (a.reason === 'never_verified' && b.reason === 'never_verified') return 0;
+    if (a.reason === 'never_verified') return -1;
+    if (b.reason === 'never_verified') return 1;
     return b.days_since_verified - a.days_since_verified;
 });
 

@@ -31,47 +31,9 @@ md += `- **Stale Tools Detected**: ${staleTools.length}\n`;
 md += `- **SEO Orphaned Tools**: ${seoHealth.orphaned_tools ? seoHealth.orphaned_tools.length : 0}\n`;
 md += `- **SEO File Issues**: ${seoHealth.file_issues ? seoHealth.file_issues.length : 0}\n\n`;
 
-md += `## 1. Dead Links\n`;
-if (deadLinks.length === 0) {
-    md += `✅ No dead links detected.\n\n`;
-} else {
-    md += `| Tool ID | Name | Issue |\n`;
-    md += `|---|---|---|\n`;
-    deadLinks.forEach(tool => {
-        let issueStrings = [];
-        if (tool.issues.website_url) issueStrings.push(`Official: ${tool.issues.website_url.status} (${tool.issues.website_url.code || tool.issues.website_url.error})`);
-        if (tool.issues.affiliate_url) issueStrings.push(`Affiliate: ${tool.issues.affiliate_url.status} (${tool.issues.affiliate_url.code || tool.issues.affiliate_url.error})`);
-        md += `| ${tool.id} | ${tool.name} | ${issueStrings.join('<br>')} |\n`;
-    });
-    md += `\n`;
-}
+md += `## SITE & ENGINEERING HEALTH\n\n`;
 
-md += `## 2. Stale Tools (Freshness)\n`;
-if (staleTools.length === 0) {
-    md += `✅ No stale tools detected.\n\n`;
-} else {
-    md += `| Tool ID | Name | Reason | Eligible |\n`;
-    md += `|---|---|---|---|\n`;
-    staleTools.forEach(tool => {
-        const reasonStr = tool.reason === 'stale' ? `Older than 90 days (${tool.days_since_verified} days)` : 'Missing verification date';
-        md += `| ${tool.id} | ${tool.name} | ${reasonStr} | ${tool.recommendationEligible ? 'Yes' : 'No'} |\n`;
-    });
-    md += `\n`;
-}
-
-md += `## 3. SEO Orphans\n`;
-if (!seoHealth.orphaned_tools || seoHealth.orphaned_tools.length === 0) {
-    md += `✅ No orphaned tools detected.\n\n`;
-} else {
-    md += `| Tool ID | Name |\n`;
-    md += `|---|---|\n`;
-    seoHealth.orphaned_tools.forEach(tool => {
-        md += `| ${tool.id} | ${tool.name} |\n`;
-    });
-    md += `\n`;
-}
-
-md += `## 4. SEO File Issues\n`;
+md += `### 1. SEO File Issues\n`;
 if (!seoHealth.file_issues || seoHealth.file_issues.length === 0) {
     md += `✅ No SEO file issues detected.\n\n`;
 } else {
@@ -86,6 +48,51 @@ if (!seoHealth.file_issues || seoHealth.file_issues.length === 0) {
     });
     md += `\n`;
 }
+
+md += `## CATALOGUE HEALTH\n`;
+md += `> **[DEFERRED PENDING APPROVAL OF NEW ENRICHED SPREADSHEET]**\n> Full catalogue audits (URLs, freshness, orphans) are temporarily frozen.\n\n`;
+
+md += `### 2. Dead Links\n`;
+if (deadLinks.length === 0) {
+    md += `✅ No dead links detected (or check deferred).\n\n`;
+} else {
+    md += `| Tool ID | Name | Issue |\n`;
+    md += `|---|---|---|\n`;
+    deadLinks.forEach(tool => {
+        let issueStrings = [];
+        if (tool.issues.website_url) issueStrings.push(`Official: ${tool.issues.website_url.status} (${tool.issues.website_url.code || tool.issues.website_url.error})`);
+        if (tool.issues.affiliate_url) issueStrings.push(`Affiliate: ${tool.issues.affiliate_url.status} (${tool.issues.affiliate_url.code || tool.issues.affiliate_url.error})`);
+        md += `| ${tool.id} | ${tool.name} | ${issueStrings.join('<br>')} |\n`;
+    });
+    md += `\n`;
+}
+
+md += `### 3. Stale Tools (Freshness)\n`;
+if (staleTools.length === 0) {
+    md += `✅ No stale tools detected (or check deferred).\n\n`;
+} else {
+    md += `| Tool ID | Name | Reason | Eligible |\n`;
+    md += `|---|---|---|---|\n`;
+    staleTools.forEach(tool => {
+        const reasonStr = tool.reason === 'stale' ? `Older than 90 days (${tool.days_since_verified} days)` : 'Never verified';
+        md += `| ${tool.id} | ${tool.name} | ${reasonStr} | ${tool.recommendationEligible ? 'Yes' : 'No'} |\n`;
+    });
+    md += `\n`;
+}
+
+md += `### 4. SEO Orphans\n`;
+if (!seoHealth.orphaned_tools || seoHealth.orphaned_tools.length === 0) {
+    md += `✅ No orphaned tools detected (or check deferred).\n\n`;
+} else {
+    md += `| Tool ID | Name |\n`;
+    md += `|---|---|\n`;
+    seoHealth.orphaned_tools.forEach(tool => {
+        md += `| ${tool.id} | ${tool.name} |\n`;
+    });
+    md += `\n`;
+}
+
+
 
 fs.mkdirSync(REPORTS_DIR, { recursive: true });
 fs.writeFileSync(SITE_HEALTH_FILE, md, 'utf8');

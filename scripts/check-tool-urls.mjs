@@ -57,24 +57,34 @@ function checkUrl(urlStr, timeoutMs = 10000) {
             }
         }, (res) => {
             const code = res.statusCode;
-            if (code >= 200 && code < 400) {
-                resolve({ status: 'OK', code });
-            } else if (code === 403 || code === 405 || code === 429) {
-                // Often means we are blocked by WAF/anti-bot, not necessarily dead.
-                // Treat as warning rather than dead.
-                resolve({ status: 'BLOCKED', code });
+            if (code >= 200 && code < 300) {
+                resolve({ status: 'healthy', code });
+            } else if (code >= 300 && code < 400) {
+                resolve({ status: 'redirected', code, location: res.headers.location });
+            } else if (code === 404) {
+                resolve({ status: 'not_found', code });
+            } else if (code === 403 || code === 429) {
+                resolve({ status: 'forbidden_or_bot_blocked', code });
+            } else if (code === 405) {
+                resolve({ status: 'method_not_allowed', code });
+            } else if (code >= 500) {
+                resolve({ status: 'server_error', code });
             } else {
-                resolve({ status: 'DEAD', code });
+                resolve({ status: 'unknown', code });
             }
         });
 
         req.on('error', (err) => {
-            resolve({ status: 'ERROR', error: err.message });
+            if (err.code === 'ENOTFOUND' || err.code === 'EAI_AGAIN') {
+                resolve({ status: 'dns_failure', error: err.message });
+            } else {
+                resolve({ status: 'unknown', error: err.message });
+            }
         });
         
         req.on('timeout', () => {
             req.destroy();
-            resolve({ status: 'TIMEOUT' });
+            resolve({ status: 'timeout' });
         });
 
         req.end();
@@ -82,6 +92,12 @@ function checkUrl(urlStr, timeoutMs = 10000) {
 }
 
 async function main() {
+    console.log(`[DEFERRED] CATALOGUE EXTERNAL CRAWL DEFERRED PENDING APPROVAL OF NEW ENRICHED SPREADSHEET.`);
+    console.log(`(Note: No URL-health result will ever automatically change tool status in the canonical JSON.)`);
+    fs.mkdirSync(path.dirname(REPORT_FILE), { recursive: true });
+    fs.writeFileSync(REPORT_FILE, JSON.stringify([], null, 2), 'utf8');
+    process.exit(0);
+    
     const args = process.argv.slice(2);
     const limitArgIndex = args.indexOf('--limit');
     let limit = activeTools.length;

@@ -102,7 +102,7 @@ activeTools.forEach(tool => {
         warnings++;
         seoIssues.push({
             file: `/tools/${tool.id}/index.html`,
-            issues: [`[WARNING] Orphaned Tool: No internal links point to /tools/${tool.id}/`]
+            issues: [`[DEFERRED] Orphaned Tool: No internal links point to /tools/${tool.id}/ (Remediation deferred until final catalogue import)`]
         });
     }
 });
