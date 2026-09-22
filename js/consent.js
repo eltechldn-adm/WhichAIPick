@@ -71,18 +71,8 @@
         if (window.WAIP_ScriptsLoaded) return;
         window.WAIP_ScriptsLoaded = true;
 
-        // 1. Load AdSense (post-consent, single load point)
-        if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
-            try {
-                const adSenseScript = document.createElement('script');
-                adSenseScript.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${PUBLISHER_ID}`;
-                adSenseScript.async = true;
-                adSenseScript.crossOrigin = 'anonymous';
-                document.head.appendChild(adSenseScript);
-            } catch (e) {
-                console.warn('[Consent] Failed to inject adsbygoogle.js', e);
-            }
-        }
+        // 1. AdSense is no longer loaded here. It is now loaded dynamically by js/ads.js 
+        // ONLY if monetisation.json dictates adsEnabled === true.
 
         // 2. Load Analytics wrapper
         try {

@@ -127,6 +127,19 @@
         const containers = document.querySelectorAll('[data-ad-slot]');
         if (!containers.length) return;
 
+        // Load the AdSense library dynamically now that we are confirmed eligible
+        if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
+            try {
+                const adSenseScript = document.createElement('script');
+                adSenseScript.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`;
+                adSenseScript.async = true;
+                adSenseScript.crossOrigin = 'anonymous';
+                document.head.appendChild(adSenseScript);
+            } catch (e) {
+                console.warn('[Ads] Failed to inject adsbygoogle.js', e);
+            }
+        }
+
         // Use IntersectionObserver for lazy loading where supported
         const supportsIO = 'IntersectionObserver' in window;
         const observer = supportsIO
