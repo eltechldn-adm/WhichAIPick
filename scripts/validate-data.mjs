@@ -42,6 +42,16 @@ const validProvenanceValues   = new Set(['audited_source', 'existing_editorial',
 const seenIds = new Set();
 const seenUrls = new Set();
 const seenDescriptions = new Set();
+const seenNames = new Map();
+const seenDomains = new Map();
+const seenAliases = new Map();
+
+function getDomain(url) {
+    try {
+        return new URL(url).hostname.replace('www.', '');
+    } catch(e) { return null; }
+}
+
 const seenPrimaryUseCases = new Set();
 const verificationDates = {};
 
@@ -103,6 +113,12 @@ toolsJson.forEach((tool, index) => {
     if (!tool.name || typeof tool.name !== 'string' || tool.name.trim() === '') {
         console.error(`[ERROR] Tool ${tool.id || index} is missing a valid name.`);
         errors++;
+    } else {
+        if (seenNames.has(tool.name.toLowerCase())) {
+            console.warn(`[WARNING] Tool ${tool.id} has duplicate name: ${tool.name} (matches ${seenNames.get(tool.name.toLowerCase())})`);
+            warnings++;
+        }
+        seenNames.set(tool.name.toLowerCase(), tool.id);
     }
 
     // 3. OFFICIAL & AFFILIATE URL VALIDATION
@@ -119,6 +135,13 @@ toolsJson.forEach((tool, index) => {
             warnings++;
         }
         seenUrls.add(tool.website_url);
+
+        const domain = getDomain(tool.website_url);
+        if (domain && seenDomains.has(domain)) {
+            console.warn(`[WARNING] Tool ${tool.id} has duplicate domain: ${domain} (matches ${seenDomains.get(domain)})`);
+            warnings++;
+        }
+        if (domain) seenDomains.set(domain, tool.id);
     }
 
     if (tool.affiliate_url && (!tool.affiliate_url.startsWith('http://') && !tool.affiliate_url.startsWith('https://'))) {
@@ -368,6 +391,14 @@ toolsJson.forEach((tool, index) => {
     });
 
     if (Array.isArray(tool.aliases) && tool.aliases.length > 0) {
+        tool.aliases.forEach(alias => {
+            const a = alias.toLowerCase();
+            if (seenAliases.has(a)) {
+                console.warn(`[WARNING] Tool ${tool.id} has alias collision: ${alias} (matches ${seenAliases.get(a)})`);
+                warnings++;
+            }
+            seenAliases.set(a, tool.id);
+        });
         coverage.aliases.populated++;
     } else {
         coverage.aliases.empty++;
@@ -456,14 +487,35 @@ for (const [date, count] of Object.entries(verificationDates)) {
 
 // successorToolId referential integrity
 const allToolIds = new Set(toolsJson.map(t => t.id));
+const successorGraph = new Map();
+
 toolsJson.forEach(tool => {
     if (tool.successorToolId) {
         if (!allToolIds.has(tool.successorToolId)) {
             console.error(`[ERROR] Tool ${tool.id} has successorToolId "${tool.successorToolId}" which does not exist in the database.`);
             errors++;
+        } else if (tool.successorToolId === tool.id) {
+            console.error(`[ERROR] Tool ${tool.id} has self-referential successorToolId.`);
+            errors++;
         }
+        successorGraph.set(tool.id, tool.successorToolId);
     }
 });
+
+// Circular successor detection
+for (const startId of successorGraph.keys()) {
+    let currentId = startId;
+    const visited = new Set();
+    while (currentId) {
+        if (visited.has(currentId)) {
+            console.error(`[ERROR] Circular successor chain detected involving ${startId}`);
+            errors++;
+            break;
+        }
+        visited.add(currentId);
+        currentId = successorGraph.get(currentId);
+    }
+}
 
 // contentReviewRequired — list flagged records as warnings
 toolsJson.filter(t => t.contentReviewRequired).forEach(t => {

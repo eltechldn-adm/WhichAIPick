@@ -32,3 +32,5 @@ phase*_audit*.md
 temp_*.json
 all_tool_ids.txt
 missing.txt
+reports/*.json
+reports/*.md

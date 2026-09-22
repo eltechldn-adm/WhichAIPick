@@ -60,11 +60,25 @@ const pricingNeedsReviewCount  = tools.filter(t => t.pricingNeedsReview     === 
 // Determine environment: Cloudflare sets CF_PAGES_COMMIT_SHA during its build step
 const environment = process.env.CF_PAGES_COMMIT_SHA ? 'preview' : 'local';
 
+// ─── Preview Safety Checks ────────────────────────────────────────────────────
+if (branch !== 'main' && branch !== 'production') {
+    const headersContent = `/*\n  X-Robots-Tag: noindex, nofollow\n`;
+    fs.writeFileSync(path.join(__dirname, '../_headers'), headersContent, 'utf8');
+    console.log('🔒 Preview Environment Detected. Generated _headers to block indexing.');
+} else {
+    // If it's main, remove _headers if it exists so we don't accidentally block prod
+    const headersPath = path.join(__dirname, '../_headers');
+    if (fs.existsSync(headersPath)) {
+        fs.unlinkSync(headersPath);
+        console.log('🌐 Production Environment Detected. Removed _headers (if existed).');
+    }
+}
+
 // ─── Write build-info.json ────────────────────────────────────────────────────
 const buildInfo = {
     environment,
     buildTime:              new Date().toISOString(),
-    schemaVersion:          '8G',
+    schemaVersion:          '9G',
     branch,
     commitHash,
     toolCount,

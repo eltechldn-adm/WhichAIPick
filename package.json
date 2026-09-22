@@ -7,7 +7,11 @@
     "clean-cache": "echo Clear browser cache manually (DevTools → Disable cache)",
     "build:data": "node scripts/convert-xlsx-to-tools-json.mjs && npm run validate:data",
     "validate:data": "node scripts/validate-data.mjs",
-    "validate:seo": "node scripts/validate-seo.mjs",
+    "validate:seo": "node scripts/seo-health-audit.mjs",
+    "validate:sitemap": "node scripts/validate-sitemap.mjs",
+    "audit:schema": "node scripts/audit-schema.mjs",
+    "qa": "npm run validate:data && npm run validate:seo && npm run validate:sitemap && npm run audit:schema",
+    "qa:full": "npm run qa && node scripts/check-tool-urls.mjs && node scripts/catalog-freshness.mjs && node scripts/generate-site-health.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",
     "generate:pages": "node scripts/generate-static-pages.mjs && npm run generate:seo",
     "generate:seo": "node scripts/seo/generate-best-tools.mjs && node scripts/seo/generate-alternatives.mjs && node scripts/seo/generate-comparisons.mjs && node scripts/seo/generate-guides.mjs",
@@ -16,7 +20,7 @@
     "inject:footer": "node scripts/inject-footer.mjs",
     "generate:build-info": "node scripts/generate-build-info.mjs",
     "predeploy": "node scripts/generate-static-pages.mjs && npm run generate:seo && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs",
-    "build:cloudflare": "npm run build:data && npm run predeploy"
+    "build:cloudflare": "npm run build:data && npm run qa && npm run predeploy"
   },
   "dependencies": {
     "playwright": "^1.63.0",
