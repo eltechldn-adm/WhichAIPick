@@ -13,7 +13,8 @@
  *
  * OWNER ACTION REQUIRED — Google-certified TCF CMP:
  *   The custom banner below is NOT complete AdSense UK/EEA compliance for personalised ads.
- *   A Google-certified TCF CMP is required for personalised AdSense serving to UK/EEA users.
+ *   A Google-certified CMP integrated with IAB TCF is required by Google for eligible 
+ *   personalised AdSense ad serving to users in the EEA, UK and Switzerland.
  *   Configure Google's certified CMP using AdSense Privacy & messaging before 
  *   production advertising is enabled.
  *   https://www.google.com/adsense/new/u/0/pub-XXXXXXXX/privacymessaging

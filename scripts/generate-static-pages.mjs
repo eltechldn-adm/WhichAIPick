@@ -315,8 +315,19 @@ function buildToolPage(tool) {
 
   <!-- AdSense Verification & Consent -->
   <meta name="google-adsense-account" content="ca-pub-7088331504377019">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088331504377019"
-     crossorigin="anonymous"></script>
+  <!-- Google Consent Mode v2 — Default denied signals (Phase 7) -->
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          wait_for_update: 500
+      });
+      gtag('js', new Date());
+  </script>
   <script src="/js/consent.js" defer></script>
 
   <!-- Schema: SoftwareApplication -->
@@ -537,8 +548,19 @@ function buildCategoryPage(categoryName, categoryTools) {
 
   <!-- AdSense Verification & Consent -->
   <meta name="google-adsense-account" content="ca-pub-7088331504377019">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088331504377019"
-     crossorigin="anonymous"></script>
+  <!-- Google Consent Mode v2 — Default denied signals (Phase 7) -->
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          wait_for_update: 500
+      });
+      gtag('js', new Date());
+  </script>
   <script src="/js/consent.js" defer></script>
 
   <!-- Schema: CollectionPage + ItemList -->
