@@ -16,3 +16,20 @@
 /browse.html        /tools/               301
 /tool.html          /tools/               301
 /shortlist/         /my-tools/            301
+
+# ── Phase 4.5 Canonical Consolidations ────────────────────────
+/tools/bing-chat/      /tools/microsoft-copilot/ 301
+/tools/breeze-ai/      /tools/hubspot-ai/        301
+/tools/framer-ai/      /tools/framer/            301
+/tools/replit-ai/      /tools/replit/            301
+/tools/perplexity/     /tools/perplexity-ai/     301
+/tools/canva/          /tools/canva-ai/          301
+/tools/pika-labs/      /tools/pika/              301
+
+# ── Phase 4.5 Strong Replacements ─────────────────────────────
+/tools/fig/            /tools/amazon-q/          301
+/tools/dall-e-3/       /tools/chatgpt/           301
+
+# ── Phase 4.5 Category Merges ─────────────────────────────────
+/category/sales/            /category/business/  301
+/category/customer-support/ /category/business/  301
