@@ -54,8 +54,18 @@ const INTENT_TAXONOMY = {
 };
 
 function getToolIntents(tool) {
+    // 1. New Exact Intent Matching
+    if (Array.isArray(tool.finderIntentIds)) {
+        return tool.finderIntentIds.map(intentKey => ({
+            intent: intentKey,
+            sourcePhrase: "Exact ID Match",
+            matchedKeyword: "Exact ID Match"
+        }));
+    }
+
+    // 2. Legacy Fallback Fuzzy Matching
     const intents = [];
-    const useCases = (tool.primaryUseCases || []).map(uc => uc.toLowerCase());
+    const useCases = (tool.primaryUseCases || []).map(uc => typeof uc === 'string' ? uc.toLowerCase() : '');
     
     for (const [intentKey, keywords] of Object.entries(INTENT_TAXONOMY)) {
         for (const uc of useCases) {
@@ -308,7 +318,7 @@ function calculateToolScore(tool, userAnswers) {
         if (!hasFree) return { score: -1, debug };
     }
     
-    if (tool.recommendationEligible !== true) return { score: -1, debug };
+    if (tool.recommendationEligible === false) return { score: -1, debug };
     if (tool.contentReviewRequired === true) return { score: -1, debug };
     if (tool.operationalStatus === 'discontinued' || tool.lifecycleStatus === 'discontinued') return { score: -1, debug };
     if (tool.successorToolId) return { score: -1, debug };

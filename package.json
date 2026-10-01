@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "catalog:phase11:stage": "node scripts/import-phase11-workbook.mjs",
+    "catalog:phase11:validate": "node scripts/validate-phase11-staged.mjs",
     "dev": "wrangler pages dev . --port 8080 --local",
     "clean-cache": "echo Clear browser cache manually (DevTools → Disable cache)",
     "build:data": "node scripts/convert-xlsx-to-tools-json.mjs && npm run validate:data",
