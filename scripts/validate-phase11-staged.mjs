@@ -96,7 +96,12 @@ function run() {
     }
 
     // JSON fields
-    if (!Array.isArray(tool.primaryUseCases)) logError(`primaryUseCases is not an array on ${tool.id}`);
+    const arrayFields = ['primaryUseCases', 'bestFor', 'notIdealFor', 'finderIntentIds', 'useCaseIds', 'platforms', 'deploymentModes', 'aliases', 'audienceTags', 'verificationSources', 'evidenceIds'];
+    arrayFields.forEach(field => {
+      if (tool[field] !== null && tool[field] !== undefined && !Array.isArray(tool[field])) {
+        logError(`${field} is not an array on ${tool.id}: type is ${typeof tool[field]}`);
+      }
+    });
     
     // Boolean fields check
     const boolFields = ['hasFreeTier', 'apiAvailable', 'openSource', 'selfHosted'];

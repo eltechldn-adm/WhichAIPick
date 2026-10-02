@@ -14,7 +14,8 @@ const WHITELIST_FIELDS = [
 const JSON_FIELDS = [
   'primaryUseCases', 'platforms', 'aliases', 'verificationSources',
   'finderIntentIds', 'deploymentModes', 'useCaseIds', 'audienceTags',
-  'evidenceIds', 'recurringFreeIntentIds'
+  'evidenceIds', 'recurringFreeIntentIds',
+  'dataProvenance', 'fieldProvenance', 'bestFor', 'notIdealFor'
 ];
 
 function run() {
