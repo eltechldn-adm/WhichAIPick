@@ -4,14 +4,31 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const TOOLS_JSON_FILE = path.join(__dirname, '../data/tools.json');
+const TOOLS_JSON_FILE = process.argv[2] ? path.resolve(process.argv[2]) : path.join(__dirname, '../data/tools.json');
 const TAXONOMY_FILE = path.join(__dirname, '../data/category-taxonomy.json');
+const EVIDENCE_LEDGER_PATH = path.join(__dirname, '../data/evidence/phase11-evidence-ledger.json');
 
 const toolsJson = JSON.parse(fs.readFileSync(TOOLS_JSON_FILE, 'utf8'));
 const allowedCategories = fs.existsSync(TAXONOMY_FILE)
     ? new Set(JSON.parse(fs.readFileSync(TAXONOMY_FILE, 'utf8')))
     : new Set();
 allowedCategories.add('unknown');
+
+let evidenceLedgerMap = null;
+if (fs.existsSync(EVIDENCE_LEDGER_PATH)) {
+    const evidenceLedger = JSON.parse(fs.readFileSync(EVIDENCE_LEDGER_PATH, 'utf8'));
+    evidenceLedgerMap = new Map();
+    const seenIds = new Set();
+    evidenceLedger.forEach(r => {
+        if (seenIds.has(r.evidenceId)) {
+            console.error(`[FATAL ERROR] Duplicate Ledger ID found: ${r.evidenceId}`);
+            process.exit(1);
+        }
+        seenIds.add(r.evidenceId);
+        evidenceLedgerMap.set(r.evidenceId, r);
+    });
+}
+
 
 let errors = 0;
 let warnings = 0;
@@ -174,7 +191,7 @@ toolsJson.forEach((tool, index) => {
         }
         seenDescriptions.add(descLower);
     }
-    
+
     if (tool.primaryUseCases && Array.isArray(tool.primaryUseCases) && tool.primaryUseCases.length > 0) {
         const useCasesSig = [...tool.primaryUseCases].sort().join('|').toLowerCase();
         if (useCasesSig === 'productivity|workflow automation') {
@@ -245,14 +262,44 @@ toolsJson.forEach((tool, index) => {
         coverage.contentReviewRequired.flagged++;
     } else if (tool.contentReviewRequired === false) {
         // Enforce evidence requirement: If it's not pending, it MUST have legitimate provenance
-        const hasValidProvenance = tool.dataProvenance && (
-            tool.dataProvenance.identity === 'official_source_verified' || 
-            tool.dataProvenance.identity === 'audited_source' ||
-            tool.dataProvenance.identity === 'existing_editorial'
-        );
-        if (!hasValidProvenance) {
-            console.error(`[FATAL ERROR] Tool ${tool.id} has contentReviewRequired=false but lacks legitimate verifiable provenance. Possible fabrication.`);
-            errors++;
+        if (tool.schemaVersion === 'catalog-2.0-rc4') {
+            let hasValidProvenance = false;
+            if (Array.isArray(tool.evidenceIds) && tool.evidenceIds.length > 0) {
+                let allResolved = true;
+                if (!evidenceLedgerMap) {
+                    console.error(`[FATAL ERROR] Evidence Ledger not found, but required for Phase 11 validation.`);
+                    allResolved = false;
+                } else {
+                    tool.evidenceIds.forEach(id => {
+                        const lRow = evidenceLedgerMap.get(id);
+                        if (!lRow) {
+                            console.error(`[FATAL ERROR] Tool ${tool.id} has unresolvable evidenceId: ${id}`);
+                            allResolved = false;
+                        } else if (lRow.id !== tool.id) {
+                            console.error(`[FATAL ERROR] Tool ${tool.id} evidenceId ${id} belongs to different tool: ${lRow.id}`);
+                            allResolved = false;
+                        } else if (!lRow.sourceURL || !lRow.reviewedAt || !lRow.method) {
+                            console.error(`[FATAL ERROR] Tool ${tool.id} evidenceId ${id} has invalid review metadata.`);
+                            allResolved = false;
+                        }
+                    });
+                }
+                hasValidProvenance = allResolved;
+            }
+            if (!hasValidProvenance) {
+                console.error(`[FATAL ERROR] Tool ${tool.id} has contentReviewRequired=false but lacks verifiable ledger evidence. Possible fabrication.`);
+                errors++;
+            }
+        } else {
+            const hasValidProvenance = tool.dataProvenance && (
+                tool.dataProvenance.identity === 'official_source_verified' ||
+                tool.dataProvenance.identity === 'audited_source' ||
+                tool.dataProvenance.identity === 'existing_editorial'
+            );
+            if (!hasValidProvenance) {
+                console.error(`[FATAL ERROR] Tool ${tool.id} has contentReviewRequired=false but lacks legitimate verifiable provenance. Possible fabrication.`);
+                errors++;
+            }
         }
         coverage.contentReviewRequired.clean++;
     } else {

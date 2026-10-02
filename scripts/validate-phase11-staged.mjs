@@ -23,7 +23,7 @@ function run() {
 
   const stagedTools = JSON.parse(fs.readFileSync(STAGED_PATH, 'utf8'));
   const workbook = XLSX.readFile(WORKBOOK_PATH);
-  
+
   // Extract taxonomy valid sets
   const intentRaw = XLSX.utils.sheet_to_json(workbook.Sheets['Finder Intent Taxonomy'] || {length: 0}, {header: 1});
   const intentHeaderIdx = intentRaw.findIndex(r => r[0] === 'intentId');
@@ -32,29 +32,29 @@ function run() {
     const records = intentRaw.slice(intentHeaderIdx + 1).filter(r => r.length > 0 && r[0]);
     intentSet = new Set(records.map(r => r[0]));
   }
-  
+
   let errors = 0;
   const logError = (msg) => { console.error(`[ERROR] ${msg}`); errors++; };
 
   // Core counts
   if (stagedTools.length !== 882) logError(`Expected 882 records, got ${stagedTools.length}`);
-  
+
   let dirEligible = 0;
   let recEligible = 0;
   let opActive = 0;
   let criticalHold = 0;
   let dupOfId = 0;
-  
+
   const idSet = new Set();
   const urlSet = new Set();
-  
+
   let freeTrialTrue = 0;
   let freeTrialFalse = 0;
   let freeTrialNull = 0;
-  
+
   let priceNumber = 0;
   let priceNull = 0;
-  
+
   const recIneligibleIds = [];
 
   stagedTools.forEach((tool, i) => {
@@ -65,7 +65,7 @@ function run() {
       if (idSet.has(tool.id)) logError(`Duplicate ID: ${tool.id}`);
       idSet.add(tool.id);
     }
-    
+
     if (tool.website_url) {
       if (urlSet.has(tool.website_url)) logError(`Duplicate canonical URL on ${tool.id}: ${tool.website_url}`);
       urlSet.add(tool.website_url);
@@ -73,22 +73,22 @@ function run() {
 
     // Schema
     if (tool.schemaVersion !== 'catalog-2.0-rc4') logError(`Invalid schemaVersion on ${tool.id}: ${tool.schemaVersion}`);
-    
+
     // Lifecycle
     if (tool.directoryEligible) dirEligible++;
     if (tool.recommendationEligible) recEligible++;
     else recIneligibleIds.push(tool.id);
-    
+
     if (tool.operationalStatus === 'active') opActive++;
     if (tool.criticalHold === true) criticalHold++;
     if (tool.duplicateOfId) dupOfId++;
-    
+
     // Taxonomy Validation
     // CatSet from Catalog primaryCategory mapping (since Categories sheet might be different)
     // Actually, just check against known 10 categories
     const validCats = ["Development", "Automation", "Business", "Marketing", "Design", "Video & Audio", "Content Creation", "Productivity", "Education", "Research"];
     if (!validCats.includes(tool.primaryCategory)) logError(`Invalid category on ${tool.id}: ${tool.primaryCategory}`);
-    
+
     if (Array.isArray(tool.finderIntentIds) && intentSet.size > 0) {
       tool.finderIntentIds.forEach(id => {
         if (!intentSet.has(id)) logError(`Invalid finderIntentId on ${tool.id}: ${id}`);
@@ -102,19 +102,19 @@ function run() {
         logError(`${field} is not an array on ${tool.id}: type is ${typeof tool[field]}`);
       }
     });
-    
+
     // Boolean fields check
     const boolFields = ['hasFreeTier', 'apiAvailable', 'openSource', 'selfHosted'];
     boolFields.forEach(bf => {
       if (tool[bf] !== true && tool[bf] !== false && tool[bf] !== null) logError(`Invalid boolean for ${bf} on ${tool.id}: ${tool[bf]}`);
     });
-    
+
     // Null semantics
     if (tool.hasFreeTrial === true) freeTrialTrue++;
     else if (tool.hasFreeTrial === false) freeTrialFalse++;
     else if (tool.hasFreeTrial === null) freeTrialNull++;
     else logError(`Invalid hasFreeTrial on ${tool.id}: ${tool.hasFreeTrial}`);
-    
+
     if (typeof tool.startingPrice === 'number') {
       priceNumber++;
       // Dependencies
@@ -139,7 +139,7 @@ function run() {
   if (priceNumber !== 67 || priceNull !== 815) {
     logError(`startingPrice counts wrong. Expected 67/815. Got ${priceNumber}/${priceNull}`);
   }
-  
+
   // References check
   stagedTools.forEach(tool => {
     if (tool.successorToolId && !idSet.has(tool.successorToolId)) {
@@ -154,7 +154,7 @@ function run() {
   const oldTools = JSON.parse(fs.readFileSync(OLD_PATH, 'utf8'));
   const removedIds = oldTools.map(t => t.id).filter(id => !idSet.has(id));
   if (removedIds.length !== 20) logError(`Expected 20 removed IDs, found ${removedIds.length}`);
-  
+
   // Whitelist stats
   const wlStats = {};
   WHITELIST_FIELDS.forEach(f => wlStats[f] = 0);
@@ -168,18 +168,53 @@ function run() {
   const catalogRaw = XLSX.utils.sheet_to_json(workbook.Sheets['Catalog'], { defval: null });
   const wbMap = new Map(catalogRaw.map(r => [r.id, r]));
   let authErrors = 0;
-  
+
   stagedTools.forEach(tool => {
     const orig = wbMap.get(tool.id);
     if (!orig) return; // handled by ID check
-    
+
     if (tool.canonicalName !== orig.canonicalName) { logError(`canonicalName overwritten on ${tool.id}`); authErrors++; }
     if (tool.primaryCategory !== orig.primaryCategory) { logError(`primaryCategory overwritten on ${tool.id}`); authErrors++; }
-    if (orig.website_url !== 'null' && orig.website_url !== null && orig.website_url !== '' && tool.website_url !== orig.website_url) { 
-        logError(`website_url overwritten on ${tool.id}`); authErrors++; 
+    if (orig.website_url !== 'null' && orig.website_url !== null && orig.website_url !== '' && tool.website_url !== orig.website_url) {
+        logError(`website_url overwritten on ${tool.id}`); authErrors++;
     }
     if (tool.pricingModel !== orig.pricingModel) { logError(`pricingModel overwritten on ${tool.id}`); authErrors++; }
   });
+
+  // Evidence Ledger Validation
+  const EVIDENCE_LEDGER_PATH = path.resolve('data/evidence/phase11-evidence-ledger.json');
+  if (!fs.existsSync(EVIDENCE_LEDGER_PATH)) {
+    logError(`Evidence Ledger artifact not found at ${EVIDENCE_LEDGER_PATH}`);
+  } else {
+    const ledger = JSON.parse(fs.readFileSync(EVIDENCE_LEDGER_PATH, 'utf8'));
+    const ledgerMap = new Map();
+    const seenIds = new Set();
+
+    ledger.forEach(r => {
+      if (!r.evidenceId) logError(`Ledger row missing evidenceId: ${JSON.stringify(r)}`);
+      if (seenIds.has(r.evidenceId)) logError(`Duplicate Ledger ID: ${r.evidenceId}`);
+      seenIds.add(r.evidenceId);
+
+      if (!r.id) logError(`Ledger row missing id (Tool ID): ${r.evidenceId}`);
+      if (!r.reviewedAt) logError(`Ledger row missing reviewedAt: ${r.evidenceId}`);
+      if (!r.method) logError(`Ledger row missing method: ${r.evidenceId}`);
+      // Contract says sourceURL is needed where required. Most have it.
+
+      ledgerMap.set(r.evidenceId, r);
+    });
+
+    stagedTools.forEach(tool => {
+      const cIds = tool.evidenceIds || [];
+      cIds.forEach(id => {
+        const lRow = ledgerMap.get(id);
+        if (!lRow) {
+          logError(`Unresolved Evidence ID: ${id} on tool ${tool.id}`);
+        } else if (lRow.id !== tool.id) {
+          logError(`Tool-to-ledger mismatch: ${id} mapped to ${lRow.id}, expected ${tool.id}`);
+        }
+      });
+    });
+  }
 
   if (errors > 0) {
     console.error(`\n[FAIL] Validation failed with ${errors} errors.`);

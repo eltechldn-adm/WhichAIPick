@@ -1,0 +1,13 @@
+{
+  "sourceWorkbook": "WhichAIPick_Catalog_PHASE5_PRICING_DEPTH_COMPLETE_2026-09-30.xlsx",
+  "sourceWorkbookSha256": "8740b78d9ae04e00f71d75d22b6c47a5ca7c62ecf446e4a67cbaa19c7e78e0d8",
+  "sourceSheet": "Evidence Ledger",
+  "ledgerRows": 1331,
+  "uniqueEvidenceIds": 1331,
+  "phase11ReferencedEvidenceIds": 1291,
+  "resolvedEvidenceIds": 1291,
+  "missingEvidenceIds": 0,
+  "historicalExtraEvidenceIds": 40,
+  "catalogSchema": "catalog-2.0-rc4",
+  "recoveryDate": "2026-10-02"
+}
