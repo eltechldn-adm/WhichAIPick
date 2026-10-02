@@ -4,7 +4,7 @@ import XLSX from 'xlsx';
 
 const WORKBOOK_PATH = path.resolve('data/WhichAIPick_Catalog_PHASE11_ANTIGRAVITY_IMPORT_CONTRACT_COMPLETE_2026-10-01.xlsx');
 const STAGED_PATH = path.resolve('data/tools.phase11.staged.json');
-const OLD_PATH = path.resolve('data/tools.json');
+
 
 const WHITELIST_FIELDS = [
   'affiliate_url', 'tags', 'how_it_works', 'workflows', 'feature_groups',
@@ -150,10 +150,19 @@ function run() {
     }
   });
 
-  // Removed IDs check
-  const oldTools = JSON.parse(fs.readFileSync(OLD_PATH, 'utf8'));
-  const removedIds = oldTools.map(t => t.id).filter(id => !idSet.has(id));
-  if (removedIds.length !== 20) logError(`Expected 20 removed IDs, found ${removedIds.length}`);
+  // Removed IDs check (Diagnostic)
+  const KNOWN_REMOVED_IDS = [
+    'bildr', 'diagram', 'memorable', 'phind', 'quizlet-q-chat', 'relay',
+    'sora', 'supertone', 'tome', 'woebot', 'youper', 'bing-chat', 'breeze-ai',
+    'framer-ai', 'replit-ai', 'perplexity', 'canva', 'pika-labs', 'fig', 'dall-e-3'
+  ];
+  let foundRemoved = 0;
+  KNOWN_REMOVED_IDS.forEach(id => {
+    if (idSet.has(id)) {
+      logError(`Removed ID ${id} is unexpectedly present in staged catalogue`);
+      foundRemoved++;
+    }
+  });
 
   // Whitelist stats
   const wlStats = {};

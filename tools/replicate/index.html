@@ -58,7 +58,7 @@
   "name": "Replicate",
   "applicationCategory": "Development Software",
   "operatingSystem": "Web",
-  "url": "https://replicate.com",
+  "url": "https://replicate.com/",
   "description": "Replicate is a foundational, highly technical cloud infrastructure platform engineered to completely democratize access to the world's most powerful open-sourc…",
   "offers": {
     "@type": "Offer",
@@ -196,7 +196,7 @@
           <div class="tool-summary">
             <p>Replicate is a foundational, highly technical cloud infrastructure platform engineered to completely democratize access to the world's most powerful open-source machine learning models. Historically, if a developer wanted to run a large-scale, 70-billion parameter AI model like Llama 3 or Stable Diffusion, they had to agonizingly rent expensive AWS GPUs, configure complex Docker containers, manage CUDA drivers, and write large-scale boilerplate code. Replicate completely eliminates this dev-ops friction. It allows software engineers to run large-scale, complex AI models remotely via a single, simple API call, utilizing Replicate's large-scale, autoscaling GPU infrastructure.</p><p>Its primary differentiator is its "Frictionless Open-Source Deployment." Replicate acts as an elite, large-scale scalable catalog of the global open-source AI community. A developer can browse thousands of state-of-the-art models (for audio generation, video upscaling, text generation, and image manipulation), click one button to get an API endpoint, and instantly integrate that specific AI capability into their own SaaS app with three lines of Python or Node.js code.</p><p>It is heavily utilized by AI startup founders rapidly prototyping new applications without raising millions in venture capital to buy physical servers, backend engineers injecting complex image-processing capabilities into existing software, and machine learning researchers sharing their custom-trained models with the global public.</p>
           </div>
-          <a href="https://replicate.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Replicate</a>
+          <a href="https://replicate.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Replicate</a>
           <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
             <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
           </div>
@@ -211,6 +211,16 @@
             <li>Software Engineers building complex AI-native applications without infrastructure budgets</li>
             <li>AI Hackathon developers requiring instant, multi-modal capabilities</li>
             <li>Machine Learning researchers publicly deploying and sharing their novel architectures</li>
+          </ul>
+        </div>
+
+        <!-- Not Ideal For -->
+        <div class="tool-section">
+          <h2>Not Ideal For</h2>
+          <ul class="tool-notidealfor-list">
+            <li>Because it fundamentally relies on cloud execution, developers building apps that require established, zero-latency instantaneous response times (like a self-driving car algorithm) cannot rely on the ping-latency of a remote API</li>
+            <li>Sending highly classified, proprietary corporate data to a third-party cloud infrastructure to be processed by public open-source models creates large-scale, unresolvable security compliance issues for Fortune 500 banks or defense contractors</li>
+            <li>If an obscure, unpopular model has not been used recently, it experiences a &quot;Cold Boot&quot; delay, frequently causing the first API call to take 30 to 60 seconds to execute while the remote server spins up</li>
           </ul>
         </div>
 
@@ -265,7 +275,7 @@
 
         <!-- Bottom CTA -->
         <div class="tool-section tool-cta-section">
-          <a href="https://replicate.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Visit Replicate</a>
+          <a href="https://replicate.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Visit Replicate</a>
           <p class="tool-back-to-cat"><a href="/category/development/">Browse more Development tools →</a></p>
         </div>
 

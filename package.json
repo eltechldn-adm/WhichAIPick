@@ -7,7 +7,7 @@
     "catalog:phase11:validate": "node scripts/validate-phase11-staged.mjs",
     "dev": "wrangler pages dev . --port 8080 --local",
     "clean-cache": "echo Clear browser cache manually (DevTools → Disable cache)",
-    "build:data": "node scripts/convert-xlsx-to-tools-json.mjs && npm run validate:data",
+    "build:data": "npm run catalog:phase11:stage && cp data/tools.phase11.staged.json data/tools.json && npm run validate:data",
     "validate:data": "node scripts/validate-data.mjs",
     "validate:seo": "node scripts/seo-health-audit.mjs",
     "validate:sitemap": "node scripts/validate-sitemap.mjs",
@@ -28,11 +28,11 @@
   },
   "dependencies": {
     "playwright": "^1.63.0",
-    "sharp": "^0.33.0",
+    "sharp": "^0.35.5",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "cheerio": "^1.2.0",
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.147.0"
   }
 }

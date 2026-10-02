@@ -216,6 +216,7 @@ function buildToolPage(tool) {
   const prosList  = buildList(tool.pros || [], 'tool-pros-list');
   const consList  = buildList(tool.cons || [], 'tool-cons-list');
   const bestFor   = buildList(tool.best_for || [], 'tool-bestfor-list');
+  const notIdealForList = buildList(tool.notIdealFor || [], 'tool-notidealfor-list');
 
   // Feature groups
   let featuresHtml = '';
@@ -376,6 +377,12 @@ function buildToolPage(tool) {
           ${bestFor}
         </div>` : ''}
 
+        <!-- Not Ideal For -->
+        ${(tool.notIdealFor && tool.notIdealFor.length > 0) ? `<div class="tool-section">
+          <h2>Not Ideal For</h2>
+          ${notIdealForList}
+        </div>` : ''}
+
         <!-- Main Description / How It Works -->
         ${howHtml}
 
@@ -441,8 +448,7 @@ function buildToolCardHTML(tool) {
         logoHTML = `<div class="tool-logo-initials">${escAttr(initials)}</div>`;
     }
 
-    return `<div class="tool-card">
-      ${priceBadgeHTML}
+    return `<div class="tool-card">${priceBadgeHTML ? '\n      ' + priceBadgeHTML : ''}
       <div class="tool-card-top ${priceBadgeHTML ? '' : 'tool-card-top--no-badge'}">
         <div class="tool-logo-wrap">${logoHTML}</div>
         <div class="tool-card-meta">

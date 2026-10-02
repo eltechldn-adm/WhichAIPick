@@ -377,12 +377,13 @@
         }).join('');
 
         // Remove inline styles and use global grid class + specific directory modifier
-        gridEl.className = 'tools-grid category-directory-grid';
-        gridEl.style.display = '';
-        gridEl.style.gridTemplateColumns = '';
-        gridEl.style.gap = '';
-
-        gridEl.innerHTML = categoryList;
+        if (gridEl) {
+          gridEl.className = 'tools-grid category-directory-grid';
+          gridEl.style.display = '';
+          gridEl.style.gridTemplateColumns = '';
+          gridEl.style.gap = '';
+          gridEl.innerHTML = categoryList;
+        }
 
         const titleEl = document.getElementById('category-title');
         const descEl = document.getElementById('category-description');

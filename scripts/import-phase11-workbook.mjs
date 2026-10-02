@@ -81,6 +81,7 @@ function run() {
       }
     }
 
+
     // Process JSON array fields
     JSON_FIELDS.forEach(field => {
       if (typeof staged[field] === 'string') {

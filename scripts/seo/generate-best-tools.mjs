@@ -24,9 +24,7 @@ function generateToolCard(tool, editorialContext) {
         : '';
 
     return `<div class="tool-card">
-      ${priceBadgeHTML}
-      <div class="tool-card-top ${priceBadgeHTML ? '' : 'tool-card-top--no-badge'}">
-        
+${priceBadgeHTML ? '      ' + priceBadgeHTML + '\n' : ''}      <div class="tool-card-top ${priceBadgeHTML ? '' : 'tool-card-top--no-badge'}">
         <div class="tool-card-meta">
           <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
             <h2 class="tool-card-title"><a href="/tools/${tool.id}/">${tool.name}</a></h2>
@@ -35,13 +33,13 @@ function generateToolCard(tool, editorialContext) {
             </button>
           </div>
           <div class="tool-card-category">${tool.category || 'Uncategorized'}</div>
-          
+
           <p class="tool-card-desc">${tool.short_description || tool.long_description?.substring(0, 100) + '...' || ''}</p>
-          
+
           <div class="tool-card-tags">
             ${useCasesHTML}
           </div>
-          
+
           <!-- SEO Editorial Context -->
           <div class="seo-tool-context" style="margin-top: 1rem; padding: 1rem; background: rgba(0, 240, 255, 0.05); border-left: 2px solid var(--accent-cyan); border-radius: 0 8px 8px 0; font-size: 0.875rem;">
             <strong>Why it fits:</strong> ${editorialContext}
@@ -56,10 +54,10 @@ function generateToolCard(tool, editorialContext) {
 }
 
 function generateBreadcrumbs(title, slug) {
-    return `<span><a href="/">Home</a></span> 
-            <span class="separator">/</span> 
-            <span><a href="/best-ai-tools/">Best AI Tools</a></span> 
-            <span class="separator">/</span> 
+    return `<span><a href="/">Home</a></span>
+            <span class="separator">/</span>
+            <span><a href="/best-ai-tools/">Best AI Tools</a></span>
+            <span class="separator">/</span>
             <span style="color: var(--text-color);">${title}</span>
             <script type="application/ld+json">
             {

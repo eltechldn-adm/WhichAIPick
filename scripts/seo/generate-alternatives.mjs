@@ -23,8 +23,7 @@ function generateToolCard(tool, editorialContext) {
         : '';
 
     return `<div class="tool-card">
-      ${priceBadgeHTML}
-      <div class="tool-card-top ${priceBadgeHTML ? '' : 'tool-card-top--no-badge'}">
+${priceBadgeHTML ? '      ' + priceBadgeHTML + '\n' : ''}      <div class="tool-card-top ${priceBadgeHTML ? '' : 'tool-card-top--no-badge'}">
         <div class="tool-card-meta">
           <div class="tool-card-meta-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
             <h2 class="tool-card-title"><a href="/tools/${tool.id}/">${tool.name}</a></h2>
@@ -48,10 +47,10 @@ function generateToolCard(tool, editorialContext) {
 }
 
 function generateBreadcrumbs(title, slug) {
-    return `<span><a href="/">Home</a></span> 
-            <span class="separator">/</span> 
-            <span><a href="/alternatives/">Alternatives</a></span> 
-            <span class="separator">/</span> 
+    return `<span><a href="/">Home</a></span>
+            <span class="separator">/</span>
+            <span><a href="/alternatives/">Alternatives</a></span>
+            <span class="separator">/</span>
             <span style="color: var(--text-color);">${title}</span>
             <script type="application/ld+json">
             {

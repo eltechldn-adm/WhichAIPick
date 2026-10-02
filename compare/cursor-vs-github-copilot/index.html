@@ -291,22 +291,22 @@
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 1rem; font-weight: bold;">Pricing Model</td>
                         <td style="padding: 1rem;">freemium</td>
-                        <td style="padding: 1rem;">paid</td>
+                        <td style="padding: 1rem;">freemium</td>
                     </tr>
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 1rem; font-weight: bold;">Free Tier</td>
                         <td style="padding: 1rem;">✅ Yes</td>
-                        <td style="padding: 1rem;">❌ No</td>
+                        <td style="padding: 1rem;">✅ Yes</td>
                     </tr>
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 1rem; font-weight: bold;">Primary Use Cases</td>
-                        <td style="padding: 1rem;">ai powered code editor, chat with codebase, fixing bugs instantly, refactoring files, understanding legacy code</td>
-                        <td style="padding: 1rem;">code completion, suggestion logic, translating code comments, learning apis, pair programming</td>
+                        <td style="padding: 1rem;">agent-assisted code editing, cloud coding agent orchestration</td>
+                        <td style="padding: 1rem;">code completion, coding agent workflows, code review assistance</td>
                     </tr>
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 1rem; font-weight: bold;">Target Users</td>
-                        <td style="padding: 1rem;">unknown</td>
-                        <td style="padding: 1rem;">unknown</td>
+                        <td style="padding: 1rem;">mixed</td>
+                        <td style="padding: 1rem;">mixed</td>
                     </tr>
                     <tr>
                         <td style="padding: 1rem;"></td>
@@ -424,12 +424,13 @@
         }).join('');
 
         // Remove inline styles and use global grid class + specific directory modifier
-        gridEl.className = 'tools-grid category-directory-grid';
-        gridEl.style.display = '';
-        gridEl.style.gridTemplateColumns = '';
-        gridEl.style.gap = '';
-
-        gridEl.innerHTML = categoryList;
+        if (gridEl) {
+          gridEl.className = 'tools-grid category-directory-grid';
+          gridEl.style.display = '';
+          gridEl.style.gridTemplateColumns = '';
+          gridEl.style.gap = '';
+          gridEl.innerHTML = categoryList;
+        }
 
         const titleEl = document.getElementById('category-title');
         const descEl = document.getElementById('category-description');

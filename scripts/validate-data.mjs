@@ -45,7 +45,7 @@ const aiBoilerplate = [
 
 // Documented Machine-Readable Enums
 const validPricingModels      = new Set(['free', 'freemium', 'paid', 'enterprise', 'unknown']);
-const validExperienceLevels   = new Set(['beginner', 'intermediate', 'advanced', 'mixed', 'unknown']);
+const validExperienceLevels   = new Set(['beginner', 'intermediate', 'advanced', 'all_levels', 'unknown']);
 const validTargetUsers        = new Set(['individual', 'team', 'enterprise', 'mixed', 'unknown', 'developers', 'professionals', 'researchers', 'designers', 'marketers', 'creators']);
 // 4A.1: operationalStatus and transitionType replace the monolithic lifecycleStatus
 const validOperationalStatuses = new Set(['active', 'discontinued', 'unavailable', 'unknown']);

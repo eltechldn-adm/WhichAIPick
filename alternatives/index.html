@@ -147,7 +147,7 @@
 </header>
 </div>
 
-  <main class="seo-alternatives-page"><div class="container" style="padding: 6rem 0;"><div class="seo-breadcrumbs" style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; align-items: center; font-size: 0.875rem; color: var(--text-muted);"><span><a href="/" style="color: var(--accent-cyan); text-decoration: none;">Home</a></span> <span class="separator" style="opacity: 0.5;">/</span> <span style="color: var(--text-color);">Alternatives</span><script type="application/ld+json">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Home","item": "https://whichaipick.com/"},{"@type": "ListItem","position": 2,"name": "Alternatives","item": "https://whichaipick.com/alternatives/"}]}</script></div><h1>AI Tool Alternatives</h1><ul><li><a href="/alternatives/cursor/" style="color: var(--accent-cyan);">Best Cursor Alternatives in 2026</a></li><li><a href="/alternatives/perplexity/" style="color: var(--accent-cyan);">Best Perplexity AI Alternatives in 2026</a></li><li><a href="/alternatives/claude/" style="color: var(--accent-cyan);">Best Claude Alternatives in 2026</a></li><li><a href="/alternatives/chatgpt/" style="color: var(--accent-cyan);">Best ChatGPT Alternatives in 2026</a></li><li><a href="/alternatives/midjourney/" style="color: var(--accent-cyan);">Best Midjourney Alternatives in 2026</a></li></ul></div></main>
+  <main class="seo-alternatives-page"><div class="container" style="padding: 6rem 0;"><div class="seo-breadcrumbs" style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; align-items: center; font-size: 0.875rem; color: var(--text-muted);"><span><a href="/" style="color: var(--accent-cyan); text-decoration: none;">Home</a></span> <span class="separator" style="opacity: 0.5;">/</span> <span style="color: var(--text-color);">Alternatives</span><script type="application/ld+json">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Home","item": "https://whichaipick.com/"},{"@type": "ListItem","position": 2,"name": "Alternatives","item": "https://whichaipick.com/alternatives/"}]}</script></div><h1>AI Tool Alternatives</h1><ul><li><a href="/alternatives/cursor/" style="color: var(--accent-cyan);">Best Cursor Alternatives in 2026</a></li><li><a href="/alternatives/perplexity-ai/" style="color: var(--accent-cyan);">Best Perplexity AI Alternatives in 2026</a></li><li><a href="/alternatives/claude/" style="color: var(--accent-cyan);">Best Claude Alternatives in 2026</a></li><li><a href="/alternatives/chatgpt/" style="color: var(--accent-cyan);">Best ChatGPT Alternatives in 2026</a></li><li><a href="/alternatives/midjourney/" style="color: var(--accent-cyan);">Best Midjourney Alternatives in 2026</a></li></ul></div></main>
 
 
   <div id="site-footer">
@@ -251,12 +251,13 @@
         }).join('');
 
         // Remove inline styles and use global grid class + specific directory modifier
-        gridEl.className = 'tools-grid category-directory-grid';
-        gridEl.style.display = '';
-        gridEl.style.gridTemplateColumns = '';
-        gridEl.style.gap = '';
-
-        gridEl.innerHTML = categoryList;
+        if (gridEl) {
+          gridEl.className = 'tools-grid category-directory-grid';
+          gridEl.style.display = '';
+          gridEl.style.gridTemplateColumns = '';
+          gridEl.style.gap = '';
+          gridEl.innerHTML = categoryList;
+        }
 
         const titleEl = document.getElementById('category-title');
         const descEl = document.getElementById('category-description');

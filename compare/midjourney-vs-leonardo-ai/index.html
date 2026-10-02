@@ -300,13 +300,13 @@
                     </tr>
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 1rem; font-weight: bold;">Primary Use Cases</td>
-                        <td style="padding: 1rem;">high-end artistic generation, photorealistic images, logo & branding concepts, texture creation, creative inspiration</td>
+                        <td style="padding: 1rem;">AI image creation, AI video generation</td>
                         <td style="padding: 1rem;">game asset generation, creating character art, concept art generation, training custom models, high quality image synthesis</td>
                     </tr>
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <td style="padding: 1rem; font-weight: bold;">Target Users</td>
-                        <td style="padding: 1rem;">unknown</td>
-                        <td style="padding: 1rem;">unknown</td>
+                        <td style="padding: 1rem;">mixed</td>
+                        <td style="padding: 1rem;">mixed</td>
                     </tr>
                     <tr>
                         <td style="padding: 1rem;"></td>
@@ -424,12 +424,13 @@
         }).join('');
 
         // Remove inline styles and use global grid class + specific directory modifier
-        gridEl.className = 'tools-grid category-directory-grid';
-        gridEl.style.display = '';
-        gridEl.style.gridTemplateColumns = '';
-        gridEl.style.gap = '';
-
-        gridEl.innerHTML = categoryList;
+        if (gridEl) {
+          gridEl.className = 'tools-grid category-directory-grid';
+          gridEl.style.display = '';
+          gridEl.style.gridTemplateColumns = '';
+          gridEl.style.gap = '';
+          gridEl.innerHTML = categoryList;
+        }
 
         const titleEl = document.getElementById('category-title');
         const descEl = document.getElementById('category-description');

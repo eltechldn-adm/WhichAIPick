@@ -82,7 +82,7 @@ if (branch !== 'main' && branch !== 'production') {
         } else {
             headersContent += `\n/*\n${previewRobotsTag}`;
         }
-        fs.writeFileSync(headersPath, headersContent, 'utf8');
+        fs.writeFileSync(headersPath, headersContent.trimEnd() + '\n', 'utf8');
     }
     console.log('🔒 Preview Environment Detected. Appended noindex to _headers.');
 } else {
