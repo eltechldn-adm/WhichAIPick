@@ -6,7 +6,34 @@
     "url": "https://openai.com/chatgpt/pricing",
     "sourceType": "Official Pricing Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-images",
+    "publisher": "OpenAI",
+    "title": "ChatGPT Image Generation",
+    "url": "https://help.openai.com/en/articles/8357416-how-to-use-chatgpt-images",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-voice",
+    "publisher": "OpenAI",
+    "title": "Advanced Voice Mode in ChatGPT",
+    "url": "https://help.openai.com/en/articles/8400625-voice-conversations-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-search",
+    "publisher": "OpenAI",
+    "title": "Browsing with ChatGPT",
+    "url": "https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-claude-pricing",
@@ -15,7 +42,25 @@
     "url": "https://www.anthropic.com/pricing",
     "sourceType": "Official Pricing Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-claude-artifacts",
+    "publisher": "Anthropic",
+    "title": "Using Artifacts in Claude",
+    "url": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-gemini-workspace",
+    "publisher": "Google",
+    "title": "Use Gemini in Google Workspace",
+    "url": "https://support.google.com/gemini/answer/13695044",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-gemini-pricing",
@@ -24,7 +69,7 @@
     "url": "https://gemini.google.com/advanced",
     "sourceType": "Official Product Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-perplexity-pro",
@@ -33,7 +78,7 @@
     "url": "https://www.perplexity.ai/pro",
     "sourceType": "Official Product Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-cursor-pricing",
@@ -42,16 +87,34 @@
     "url": "https://cursor.com/pricing",
     "sourceType": "Official Pricing Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-cursor-composer",
+    "publisher": "Cursor",
+    "title": "Cursor Composer",
+    "url": "https://docs.cursor.com/composer",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-copilot-agents",
+    "publisher": "GitHub",
+    "title": "GitHub Copilot Workspace and Agents",
+    "url": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-workspace",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-copilot-pricing",
     "publisher": "GitHub",
-    "title": "GitHub Copilot",
+    "title": "GitHub Copilot Pricing",
     "url": "https://github.com/features/copilot",
     "sourceType": "Official Product Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-replit-pricing",
@@ -60,7 +123,7 @@
     "url": "https://replit.com/pricing",
     "sourceType": "Official Pricing Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-lovable-pricing",
@@ -69,7 +132,16 @@
     "url": "https://lovable.dev/pricing",
     "sourceType": "Official Pricing Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-lovable-supabase",
+    "publisher": "Lovable",
+    "title": "Lovable Supabase Integration",
+    "url": "https://docs.lovable.dev/integrations/supabase",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-bolt-docs",
@@ -78,7 +150,16 @@
     "url": "https://bolt.new/docs",
     "sourceType": "Official Documentation",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-midjourney-web",
+    "publisher": "Midjourney",
+    "title": "Midjourney Web Interface",
+    "url": "https://docs.midjourney.com/docs/web",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-midjourney-docs",
@@ -87,7 +168,16 @@
     "url": "https://docs.midjourney.com/docs/quick-start",
     "sourceType": "Official Documentation",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-midjourney-pricing",
+    "publisher": "Midjourney",
+    "title": "Midjourney Subscriptions",
+    "url": "https://docs.midjourney.com/docs/plans",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   },
   {
     "sourceId": "src-leonardo-pricing",
@@ -96,6 +186,15 @@
     "url": "https://leonardo.ai/pricing/",
     "sourceType": "Official Pricing Page",
     "publishedAt": null,
-    "checkedAt": "2026-10-03"
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-leonardo-canvas",
+    "publisher": "Leonardo AI",
+    "title": "Leonardo AI Realtime Canvas",
+    "url": "https://docs.leonardo.ai/docs/realtime-canvas",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
   }
 ]
