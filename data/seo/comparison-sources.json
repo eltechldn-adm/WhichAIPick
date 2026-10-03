@@ -102,7 +102,7 @@
     "sourceId": "src-copilot-agents",
     "publisher": "GitHub",
     "title": "GitHub Copilot Workspace and Agents",
-    "url": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-workspace",
+    "url": "https://docs.github.com/en/copilot/github-copilot-workspace/about-github-copilot-workspace",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-10-04"
@@ -155,8 +155,8 @@
   {
     "sourceId": "src-midjourney-web",
     "publisher": "Midjourney",
-    "title": "Midjourney Web Interface",
-    "url": "https://docs.midjourney.com/docs/web",
+    "title": "Midjourney Web Alpha",
+    "url": "https://help.midjourney.com/en/articles/9329008-creating-images-on-the-website",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-10-04"

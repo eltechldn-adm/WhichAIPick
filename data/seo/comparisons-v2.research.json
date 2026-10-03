@@ -10,7 +10,7 @@
     "metaDescription": "Compare ChatGPT and Claude across pricing, workflows, capabilities, and who each is best suited to.",
     "quickAnswer": [
       {
-        "text": "Choose ChatGPT if you need strong web research, native image generation, and data analysis.",
+        "text": "Choose ChatGPT if you need native web research, native image generation, and data analysis.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-chatgpt-search",
@@ -18,7 +18,7 @@
         ]
       },
       {
-        "text": "Choose Claude if you handle long documents or value an integrated coding UI.",
+        "text": "Choose Claude if you handle large documents (supported by 200K context) or value an integrated coding UI.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-claude-artifacts"
@@ -44,7 +44,7 @@
       },
       {
         "topic": "Context Window",
-        "description": "Claude offers a 200k token window natively.",
+        "description": "Paid Claude plans support large context windows; the standard paid experience commonly supports 200K. ChatGPT offers a 128K context window.",
         "sourceIds": [
           "src-claude-pricing"
         ]
@@ -61,8 +61,8 @@
     "useCaseDecisions": [
       {
         "useCase": "Coding",
-        "toolAFit": "Good for general scripting and data analysis.",
-        "toolBFit": "Excellent for immediate preview of code output via Artifacts.",
+        "toolAFit": "Supports general scripting and data analysis.",
+        "toolBFit": "Well suited when immediate preview of code output via Artifacts.",
         "reason": "Claude's Artifacts feature allows immediate preview of UI code.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -142,7 +142,7 @@
     "faqCandidates": [
       {
         "question": "Which is better for coding?",
-        "answer": "Claude is widely preferred for coding due to its Artifacts UI, while ChatGPT is strong for data analysis.",
+        "answer": "Claude is often utilized for coding due to its Artifacts UI, while ChatGPT is strong for data analysis.",
         "sourceIds": [
           "src-claude-artifacts",
           "src-chatgpt-pricing"
@@ -192,7 +192,7 @@
     "metaDescription": "Compare ChatGPT and Gemini across pricing, workflows, capabilities, and who each is best suited to.",
     "quickAnswer": [
       {
-        "text": "Choose ChatGPT if you need strong web research, native image generation, and standalone data analysis.",
+        "text": "Choose ChatGPT if you need native web research, native image generation, and standalone data analysis.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-chatgpt-search",
@@ -229,7 +229,7 @@
       {
         "useCase": "Research",
         "toolAFit": "Excellent web search.",
-        "toolBFit": "Great for searching through your Google Drive documents.",
+        "toolBFit": "Supports searching through your Google Drive documents.",
         "reason": "Gemini's Workspace integration allows finding personal files easily.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -337,7 +337,7 @@
         ]
       },
       {
-        "text": "Choose Perplexity if you need a citation-first answer engine for real-time web research.",
+        "text": "Choose Perplexity if you need a citation-focused answer engine for real-time web research.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-perplexity-pro"
@@ -365,8 +365,8 @@
     "useCaseDecisions": [
       {
         "useCase": "Research",
-        "toolAFit": "Good for exploring topics broadly.",
-        "toolBFit": "Excellent for finding specific facts with verifiable citations.",
+        "toolAFit": "Supports exploring topics broadly.",
+        "toolBFit": "Supports finding specific facts with verifiable citations.",
         "reason": "Perplexity is designed primarily as a search and answer engine.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -382,7 +382,7 @@
     ],
     "chooseToolBIf": [
       {
-        "condition": "You need citations for every claim.",
+        "condition": "You want citation-focused answers for web research.",
         "claimId": "perplexity-citations"
       }
     ],
@@ -406,7 +406,7 @@
       },
       {
         "claimId": "perplexity-citations",
-        "claim": "Perplexity focuses on providing citations for its answers.",
+        "claim": "Perplexity focuses on citation-linked answers.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
@@ -504,8 +504,8 @@
     "useCaseDecisions": [
       {
         "useCase": "Coding",
-        "toolAFit": "Excellent for whole-codebase understanding and agentic edits via Composer.",
-        "toolBFit": "Great for inline autocomplete, chat, and GitHub-integrated agentic workspaces.",
+        "toolAFit": "Well suited when whole-codebase understanding and agentic edits via Composer.",
+        "toolBFit": "Supports inline autocomplete, chat, and GitHub-integrated agentic workspaces.",
         "reason": "Both support agentic features, but Cursor is built from the ground up as an AI-first IDE.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -641,8 +641,8 @@
     "useCaseDecisions": [
       {
         "useCase": "App building",
-        "toolAFit": "Great for developers who want a cloud workspace.",
-        "toolBFit": "Great for users looking to generate UIs via prompts.",
+        "toolAFit": "Supports developers who want a cloud workspace.",
+        "toolBFit": "Supports users looking to generate UIs via prompts.",
         "reason": "Lovable generates code in the background based on natural language.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -715,7 +715,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 25,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -724,7 +724,7 @@
       },
       "toolB": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -779,8 +779,8 @@
     "useCaseDecisions": [
       {
         "useCase": "App building",
-        "toolAFit": "Excellent for rapid UI prototyping with a Supabase backend.",
-        "toolBFit": "Excellent for building and running full-stack Node.js apps in the browser.",
+        "toolAFit": "Well suited when rapid UI prototyping with a Supabase backend.",
+        "toolBFit": "Well suited when building and running full-stack Node.js apps in the browser.",
         "reason": "Bolt's WebContainers allow executing arbitrary Node.js scripts locally.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -853,7 +853,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -862,7 +862,7 @@
       },
       "toolB": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -918,8 +918,8 @@
     "useCaseDecisions": [
       {
         "useCase": "Images",
-        "toolAFit": "Excellent for artistic and conceptual generation.",
-        "toolBFit": "Excellent for precise composition control and real-time generation.",
+        "toolAFit": "Well suited when artistic and conceptual generation.",
+        "toolBFit": "Well suited when precise composition control and real-time generation.",
         "reason": "Leonardo provides specialized tools like Realtime Canvas.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -930,7 +930,7 @@
     ],
     "chooseToolAIf": [
       {
-        "condition": "You prioritize Midjourney's distinct artistic generation style.",
+        "condition": "You prioritize Midjourney's distinct artistic style.",
         "claimId": "midjourney-style-ref"
       }
     ],
@@ -990,7 +990,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": false,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 10,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -999,7 +999,7 @@
       },
       "toolB": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 12,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -1009,7 +1009,7 @@
     }
   },
   {
-    "slug": "midjourney-vs-chatgpt",
+    "slug": "midjourney-vs-chatgpt-images",
     "tools": [
       "midjourney",
       "chatgpt"
@@ -1054,8 +1054,8 @@
     "useCaseDecisions": [
       {
         "useCase": "Images",
-        "toolAFit": "Excellent for professional art, concepts, and photography styles.",
-        "toolBFit": "Excellent for diagrams, conversational generation, and text-heavy images.",
+        "toolAFit": "Well suited when professional art, concepts, and photography styles.",
+        "toolBFit": "Well suited when diagrams, conversational generation, and text-heavy images.",
         "reason": "ChatGPT Images is optimized for following descriptive natural language prompts.",
         "confidence": "HIGH",
         "evidenceIds": [
@@ -1127,7 +1127,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": false,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 10,
         "currency": "USD",
         "billingBasis": "monthly",

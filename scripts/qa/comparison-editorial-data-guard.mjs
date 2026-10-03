@@ -8,6 +8,21 @@ function runGuard() {
     let errors = 0;
     const toolIds = new Set(toolsData.filter(t => t.directoryEligible).map(t => t.id));
     const sourceIds = new Set();
+    const sourceMap = new Map();
+
+    const domainAllowlist = {
+        'OpenAI': ['openai.com', 'help.openai.com'],
+        'Anthropic': ['anthropic.com', 'support.anthropic.com'],
+        'GitHub': ['github.com', 'docs.github.com'],
+        'Google': ['google.com', 'support.google.com', 'gemini.google.com'],
+        'Midjourney': ['midjourney.com', 'docs.midjourney.com', 'help.midjourney.com'],
+        'Perplexity': ['perplexity.ai'],
+        'Cursor': ['cursor.com', 'docs.cursor.com'],
+        'Replit': ['replit.com', 'docs.replit.com'],
+        'Lovable': ['lovable.dev', 'docs.lovable.dev'],
+        'StackBlitz': ['bolt.new', 'stackblitz.com'],
+        'Leonardo AI': ['leonardo.ai', 'docs.leonardo.ai']
+    };
 
     sources.forEach(src => {
         if (sourceIds.has(src.sourceId)) {
@@ -15,31 +30,61 @@ function runGuard() {
             errors++;
         }
         try {
-            new URL(src.url);
+            const url = new URL(src.url);
+            if (url.protocol !== 'https:') {
+                console.error(`[ERROR] Source URL must be HTTPS: ${src.sourceId}`);
+                errors++;
+            }
+            if (src.sourceType.startsWith('Official')) {
+                const allowedDomains = domainAllowlist[src.publisher];
+                if (!allowedDomains || !allowedDomains.some(domain => url.hostname === domain || url.hostname.endsWith('.' + domain))) {
+                    console.error(`[ERROR] Source ${src.sourceId} has publisher ${src.publisher} but URL hostname ${url.hostname} is not allowed.`);
+                    errors++;
+                }
+            }
         } catch(e) {
             console.error(`[ERROR] Invalid URL in source: ${src.sourceId}`);
             errors++;
         }
         sourceIds.add(src.sourceId);
+        sourceMap.set(src.sourceId, src);
     });
 
     const slugs = new Set();
     const claimIds = new Set();
 
     function checkSourceIds(slug, fieldName, sourceIdsArray, classification) {
+        let hasErrors = false;
         if (classification !== 'EDITORIAL INTERPRETATION' && (!sourceIdsArray || sourceIdsArray.length === 0)) {
             console.error(`[ERROR] ${slug} -> ${fieldName} lacks sources but is not an editorial interpretation`);
             errors++;
+            hasErrors = true;
         }
         if (Array.isArray(sourceIdsArray)) {
             sourceIdsArray.forEach(sid => {
                 if (!sourceIds.has(sid)) {
                     console.error(`[ERROR] ${slug} -> ${fieldName} references missing source: ${sid}`);
                     errors++;
+                    hasErrors = true;
                 }
             });
         }
+        return !hasErrors;
     }
+
+    const validatePricing = (slug, pRes, toolKey) => {
+        let hasErrors = false;
+        if (!pRes || !pRes[toolKey]) return false;
+        const p = pRes[toolKey];
+        if (![true, false, null].includes(p.freePlan)) { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey}.freePlan must be true/false/null`); errors++; hasErrors = true; }
+        if (![true, false, null].includes(p.trial)) { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey}.trial must be true/false/null`); errors++; hasErrors = true; }
+        if (typeof p.entryPaidPlan !== 'number' && p.entryPaidPlan !== null) { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey}.entryPaidPlan must be number/null`); errors++; hasErrors = true; }
+        if (typeof p.currency !== 'string' && p.currency !== null) { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey}.currency must be string/null`); errors++; hasErrors = true; }
+        if (typeof p.billingBasis !== 'string' && p.billingBasis !== null) { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey}.billingBasis must be string/null`); errors++; hasErrors = true; }
+        if (typeof p.checkedAt !== 'string') { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey}.checkedAt missing`); errors++; hasErrors = true; }
+        if (p.sourceId && !sourceIds.has(p.sourceId)) { console.error(`[ERROR] ${slug} -> pricingResearch.${toolKey} references missing source: ${p.sourceId}`); errors++; hasErrors = true; }
+        return !hasErrors;
+    };
 
     comparisons.forEach(comp => {
         if (slugs.has(comp.slug)) {
@@ -48,14 +93,17 @@ function runGuard() {
         }
         slugs.add(comp.slug);
 
+        let toolsValid = true;
         if (!Array.isArray(comp.tools) || comp.tools.length !== 2) {
             console.error(`[ERROR] ${comp.slug} must have exactly 2 tools.`);
             errors++;
+            toolsValid = false;
         } else {
             comp.tools.forEach(tid => {
                 if (!toolIds.has(tid)) {
                     console.error(`[ERROR] ${comp.slug} uses invalid or retired tool ID: ${tid}`);
                     errors++;
+                    toolsValid = false;
                 }
             });
         }
@@ -69,6 +117,7 @@ function runGuard() {
             });
         }
 
+        let claimsSourced = true;
         const compClaimIds = new Set();
         if (Array.isArray(comp.claims)) {
             comp.claims.forEach(claim => {
@@ -87,38 +136,39 @@ function runGuard() {
                     console.error(`[ERROR] ${comp.slug} claim ${claim.claimId} is missing checkedAt`);
                     errors++;
                 }
-                checkSourceIds(comp.slug, `claim ${claim.claimId}`, claim.sourceIds, claim.classification);
+                if (!checkSourceIds(comp.slug, `claim ${claim.claimId}`, claim.sourceIds, claim.classification)) claimsSourced = false;
             });
         }
 
-        // Validate quickAnswer
+        let qaValid = true;
         if (Array.isArray(comp.quickAnswer)) {
             comp.quickAnswer.forEach((qa, i) => {
-                checkSourceIds(comp.slug, `quickAnswer[${i}]`, qa.sourceIds, qa.classification);
+                if (!checkSourceIds(comp.slug, `quickAnswer[${i}]`, qa.sourceIds, qa.classification)) qaValid = false;
             });
         }
 
-        // Validate keyDifferences
+        let kdValid = true;
         if (Array.isArray(comp.keyDifferences)) {
             comp.keyDifferences.forEach((kd, i) => {
-                checkSourceIds(comp.slug, `keyDifferences[${i}]`, kd.sourceIds, kd.classification || 'OFFICIAL SOURCE FACT');
+                if (!checkSourceIds(comp.slug, `keyDifferences[${i}]`, kd.sourceIds, kd.classification || 'OFFICIAL SOURCE FACT')) kdValid = false;
             });
         }
 
-        // Validate useCaseDecisions
+        let ucValid = true;
         if (Array.isArray(comp.useCaseDecisions)) {
             comp.useCaseDecisions.forEach((uc, i) => {
-                checkSourceIds(comp.slug, `useCaseDecisions[${i}]`, uc.evidenceIds, 'OFFICIAL SOURCE FACT');
+                if (!checkSourceIds(comp.slug, `useCaseDecisions[${i}]`, uc.evidenceIds, 'OFFICIAL SOURCE FACT')) ucValid = false;
             });
         }
 
-        // Validate chooseToolAIf / chooseToolBIf
+        let chooseValid = true;
         const validateChoose = (arr, name) => {
             if (Array.isArray(arr)) {
                 arr.forEach((c, i) => {
                     if (c.claimId && !compClaimIds.has(c.claimId)) {
                         console.error(`[ERROR] ${comp.slug} -> ${name}[${i}] references undefined local claimId: ${c.claimId}`);
                         errors++;
+                        chooseValid = false;
                     }
                 });
             }
@@ -126,11 +176,21 @@ function runGuard() {
         validateChoose(comp.chooseToolAIf, 'chooseToolAIf');
         validateChoose(comp.chooseToolBIf, 'chooseToolBIf');
 
-        // Validate faqCandidates
+        let faqValid = true;
         if (Array.isArray(comp.faqCandidates)) {
             comp.faqCandidates.forEach((faq, i) => {
-                checkSourceIds(comp.slug, `faqCandidates[${i}]`, faq.sourceIds, 'OFFICIAL SOURCE FACT');
+                if (!checkSourceIds(comp.slug, `faqCandidates[${i}]`, faq.sourceIds, 'OFFICIAL SOURCE FACT')) faqValid = false;
             });
+        }
+
+        let pricingValid = validatePricing(comp.slug, comp.pricingResearch, 'toolA') && validatePricing(comp.slug, comp.pricingResearch, 'toolB');
+
+        if (comp.status === 'research-ready') {
+            const isReady = qaValid && kdValid && ucValid && chooseValid && faqValid && pricingValid && toolsValid && claimsSourced;
+            if (!isReady) {
+                console.error(`[ERROR] ${comp.slug} marked research-ready but fails readiness gate checks.`);
+                errors++;
+            }
         }
     });
 
