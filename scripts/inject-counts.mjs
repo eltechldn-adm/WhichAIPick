@@ -35,9 +35,14 @@ if (!fs.existsSync(TOOLS_FILE)) {
 }
 
 const tools = JSON.parse(fs.readFileSync(TOOLS_FILE, 'utf8'));
-const eligibleCount = tools.filter(t => t.recommendationEligible === true).length;
-// We might round it or just use the exact eligible count. The user asked for accurate count.
-const countStr = eligibleCount.toString();
+const catalogueToolCount = tools.length.toString();
+const recommendationEligibleCount = tools.filter(t => t.recommendationEligible === true).length.toString();
+
+const categories = new Set();
+tools.forEach(t => {
+  if (t.category) categories.add(t.category);
+});
+const categoryCount = categories.size.toString();
 
 const allFiles = collectHtmlFiles(ROOT);
 
@@ -46,16 +51,19 @@ for (const filePath of allFiles) {
   const original = fs.readFileSync(filePath, 'utf8');
   let updated = original;
 
-  // Find occurrences of {{TOOL_COUNT}} and replace with exact count
-  if (updated.includes('{{TOOL_COUNT}}')) {
-    updated = updated.replace(/\{\{TOOL_COUNT\}\}/g, countStr);
-  }
+  const catRegex = /(<span[^>]*?data-catalogue-tool-count[^>]*?>)(.*?)(<\/span>)/g;
+  const recRegex = /(<span[^>]*?data-recommendation-tool-count[^>]*?>)(.*?)(<\/span>)/g;
+  const catgRegex = /(<span[^>]*?data-category-count[^>]*?>)(.*?)(<\/span>)/g;
+
+  updated = updated.replace(catRegex, `$1${catalogueToolCount}$3`);
+  updated = updated.replace(recRegex, `$1${recommendationEligibleCount}$3`);
+  updated = updated.replace(catgRegex, `$1${categoryCount}$3`);
   
   if (updated !== original) {
     fs.writeFileSync(filePath, updated, 'utf8');
-    console.log(`[INJECTED] Updated count in ${path.relative(ROOT, filePath)}`);
+    console.log(`[INJECTED] Updated count(s) in ${path.relative(ROOT, filePath)}`);
     updatedCount++;
   }
 }
 
-console.log(`Done. ${updatedCount} file(s) updated with TOOL_COUNT=${countStr}.`);
+console.log(`Done. ${updatedCount} file(s) updated. (catalogue: ${catalogueToolCount}, recommendation: ${recommendationEligibleCount}, categories: ${categoryCount})`);

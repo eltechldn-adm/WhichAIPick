@@ -12,8 +12,9 @@
     "validate:seo": "node scripts/seo-health-audit.mjs",
     "validate:sitemap": "node scripts/validate-sitemap.mjs",
     "audit:schema": "node scripts/audit-schema.mjs",
+    "qa:guards": "node scripts/qa/template-leak-guard.mjs && node scripts/qa/placeholder-guard.mjs && node scripts/qa/internal-link-guard.mjs",
     "qa": "npm run qa:site",
-    "qa:site": "npm run validate:data && npm run validate:seo && npm run validate:sitemap && npm run audit:schema",
+    "qa:site": "npm run validate:data && npm run validate:seo && npm run validate:sitemap && npm run audit:schema && npm run qa:guards",
     "qa:catalog": "node scripts/check-tool-urls.mjs && node scripts/catalog-freshness.mjs",
     "qa:full": "npm run qa:site && npm run qa:catalog && node scripts/generate-site-health.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",
@@ -23,7 +24,7 @@
     "inject:header": "node scripts/inject-header.mjs",
     "inject:footer": "node scripts/inject-footer.mjs",
     "generate:build-info": "node scripts/generate-build-info.mjs",
-    "predeploy": "node scripts/prune-generated-routes.mjs --execute && node scripts/generate-static-pages.mjs && npm run generate:seo && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/inject-counts.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs",
+    "predeploy": "node scripts/prune-generated-routes.mjs --execute && node scripts/generate-static-pages.mjs && npm run generate:seo && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/inject-counts.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs && npm run qa:guards",
     "build:cloudflare": "npm run build:data && npm run qa && npm run predeploy"
   },
   "dependencies": {
