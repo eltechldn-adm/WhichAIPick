@@ -442,12 +442,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
     }
+    let lastActiveElement = null;
 
     function openSelector(replaceId = null) {
         if (!replaceId && currentIds.length >= 4) {
             showToast("You can compare up to 4 tools at once.");
             return;
         }
+        lastActiveElement = document.activeElement;
         replaceTargetId = replaceId;
         selectorInput.value = '';
         renderSearchResults('');
@@ -462,6 +464,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         selectorModal.style.display = 'none';
         replaceTargetId = null;
         selectorModal.removeEventListener('keydown', trapFocus);
+        if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+            try {
+                lastActiveElement.focus();
+            } catch(e) {
+                // Ignore focus restoration errors gracefully
+            }
+        }
+        lastActiveElement = null;
     }
 
     function renderSearchResults(query) {
