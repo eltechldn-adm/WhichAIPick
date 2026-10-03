@@ -56,7 +56,13 @@ function validateSitemap() {
 
         let absolutePath = path.join(PROJECT_ROOT, localPath);
         if (fs.existsSync(absolutePath) && fs.statSync(absolutePath).isDirectory()) {
-            absolutePath = path.join(absolutePath, 'index.html');
+            if (fs.existsSync(path.join(absolutePath, 'index.html'))) {
+                absolutePath = path.join(absolutePath, 'index.html');
+            } else if (fs.existsSync(absolutePath + '.html')) {
+                absolutePath += '.html';
+            }
+        } else if (!fs.existsSync(absolutePath) && fs.existsSync(absolutePath + '.html')) {
+            absolutePath += '.html';
         }
 
 

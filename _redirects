@@ -5,11 +5,7 @@
 # ── Tool detail page (query strings preserved automatically) ──
 
 # ── Hub directory routes → canonical .html files ──────────────
-/academy/        /academy.html       301
-/blog/           /blog.html          301
-/compare/        /compare.html       301
-/use-cases/      /use-cases.html     301
-/make-money/     /make-money.html    301
+# (Removed to prevent Cloudflare redirect chains. CF handles this natively)
 /start-here.html /start-here/        301
 
 # ── Legacy browse stub ─────────────────────────────────────────

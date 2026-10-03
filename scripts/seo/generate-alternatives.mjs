@@ -108,12 +108,12 @@ function buildPage(def) {
         .replace('{{BREADCRUMBS}}', generateBreadcrumbs(def.title, def.slug))
         .replace('{{TITLE}}', def.title)
         .replace('{{SUBTITLE}}', def.intentDescription)
-        .replace('{{HAS_CTA}}', 'true')
-        .replace('{{CTA_PRIMARY_TEXT}}', 'View Alternatives')
-        .replace('{{CTA_PRIMARY_LINK}}', '#tools')
-        .replace('{{CTA_SECONDARY_TEXT}}', '')
-        .replace('{{CTA_SECONDARY_LINK}}', '')
-        .replace('{{STATS}}', `<span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${matchedTools.length} alternatives found</span>`);
+        .replace('{{CTA_BLOCK}}', `
+        <div class="seo-hero-ctas">
+            <a href="#tools" class="btn btn-primary">View Alternatives</a>
+        </div>
+        `)
+        .replace('{{STATS_BLOCK}}', `<div class="seo-hero-stats"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${matchedTools.length} alternatives found</span></div>`);
 
     let toolsHTML = matchedTools.map(t => {
         const context = `A strong alternative in the ${t.category || 'AI'} space. Overlaps with ${targetTool.name} on ${t.primaryUseCases[0] || 'core'} capabilities.`;
