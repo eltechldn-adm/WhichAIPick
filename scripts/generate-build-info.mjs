@@ -58,7 +58,10 @@ const contentReviewCount       = tools.filter(t => t.contentReviewRequired  === 
 const pricingNeedsReviewCount  = tools.filter(t => t.pricingNeedsReview     === true).length;
 
 // Determine environment: Cloudflare sets CF_PAGES_COMMIT_SHA during its build step
-const environment = process.env.CF_PAGES_COMMIT_SHA ? 'preview' : 'local';
+let environment = 'local';
+if (process.env.CF_PAGES_COMMIT_SHA) {
+    environment = (branch === 'main' || branch === 'production') ? 'production' : 'preview';
+}
 
 // ─── Preview Safety Checks ────────────────────────────────────────────────────
 const headersPath = path.join(__dirname, '../_headers');
