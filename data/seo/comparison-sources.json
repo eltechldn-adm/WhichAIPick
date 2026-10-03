@@ -1,0 +1,101 @@
+[
+  {
+    "sourceId": "src-chatgpt-pricing",
+    "publisher": "OpenAI",
+    "title": "ChatGPT Pricing and Plans",
+    "url": "https://openai.com/chatgpt/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-claude-pricing",
+    "publisher": "Anthropic",
+    "title": "Claude Pricing",
+    "url": "https://www.anthropic.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-gemini-pricing",
+    "publisher": "Google",
+    "title": "Gemini Advanced",
+    "url": "https://gemini.google.com/advanced",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-perplexity-pro",
+    "publisher": "Perplexity",
+    "title": "Perplexity Pro",
+    "url": "https://www.perplexity.ai/pro",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-cursor-pricing",
+    "publisher": "Cursor",
+    "title": "Cursor Pricing",
+    "url": "https://cursor.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-copilot-pricing",
+    "publisher": "GitHub",
+    "title": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-replit-pricing",
+    "publisher": "Replit",
+    "title": "Replit Pricing",
+    "url": "https://replit.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-lovable-pricing",
+    "publisher": "Lovable",
+    "title": "Lovable Pricing",
+    "url": "https://lovable.dev/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-bolt-docs",
+    "publisher": "StackBlitz",
+    "title": "Bolt.new Documentation",
+    "url": "https://bolt.new/docs",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-midjourney-docs",
+    "publisher": "Midjourney",
+    "title": "Midjourney Quick Start",
+    "url": "https://docs.midjourney.com/docs/quick-start",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  },
+  {
+    "sourceId": "src-leonardo-pricing",
+    "publisher": "Leonardo AI",
+    "title": "Leonardo AI Pricing",
+    "url": "https://leonardo.ai/pricing/",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-03"
+  }
+]

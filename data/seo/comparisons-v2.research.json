@@ -1,0 +1,534 @@
+[
+  {
+    "slug": "chatgpt-vs-claude",
+    "tools": ["chatgpt", "claude"],
+    "status": "research-ready",
+    "title": "ChatGPT vs Claude: Which AI Assistant Fits Your Workflow?",
+    "metaDescription": "Compare ChatGPT and Claude across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose ChatGPT if you need strong web research, native image generation, and data analysis.",
+      "Choose Claude if you handle long documents, coding tasks, or value nuanced writing.",
+      "The main trade-off is ChatGPT's broader multimodal ecosystem versus Claude's larger context window and Artifacts UI."
+    ],
+    "keyDifferences": [
+      {"topic": "Ecosystem", "description": "ChatGPT is part of a broad multimodal ecosystem (images, advanced voice). Claude focuses heavily on text, reasoning, and code (Artifacts)."},
+      {"topic": "Context Window", "description": "Claude offers a 200k token window natively, whereas ChatGPT offers 128k tokens."},
+      {"topic": "Workflow Integration", "description": "Claude's Artifacts provide a dedicated UI for code and document previews. ChatGPT excels at analyzing uploaded datasets."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "Coding",
+        "toolAFit": "Good for general scripting and data analysis.",
+        "toolBFit": "Excellent for complex refactoring and UI generation via Artifacts.",
+        "reason": "Claude's Artifacts feature allows immediate preview of code output.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-claude-pricing"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You need native image generation.", "claimId": "chatgpt-images"},
+      {"condition": "You rely on real-time web search integration.", "claimId": "chatgpt-search"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You work with very large documents or codebases.", "claimId": "claude-context"},
+      {"condition": "You prefer a cleaner writing style with less 'AI' tone.", "claimId": "claude-tone"}
+    ],
+    "neitherIf": [
+      "You are primarily looking for an AI coding IDE (consider Cursor or GitHub Copilot)."
+    ],
+    "alternatives": ["google-gemini", "perplexity-ai"],
+    "claims": [
+      {
+        "claimId": "chatgpt-images",
+        "claim": "ChatGPT provides native image generation via DALL-E 3.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-chatgpt-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "chatgpt-search",
+        "claim": "ChatGPT provides real-time web search features.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-chatgpt-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "claude-context",
+        "claim": "Claude offers a 200k context window for large documents.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-claude-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "claude-tone",
+        "claim": "Claude is recognized for having a more nuanced and less formulaic writing style.",
+        "classification": "EDITORIAL INTERPRETATION",
+        "confidence": "MEDIUM",
+        "sourceIds": [],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Which is better for coding?",
+        "answer": "Claude is widely preferred for coding due to its Artifacts UI and 200k context window, while ChatGPT is strong for data analysis.",
+        "sourceIds": ["src-claude-pricing", "src-chatgpt-pricing"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "chatgpt-vs-gemini",
+    "tools": ["chatgpt", "google-gemini"],
+    "status": "research-ready",
+    "title": "ChatGPT vs Gemini: Which AI Assistant Fits Your Workflow?",
+    "metaDescription": "Compare ChatGPT and Gemini across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose ChatGPT if you need strong web research, native image generation, and data analysis.",
+      "Choose Gemini if you rely heavily on Google Workspace integrations (Docs, Gmail).",
+      "The main trade-off is ChatGPT's broader standalone capabilities versus Gemini's deep Google ecosystem integration."
+    ],
+    "keyDifferences": [
+      {"topic": "Ecosystem", "description": "Gemini connects directly to Google Drive, Docs, and Gmail. ChatGPT provides its own ecosystem for file storage and analysis."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "Research",
+        "toolAFit": "Excellent web search.",
+        "toolBFit": "Great for searching through your Google Drive documents.",
+        "reason": "Gemini's Workspace integration allows finding personal files easily.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-gemini-pricing"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You need advanced voice mode.", "claimId": "chatgpt-voice"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You want to draft emails directly in Gmail.", "claimId": "gemini-workspace"}
+    ],
+    "neitherIf": [
+      "You are primarily looking for an AI coding IDE (consider Cursor or GitHub Copilot)."
+    ],
+    "alternatives": ["claude", "perplexity-ai"],
+    "claims": [
+      {
+        "claimId": "chatgpt-voice",
+        "claim": "ChatGPT provides advanced voice mode.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-chatgpt-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "gemini-workspace",
+        "claim": "Gemini integrates natively with Google Workspace apps.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-gemini-pricing"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Which integrates with Google Workspace?",
+        "answer": "Gemini offers deep, native integration with Google Workspace, including Docs, Gmail, and Drive.",
+        "sourceIds": ["src-gemini-pricing"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "chatgpt-vs-perplexity",
+    "tools": ["chatgpt", "perplexity-ai"],
+    "status": "research-ready",
+    "title": "ChatGPT vs Perplexity: Which AI Assistant Fits Your Workflow?",
+    "metaDescription": "Compare ChatGPT and Perplexity across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose ChatGPT if you need a general assistant for writing, coding, and data analysis.",
+      "Choose Perplexity if you need a citation-first answer engine for real-time web research.",
+      "The main trade-off is ChatGPT's broader capabilities versus Perplexity's deep focus on verified search results."
+    ],
+    "keyDifferences": [
+      {"topic": "Focus", "description": "ChatGPT is a conversational assistant that can search the web. Perplexity is a search engine built on conversational AI."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "Research",
+        "toolAFit": "Good for exploring topics broadly.",
+        "toolBFit": "Excellent for finding specific facts with verifiable citations.",
+        "reason": "Perplexity is designed primarily as a search and answer engine.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-perplexity-pro"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You need to write long-form content or analyze data.", "claimId": "chatgpt-general"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You need citations for every claim.", "claimId": "perplexity-citations"}
+    ],
+    "neitherIf": [
+      "You are primarily looking for an AI coding IDE (consider Cursor or GitHub Copilot)."
+    ],
+    "alternatives": ["claude", "google-gemini"],
+    "claims": [
+      {
+        "claimId": "chatgpt-general",
+        "claim": "ChatGPT is a general-purpose AI assistant.",
+        "classification": "EDITORIAL INTERPRETATION",
+        "confidence": "HIGH",
+        "sourceIds": [],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "perplexity-citations",
+        "claim": "Perplexity focuses on providing citations for its answers.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-perplexity-pro"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Which is better for web research?",
+        "answer": "Perplexity is generally preferred for web research as it is built specifically as a citation-first answer engine.",
+        "sourceIds": ["src-perplexity-pro"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "cursor-vs-github-copilot",
+    "tools": ["cursor", "github-copilot"],
+    "status": "research-ready",
+    "title": "Cursor vs GitHub Copilot: Which AI Coding Tool Fits Your Workflow?",
+    "metaDescription": "Compare Cursor and GitHub Copilot across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose Cursor if you want an agentic IDE that can perform complex multi-file edits.",
+      "Choose GitHub Copilot if you want an AI extension integrated into your existing IDE and GitHub ecosystem.",
+      "The main trade-off is Cursor's deep editor integration versus Copilot's broader ecosystem support."
+    ],
+    "keyDifferences": [
+      {"topic": "Product Model", "description": "Cursor is a standalone fork of VS Code. Copilot is an extension available for various IDEs (VS Code, IntelliJ, Visual Studio)."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "Coding",
+        "toolAFit": "Excellent for whole-codebase understanding and agentic edits (Composer).",
+        "toolBFit": "Great for inline autocomplete and chat within existing tools.",
+        "reason": "Cursor is built from the ground up as an AI-first IDE.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-cursor-pricing"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You want the AI to write and apply changes across multiple files.", "claimId": "cursor-multifile"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You need AI assistance in an IDE other than VS Code.", "claimId": "copilot-ides"}
+    ],
+    "neitherIf": [
+      "You are a non-technical user looking to build apps using natural language (consider Lovable or Bolt)."
+    ],
+    "alternatives": ["replit"],
+    "claims": [
+      {
+        "claimId": "cursor-multifile",
+        "claim": "Cursor supports multi-file edits and codebase-wide AI tools.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-cursor-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "copilot-ides",
+        "claim": "GitHub Copilot supports multiple IDEs beyond VS Code.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-copilot-pricing"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Does Cursor support VS Code extensions?",
+        "answer": "Yes, Cursor is a fork of VS Code and supports the vast majority of VS Code extensions.",
+        "sourceIds": ["src-cursor-pricing"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "replit-vs-lovable",
+    "tools": ["replit", "lovable"],
+    "status": "research-ready",
+    "title": "Replit vs Lovable: Which AI Builder Fits Your Workflow?",
+    "metaDescription": "Compare Replit and Lovable across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose Replit if you want a full cloud IDE with AI assistance.",
+      "Choose Lovable if you want a visual prompt-to-app builder to generate UIs quickly.",
+      "The main trade-off is Replit's technical control versus Lovable's speed of visual prototyping."
+    ],
+    "keyDifferences": [
+      {"topic": "Product Model", "description": "Replit is a cloud-based development environment. Lovable is a prompt-driven application generator."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "App building",
+        "toolAFit": "Great for developers who want a cloud workspace.",
+        "toolBFit": "Great for non-technical users and fast prototyping.",
+        "reason": "Lovable abstracts away the code setup process.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-lovable-pricing"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You want full access to a Linux environment and terminal.", "claimId": "replit-environment"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You want to build a functional UI simply by describing it.", "claimId": "lovable-prompt"}
+    ],
+    "neitherIf": [
+      "You are looking for a local IDE for professional software development (consider Cursor)."
+    ],
+    "alternatives": ["bolt"],
+    "claims": [
+      {
+        "claimId": "replit-environment",
+        "claim": "Replit provides a cloud-based Linux environment and terminal.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-replit-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "lovable-prompt",
+        "claim": "Lovable generates functional web apps from text prompts.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-lovable-pricing"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Can I deploy apps with both?",
+        "answer": "Yes, both platforms offer ways to deploy and host your applications.",
+        "sourceIds": ["src-replit-pricing", "src-lovable-pricing"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "lovable-vs-bolt",
+    "tools": ["lovable", "bolt"],
+    "status": "research-ready",
+    "title": "Lovable vs Bolt: Which Prompt-to-App Builder Fits Your Workflow?",
+    "metaDescription": "Compare Lovable and Bolt across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose Lovable if you want a seamless visual builder that integrates natively with Supabase.",
+      "Choose Bolt if you want a full-stack WebContainers environment running Node.js in the browser.",
+      "The main trade-off is Lovable's curated React/Vite approach versus Bolt's broader framework support via StackBlitz."
+    ],
+    "keyDifferences": [
+      {"topic": "Underlying Technology", "description": "Bolt runs full Node.js environments in the browser using WebContainers. Lovable uses a more abstracted visual generation approach."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "App building",
+        "toolAFit": "Excellent for rapid UI prototyping with a backend.",
+        "toolBFit": "Excellent for building and running full-stack apps in the browser.",
+        "reason": "Bolt's WebContainers allow executing arbitrary Node.js scripts locally.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-bolt-docs"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You want tight integration with Supabase out of the box.", "claimId": "lovable-supabase"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You want to run terminal commands and install npm packages directly in the browser.", "claimId": "bolt-webcontainers"}
+    ],
+    "neitherIf": [
+      "You are looking for a cloud IDE to write code manually (consider Replit)."
+    ],
+    "alternatives": ["replit"],
+    "claims": [
+      {
+        "claimId": "lovable-supabase",
+        "claim": "Lovable integrates deeply with Supabase for backend services.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-lovable-pricing"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "bolt-webcontainers",
+        "claim": "Bolt runs full Node.js environments in the browser using WebContainers.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-bolt-docs"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Can I export my code from both platforms?",
+        "answer": "Yes, both Lovable and Bolt allow you to export your code or sync it to GitHub.",
+        "sourceIds": ["src-lovable-pricing", "src-bolt-docs"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "midjourney-vs-leonardo-ai",
+    "tools": ["midjourney", "leonardo-ai"],
+    "status": "research-ready",
+    "title": "Midjourney vs Leonardo AI: Which Image Generator Fits Your Workflow?",
+    "metaDescription": "Compare Midjourney and Leonardo AI across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose Midjourney if you want industry-leading aesthetic quality and photorealism.",
+      "Choose Leonardo AI if you need a free tier or highly granular workflow tools like Canvas.",
+      "The main trade-off is Midjourney's raw output quality versus Leonardo's extensive toolset and control."
+    ],
+    "keyDifferences": [
+      {"topic": "Interface", "description": "Midjourney offers a Web alpha interface alongside its original Discord bot. Leonardo AI offers a comprehensive web-based dashboard with advanced editing tools (Canvas)."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "Images",
+        "toolAFit": "Excellent for high-end artistic and photorealistic generation.",
+        "toolBFit": "Excellent for precise composition control and real-time generation.",
+        "reason": "Leonardo provides specialized tools like Realtime Canvas.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-leonardo-pricing"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You prioritize the highest possible aesthetic quality and photorealism.", "claimId": "midjourney-quality"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You need to edit images precisely using a canvas or sketch-to-image tool.", "claimId": "leonardo-canvas"}
+    ],
+    "neitherIf": [
+      "You just need basic conversational image generation as part of a general assistant (consider ChatGPT)."
+    ],
+    "alternatives": ["chatgpt"],
+    "claims": [
+      {
+        "claimId": "midjourney-quality",
+        "claim": "Midjourney is widely recognized for superior aesthetic quality and photorealism.",
+        "classification": "EDITORIAL INTERPRETATION",
+        "confidence": "HIGH",
+        "sourceIds": [],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "leonardo-canvas",
+        "claim": "Leonardo AI offers a Canvas tool for advanced image editing and composition.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-leonardo-pricing"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Is Midjourney Discord-only?",
+        "answer": "No, Midjourney now offers a web interface for generating images, though the Discord bot is still available.",
+        "sourceIds": ["src-midjourney-docs"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  },
+  {
+    "slug": "midjourney-vs-chatgpt-images",
+    "tools": ["midjourney", "chatgpt"],
+    "status": "research-ready",
+    "title": "Midjourney vs ChatGPT Images: Which Image Generator Fits Your Workflow?",
+    "metaDescription": "Compare Midjourney and ChatGPT Images across pricing, workflows, capabilities, and who each is best suited to.",
+    "quickAnswer": [
+      "Choose Midjourney if you want the best artistic aesthetics and photorealism.",
+      "Choose ChatGPT Images if you want conversational editing and strong prompt adherence.",
+      "The main trade-off is Midjourney's visual quality versus ChatGPT's ease of use and text rendering."
+    ],
+    "keyDifferences": [
+      {"topic": "Prompt Adherence", "description": "ChatGPT (DALL-E 3) follows complex prompts very closely, including rendering text. Midjourney is more stylized and requires specific prompting techniques for precise control."}
+    ],
+    "useCaseDecisions": [
+      {
+        "useCase": "Images",
+        "toolAFit": "Excellent for professional art, concepts, and photography.",
+        "toolBFit": "Excellent for diagrams, specific descriptive scenes, and text-heavy images.",
+        "reason": "ChatGPT's DALL-E 3 model is optimized for prompt adherence.",
+        "confidence": "HIGH",
+        "evidenceIds": ["src-chatgpt-pricing"]
+      }
+    ],
+    "chooseToolAIf": [
+      {"condition": "You need high-fidelity stylistic control and reference image blending.", "claimId": "midjourney-style"}
+    ],
+    "chooseToolBIf": [
+      {"condition": "You want to generate images conversationally or need accurate text in the image.", "claimId": "chatgpt-dalle3"}
+    ],
+    "neitherIf": [
+      "You need precise compositional editing tools like a canvas (consider Leonardo AI)."
+    ],
+    "alternatives": ["leonardo-ai"],
+    "claims": [
+      {
+        "claimId": "midjourney-style",
+        "claim": "Midjourney offers advanced features like style references and character consistency.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-midjourney-docs"],
+        "checkedAt": "2026-10-03"
+      },
+      {
+        "claimId": "chatgpt-dalle3",
+        "claim": "ChatGPT uses DALL-E 3, which is highly capable at rendering text within images.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": ["src-chatgpt-pricing"],
+        "checkedAt": "2026-10-03"
+      }
+    ],
+    "faqCandidates": [
+      {
+        "question": "Can I edit images with both tools?",
+        "answer": "Yes, Midjourney offers variations, panning, and zooming, while ChatGPT allows you to edit images by highlighting areas and typing new instructions.",
+        "sourceIds": ["src-midjourney-docs", "src-chatgpt-pricing"]
+      }
+    ],
+    "catalogueConflicts": [],
+    "pricingConflicts": [],
+    "checkedAt": "2026-10-03",
+    "editorialReviewed": false
+  }
+]
