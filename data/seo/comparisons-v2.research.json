@@ -992,7 +992,7 @@
     ],
     "faqCandidates": [
       {
-        "question": "Is Midjourney Discord-only?",
+        "question": "Do you have to use Discord for Midjourney?",
         "answer": "No, Midjourney now offers a web interface for generating images alongside its Discord bot.",
         "sourceIds": [
           "src-midjourney-web"

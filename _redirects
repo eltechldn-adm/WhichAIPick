@@ -29,3 +29,17 @@
 # ── Phase 4.5 Category Merges ─────────────────────────────────
 /category/sales/            /category/business/  301
 /category/customer-support/ /category/business/  301
+
+# ── Phase 6B.2B Comparison Redirects ────────────────────────
+/compare/claude-vs-chatgpt/        /compare/chatgpt-vs-claude/        301
+/compare/gemini-vs-chatgpt/        /compare/chatgpt-vs-gemini/        301
+/compare/perplexity-vs-chatgpt/    /compare/chatgpt-vs-perplexity/    301
+/compare/github-copilot-vs-cursor/ /compare/cursor-vs-github-copilot/ 301
+/compare/lovable-vs-replit/        /compare/replit-vs-lovable/        301
+/compare/bolt-vs-lovable/          /compare/lovable-vs-bolt/          301
+/compare/leonardo-ai-vs-midjourney/ /compare/midjourney-vs-leonardo-ai/ 301
+/compare/chatgpt-images-vs-midjourney/ /compare/midjourney-vs-chatgpt-images/ 301
+/compare/midjourney-vs-dalle/      /compare/midjourney-vs-chatgpt-images/ 301
+/compare/midjourney-vs-chatgpt/    /compare/midjourney-vs-chatgpt-images/ 301
+/compare/dalle-vs-midjourney/      /compare/midjourney-vs-chatgpt-images/ 301
+/compare/chatgpt-vs-midjourney/    /compare/midjourney-vs-chatgpt-images/ 301

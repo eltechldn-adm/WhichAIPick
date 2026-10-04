@@ -98,10 +98,10 @@ for (const item of seoAlternatives) {
 validPaths.add('/alternatives');
 validPaths.add('/alternatives/');
 
-const seoComparisons = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/seo/comparisons.json'), 'utf8'));
-for (const item of seoComparisons) {
-    validPaths.add(`/compare/${item.slug}`);
-    validPaths.add(`/compare/${item.slug}/`);
+const publishManifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/seo/comparisons-v2.publish.json'), 'utf8'));
+for (const slug of publishManifest.approvedSlugs) {
+    validPaths.add(`/compare/${slug}`);
+    validPaths.add(`/compare/${slug}/`);
 }
 validPaths.add('/compare');
 validPaths.add('/compare/');

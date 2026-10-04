@@ -45,9 +45,8 @@ function getSeoIds(filename, idExtractor) {
 
 const activeAlternatives = getSeoIds('alternatives.json', item => item.slug);
 const activeBestTools = getSeoIds('best-tools.json', item => item.slug);
-const activeComparisons = getSeoIds('comparisons.json', item => {
-  return [item.slug, `${item.toolB}-vs-${item.toolA}`];
-});
+const publishManifest = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'data', 'seo', 'comparisons-v2.publish.json'), 'utf8'));
+const activeComparisons = new Set(publishManifest.approvedSlugs);
 
 function pruneDirectory(targetDir, activeSet, dirType) {
   const fullDirPath = path.join(ROOT_DIR, targetDir);

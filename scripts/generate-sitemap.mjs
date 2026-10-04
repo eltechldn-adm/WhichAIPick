@@ -136,24 +136,13 @@ function generateSitemap() {
     urls = [...urls, ...altPages];
     console.log(`  Added ${altPages.length} alternatives pages`);
 
-    // Phase 6: compare pages — exclude noindex redirect pages
-    const compareDir = path.join(PROJECT_ROOT, 'compare');
-    const comparePages = fs.existsSync(compareDir)
-        ? fs.readdirSync(compareDir, { withFileTypes: true })
-            .filter(e => e.isDirectory())
-            .filter(e => {
-                const indexPath = path.join(compareDir, e.name, 'index.html');
-                if (!fs.existsSync(indexPath)) return false;
-                const html = fs.readFileSync(indexPath, 'utf8');
-                // Skip pages explicitly marked noindex
-                return !html.includes('content="noindex"');
-            })
-            .map(e => ({
-                loc: `/compare/${e.name}/`,
-                priority: PRIORITY.HUBS,
-                freq: CHANGEFREQ.WEEKLY
-            }))
-        : [];
+    // Phase 6: compare pages - only use approved canonical routes
+    const publishManifest = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'data', 'seo', 'comparisons-v2.publish.json'), 'utf8'));
+    const comparePages = publishManifest.approvedSlugs.map(slug => ({
+        loc: `/compare/${slug}/`,
+        priority: PRIORITY.HUBS,
+        freq: CHANGEFREQ.WEEKLY
+    }));
     urls = [...urls, ...comparePages];
     console.log(`  Added ${comparePages.length} compare pages`);
 
