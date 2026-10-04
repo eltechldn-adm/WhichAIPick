@@ -12,7 +12,7 @@ function runGuard() {
 
     const domainAllowlist = {
         'OpenAI': ['openai.com', 'help.openai.com'],
-        'Anthropic': ['anthropic.com', 'support.anthropic.com'],
+        'Anthropic': ['anthropic.com', 'support.anthropic.com', 'docs.anthropic.com'],
         'GitHub': ['github.com', 'docs.github.com'],
         'Google': ['google.com', 'support.google.com', 'gemini.google.com'],
         'Midjourney': ['midjourney.com', 'docs.midjourney.com', 'help.midjourney.com'],
@@ -53,10 +53,10 @@ function runGuard() {
     const slugs = new Set();
     const claimIds = new Set();
 
-    function checkSourceIds(slug, fieldName, sourceIdsArray, classification) {
+    function checkSourceIds(slug, fieldName, sourceIdsArray) {
         let hasErrors = false;
-        if (classification !== 'EDITORIAL INTERPRETATION' && (!sourceIdsArray || sourceIdsArray.length === 0)) {
-            console.error(`[ERROR] ${slug} -> ${fieldName} lacks sources but is not an editorial interpretation`);
+        if (!sourceIdsArray || sourceIdsArray.length === 0) {
+            console.error(`[ERROR] ${slug} -> ${fieldName} lacks sources. Material editorial interpretation must have >= 1 source.`);
             errors++;
             hasErrors = true;
         }
@@ -136,28 +136,28 @@ function runGuard() {
                     console.error(`[ERROR] ${comp.slug} claim ${claim.claimId} is missing checkedAt`);
                     errors++;
                 }
-                if (!checkSourceIds(comp.slug, `claim ${claim.claimId}`, claim.sourceIds, claim.classification)) claimsSourced = false;
+                if (!checkSourceIds(comp.slug, `claim ${claim.claimId}`, claim.sourceIds)) claimsSourced = false;
             });
         }
 
         let qaValid = true;
         if (Array.isArray(comp.quickAnswer)) {
             comp.quickAnswer.forEach((qa, i) => {
-                if (!checkSourceIds(comp.slug, `quickAnswer[${i}]`, qa.sourceIds, qa.classification)) qaValid = false;
+                if (!checkSourceIds(comp.slug, `quickAnswer[${i}]`, qa.sourceIds)) qaValid = false;
             });
         }
 
         let kdValid = true;
         if (Array.isArray(comp.keyDifferences)) {
             comp.keyDifferences.forEach((kd, i) => {
-                if (!checkSourceIds(comp.slug, `keyDifferences[${i}]`, kd.sourceIds, kd.classification || 'OFFICIAL SOURCE FACT')) kdValid = false;
+                if (!checkSourceIds(comp.slug, `keyDifferences[${i}]`, kd.sourceIds)) kdValid = false;
             });
         }
 
         let ucValid = true;
         if (Array.isArray(comp.useCaseDecisions)) {
             comp.useCaseDecisions.forEach((uc, i) => {
-                if (!checkSourceIds(comp.slug, `useCaseDecisions[${i}]`, uc.evidenceIds, 'OFFICIAL SOURCE FACT')) ucValid = false;
+                if (!checkSourceIds(comp.slug, `useCaseDecisions[${i}]`, uc.evidenceIds)) ucValid = false;
             });
         }
 
@@ -179,14 +179,14 @@ function runGuard() {
         let faqValid = true;
         if (Array.isArray(comp.faqCandidates)) {
             comp.faqCandidates.forEach((faq, i) => {
-                if (!checkSourceIds(comp.slug, `faqCandidates[${i}]`, faq.sourceIds, 'OFFICIAL SOURCE FACT')) faqValid = false;
+                if (!checkSourceIds(comp.slug, `faqCandidates[${i}]`, faq.sourceIds)) faqValid = false;
             });
         }
 
         let pricingValid = validatePricing(comp.slug, comp.pricingResearch, 'toolA') && validatePricing(comp.slug, comp.pricingResearch, 'toolB');
 
         if (comp.status === 'research-ready') {
-            const isReady = qaValid && kdValid && ucValid && chooseValid && faqValid && pricingValid && toolsValid && claimsSourced;
+            const isReady = qaValid && kdValid && ucValid && chooseValid && faqValid && pricingValid && toolsValid && claimsSourced && comp.evidenceAuditPassed;
             if (!isReady) {
                 console.error(`[ERROR] ${comp.slug} marked research-ready but fails readiness gate checks.`);
                 errors++;

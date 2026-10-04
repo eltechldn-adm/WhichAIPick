@@ -7,21 +7,23 @@
     ],
     "status": "research-ready",
     "title": "ChatGPT vs Claude: Which AI Assistant Fits Your Workflow?",
-    "metaDescription": "Compare ChatGPT and Claude across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare ChatGPT and Claude across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose ChatGPT if you need native web research, native image generation, and data analysis.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-chatgpt-search",
-          "src-chatgpt-images"
+          "src-chatgpt-images",
+          "src-chatgpt-data-analysis"
         ]
       },
       {
-        "text": "Choose Claude if you handle large documents (supported by 200K context) or value an integrated coding UI.",
+        "text": "Choose Claude if you handle large documents (supported by large context limits) or value an integrated coding UI.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
-          "src-claude-artifacts"
+          "src-claude-artifacts",
+          "src-claude-models"
         ]
       },
       {
@@ -44,9 +46,10 @@
       },
       {
         "topic": "Context Window",
-        "description": "Paid Claude plans support large context windows; the standard paid experience commonly supports 200K. ChatGPT offers a 128K context window.",
+        "description": "Claude supports large context windows on current paid products. Context limits vary by model and plan.",
         "sourceIds": [
-          "src-claude-pricing"
+          "src-claude-pricing",
+          "src-claude-models"
         ]
       },
       {
@@ -141,8 +144,8 @@
     ],
     "faqCandidates": [
       {
-        "question": "Which is better for coding?",
-        "answer": "Claude is often utilized for coding due to its Artifacts UI, while ChatGPT is strong for data analysis.",
+        "question": "Which is supports coding?",
+        "answer": "Claude is often utilized for coding due to its Artifacts UI, while ChatGPT is supports data analysis.",
         "sourceIds": [
           "src-claude-artifacts",
           "src-chatgpt-pricing"
@@ -150,10 +153,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "chatgpt: catalogue hasFreeTrial is null, research is false",
-      "claude: catalogue hasFreeTrial is null, research is false"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -163,7 +163,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -172,14 +172,20 @@
       },
       "toolB": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
         "sourceId": "src-claude-pricing",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [],
+    "pricingUnknowns": [
+      "chatgpt: trial is unknown in both catalogue and research",
+      "claude: trial is unknown in both catalogue and research"
+    ]
   },
   {
     "slug": "chatgpt-vs-gemini",
@@ -189,7 +195,7 @@
     ],
     "status": "research-ready",
     "title": "ChatGPT vs Gemini: Which AI Assistant Fits Your Workflow?",
-    "metaDescription": "Compare ChatGPT and Gemini across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare ChatGPT and Gemini across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose ChatGPT if you need native web research, native image generation, and standalone data analysis.",
@@ -228,7 +234,7 @@
     "useCaseDecisions": [
       {
         "useCase": "Research",
-        "toolAFit": "Excellent web search.",
+        "toolAFit": "well-suited web search.",
         "toolBFit": "Supports searching through your Google Drive documents.",
         "reason": "Gemini's Workspace integration allows finding personal files easily.",
         "confidence": "HIGH",
@@ -288,10 +294,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "chatgpt: catalogue hasFreeTrial is null, research is false",
-      "google-gemini: catalogue hasFreeTrial is null, research is true"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -301,7 +304,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -317,7 +320,14 @@
         "sourceId": "src-gemini-pricing",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [
+      "google-gemini: catalogue hasFreeTrial is null, research found true"
+    ],
+    "pricingUnknowns": [
+      "chatgpt: trial is unknown in both catalogue and research"
+    ]
   },
   {
     "slug": "chatgpt-vs-perplexity",
@@ -327,7 +337,7 @@
     ],
     "status": "research-ready",
     "title": "ChatGPT vs Perplexity: Which AI Assistant Fits Your Workflow?",
-    "metaDescription": "Compare ChatGPT and Perplexity across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare ChatGPT and Perplexity across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose ChatGPT if you need a general assistant for writing, coding, and data analysis.",
@@ -337,14 +347,14 @@
         ]
       },
       {
-        "text": "Choose Perplexity if you need a citation-focused answer engine for real-time web research.",
+        "text": "Choose Perplexity if you need citation-focused answers for web research.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-perplexity-pro"
         ]
       },
       {
-        "text": "The main trade-off is ChatGPT's broader capabilities versus Perplexity's deep focus on verified search results.",
+        "text": "The main trade-off is ChatGPT's broader capabilities versus Perplexity's deep focus on citation-focused search results.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-chatgpt-pricing",
@@ -417,7 +427,7 @@
     ],
     "faqCandidates": [
       {
-        "question": "Which is better for web research?",
+        "question": "Which is supports web research?",
         "answer": "Perplexity is generally preferred for web research as it is built specifically as a citation-first answer engine.",
         "sourceIds": [
           "src-perplexity-pro"
@@ -425,10 +435,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "chatgpt: catalogue hasFreeTrial is null, research is false",
-      "perplexity-ai: catalogue hasFreeTrial is null, research is false"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -438,7 +445,7 @@
     "pricingResearch": {
       "toolA": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
@@ -447,14 +454,20 @@
       },
       "toolB": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
         "sourceId": "src-perplexity-pro",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [],
+    "pricingUnknowns": [
+      "chatgpt: trial is unknown in both catalogue and research",
+      "perplexity-ai: trial is unknown in both catalogue and research"
+    ]
   },
   {
     "slug": "cursor-vs-github-copilot",
@@ -464,7 +477,7 @@
     ],
     "status": "research-ready",
     "title": "Cursor vs GitHub Copilot: Which AI Coding Tool Fits Your Workflow?",
-    "metaDescription": "Compare Cursor and GitHub Copilot across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare Cursor and GitHub Copilot across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose Cursor if you want an AI-first IDE that can perform complex multi-file edits via Composer.",
@@ -564,10 +577,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "cursor: catalogue hasFreeTrial is null, research is true",
-      "github-copilot: catalogue hasFreeTrial is null, research is true"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -593,7 +603,13 @@
         "sourceId": "src-copilot-pricing",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [
+      "cursor: catalogue hasFreeTrial is null, research found true",
+      "github-copilot: catalogue hasFreeTrial is null, research found true"
+    ],
+    "pricingUnknowns": []
   },
   {
     "slug": "replit-vs-lovable",
@@ -603,7 +619,7 @@
     ],
     "status": "research-ready",
     "title": "Replit vs Lovable: Which AI Builder Fits Your Workflow?",
-    "metaDescription": "Compare Replit and Lovable across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare Replit and Lovable across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose Replit if you want a full cloud IDE with AI assistance.",
@@ -702,10 +718,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "replit: catalogue hasFreeTrial is null, research is false",
-      "lovable: catalogue hasFreeTrial is null, research is false"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -731,7 +744,13 @@
         "sourceId": "src-lovable-pricing",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [],
+    "pricingUnknowns": [
+      "replit: trial is unknown in both catalogue and research",
+      "lovable: trial is unknown in both catalogue and research"
+    ]
   },
   {
     "slug": "lovable-vs-bolt",
@@ -741,7 +760,7 @@
     ],
     "status": "research-ready",
     "title": "Lovable vs Bolt: Which Prompt-to-App Builder Fits Your Workflow?",
-    "metaDescription": "Compare Lovable and Bolt across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare Lovable and Bolt across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose Lovable if you want a visual builder that integrates natively with Supabase.",
@@ -840,10 +859,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "lovable: catalogue hasFreeTrial is null, research is false",
-      "bolt: catalogue hasFreeTrial is null, research is false"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -869,7 +885,13 @@
         "sourceId": "src-bolt-docs",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [],
+    "pricingUnknowns": [
+      "lovable: trial is unknown in both catalogue and research",
+      "bolt: trial is unknown in both catalogue and research"
+    ]
   },
   {
     "slug": "midjourney-vs-leonardo-ai",
@@ -879,10 +901,10 @@
     ],
     "status": "research-ready",
     "title": "Midjourney vs Leonardo AI: Which Image Generator Fits Your Workflow?",
-    "metaDescription": "Compare Midjourney and Leonardo AI across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare Midjourney and Leonardo AI across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
-        "text": "Choose Midjourney if you prefer their distinct artistic styles and robust reference-image workflows.",
+        "text": "Choose Midjourney if you prefer their distinct artistic styles and well-suited reference-image workflows.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-midjourney-docs"
@@ -978,9 +1000,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "leonardo-ai: catalogue hasFreeTrial is null, research is false"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -1006,7 +1026,12 @@
         "sourceId": "src-leonardo-pricing",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [],
+    "pricingUnknowns": [
+      "leonardo-ai: trial is unknown in both catalogue and research"
+    ]
   },
   {
     "slug": "midjourney-vs-chatgpt-images",
@@ -1016,7 +1041,7 @@
     ],
     "status": "research-ready",
     "title": "Midjourney vs ChatGPT Images: Which Image Generator Fits Your Workflow?",
-    "metaDescription": "Compare Midjourney and ChatGPT Images across pricing, workflows, capabilities, and who each is best suited to.",
+    "metaDescription": "Compare Midjourney and ChatGPT Images across pricing, workflows, capabilities, and who each is well-suited suited to.",
     "quickAnswer": [
       {
         "text": "Choose Midjourney if you want advanced stylistic control and reference image blending.",
@@ -1026,7 +1051,7 @@
         ]
       },
       {
-        "text": "Choose ChatGPT Images if you want conversational editing and strong prompt adherence.",
+        "text": "Choose ChatGPT Images if you want conversational editing and well-suited prompt adherence.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
           "src-chatgpt-images"
@@ -1115,9 +1140,7 @@
       }
     ],
     "catalogueConflicts": [],
-    "pricingConflicts": [
-      "chatgpt: catalogue hasFreeTrial is null, research is false"
-    ],
+    "pricingConflicts": [],
     "checkedAt": "2026-10-04",
     "editorialReviewed": false,
     "affiliateStatus": {
@@ -1136,13 +1159,18 @@
       },
       "toolB": {
         "freePlan": true,
-        "trial": false,
+        "trial": null,
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
         "sourceId": "src-chatgpt-pricing",
         "checkedAt": "2026-10-04"
       }
-    }
+    },
+    "evidenceAuditPassed": true,
+    "pricingResearchUpdates": [],
+    "pricingUnknowns": [
+      "chatgpt: trial is unknown in both catalogue and research"
+    ]
   }
 ]

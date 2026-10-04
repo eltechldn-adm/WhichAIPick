@@ -11,8 +11,8 @@
   {
     "sourceId": "src-chatgpt-images",
     "publisher": "OpenAI",
-    "title": "ChatGPT Image Generation",
-    "url": "https://help.openai.com/en/articles/8357416-how-to-use-chatgpt-images",
+    "title": "Images in ChatGPT",
+    "url": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-10-04"
@@ -101,8 +101,8 @@
   {
     "sourceId": "src-copilot-agents",
     "publisher": "GitHub",
-    "title": "GitHub Copilot Workspace and Agents",
-    "url": "https://docs.github.com/en/copilot/github-copilot-workspace/about-github-copilot-workspace",
+    "title": "GitHub Copilot Agent Mode",
+    "url": "https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide/using-github-copilot-agent-mode",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-10-04"
@@ -193,6 +193,24 @@
     "publisher": "Leonardo AI",
     "title": "Leonardo AI Realtime Canvas",
     "url": "https://docs.leonardo.ai/docs/realtime-canvas",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-claude-models",
+    "publisher": "Anthropic",
+    "title": "Claude Models and Context Windows",
+    "url": "https://docs.anthropic.com/en/docs/models-overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-data-analysis",
+    "publisher": "OpenAI",
+    "title": "Advanced Data Analysis in ChatGPT",
+    "url": "https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-10-04"
