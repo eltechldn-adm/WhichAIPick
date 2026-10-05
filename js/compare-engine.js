@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selectorResults = document.getElementById('compare-selector-results');
     const copyLinkBtn = document.getElementById('copy-compare-link');
     const saveCompareBtn = document.getElementById('save-compare-btn');
+    const helpMeDecideBtn = document.getElementById('help-me-decide-btn');
 
     let allTools = [];
     let currentIds = [];
@@ -56,6 +57,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 window.UserState.saveComparison(currentIds);
             }
             updateSaveCompareBtnState();
+        });
+    }
+
+    if (helpMeDecideBtn) {
+        helpMeDecideBtn.addEventListener('click', () => {
+            if (currentIds.length >= 2 && window.DecisionAssistant) {
+                window.DecisionAssistant.open(currentIds);
+            }
         });
     }
 
@@ -131,6 +140,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             tableContainer.style.display = 'none';
             if (copyLinkBtn) copyLinkBtn.style.display = 'none';
             if (saveCompareBtn) saveCompareBtn.style.display = 'none';
+            if (helpMeDecideBtn) helpMeDecideBtn.style.display = 'none';
             emptyState.style.display = 'block';
             if (currentIds.length === 0 && staticLinks) {
                 staticLinks.style.display = 'block';
@@ -144,6 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (staticLinks) staticLinks.style.display = 'none';
             tableContainer.style.display = 'block';
             if (copyLinkBtn) copyLinkBtn.style.display = 'flex';
+            if (helpMeDecideBtn) helpMeDecideBtn.style.display = 'flex';
 
             if (saveCompareBtn && window.UserState) {
                 saveCompareBtn.style.display = 'flex';

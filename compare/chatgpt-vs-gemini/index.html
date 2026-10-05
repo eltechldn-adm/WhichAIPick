@@ -9,6 +9,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://whichaipick.com/compare/chatgpt-vs-gemini/">
     <link rel="stylesheet" href="/css/pages/curated-comparison.css">
+    <link rel="stylesheet" href="/css/pages/decision-assistant.css">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -255,6 +256,11 @@
 </style>
 
         <div class="container curated-comparison" style="padding-top: 2rem; max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <button class="btn btn-primary curated-help-decide-btn" data-tools="chatgpt,google-gemini">
+                    Help me decide between ChatGPT and Google Gemini
+                </button>
+            </div>
 
             <section class="compare-section quick-answer-section" style="margin-bottom: 3rem; background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
                 <h2 style="margin-top: 0;">Quick Answer</h2>
@@ -666,6 +672,18 @@
     })();
   </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which integrates with Google Workspace?","acceptedAnswer":{"@type":"Answer","text":"Gemini offers native integration with Google Workspace, including Docs, Gmail, and Drive."}}]}</script>
+    <script type="module" src="/js/decision-assistant.js"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.curated-help-decide-btn');
+            if (btn && window.DecisionAssistant) {
+                btn.addEventListener('click', () => {
+                    const tools = btn.dataset.tools.split(',');
+                    window.DecisionAssistant.open(tools);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

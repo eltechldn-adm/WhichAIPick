@@ -34,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css?v=2.6">
     <link rel="stylesheet" href="/css/pages/compare.css?v=1.0">
+    <link rel="stylesheet" href="/css/pages/decision-assistant.css">
     
     <meta name="google-adsense-account" content="ca-pub-7088331504377019">
     
@@ -169,6 +170,9 @@
         </section>
         
         <div class="compare-actions">
+            <button id="help-me-decide-btn" class="btn btn-primary compare-action-btn" style="display: none;">
+                Help me decide
+            </button>
             <button id="save-compare-btn" class="btn btn-secondary compare-action-btn" style="display: none;">
                 <svg class="compare-action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                 <span class="save-compare-text">Save Comparison</span>
@@ -302,6 +306,7 @@
 
     <script src="/js/main.js?v=6.4"></script>
     <script src="/js/layout.js?v=1.8" defer></script>
+    <script type="module" src="/js/decision-assistant.js"></script>
     <script type="module" src="/js/compare-engine.js"></script>
 </body>
 

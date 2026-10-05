@@ -95,6 +95,11 @@ function buildPage(def) {
     let contentHTML = `
         ${hero}
         <div class="container curated-comparison" style="padding-top: 2rem; max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <button class="btn btn-primary curated-help-decide-btn" data-tools="${escapeHTML(toolA.id)},${escapeHTML(toolB.id)}">
+                    Help me decide between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}
+                </button>
+            </div>
     `;
 
     // Quick Answer
@@ -368,9 +373,22 @@ function buildPage(def) {
         .replace(/<meta property="twitter:description"[\s\S]*?>/, `<meta property="twitter:description" content="${escapeHTML(def.metaDescription)}">`)
         .replace(/<meta property="twitter:title"[\s\S]*?>/, `<meta property="twitter:title" content="${escapeHTML(def.title)}">`)
         .replace(/<meta name="robots" content="noindex,follow">/, `<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">`)
-        .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://whichaipick.com/compare/${escapeHTML(def.slug)}/">\n    <link rel="stylesheet" href="/css/pages/curated-comparison.css">`)
+        .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://whichaipick.com/compare/${escapeHTML(def.slug)}/">\n    <link rel="stylesheet" href="/css/pages/curated-comparison.css">\n    <link rel="stylesheet" href="/css/pages/decision-assistant.css">`)
         .replace(/<main class="page-shell">[\s\S]*?<\/main>/, `<main class="seo-compare-page">${contentHTML}</main>`)
-        .replace('</body>', `${faqSchemaStr}\n</body>`);
+        .replace('</body>', `${faqSchemaStr}
+    <script type="module" src="/js/decision-assistant.js"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.curated-help-decide-btn');
+            if (btn && window.DecisionAssistant) {
+                btn.addEventListener('click', () => {
+                    const tools = btn.dataset.tools.split(',');
+                    window.DecisionAssistant.open(tools);
+                });
+            }
+        });
+    </script>
+</body>`);
 
     fs.writeFileSync(path.join(dirPath, 'index.html'), finalHTML.split('\n').map(line => line.replace(/\s+$/, '')).join('\n'));
     console.log(`[GENERATED] /compare/${def.slug}/`);
