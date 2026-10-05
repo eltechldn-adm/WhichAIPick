@@ -1,8 +1,9 @@
 import { DecisionEngine } from './decision-engine.js';
+import { INTENT_LABELS, getCompatibilityLevel } from './comparison-core.js';
 
 function escapeHTML(str) {
     if (!str) return '';
-    return str.replace(/[&<>'"]/g, 
+    return str.replace(/[&<>'"]/g,
         tag => ({
             '&': '&amp;',
             '<': '&lt;',
@@ -48,7 +49,7 @@ export class DecisionAssistant {
         this.modal.setAttribute('role', 'dialog');
         this.modal.setAttribute('aria-modal', 'true');
         this.modal.setAttribute('aria-labelledby', 'decision-modal-title');
-        
+
         this.modal.innerHTML = `
             <div class="decision-modal-inner">
                 <div class="decision-header">
@@ -61,7 +62,7 @@ export class DecisionAssistant {
         document.body.appendChild(this.modal);
 
         this.modal.querySelector('#decision-close-btn').addEventListener('click', () => this.close());
-        
+
         this.modal.addEventListener('keydown', (e) => this.trapFocus(e));
         this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) this.close();
@@ -77,10 +78,10 @@ export class DecisionAssistant {
         const focusableString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]';
         const focusables = Array.from(this.modal.querySelectorAll(focusableString));
         if (focusables.length === 0) return;
-        
+
         const first = focusables[0];
         const last = focusables[focusables.length - 1];
-        
+
         if (e.key === 'Tab' || e.keyCode === 9) {
             if (e.shiftKey) {
                 if (document.activeElement === first) {
@@ -99,19 +100,19 @@ export class DecisionAssistant {
     async open(toolIds) {
         await this.init();
         if (toolIds.length < 2) return;
-        
+
         this.selectedToolIds = toolIds;
         this.currentStep = 1;
         this.answers = { goal: null, experience: null, budget: null, technical: null };
         this.lastActiveElement = document.activeElement;
-        
+
         this.buildGoalOptions();
 
         if (!this.modal) this.createModal();
-        
+
         this.renderStep();
         this.modal.style.display = 'flex';
-        
+
         if (window.Analytics) Analytics.track('decision_assistant_opened', { tools: toolIds.join(',') });
     }
 
@@ -126,22 +127,16 @@ export class DecisionAssistant {
 
     buildGoalOptions() {
         const selectedTools = this.selectedToolIds.map(id => this.toolsData.find(t => t.id === id)).filter(Boolean);
-        const intents = new Set();
-        selectedTools.forEach(t => {
-            if (t.finderIntentIds) t.finderIntentIds.forEach(i => intents.add(i));
-            if (t.primaryUseCases) t.primaryUseCases.forEach(u => intents.add(u));
-            if (t.primaryCategory) intents.add(t.primaryCategory);
-        });
-        
-        // Take up to 5 unique intents as options
-        this.goalOptions = Array.from(intents).slice(0, 5).map(intent => ({
+        const finalIntents = this.engine.buildGoalOptions(selectedTools);
+
+        this.goalOptions = finalIntents.map(intent => ({
             value: intent,
             label: this.formatIntentLabel(intent)
         }));
     }
 
     formatIntentLabel(intent) {
-        // Simple formatting to make it readable, e.g. "coding.code_generation" -> "Coding Code Generation"
+        if (INTENT_LABELS[intent]) return INTENT_LABELS[intent];
         return intent.split('.').map(part => part.replace(/_/g, ' ')).join(' - ').replace(/\b\w/g, l => l.toUpperCase());
     }
 
@@ -153,7 +148,7 @@ export class DecisionAssistant {
 
     renderStep() {
         const content = this.modal.querySelector('#decision-content');
-        
+
         if (this.currentStep === 1) {
             content.innerHTML = `
                 <div class="decision-step-indicator">Step 1 of 4</div>
@@ -198,7 +193,7 @@ export class DecisionAssistant {
                 <div class="decision-question">How important is free access / budget?</div>
                 <div class="decision-options">
                     <button class="decision-option-btn" data-val="free_plan" data-label="Confirmed free plan">I need a confirmed free plan</button>
-                    <button class="decision-option-btn" data-val="paid" data-label="Happy to pay">I'm happy to pay</button>
+                    <button class="decision-option-btn" data-val="paid" data-label="Happy to pay / free access isn't required">I'm happy to pay / free access isn't required</button>
                     <button class="decision-option-btn" data-val="no_preference" data-label="No preference">No preference</button>
                 </div>
                 <div class="decision-nav">
@@ -246,9 +241,10 @@ export class DecisionAssistant {
         let headerDesc = '';
 
         if (result.resultType === 'CLEAR MATCH') {
-            headerText = 'Best match for your selected requirements';
+            const recommendedTool = selectedTools.find(t => t.id === result.recommendedToolId);
+            headerText = `Best match for your selected requirements: ${recommendedTool ? recommendedTool.canonicalName : ''}`;
         } else if (result.resultType === 'CLOSE MATCH / MULTIPLE FITS') {
-            headerText = 'These tools are both strong matches for the requirements you selected.';
+            headerText = 'Multiple tools closely match the requirements you selected.';
         } else if (result.resultType === 'NO CLEAR MATCH') {
             headerText = 'No clear match from the confirmed data.';
             headerDesc = 'None of these tools strongly match all your preferences.';
@@ -257,7 +253,7 @@ export class DecisionAssistant {
             headerDesc = 'We don\'t have enough confirmed data to recommend a winner.';
         } else if (result.resultType === 'RECOMMENDATION RESTRICTED') {
             headerText = 'No proactive recommendation.';
-            headerDesc = 'The best fitting tool is available for comparison but is excluded from WhichAIPick recommendations.';
+            headerDesc = 'One comparison entry matches more of the requirements you selected, but it is excluded from proactive WhichAIPick recommendations. You can still review its factual matches below.';
         }
 
         let html = `
@@ -268,12 +264,11 @@ export class DecisionAssistant {
             <div class="decision-result-cards">
         `;
 
-        // Check if different types
-        const categories = new Set(selectedTools.map(t => t.primaryCategory));
-        if (categories.size > 1) {
+        const compatibility = getCompatibilityLevel(selectedTools);
+        if (compatibility === 'Different tool types' || compatibility === 'Partial overlap') {
             html += `
                 <div style="background: rgba(255, 152, 0, 0.1); border: 1px solid var(--color-orange); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
-                    <strong>Note:</strong> You are comparing tools from different categories.
+                    <strong>Note:</strong> You are comparing tools with ${compatibility.toLowerCase()}.
                 </div>
             `;
         }
@@ -287,29 +282,42 @@ export class DecisionAssistant {
         sortedEvaluations.forEach(ev => {
             const isRestricted = !ev.tool.recommendationEligible;
             let restrictedText = isRestricted ? '<p style="color: var(--color-gray-400); font-size: 0.85rem; margin-bottom: 1rem;">This catalogue entry is available for explicit comparison, but is excluded from proactive WhichAIPick recommendations.</p>' : '';
-            
+
+            let bestMatchLabel = '';
+            if (result.resultType === 'CLEAR MATCH' && ev.tool.id === result.recommendedToolId) {
+                bestMatchLabel = '<span style="background: var(--accent-cyan); color: var(--bg-surface); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-left: 0.5rem;">Best match</span>';
+            } else if (result.resultType === 'CLOSE MATCH / MULTIPLE FITS' && result.topCandidateIds.includes(ev.tool.id)) {
+                bestMatchLabel = '<span style="background: rgba(255,255,255,0.2); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-left: 0.5rem;">Top match</span>';
+            }
+
             html += `
                 <div class="decision-result-card">
-                    <h4><a href="/tools/${escapeHTML(ev.tool.id)}/" style="color: inherit; text-decoration: none;">${escapeHTML(ev.tool.canonicalName)}</a></h4>
+                    <h4 style="display: flex; align-items: center;"><a href="/tools/${escapeHTML(ev.tool.id)}/" style="color: inherit; text-decoration: none;">${escapeHTML(ev.tool.canonicalName)}</a>${bestMatchLabel}</h4>
                     ${restrictedText}
             `;
-            
+
             if (ev.matches.length > 0) {
-                html += `<ul class="decision-matches-list">
+                html += `
+                <div style="font-weight: 600; font-size: 0.9rem; margin-top: 1rem; color: #4CAF50;">Matches</div>
+                <ul class="decision-matches-list">
                     ${ev.matches.map(m => `<li>${escapeHTML(m.text)}</li>`).join('')}
                 </ul>`;
             }
             if (ev.mismatches.length > 0) {
-                html += `<ul class="decision-matches-list">
+                html += `
+                <div style="font-weight: 600; font-size: 0.9rem; margin-top: 1rem; color: #F44336;">Doesn't match</div>
+                <ul class="decision-matches-list">
                     ${ev.mismatches.map(m => `<li class="mismatch">${escapeHTML(m.text)}</li>`).join('')}
                 </ul>`;
             }
             if (ev.unknowns.length > 0) {
-                html += `<ul class="decision-matches-list">
-                    ${ev.unknowns.map(m => `<li class="unknown">${escapeHTML(m.text)} (Not confirmed)</li>`).join('')}
+                html += `
+                <div style="font-weight: 600; font-size: 0.9rem; margin-top: 1rem; color: var(--color-gray-400);">Not confirmed</div>
+                <ul class="decision-matches-list">
+                    ${ev.unknowns.map(m => `<li class="unknown">${escapeHTML(m.text)}</li>`).join('')}
                 </ul>`;
             }
-            
+
             if (ev.matches.length === 0 && ev.mismatches.length === 0 && ev.unknowns.length === 0) {
                 html += `<p style="color: var(--color-gray-400); font-size: 0.9rem;">No specific preferences apply to this tool.</p>`;
             }
@@ -320,7 +328,7 @@ export class DecisionAssistant {
         html += `
             </div>
             <p class="decision-transparency">
-                Recommendations are based on structured catalogue attributes and the preferences you selected. 
+                Recommendations are based on structured catalogue attributes and the preferences you selected.
                 Unknown data is not treated as a negative.
             </p>
             <div class="decision-nav" style="margin-top: 2rem;">
@@ -347,10 +355,10 @@ export class DecisionAssistant {
         content.querySelector('#decision-back-compare-btn').addEventListener('click', () => {
             this.close();
         });
-        
+
         content.querySelector('#decision-change-btn').focus();
     }
 }
 
-// Global instance 
+// Global instance
 window.DecisionAssistant = new DecisionAssistant();

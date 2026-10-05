@@ -8,6 +8,66 @@ export function escapeHTML(str) {
         .replace(/'/g, '&#039;');
 }
 
+export const INTENT_LABELS = {
+    "writing.generate_text": "Generate text and copy",
+    "writing.rewrite": "Rewrite or paraphrase",
+    "writing.longform": "Write long-form (books, essays)",
+    "coding.code_generation": "Write or complete code",
+    "coding.debugging": "Debug or fix code",
+    "building.ai_app_builder": "Build an AI/LLM application",
+    "building.no_code_app": "Build an app without coding",
+    "building.website_builder": "Build a website",
+    "research.web_search": "Web research",
+    "research.academic_papers": "Research papers / evidence",
+    "research.document_analysis": "Document analysis (PDFs)",
+    "research.data_analysis": "Data analysis (Spreadsheets)",
+    "research.summarization": "Summarize articles",
+    "image.generate": "Image generation",
+    "image.edit": "Image editing",
+    "video.generate": "Video generation",
+    "video.edit": "Video editing",
+    "video.avatar": "Avatar video generation",
+    "audio.music_generation": "Music generation",
+    "audio.voice_generation": "Voice generation / TTS",
+    "automation.workflow": "Automate app/business workflows",
+    "automation.app_integration": "App integration",
+    "meetings.transcription": "Meeting transcription",
+    "meetings.notes": "Meeting notes",
+    "education.teaching": "Lesson planning & grading",
+    "education.learning": "Tutoring & studying"
+};
+
+export function getCompatibilityLevel(tools) {
+    if (!tools || tools.length < 2) return null;
+
+    // Check if primary categories differ
+    const categories = new Set(tools.map(t => t.primaryCategory));
+    if (categories.size > 1) {
+        return 'Different tool types';
+    }
+
+    // Check intents and use cases overlap
+    const intentSets = tools.map(t => {
+        const s = new Set();
+        if (t.finderIntentIds) t.finderIntentIds.forEach(i => s.add(i));
+        if (t.primaryUseCases) t.primaryUseCases.forEach(u => s.add(u));
+        return s;
+    });
+
+    let shared = 0;
+    for (const intent of intentSets[0]) {
+        if (intentSets.slice(1).every(set => set.has(intent))) {
+            shared++;
+        }
+    }
+
+    if (shared > 0) {
+        return 'Strong overlap';
+    }
+
+    return 'Partial overlap';
+}
+
 export function checkIdentical(values) {
     if (values.length <= 1) return true;
     const first = values[0];

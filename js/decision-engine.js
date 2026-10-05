@@ -14,25 +14,11 @@ export class DecisionEngine {
                 if (tool.primaryCategory === preference) return 'CONFIRMED MATCH';
                 return 'CONFIRMED MISMATCH';
             }
-            
+
             case 'experience': {
-                if (tool.experienceLevel === 'all_levels') return 'CONFIRMED MATCH';
                 if (!tool.experienceLevel) return 'UNKNOWN';
-                
-                if (preference === 'Beginner') {
-                    if (tool.experienceLevel === 'beginner') return 'CONFIRMED MATCH';
-                    return 'CONFIRMED MISMATCH';
-                }
-                if (preference === 'Intermediate') {
-                    if (tool.experienceLevel === 'intermediate') return 'CONFIRMED MATCH';
-                    if (tool.experienceLevel === 'beginner') return 'CONFIRMED MATCH';
-                    return 'CONFIRMED MISMATCH';
-                }
-                if (preference === 'Advanced') {
-                    if (tool.experienceLevel === 'advanced') return 'CONFIRMED MATCH';
-                    if (tool.experienceLevel === 'intermediate') return 'CONFIRMED MATCH';
-                    if (tool.experienceLevel === 'beginner') return 'CONFIRMED MATCH';
-                }
+                if (tool.experienceLevel === 'all_levels') return 'CONFIRMED MATCH';
+                if (tool.experienceLevel.toLowerCase() === preference.toLowerCase()) return 'CONFIRMED MATCH';
                 return 'CONFIRMED MISMATCH';
             }
 
@@ -74,9 +60,9 @@ export class DecisionEngine {
 
         for (const [criteriaType, pref] of Object.entries(preferences)) {
             if (!pref || !pref.value || pref.value === 'no_preference') continue;
-            
+
             const status = this.evaluateCriterion(tool, criteriaType, pref.value);
-            
+
             const labelStr = pref.label || pref.value;
             if (status === 'CONFIRMED MATCH') matches.push({ type: criteriaType, text: labelStr });
             if (status === 'CONFIRMED MISMATCH') mismatches.push({ type: criteriaType, text: labelStr });
@@ -89,27 +75,24 @@ export class DecisionEngine {
     buildExplanationModel(selectedTools, preferences) {
         const evaluations = selectedTools.map(tool => this.evaluateTool(tool, preferences));
 
+        // 1. Evaluate ALL tools to find the strongest candidate(s)
         let maxMatches = -1;
-        let minMismatches = Infinity;
-
-        // Filter out tools that are restricted from being proactive winners
-        const eligibleTools = evaluations.filter(e => e.tool.recommendationEligible);
-
-        eligibleTools.forEach(e => {
+        evaluations.forEach(e => {
             if (e.matches.length > maxMatches) maxMatches = e.matches.length;
-            // For tools with the same maxMatches, we want the one with fewest mismatches
         });
 
-        // Find min mismatches among those with max matches
-        const maxMatchEvaluations = eligibleTools.filter(e => e.matches.length === maxMatches);
+        let minMismatches = Infinity;
+        const maxMatchEvaluations = evaluations.filter(e => e.matches.length === maxMatches);
         maxMatchEvaluations.forEach(e => {
             if (e.mismatches.length < minMismatches) minMismatches = e.mismatches.length;
         });
 
-        const topCandidates = maxMatchEvaluations.filter(e => e.mismatches.length === minMismatches && e.matches.length > 0);
+        const overallTopCandidates = maxMatchEvaluations.filter(e => e.mismatches.length === minMismatches && e.matches.length > 0);
 
         let resultType = 'NO CLEAR MATCH';
-        
+        let topCandidateIds = overallTopCandidates.map(e => e.tool.id);
+        let recommendedToolId = null;
+
         const allZeroMatches = evaluations.every(e => e.matches.length === 0);
         const allZeroMismatches = evaluations.every(e => e.mismatches.length === 0);
 
@@ -119,20 +102,109 @@ export class DecisionEngine {
             } else {
                 resultType = 'NO CLEAR MATCH';
             }
-        } else {
-            if (topCandidates.length === 1) {
-                resultType = 'CLEAR MATCH';
-            } else if (topCandidates.length > 1) {
-                resultType = 'CLOSE MATCH / MULTIPLE FITS';
-            } else if (topCandidates.length === 0 && evaluations.some(e => e.matches.length > 0)) {
-                // Meaning the only tool(s) with matches are recommendation-restricted
+        } else if (overallTopCandidates.length > 0) {
+            // 2. Apply recommendation eligibility logic AFTER finding the true best fits
+            const eligibleTops = overallTopCandidates.filter(e => e.tool.recommendationEligible !== false);
+            const restrictedTops = overallTopCandidates.filter(e => e.tool.recommendationEligible === false);
+
+            if (eligibleTops.length === 0 && restrictedTops.length > 0) {
+                // Restricted is the strongest, no eligible tie
                 resultType = 'RECOMMENDATION RESTRICTED';
+            } else if (eligibleTops.length > 0 && restrictedTops.length > 0) {
+                // Tie between eligible and restricted
+                resultType = 'CLOSE MATCH / MULTIPLE FITS';
+            } else if (eligibleTops.length === 1) {
+                // One clear eligible winner
+                resultType = 'CLEAR MATCH';
+                recommendedToolId = eligibleTops[0].tool.id;
+            } else if (eligibleTops.length > 1) {
+                // Multiple eligible winners
+                resultType = 'CLOSE MATCH / MULTIPLE FITS';
             }
         }
 
         return {
             resultType,
+            topCandidateIds,
+            recommendedToolId,
             evaluations
         };
+    }
+
+    buildGoalOptions(selectedTools) {
+        // 1. Collect finderIntentIds and primaryUseCases
+        const toolIntents = selectedTools.map(t => {
+            const intents = new Set(t.finderIntentIds || []);
+            const useCases = new Set(t.primaryUseCases || []);
+            return { id: t.id, intents: Array.from(intents), useCases: Array.from(useCases) };
+        });
+
+        // Sort by ID to ensure deterministic output regardless of input order (fairness)
+        toolIntents.sort((a, b) => a.id.localeCompare(b.id));
+
+        // 2. Identify shared intents
+        const allIntents = new Set();
+        toolIntents.forEach(t => t.intents.forEach(i => allIntents.add(i)));
+
+        const sharedIntents = [];
+        const uniqueIntents = []; // Array of arrays per tool
+
+        for (const intent of allIntents) {
+            let isShared = true;
+            for (const t of toolIntents) {
+                if (!t.intents.includes(intent)) {
+                    isShared = false;
+                    break;
+                }
+            }
+            if (isShared) {
+                sharedIntents.push(intent);
+            }
+        }
+
+        toolIntents.forEach(t => {
+            const uniques = t.intents.filter(i => !sharedIntents.includes(i));
+            uniqueIntents.push(uniques);
+        });
+
+        const finalIntents = new Set(sharedIntents);
+
+        // Round-robin for unique intents
+        let addedInRound = true;
+        let round = 0;
+        while (addedInRound && finalIntents.size < 5) {
+            addedInRound = false;
+            for (let i = 0; i < uniqueIntents.length; i++) {
+                if (finalIntents.size >= 5) break;
+                if (round < uniqueIntents[i].length) {
+                    finalIntents.add(uniqueIntents[i][round]);
+                    addedInRound = true;
+                }
+            }
+            round++;
+        }
+
+        // If we still need more, fallback to primaryUseCases round-robin
+        if (finalIntents.size < 5) {
+            const uniqueUseCases = toolIntents.map(t => t.useCases);
+            addedInRound = true;
+            round = 0;
+            while (addedInRound && finalIntents.size < 5) {
+                addedInRound = false;
+                for (let i = 0; i < uniqueUseCases.length; i++) {
+                    if (finalIntents.size >= 5) break;
+                    if (round < uniqueUseCases[i].length) {
+                        const uc = uniqueUseCases[i][round];
+                        if (!finalIntents.has(uc)) {
+                            finalIntents.add(uc);
+                            addedInRound = true;
+                        }
+                    }
+                }
+                round++;
+            }
+        }
+
+        return Array.from(finalIntents);
     }
 }
