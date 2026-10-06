@@ -131,6 +131,120 @@ export class DecisionEngine {
         };
     }
 
+    /**
+     * Catalogue-wide discovery (Phase 6B.3B). Pure and deterministic; returns data only.
+     *
+     * Pool: records that are directoryEligible, recommendationEligible, current
+     * (active lifecycle, no successor, not an alias of another record) and not excluded.
+     *
+     * Hard requirements (a candidate must CONFIRM them; UNKNOWN never satisfies):
+     *   - goal (specific goal, or the intents shared by the selected tools when "no preference")
+     *   - confirmed free plan, API, open source, self-hosting
+     * Experience is a soft preference: it influences ordering only.
+     *
+     * Ordering (lexicographic, no global score):
+     *   1. goal relevance tier (finderIntentIds, then primaryUseCases, then primaryCategory)
+     *   2. fewer confirmed mismatches
+     *   3. more confirmed matches
+     *   4. fewer unknown relevant fields
+     *   5. canonical id (stable tie-break, independent of input order)
+     */
+    discoverMatchingTools({ tools = [], preferences = {}, excludeIds = [], limit = 3, selectedTools = [] } = {}) {
+        const goalValue = preferences.goal && preferences.goal.value;
+        const goalLabel = (preferences.goal && preferences.goal.label) || goalValue;
+
+        let scopeIntents = null;
+        if (!goalValue) {
+            return { resultType: 'INSUFFICIENT SCOPE', scopeIntents: [], totalMatches: 0, results: [] };
+        }
+        if (goalValue === 'no_preference') {
+            scopeIntents = this.getSharedIntents(selectedTools);
+            if (scopeIntents.length === 0) {
+                return { resultType: 'INSUFFICIENT SCOPE', scopeIntents: [], totalMatches: 0, results: [] };
+            }
+        }
+
+        const excluded = new Set(excludeIds);
+        const aliasIds = new Set();
+        for (const t of tools) {
+            if (Array.isArray(t.aliases)) t.aliases.forEach(a => { if (a !== t.id) aliasIds.add(a); });
+        }
+
+        const remaining = {};
+        for (const [key, pref] of Object.entries(preferences)) {
+            if (key !== 'goal') remaining[key] = pref;
+        }
+        const hardBudget = remaining.budget && remaining.budget.value === 'free_plan';
+        const hardTechnical = remaining.technical &&
+            ['api', 'open_source', 'self_hosted'].includes(remaining.technical.value);
+
+        const candidates = [];
+        for (const tool of tools) {
+            if (!this.isProactivelyEligible(tool, excluded, aliasIds)) continue;
+
+            let goalTier = -1;
+            let goalIntentIds = [];
+            if (scopeIntents) {
+                const intents = tool.finderIntentIds || [];
+                goalIntentIds = scopeIntents.filter(i => intents.includes(i));
+                if (goalIntentIds.length > 0) goalTier = 0;
+            } else if ((tool.finderIntentIds || []).includes(goalValue)) {
+                goalTier = 0;
+                goalIntentIds = [goalValue];
+            } else if ((tool.primaryUseCases || []).includes(goalValue)) {
+                goalTier = 1;
+            } else if (tool.primaryCategory === goalValue) {
+                goalTier = 2;
+            }
+            if (goalTier < 0) continue;
+
+            if (hardBudget && this.evaluateCriterion(tool, 'budget', 'free_plan') !== 'CONFIRMED MATCH') continue;
+            if (hardTechnical && this.evaluateCriterion(tool, 'technical', remaining.technical.value) !== 'CONFIRMED MATCH') continue;
+
+            const evaluation = this.evaluateTool(tool, remaining);
+            evaluation.matches.unshift({
+                type: 'goal',
+                text: scopeIntents ? 'Shared focus of your selected tools' : goalLabel,
+                intentIds: goalIntentIds
+            });
+            candidates.push({ ...evaluation, goalTier });
+        }
+
+        candidates.sort((a, b) => {
+            if (a.goalTier !== b.goalTier) return a.goalTier - b.goalTier;
+            if (a.mismatches.length !== b.mismatches.length) return a.mismatches.length - b.mismatches.length;
+            if (a.matches.length !== b.matches.length) return b.matches.length - a.matches.length;
+            if (a.unknowns.length !== b.unknowns.length) return a.unknowns.length - b.unknowns.length;
+            if (a.tool.id < b.tool.id) return -1;
+            return a.tool.id > b.tool.id ? 1 : 0;
+        });
+
+        const max = Math.max(0, Math.floor(limit));
+        return {
+            resultType: candidates.length > 0 ? 'MATCHES FOUND' : 'NO MATCHES FOUND',
+            scopeIntents: scopeIntents || [],
+            totalMatches: candidates.length,
+            results: candidates.slice(0, max).map(({ tool, matches, mismatches, unknowns }) => ({ tool, matches, mismatches, unknowns }))
+        };
+    }
+
+    isProactivelyEligible(tool, excludedIds, aliasIds) {
+        if (!tool || !tool.id) return false;
+        if (excludedIds.has(tool.id) || aliasIds.has(tool.id)) return false;
+        if (tool.recommendationEligible !== true) return false;
+        if (tool.directoryEligible !== undefined && tool.directoryEligible !== true) return false;
+        if (tool.operationalStatus && tool.operationalStatus !== 'active') return false;
+        if (['discontinued', 'retired', 'defunct', 'shutdown', 'redirect'].includes(tool.lifecycleStatus)) return false;
+        if (tool.successorToolId) return false;
+        return true;
+    }
+
+    getSharedIntents(selectedTools) {
+        if (!selectedTools || selectedTools.length === 0) return [];
+        const sets = selectedTools.map(t => new Set(t.finderIntentIds || []));
+        return Array.from(sets[0]).filter(i => sets.every(s => s.has(i))).sort();
+    }
+
     buildGoalOptions(selectedTools) {
         // 1. Collect finderIntentIds and primaryUseCases
         const toolIntents = selectedTools.map(t => {

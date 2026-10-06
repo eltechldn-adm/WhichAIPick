@@ -331,6 +331,11 @@ export class DecisionAssistant {
                 Recommendations are based on structured catalogue attributes and the preferences you selected.
                 Unknown data is not treated as a negative.
             </p>
+            <div class="decision-discovery-entry">
+                <button class="btn btn-secondary btn-sm" id="decision-discover-btn" aria-expanded="false" aria-controls="decision-discovery">Explore other matching tools</button>
+                <span class="decision-sr-only" id="decision-discovery-announce" role="status" aria-live="polite"></span>
+            </div>
+            <section id="decision-discovery" class="decision-discovery" aria-labelledby="decision-discovery-title" hidden></section>
             <div class="decision-nav" style="margin-top: 2rem;">
                 <button class="btn btn-secondary btn-sm" id="decision-change-btn">Change my answers</button>
                 <div>
@@ -342,6 +347,7 @@ export class DecisionAssistant {
 
         content.innerHTML = html;
 
+        content.querySelector('#decision-discover-btn').addEventListener('click', (e) => this.toggleDiscovery(content, e.currentTarget));
         content.querySelector('#decision-change-btn').addEventListener('click', () => {
             this.currentStep = 4; // Go back to last question
             this.renderStep();
@@ -357,6 +363,180 @@ export class DecisionAssistant {
         });
 
         content.querySelector('#decision-change-btn').focus();
+    }
+
+    toggleDiscovery(content, btn) {
+        const section = content.querySelector('#decision-discovery');
+        const willOpen = section.hidden;
+        section.hidden = !willOpen;
+        btn.setAttribute('aria-expanded', String(willOpen));
+        btn.textContent = willOpen ? 'Hide other matching tools' : 'Explore other matching tools';
+        if (!willOpen) return;
+
+        const selectedTools = this.selectedToolIds.map(id => this.toolsData.find(t => t.id === id)).filter(Boolean);
+        const discovery = this.engine.discoverMatchingTools({
+            tools: this.toolsData,
+            preferences: this.answers,
+            excludeIds: this.selectedToolIds,
+            limit: 6,
+            selectedTools
+        });
+        this.renderDiscovery(section, discovery);
+        const announce = content.querySelector('#decision-discovery-announce');
+        if (announce) {
+            announce.textContent = discovery.resultType === 'MATCHES FOUND'
+                ? `Showing ${Math.min(3, discovery.results.length)} of ${discovery.totalMatches} other matching tools.`
+                : (discovery.resultType === 'INSUFFICIENT SCOPE' ? 'Choose a goal to discover other matching tools.' : 'No additional matching tools found.');
+        }
+
+        if (window.Analytics) {
+            const goal = this.answers.goal ? this.answers.goal.value : '';
+            Analytics.track('decision_discovery_opened', { goal, tools: this.selectedToolIds.join(',') });
+            Analytics.track('decision_discovery_results', { goal, count: discovery.results.length, tools: this.selectedToolIds.join(',') });
+        }
+    }
+
+    describeMatch(m, discovery) {
+        if (m.type === 'goal') {
+            if (discovery.scopeIntents.length > 0) {
+                return `Shares the focus of your selected tools: ${(m.intentIds || []).map(i => this.formatIntentLabel(i)).join(', ')}`;
+            }
+            return `${m.text} matches your goal`;
+        }
+        if (m.type === 'experience') return 'Suitable for your selected experience level';
+        if (m.type === 'budget') return 'Confirmed free plan';
+        if (m.type === 'technical') return `${m.text} confirmed`;
+        return m.text;
+    }
+
+    describeMismatch(m) {
+        if (m.type === 'experience') return 'Aimed at a different experience level than selected';
+        return m.text;
+    }
+
+    describeUnknown(u) {
+        if (u.type === 'experience') return 'Experience level not confirmed';
+        return `${u.text} not confirmed`;
+    }
+
+    renderDiscovery(section, discovery) {
+        const isFull = this.selectedToolIds.length >= 4;
+        let html = `<h3 id="decision-discovery-title">Other tools matching your requirements</h3>`;
+
+        if (discovery.resultType === 'INSUFFICIENT SCOPE') {
+            html += `<p>Choose a goal to discover other matching tools.</p>`;
+        } else if (discovery.resultType === 'NO MATCHES FOUND') {
+            html += `
+                <p>No additional tools in the current catalogue have confirmed matches for all of those requirements.</p>
+                <div class="decision-discovery-actions">
+                    <button class="btn btn-secondary btn-sm" id="decision-discovery-change">Change my answers</button>
+                    <button class="btn btn-secondary btn-sm" id="decision-discovery-remove">Remove a requirement</button>
+                    <button class="btn btn-primary btn-sm" id="decision-discovery-back">Back to comparison</button>
+                </div>`;
+        } else {
+            const shown = discovery.results.length;
+            html += `<p id="decision-discovery-count">Showing ${Math.min(3, shown)} of ${discovery.totalMatches} matching tools.</p>`;
+            html += `<div class="decision-discovery-list" id="decision-discovery-list">`;
+            discovery.results.forEach((ev, idx) => {
+                html += this.renderDiscoveryCard(ev, discovery, idx, isFull);
+            });
+            html += `</div>`;
+            if (shown > 3) {
+                html += `<button class="btn btn-secondary btn-sm" id="decision-discovery-more" aria-expanded="false" aria-controls="decision-discovery-list">Show 3 more</button>`;
+            }
+            html += `
+                <p class="decision-transparency">
+                    These suggestions are based on the structured catalogue attributes and preferences you selected.
+                    They are not ranked by sponsorship, popularity or commercial status.
+                    <a href="/review-methodology">How we review tools</a>
+                </p>`;
+        }
+
+        section.innerHTML = html;
+        this.bindDiscovery(section, discovery);
+    }
+
+    renderDiscoveryCard(ev, discovery, idx, isFull) {
+        const t = ev.tool;
+        const id = escapeHTML(t.id);
+        const extra = idx >= 3 ? ' decision-discovery-extra' : '';
+        const li = (cls, text) => `<li${cls ? ` class="${cls}"` : ''}>${escapeHTML(text)}</li>`;
+
+        let actions;
+        if (isFull) {
+            actions = `
+                <a class="btn btn-secondary btn-sm" href="/tools/${id}/" data-discovery-view="${id}" aria-label="View ${escapeHTML(t.canonicalName)}">View tool</a>
+                <button class="btn btn-secondary btn-sm" data-discovery-replace-toggle="${id}" aria-expanded="false" aria-controls="decision-replace-${id}">Replace a tool</button>
+                <button class="btn btn-secondary btn-sm" data-discovery-new="${id}">Start a new comparison</button>
+                <div class="decision-replace-list" id="decision-replace-${id}" hidden>
+                    ${this.selectedToolIds.map(sid => {
+                        const st = this.toolsData.find(x => x.id === sid);
+                        const name = st ? st.canonicalName : sid;
+                        return `<button class="btn btn-secondary btn-sm" data-discovery-replace="${escapeHTML(sid)}" data-discovery-with="${id}" aria-label="Replace ${escapeHTML(name)} with ${escapeHTML(t.canonicalName)}">Replace ${escapeHTML(name)}</button>`;
+                    }).join('')}
+                </div>`;
+        } else {
+            actions = `
+                <a class="btn btn-secondary btn-sm" href="/tools/${id}/" data-discovery-view="${id}" aria-label="View ${escapeHTML(t.canonicalName)}">View tool</a>
+                <button class="btn btn-primary btn-sm" data-discovery-add="${id}" aria-label="Add ${escapeHTML(t.canonicalName)} to comparison">Add to comparison</button>`;
+        }
+
+        return `
+            <article class="decision-result-card decision-discovery-card${extra}"${idx >= 3 ? ' hidden' : ''}>
+                <h4><a href="/tools/${id}/">${escapeHTML(t.canonicalName)}</a></h4>
+                <p class="decision-discovery-category">${escapeHTML(t.primaryCategory)}</p>
+                <div class="decision-discovery-label">Why it matches</div>
+                <ul class="decision-matches-list">${ev.matches.map(m => li('', this.describeMatch(m, discovery))).join('')}</ul>
+                ${(ev.mismatches.length + ev.unknowns.length) > 0 ? `
+                <div class="decision-discovery-label">Trade-offs / not confirmed</div>
+                <ul class="decision-matches-list">
+                    ${ev.mismatches.map(m => li('mismatch', this.describeMismatch(m))).join('')}
+                    ${ev.unknowns.map(u => li('unknown', this.describeUnknown(u))).join('')}
+                </ul>` : ''}
+                <div class="decision-discovery-actions">${actions}</div>
+            </article>`;
+    }
+
+    bindDiscovery(section, discovery) {
+        const on = (sel, fn) => section.querySelectorAll(sel).forEach(el => el.addEventListener('click', (e) => fn(el, e)));
+        const goal = this.answers.goal ? this.answers.goal.value : '';
+
+        on('[data-discovery-add]', (el) => {
+            const id = el.dataset.discoveryAdd;
+            if (!window.CompareEngine || this.selectedToolIds.length >= 4) return;
+            window.CompareEngine.addTool(id);
+            if (window.Analytics) Analytics.track('decision_discovery_tool_added', { goal, toolId: id });
+            this.close();
+        });
+        on('[data-discovery-view]', (el) => {
+            if (window.Analytics) Analytics.track('decision_discovery_tool_viewed', { goal, toolId: el.dataset.discoveryView });
+        });
+        on('[data-discovery-replace-toggle]', (el) => {
+            const list = section.querySelector('#' + el.getAttribute('aria-controls'));
+            const open = list.hidden;
+            list.hidden = !open;
+            el.setAttribute('aria-expanded', String(open));
+        });
+        on('[data-discovery-replace]', (el) => {
+            if (!window.CompareEngine) return;
+            window.CompareEngine.replaceTool(el.dataset.discoveryReplace, el.dataset.discoveryWith);
+            if (window.Analytics) Analytics.track('decision_discovery_tool_added', { goal, toolId: el.dataset.discoveryWith });
+            this.close();
+        });
+        on('[data-discovery-new]', (el) => {
+            window.history.pushState(null, "", "/compare#tools=" + encodeURIComponent(el.dataset.discoveryNew));
+            window.location.reload();
+        });
+        on('#decision-discovery-more', (el) => {
+            section.querySelectorAll('.decision-discovery-extra').forEach(c => { c.hidden = false; });
+            el.setAttribute('aria-expanded', 'true');
+            el.hidden = true;
+            const c = section.querySelector('#decision-discovery-count');
+            if (c) c.textContent = 'Showing ' + section.querySelectorAll('.decision-discovery-card').length + ' of ' + discovery.totalMatches + ' matching tools.';
+        });
+        on('#decision-discovery-change', () => { this.currentStep = 1; this.renderStep(); });
+        on('#decision-discovery-remove', () => { this.currentStep = 3; this.renderStep(); });
+        on('#decision-discovery-back', () => this.close());
     }
 }
 

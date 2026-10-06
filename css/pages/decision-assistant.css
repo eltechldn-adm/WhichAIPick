@@ -141,3 +141,20 @@
     margin-top: 2rem;
     text-align: center;
 }
+
+/* Phase 6B.3B: catalogue discovery */
+.decision-sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.decision-discovery-entry { margin-top: 1.5rem; text-align: center; }
+.decision-discovery { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.decision-discovery[hidden], .decision-discovery-card[hidden], .decision-replace-list[hidden] { display: none; }
+.decision-discovery h3 { margin: 0 0 0.75rem 0; font-size: 1.2rem; color: var(--color-white); }
+.decision-discovery-card h4 { margin: 0 0 0.25rem 0; }
+.decision-discovery-card h4 a { color: inherit; text-decoration: none; }
+.decision-discovery-card h4 a:hover { color: var(--accent-cyan); }
+.decision-discovery-category { margin: 0 0 0.75rem 0; font-size: 0.85rem; color: var(--color-gray-400); }
+.decision-discovery-label { font-weight: 600; font-size: 0.9rem; margin-top: 0.75rem; color: var(--color-gray-400); }
+.decision-discovery-actions, .decision-replace-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.decision-replace-list { width: 100%; }
+.decision-discovery a:focus-visible, .decision-discovery button:focus-visible, .decision-discover-btn:focus-visible, #decision-discover-btn:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+.decision-discovery-card, .decision-discovery-card li { overflow-wrap: anywhere; }
+@media (max-width: 480px) { .decision-modal-inner { padding: 1.25rem; } .decision-discovery-actions .btn { flex: 1 1 100%; text-align: center; } }

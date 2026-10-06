@@ -130,10 +130,9 @@ const toolCat1 = { finderIntentIds: ['a'], primaryCategory: 'Coding' };
 const toolCat2 = { finderIntentIds: ['b'], primaryCategory: 'Coding' };
 assertEqual(getCompatibilityLevel([toolCat1, toolCat2]), 'Partial overlap', 'Same category, different intents');
 
-const zapier = tools.find(t => t.id === 'zapier');
-if (midjourney && zapier) {
-    assertEqual(getCompatibilityLevel([midjourney, zapier]), 'Different tool types', 'Midjourney vs Zapier');
-}
+const zapier = tools.find(t => t.id === 'zapier-ai');
+if (!midjourney || !zapier) throw new Error('Could not find midjourney or zapier-ai for compatibility test');
+assertEqual(getCompatibilityLevel([midjourney, zapier]), 'Different tool types', 'Midjourney vs Zapier AI');
 
 const cursor = tools.find(t => t.id === 'cursor');
 const copilot = tools.find(t => t.id === 'github-copilot');
@@ -141,9 +140,8 @@ if (cursor && copilot) {
     assertEqual(getCompatibilityLevel([cursor, copilot]), 'Strong overlap', 'Cursor vs Copilot');
 }
 
-if (chatGPT && claude) {
-    console.log(`ChatGPT + Claude compatibility: ${getCompatibilityLevel([chatGPT, claude])}`);
-}
+// Expected from current catalogue data: shared primaryCategory, no shared intent.
+assertEqual(getCompatibilityLevel([chatGPT, claude]), 'Partial overlap', 'ChatGPT vs Claude');
 
 const tool3A = { primaryUseCases: ['Writing'], primaryCategory: 'A' };
 const tool3B = { primaryUseCases: ['Writing'], primaryCategory: 'B' };
