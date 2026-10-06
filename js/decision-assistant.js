@@ -503,10 +503,17 @@ export class DecisionAssistant {
 
         on('[data-discovery-add]', (el) => {
             const id = el.dataset.discoveryAdd;
-            if (!window.CompareEngine || this.selectedToolIds.length >= 4) return;
-            window.CompareEngine.addTool(id);
+            if (this.selectedToolIds.length >= 4) return;
+            
             if (window.Analytics) Analytics.track('decision_discovery_tool_added', { goal, toolId: id });
-            this.close();
+            
+            if (window.CompareEngine) {
+                window.CompareEngine.addTool(id);
+                this.close();
+            } else {
+                const newTools = [...this.selectedToolIds, id];
+                window.location.href = "/compare#tools=" + encodeURIComponent(newTools.join(','));
+            }
         });
         on('[data-discovery-view]', (el) => {
             if (window.Analytics) Analytics.track('decision_discovery_tool_viewed', { goal, toolId: el.dataset.discoveryView });
@@ -518,10 +525,18 @@ export class DecisionAssistant {
             el.setAttribute('aria-expanded', String(open));
         });
         on('[data-discovery-replace]', (el) => {
-            if (!window.CompareEngine) return;
-            window.CompareEngine.replaceTool(el.dataset.discoveryReplace, el.dataset.discoveryWith);
-            if (window.Analytics) Analytics.track('decision_discovery_tool_added', { goal, toolId: el.dataset.discoveryWith });
-            this.close();
+            const replaceId = el.dataset.discoveryReplace;
+            const withId = el.dataset.discoveryWith;
+            
+            if (window.Analytics) Analytics.track('decision_discovery_tool_added', { goal, toolId: withId });
+            
+            if (window.CompareEngine) {
+                window.CompareEngine.replaceTool(replaceId, withId);
+                this.close();
+            } else {
+                const newTools = this.selectedToolIds.map(sid => sid === replaceId ? withId : sid);
+                window.location.href = "/compare#tools=" + encodeURIComponent(newTools.join(','));
+            }
         });
         on('[data-discovery-new]', (el) => {
             window.history.pushState(null, "", "/compare#tools=" + encodeURIComponent(el.dataset.discoveryNew));
