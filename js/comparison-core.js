@@ -40,32 +40,49 @@ export const INTENT_LABELS = {
 export function getCompatibilityLevel(tools) {
     if (!tools || tools.length < 2) return null;
 
-    // Check if primary categories differ
-    const categories = new Set(tools.map(t => t.primaryCategory));
-    if (categories.size > 1) {
-        return 'Different tool types';
-    }
+    const normalize = (str) => typeof str === 'string' ? str.trim().toLowerCase() : '';
 
-    // Check intents and use cases overlap
-    const intentSets = tools.map(t => {
-        const s = new Set();
-        if (t.finderIntentIds) t.finderIntentIds.forEach(i => s.add(i));
-        if (t.primaryUseCases) t.primaryUseCases.forEach(u => s.add(u));
-        return s;
-    });
+    const intentSets = tools.map(t => new Set((t.finderIntentIds || []).filter(Boolean)));
+    const useCaseSets = tools.map(t => new Set((t.primaryUseCases || []).filter(Boolean).map(normalize)));
+    const categorySets = tools.map(t => new Set([t.primaryCategory].filter(Boolean)));
 
-    let shared = 0;
-    for (const intent of intentSets[0]) {
-        if (intentSets.slice(1).every(set => set.has(intent))) {
-            shared++;
+    // To handle 2, 3, or 4 tools: we look for an intersection across ALL tools in the array.
+    let sharedIntents = 0;
+    if (intentSets[0].size > 0) {
+        for (const intent of intentSets[0]) {
+            if (intentSets.slice(1).every(set => set.has(intent))) {
+                sharedIntents++;
+            }
         }
     }
 
-    if (shared > 0) {
+    let sharedUseCases = 0;
+    if (useCaseSets[0].size > 0) {
+        for (const uc of useCaseSets[0]) {
+            if (useCaseSets.slice(1).every(set => set.has(uc))) {
+                sharedUseCases++;
+            }
+        }
+    }
+
+    let sharedCategories = 0;
+    if (categorySets[0].size > 0) {
+        for (const cat of categorySets[0]) {
+            if (categorySets.slice(1).every(set => set.has(cat))) {
+                sharedCategories++;
+            }
+        }
+    }
+
+    if (sharedIntents > 0 || sharedUseCases > 0) {
         return 'Strong overlap';
     }
 
-    return 'Partial overlap';
+    if (sharedCategories > 0) {
+        return 'Partial overlap';
+    }
+
+    return 'Different tool types';
 }
 
 export function checkIdentical(values) {
@@ -117,29 +134,10 @@ export function renderFactorRow(factorName, tools, extractFn, renderFn) {
 }
 
 export function renderCompatibilityWarning(tools) {
-    if (tools.length < 2) return '';
+    const level = getCompatibilityLevel(tools);
+    if (!level) return '';
 
-    let hasMismatchedIntents = false;
-    let categoryOverlap = true;
-
-    const firstIntents = tools[0].finderIntentIds || [];
-    const firstCategory = tools[0].primaryCategory;
-
-    for (let i = 1; i < tools.length; i++) {
-        const currentIntents = tools[i].finderIntentIds || [];
-        const currentCategory = tools[i].primaryCategory;
-
-        if (firstCategory !== currentCategory) {
-            categoryOverlap = false;
-        }
-
-        const intersection = firstIntents.filter(int => currentIntents.includes(int));
-        if (intersection.length === 0 && firstIntents.length > 0 && currentIntents.length > 0) {
-            hasMismatchedIntents = true;
-        }
-    }
-
-    if (!categoryOverlap || hasMismatchedIntents) {
+    if (level === 'Different tool types') {
         return `
             <div class="compatibility-warning" role="alert">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -150,7 +148,19 @@ export function renderCompatibilityWarning(tools) {
                 <span><strong>Different tool types:</strong> These tools serve different primary functions, so some comparison rows may not be directly equivalent.</span>
             </div>
         `;
+    } else if (level === 'Partial overlap') {
+        return `
+            <div class="compatibility-warning" role="alert" style="background: rgba(255, 152, 0, 0.1); border-color: var(--color-orange); color: var(--color-text);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span><strong>Partial overlap:</strong> These tools share a broad category but may focus on different specific use cases.</span>
+            </div>
+        `;
     }
+    // Strong overlap normally has no warning
     return '';
 }
 

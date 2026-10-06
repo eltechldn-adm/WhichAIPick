@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { DecisionEngine } from '../../js/decision-engine.js';
+import { getCompatibilityLevel } from '../../js/comparison-core.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,9 +40,11 @@ assertEqual(engine.evaluateCriterion(mockToolC, 'technical', 'api'), 'UNKNOWN', 
 
 assertEqual(engine.evaluateCriterion(mockToolB, 'technical', 'open_source'), 'CONFIRMED MATCH', 'OS match');
 assertEqual(engine.evaluateCriterion(mockToolA, 'technical', 'open_source'), 'CONFIRMED MISMATCH', 'OS mismatch');
+assertEqual(engine.evaluateCriterion(mockToolC, 'technical', 'open_source'), 'UNKNOWN', 'OS unknown');
 
 assertEqual(engine.evaluateCriterion(mockToolB, 'technical', 'self_hosted'), 'CONFIRMED MATCH', 'SH match');
 assertEqual(engine.evaluateCriterion(mockToolA, 'technical', 'self_hosted'), 'CONFIRMED MISMATCH', 'SH mismatch');
+assertEqual(engine.evaluateCriterion(mockToolC, 'technical', 'self_hosted'), 'UNKNOWN', 'SH unknown');
 
 // 2. Experience matching
 assertEqual(engine.evaluateCriterion(mockToolB, 'experience', 'Beginner'), 'CONFIRMED MATCH', 'Beginner matches beginner');
@@ -63,9 +66,14 @@ assertEqual(res.resultType, 'CLOSE MATCH / MULTIPLE FITS', 'Tie resolution');
 assertEqual(res.topCandidateIds.includes('a'), true, 'A is top');
 assertEqual(res.topCandidateIds.includes('a2'), true, 'A2 is top');
 
-// 5. 3 and 4 tools test
+// 5. 3-tool test
+res = engine.buildExplanationModel([mockToolA, mockToolB, mockToolC], { goal: { value: 'coding.debugging' } });
+assertEqual(res.resultType, 'CLEAR MATCH', '3-tool clear match');
+assertEqual(res.recommendedToolId, 'c', 'C matches debugging');
+
+// 5b. 4-tool test
 res = engine.buildExplanationModel([mockToolA, mockToolB, mockToolC, mockToolD], { goal: { value: 'coding.debugging' } });
-assertEqual(res.resultType, 'CLOSE MATCH / MULTIPLE FITS', '3-tool close match');
+assertEqual(res.resultType, 'CLOSE MATCH / MULTIPLE FITS', '4-tool close match');
 assertEqual(res.topCandidateIds.includes('c'), true, 'C matches debugging');
 assertEqual(res.topCandidateIds.includes('d'), true, 'D matches debugging');
 
@@ -100,7 +108,10 @@ if (set1.size !== set2.size) throw new Error("Fairness test failed: different op
 for (const opt of set1) {
     if (!set2.has(opt)) throw new Error(`Fairness test failed: option ${opt} not in both sets`);
 }
-assertEqual(set1.has('writing.creative') || set1.has('coding.code_generation') || set1.has('research.document_analysis'), true, 'Important intents included');
+const hasClaudeSpecific = set1.has('research.document_analysis') || set1.has('research.web_search');
+const hasChatGPT = set1.has('writing.creative') || set1.has('coding.code_generation') || set1.has('writing.generate_text');
+assertEqual(hasClaudeSpecific, true, 'Claude specific goals included');
+assertEqual(hasChatGPT, true, 'ChatGPT goals included');
 
 // 10. Real free plan test with Midjourney and Leonardo
 const midjourney = tools.find(t => t.id === 'midjourney');
@@ -109,5 +120,40 @@ const leonardo = tools.find(t => t.id === 'leonardo-ai');
 res = engine.buildExplanationModel([midjourney, leonardo], { budget: { value: 'free_plan' } });
 assertEqual(res.resultType, 'CLEAR MATCH', 'Leonardo beats Midjourney on free plan');
 assertEqual(res.recommendedToolId, 'leonardo-ai', 'Leonardo is recommended');
+
+// 11. Compatibility Tests
+const toolCode1 = { finderIntentIds: ['coding.code_generation'], primaryCategory: 'Coding' };
+const toolCode2 = { finderIntentIds: ['coding.code_generation'], primaryCategory: 'Other' };
+assertEqual(getCompatibilityLevel([toolCode1, toolCode2]), 'Strong overlap', 'Same intent, different category');
+
+const toolCat1 = { finderIntentIds: ['a'], primaryCategory: 'Coding' };
+const toolCat2 = { finderIntentIds: ['b'], primaryCategory: 'Coding' };
+assertEqual(getCompatibilityLevel([toolCat1, toolCat2]), 'Partial overlap', 'Same category, different intents');
+
+const zapier = tools.find(t => t.id === 'zapier');
+if (midjourney && zapier) {
+    assertEqual(getCompatibilityLevel([midjourney, zapier]), 'Different tool types', 'Midjourney vs Zapier');
+}
+
+const cursor = tools.find(t => t.id === 'cursor');
+const copilot = tools.find(t => t.id === 'github-copilot');
+if (cursor && copilot) {
+    assertEqual(getCompatibilityLevel([cursor, copilot]), 'Strong overlap', 'Cursor vs Copilot');
+}
+
+if (chatGPT && claude) {
+    console.log(`ChatGPT + Claude compatibility: ${getCompatibilityLevel([chatGPT, claude])}`);
+}
+
+const tool3A = { primaryUseCases: ['Writing'], primaryCategory: 'A' };
+const tool3B = { primaryUseCases: ['Writing'], primaryCategory: 'B' };
+const tool3C = { primaryUseCases: ['Writing'], primaryCategory: 'C' };
+assertEqual(getCompatibilityLevel([tool3A, tool3B, tool3C]), 'Strong overlap', '3 tools shared use case');
+
+const tool4A = { primaryCategory: 'Writing' };
+const tool4B = { primaryCategory: 'Writing' };
+const tool4C = { primaryCategory: 'Writing' };
+const tool4D = { primaryCategory: 'Writing' };
+assertEqual(getCompatibilityLevel([tool4A, tool4B, tool4C, tool4D]), 'Partial overlap', '4 tools shared category only');
 
 console.log("[PASS] decision-assistant-guard.mjs: All complex decision engine tests passed.");
