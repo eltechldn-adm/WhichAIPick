@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { DecisionEngine } from '../../js/decision-engine.js';
 import { getCompatibilityLevel } from '../../js/comparison-core.js';
+import { DecisionAssistant } from '../../js/decision-assistant.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -153,5 +154,21 @@ const tool4B = { primaryCategory: 'Writing' };
 const tool4C = { primaryCategory: 'Writing' };
 const tool4D = { primaryCategory: 'Writing' };
 assertEqual(getCompatibilityLevel([tool4A, tool4B, tool4C, tool4D]), 'Partial overlap', '4 tools shared category only');
+
+// 12. buildCompareUrl Hash Construction Tests
+const assistant = new DecisionAssistant();
+// Mock toolsData to have a,b,c,d,e
+assistant.toolsData = [
+    { id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }, { id: 'e' }, { id: 'some-tool' }
+];
+
+assertEqual(assistant.buildCompareUrl(['a', 'b']), '/compare#tools=a,b', '2 IDs');
+assertEqual(assistant.buildCompareUrl(['a', 'b', 'c']), '/compare#tools=a,b,c', '3 IDs');
+assertEqual(assistant.buildCompareUrl(['a', 'b', 'c', 'd']), '/compare#tools=a,b,c,d', '4 IDs');
+assertEqual(assistant.buildCompareUrl(['a', 'b', 'c', 'd', 'e']), '/compare#tools=a,b,c,d', '>4 IDs restricted to 4');
+assertEqual(assistant.buildCompareUrl(['a', 'a', 'b']), '/compare#tools=a,b', 'duplicates removed');
+assertEqual(assistant.buildCompareUrl(['a', 'invalid', 'b']), '/compare#tools=a,b', 'invalid ID rejected/ignored');
+assertEqual(assistant.buildCompareUrl(['a', '', ' b ', null, 'c']), '/compare#tools=a,b,c', 'empty and null rejected, spaces trimmed');
+assertEqual(assistant.buildCompareUrl(['some-tool', 'b']), '/compare#tools=some-tool,b', 'no %2C in URL');
 
 console.log("[PASS] decision-assistant-guard.mjs: All complex decision engine tests passed.");

@@ -430,7 +430,7 @@ export class DecisionAssistant {
                 <p>No additional tools in the current catalogue have confirmed matches for all of those requirements.</p>
                 <div class="decision-discovery-actions">
                     <button class="btn btn-secondary btn-sm" id="decision-discovery-change">Change my answers</button>
-                    <button class="btn btn-secondary btn-sm" id="decision-discovery-remove">Remove a requirement</button>
+                    <button class="btn btn-secondary btn-sm" id="decision-discovery-change-reqs">Change my requirements</button>
                     <button class="btn btn-primary btn-sm" id="decision-discovery-back">Back to comparison</button>
                 </div>`;
         } else {
@@ -497,6 +497,23 @@ export class DecisionAssistant {
             </article>`;
     }
 
+    buildCompareUrl(ids) {
+        if (!ids || !Array.isArray(ids)) return '/compare';
+        const validIds = [];
+        for (const id of ids) {
+            if (!id || typeof id !== 'string') continue;
+            const cleanId = id.trim();
+            if (!cleanId) continue;
+            if (validIds.includes(cleanId)) continue;
+            if (!this.toolsData.some(t => t.id === cleanId)) continue;
+            validIds.push(cleanId);
+            if (validIds.length >= 4) break;
+        }
+        if (validIds.length === 0) return '/compare';
+        const hashValue = validIds.map(id => encodeURIComponent(id)).join(',');
+        return '/compare#tools=' + hashValue;
+    }
+
     bindDiscovery(section, discovery) {
         const on = (sel, fn) => section.querySelectorAll(sel).forEach(el => el.addEventListener('click', (e) => fn(el, e)));
         const goal = this.answers.goal ? this.answers.goal.value : '';
@@ -512,7 +529,7 @@ export class DecisionAssistant {
                 this.close();
             } else {
                 const newTools = [...this.selectedToolIds, id];
-                window.location.href = "/compare#tools=" + encodeURIComponent(newTools.join(','));
+                window.location.href = this.buildCompareUrl(newTools);
             }
         });
         on('[data-discovery-view]', (el) => {
@@ -535,11 +552,11 @@ export class DecisionAssistant {
                 this.close();
             } else {
                 const newTools = this.selectedToolIds.map(sid => sid === replaceId ? withId : sid);
-                window.location.href = "/compare#tools=" + encodeURIComponent(newTools.join(','));
+                window.location.href = this.buildCompareUrl(newTools);
             }
         });
         on('[data-discovery-new]', (el) => {
-            window.history.pushState(null, "", "/compare#tools=" + encodeURIComponent(el.dataset.discoveryNew));
+            window.history.pushState(null, "", this.buildCompareUrl([el.dataset.discoveryNew]));
             window.location.reload();
         });
         on('#decision-discovery-more', (el) => {
@@ -550,10 +567,12 @@ export class DecisionAssistant {
             if (c) c.textContent = 'Showing ' + section.querySelectorAll('.decision-discovery-card').length + ' of ' + discovery.totalMatches + ' matching tools.';
         });
         on('#decision-discovery-change', () => { this.currentStep = 1; this.renderStep(); });
-        on('#decision-discovery-remove', () => { this.currentStep = 3; this.renderStep(); });
+        on('#decision-discovery-change-reqs', () => { this.currentStep = 3; this.renderStep(); });
         on('#decision-discovery-back', () => this.close());
     }
 }
 
 // Global instance
-window.DecisionAssistant = new DecisionAssistant();
+if (typeof window !== 'undefined') {
+    window.DecisionAssistant = new DecisionAssistant();
+}
