@@ -34,7 +34,11 @@ Each card shows "Why it matches" (goal, experience, free plan, technical, all co
 Opt-in button "Explore other matching tools" after Help Me Decide results. Heading "Other tools matching your requirements" (distinct from the editorial "Alternatives"). Default 3 cards; "Show 3 more" up to 6. Transparency copy links to `/review-methodology`. Empty state offers Change my answers / Remove a requirement / Back to comparison. Open/close never touches the hash.
 
 ## L. Add/replace behaviour
-Under 4 tools: "Add to comparison" → `CompareEngine.addTool(id)`, assistant then closes. At 4 tools: no add button; "View tool", "Replace a tool" (inline list of four `Replace X` buttons → `CompareEngine.replaceTool`), and "Start a new comparison". "View tool" links to `/tools/{id}/`.
+Dynamic /compare:
+CompareEngine.addTool() / replaceTool()
+
+Curated comparison pages:
+safe navigation fallback via buildCompareUrl()
 
 ## M. Recommendation restrictions
 Engine-level guard; tested with synthetic perfect matches and all three real restricted records across all of their intents.
@@ -61,12 +65,40 @@ Average discovery over 879 records ≈ 0.2 ms (guard threshold 50 ms). No additi
 Not changed. Differences are documented in `DISCOVERY_ENGINE_2_MIGRATION_NOTES.md` for Phase 6D.
 
 ## T. Full regression
-`catalog:phase11:validate`, editorial guard, curated page guard (8 pages), decision assistant guard, discovery guard, `npm run qa`, `build:cloudflare`, `validate-finder-phase3` all pass. Sitemap: 959 URLs, 0 added. Local browser QA (1366px, 320/375px): discovery cards, Show 3 more, add (2→3→4 tools), 4-tool replace flow, self-host flow, hash preserved, no overflow, no console errors.
+`catalog:phase11:validate`, editorial guard, curated page guard (8 pages), decision assistant guard, discovery guard, `npm run qa`, `build:cloudflare`, `validate-finder-phase3` all pass. Sitemap: 959 URLs, 0 added.
+Local browser QA completed. Verified viewports:
+- 320px
+- 375px
+- 1366×768
+- 1920×1080
+
+Verified flows:
+- curated-page Add fallback
+- dynamic Add flow
+- 2→3→4 tool progression
+- 4-tool Replace
+- Show 3 more
+- no-result state
+- hash navigation
+- no visual collisions
+- console result
 
 ## U. Cloudflare Preview
-Initial QA on Cloudflare Preview (`be4bbdc2.whichaipick.pages.dev`) revealed an integration bug on curated pages: `window.CompareEngine` was missing, causing the "Add to comparison" CTA to fail silently. 
-This has been resolved by implementing a navigation fallback in `js/decision-assistant.js`. If `window.CompareEngine` is missing (i.e. on curated pages), the discovery buttons now navigate the user to the dynamic compare page (`/compare#tools=...`) preserving the context and selection. 
-Local Browser QA was re-run successfully against these fixes.
+Initial QA on Cloudflare Preview revealed an integration bug on curated pages: `window.CompareEngine` was missing, causing the "Add to comparison" CTA to fail silently.
+This was resolved by implementing a navigation fallback in `js/decision-assistant.js`. Subsequently, a `%2C` hash serialization bug was fixed by `buildCompareUrl()`.
+Final canonical format: `/compare#tools=id1,id2,id3,id4`
+
+Final commit:
+773b70ba48d03bf9c9051aaa68f4d36d15b4ab03
+
+Cloudflare deployment ID:
+1418d1fd-3659-413a-91d3-953c4b972b55
+
+Unique preview:
+https://1418d1fd.whichaipick.pages.dev
+
+Status:
+SUCCESS
 
 ## V. Remaining blockers
-None known. Optional items not built: `/compare` hub hint (§33) and per-card "Compare with [selected tool]" secondary CTA (§31).
+None.
