@@ -1,7 +1,9 @@
 export function buildToolPageViewModel(tool, options = {}) {
+  const preserveBoolean = (val) => val === undefined || val === null ? null : Boolean(val);
+
   // Identity
   const id = tool.id;
-  const name = id === 'amazon-codewhisperer' ? 'Amazon Q Developer' : (tool.canonicalName || tool.name);
+  const name = tool.canonicalName || tool.name;
 
   const identity = {
     id,
@@ -26,7 +28,7 @@ export function buildToolPageViewModel(tool, options = {}) {
   const hasFreeTier = tool.hasFreeTier === undefined ? null : tool.hasFreeTier;
   const hasFreeTrial = tool.hasFreeTrial === undefined ? null : tool.hasFreeTrial;
   const startingPrice = tool.startingPrice === undefined ? null : tool.startingPrice;
-  const currency = tool.currency || tool.priceCurrency || 'USD';
+  const currency = tool.priceCurrency ?? tool.currency ?? null;
 
   let freeTierLabel = 'Free-tier status not confirmed';
   if (hasFreeTier === true) freeTierLabel = 'Free tier available';
@@ -37,7 +39,7 @@ export function buildToolPageViewModel(tool, options = {}) {
   else if (hasFreeTrial === false) trialLabel = 'No free trial';
 
   let startingPriceLabel = null;
-  if (startingPrice !== null && typeof startingPrice === 'number') {
+  if (startingPrice !== null && typeof startingPrice === 'number' && currency !== null) {
     startingPriceLabel = new Intl.NumberFormat('en-US', { style: 'currency', currency, minimumFractionDigits: 0 }).format(startingPrice);
   }
 
@@ -47,8 +49,8 @@ export function buildToolPageViewModel(tool, options = {}) {
     hasFreeTrial,
     startingPrice,
     currency,
-    paidPlanAvailable: tool.paidPlanAvailable === undefined ? null : tool.paidPlanAvailable,
-    needsReview: !!tool.pricingNeedsReview,
+    paidPlanAvailable: preserveBoolean(tool.paidPlanAvailable),
+    needsReview: preserveBoolean(tool.pricingNeedsReview),
     display: {
       freeTierLabel,
       trialLabel,
@@ -126,8 +128,8 @@ export function buildToolPageViewModel(tool, options = {}) {
 
   // Eligibility
   const eligibility = {
-    directoryEligible: !!tool.directoryEligible,
-    recommendationEligible: !!tool.recommendationEligible
+    directoryEligible: preserveBoolean(tool.directoryEligible),
+    recommendationEligible: preserveBoolean(tool.recommendationEligible)
   };
 
   // Lifecycle
@@ -156,9 +158,9 @@ export function buildToolPageViewModel(tool, options = {}) {
   const trust = {
     evidenceIds,
     verificationSources: Array.isArray(tool.verificationSources) ? [...tool.verificationSources] : [],
-    pricingNeedsReview: !!tool.pricingNeedsReview,
-    metadataReviewRequired: !!tool.metadataReviewRequired,
-    contentReviewRequired: !!tool.contentReviewRequired,
+    pricingNeedsReview: preserveBoolean(tool.pricingNeedsReview),
+    metadataReviewRequired: preserveBoolean(tool.metadataReviewRequired),
+    contentReviewRequired: preserveBoolean(tool.contentReviewRequired),
     evidenceReviewedAt: options.evidenceReviewedAt || null,
     display: {
       trustLabel: evidenceIds.length > 0 ? 'Evidence reviewed' : null
@@ -173,10 +175,10 @@ export function buildToolPageViewModel(tool, options = {}) {
 
   // SEO
   const seo = {
-    seoEligible: !!tool.seoEligible,
-    contentReviewRequired: !!tool.contentReviewRequired,
-    metadataReviewRequired: !!tool.metadataReviewRequired,
-    directoryEligible: !!tool.directoryEligible,
+    seoEligible: preserveBoolean(tool.seoEligible),
+    contentReviewRequired: preserveBoolean(tool.contentReviewRequired),
+    metadataReviewRequired: preserveBoolean(tool.metadataReviewRequired),
+    directoryEligible: preserveBoolean(tool.directoryEligible),
     operationalStatus: tool.operationalStatus || null,
     indexabilityDecision: null
   };
@@ -187,7 +189,7 @@ export function buildToolPageViewModel(tool, options = {}) {
     url: tool.website_url || tool.websiteUrl || null,
     applicationCategory: tool.primaryCategory || null,
     operatingSystems: [...operatingSystems],
-    descriptionCandidate: tool.long_description || tool.longDescription || tool.sourceSummary || tool.shortDescription || tool.description || null
+    descriptionCandidate: tool.sourceSummary || tool.shortDescription || tool.description || null
   };
 
   // Relationships
