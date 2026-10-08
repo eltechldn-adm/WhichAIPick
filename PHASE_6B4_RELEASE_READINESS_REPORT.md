@@ -30,11 +30,68 @@ The Comparison Centre 2.0 has been successfully hardened and integrated into the
 - Executed full QA suite (`npm run qa`, `npm run build:cloudflare`) which passed 100% of integration checks.
 
 ## Current Status
-Implementation complete locally.
-Automated QA passed.
-Remote preview/browser verification still required.
+Implementation: PASS
+Automated QA: PASS
+Cloudflare deployment: PASS
+Remote browser verification: PASS
+Remaining technical blockers: None
+
+## Remote Browser Verification
+Remote browser verification was successfully performed against:
+`https://f4895d88.whichaipick.pages.dev`
+
+Coverage included:
+- zero/one/two/three/four-tool states
+- fifth-tool protection
+- Add, Remove, Replace tool flows
+- Back/Forward browser history retention
+- malformed hash protection
+- legacy query migration
+- Differences Only view
+- compatibility states (strong, partial, different types)
+- Help Me Decide modal functionality
+- keyboard/focus accessibility behaviour
+- catalogue discovery algorithms
+- Show 3 More logic
+- discovery Add flow
+- four-tool discovery Replace flow
+- curated → discovery → dynamic comparison routing
+- all 8 curated comparison routes
+- participating vs non-participating tool pages
+- share comparison link generation
+- save/unsave comparison functionality
+
+### Viewports Tested
+- 320 × 568
+- 375 × 667
+- 393 × 851 — Pixel-class
+- 768 × 1024 — tablet
+- 1366 × 768
+- 1920 × 1080
+
+### Application Console Logs
+Application console errors: 0
+
+## Final Comparison Centre Status
+PHASE 6B COMPARISON CENTRE 2.0: COMPLETE
+
+Completed functionality now includes:
+- Compare any 2–4 catalogue tools
+- 8 curated expert comparison pages
+- Help Me Decide
+- Catalogue-wide personalised discovery
+- Tool-page Compare CTAs
+- Featured curated comparison cross-links
+- Comparison SEO/schema/navigation integration
+- Automated release guards
+- Remote multi-device browser verification
+
+## Production Status
+phase-review: approved
+main: unchanged
+production merge: not performed
+AdSense submission: not performed
 
 ## Next Phase Requirements
-- Do NOT merge to `main`.
-- Do NOT submit AdSense.
-- Perform Cloudflare preview/browser verification.
+Recommended next development phase:
+6C — Tool Page 2.0 / Genuine Catalogue Enrichment
