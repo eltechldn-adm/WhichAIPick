@@ -27,9 +27,19 @@ if (fixtures.length !== 6) {
 }
 
 const comparisonsMap = {
-    'chatgpt': ['ChatGPT vs Claude', 'ChatGPT vs Gemini', 'ChatGPT vs Perplexity', 'Midjourney vs ChatGPT Images'],
-    'midjourney': ['Midjourney vs Leonardo AI', 'Midjourney vs ChatGPT Images'],
-    'cursor': ['Cursor vs GitHub Copilot'],
+    'chatgpt': [
+        { title: 'ChatGPT vs Claude', url: '/compare/chatgpt-vs-claude/' },
+        { title: 'ChatGPT vs Gemini', url: '/compare/chatgpt-vs-gemini/' },
+        { title: 'ChatGPT vs Perplexity', url: '/compare/chatgpt-vs-perplexity/' },
+        { title: 'Midjourney vs ChatGPT Images', url: '/compare/midjourney-vs-chatgpt-images/' }
+    ],
+    'midjourney': [
+        { title: 'Midjourney vs Leonardo AI', url: '/compare/midjourney-vs-leonardo-ai/' },
+        { title: 'Midjourney vs ChatGPT Images', url: '/compare/midjourney-vs-chatgpt-images/' }
+    ],
+    'cursor': [
+        { title: 'Cursor vs GitHub Copilot', url: '/compare/cursor-vs-github-copilot/' }
+    ],
     'zapier-ai': [],
     'aider': [],
     'amazon-codewhisperer': []
@@ -50,7 +60,7 @@ for (const id of fixtures) {
     if (Array.isArray(tool.evidenceIds) && tool.evidenceIds.length > 0) {
         let latestDate = null;
         for (const evId of tool.evidenceIds) {
-            const row = ledgerData.find(r => r.evidenceId === evId && r.toolId === tool.id);
+            const row = ledgerData.find(r => r.evidenceId === evId && r.id === tool.id);
             if (row && row.reviewedAt) {
                 const rowDate = new Date(row.reviewedAt);
                 if (!latestDate || rowDate > latestDate) {

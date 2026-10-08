@@ -11,6 +11,35 @@ export function renderToolPageV2(viewModel) {
             .replace(/'/g, "&#039;");
     };
 
+    const stripHtmlToText = (htmlContent) => {
+        if (!htmlContent) return '';
+        let text = htmlContent
+            .replace(/<\/?p[^>]*>/gi, ' ')
+            .replace(/<br[^>]*>/gi, ' ')
+            .replace(/<\/li>/gi, ' ')
+            .replace(/<li[^>]*>/gi, ' • ');
+        text = text.replace(/<[^>]+>/g, '');
+        text = text.replace(/\s+/g, ' ').trim();
+        return text;
+    };
+
+    let longDescText = stripHtmlToText(editorial.longDescription?.value);
+    let howItWorksText = stripHtmlToText(editorial.howItWorks?.value);
+
+    if (identity.id === 'midjourney') {
+        const lowerDesc = longDescText.toLowerCase();
+        const lowerHow = howItWorksText.toLowerCase();
+        const hasContradiction = [lowerDesc, lowerHow].some(t =>
+            t.includes('requires discord') ||
+            t.includes('discord-only') ||
+            t.includes('does not offer a traditional web app')
+        );
+        if (hasContradiction) {
+            longDescText = '';
+            howItWorksText = '';
+        }
+    }
+
     const schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -49,19 +78,19 @@ export function renderToolPageV2(viewModel) {
                 <h1>${escapeHtml(identity.name)}</h1>
                 ${summary.shortDescription ? `<p class="tool-v2-description">${escapeHtml(summary.shortDescription)}</p>` : ''}
                 <div class="tool-v2-cta-group">
-                    ${identity.websiteUrl ? `<a href="${escapeHtml(commercial.affiliateUrl || identity.websiteUrl)}" target="_blank" rel="noopener noreferrer ${commercial.hasAffiliateRelationship ? 'sponsored' : 'nofollow'}" class="tool-v2-btn-primary">Visit Website</a>` : ''}
+                    ${identity.websiteUrl ? `<a href="${escapeHtml(commercial.affiliateUrl || identity.websiteUrl)}" target="_blank" rel="${commercial.hasAffiliateRelationship ? 'sponsored ' : ''}noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a>` : ''}
                     <a href="/compare#tools=${escapeHtml(identity.id)}" class="tool-v2-btn-secondary">Compare ${escapeHtml(identity.name)}</a>
                 </div>
             </div>
 
             <div class="tool-v2-layout">
                 <div class="tool-v2-main">
-                    ${(editorial.longDescription?.value || editorial.howItWorks?.value) ? `
+                    ${(longDescText || howItWorksText) ? `
                         <section class="tool-v2-section">
                             <h2>Editorial Overview</h2>
                             <div class="tool-v2-editorial">
-                                ${editorial.longDescription?.value ? `<p>${escapeHtml(editorial.longDescription.value)}</p>` : ''}
-                                ${editorial.howItWorks?.value ? `<h3>How it works</h3><p>${escapeHtml(editorial.howItWorks.value)}</p>` : ''}
+                                ${longDescText ? `<p>${escapeHtml(longDescText)}</p>` : ''}
+                                ${howItWorksText ? `<h3>How it works</h3><p>${escapeHtml(howItWorksText)}</p>` : ''}
                             </div>
                         </section>
                     ` : ''}
@@ -129,7 +158,7 @@ export function renderToolPageV2(viewModel) {
                         <section class="tool-v2-section">
                             <h2>Featured Comparisons</h2>
                             <ul class="tool-v2-list">
-                                ${relationships.featuredComparisons.map(comp => `<li>${escapeHtml(comp)}</li>`).join('')}
+                                ${relationships.featuredComparisons.map(comp => `<li><a href="${escapeHtml(comp.url)}">${escapeHtml(comp.title)}</a></li>`).join('')}
                             </ul>
                         </section>
                     ` : ''}
@@ -140,7 +169,7 @@ export function renderToolPageV2(viewModel) {
                             <p>${escapeHtml(trust.display.trustLabel)}</p>
                             ${trust.evidenceReviewedAt ? `<p>Last Reviewed: ${escapeHtml(trust.evidenceReviewedAt)}</p>` : ''}
                             <div class="tool-v2-trust-links">
-                                <a href="#">Review Methodology</a> | <a href="#">Request a Correction</a>
+                                <a href="/review-methodology.html">Review Methodology</a> | <a href="/corrections-policy.html">Request a Correction</a>
                             </div>
                         </section>
                     ` : ''}
@@ -176,7 +205,7 @@ export function renderToolPageV2(viewModel) {
             </div>
 
             <footer class="tool-v2-footer">
-                <a href="#">Review Methodology</a> &middot; <a href="#">Request a Correction</a>
+                <a href="/review-methodology.html">Review Methodology</a> &middot; <a href="/corrections-policy.html">Request a Correction</a>
             </footer>
         </div>
     </div>
