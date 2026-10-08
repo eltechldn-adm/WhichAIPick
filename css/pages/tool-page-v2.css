@@ -1,0 +1,227 @@
+.tool-page-v2 {
+  font-family: var(--font-primary, system-ui, -apple-system, sans-serif);
+  color: var(--text-primary, #ffffff);
+  background-color: var(--bg-primary, #0B0F19);
+  line-height: 1.5;
+}
+
+.tool-page-v2 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.tool-page-v2 a {
+  color: var(--brand-orange, #FF6B35);
+  text-decoration: none;
+}
+
+.tool-page-v2 a:hover {
+  text-decoration: underline;
+}
+
+/* Breadcrumb */
+.tool-v2-breadcrumb {
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary, #A0AEC0);
+}
+
+.tool-v2-breadcrumb a {
+  color: var(--text-secondary, #A0AEC0);
+}
+
+/* Hero Section */
+.tool-v2-hero {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border-color, #2D3748);
+  margin-bottom: 2rem;
+}
+
+.tool-v2-hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+  color: #fff;
+}
+
+.tool-v2-category {
+  font-size: 1rem;
+  color: var(--brand-orange, #FF6B35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.tool-v2-description {
+  font-size: 1.25rem;
+  color: var(--text-secondary, #A0AEC0);
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.tool-v2-cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tool-v2-btn-primary {
+  background-color: var(--brand-orange, #FF6B35);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.tool-v2-btn-primary:hover {
+  text-decoration: none;
+  background-color: #E55A24;
+}
+
+.tool-v2-btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.tool-v2-btn-secondary:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Two column layout */
+.tool-v2-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 992px) {
+  .tool-v2-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sections */
+.tool-v2-section {
+  margin-bottom: 3rem;
+}
+
+.tool-v2-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid var(--border-color, #2D3748);
+  padding-bottom: 0.5rem;
+}
+
+/* Quick Facts */
+.tool-v2-quick-facts {
+  background-color: var(--bg-surface, #1A202C);
+  border: 1px solid var(--border-color, #2D3748);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.tool-v2-fact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.tool-v2-fact-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color, #2D3748);
+  padding-bottom: 0.5rem;
+}
+
+.tool-v2-fact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tool-v2-fact-label {
+  color: var(--text-secondary, #A0AEC0);
+  font-weight: 600;
+}
+
+.tool-v2-fact-value {
+  text-align: right;
+  max-width: 60%;
+}
+
+/* Lists */
+.tool-v2-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tool-v2-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tool-v2-list li::before {
+  content: '•';
+  color: var(--brand-orange, #FF6B35);
+  position: absolute;
+  left: 0;
+}
+
+.tool-v2-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-v2-chip {
+  background-color: var(--bg-surface, #1A202C);
+  border: 1px solid var(--border-color, #2D3748);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+}
+
+/* Editorial */
+.tool-v2-editorial {
+  color: var(--text-secondary, #A0AEC0);
+}
+
+.tool-v2-editorial p {
+  margin-bottom: 1rem;
+}
+
+/* Trust Section */
+.tool-v2-trust {
+  background-color: rgba(255, 107, 53, 0.1);
+  border: 1px solid var(--brand-orange, #FF6B35);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tool-v2-trust p {
+  margin-bottom: 0.5rem;
+}
+
+.tool-v2-trust-links {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Footer / Methodology */
+.tool-v2-footer {
+  border-top: 1px solid var(--border-color, #2D3748);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary, #A0AEC0);
+}
