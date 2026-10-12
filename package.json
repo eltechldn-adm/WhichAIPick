@@ -5,6 +5,9 @@
   "scripts": {
     "catalog:phase11:stage": "node scripts/import-phase11-workbook.mjs",
     "catalog:phase11:validate": "node scripts/validate-phase11-staged.mjs",
+    "catalog:v2:generate": "node scripts/tool-page-2/generate-tool-page-v2-catalog.mjs",
+    "catalog:v2:validate": "node scripts/qa/tool-page-v2-catalog-guard.mjs",
+    "catalog:v2:qa": "node scripts/qa/browser-representative-qa.mjs",
     "dev": "wrangler pages dev . --port 8080 --local",
     "clean-cache": "echo Clear browser cache manually (DevTools → Disable cache)",
     "build:data": "npm run catalog:phase11:stage && cp data/tools.phase11.staged.json data/tools.json && node scripts/generate-comparison-index.mjs && npm run validate:data",

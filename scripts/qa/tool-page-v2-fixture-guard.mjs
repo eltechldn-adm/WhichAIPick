@@ -20,7 +20,7 @@ if (!fs.existsSync(OUT_DIR)) {
     process.exit(1);
 }
 
-const entries = fs.readdirSync(OUT_DIR).filter(e => fs.statSync(path.join(OUT_DIR, e)).isDirectory());
+const entries = fs.readdirSync(OUT_DIR).filter(e => fs.statSync(path.join(OUT_DIR, e)).isDirectory() && e !== 'catalog');
 assert.strictEqual(entries.length, 6, `Expected exactly 6 preview routes, found ${entries.length}`);
 
 for (const id of fixtures) {
