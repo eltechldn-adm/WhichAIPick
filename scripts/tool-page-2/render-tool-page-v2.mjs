@@ -1,4 +1,25 @@
-export function renderToolPageV2(viewModel) {
+const PRODUCTION_REQUIRED_OPTIONS = ['canonicalUrl', 'robots', 'metaTitle', 'metaDescription', 'domain', 'headerHtml', 'footerHtml', 'consentHeadHtml'];
+
+/**
+ * Renders a Tool Page V2 document.
+ *
+ * options === undefined/null  -> isolated preview document (noindex, no site shell). Output unchanged.
+ * options.mode === 'production' -> same V2 body inside the standard site shell:
+ *   canonical + robots + social meta, consent/AdSense head block, header/footer shells.
+ *   Used only by the explicitly allowlisted canary path in generate-static-pages.mjs.
+ */
+export function renderToolPageV2(viewModel, options = null) {
+    const production = options !== null && options !== undefined;
+    if (production) {
+        if (options.mode !== 'production') {
+            throw new Error(`renderToolPageV2: unsupported options.mode "${options.mode}"`);
+        }
+        for (const key of PRODUCTION_REQUIRED_OPTIONS) {
+            if (typeof options[key] !== 'string' || options[key] === '') {
+                throw new Error(`renderToolPageV2: production mode requires options.${key}`);
+            }
+        }
+    }
     const { identity, classification, summary, pricing, platforms, capabilities, audience, eligibility, lifecycle, editorial, trust, commercial, schemaSafe, relationships } = viewModel;
 
     const escapeHtml = (unsafe) => {
@@ -53,10 +74,7 @@ export function renderToolPageV2(viewModel) {
 
     const schemaString = JSON.stringify(schema);
 
-    let html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+    const previewHead = `    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escapeHtml(identity.name)} | Tool Page V2 Preview</title>
     <meta name="robots" content="noindex,nofollow">
@@ -64,9 +82,62 @@ export function renderToolPageV2(viewModel) {
     <link rel="stylesheet" href="/css/pages/tool-page-v2.css">
     <script type="application/ld+json">
         ${schemaString}
-    </script>
+    </script>`;
+
+    let headInner = previewHead;
+    let bodyOpen = '<body>';
+    let bodyClose = '</body>';
+    if (production) {
+        const title = escapeHtml(options.metaTitle);
+        const desc = escapeHtml(options.metaDescription);
+        const canonical = escapeHtml(options.canonicalUrl);
+        headInner = `    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
+    <meta name="description" content="${desc}">
+    <meta name="robots" content="${escapeHtml(options.robots)}">
+    <link rel="canonical" href="${canonical}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="${title}">
+    <meta property="og:description" content="${desc}">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:image" content="${escapeHtml(options.domain)}/assets/logo/logo-final.png">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="${title}">
+    <meta property="twitter:description" content="${desc}">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css?v=2.6">
+    <link rel="stylesheet" href="/css/pages/tool-page-v2.css">
+${options.consentHeadHtml}
+    <script type="application/ld+json">
+        ${schemaString}
+    </script>`;
+        bodyOpen = `<body data-bg="tool">
+${options.headerHtml}
+<main id="main-content">`;
+        bodyClose = `</main>
+${options.footerHtml}
+<script src="/js/main.js?v=6.4"></script>
+<script src="/js/layout.js?v=1.8" defer></script>
+</body>`;
+    }
+
+    const affiliateDisclosure = (production && commercial.hasAffiliateRelationship)
+        ? `<p class="tool-v2-affiliate-note"><em>Disclosure: This page may contain affiliate links. If you sign up through our link, we may earn a commission at no extra cost to you. See our <a href="/disclosure.html">Affiliate Disclosure</a>.</em></p>`
+        : '';
+
+    let html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+${headInner}
 </head>
-<body>
+${bodyOpen}
     <div class="tool-page-v2">
         <div class="container">
             <div class="tool-v2-breadcrumb">
@@ -80,7 +151,7 @@ export function renderToolPageV2(viewModel) {
                 <div class="tool-v2-cta-group">
                     ${identity.websiteUrl ? `<a href="${escapeHtml(commercial.affiliateUrl || identity.websiteUrl)}" target="_blank" rel="${commercial.hasAffiliateRelationship ? 'sponsored ' : ''}noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a>` : ''}
                     <a href="/compare#tools=${escapeHtml(identity.id)}" class="tool-v2-btn-secondary">Compare ${escapeHtml(identity.name)}</a>
-                </div>
+                </div>${affiliateDisclosure}
             </div>
 
             <div class="tool-v2-layout">
@@ -209,7 +280,7 @@ export function renderToolPageV2(viewModel) {
             </footer>
         </div>
     </div>
-</body>
+${bodyClose}
 </html>`;
     return html.replace(/[ 	]+$/gm, '');
 }

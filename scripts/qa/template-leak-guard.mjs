@@ -11,6 +11,7 @@ const SKIP_PATTERNS = [
     '.git',
     '.wrangler',
     '.agent',
+    'scratch',
     'partials',      // Partials are expected to have templates
     'scripts',       // Scripts contain the template strings
     'js'             // JS contains template string constants

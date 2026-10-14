@@ -11,6 +11,7 @@ const SKIP_PATTERNS = [
     '.git',
     '.wrangler',
     '.agent',
+    'scratch',
     'scripts'
 ];
 

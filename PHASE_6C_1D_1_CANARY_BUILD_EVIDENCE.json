@@ -1,0 +1,276 @@
+{
+  "phase": "Phase 6C.1D.1 — Canary Release Safety Corrections & Deployment Dry Run",
+  "evaluatedCommit": "97cc7cf9",
+  "productionBaselineCommit": "0c71092e",
+  "generatedAt": "2026-10-12T23:56:00Z",
+  "summary": {
+    "rootCauseResolved": true,
+    "canaryCohortSize": 6,
+    "totalToolsInCatalog": 882,
+    "defaultBuildV1Count": 882,
+    "defaultBuildV2Count": 0,
+    "canaryBuildV1Count": 876,
+    "canaryBuildV2Count": 6,
+    "buildDeterminismVerified": true,
+    "failClosedGuardsPassing": true,
+    "allGuardsPass": true
+  },
+  "canaryCohort": [
+    {
+      "id": "aider",
+      "name": "Aider",
+      "category": "Development",
+      "pricing": "Free / Open Source",
+      "productionRoute": "https://whichaipick.com/tools/aider/",
+      "sha256": "c489e7607e5fb9f4f369e0f7e3486580458106c846e210b715714d1e15a491e0",
+      "template": "v2",
+      "canonicalUrl": "https://whichaipick.com/tools/aider/",
+      "robotsMeta": "index,follow"
+    },
+    {
+      "id": "activepieces",
+      "name": "ActivePieces",
+      "category": "Automation",
+      "pricing": "Freemium",
+      "productionRoute": "https://whichaipick.com/tools/activepieces/",
+      "sha256": "6a23f87fda31be8f9e6903e7c4bc7e867e05dd21234698f711f2ec3ea8db2abf",
+      "template": "v2",
+      "canonicalUrl": "https://whichaipick.com/tools/activepieces/",
+      "robotsMeta": "index,follow"
+    },
+    {
+      "id": "akiflow",
+      "name": "Akiflow",
+      "category": "Productivity",
+      "pricing": "Paid",
+      "productionRoute": "https://whichaipick.com/tools/akiflow/",
+      "sha256": "b9c2d4a1d9a21c8b77e162f00a870b5e91edb621b98c446ff2c62b011efc1ad5",
+      "template": "v2",
+      "canonicalUrl": "https://whichaipick.com/tools/akiflow/",
+      "robotsMeta": "index,follow"
+    },
+    {
+      "id": "adcreativeai",
+      "name": "AdCreative.ai",
+      "category": "Marketing",
+      "pricing": "Paid",
+      "productionRoute": "https://whichaipick.com/tools/adcreativeai/",
+      "sha256": "cb944a10c0ca2b58d4323cf222eff316368b1d66f2365e608c2cdd96d9301079",
+      "template": "v2",
+      "canonicalUrl": "https://whichaipick.com/tools/adcreativeai/",
+      "robotsMeta": "index,follow"
+    },
+    {
+      "id": "mindgrasp",
+      "name": "Mindgrasp",
+      "category": "Education",
+      "pricing": "Paid",
+      "productionRoute": "https://whichaipick.com/tools/mindgrasp/",
+      "sha256": "9bd466a46251bb89862a93fe6f29e921c97bab5a3342b820e4f0f864b2ba85ce",
+      "template": "v2",
+      "canonicalUrl": "https://whichaipick.com/tools/mindgrasp/",
+      "robotsMeta": "index,follow"
+    },
+    {
+      "id": "crawl4ai",
+      "name": "Crawl4AI",
+      "category": "Development",
+      "pricing": "Free / Open Source",
+      "productionRoute": "https://whichaipick.com/tools/crawl4ai/",
+      "sha256": "29504c298fa0853d07bcf968f0d4b46b6266ae32e2d51f49fb176d5b1cb4fa07",
+      "template": "v2",
+      "canonicalUrl": "https://whichaipick.com/tools/crawl4ai/",
+      "robotsMeta": "index,follow"
+    }
+  ],
+  "buildDryRunMatrix": [
+    {
+      "scenario": "default_prod",
+      "description": "Standard production build without canary flags (clean default)",
+      "command": "npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "unset",
+        "CF_PAGES_BRANCH": "main"
+      },
+      "buildExitCode": 0,
+      "guardExitCode": 0,
+      "totalToolsGenerated": 882,
+      "v1PagesCount": 882,
+      "v2PagesCount": 0,
+      "headersOutput": "/*",
+      "headersNoindexPresent": false,
+      "outcome": "PASS"
+    },
+    {
+      "scenario": "canary_prod_run1",
+      "description": "Canary-enabled production build dry run 1",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "1",
+        "CF_PAGES_BRANCH": "main"
+      },
+      "buildExitCode": 0,
+      "guardExitCode": 0,
+      "totalToolsGenerated": 882,
+      "v1PagesCount": 876,
+      "v2PagesCount": 6,
+      "changedToolPathsCount": 6,
+      "headersOutput": "/*",
+      "headersNoindexPresent": false,
+      "outcome": "PASS"
+    },
+    {
+      "scenario": "canary_prod_run2",
+      "description": "Repeat canary-enabled production build dry run 2 (determinism check)",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "1",
+        "CF_PAGES_BRANCH": "main"
+      },
+      "buildExitCode": 0,
+      "guardExitCode": 0,
+      "totalToolsGenerated": 882,
+      "v1PagesCount": 876,
+      "v2PagesCount": 6,
+      "hashMismatchesVersusRun1": 0,
+      "outcome": "PASS (100% Deterministic)"
+    },
+    {
+      "scenario": "default_staging",
+      "description": "Default build in Cloudflare preview/staging branch mode",
+      "command": "npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "unset",
+        "CF_PAGES_BRANCH": "phase-review"
+      },
+      "buildExitCode": 0,
+      "guardExitCode": 0,
+      "totalToolsGenerated": 882,
+      "v1PagesCount": 882,
+      "v2PagesCount": 0,
+      "headersOutput": "/*\\n  X-Robots-Tag: noindex, follow",
+      "headersNoindexPresent": true,
+      "outcome": "PASS"
+    },
+    {
+      "scenario": "canary_staging",
+      "description": "Canary build in Cloudflare preview/staging branch mode",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "1",
+        "CF_PAGES_BRANCH": "phase-review"
+      },
+      "buildExitCode": 0,
+      "guardExitCode": 0,
+      "totalToolsGenerated": 882,
+      "v1PagesCount": 876,
+      "v2PagesCount": 6,
+      "headersOutput": "/*\\n  X-Robots-Tag: noindex, follow",
+      "headersNoindexPresent": true,
+      "outcome": "PASS"
+    },
+    {
+      "scenario": "invalid_env_true",
+      "description": "Fail-closed check: invalid env value 'true' instead of strict '1'",
+      "command": "TOOL_PAGE_V2_CANARY=true npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "true"
+      },
+      "buildExitCode": 1,
+      "guardExitCode": 1,
+      "errorLogged": "[CANARY SELECTION FATAL] TOOL_PAGE_V2_CANARY must be set strictly to '1'. Received: 'true'",
+      "outcome": "PASS (Failed Safely)"
+    },
+    {
+      "scenario": "invalid_env_all",
+      "description": "Fail-closed check: prohibited bulk rollout value 'all'",
+      "command": "TOOL_PAGE_V2_CANARY=all npm run build:cloudflare",
+      "environment": {
+        "TOOL_PAGE_V2_CANARY": "all"
+      },
+      "buildExitCode": 1,
+      "guardExitCode": 1,
+      "errorLogged": "[CANARY SELECTION FATAL] TOOL_PAGE_V2_CANARY must be set strictly to '1'. Received: 'all'",
+      "outcome": "PASS (Failed Safely)"
+    },
+    {
+      "scenario": "duplicate_id",
+      "description": "Fail-closed check: duplicate tool ID in canary allowlist",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare (with duplicate ID in manifest)",
+      "buildExitCode": 1,
+      "guardExitCode": 1,
+      "errorLogged": "[CANARY SELECTION FATAL] Duplicate tool ID detected in canary manifest: aider",
+      "outcome": "PASS (Failed Safely)"
+    },
+    {
+      "scenario": "missing_tool_id",
+      "description": "Fail-closed check: unknown tool ID not present in authoritative 882 catalog",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare (with non-existent ID in manifest)",
+      "buildExitCode": 1,
+      "guardExitCode": 1,
+      "errorLogged": "[CANARY SELECTION FATAL] Canary tool ID not found in catalog: nonexistent-tool-xyz",
+      "outcome": "PASS (Failed Safely)"
+    },
+    {
+      "scenario": "count_mismatch",
+      "description": "Fail-closed check: manifest declared toolCount mismatches actual tools array length",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare (with count mismatch in manifest)",
+      "buildExitCode": 1,
+      "guardExitCode": 1,
+      "errorLogged": "[CANARY SELECTION FATAL] Manifest toolCount (10) does not match tools array length (6)",
+      "outcome": "PASS (Failed Safely)"
+    },
+    {
+      "scenario": "missing_manifest_file",
+      "description": "Fail-closed check: canary flag enabled but manifest file missing",
+      "command": "TOOL_PAGE_V2_CANARY=1 npm run build:cloudflare (with missing manifest path)",
+      "buildExitCode": 1,
+      "guardExitCode": 1,
+      "errorLogged": "[CANARY SELECTION FATAL] Canary manifest file missing",
+      "outcome": "PASS (Failed Safely)"
+    }
+  ],
+  "seoAndRoutingIntegrity": {
+    "stagingRobotsHeader": "X-Robots-Tag: noindex, follow",
+    "productionRobotsHeader": "None (indexable, per _headers)",
+    "productionRobotsMetaTag": "<meta name=\"robots\" content=\"index,follow\">",
+    "canonicalTagPattern": "<link rel=\"canonical\" href=\"https://whichaipick.com/tools/{id}/\">",
+    "singleH1Enforced": true,
+    "siteShellComplete": true,
+    "sitemapTotalToolUrls": 882,
+    "unexpectedRouteMutations": 0,
+    "seoEligibleIntegrity": "Preserved. seoEligible governs sitemap XML generation; directoryEligible governs static page rendering. No uncontrolled changes made."
+  },
+  "automatedGuardSuites": {
+    "qaCanaryConfig": {
+      "command": "npm run qa:canary:config",
+      "checksCount": 21,
+      "passed": 21,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "qaCanaryOutput": {
+      "command": "npm run qa:canary:output",
+      "checksCount": 882,
+      "verifiedV1": 876,
+      "verifiedV2": 6,
+      "status": "PASS"
+    },
+    "toolPageViewModelGrid": {
+      "command": "node scripts/qa/tool-page-view-model-guard.mjs",
+      "status": "PASS"
+    },
+    "toolPageV2FixtureGuard": {
+      "command": "node scripts/qa/tool-page-v2-fixture-guard.mjs",
+      "status": "PASS"
+    },
+    "toolPageV2CatalogGuard": {
+      "command": "node scripts/qa/tool-page-v2-catalog-guard.mjs",
+      "status": "PASS"
+    },
+    "catalogPhase11Validate": {
+      "command": "npm run catalog:phase11:validate",
+      "status": "PASS"
+    }
+  }
+}
