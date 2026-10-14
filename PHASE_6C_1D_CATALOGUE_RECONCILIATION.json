@@ -230,13 +230,13 @@
       "historicalId": "sora",
       "historicalName": "Sora",
       "historicalCategory": "Video & Audio",
-      "previousStatus": "commercially launched Dec 2024; discontinued Apr 2026",
-      "currentMatchingTool": "chatgpt",
-      "rebrandOrAcquisition": "Standalone web service discontinued; consolidated into ChatGPT Pro / OpenAI API",
-      "reason": "Sora commercially launched in December 2024 at sora.com. In April 2026, OpenAI discontinued standalone Sora web subscriptions and integrated video generation directly into ChatGPT Pro and the OpenAI API. The standalone entry was removed during catalogue lifecycle maintenance. Describing Sora as an unreleased preview in late 2026 was historically inaccurate; it is an absorbed/discontinued standalone product accessible via ChatGPT.",
-      "supportingSource": "OpenAI official release announcements (Dec 2024 launch, Apr 2026 subscription consolidation); Workbook Change Log row 41",
-      "classification": "C. Acquired and merged",
-      "finalDisposition": "Standalone listing removed; video generation features absorbed into chatgpt"
+      "previousStatus": "discontinued (web/app shut down 26 Apr 2026; API sunset 24 Sep 2026)",
+      "currentMatchingTool": null,
+      "rebrandOrAcquisition": "Full vendor discontinuation; no direct replacement named",
+      "reason": "Sora commercially launched in December 2024 (web and iOS app). On April 26, 2026, OpenAI shut down consumer web and mobile application access. On September 24, 2026, OpenAI officially sunsetted the Sora Videos API and retired all model endpoints (sora-2, sora-2-pro). Official OpenAI deprecations documentation confirms no successor model or direct feature replacement was provided. The standalone entry was removed during catalogue lifecycle maintenance. Describing Sora as an unreleased preview or claiming direct absorption into ChatGPT was historically inaccurate; it is a fully discontinued service.",
+      "supportingSource": "OpenAI Help Article 20001152 (Sora Discontinuation, 26 Apr 2026); OpenAI API Deprecations Documentation (Videos API Sunset, 24 Sep 2026); Workbook Change Log row 41",
+      "classification": "D. Discontinued and removed",
+      "finalDisposition": "Removed from live catalogue following complete service and API discontinuation"
     },
     {
       "historicalId": "supertone",
