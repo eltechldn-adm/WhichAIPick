@@ -23,8 +23,10 @@
     "inject:header": "node scripts/inject-header.mjs",
     "inject:footer": "node scripts/inject-footer.mjs",
     "generate:build-info": "node scripts/generate-build-info.mjs",
-    "predeploy": "node scripts/prune-generated-routes.mjs --execute && node scripts/generate-static-pages.mjs && npm run generate:seo && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs",
-    "build:cloudflare": "npm run build:data && npm run qa && npm run predeploy"
+    "qa:canary:config": "node scripts/qa/tool-page-v2-canary-config-guard.mjs",
+    "qa:canary:output": "node scripts/qa/tool-page-v2-canary-guard.mjs",
+    "predeploy": "node scripts/prune-generated-routes.mjs --execute && node scripts/generate-static-pages.mjs && npm run generate:seo && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs && npm run qa:canary:config && npm run qa:canary:output",
+    "build:cloudflare": "npm run build:data && npm run qa && TOOL_PAGE_V2_CANARY=1 npm run predeploy"
   },
   "dependencies": {
     "playwright": "^1.63.0",

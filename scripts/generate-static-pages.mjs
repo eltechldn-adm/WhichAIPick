@@ -14,6 +14,8 @@
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { resolveCanarySelection, CanarySelectionError } from './tool-page-2/canary-selection.mjs';
+import { renderProductionToolPageV2 } from './tool-page-2/render-production-tool-page-v2.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
@@ -713,15 +715,63 @@ let toolsGenerated      = 0;
 let categoriesGenerated = 0;
 
 // 1) Tool pages
+// Default: every tool is rendered with the V1 template. A tool is rendered with Tool Page V2 only when
+// TOOL_PAGE_V2_CANARY=1 AND the tool ID is in the validated allowlist. Invalid configuration aborts the build
+// before any tool page is written; it never falls back to rendering the full catalogue as V2.
+let canaryIds;
+try {
+  canaryIds = resolveCanarySelection({ root: ROOT, tools });
+} catch (error) {
+  if (error instanceof CanarySelectionError) {
+    console.error(error.message);
+    process.exit(1);
+  }
+  throw error;
+}
+const canarySet = new Set(canaryIds);
+const CONSENT_HEAD_HTML = `    <meta name="google-adsense-account" content="ca-pub-7088331504377019">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            analytics_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
+        });
+        gtag('js', new Date());
+    </script>
+    <script src="/js/consent.js" defer></script>`;
+
 console.log('Generating tool pages…');
+if (canarySet.size > 0) console.log(`  ! Tool Page V2 canary ENABLED for ${canarySet.size} tools: ${canaryIds.join(', ')}`);
+let v2Generated = 0;
 for (const tool of tools) {
   const outDir  = path.join(ROOT, 'tools', tool.id);
   const outFile = path.join(outDir, 'index.html');
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(outFile, buildToolPage(tool), 'utf8');
+  if (canarySet.has(tool.id)) {
+    fs.writeFileSync(outFile, renderProductionToolPageV2(tool, {
+      root: ROOT,
+      domain: DOMAIN,
+      headerHtml: HEADER_SHELL,
+      footerHtml: FOOTER_HTML,
+      consentHeadHtml: CONSENT_HEAD_HTML,
+      stripHtml,
+      truncate
+    }), 'utf8');
+    v2Generated++;
+  } else {
+    fs.writeFileSync(outFile, buildToolPage(tool), 'utf8');
+  }
   toolsGenerated++;
 }
-console.log(`  ✓ ${toolsGenerated} tool pages written to /tools/[id]/index.html`);
+if (v2Generated !== canarySet.size) {
+  console.error(`[CANARY FATAL] Expected ${canarySet.size} V2 pages but generated ${v2Generated}.`);
+  process.exit(1);
+}
+console.log(`  ✓ ${toolsGenerated} tool pages written to /tools/[id]/index.html (${v2Generated} V2, ${toolsGenerated - v2Generated} V1)`);
 
 // 2) Category pages
 console.log('Generating category pages…');
