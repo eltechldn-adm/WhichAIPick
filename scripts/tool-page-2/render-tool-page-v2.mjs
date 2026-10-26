@@ -274,10 +274,6 @@ ${bodyOpen}
                     </div>
                 </div>
             </div>
-
-            <footer class="tool-v2-footer">
-                <a href="/review-methodology.html">Review Methodology</a> &middot; <a href="/corrections-policy.html">Request a Correction</a>
-            </footer>
         </div>
     </div>
 ${bodyClose}

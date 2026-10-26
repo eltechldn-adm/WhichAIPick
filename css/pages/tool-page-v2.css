@@ -228,12 +228,3 @@ a.tool-v2-btn-secondary:hover {
   font-size: 0.875rem;
 }
 
-/* Footer / Methodology */
-.tool-v2-footer {
-  border-top: 1px solid var(--border-color, #2D3748);
-  padding: 2rem 0;
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: var(--text-secondary, #A0AEC0);
-}
