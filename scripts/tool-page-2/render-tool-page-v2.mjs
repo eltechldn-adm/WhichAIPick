@@ -3,7 +3,7 @@ const PRODUCTION_REQUIRED_OPTIONS = ['canonicalUrl', 'robots', 'metaTitle', 'met
 /**
  * Renders a Tool Page V2 document.
  *
- * options === undefined/null  -> isolated preview document (noindex, no site shell). Output unchanged.
+ * options === undefined/null  -> isolated preview document (noindex, no site shell).
  * options.mode === 'production' -> same V2 body inside the standard site shell:
  *   canonical + robots + social meta, consent/AdSense head block, header/footer shells.
  *   Used only by the explicitly allowlisted canary path in generate-static-pages.mjs.
@@ -234,16 +234,16 @@ ${bodyOpen}
                         </section>
                     ` : ''}
 
-                    ${trust.display.trustLabel ? `
-                        <section class="tool-v2-trust">
-                            <h2>Trust & Verification</h2>
+                    <section class="tool-v2-trust">
+                        <h2>Trust & Verification</h2>
+                        ${trust.display.trustLabel ? `
                             <p>${escapeHtml(trust.display.trustLabel)}</p>
                             ${trust.evidenceReviewedAt ? `<p>Last Reviewed: ${escapeHtml(trust.evidenceReviewedAt)}</p>` : ''}
-                            <div class="tool-v2-trust-links">
-                                <a href="/review-methodology.html">Review Methodology</a> | <a href="/corrections-policy.html">Request a Correction</a>
-                            </div>
-                        </section>
-                    ` : ''}
+                        ` : ''}
+                        <div class="tool-v2-trust-links">
+                            <a href="/review-methodology.html">Review Methodology</a> | <a href="/corrections-policy.html">Request a Correction</a>
+                        </div>
+                    </section>
                 </div>
 
                 <div class="tool-v2-sidebar">
