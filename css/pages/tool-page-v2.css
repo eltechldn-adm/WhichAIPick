@@ -367,3 +367,34 @@ button.tool-v2-btn-shortlist.saved:hover {
   }
 }
 
+/* Pricing Overview Narrative */
+.tool-v2-pricing-overview {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color, #2D3748);
+  color: var(--text-secondary, #A0AEC0);
+}
+
+.tool-v2-pricing-overview p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tool-v2-pricing-overview p:last-child {
+  margin-bottom: 0;
+}
+
+/* Comparison Summary Narrative */
+.tool-v2-comparison-summary {
+  color: var(--text-secondary, #A0AEC0);
+}
+
+.tool-v2-comparison-summary p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tool-v2-comparison-summary p:last-child {
+  margin-bottom: 0;
+}
+

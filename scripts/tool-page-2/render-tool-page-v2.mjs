@@ -99,6 +99,39 @@ export function renderToolPageV2(viewModel, options = null) {
         }
     }
 
+    // Editorial: Formatted paragraphs helper
+    const formatParagraphs = (rawContent) => {
+        if (!rawContent || typeof rawContent !== 'string') return '';
+        let paragraphs = [];
+        if (rawContent.includes('<p')) {
+            const matches = rawContent.match(/<p[^>]*>([\s\S]*?)<\/p>/gi);
+            if (matches && matches.length > 0) {
+                for (const m of matches) {
+                    const text = stripHtmlToText(m);
+                    if (text) paragraphs.push(text);
+                }
+            } else {
+                const text = stripHtmlToText(rawContent);
+                if (text) paragraphs.push(text);
+            }
+        } else {
+            const parts = rawContent.split(/\n\s*\n/);
+            for (const part of parts) {
+                const text = stripHtmlToText(part);
+                if (text) paragraphs.push(text);
+            }
+        }
+        return paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('\n');
+    };
+
+    // Editorial: Pricing Overview
+    const rawPricingOverview = editorial?.pricingOverview?.value ?? (typeof editorial?.pricingOverview === 'string' ? editorial.pricingOverview : null);
+    const pricingOverviewHtml = formatParagraphs(rawPricingOverview);
+
+    // Editorial: Comparison Summary
+    const rawComparisonSummary = editorial?.comparisonSummary?.value ?? (typeof editorial?.comparisonSummary === 'string' ? editorial.comparisonSummary : null);
+    const comparisonSummaryHtml = formatParagraphs(rawComparisonSummary);
+
     const schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -282,6 +315,11 @@ ${bodyOpen}
                             <li>Free Tier: ${escapeHtml(pricing.display.freeTierLabel)}</li>
                             <li>Free Trial: ${escapeHtml(pricing.display.trialLabel)}</li>
                         </ul>
+                        ${pricingOverviewHtml ? `
+                            <div class="tool-v2-pricing-overview">
+                                ${pricingOverviewHtml}
+                            </div>
+                        ` : ''}
                     </section>
 
                     <section class="tool-v2-section">
@@ -305,6 +343,15 @@ ${bodyOpen}
                             </div>
                         ` : ''}
                     </section>
+
+                    ${comparisonSummaryHtml ? `
+                        <section class="tool-v2-section">
+                            <h2>How It Compares</h2>
+                            <div class="tool-v2-editorial tool-v2-comparison-summary">
+                                ${comparisonSummaryHtml}
+                            </div>
+                        </section>
+                    ` : ''}
 
                     ${relationships.featuredComparisons.length > 0 ? `
                         <section class="tool-v2-section">
