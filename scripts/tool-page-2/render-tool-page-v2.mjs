@@ -35,6 +35,36 @@ export function renderToolPageV2(viewModel, options = null) {
             .replace(/'/g, "&#039;");
     };
 
+    const NAMED_ENTITIES = {
+        'quot': '"',
+        'apos': "'",
+        '39': "'",
+        '039': "'",
+        'lt': '<',
+        'gt': '>',
+        'amp': '&',
+        'nbsp': ' '
+    };
+
+    const decodeHtmlEntities = (str) => {
+        if (!str || typeof str !== 'string') return '';
+        return str.replace(/&(?:#x([0-9a-fA-F]+)|#([0-9]+)|([a-zA-Z0-9]+));/g, (match, hex, dec, name) => {
+            if (hex) {
+                try { return String.fromCodePoint(parseInt(hex, 16)); } catch { return match; }
+            }
+            if (dec) {
+                try { return String.fromCodePoint(parseInt(dec, 10)); } catch { return match; }
+            }
+            if (name) {
+                const lower = name.toLowerCase();
+                if (NAMED_ENTITIES[lower] !== undefined) {
+                    return NAMED_ENTITIES[lower];
+                }
+            }
+            return match;
+        });
+    };
+
     const stripHtmlToText = (htmlContent) => {
         if (!htmlContent) return '';
         let text = htmlContent
@@ -44,7 +74,7 @@ export function renderToolPageV2(viewModel, options = null) {
             .replace(/<li[^>]*>/gi, ' • ');
         text = text.replace(/<[^>]+>/g, '');
         text = text.replace(/\s+/g, ' ').trim();
-        return text;
+        return decodeHtmlEntities(text);
     };
 
     let longDescText = stripHtmlToText(editorial.longDescription?.value);
