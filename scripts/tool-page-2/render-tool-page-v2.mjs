@@ -61,6 +61,44 @@ export function renderToolPageV2(viewModel, options = null) {
         }
     }
 
+    // Editorial: Pros & Cons
+    const getRawList = (field) => {
+        if (!field) return [];
+        if (Array.isArray(field)) return field;
+        if (Array.isArray(field.value)) return field.value;
+        return [];
+    };
+
+    const rawPros = getRawList(editorial?.pros);
+    const pros = [...new Set(rawPros.filter(p => typeof p === 'string' && p.trim().length > 0).map(p => p.trim()))];
+
+    const rawCons = getRawList(editorial?.cons);
+    const cons = [...new Set(rawCons.filter(c => typeof c === 'string' && c.trim().length > 0).map(c => c.trim()))];
+
+    // Editorial: Feature Groups
+    const rawFeatureGroups = editorial?.featureGroups?.value ?? editorial?.featureGroups ?? null;
+    let normalizedFeatureGroups = [];
+    if (rawFeatureGroups) {
+        const groupList = Array.isArray(rawFeatureGroups)
+            ? rawFeatureGroups
+            : (typeof rawFeatureGroups === 'object' ? Object.values(rawFeatureGroups) : []);
+
+        for (const g of groupList) {
+            if (!g || typeof g !== 'object') continue;
+            const heading = (typeof g.group === 'string' && g.group.trim())
+                ? g.group.trim()
+                : ((typeof g.name === 'string' && g.name.trim()) ? g.name.trim() : 'Features');
+            const rawItems = Array.isArray(g.items) ? g.items : [];
+            const validItems = [...new Set(rawItems.filter(item => typeof item === 'string' && item.trim().length > 0).map(item => item.trim()))];
+            if (validItems.length > 0) {
+                normalizedFeatureGroups.push({
+                    group: heading,
+                    items: validItems
+                });
+            }
+        }
+    }
+
     const schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -165,6 +203,46 @@ ${bodyOpen}
                             <div class="tool-v2-editorial">
                                 ${longDescText ? `<p>${escapeHtml(longDescText)}</p>` : ''}
                                 ${howItWorksText ? `<h3>How it works</h3><p>${escapeHtml(howItWorksText)}</p>` : ''}
+                            </div>
+                        </section>
+                    ` : ''}
+
+                    ${(normalizedFeatureGroups.length > 0) ? `
+                        <section class="tool-v2-section">
+                            <h2>Key Features</h2>
+                            <div class="tool-v2-feature-groups">
+                                ${normalizedFeatureGroups.map(group => `
+                                    <div class="tool-v2-feature-group">
+                                        <h3>${escapeHtml(group.group)}</h3>
+                                        <ul class="tool-v2-list tool-v2-feature-list">
+                                            ${group.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </section>
+                    ` : ''}
+
+                    ${(pros.length > 0 || cons.length > 0) ? `
+                        <section class="tool-v2-section">
+                            <h2>Strengths & Limitations</h2>
+                            <div class="tool-v2-pros-cons">
+                                ${pros.length > 0 ? `
+                                    <div class="tool-v2-pros">
+                                        <h3>Strengths</h3>
+                                        <ul class="tool-v2-list tool-v2-pros-list">
+                                            ${pros.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                                ${cons.length > 0 ? `
+                                    <div class="tool-v2-cons">
+                                        <h3>Limitations</h3>
+                                        <ul class="tool-v2-list tool-v2-cons-list">
+                                            ${cons.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
                             </div>
                         </section>
                     ` : ''}
