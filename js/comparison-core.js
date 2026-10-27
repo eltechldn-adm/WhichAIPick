@@ -1,0 +1,207 @@
+export function escapeHTML(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+export const INTENT_LABELS = {
+    "writing.generate_text": "Generate text and copy",
+    "writing.rewrite": "Rewrite or paraphrase",
+    "writing.longform": "Write long-form (books, essays)",
+    "coding.code_generation": "Write or complete code",
+    "coding.debugging": "Debug or fix code",
+    "building.ai_app_builder": "Build an AI/LLM application",
+    "building.no_code_app": "Build an app without coding",
+    "building.website_builder": "Build a website",
+    "research.web_search": "Web research",
+    "research.academic_papers": "Research papers / evidence",
+    "research.document_analysis": "Document analysis (PDFs)",
+    "research.data_analysis": "Data analysis (Spreadsheets)",
+    "research.summarization": "Summarize articles",
+    "image.generate": "Image generation",
+    "image.edit": "Image editing",
+    "video.generate": "Video generation",
+    "video.edit": "Video editing",
+    "video.avatar": "Avatar video generation",
+    "audio.music_generation": "Music generation",
+    "audio.voice_generation": "Voice generation / TTS",
+    "automation.workflow": "Automate app/business workflows",
+    "automation.app_integration": "App integration",
+    "meetings.transcription": "Meeting transcription",
+    "meetings.notes": "Meeting notes",
+    "education.teaching": "Lesson planning & grading",
+    "education.learning": "Tutoring & studying"
+};
+
+export function getCompatibilityLevel(tools) {
+    if (!tools || tools.length < 2) return null;
+
+    const normalize = (str) => typeof str === 'string' ? str.trim().toLowerCase() : '';
+
+    const intentSets = tools.map(t => new Set((t.finderIntentIds || []).filter(Boolean)));
+    const useCaseSets = tools.map(t => new Set((t.primaryUseCases || []).filter(Boolean).map(normalize)));
+    const categorySets = tools.map(t => new Set([t.primaryCategory].filter(Boolean)));
+
+    // To handle 2, 3, or 4 tools: we look for an intersection across ALL tools in the array.
+    let sharedIntents = 0;
+    if (intentSets[0].size > 0) {
+        for (const intent of intentSets[0]) {
+            if (intentSets.slice(1).every(set => set.has(intent))) {
+                sharedIntents++;
+            }
+        }
+    }
+
+    let sharedUseCases = 0;
+    if (useCaseSets[0].size > 0) {
+        for (const uc of useCaseSets[0]) {
+            if (useCaseSets.slice(1).every(set => set.has(uc))) {
+                sharedUseCases++;
+            }
+        }
+    }
+
+    let sharedCategories = 0;
+    if (categorySets[0].size > 0) {
+        for (const cat of categorySets[0]) {
+            if (categorySets.slice(1).every(set => set.has(cat))) {
+                sharedCategories++;
+            }
+        }
+    }
+
+    if (sharedIntents > 0 || sharedUseCases > 0) {
+        return 'Strong overlap';
+    }
+
+    if (sharedCategories > 0) {
+        return 'Partial overlap';
+    }
+
+    return 'Different tool types';
+}
+
+export function checkIdentical(values) {
+    if (values.length <= 1) return true;
+    const first = values[0];
+    for (let i = 1; i < values.length; i++) {
+        if (Array.isArray(first)) {
+            if (!Array.isArray(values[i])) return false;
+            const set1 = [...first].sort().join(',');
+            const set2 = [...values[i]].sort().join(',');
+            if (set1 !== set2) return false;
+        } else {
+            if (first !== values[i]) return false;
+        }
+    }
+    return true;
+}
+
+export function renderBoolean(val) {
+    if (val === true) return '<span class="val-yes">✅ Yes</span>';
+    if (val === false) return '<span class="val-no">❌ No</span>';
+    return '<span class="unknown-val">❓ Not confirmed</span>';
+}
+
+export function renderExperienceLevel(val) {
+    if (val === null || val === undefined || val === '') return '<span class="unknown-val">Not available</span>';
+    if (val === 'all_levels') return 'All experience levels';
+    return escapeHTML(val).charAt(0).toUpperCase() + escapeHTML(val).slice(1).replace(/_/g, ' ');
+}
+
+export function renderList(items) {
+    if (!items || !Array.isArray(items) || items.length === 0) return '<span class="unknown-val">No structured data available</span>';
+    return `<ul class="val-list">${items.map(i => `<li>${escapeHTML(i)}</li>`).join('')}</ul>`;
+}
+
+export function renderFactorRow(factorName, tools, extractFn, renderFn) {
+    const rawValues = tools.map(t => extractFn(t));
+    const isIdentical = checkIdentical(rawValues);
+
+    return `
+        <tr class="${isIdentical ? 'row-identical' : ''}">
+            <th scope="row" class="compare-factor-col">${factorName}</th>
+            ${tools.map((tool, index) => {
+                const rawVal = rawValues[index];
+                return `<td>${renderFn(rawVal, tool)}</td>`;
+            }).join('')}
+        </tr>
+    `;
+}
+
+export function renderCompatibilityWarning(tools) {
+    const level = getCompatibilityLevel(tools);
+    if (!level) return '';
+
+    if (level === 'Different tool types') {
+        return `
+            <div class="compatibility-warning" role="alert">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <span><strong>Different tool types:</strong> These tools serve different primary functions, so some comparison rows may not be directly equivalent.</span>
+            </div>
+        `;
+    } else if (level === 'Partial overlap') {
+        return `
+            <div class="compatibility-warning" role="alert" style="background: rgba(255, 152, 0, 0.1); border-color: var(--color-orange); color: var(--color-text);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-orange)" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span><strong>Partial overlap:</strong> These tools share a broad category but may focus on different specific use cases.</span>
+            </div>
+        `;
+    }
+    // Strong overlap normally has no warning
+    return '';
+}
+
+export function renderComparisonTableRows(tools) {
+    return `
+        <!-- Overview Section -->
+        <tr class="compare-section-header">
+            <td colspan="${tools.length + 1}">Overview</td>
+        </tr>
+        ${renderFactorRow('Category', tools, t => t.primaryCategory, val => val ? `<span class="compare-tag">${escapeHTML(val)}</span>` : '<span class="unknown-val">Not available</span>')}
+        ${renderFactorRow('Experience level', tools, t => t.experienceLevel, renderExperienceLevel)}
+        ${renderFactorRow('Evidence reviewed', tools, t => t.evidenceReviewedAt, val => val ? `<span class="evidence-date">${escapeHTML(val)}</span>` : '<span class="unknown-val">Evidence review date not available</span>')}
+
+        <!-- Best Fit Section -->
+        <tr class="compare-section-header">
+            <td colspan="${tools.length + 1}">Best fit</td>
+        </tr>
+        ${renderFactorRow('Best for', tools, t => t.bestFor, val => renderList(val))}
+        ${renderFactorRow('Not ideal for', tools, t => t.notIdealFor, val => renderList(val))}
+        ${renderFactorRow('Primary use cases', tools, t => t.primaryUseCases, val => renderList(val))}
+
+        <!-- Pricing Section -->
+        <tr class="compare-section-header">
+            <td colspan="${tools.length + 1}">Pricing</td>
+        </tr>
+        ${renderFactorRow('Pricing model', tools, t => t.pricingModel, val => escapeHTML(val) || '<span class="unknown-val">Not confirmed</span>')}
+        ${renderFactorRow('Free tier', tools, t => t.hasFreeTier, renderBoolean)}
+        ${renderFactorRow('Free trial', tools, t => t.hasFreeTrial, renderBoolean)}
+        ${renderFactorRow('Starting price', tools, t => t.startingPrice, (val, t) => {
+            if (val === null) return '<span class="unknown-val">Pricing not confirmed</span>';
+            const currencyStr = t.priceCurrency ? escapeHTML(t.priceCurrency) + ' ' : '';
+            return `<strong>${currencyStr}${val}</strong>`;
+        })}
+
+        <!-- Technical Section -->
+        <tr class="compare-section-header">
+            <td colspan="${tools.length + 1}">Availability & Technical</td>
+        </tr>
+        ${renderFactorRow('Platforms', tools, t => t.platforms, val => (val && val.length > 0) ? val.map(p => `<span class="compare-tag">${escapeHTML(p)}</span>`).join('') : '<span class="unknown-val">No structured platform data</span>')}
+        ${renderFactorRow('API available', tools, t => t.apiAvailable, renderBoolean)}
+        ${renderFactorRow('Open source', tools, t => t.openSource, renderBoolean)}
+        ${renderFactorRow('Self-hosted', tools, t => t.selfHosted, renderBoolean)}
+    `;
+}

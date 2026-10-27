@@ -1,0 +1,218 @@
+[
+  {
+    "sourceId": "src-chatgpt-pricing",
+    "publisher": "OpenAI",
+    "title": "ChatGPT Pricing and Plans",
+    "url": "https://openai.com/chatgpt/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-images",
+    "publisher": "OpenAI",
+    "title": "Images in ChatGPT",
+    "url": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-voice",
+    "publisher": "OpenAI",
+    "title": "Advanced Voice Mode in ChatGPT",
+    "url": "https://help.openai.com/en/articles/8400625-voice-conversations-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-search",
+    "publisher": "OpenAI",
+    "title": "Browsing with ChatGPT",
+    "url": "https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-claude-pricing",
+    "publisher": "Anthropic",
+    "title": "Claude Pricing",
+    "url": "https://www.anthropic.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-claude-artifacts",
+    "publisher": "Anthropic",
+    "title": "Using Artifacts in Claude",
+    "url": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-gemini-workspace",
+    "publisher": "Google",
+    "title": "Use Gemini in Google Workspace",
+    "url": "https://support.google.com/gemini/answer/13695044",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-gemini-pricing",
+    "publisher": "Google",
+    "title": "Gemini Advanced",
+    "url": "https://gemini.google.com/advanced",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-perplexity-pro",
+    "publisher": "Perplexity",
+    "title": "Perplexity Pro",
+    "url": "https://www.perplexity.ai/pro",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-cursor-pricing",
+    "publisher": "Cursor",
+    "title": "Cursor Pricing",
+    "url": "https://cursor.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-cursor-composer",
+    "publisher": "Cursor",
+    "title": "Cursor Composer",
+    "url": "https://docs.cursor.com/composer",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-copilot-agents",
+    "publisher": "GitHub",
+    "title": "GitHub Copilot Agent Mode",
+    "url": "https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide/using-github-copilot-agent-mode",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-copilot-pricing",
+    "publisher": "GitHub",
+    "title": "GitHub Copilot Pricing",
+    "url": "https://github.com/features/copilot",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-replit-pricing",
+    "publisher": "Replit",
+    "title": "Replit Pricing",
+    "url": "https://replit.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-lovable-pricing",
+    "publisher": "Lovable",
+    "title": "Lovable Pricing",
+    "url": "https://lovable.dev/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-lovable-supabase",
+    "publisher": "Lovable",
+    "title": "Lovable Supabase Integration",
+    "url": "https://docs.lovable.dev/integrations/supabase",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-bolt-docs",
+    "publisher": "StackBlitz",
+    "title": "Bolt.new Documentation",
+    "url": "https://bolt.new/docs",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-midjourney-web",
+    "publisher": "Midjourney",
+    "title": "Midjourney Web Alpha",
+    "url": "https://help.midjourney.com/en/articles/9329008-creating-images-on-the-website",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-midjourney-docs",
+    "publisher": "Midjourney",
+    "title": "Midjourney Quick Start",
+    "url": "https://docs.midjourney.com/docs/quick-start",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-midjourney-pricing",
+    "publisher": "Midjourney",
+    "title": "Midjourney Subscriptions",
+    "url": "https://docs.midjourney.com/docs/plans",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-leonardo-pricing",
+    "publisher": "Leonardo AI",
+    "title": "Leonardo AI Pricing",
+    "url": "https://leonardo.ai/pricing/",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-leonardo-canvas",
+    "publisher": "Leonardo AI",
+    "title": "Leonardo AI Realtime Canvas",
+    "url": "https://docs.leonardo.ai/docs/realtime-canvas",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-claude-models",
+    "publisher": "Anthropic",
+    "title": "Claude Models and Context Windows",
+    "url": "https://docs.anthropic.com/en/docs/models-overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-data-analysis",
+    "publisher": "OpenAI",
+    "title": "Advanced Data Analysis in ChatGPT",
+    "url": "https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-10-04"
+  }
+]

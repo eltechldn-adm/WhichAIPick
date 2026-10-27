@@ -52,8 +52,8 @@ function buildPage(def) {
         .replace('{{BREADCRUMBS}}', generateBreadcrumbs(def.title, def.slug))
         .replace('{{TITLE}}', def.title)
         .replace('{{SUBTITLE}}', def.metaDescription)
-        .replace('{{HAS_CTA}}', '')
-        .replace('{{STATS}}', '');
+        .replace('{{CTA_BLOCK}}', '')
+        .replace('{{STATS_BLOCK}}', '');
 
     const contentHTML = `
         ${hero}

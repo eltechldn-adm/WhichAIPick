@@ -1,0 +1,13 @@
+{
+  "totalEvaluated": 882,
+  "passedCount": 882,
+  "failedCount": 0,
+  "failures": [],
+  "metrics": {
+    "totalHtmlBytes": 6844861,
+    "minHtmlBytes": 6393,
+    "maxHtmlBytes": 11618,
+    "avgHtmlBytes": 7761
+  },
+  "durationMs": 132.954458
+}

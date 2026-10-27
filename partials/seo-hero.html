@@ -8,20 +8,9 @@
         <h1 class="seo-hero-title">{{TITLE}}</h1>
         <p class="seo-hero-subtitle">{{SUBTITLE}}</p>
         
-        {{#if HAS_CTA}}
-        <div class="seo-hero-ctas">
-            <a href="{{CTA_PRIMARY_LINK}}" class="btn btn-primary">{{CTA_PRIMARY_TEXT}}</a>
-            {{#if CTA_SECONDARY_TEXT}}
-            <a href="{{CTA_SECONDARY_LINK}}" class="btn btn-secondary">{{CTA_SECONDARY_TEXT}}</a>
-            {{/if}}
-        </div>
-        {{/if}}
+        {{CTA_BLOCK}}
 
-        {{#if STATS}}
-        <div class="seo-hero-stats">
-            {{STATS}}
-        </div>
-        {{/if}}
+        {{STATS_BLOCK}}
     </div>
 </section>
 

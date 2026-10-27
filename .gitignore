@@ -24,6 +24,8 @@ docs-private/
 *.bak
 *.backup
 *.log
+scratch/
+results.json
 
 # Phase reports and staging files
 PHASE_*_REPORT.md

@@ -154,10 +154,22 @@ const FOOTER_HTML = `<div id="site-footer">
 ${footer}
 </div>`;
 
-// ─── Header Shell ─────────────────────────────────────────────────────────────
+// ─── HEADER SHELL ─────────────────────────────────────────────────────────────
 // Visual header loads via JS (layout.js) — same as all other pages on the site.
 // This is acceptable: the critical crawler content is in the body and footer.
 const HEADER_SHELL = `<div id="site-header"></div>`;
+
+// ─── CURATED COMPARISONS ──────────────────────────────────────────────────────
+const CURATED_COMPARISONS = [
+  { id: 'chatgpt-vs-claude', title: 'ChatGPT vs Claude', tools: ['chatgpt', 'claude'] },
+  { id: 'chatgpt-vs-gemini', title: 'ChatGPT vs Gemini', tools: ['chatgpt', 'google-gemini'] },
+  { id: 'chatgpt-vs-perplexity', title: 'ChatGPT vs Perplexity', tools: ['chatgpt', 'perplexity-ai'] },
+  { id: 'cursor-vs-github-copilot', title: 'Cursor vs GitHub Copilot', tools: ['cursor', 'github-copilot'] },
+  { id: 'replit-vs-lovable', title: 'Replit vs Lovable', tools: ['replit', 'lovable'] },
+  { id: 'lovable-vs-bolt', title: 'Lovable vs Bolt', tools: ['lovable', 'bolt'] },
+  { id: 'midjourney-vs-leonardo-ai', title: 'Midjourney vs Leonardo AI', tools: ['midjourney', 'leonardo-ai'] },
+  { id: 'midjourney-vs-chatgpt-images', title: 'Midjourney vs ChatGPT Images', tools: ['midjourney', 'chatgpt'] }
+];
 
 // ─── TOOL PAGE GENERATOR ─────────────────────────────────────────────────────
 function buildToolPage(tool) {
@@ -258,6 +270,19 @@ function buildToolPage(tool) {
         <div class="tool-body-text">${tool.comparison_summary}</div>
       </div>`
     : '';
+
+  // Featured Comparisons
+  const participating = CURATED_COMPARISONS.filter(c => c.tools.includes(slug));
+  let featuredCompHtml = '';
+  if (participating.length > 0) {
+    const listHtml = participating.map(c => `<li><a href="/compare/${c.id}/" style="color: var(--c-accent); text-decoration: underline;">${escAttr(c.title)}</a></li>`).join('\n          ');
+    featuredCompHtml = `<div class="tool-section">
+        <h2>Featured comparisons</h2>
+        <ul style="padding-left: 1.5rem; line-height: 1.6;">
+          ${listHtml}
+        </ul>
+      </div>`;
+  }
 
   // SoftwareApplication JSON-LD
   const schema = {
@@ -365,7 +390,10 @@ function buildToolPage(tool) {
           <div class="tool-summary">
             ${tool.long_description || `<p>${escAttr(name)} is an AI-powered tool in the ${escAttr(category)} category.</p>`}
           </div>
-          ${ctaUrl !== '#' ? `<a href="${escAttr(ctaUrl)}" target="_blank" rel="${ctaRel}" class="btn btn-primary btn-lg tool-cta">${escAttr(ctaLabel)}</a>` : ''}
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+            ${ctaUrl !== '#' ? `<a href="${escAttr(ctaUrl)}" target="_blank" rel="${ctaRel}" class="btn btn-primary btn-lg tool-cta">${escAttr(ctaLabel)}</a>` : ''}
+            <a href="/compare#tools=${escAttr(slug)}" class="btn btn-secondary btn-lg tool-compare-cta">Compare ${escAttr(name)}</a>
+          </div>
           <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
             <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
           </div>
@@ -407,7 +435,9 @@ function buildToolPage(tool) {
         ${pricingHtml}
 
         <!-- How It Compares -->
-        ${compHtml}
+${compHtml ? `        ${compHtml}` : ''}
+        <!-- Featured Comparisons -->
+${featuredCompHtml ? `        ${featuredCompHtml}` : ''}
 
         <!-- Bottom CTA -->
         ${ctaUrl !== '#' ? `<div class="tool-section tool-cta-section">
@@ -743,7 +773,6 @@ const CONSENT_HEAD_HTML = `    <meta name="google-adsense-account" content="ca-p
         gtag('js', new Date());
     </script>
     <script src="/js/consent.js" defer></script>`;
-
 console.log('Generating tool pages…');
 if (canarySet.size > 0) console.log(`  ! Tool Page V2 canary ENABLED for ${canarySet.size} tools: ${canaryIds.join(', ')}`);
 let v2Generated = 0;
@@ -752,12 +781,16 @@ for (const tool of tools) {
   const outFile = path.join(outDir, 'index.html');
   fs.mkdirSync(outDir, { recursive: true });
   if (canarySet.has(tool.id)) {
+    const featuredComparisons = (typeof CURATED_COMPARISONS !== 'undefined' ? CURATED_COMPARISONS : [])
+      .filter(c => c.tools && c.tools.includes(tool.id))
+      .map(c => ({ title: c.title, url: `/compare/${c.id}/` }));
     fs.writeFileSync(outFile, renderProductionToolPageV2(tool, {
       root: ROOT,
       domain: DOMAIN,
       headerHtml: HEADER_SHELL,
       footerHtml: FOOTER_HTML,
       consentHeadHtml: CONSENT_HEAD_HTML,
+      featuredComparisons,
       stripHtml,
       truncate
     }), 'utf8');

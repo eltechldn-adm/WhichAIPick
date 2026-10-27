@@ -1,0 +1,73 @@
+/* Curated Comparison Pages - Premium UI Styles */
+
+.curated-comparison .compare-section {
+    border: 1px solid rgba(255,255,255,0.05);
+    background: var(--bg-surface, #121826);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.curated-comparison .compare-section:hover {
+    border-color: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.05);
+}
+
+.curated-comparison h2 {
+    color: var(--text-color, #ffffff);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.5rem;
+}
+
+.curated-comparison .difference-card,
+.curated-comparison .choose-card,
+.curated-comparison .pricing-card,
+.curated-comparison .alt-card {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.curated-comparison .difference-card:hover,
+.curated-comparison .choose-card:hover,
+.curated-comparison .pricing-card:hover,
+.curated-comparison .alt-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.03);
+}
+
+/* Ensure mobile layout doesn't break */
+@media (max-width: 768px) {
+    .curated-comparison .compare-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .curated-comparison .differences-grid {
+        gap: 1rem;
+    }
+    
+    .curated-comparison .interactive-compare-section {
+        padding: 1rem 0; /* Remove side padding so table can scroll fully */
+    }
+    
+    .curated-comparison h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Smooth Interactive Comparison Table Scrolling */
+.curated-comparison .compare-table-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+.curated-comparison .compare-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.curated-comparison .compare-table-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}

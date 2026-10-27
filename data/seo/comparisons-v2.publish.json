@@ -1,0 +1,13 @@
+{
+  "version": "comparison-v2-1.0",
+  "approvedSlugs": [
+    "chatgpt-vs-claude",
+    "chatgpt-vs-gemini",
+    "chatgpt-vs-perplexity",
+    "cursor-vs-github-copilot",
+    "replit-vs-lovable",
+    "lovable-vs-bolt",
+    "midjourney-vs-leonardo-ai",
+    "midjourney-vs-chatgpt-images"
+  ]
+}

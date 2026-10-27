@@ -93,35 +93,35 @@
                 </a>
                 <div class="dropdown-menu">
                     <a href="/tools/" class="dropdown-item">Browse All Tools</a>
-                    <a href="/category.html" class="dropdown-item">Browse by Category</a>
-                    <a href="/compare.html" class="dropdown-item">Compare Tools</a>
-                    <a href="/search.html" class="dropdown-item">Search Tools</a>
+                    <a href="/category" class="dropdown-item">Browse by Category</a>
+                    <a href="/compare" class="dropdown-item">Compare Tools</a>
+                    <a href="/search" class="dropdown-item">Search Tools</a>
                 </div>
             </div>
 
             <!-- Compare (Simple Link) -->
-            <a href="/compare.html" class="nav-link">Compare</a>
+            <a href="/compare" class="nav-link">Compare</a>
 
             <!-- Learn Dropdown -->
             <div class="nav-item-dropdown">
-                <a href="/academy.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                <a href="/academy" class="nav-link" aria-haspopup="true" aria-expanded="false">
                     Learn
                     <svg class="nav-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                         <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/academy.html" class="dropdown-item">AI Academy</a>
-                    <a href="/use-cases.html" class="dropdown-item">Use Cases</a>
-                    <a href="/blog.html" class="dropdown-item">Blog</a>
-                    <a href="/review-methodology.html" class="dropdown-item">Review Methodology</a>
+                    <a href="/academy" class="dropdown-item">AI Academy</a>
+                    <a href="/use-cases" class="dropdown-item">Use Cases</a>
+                    <a href="/blog" class="dropdown-item">Blog</a>
+                    <a href="/review-methodology" class="dropdown-item">Review Methodology</a>
                 </div>
             </div>
         </nav>
 
         <div class="header-actions">
             <!-- Search Icon -->
-            <a href="/search.html" class="header-action-btn" aria-label="Search tools">
+            <a href="/search" class="header-action-btn" aria-label="Search tools">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                     <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
                     <path d="M13 13L16.5 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -135,7 +135,7 @@
                 <span class="shortlist-badge" id="header-shortlist-badge">0</span>
             </a>
             <!-- Primary CTA -->
-            <a href="/find.html" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
+            <a href="/find" class="btn btn-primary btn-sm" id="header-find-cta">Find My Tool</a>
         </div>
 
         <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
@@ -148,19 +148,19 @@
     <!-- Mobile Navigation Panel -->
     <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
         <div class="mobile-nav-inner">
-            <a href="/find.html" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
+            <a href="/find" class="btn btn-primary mobile-find-cta">Find My Tool — Take the Quiz</a>
             <nav aria-label="Mobile navigation">
                 <a href="/tools/" class="mobile-nav-link">Browse All Tools</a>
-                <a href="/category.html" class="mobile-nav-link">Browse by Category</a>
-                <a href="/compare.html" class="mobile-nav-link">Compare Tools</a>
-                <a href="/search.html" class="mobile-nav-link">Search</a>
+                <a href="/category" class="mobile-nav-link">Browse by Category</a>
+                <a href="/compare" class="mobile-nav-link">Compare Tools</a>
+                <a href="/search" class="mobile-nav-link">Search</a>
                 <hr class="mobile-nav-divider" aria-hidden="true">
-                <a href="/academy.html" class="mobile-nav-link">AI Academy</a>
-                <a href="/use-cases.html" class="mobile-nav-link">Use Cases</a>
-                <a href="/blog.html" class="mobile-nav-link">Blog</a>
-                <a href="/review-methodology.html" class="mobile-nav-link">Review Methodology</a>
+                <a href="/academy" class="mobile-nav-link">AI Academy</a>
+                <a href="/use-cases" class="mobile-nav-link">Use Cases</a>
+                <a href="/blog" class="mobile-nav-link">Blog</a>
+                <a href="/review-methodology" class="mobile-nav-link">Review Methodology</a>
                 <hr class="mobile-nav-divider" aria-hidden="true">
-                <a href="/make-money.html" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
+                <a href="/make-money" class="mobile-nav-link mobile-nav-link--secondary">Make Money with AI</a>
                 <a href="/start-here/" class="mobile-nav-link mobile-nav-link--secondary">Start Here</a>
             </nav>
         </div>
@@ -196,7 +196,10 @@
           <div class="tool-summary">
             <p>Bardeen is a proactive, AI-powered automation platform that operates distinctively as a browser extension. While enterprise automation platforms (like Zapier or Make) run entirely in the background connecting cloud servers, Bardeen focuses on automating the user's active, front-end browser environment. It interacts directly with the webpages, tabs, and data the user is currently looking at.</p><p>Its marquee capability is local web scraping and cross-tab data manipulation combined with generative AI. A user can scrape a list of LinkedIn profiles from a webpage and instantly route that data through an LLM to generate personalized outreach emails, dropping those emails into a Google Sheet or CRM.</p><p>It is heavily favored by recruiters, SDRs (Sales Development Representatives), and researchers who need complex data enrichment and web-scraping automation triggered manually with a keyboard shortcut on an ad-hoc basis, rather than relying on strictly scheduled backend server logic.</p>
           </div>
-          <a href="https://www.bardeen.ai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Bardeen</a>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+            <a href="https://www.bardeen.ai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg tool-cta">Visit Bardeen</a>
+            <a href="/compare#tools=bardeen" class="btn btn-secondary btn-lg tool-compare-cta">Compare Bardeen</a>
+          </div>
           <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
             <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
           </div>
@@ -281,6 +284,8 @@
         <h2>How It Compares</h2>
         <div class="tool-body-text"><p>Bardeen competes in the automation space but avoids head-to-head cloud combat with Zapier or n8n. Zapier connects App A to App B automatically in the background. Bardeen differentiates itself by being the tool you invoke manually when looking at a screen. Its primary competitive advantage is its unrivaled ability to act as a visually driven, localized web-scraper and AI data manipulator for the information currently displayed in your browser tabs.</p></div>
       </div>
+        <!-- Featured Comparisons -->
+
 
         <!-- Bottom CTA -->
         <div class="tool-section tool-cta-section">
@@ -307,9 +312,9 @@
                 <h3 class="footer-heading">Directory</h3>
                 <ul class="footer-links">
                     <li><a href="/tools">Browse</a></li>
-                    <li><a href="/find.html">Find My Tool</a></li>
-                    <li><a href="/category.html">Categories</a></li>
-                    <li><a href="/search.html">Search</a></li>
+                    <li><a href="/find">Find My Tool</a></li>
+                    <li><a href="/category">Categories</a></li>
+                    <li><a href="/search">Search</a></li>
                 </ul>
             </div>
 
@@ -317,8 +322,8 @@
             <div class="footer-column">
                 <h3 class="footer-heading">Company</h3>
                 <ul class="footer-links">
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -326,12 +331,12 @@
             <div class="footer-column">
                 <h3 class="footer-heading">Legal</h3>
                 <ul class="footer-links">
-                    <li><a href="/disclosure.html">Affiliate Disclosure</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/cookies.html">Cookie Policy</a></li>
-                    <li><a href="/accessibility.html">Accessibility Statement</a></li>
-                    <li><a href="/report-misuse.html">Report Misuse</a></li>
+                    <li><a href="/disclosure">Affiliate Disclosure</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/cookies">Cookie Policy</a></li>
+                    <li><a href="/accessibility">Accessibility Statement</a></li>
+                    <li><a href="/report-misuse">Report Misuse</a></li>
                 </ul>
             </div>
         </div>

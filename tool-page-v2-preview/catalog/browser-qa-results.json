@@ -1,0 +1,800 @@
+{
+  "totalEvaluated": 18,
+  "totalViewportChecks": 90,
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "id": "chatgpt",
+      "category": "Content Creation",
+      "reason": "Prototype / Content Creation / Freemium / Comparisons",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/chatgpt_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/chatgpt_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/chatgpt_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/chatgpt_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/chatgpt_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "category": "Development",
+      "reason": "Prototype / Development / Paid / Comparisons",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/cursor_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/cursor_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/cursor_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/cursor_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/cursor_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "midjourney",
+      "category": "Design",
+      "reason": "Prototype / Design / Paid / Legacy contradiction safeguard",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/midjourney_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/midjourney_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/midjourney_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/midjourney_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/midjourney_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "aider",
+      "category": "Development",
+      "reason": "Prototype / Development / Free / Open Source",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/aider_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/aider_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/aider_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/aider_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/aider_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "amazon-codewhisperer",
+      "category": "Development",
+      "reason": "Prototype / Legacy rebrand / Ineligible for recommendations",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/amazon-codewhisperer_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/amazon-codewhisperer_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/amazon-codewhisperer_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/amazon-codewhisperer_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/amazon-codewhisperer_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "zapier-ai",
+      "category": "Automation",
+      "reason": "Prototype / Automation / Paid",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/zapier-ai_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/zapier-ai_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/zapier-ai_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/zapier-ai_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/zapier-ai_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "10web",
+      "category": "Development",
+      "reason": "Extensive editorial (Long Desc + How It Works) / Freemium",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/10web_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/10web_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/10web_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/10web_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/10web_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "activepieces",
+      "category": "Automation",
+      "reason": "Starting price populated ($20 USD) / Open source & Self-hosted",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/activepieces_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/activepieces_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/activepieces_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/activepieces_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/activepieces_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "abridge",
+      "category": "Business",
+      "reason": "Business category / Enterprise pricing / Intermediate skill",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/abridge_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/abridge_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/abridge_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/abridge_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/abridge_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "adcreativeai",
+      "category": "Marketing",
+      "reason": "Marketing category / Paid with trial / High use-case count",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/adcreativeai_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/adcreativeai_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/adcreativeai_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/adcreativeai_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/adcreativeai_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "ai-studios",
+      "category": "Video & Audio",
+      "reason": "Video & Audio category / Rebranded / Free trial",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/ai-studios_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/ai-studios_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/ai-studios_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/ai-studios_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/ai-studios_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "akiflow",
+      "category": "Productivity",
+      "reason": "Productivity category / Multi-platform desktop & mobile",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/akiflow_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/akiflow_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/akiflow_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/akiflow_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/akiflow_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "360learning",
+      "category": "Education",
+      "reason": "Education category / Enterprise / Free trial",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/360learning_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/360learning_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/360learning_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/360learning_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/360learning_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "alphasense",
+      "category": "Research",
+      "reason": "Research category / Enterprise / Multi-platform",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/alphasense_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/alphasense_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/alphasense_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/alphasense_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/alphasense_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "appgyver",
+      "category": "Development",
+      "reason": "Rebranded (SAP Build) / Recommendation-ineligible",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/appgyver_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/appgyver_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/appgyver_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/appgyver_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/appgyver_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "descript-overdub",
+      "category": "Video & Audio",
+      "reason": "Recommendation-ineligible legacy audio tool",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/descript-overdub_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/descript-overdub_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/descript-overdub_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/descript-overdub_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/descript-overdub_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "lovable",
+      "category": "Development",
+      "reason": "Multiple featured comparisons (Bolt.new & Replit)",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/lovable_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/lovable_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/lovable_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/lovable_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/lovable_1440.png"
+        }
+      ]
+    },
+    {
+      "id": "apple-intelligence",
+      "category": "Productivity",
+      "reason": "Free model / Apple-exclusive OS platforms",
+      "ctaStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(196, 82, 41)",
+        "fontWeight": "600"
+      },
+      "hoverStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(179, 75, 37)"
+      },
+      "passed": true,
+      "pageErrors": [],
+      "failedRequests": [],
+      "viewportResults": [
+        {
+          "width": 360,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/apple-intelligence_360.png"
+        },
+        {
+          "width": 390,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/apple-intelligence_390.png"
+        },
+        {
+          "width": 768,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/apple-intelligence_768.png"
+        },
+        {
+          "width": 1280,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/apple-intelligence_1280.png"
+        },
+        {
+          "width": 1440,
+          "horizontalOverflow": false,
+          "screenshot": "/Users/elainamarriott/Documents/SAAS Projects/Which_AI_Pick/scratch/qa-catalog-screenshots/apple-intelligence_1440.png"
+        }
+      ]
+    }
+  ]
+}

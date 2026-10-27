@@ -1,24 +1,21 @@
 /**
  * compare-engine.js
- * 
+ *
  * Handles the dynamic comparison system at /compare/.
- * Reads from URL parameters (?tools=id1,id2) and renders the comparison table
- * using the local data/tools.json catalog.
+ * Reads from URL hash (#tools=id1,id2) and renders the comparison table
+ * using the local data/comparison-index.json catalog.
  */
 
-// Dynamic SEO indexability for filtered states
-(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('tools')) {
-        let robotsMeta = document.querySelector('meta[name="robots"]');
-        if (!robotsMeta) {
-            robotsMeta = document.createElement('meta');
-            robotsMeta.name = 'robots';
-            document.head.appendChild(robotsMeta);
-        }
-        robotsMeta.content = 'noindex,follow';
-    }
-})();
+import {
+    escapeHTML,
+    checkIdentical,
+    renderBoolean,
+    renderExperienceLevel,
+    renderList,
+    renderFactorRow,
+    renderCompatibilityWarning,
+    renderComparisonTableRows
+} from './comparison-core.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const tableContainer = document.getElementById('compare-table-container');
@@ -29,20 +26,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selectorResults = document.getElementById('compare-selector-results');
     const copyLinkBtn = document.getElementById('copy-compare-link');
     const saveCompareBtn = document.getElementById('save-compare-btn');
+    const helpMeDecideBtn = document.getElementById('help-me-decide-btn');
 
     let allTools = [];
     let currentIds = [];
+    let showDifferencesOnly = false;
 
     // Check if we are on the compare page
     if (!tableContainer || !emptyState) return;
 
     try {
-        allTools = await window.loadTools();
+        const response = await fetch('/data/comparison-index.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        allTools = await response.json();
     } catch (e) {
-        console.error("Failed to load tools catalog for comparison.", e);
+        console.error("Failed to load comparison index.", e);
         tableContainer.innerHTML = '<p>Failed to load comparison data. Please try again later.</p>';
         return;
     }
+
+
 
     if (saveCompareBtn && window.UserState) {
         saveCompareBtn.addEventListener('click', () => {
@@ -57,6 +60,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    if (helpMeDecideBtn) {
+        helpMeDecideBtn.addEventListener('click', () => {
+            if (currentIds.length >= 2 && window.DecisionAssistant) {
+                window.DecisionAssistant.open(currentIds);
+            }
+        });
+    }
+
     function updateSaveCompareBtnState() {
         if (!saveCompareBtn || !window.UserState || currentIds.length < 2) return;
         const isSaved = window.UserState.isComparisonSaved(currentIds);
@@ -65,72 +76,91 @@ document.addEventListener('DOMContentLoaded', async () => {
             textSpan.textContent = isSaved ? 'Saved to My Tools' : 'Save Comparison';
         }
         if (isSaved) {
-            saveCompareBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="save-compare-text">Saved to My Tools</span>`;
+            saveCompareBtn.innerHTML = `<svg class="compare-action-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="save-compare-text">Saved to My Tools</span>`;
             saveCompareBtn.classList.add('saved');
         } else {
-            saveCompareBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.5rem;" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="save-compare-text">Save Comparison</span>`;
+            saveCompareBtn.innerHTML = `<svg class="compare-action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="save-compare-text">Save Comparison</span>`;
             saveCompareBtn.classList.remove('saved');
         }
     }
 
     // Initialize from URL
     function initFromURL() {
-        const params = new URLSearchParams(window.location.search);
-        const toolsParam = params.get('tools');
-        if (toolsParam) {
-            const rawIds = toolsParam.split(',').map(id => id.trim()).filter(Boolean);
-            
-            // Validate, deduplicate, and limit to 4
+        const urlParams = new URLSearchParams(window.location.search);
+        let rawIds = [];
+
+        // Migrate legacy ?tools= to #tools=
+        if (urlParams.has('tools')) {
+            rawIds = urlParams.get('tools').split(',').map(id => id.trim()).filter(Boolean);
+
+            // Validate, deduplicate, limit to 4
             const validIds = new Set();
             rawIds.forEach(id => {
                 if (allTools.find(t => t.id === id) && validIds.size < 4) {
                     validIds.add(id);
                 }
             });
-            
+            currentIds = Array.from(validIds);
+
+            if (currentIds.length > 0) {
+                // Migrate to hash without reload
+                window.history.replaceState({ tools: currentIds }, '', `/compare#tools=${currentIds.join(',')}`);
+            } else {
+                window.history.replaceState({ tools: [] }, '', '/compare');
+            }
+        } else if (window.location.hash.startsWith('#tools=')) {
+            rawIds = window.location.hash.replace('#tools=', '').split(',').map(id => id.trim()).filter(Boolean);
+
+            // Validate, deduplicate, limit to 4
+            const validIds = new Set();
+            rawIds.forEach(id => {
+                if (allTools.find(t => t.id === id) && validIds.size < 4) {
+                    validIds.add(id);
+                }
+            });
             currentIds = Array.from(validIds);
         } else {
             currentIds = [];
         }
-        
+
         render();
     }
 
     function updateURL() {
         if (currentIds.length > 0) {
-            const newUrl = `/compare/?tools=${currentIds.join(',')}`;
+            const newUrl = `/compare#tools=${currentIds.join(',')}`;
             window.history.pushState({ tools: currentIds }, '', newUrl);
         } else {
-            window.history.pushState({ tools: [] }, '', '/compare/');
+            window.history.pushState({ tools: [] }, '', '/compare');
         }
     }
 
     function render() {
         if (currentIds.length < 2) {
-            // Empty state (0 or 1 tool)
             tableContainer.style.display = 'none';
             if (copyLinkBtn) copyLinkBtn.style.display = 'none';
             if (saveCompareBtn) saveCompareBtn.style.display = 'none';
+            if (helpMeDecideBtn) helpMeDecideBtn.style.display = 'none';
             emptyState.style.display = 'block';
             if (currentIds.length === 0 && staticLinks) {
                 staticLinks.style.display = 'block';
             } else if (staticLinks) {
                 staticLinks.style.display = 'none';
             }
-            
+
             renderEmptyStateContent();
         } else {
-            // Comparison state (2 to 4 tools)
             emptyState.style.display = 'none';
             if (staticLinks) staticLinks.style.display = 'none';
             tableContainer.style.display = 'block';
-            if (copyLinkBtn) copyLinkBtn.style.display = 'inline-flex';
-            
+            if (copyLinkBtn) copyLinkBtn.style.display = 'flex';
+            if (helpMeDecideBtn) helpMeDecideBtn.style.display = 'flex';
+
             if (saveCompareBtn && window.UserState) {
-                saveCompareBtn.style.display = 'inline-flex';
+                saveCompareBtn.style.display = 'flex';
                 updateSaveCompareBtnState();
             }
-            
+
             renderComparisonTable();
         }
     }
@@ -139,227 +169,263 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (currentIds.length === 1) {
             const tool = allTools.find(t => t.id === currentIds[0]);
             emptyState.innerHTML = `
-                <h2>Compare AI Tools</h2>
-                <p>You have selected <strong>${tool.name}</strong>. Add at least one more tool to start comparing.</p>
-                <button class="btn btn-primary" onclick="window.CompareEngine.openSelector()">Add another tool</button>
-                <div style="margin-top: 1rem;">
-                    <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine.removeTool('${tool.id}')">Remove ${tool.name}</button>
+                <h1>Compare AI Tools</h1>
+                <div class="content-narrow">
+                    <p>You have selected <strong>${escapeHTML(tool.canonicalName)}</strong>. Add at least one more tool to start comparing.</p>
+                    <button class="btn btn-primary" onclick="window.CompareEngine.openSelector()">Add another tool</button>
+                    <div style="margin-top: 1rem;">
+                        <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine.removeTool('${tool.id}')">Remove ${escapeHTML(tool.canonicalName)}</button>
+                    </div>
                 </div>
             `;
         } else {
             emptyState.innerHTML = `
-                <h2>Compare AI Tools</h2>
-                <p>Choose 2–4 tools to compare their pricing, strengths, limitations and best-fit use cases side by side.</p>
-                <button class="btn btn-primary" onclick="window.CompareEngine.openSelector()">Select tools to compare</button>
+                <h1>Compare AI Tools</h1>
+                <div class="content-narrow">
+                    <p>Choose 2–4 tools to compare their pricing, strengths, limitations and best-fit use cases side by side.</p>
+                    <button class="btn btn-primary" onclick="window.CompareEngine.openSelector()">Select tools to compare</button>
+                </div>
             `;
         }
     }
 
+
+
     function renderComparisonTable() {
         const tools = currentIds.map(id => allTools.find(t => t.id === id));
-        
+
         let html = `
-            <div class="compare-table-wrapper">
-                <table class="compare-table">
+            <div class="differences-toggle-container">
+                <label>
+                    <input type="checkbox" id="toggle-differences" ${showDifferencesOnly ? 'checked' : ''}>
+                    Show differences only
+                </label>
+            </div>
+            ${renderCompatibilityWarning(tools)}
+            <div class="compare-table-wrapper" role="region" aria-label="Comparison Table" tabindex="0">
+                <table class="compare-table ${showDifferencesOnly ? 'hide-identical' : ''}" style="--tool-count: ${tools.length};">
                     <thead>
                         <tr>
-                            <th class="compare-factor-col">Factor</th>
+                            <th scope="col" class="compare-factor-col"><span class="sr-only">Factor</span></th>
                             ${tools.map(tool => renderToolHeader(tool)).join('')}
                         </tr>
                     </thead>
                     <tbody>
-                        ${renderFactorRow('Category', tools, t => `<span class="category-tag">${t.category || 'Uncategorized'}</span>`)}
-                        ${renderFactorRow('Best For', tools, t => t.bestFor ? renderList(t.bestFor) : '<span class="unknown-val">Information unavailable</span>')}
-                        ${renderFactorRow('Primary Use Cases', tools, t => t.primaryUseCases ? t.primaryUseCases.join(', ') : '<span class="unknown-val">Unknown</span>')}
-                        ${renderFactorRow('Pricing Model', tools, t => t.pricingModel || t.pricing_model || '<span class="unknown-val">Not confirmed</span>')}
-                        ${renderFactorRow('Free Tier', tools, t => {
-                            const hasFree = (t.hasFreeTier === true || t.has_free_tier === true || t.hasFreeTier === 'Yes');
-                            return hasFree ? '<span style="color: var(--color-green); font-weight: 500;">Yes</span>' : 'No';
-                        })}
-                        ${renderFactorRow('Strengths', tools, t => t.strengths ? renderList(t.strengths) : (t.pros ? renderList(t.pros) : '<span class="unknown-val">Not confirmed</span>'))}
-                        ${renderFactorRow('Limitations', tools, t => t.limitations ? renderList(t.limitations) : (t.notIdealFor ? renderList(t.notIdealFor) : (t.cons ? renderList(t.cons) : '<span class="unknown-val">Not confirmed</span>')))}
-                        ${renderFactorRow('Status', tools, t => {
-                            const isDiscontinued = t.operationalStatus === 'discontinued' || t.lifecycleStatus === 'discontinued';
-                            return isDiscontinued ? '<span class="badge badge-warning">Discontinued</span>' : '<span class="badge badge-success">Active</span>';
-                        })}
-                        ${renderFactorRow('Pricing Verified', tools, t => {
-                            if (t.pricingNeedsReview) return '<span style="font-size: 0.85rem; color: var(--color-gray-400);">Pricing information may need rechecking.</span>';
-                            if (t.lastPricingCheck) return `<span style="font-size: 0.85rem; color: var(--color-gray-300);">${t.lastPricingCheck}</span>`;
-                            return '<span class="unknown-val" style="font-size: 0.85rem;">Not verified recently</span>';
-                        })}
+                        ${renderComparisonTableRows(tools)}
                     </tbody>
                 </table>
             </div>
         `;
-        
+
         // Render Best Fit Engine summary below table
         html += renderBestFitSummary(tools);
-        
+
         tableContainer.innerHTML = html;
-        
+
+        const toggle = document.getElementById('toggle-differences');
+        if (toggle) {
+            toggle.addEventListener('change', (e) => {
+                showDifferencesOnly = e.target.checked;
+                const table = tableContainer.querySelector('.compare-table');
+                if (table) {
+                    if (showDifferencesOnly) {
+                        table.classList.add('hide-identical');
+                    } else {
+                        table.classList.remove('hide-identical');
+                    }
+                }
+            });
+        }
+
         if (window.Analytics) Analytics.track('comparison_opened', { tools: currentIds.join(',') });
     }
 
     function renderToolHeader(tool) {
         const isDiscontinued = tool.operationalStatus === 'discontinued' || tool.lifecycleStatus === 'discontinued';
-        const successorInfo = tool.successorToolId ? 
-            `<div style="font-size: 0.8rem; color: var(--color-orange); margin-bottom: 0.25rem;">Successor: <a href="/compare/?tools=${tool.successorToolId}" style="color: inherit; text-decoration: underline;">${tool.successorToolId}</a></div>` : '';
-        
+        const successorInfo = tool.successorToolId ?
+            `<div style="font-size: 0.8rem; color: var(--color-orange); margin-bottom: 0.25rem;">Successor: <a href="/compare#tools=${escapeHTML(tool.successorToolId)}" style="color: inherit; text-decoration: underline;">${escapeHTML(tool.successorToolId)}</a></div>` : '';
+
         return `
-            <th class="compare-tool-col">
+            <th scope="col" class="compare-tool-col">
                 <div class="compare-tool-header">
                     ${successorInfo}
                     <h3 style="${isDiscontinued ? 'text-decoration: line-through; color: var(--color-gray-400);' : ''}">
-                        <a href="/tool.html?id=${tool.id}" style="color: inherit; text-decoration: none;">${tool.name}</a>
+                        <a href="/tools/${escapeHTML(tool.id)}/" style="color: inherit; text-decoration: none;">${escapeHTML(tool.canonicalName)}</a>
                     </h3>
-                    <div class="compare-header-actions" style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine.removeTool('${tool.id}')">Remove</button>
-                        <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine.openSelector('${tool.id}')">Replace</button>
+                    ${tool.pricingNeedsReview ? '<span class="pricing-warning">Pricing may need rechecking</span>' : ''}
+                    <div class="compare-header-actions">
+                        <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine.removeTool('${escapeHTML(tool.id)}')">Remove</button>
+                        <button class="btn btn-secondary btn-sm" onclick="window.CompareEngine.openSelector('${escapeHTML(tool.id)}')">Replace</button>
                     </div>
                 </div>
             </th>
         `;
     }
 
-    function renderFactorRow(factorName, tools, contentFn) {
-        // Hide row if all tools are unknown for this factor (unless it's a core factor like Pricing Model)
-        const isOptional = factorName === 'Pricing Verified';
-        const allUnknown = tools.every(t => {
-            const content = contentFn(t);
-            return content.includes('unknown-val');
-        });
-        
-        if (isOptional && allUnknown) return '';
-        
-        return `
-            <tr>
-                <td class="compare-factor-col"><strong>${factorName}</strong></td>
-                ${tools.map(tool => `<td class="compare-data-col">${contentFn(tool)}</td>`).join('')}
-            </tr>
-        `;
-    }
 
-    function renderList(items) {
-        if (!items || !Array.isArray(items) || items.length === 0) return '';
-        return `<ul style="margin-left: 1.25rem; margin-bottom: 0;">${items.map(i => `<li style="margin-bottom: 0.25rem;">${i}</li>`).join('')}</ul>`;
-    }
 
     function renderBestFitSummary(tools) {
-        let summaryHtml = '<div class="best-fit-summary" style="margin-top: 2rem; padding: 1.5rem; background: var(--color-gray-800); border-radius: 8px; border: 1px solid var(--color-gray-700);">';
-        summaryHtml += '<h3 style="margin-top: 0; color: var(--c-accent); margin-bottom: 1rem;">Comparison Summary</h3>';
-        
-        // Generate rule-based insights
-        let insights = [];
-        
+        let summaryHtml = '<div class="best-fit-summary">';
+        summaryHtml += '<h3>Best-fit signals</h3>';
+        summaryHtml += '<ul class="best-fit-list">';
+
         tools.forEach(tool => {
-            let reasons = [];
-            let fitStatement = `${tool.name} may suit you better if `;
-            
+            let signals = [];
+
             if (tool.bestFor && tool.bestFor.length > 0) {
-                fitStatement += `you need a tool focused on ${tool.bestFor[0].toLowerCase()}.`;
-                reasons.push(`Its primary focus is: ${tool.bestFor[0]}.`);
-            } else if (tool.primaryUseCases && tool.primaryUseCases.length > 0) {
-                fitStatement += `your workflow involves ${tool.primaryUseCases[0].toLowerCase()}.`;
-                reasons.push(`It is heavily designed around ${tool.primaryUseCases[0]}.`);
-            } else {
-                fitStatement += `you are looking for a reliable ${tool.category} solution.`;
-                reasons.push(`It operates in the ${tool.category} category.`);
+                signals.push(`Best For: ${escapeHTML(tool.bestFor[0])}`);
             }
-            
-            const hasFree = (tool.hasFreeTier === true || tool.has_free_tier === true || tool.hasFreeTier === 'Yes');
-            if (hasFree) {
-                reasons.push(`It offers a free tier to get started.`);
+            if (tool.primaryUseCases && tool.primaryUseCases.length > 0) {
+                signals.push(`Primary Use Cases: ${escapeHTML(tool.primaryUseCases[0])}`);
             }
-            
-            insights.push({ toolName: tool.name, statement: fitStatement, reasons });
-        });
-        
-        summaryHtml += '<ul style="list-style: none; padding: 0;">';
-        insights.forEach(insight => {
+            if (tool.hasFreeTier === true) {
+                signals.push(`Free Tier: Confirmed`);
+            }
+
             summaryHtml += `
-                <li style="margin-bottom: 1.5rem;">
-                    <strong>${insight.statement}</strong>
-                    <div style="font-size: 0.9rem; color: var(--color-gray-300); margin-top: 0.25rem;">
-                        <em>Why:</em> ${insight.reasons.join(' ')}
+                <li class="best-fit-item">
+                    <strong>${escapeHTML(tool.canonicalName)}</strong>
+                    <div class="best-fit-item-why">
+                        • ${signals.join('<br>• ')}
                     </div>
                 </li>
             `;
         });
+
         summaryHtml += '</ul>';
-        
-        summaryHtml += '<p style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-gray-400);"><em>Note: There isn\'t a single winner here — these tools serve different workflows. Based on existing WhichAIPick research.</em></p>';
         summaryHtml += '</div>';
-        
+
         return summaryHtml;
     }
 
     // Modal UI logic
     let replaceTargetId = null;
-    
+    let focusableElements = [];
+    let firstFocusableElement = null;
+    let lastFocusableElement = null;
+
+    function updateModalFocusables() {
+        const focusableString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+        focusableElements = Array.from(selectorModal.querySelectorAll(focusableString));
+        firstFocusableElement = focusableElements[0];
+        lastFocusableElement = focusableElements[focusableElements.length - 1];
+    }
+
+    function trapFocus(e) {
+        const isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+        const isEscPressed = e.key === 'Escape' || e.keyCode === 27;
+
+        if (isEscPressed) {
+            closeSelector();
+            return;
+        }
+
+        if (!isTabPressed) return;
+
+        if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+            }
+        } else {
+            if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
+                e.preventDefault();
+            }
+        }
+    }
+    let lastActiveElement = null;
+
     function openSelector(replaceId = null) {
         if (!replaceId && currentIds.length >= 4) {
             showToast("You can compare up to 4 tools at once.");
             return;
         }
+        lastActiveElement = document.activeElement;
         replaceTargetId = replaceId;
         selectorInput.value = '';
         renderSearchResults('');
         selectorModal.style.display = 'flex';
+        updateModalFocusables();
         selectorInput.focus();
+
+        selectorModal.addEventListener('keydown', trapFocus);
     }
-    
+
     function closeSelector() {
         selectorModal.style.display = 'none';
         replaceTargetId = null;
+        selectorModal.removeEventListener('keydown', trapFocus);
+        if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+            try {
+                lastActiveElement.focus();
+            } catch(e) {
+                // Ignore focus restoration errors gracefully
+            }
+        }
+        lastActiveElement = null;
     }
-    
+
     function renderSearchResults(query) {
         const q = query.toLowerCase().trim();
         let results = allTools;
-        
+
         if (q) {
             results = allTools.filter(t => {
-                const nameMatch = t.name.toLowerCase().includes(q);
-                const prevMatch = t.previousName && t.previousName.toLowerCase().includes(q);
+                const nameMatch = t.canonicalName.toLowerCase().includes(q);
                 const aliasMatch = t.aliases && t.aliases.some(a => a.toLowerCase().includes(q));
-                return nameMatch || prevMatch || aliasMatch;
+                const catMatch = t.primaryCategory && t.primaryCategory.toLowerCase().includes(q);
+                const useCaseMatch = t.primaryUseCases && t.primaryUseCases.some(u => u.toLowerCase().includes(q));
+                return nameMatch || aliasMatch || catMatch || useCaseMatch;
+            });
+
+            // Simple relevance sort: exact name > name prefix > name contains > alias > category/usecase
+            results.sort((a, b) => {
+                const aName = a.canonicalName.toLowerCase();
+                const bName = b.canonicalName.toLowerCase();
+                if (aName === q && bName !== q) return -1;
+                if (bName === q && aName !== q) return 1;
+                if (aName.startsWith(q) && !bName.startsWith(q)) return -1;
+                if (bName.startsWith(q) && !aName.startsWith(q)) return 1;
+
+                const aContains = aName.includes(q);
+                const bContains = bName.includes(q);
+                if (aContains && !bContains) return -1;
+                if (bContains && !aContains) return 1;
+
+                return 0;
             });
         }
-        
+
         // Filter out already selected tools
         results = results.filter(t => !currentIds.includes(t.id) && t.id !== replaceTargetId);
-        
-        // Sort active tools first, discontinued at bottom
-        results.sort((a, b) => {
-            const aDis = (a.operationalStatus === 'discontinued' || a.lifecycleStatus === 'discontinued') ? 1 : 0;
-            const bDis = (b.operationalStatus === 'discontinued' || b.lifecycleStatus === 'discontinued') ? 1 : 0;
-            return aDis - bDis;
-        });
-        
+
         // Show top 20
         results = results.slice(0, 20);
-        
+
         if (results.length === 0) {
             selectorResults.innerHTML = '<p style="padding: 1rem; text-align: center; color: var(--color-gray-400);">No tools found matching your search.</p>';
+            updateModalFocusables();
             return;
         }
-        
+
         selectorResults.innerHTML = results.map(t => {
-            const isDiscontinued = t.operationalStatus === 'discontinued' || t.lifecycleStatus === 'discontinued';
-            const badge = isDiscontinued ? ' <span class="badge badge-warning" style="font-size: 0.7rem;">Discontinued</span>' : '';
+            const useCases = (t.primaryUseCases && t.primaryUseCases.length > 0) ? t.primaryUseCases[0] : '';
             return `
-                <button class="selector-result-btn" onclick="window.CompareEngine.selectTool('${t.id}')">
-                    <span style="font-weight: 500;">${t.name}</span>${badge}
-                    <span style="display: block; font-size: 0.8rem; color: var(--color-gray-400);">${t.category}</span>
+                <button class="selector-result-btn" onclick="window.CompareEngine.selectTool('${escapeHTML(t.id)}')">
+                    <div class="selector-result-name">${escapeHTML(t.canonicalName)}</div>
+                    <div class="selector-result-meta">${escapeHTML(t.primaryCategory)}${useCases ? ` • ${escapeHTML(useCases)}` : ''}</div>
                 </button>
             `;
         }).join('');
+
+        updateModalFocusables();
     }
-    
+
     selectorInput.addEventListener('input', (e) => {
         renderSearchResults(e.target.value);
     });
-    
+
     // Close modal on outside click
     selectorModal.addEventListener('click', (e) => {
         if (e.target === selectorModal) closeSelector();
@@ -424,7 +490,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
     }
-    
+
     // Toast helper
     function showToast(message) {
         if (window.Shortlist && typeof window.Shortlist.showToast === 'function') {
@@ -435,8 +501,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Handle browser Back/Forward navigation
-    window.addEventListener('popstate', (e) => {
+    window.addEventListener('hashchange', () => {
         initFromURL();
+    });
+
+    window.addEventListener('popstate', (e) => {
+        if (!window.location.hash) {
+            initFromURL();
+        }
     });
 
     // Boot

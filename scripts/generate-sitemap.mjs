@@ -39,32 +39,32 @@ const STATIC_ROUTES = [
     { loc: '/',                         priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
     { loc: '/tools/',                   priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
 
-    { loc: '/academy.html',             priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/use-cases.html',           priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/compare.html',             priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/blog.html',                priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/make-money.html',          priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+    { loc: '/academy',             priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+    { loc: '/use-cases',           priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+    { loc: '/compare',             priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+    { loc: '/blog',                priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+    { loc: '/make-money',          priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
     { loc: '/start-here/',              priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/newsletter.html',          priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
-    { loc: '/submit-tool.html',         priority: 0.7,                freq: CHANGEFREQ.MONTHLY },
+    { loc: '/newsletter',          priority: PRIORITY.HUBS,      freq: CHANGEFREQ.WEEKLY },
+    { loc: '/submit-tool',         priority: 0.7,                freq: CHANGEFREQ.MONTHLY },
 
     // Authority
-    { loc: '/about.html',               priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
-    { loc: '/review-methodology.html',  priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
-    { loc: '/editorial-policy.html',    priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
-    { loc: '/affiliate-disclosure.html',priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
-    { loc: '/pricing-accuracy-policy.html', priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
-    { loc: '/corrections-policy.html',  priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
-    { loc: '/data-transparency.html',   priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/about',               priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/review-methodology',  priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/editorial-policy',    priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/affiliate-disclosure',priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/pricing-accuracy-policy', priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/corrections-policy',  priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
+    { loc: '/data-transparency',   priority: PRIORITY.AUTHORITY, freq: CHANGEFREQ.MONTHLY },
 
     // Legal
-    { loc: '/contact.html',             priority: 0.5,                freq: CHANGEFREQ.MONTHLY },
-    { loc: '/disclosure.html',          priority: 0.5,                freq: CHANGEFREQ.MONTHLY },
-    { loc: '/privacy.html',             priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
-    { loc: '/terms.html',               priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
-    { loc: '/cookies.html',             priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
-    { loc: '/accessibility.html',       priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
-    { loc: '/report-misuse.html',       priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
+    { loc: '/contact',             priority: 0.5,                freq: CHANGEFREQ.MONTHLY },
+    { loc: '/disclosure',          priority: 0.5,                freq: CHANGEFREQ.MONTHLY },
+    { loc: '/privacy',             priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
+    { loc: '/terms',               priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
+    { loc: '/cookies',             priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
+    { loc: '/accessibility',       priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
+    { loc: '/report-misuse',       priority: PRIORITY.LEGAL,     freq: CHANGEFREQ.MONTHLY },
 ];
 
 // ── Content directories (existing sub-pages) ──────────────────────────────────
@@ -136,24 +136,13 @@ function generateSitemap() {
     urls = [...urls, ...altPages];
     console.log(`  Added ${altPages.length} alternatives pages`);
 
-    // Phase 6: compare pages — exclude noindex redirect pages
-    const compareDir = path.join(PROJECT_ROOT, 'compare');
-    const comparePages = fs.existsSync(compareDir)
-        ? fs.readdirSync(compareDir, { withFileTypes: true })
-            .filter(e => e.isDirectory())
-            .filter(e => {
-                const indexPath = path.join(compareDir, e.name, 'index.html');
-                if (!fs.existsSync(indexPath)) return false;
-                const html = fs.readFileSync(indexPath, 'utf8');
-                // Skip pages explicitly marked noindex
-                return !html.includes('content="noindex"');
-            })
-            .map(e => ({
-                loc: `/compare/${e.name}/`,
-                priority: PRIORITY.HUBS,
-                freq: CHANGEFREQ.WEEKLY
-            }))
-        : [];
+    // Phase 6: compare pages - only use approved canonical routes
+    const publishManifest = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'data', 'seo', 'comparisons-v2.publish.json'), 'utf8'));
+    const comparePages = publishManifest.approvedSlugs.map(slug => ({
+        loc: `/compare/${slug}/`,
+        priority: PRIORITY.HUBS,
+        freq: CHANGEFREQ.WEEKLY
+    }));
     urls = [...urls, ...comparePages];
     console.log(`  Added ${comparePages.length} compare pages`);
 
