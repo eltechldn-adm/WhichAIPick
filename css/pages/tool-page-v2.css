@@ -88,21 +88,56 @@ a.tool-v2-btn-primary:hover {
 a.tool-v2-btn-secondary,
 a.tool-v2-btn-secondary:visited,
 a.tool-v2-btn-secondary:active,
-a.tool-v2-btn-secondary:focus {
+a.tool-v2-btn-secondary:focus,
+button.tool-v2-btn-secondary,
+button.tool-v2-btn-secondary:active,
+button.tool-v2-btn-secondary:focus {
   background-color: transparent;
   color: #ffffff;
   border: 1px solid #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 1.5;
   text-decoration: none;
   outline-offset: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
-a.tool-v2-btn-secondary:hover {
+a.tool-v2-btn-secondary:hover,
+button.tool-v2-btn-secondary:hover {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+}
+
+a.tool-v2-btn-secondary:focus-visible,
+button.tool-v2-btn-secondary:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+button.tool-v2-btn-shortlist svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+button.tool-v2-btn-shortlist.saved {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+button.tool-v2-btn-shortlist.saved:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Two column layout */
