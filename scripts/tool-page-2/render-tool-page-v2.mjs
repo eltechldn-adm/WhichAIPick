@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 const PRODUCTION_REQUIRED_OPTIONS = ['canonicalUrl', 'robots', 'metaTitle', 'metaDescription', 'domain', 'headerHtml', 'footerHtml', 'consentHeadHtml'];
 
 /**
@@ -132,6 +135,49 @@ export function renderToolPageV2(viewModel, options = null) {
     const rawComparisonSummary = editorial?.comparisonSummary?.value ?? (typeof editorial?.comparisonSummary === 'string' ? editorial.comparisonSummary : null);
     const comparisonSummaryHtml = formatParagraphs(rawComparisonSummary);
 
+    // Avatar: Safe First-Party Logo or Initials
+    const getInitials = (toolName) => {
+        if (!toolName || typeof toolName !== 'string') return '??';
+        const trimmed = toolName.trim();
+        if (!trimmed) return '??';
+        const words = trimmed.split(/\s+/).filter(Boolean);
+        if (words.length === 0) return '??';
+        const letters = words.slice(0, 2).map(w => w[0] ? w[0].toUpperCase() : '').join('');
+        return letters || '??';
+    };
+
+    let avatarHtml = '';
+    const rawLogoUrl = identity.logoUrl;
+    let safeLocalLogoPath = null;
+
+    if (rawLogoUrl && typeof rawLogoUrl === 'string') {
+        const trimmedUrl = rawLogoUrl.trim();
+        const isExternalOrDangerous = /^(https?:|\/\/|javascript:|data:|vbscript:|file:)/i.test(trimmedUrl);
+        const isRelativeRoot = trimmedUrl.startsWith('/') && !trimmedUrl.startsWith('//');
+        const hasSafeChars = /^\/[a-zA-Z0-9_\-./]+$/.test(trimmedUrl);
+        const hasNoTraversal = !trimmedUrl.includes('..');
+        const hasImageExt = /\.(png|svg|webp|jpg|jpeg|ico)$/i.test(trimmedUrl);
+
+        if (!isExternalOrDangerous && isRelativeRoot && hasSafeChars && hasNoTraversal && hasImageExt) {
+            try {
+                const rootDir = options?.rootDir || process.cwd();
+                const resolvedPath = path.resolve(rootDir, trimmedUrl.replace(/^\//, ''));
+                if (resolvedPath.startsWith(path.resolve(rootDir)) && fs.existsSync(resolvedPath)) {
+                    safeLocalLogoPath = trimmedUrl;
+                }
+            } catch (e) {
+                safeLocalLogoPath = null;
+            }
+        }
+    }
+
+    if (safeLocalLogoPath) {
+        avatarHtml = `<img class="tool-v2-avatar tool-v2-avatar-img" src="${escapeHtml(safeLocalLogoPath)}" alt="${escapeHtml(identity.name || 'Tool')} logo" width="64" height="64" loading="lazy" decoding="async">`;
+    } else {
+        const initials = getInitials(identity.name);
+        avatarHtml = `<div class="tool-v2-avatar tool-v2-avatar-initials" aria-hidden="true">${escapeHtml(initials)}</div>`;
+    }
+
     const schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -217,7 +263,10 @@ ${bodyOpen}
 
             <div class="tool-v2-hero">
                 ${identity.category ? `<span class="tool-v2-category">${escapeHtml(identity.category)}</span>` : ''}
-                <h1>${escapeHtml(identity.name)}</h1>
+                <div class="tool-v2-hero-header">
+                    ${avatarHtml}
+                    <h1>${escapeHtml(identity.name)}</h1>
+                </div>
                 ${summary.shortDescription ? `<p class="tool-v2-description">${escapeHtml(summary.shortDescription)}</p>` : ''}
                 <div class="tool-v2-cta-group">
                     ${identity.websiteUrl ? `<a href="${escapeHtml(commercial.affiliateUrl || identity.websiteUrl)}" target="_blank" rel="${commercial.hasAffiliateRelationship ? 'sponsored ' : ''}noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a>` : ''}

@@ -10,7 +10,8 @@ export function buildToolPageViewModel(tool, options = {}) {
     name,
     aliases: Array.isArray(tool.aliases) ? [...tool.aliases] : [],
     category: tool.primaryCategory,
-    websiteUrl: tool.website_url || tool.websiteUrl || null
+    websiteUrl: tool.website_url || tool.websiteUrl || null,
+    logoUrl: tool.logo_url || tool.logoUrl || null
   };
 
   // Classification
