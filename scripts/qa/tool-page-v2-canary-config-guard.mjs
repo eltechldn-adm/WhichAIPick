@@ -36,9 +36,25 @@ check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, { expectedCount
 check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, { expectedCount: 2, approvedToolIds: ['aider', 'Bad ID!'] }), 'malformed ID'));
 check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, { expectedCount: 2, approvedToolIds: ['aider', 7] }), 'non-string ID'));
 check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, null), 'null manifest'));
-const many = Array.from({ length: MAX_CANARY_TOOLS + 1 }, (_, i) => `tool-${i}`);
-const manyTools = [...tools, ...many.map(id => ({ id, directoryEligible: true }))];
-check(() => throwsCanary(() => resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: many.length, approvedToolIds: many }) }), 'cap prevents full-catalogue rollout'));
+const many15 = Array.from({ length: 15 }, (_, i) => `tool-${i}`);
+const many16 = Array.from({ length: 16 }, (_, i) => `tool-${i}`);
+const many17 = Array.from({ length: 17 }, (_, i) => `tool-${i}`);
+const manyTools = [...tools, ...many17.map(id => ({ id, directoryEligible: true }))];
+check(() => assert.strictEqual(MAX_CANARY_TOOLS, 16, 'MAX_CANARY_TOOLS is exactly 16 for Wave A'));
+check(() => assert.deepStrictEqual(
+    resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 15, approvedToolIds: many15 }) }),
+    many15,
+    '15 valid IDs accepted'
+));
+check(() => assert.deepStrictEqual(
+    resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 16, approvedToolIds: many16 }) }),
+    many16,
+    '16 valid IDs accepted (exact Wave A cap)'
+));
+check(() => throwsCanary(
+    () => resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 17, approvedToolIds: many17 }) }),
+    '17 IDs rejected (cap prevents exceeding MAX_CANARY_TOOLS=16)'
+));
 check(() => throwsCanary(() => resolveCanarySelection({ root: '/nonexistent-root', tools, env: { TOOL_PAGE_V2_CANARY: '1' } }), 'missing manifest file'));
 
 console.log(`[CANARY CONFIG GUARD PASS] ${checks} checks`);
