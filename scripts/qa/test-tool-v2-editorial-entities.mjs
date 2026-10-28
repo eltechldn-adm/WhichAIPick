@@ -27,14 +27,22 @@ console.log('======================================================\n');
 
 // 0. GIT ANCESTRY CHECK
 console.log('--- 0. GIT ANCESTRY CHECK ---');
+function isCommitAncestor(commitSha) {
+    try {
+        execSync(`git merge-base --is-ancestor ${commitSha} HEAD`, { stdio: 'ignore' });
+        return true;
+    } catch {
+        return false;
+    }
+}
 try {
-    const gitLog = execSync('git log -n 6 --oneline', { encoding: 'utf-8' });
-    console.log('Commit history:\n' + gitLog.trim().split('\n').map(l => '    ' + l).join('\n'));
-    assert(gitLog.includes('f953042b'), 'Stage 7E.3B.3 commit f953042b is an ancestor');
-    assert(gitLog.includes('048ff60c'), 'Stage 7E.3B.2 commit 048ff60c is an ancestor');
-    assert(gitLog.includes('9d54edf3'), 'Stage 7E.3B.1 commit 9d54edf3 is an ancestor');
-    assert(gitLog.includes('25a6c494'), 'Stage 7E.3A commit 25a6c494 is an ancestor');
-    assert(gitLog.includes('5a3befad'), 'Production baseline 5a3befad is an ancestor');
+    const headSha = execSync('git rev-parse --short HEAD', { encoding: 'utf-8' }).trim();
+    console.log(`Verifying ancestry against HEAD (${headSha}) via git merge-base --is-ancestor...`);
+    assert(isCommitAncestor('f953042ba0e76228adc773bdd1eebb3db6d55201'), 'Stage 7E.3B.3 commit f953042b is an ancestor');
+    assert(isCommitAncestor('048ff60c915fe4c1fd777fdc31c7747d0189a2d2'), 'Stage 7E.3B.2 commit 048ff60c is an ancestor');
+    assert(isCommitAncestor('9d54edf35a7f71a2189d62167968e93d0ba09585'), 'Stage 7E.3B.1 commit 9d54edf3 is an ancestor');
+    assert(isCommitAncestor('25a6c4940ce8a082799a02e3d6aeb127b6083fc4'), 'Stage 7E.3A commit 25a6c494 is an ancestor');
+    assert(isCommitAncestor('5a3befadcac9f95f5b95ba756910266a3f223ac3'), 'Production baseline 5a3befad is an ancestor');
 } catch (e) {
     assert(false, 'Git ancestry verification failed: ' + e.message);
 }

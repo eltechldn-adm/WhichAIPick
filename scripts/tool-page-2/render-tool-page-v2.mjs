@@ -35,6 +35,27 @@ export function renderToolPageV2(viewModel, options = null) {
             .replace(/'/g, "&#039;");
     };
 
+    const sanitizeExternalHttpUrl = (rawUrl) => {
+        if (!rawUrl || typeof rawUrl !== 'string') return null;
+        const trimmed = rawUrl.trim();
+        if (!/^https?:\/\//i.test(trimmed)) return null;
+        try {
+            const parsed = new URL(trimmed);
+            if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return null;
+            if (!parsed.hostname) return null;
+            return trimmed;
+        } catch {
+            return null;
+        }
+    };
+
+    const serializeSafeJsonLd = (data) => JSON.stringify(data)
+        .replace(/</g, '\\u003c')
+        .replace(/>/g, '\\u003e')
+        .replace(/&/g, '\\u0026')
+        .replace(/\u2028/g, '\\u2028')
+        .replace(/\u2029/g, '\\u2029');
+
     const NAMED_ENTITIES = {
         'quot': '"',
         'apos': "'",
@@ -208,18 +229,19 @@ export function renderToolPageV2(viewModel, options = null) {
         avatarHtml = `<div class="tool-v2-avatar tool-v2-avatar-initials" aria-hidden="true">${escapeHtml(initials)}</div>`;
     }
 
+    const safeSchemaUrl = sanitizeExternalHttpUrl(schemaSafe?.url);
     const schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": schemaSafe.name,
     };
-    if (schemaSafe.url) schema.url = schemaSafe.url;
+    if (safeSchemaUrl) schema.url = safeSchemaUrl;
     if (schemaSafe.applicationCategory) schema.applicationCategory = schemaSafe.applicationCategory;
     if (schemaSafe.operatingSystems && schemaSafe.operatingSystems.length > 0) schema.operatingSystem = schemaSafe.operatingSystems.join(', ');
     if (schemaSafe.descriptionCandidate) schema.description = schemaSafe.descriptionCandidate;
     schema.publisher = { "@type": "Organization", "name": "WhichAIPick" };
 
-    const schemaString = JSON.stringify(schema);
+    const schemaString = serializeSafeJsonLd(schema);
 
     const previewHead = `    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -275,7 +297,12 @@ ${options.footerHtml}
 </body>`;
     }
 
-    const affiliateDisclosure = (production && commercial.hasAffiliateRelationship)
+    const safeAffiliateUrl = sanitizeExternalHttpUrl(commercial?.affiliateUrl);
+    const safeWebsiteUrl = sanitizeExternalHttpUrl(identity?.websiteUrl);
+    const safeOutboundUrl = safeAffiliateUrl || safeWebsiteUrl;
+    const hasSafeAffiliateRelationship = Boolean(safeAffiliateUrl && commercial?.hasAffiliateRelationship);
+
+    const affiliateDisclosure = (production && hasSafeAffiliateRelationship)
         ? `<p class="tool-v2-affiliate-note"><em>Disclosure: This page may contain affiliate links. If you sign up through our link, we may earn a commission at no extra cost to you. See our <a href="/disclosure.html">Affiliate Disclosure</a>.</em></p>`
         : '';
 
@@ -299,8 +326,8 @@ ${bodyOpen}
                 </div>
                 ${summary.shortDescription ? `<p class="tool-v2-description">${escapeHtml(summary.shortDescription)}</p>` : ''}
                 <div class="tool-v2-cta-group">
-                    ${identity.websiteUrl ? `<a href="${escapeHtml(commercial.affiliateUrl || identity.websiteUrl)}" target="_blank" rel="${commercial.hasAffiliateRelationship ? 'sponsored ' : ''}noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a>` : ''}
-                    <a href="/compare#tools=${escapeHtml(identity.id)}" class="tool-v2-btn-secondary">Compare ${escapeHtml(identity.name)}</a>
+                    ${safeOutboundUrl ? `<a href="${escapeHtml(safeOutboundUrl)}" target="_blank" rel="${hasSafeAffiliateRelationship ? 'sponsored ' : ''}noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a>` : ''}
+                    <a href="/compare#tools=${escapeHtml(encodeURIComponent(String(identity.id || '')))}" class="tool-v2-btn-secondary">Compare ${escapeHtml(identity.name)}</a>
                     <button type="button" class="tool-v2-btn-secondary tool-v2-btn-shortlist shortlist-toggle-btn" data-tool-id="${escapeHtml(identity.id)}" aria-label="Save ${escapeHtml(identity.name)} to Shortlist">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Save
                     </button>
