@@ -65,6 +65,8 @@ check('clearscope workbook startingPlan is Essentials', clearWb.startingPlan ===
 check('clearscope tools.json startingPrice is 129', clearTool.startingPrice === 129 && clearTool.priceCurrency === 'USD' && clearTool.billingPeriod === 'month' && clearTool.startingPlan === 'Essentials');
 check('clearscope comparison-index startingPrice is 129', clearComp.startingPrice === 129 && clearComp.priceCurrency === 'USD');
 check('clearscope pricing_overview matches $129 Essentials and 14-day trial', clearTool.pricing_overview.includes('$129 per month') && clearTool.pricing_overview.includes('14-day free trial') && clearTool.pricing_overview.includes('unlimited user seats'));
+check('clearscope workbook trialDays is 14', clearWb.trialDays === 14);
+check('clearscope tools.json trialDays is 14', clearTool.trialDays === 14);
 check('clearscope E0059 reviewedAt updated to 2026-10-29', ledgerMap.get('E0059')?.reviewedAt === '2026-10-29');
 
 // 3. Buffer AI Assistant Verification
