@@ -113,7 +113,7 @@ for (const banned of [
     check(`readai sensationalist/broken phrase "${banned}" removed`, !readAllText.includes(banned));
 }
 
-// 6. Cursor Verification (Stage 7G.1 Pricing Remediation & Invariants)
+// 6. Cursor Verification (Stage 7G.2 Pricing Accuracy Remediation & Invariants)
 const cursorWb = wbMap.get('cursor');
 const cursorTool = toolsMap.get('cursor');
 const cursorComp = compMap.get('cursor');
@@ -126,14 +126,28 @@ check('cursor workbook priceCurrency is USD', cursorWb.priceCurrency === 'USD');
 check('cursor workbook billingPeriod is month', cursorWb.billingPeriod === 'month');
 check('cursor tools.json startingPrice is 8 and startingPlan is Plus', cursorTool.startingPrice === 8 && cursorTool.startingPlan === 'Plus' && cursorTool.priceCurrency === 'USD' && cursorTool.billingPeriod === 'month');
 check('cursor comparison-index startingPrice is 8', cursorComp.startingPrice === 8 && cursorComp.priceCurrency === 'USD');
-check('cursor pricing_overview distinguishes Plus, Premium, overages, and legacy Pro',
+check('cursor pricing_overview distinguishes Plus, Premium, separate third-party billing, and legacy Pro',
     cursorTool.pricing_overview.includes('Plus plan at $8 per month') &&
     cursorTool.pricing_overview.includes('Premium plan at $30 per month') &&
+    cursorTool.pricing_overview.includes('Third-party frontier models are not included in subscription allowances') &&
     cursorTool.pricing_overview.includes('API list price') &&
+    cursorTool.pricing_overview.includes('prepaid credit') &&
     cursorTool.pricing_overview.includes('legacy Pro plan ($20 per month)'));
-check('cursor pricingEvidenceNotes documents The X Subscription and legacy tier',
+check('cursor pricing_overview does NOT claim included third-party model quota',
+    !cursorTool.pricing_overview.includes('third-party model quota') &&
+    !cursorTool.pricing_overview.includes('frontier model quota'));
+check('cursor pricing_overview does NOT claim a 14-day trial',
+    !cursorTool.pricing_overview.includes('14-day') &&
+    !cursorTool.pricing_overview.includes('trial of advanced'));
+check('cursor freeTierScope does NOT claim a 14-day trial',
+    !cursorTool.freeTierScope.includes('14-day') &&
+    !cursorTool.freeTierScope.includes('trial'));
+check('cursor hasFreeTrial is null (unconfirmed for new accounts)', cursorTool.hasFreeTrial === null);
+check('cursor trialDays is null', cursorTool.trialDays === null);
+check('cursor pricingEvidenceNotes documents The X Subscription, separate third-party billing, and legacy tier',
     cursorTool.pricingEvidenceNotes.includes('Plus is USD 8/month') &&
     cursorTool.pricingEvidenceNotes.includes('Premium is USD 30/month') &&
+    cursorTool.pricingEvidenceNotes.includes('third-party models are not included in subscription allowances') &&
     cursorTool.pricingEvidenceNotes.includes('Legacy Pro plan is USD 20/month'));
 check('cursor E0086 reviewedAt updated to 2026-10-29', ledgerMap.get('E0086')?.reviewedAt === '2026-10-29');
 check('cursor E0086 finding mentions The X Subscription and legacy tier', ledgerMap.get('E0086')?.finding?.includes('The X Subscription'));

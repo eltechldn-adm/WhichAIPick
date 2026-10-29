@@ -771,7 +771,7 @@
     "sourceURL": "https://cursor.com/pricing",
     "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official pricing reviewed on 29 October 2026 across https://cursor.com/pricing, https://cursor.com/docs/models-and-pricing, and https://cursor.com/docs/account/pricing/legacy-cursor-plans. Confirmed The X Subscription: Free tier ($0/mo), Plus tier ($8/mo, excludes third-party models), Premium tier ($30/mo, includes third-party model quota with overage at API list price), and legacy Pro tier ($20/mo grandfathered)."
+    "finding": "Official pricing reviewed on 29 October 2026 across https://cursor.com/pricing, https://cursor.com/docs/models-and-pricing, and https://cursor.com/docs/account/pricing/legacy-cursor-plans. Confirmed The X Subscription: Free tier ($0/mo, limited Agent/Chat requests; general 14-day trial unconfirmed for new signups), Plus tier ($8/mo, base Cursor/Grok models; excludes third-party models), Premium tier ($30/mo, includes 4x usage of the shared Grok/Cursor model pool; third-party models are not included in subscription allowances and are billed separately at API list price via prepaid credit), and legacy Pro tier ($20/mo grandfathered)."
   },
   {
     "evidenceId": "E0087",

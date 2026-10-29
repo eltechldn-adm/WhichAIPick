@@ -69096,7 +69096,7 @@
           "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
         "checkedAt": "2026-10-29",
-        "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
+        "note": "Free plan provides limited Agent and Chat usage with basic request allowances; general 14-day trial unconfirmed for new accounts."
       },
       "capabilityScope": {
         "method": "official_source_review",
@@ -69127,8 +69127,8 @@
       "useCases": "derived",
       "lifecycle": "existing_editorial"
     },
-    "evidenceNotes": "Official product and pricing sources reviewed on 29 October 2026 (https://cursor.com/pricing, https://cursor.com/docs/models-and-pricing, https://cursor.com/docs/account/pricing/legacy-cursor-plans). Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial.",
-    "pricingEvidenceNotes": "Free tier is $0/month with limited usage. Under The X Subscription, Plus is USD 8/month (excludes third-party models), and Premium is USD 30/month (includes third-party model quota; usage beyond quota billed separately at API list price). Legacy Pro plan is USD 20/month for grandfathered accounts. Taxes are additional.",
+    "evidenceNotes": "Official product and pricing sources reviewed on 29 October 2026 (https://cursor.com/pricing, https://cursor.com/docs/models-and-pricing, https://cursor.com/docs/account/pricing/legacy-cursor-plans). Scope is the directory summary and stated fields; unconfirmed general 14-day trial removed; third-party models clarified as billed separately at API list price on Premium tier and above.",
+    "pricingEvidenceNotes": "Free tier is $0/month with limited usage. Under The X Subscription, Plus is USD 8/month (includes base Cursor/Grok models; excludes third-party models), and Premium is USD 30/month (includes 4x usage of the shared Grok/Cursor model pool; third-party models are not included in subscription allowances and are billed separately at API list price via prepaid credit). Legacy Pro plan is USD 20/month for grandfathered accounts. Taxes are additional.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -69161,7 +69161,7 @@
     "billingPeriod": "month",
     "startingPlan": "Plus",
     "trialDays": null,
-    "freeTierScope": "Free tier provides basic request allowances and a 14-day Pro trial.",
+    "freeTierScope": "Free plan provides limited Agent and Chat usage with basic request allowances.",
     "capabilityScope": "API refers to Cloud Agents. Self-hosted workers run tools locally, but inference and planning remain in Cursor cloud; selfHosted=false describes the whole service. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=yes; deployment=cloud,local_worker. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
     "licenseType": "unknown",
     "licenseName": null,
@@ -69248,7 +69248,7 @@
       "AI suggestions still require developer review",
       "Distinct from GitHub Copilot — switching may disrupt team preference"
     ],
-    "pricing_overview": "<p>Cursor offers a free tier with basic request allowances and a 14-day trial of advanced features. Paid subscriptions are structured under The X Subscription: the Plus plan at $8 per month includes Cursor's native Composer and Tab models (excluding third-party models), while the Premium plan at $30 per month provides access to third-party frontier models with usage beyond quota billed separately at API list price. The legacy Pro plan ($20 per month) remains active for grandfathered accounts. Business plans add centralized billing, privacy controls, and team management.</p>",
+    "pricing_overview": "<p>Cursor offers a Free plan ($0 per month) with limited Agent and Chat usage. Paid subscriptions are structured under The X Subscription: the Plus plan at $8 per month includes base usage for Cursor's native Composer and Grok models (excluding third-party models), while the Premium plan at $30 per month expands usage of the shared Grok and Cursor model pool. Third-party frontier models are not included in subscription allowances; on Premium and above, third-party models are accessible at published API list price, billed separately through prepaid credit balances. The legacy Pro plan ($20 per month) remains active for grandfathered accounts. Business and Enterprise plans add centralized billing, admin analytics, and team management.</p>",
     "comparison_summary": "<p>Cursor's primary competitor is GitHub Copilot, which operates as a VS Code extension rather than a standalone editor. Cursor offers deeper codebase awareness and multi-file editing, while Copilot benefits from GitHub integration. Replit AI targets a different audience (beginners and cloud-based development). For developers who want to stay within VS Code specifically, Copilot with Copilot Chat is the more compatible choice.</p>",
     "legacyPrimaryUseCases": [
       "agent-assisted code editing",
