@@ -85,6 +85,10 @@ check('brisk-teaching workbook and tools.json long_description match', briskWb.l
 check('brisk-teaching grammar defect "operational overwhelming burden" removed', !briskTool.long_description.includes('operational overwhelming burden'));
 check('brisk-teaching grammar defect "an highly frictionless" removed', !briskTool.long_description.includes('an highly frictionless'));
 check('brisk-teaching grammar defect "an uploaded specific rubric" removed', !briskTool.how_it_works.includes('an uploaded specific rubric'));
+const briskEditorialText = JSON.stringify([briskTool.long_description, briskTool.how_it_works, briskTool.pros, briskTool.cons, briskTool.pricing_overview, briskTool.comparison_summary]);
+check('brisk-teaching does not describe FERPA as an educational standard', !/educational standards? such as FERPA/i.test(briskEditorialText));
+check('brisk-teaching FERPA wording attributes compliance to the vendor statement', briskTool.pros.includes('Publishes student data privacy commitments and states that it complies with student privacy laws such as FERPA'));
+check('brisk-teaching does not claim certified FERPA compliance', !/FERPA[- ]certified|certified (as )?FERPA/i.test(briskEditorialText));
 
 // 5. Read.ai Verification
 const readWb = wbMap.get('readai');
