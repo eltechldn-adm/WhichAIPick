@@ -113,10 +113,30 @@ for (const banned of [
     check(`readai sensationalist/broken phrase "${banned}" removed`, !readAllText.includes(banned));
 }
 
-// 6. Cursor Verification (Unchanged & Affiliate Preserved)
+// 6. Cursor Verification (Stage 7G.1 Pricing Remediation & Invariants)
+const cursorWb = wbMap.get('cursor');
 const cursorTool = toolsMap.get('cursor');
+const cursorComp = compMap.get('cursor');
+
 check('cursor affiliate_url preserved', cursorTool.affiliate_url === 'https://cursor.com/?ref=whichaipick');
-check('cursor structured pricing left unchanged pending bundled X/Grok resolution', cursorTool.startingPrice === 20 && cursorTool.startingPlan === 'Pro' && cursorTool.priceCurrency === 'USD');
+check('cursor primaryCategory preserved as Development', cursorTool.primaryCategory === 'Development');
+check('cursor workbook startingPrice is 8', cursorWb.startingPrice === 8);
+check('cursor workbook startingPlan is Plus', cursorWb.startingPlan === 'Plus');
+check('cursor workbook priceCurrency is USD', cursorWb.priceCurrency === 'USD');
+check('cursor workbook billingPeriod is month', cursorWb.billingPeriod === 'month');
+check('cursor tools.json startingPrice is 8 and startingPlan is Plus', cursorTool.startingPrice === 8 && cursorTool.startingPlan === 'Plus' && cursorTool.priceCurrency === 'USD' && cursorTool.billingPeriod === 'month');
+check('cursor comparison-index startingPrice is 8', cursorComp.startingPrice === 8 && cursorComp.priceCurrency === 'USD');
+check('cursor pricing_overview distinguishes Plus, Premium, overages, and legacy Pro',
+    cursorTool.pricing_overview.includes('Plus plan at $8 per month') &&
+    cursorTool.pricing_overview.includes('Premium plan at $30 per month') &&
+    cursorTool.pricing_overview.includes('API list price') &&
+    cursorTool.pricing_overview.includes('legacy Pro plan ($20 per month)'));
+check('cursor pricingEvidenceNotes documents The X Subscription and legacy tier',
+    cursorTool.pricingEvidenceNotes.includes('Plus is USD 8/month') &&
+    cursorTool.pricingEvidenceNotes.includes('Premium is USD 30/month') &&
+    cursorTool.pricingEvidenceNotes.includes('Legacy Pro plan is USD 20/month'));
+check('cursor E0086 reviewedAt updated to 2026-10-29', ledgerMap.get('E0086')?.reviewedAt === '2026-10-29');
+check('cursor E0086 finding mentions The X Subscription and legacy tier', ledgerMap.get('E0086')?.finding?.includes('The X Subscription'));
 
 // 7. In-Memory Production-Equivalent V2 Rendering Verification for all 5 Wave B Tools
 const header = `<div id="site-header">\n${fs.readFileSync(path.join(ROOT, 'partials', 'header.html'), 'utf8').trim()}\n</div>`;

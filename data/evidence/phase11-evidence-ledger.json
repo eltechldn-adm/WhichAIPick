@@ -769,9 +769,9 @@
     "id": "cursor",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://cursor.com/pricing",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official product and pricing sources reviewed on 22 September 2026. Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial."
+    "finding": "Official pricing reviewed on 29 October 2026 across https://cursor.com/pricing, https://cursor.com/docs/models-and-pricing, and https://cursor.com/docs/account/pricing/legacy-cursor-plans. Confirmed The X Subscription: Free tier ($0/mo), Plus tier ($8/mo, excludes third-party models), Premium tier ($30/mo, includes third-party model quota with overage at API list price), and legacy Pro tier ($20/mo grandfathered)."
   },
   {
     "evidenceId": "E0087",

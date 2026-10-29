@@ -68754,6 +68754,8 @@
     "verificationSources": [
       "https://cursor.com/",
       "https://cursor.com/pricing",
+      "https://cursor.com/docs/models-and-pricing",
+      "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
       "https://cursor.com/download",
       "https://cursor.com/docs/cloud-agent/api/endpoints",
       "https://cursor.com/help/ai-features/self-hosted-machines",
@@ -68763,9 +68765,11 @@
       "pricingModel": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "canonicalName": {
@@ -68852,9 +68856,11 @@
       "hasFreeTier": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "hasFreeTrial": {
@@ -68952,9 +68958,11 @@
       "paidPlanAvailable": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "licenseType": {
@@ -69027,41 +69035,51 @@
       "pricingScope": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "startingPrice": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "priceCurrency": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "billingPeriod": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "startingPlan": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "trialDays": {
@@ -69073,9 +69091,11 @@
       "freeTierScope": {
         "method": "official_source_review",
         "sources": [
-          "https://cursor.com/pricing"
+          "https://cursor.com/pricing",
+          "https://cursor.com/docs/models-and-pricing",
+          "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
         ],
-        "checkedAt": "2026-09-22",
+        "checkedAt": "2026-10-29",
         "note": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service."
       },
       "capabilityScope": {
@@ -69107,8 +69127,8 @@
       "useCases": "derived",
       "lifecycle": "existing_editorial"
     },
-    "evidenceNotes": "Official product and pricing sources reviewed on 22 September 2026. Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial.",
-    "pricingEvidenceNotes": "Hobby is free with limited usage. Pro is USD 20/month; usage beyond included allowances can be billed separately. Taxes are additional.",
+    "evidenceNotes": "Official product and pricing sources reviewed on 29 October 2026 (https://cursor.com/pricing, https://cursor.com/docs/models-and-pricing, https://cursor.com/docs/account/pricing/legacy-cursor-plans). Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial.",
+    "pricingEvidenceNotes": "Free tier is $0/month with limited usage. Under The X Subscription, Plus is USD 8/month (excludes third-party models), and Premium is USD 30/month (includes third-party model quota; usage beyond quota billed separately at API list price). Legacy Pro plan is USD 20/month for grandfathered accounts. Taxes are additional.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -69131,17 +69151,17 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-22",
-    "nextReviewDate": "2026-10-22",
+    "reviewedAt": "2026-10-29",
+    "nextReviewDate": "2026-11-29",
     "publicationScope": "directory_summary_only",
-    "sourceSummary": "Cursor combines a desktop code editor with agents that can work through a terminal, browser or cloud workflow. Its free Hobby tier provides limited use; paid plans increase allowances. Cloud Agents have an API. Teams can run execution workers on their own machines, while Cursor continues to operate the agent loop in its cloud.",
+    "sourceSummary": "Cursor combines a desktop code editor with agents that can work through a terminal, browser or cloud workflow. Its free tier provides limited use; paid plans (Plus at $8/mo, Premium at $30/mo) increase allowances. Cloud Agents have an API. Teams can run execution workers on their own machines, while Cursor continues to operate the agent loop in its cloud.",
     "pricingScope": "Cursor editor, CLI and Cloud Agents; self-hosted workers are not a fully on-premises service.",
-    "startingPrice": 20,
+    "startingPrice": 8,
     "priceCurrency": "USD",
     "billingPeriod": "month",
-    "startingPlan": "Pro",
+    "startingPlan": "Plus",
     "trialDays": null,
-    "freeTierScope": "Limited Hobby usage.",
+    "freeTierScope": "Free tier provides basic request allowances and a 14-day Pro trial.",
     "capabilityScope": "API refers to Cloud Agents. Self-hosted workers run tools locally, but inference and planning remain in Cursor cloud; selfHosted=false describes the whole service. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=yes; deployment=cloud,local_worker. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
     "licenseType": "unknown",
     "licenseName": null,
@@ -69228,7 +69248,7 @@
       "AI suggestions still require developer review",
       "Distinct from GitHub Copilot — switching may disrupt team preference"
     ],
-    "pricing_overview": "<p>Cursor offers a free tier with limited monthly AI completions and chat queries. The Pro plan provides substantially higher limits and access to faster models. Business plans add team management, privacy controls, and audit logging. Pricing is per-seat on a monthly or annual basis.</p>",
+    "pricing_overview": "<p>Cursor offers a free tier with basic request allowances and a 14-day trial of advanced features. Paid subscriptions are structured under The X Subscription: the Plus plan at $8 per month includes Cursor's native Composer and Tab models (excluding third-party models), while the Premium plan at $30 per month provides access to third-party frontier models with usage beyond quota billed separately at API list price. The legacy Pro plan ($20 per month) remains active for grandfathered accounts. Business plans add centralized billing, privacy controls, and team management.</p>",
     "comparison_summary": "<p>Cursor's primary competitor is GitHub Copilot, which operates as a VS Code extension rather than a standalone editor. Cursor offers deeper codebase awareness and multi-file editing, while Copilot benefits from GitHub integration. Replit AI targets a different audience (beginners and cloud-based development). For developers who want to stay within VS Code specifically, Copilot with Copilot Chat is the more compatible choice.</p>",
     "legacyPrimaryUseCases": [
       "agent-assisted code editing",
@@ -69242,7 +69262,7 @@
     "category": "Development",
     "pricing_model": "freemium",
     "has_free_tier": true,
-    "description": "Cursor combines a desktop code editor with agents that can work through a terminal, browser or cloud workflow. Its free Hobby tier provides limited use; paid plans increase allowances. Cloud Agents have an API. Teams can run execution workers on their own machines, while Cursor continues to operate the agent loop in its cloud."
+    "description": "Cursor combines a desktop code editor with agents that can work through a terminal, browser or cloud workflow. Its free tier provides limited use; paid plans (Plus at $8/mo, Premium at $30/mo) increase allowances. Cloud Agents have an API. Teams can run execution workers on their own machines, while Cursor continues to operate the agent loop in its cloud."
   },
   {
     "id": "customgpt",
