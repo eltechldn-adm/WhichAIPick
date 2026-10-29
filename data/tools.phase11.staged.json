@@ -38476,7 +38476,7 @@
     "recordOrigin": "existing_editorial",
     "editorialStatus": "baseline_preserved_summary_reviewed",
     "shortDescription": "Brisk helps teachers create learning materials and draft feedback within their browser workflow.",
-    "long_description": "<p>Brisk Teaching is an AI-powered, ubiquitous Chrome extension designed explicitly to alleviate the administrative and operational overwhelming burden placed on K-12 educators. Unlike specialized tutoring apps that target students, Brisk functions entirely to serve the teacher, operating directly within the tools they already use—specifically Google Docs, Google Classroom, and standard web browsers.</p><p>Its marquee feature is seamlessly reading the context of educational material across the web to generate customized resources instantly. A teacher can open a complex news article, click the Brisk extension, and instantly rewrite that same article at three different, lower reading levels to accommodate varying student proficiencies within the same classroom.</p><p>It is heavily adopted by school districts and individual educators seeking to claw back hours spent on manual grading, rubric creation, and differentiated lesson planning, offering the speed of LLMs within an highly frictionless browser interface.</p>",
+    "long_description": "<p>Brisk Teaching is an AI-powered Chrome extension designed to reduce the administrative and operational workload placed on K-12 educators. Unlike standalone tutoring applications that target students, Brisk is built for teachers and operates directly within the tools they already use—specifically Google Docs, Google Slides, Google Forms, Google Classroom, and standard web browsers.</p><p>Its core capability is reading the context of educational material across the web to generate classroom-ready resources. A teacher can open a complex news article, launch the Brisk extension, and rewrite that article at multiple reading levels to support differentiated instruction within the same classroom.</p><p>It is adopted by school districts and individual educators to streamline routine grading feedback, rubric creation, and differentiated lesson planning, delivering LLM-assisted workflows through a low-friction browser interface.</p>",
     "paidPlanAvailable": true,
     "finderIntentIds": [
       "education.teaching"
@@ -38487,7 +38487,7 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-29",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Brisk helps teachers create learning materials and draft feedback within their browser workflow. School and district plans add institution-specific controls and curriculum features.",
@@ -38525,7 +38525,7 @@
     ],
     "affiliate_url": null,
     "tags": [],
-    "how_it_works": "<p>A teacher installs the Chrome extension. If they are viewing an educational YouTube video, they can click the Brisk icon and instruct it to automatically generate a 10-question multiple-choice quiz based on the video's transcript, exporting it directly to a Google Form. Inside a Google Doc containing a student's essay, the teacher clicks Brisk to \"Give Feedback.\" The AI analyzes the text against an uploaded specific rubric and instantly inserts targeted, constructive comments inline, mimicking a human grading pass for the teacher to review and approve.</p>",
+    "how_it_works": "<p>A teacher installs the Chrome extension. If they are viewing an educational YouTube video, they can click the Brisk icon and instruct it to automatically generate a 10-question multiple-choice quiz based on the video's transcript, exporting it directly to a Google Form. Inside a Google Doc containing a student's essay, the teacher clicks Brisk to \"Give Feedback.\" The AI analyzes the text against an uploaded rubric and inserts targeted, constructive comments inline, providing an initial grading draft for the teacher to review and approve.</p>",
     "workflows": [
       {
         "title": "Reading Level Differentiation",
@@ -38568,7 +38568,7 @@
       "The Chrome extension integration into Google Docs is accurate and eliminates the friction of copy-pasting to external AI dashboards",
       "Differentiating resource reading levels is arguably the most powerful equity tool available to modern teachers",
       "Generating quizzes directly into Google Forms saves immense formatting time",
-      "Maintains a strong focus on data privacy complying with educational standards (FERPA)"
+      "Maintains a strong focus on student data privacy and alignment with educational standards such as FERPA"
     ],
     "cons": [
       "Highly reliant on the Google Workspace ecosystem; less effective for schools mandated to use Microsoft 365",
@@ -38576,7 +38576,7 @@
       "Some schools proactively block Chrome extensions, complicating widespread IT deployment",
       "Not a student-facing tool, lacking the Socratic tutoring capabilities of Khanmigo"
     ],
-    "pricing_overview": "<p>Brisk Teaching offers a robust Free tier for individual educators providing core features like level adjustment and quiz generation. A Premium educator tier unlocks advanced AI models and unlimited feedback generation. Enterprise/School plans are available for district-wide deployment, offering administrative controls and deeper LMS integrations.</p>",
+    "pricing_overview": "<p>Brisk Teaching provides a permanent Free plan for individual educators covering more than 20 core classroom tools, including reading-level adjustment, quiz generation, and inline Google Docs feedback, alongside a 14-day introductory trial of Premium features. Full ongoing Educator Pro and Intelligence plans are licensed through custom school and district subscriptions, adding unlimited access to all tools, advanced rubric formats, administrative analytics, and LMS integrations.</p>",
     "comparison_summary": "<p>Brisk Teaching competes with tools like MagicSchool AI and Eduaide. MagicSchool is highly robust but operates primarily as a standalone \"dashboard\" where teachers must log in, generate text, and copy-paste it out. Brisk differentiates itself powerfully through its Chrome extension architecture. By operating directly inside Google Docs and on top of active live web pages, it provides a significantly more integrated, frictionless user experience for teachers who already live inside web browsers.</p>",
     "legacyPrimaryUseCases": [
       "lesson material creation",
@@ -39833,7 +39833,7 @@
   {
     "id": "buffer-ai-assistant",
     "canonicalName": "Buffer AI Assistant",
-    "website_url": "https://buffer.com/",
+    "website_url": "https://buffer.com/ai-assistant",
     "primaryCategory": "Marketing",
     "primaryUseCases": [
       "social post drafting",
@@ -39944,12 +39944,11 @@
       "website_url": {
         "method": "official_source_review",
         "sources": [
-          "https://buffer.com/ai-assistant?cta=bufferSite-globalNav-tools-aiAssistant-1",
-          "https://buffer.com/pricing",
-          "https://buffer.com/api?cta=bufferSite-globalNav-tools-api-1"
+          "https://buffer.com/ai-assistant",
+          "https://buffer.com/pricing"
         ],
-        "checkedAt": "2026-09-23",
-        "note": "AI Assistant within Buffer; wider platform API is a separate capability."
+        "checkedAt": "2026-10-29",
+        "note": "Official dedicated Buffer AI Assistant product URL verified."
       },
       "aliases": {
         "method": "unknown",
@@ -40158,10 +40157,11 @@
       "pricingScope": {
         "method": "official_source_review",
         "sources": [
-          "https://buffer.com/pricing"
+          "https://buffer.com/pricing",
+          "https://buffer.com/ai-assistant"
         ],
-        "checkedAt": "2026-09-23",
-        "note": "AI Assistant within Buffer; wider platform API is a separate capability."
+        "checkedAt": "2026-10-29",
+        "note": "AI Assistant bundled within Buffer platform plans (unlimited AI credits on Free and paid tiers); paid platform tiers are billed per connected social channel."
       },
       "startingPrice": {
         "method": "unknown",
@@ -40198,10 +40198,11 @@
       "freeTierScope": {
         "method": "official_source_review",
         "sources": [
-          "https://buffer.com/pricing"
+          "https://buffer.com/pricing",
+          "https://buffer.com/ai-assistant"
         ],
-        "checkedAt": "2026-09-23",
-        "note": "AI Assistant within Buffer; wider platform API is a separate capability."
+        "checkedAt": "2026-10-29",
+        "note": "AI Assistant is included with unlimited credits on the Free Buffer plan ($0/month), which supports up to 3 connected social channels, 10 scheduled posts per channel at a time, 100 content ideas, and 1 user account."
       },
       "capabilityScope": {
         "method": "official_source_review",
@@ -40231,7 +40232,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official AI Assistant, pricing and platform API pages reviewed 23 September 2026; no performance guarantee.",
-    "pricingEvidenceNotes": "Essentials displayed as $5 per channel/month with $60 annual billing. Currency code not certified. Paid-plan trial lasts 14 days.",
+    "pricingEvidenceNotes": "Buffer AI Assistant is included with unlimited credits on all Buffer plans, including the Free plan (up to 3 channels, 10 scheduled posts per channel). Paid Buffer platform plans are billed per connected social channel in USD with a 14-day free trial: Essentials is $6/channel/month billed monthly ($5/channel/month billed annually at $60/year for 1-10 channels) and Team is $12/channel/month billed monthly ($10/channel/month billed annually at $120/year for 1-10 channels). Standalone startingPrice remains null so per-channel platform pricing is not misrepresented as a standalone AI Assistant fee.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -40254,17 +40255,17 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-29",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Buffer AI Assistant drafts and revises social posts within Buffer. It can adapt an idea for different channels; publishing capacity depends on the account plan.",
-    "pricingScope": "AI Assistant within Buffer; wider platform API is a separate capability.",
+    "pricingScope": "AI Assistant bundled within Buffer platform plans (unlimited AI credits on Free and paid tiers); paid platform tiers are billed per connected social channel.",
     "startingPrice": null,
     "priceCurrency": null,
     "billingPeriod": null,
     "startingPlan": null,
     "trialDays": 14,
-    "freeTierScope": "AI Assistant is included in free accounts. Free scheduling is limited to three channels and ten queued posts per channel.",
+    "freeTierScope": "AI Assistant is included with unlimited credits on the Free Buffer plan ($0/month), which supports up to 3 connected social channels, 10 scheduled posts per channel at a time, 100 content ideas, and 1 user account.",
     "capabilityScope": "Buffer advertises an API, but direct AI Assistant generation through it was not established. Mobile apps and browser extension are linked; feature parity unverified. Phase 4 technical profile (2026-09-28): API=no verified public/supported API; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
     "licenseType": "unknown",
     "licenseName": null,
@@ -40306,7 +40307,7 @@
       },
       {
         "title": "Tone and Formatting Iteration",
-        "description": "A community manager drafts a rough, messy idea, using the AI clicking \"Rewrite\" to instantly polish the grammar and adjust the tone to properly reflect their specific brand voice."
+        "description": "A community manager drafts a rough outline and uses the AI \"Rewrite\" action to refine grammar and adjust the tone to match their brand voice."
       },
       {
         "title": "Rapid Ideation for Consistency",
@@ -40345,7 +40346,7 @@
       "Users accustomed to intense, multi-step prompt engineering in GPT-4 may find the simple interface slightly restrictive",
       "Heavy reliance on AI can result in a brand voice that lacks authentic human nuance if not closely edited"
     ],
-    "pricing_overview": "<p>The AI Assistant is currently integrated across Buffer's pricing tiers, operating on an internal credit system. Buffer itself offers a limited Free plan for individuals. Paid tiers (Essentials, Team, Agency) charge per connected social channel, unlocking the full power of the AI Assistant and robust analytics tools.</p>",
+    "pricing_overview": "<p>Buffer AI Assistant is included at no extra cost—with unlimited AI generation credits—across every Buffer plan, including the permanent Free tier. On the Free plan ($0 per month), users can access the full AI Assistant alongside up to 3 connected social channels, 10 scheduled posts per channel at a time, 100 saved content ideas, and 1 user seat.</p><p>Paid Buffer platform subscriptions scale social publishing capacity rather than gating AI Assistant usage, and are billed per connected social channel in USD with a 14-day free trial. For 1 to 10 channels, the Essentials plan costs $6 per channel per month billed monthly ($5 per channel per month when billed annually at $60/year) and unlocks unlimited scheduled posts and advanced analytics, while the Team plan costs $12 per channel per month billed monthly ($10 per channel per month when billed annually at $120/year) and adds unlimited user seats and approval workflows.</p>",
     "comparison_summary": "<p>Buffer AI Assistant competes with the AI features built into Hootsuite, Later, and Sprout Social. Sprout Social and Hootsuite target enterprise operations requiring large-scale social listening and approval workflows. Buffer differentiates itself by remaining stubbornly committed to simplicity and affordability. Both the platform itself and its AI Assistant are specifically designed to be as frictionless as possible for an overwhelmed small business owner who just needs to get three good posts scheduled for the week without learning complex enterprise software.</p>",
     "legacyPrimaryUseCases": [
       "social post drafting",
@@ -52245,28 +52246,40 @@
         "note": "Hosted content optimization platform; Google Docs, WordPress and Word integrations are not evidence of a public API or self-hosting."
       },
       "startingPrice": {
-        "method": "unknown",
-        "sources": [],
-        "checkedAt": null,
-        "note": "Hosted content optimization platform; Google Docs, WordPress and Word integrations are not evidence of a public API or self-hosting."
+        "method": "official_source_review",
+        "sources": [
+          "https://www.clearscope.io/pricing",
+          "https://www.clearscope.io/support/what-payment-methods-do-you-accept"
+        ],
+        "checkedAt": "2026-10-29",
+        "note": "Essentials plan verified at $129/month (USD) with 14-day free trial."
       },
       "priceCurrency": {
-        "method": "unknown",
-        "sources": [],
-        "checkedAt": null,
-        "note": "Hosted content optimization platform; Google Docs, WordPress and Word integrations are not evidence of a public API or self-hosting."
+        "method": "official_source_review",
+        "sources": [
+          "https://www.clearscope.io/pricing",
+          "https://www.clearscope.io/support/what-payment-methods-do-you-accept"
+        ],
+        "checkedAt": "2026-10-29",
+        "note": "Essentials plan verified at $129/month (USD) with 14-day free trial."
       },
       "billingPeriod": {
-        "method": "unknown",
-        "sources": [],
-        "checkedAt": null,
-        "note": "Hosted content optimization platform; Google Docs, WordPress and Word integrations are not evidence of a public API or self-hosting."
+        "method": "official_source_review",
+        "sources": [
+          "https://www.clearscope.io/pricing",
+          "https://www.clearscope.io/support/what-payment-methods-do-you-accept"
+        ],
+        "checkedAt": "2026-10-29",
+        "note": "Essentials plan verified at $129/month (USD) with 14-day free trial."
       },
       "startingPlan": {
-        "method": "unknown",
-        "sources": [],
-        "checkedAt": null,
-        "note": "Hosted content optimization platform; Google Docs, WordPress and Word integrations are not evidence of a public API or self-hosting."
+        "method": "official_source_review",
+        "sources": [
+          "https://www.clearscope.io/pricing",
+          "https://www.clearscope.io/support/what-payment-methods-do-you-accept"
+        ],
+        "checkedAt": "2026-10-29",
+        "note": "Essentials plan verified at $129/month (USD) with 14-day free trial."
       },
       "trialDays": {
         "method": "official_source_review",
@@ -52312,7 +52325,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official pricing, writing product and integration documentation reviewed on 28 September 2026. Suitability is editorial interpretation; no ranking or performance guarantee adopted.",
-    "pricingEvidenceNotes": "Fourteen-day trial. Essentials displays 129/month with 50 tracked queries, 50 pages, 20 monthly topic explorations and 20 drafts. Users and projects are unlimited, but usage allowances are not. Currency is not explicit; normalized amount withheld.",
+    "pricingEvidenceNotes": "Fourteen-day free trial confirmed on official pricing page. Essentials starts at $129/month (USD) and includes 50 tracked queries, 50 monitored pages, 20 monthly topic discoveries, 20 monthly AI content drafts, unlimited users, and unlimited projects. Business is $399/month and Enterprise is custom-priced.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -52334,15 +52347,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-10-29",
     "nextReviewDate": "2026-10-28",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Clearscope helps content teams plan and improve written pages using topic recommendations and search visibility tracking. Writers can work in its editor or connect supported document and publishing tools.",
     "pricingScope": "Hosted content optimization platform; Google Docs, WordPress and Word integrations are not evidence of a public API or self-hosting.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 129,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Essentials",
     "trialDays": 14,
     "freeTierScope": "Temporary trial only; no ongoing free subscription listed.",
     "capabilityScope": "Google Docs integration needs a shared draft, document permissions and administrator-enabled add-ons. Public API and platform source availability were not established. Editorial scores do not guarantee search visibility. Phase 4 technical profile (2026-09-28): API=no verified public/supported API; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -52421,7 +52434,7 @@
       "Does not possess the heavy, site-wide technical SEO auditing features of tools like Ahrefs or Semrush",
       "Usage credit caps on reports can be proactively restrictive even on premium tiers"
     ],
-    "pricing_overview": "<p>Clearscope operates on a premium, B2B SaaS subscription model without any free tier. Pricing is structured around the number of \"Content Reports\" generated per month and the number of user seats, firmly cementing it as a high-end enterprise tool requiring a significant monthly budget.</p>",
+    "pricing_overview": "<p>Clearscope offers a 14-day free trial and month-to-month subscriptions with no long-term contract commitment. Every plan includes unlimited user seats and unlimited projects, with tiers scaled by monthly content and search-tracking allowances rather than per-seat fees.</p><p>The Essentials plan starts at $129 per month and includes 50 tracked queries, 50 monitored pages, 20 monthly topic discoveries, and 20 monthly content drafts. The Business plan costs $399 per month (expanding capacity to 300 tracked queries, 300 pages, 50 monthly discoveries, 20 monthly drafts, and a dedicated account manager), while custom Enterprise plans add tailored credit volumes, crawler whitelisting, and single sign-on (SSO).</p>",
     "comparison_summary": "<p>Clearscope competes directly with Surfer SEO, MarketMuse, and Frase. MarketMuse targets large-scale enterprise content strategy. Frase offers a cheaper alternative with built-in generative AI drafting. Surfer SEO is its closest rival; Surfer is slightly cheaper and offers robust internal linking audits, but its interface can feel cluttered and overly technical. Clearscope differentiates itself through its established, singular focus on the writing experience: it offers the cleanest, most intuitive UI, and is widely regarded by top SEOs as having the highest quality NLP extraction algorithm on the market.</p>",
     "legacyPrimaryUseCases": [
       "content optimization",
@@ -227438,7 +227451,7 @@
     "recordOrigin": "existing_editorial",
     "editorialStatus": "baseline_preserved_summary_reviewed",
     "shortDescription": "Read AI produces meeting transcripts and summaries and makes meeting information searchable.",
-    "long_description": "<p>Read AI (Read.ai) is a highly proactive, deeply analytical meeting intelligence platform designed to passively join video conference calls (Zoom, Teams, Google Meet) and fundamentally change how companies measure the effectiveness of internal communication. While basic AI tools merely generate a transcript and a text summary, Read AI utilizes sophisticated multimodal analysis—listening to audio tone, measuring speaker talk-time, and utilizing computer vision to analyze human facial expressions—to mathematically grade the actual quality and engagement level of the meeting itself.</p><p>Its primary differentiator is its focus on \"Meeting Health\" rather than just meeting notes. It functions as an objective, unbiased algorithmic observer. Did the CEO dominate 80% of the talking time in a collaborative brainstorm? Were the engineers visually displaying signs of frustration or boredom (checking their phones, frowning) during a large-scale presentation? Read AI quantifies these inherently psychological, human metrics into a merciless dashboard, actively training organizations to host shorter, more effective meetings.</p><p>It is heavily utilized by efficiency-obsessed startup founders, remote-first executive teams battling \"Zoom Fatigue,\" and Agile project managers who need to ensure daily stand-ups are actually productive and not secretly causing large-scale organizational disengagement.</p>",
+    "long_description": "<p>Read AI (Read.ai) is a meeting intelligence and transcription platform that integrates with video conferencing services—including Zoom, Microsoft Teams, and Google Meet—to summarize discussions and analyze communication dynamics across distributed teams. In addition to generating automated transcripts, summaries, and action items, Read AI evaluates audio pacing, speaker talk-time distribution, and optional video engagement signals to report on overall meeting effectiveness.</p><p>Its primary differentiator is combining standard meeting documentation with structured participation metrics and speaker coaching. Post-meeting reports break down talk-time balance, pacing, and topic progression so organizers and participants can review how meeting time was allocated and identify opportunities for clearer communication.</p><p>It is used by remote and hybrid teams, project managers, and operations leaders who want searchable meeting records alongside consistent analytics on meeting length, participation balance, and follow-up commitments.</p>",
     "paidPlanAvailable": true,
     "finderIntentIds": [
       "meetings.transcription",
@@ -227450,7 +227463,7 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-29",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Read AI produces meeting transcripts and summaries and makes meeting information searchable. Paid plans increase meeting allowances and add collaboration or playback features.",
@@ -227490,7 +227503,7 @@
     ],
     "affiliate_url": null,
     "tags": [],
-    "how_it_works": "<p>A project manager connects their Google Calendar to Read AI. The manager hosts a 45-minute sprint planning meeting on Zoom with 10 engineers. The Read AI \"bot\" silently joins the call as a participant. It records everything. 5 minutes after the call ends, the manager receives a comprehensive dashboard. Firstly, it provides standard AI notes (Summary, Action Items). Crucially, it provides a \"Meeting Score\" of 62/100. The dashboard visually highlights that engagement plummeted at minute 22 when a specific slide was shown. It mathematically proves the manager spoke for 35 minutes, while the engineers only spoke for 10. The system gently flags the meeting as a \"monologue\" and suggests making the next session 15 minutes shorter to improve engagement.</p>",
+    "how_it_works": "<p>A project manager connects their Google or Microsoft calendar to Read AI and hosts a 45-minute sprint planning meeting on Zoom with ten team members. The Read AI assistant joins the call as a scheduled participant to record and transcribe the session. Shortly after the call concludes, the organizer receives a post-meeting report containing an executive summary, key topics, and assigned action items, alongside participation metrics such as talk-time distribution, speaking pace, and timeline highlights showing when engagement shifted during the presentation.</p>",
     "workflows": [
       {
         "title": "Automated Executive Briefing",
@@ -227498,11 +227511,11 @@
       },
       {
         "title": "Meeting Health & Culture Auditing",
-        "description": "HR and Operations leaders monitor the aggregate \"Engagement Scores\" of all internal meetings to objectively identify large-scale communication bottlenecks or managers who consistently hold painfully routine, unilateral monologues."
+        "description": "Operations and team leads review aggregate meeting duration and talk-time balance trends to identify recurring scheduling bottlenecks and improve meeting efficiency."
       },
       {
         "title": "Sales Call Emotional Analytics",
-        "description": "Sales teams utilize the visual sentiment analysis to identify the exact second in a pitch where the client visually lost interest or appeared frustrated, allowing managers to hyper-target specific moments for coaching."
+        "description": "Sales and customer-success teams review timeline highlights and sentiment shifts during client presentations to identify which product segments generated the most questions or engagement."
       },
       {
         "title": "Post-Meeting Action Tracking",
@@ -227514,7 +227527,7 @@
         "group": "Multimodal AI Analysis",
         "items": [
           "Text summarization (Action Items, Key Questions, Highlights)",
-          "Visual sentiment analysis (measuring human facial engagement and boredom)",
+          "Optional video engagement and sentiment indicators",
           "Audio analytics (Speaker talk-time ratio, interruption frequency)",
           "Automated highlight clip generation (video reels of important moments)"
         ]
@@ -227530,19 +227543,19 @@
       }
     ],
     "pros": [
-      "The ability to quantify something as abstract and subjective as \"a routine meeting\" into a mathematical 0-100 score is a large-scale paradigm shift for correcting toxic corporate culture",
-      "It entirely eliminates the grueling job of the designated \"note-taker,\" allowing every participant to actually engage in the conversation knowing the AI will accurately capture the action items",
-      "The metric tracking talk-time ratio brutally exposes managers who think a \"collaborative discussion\" is actually just them talking uninterrupted for 45 minutes",
-      "The automated highlight clips (video snippets) are brilliant for catching up entirely isolated team members without making them watch a full hour-long recording"
+      "Combines automated meeting transcription and action-item extraction with structured participation and talk-time analytics",
+      "Reduces manual note-taking during calls so participants can focus on the discussion while preserving a searchable record",
+      "Speaker coaching metrics (pacing, talk-time balance, and filler-word tracking) provide actionable feedback for presenters and meeting hosts",
+      "Automated video highlight clips allow absent team members to review key segments without watching the full recording"
     ],
     "cons": [
-      "Having a robotic bot explicitly analyzing the facial expressions and emotional state of employees can feel highly dystopian, intrusive, and highly stress-inducing for privacy-conscious staff",
-      "The visual sentiment analysis models are notoriously unreliable at interpreting neurodivergent expressions, cultural differences, or people who simply have a \"resting angry face\" while concentrating deeply",
-      "If a meeting is highly technical or relies heavily on drawing physical diagrams or referencing undocumented codebase architecture, the AI text summary will frequently fail to capture the actual underlying logic",
-      "Some enterprise organizations will absolutely refuse to use the platform, citing severe security concerns about allowing an external AI company to record and analyze highly classified executive video data"
+      "Automated meeting assistants and visual engagement tracking can raise privacy or comfort concerns for participants if recording policies are not communicated clearly",
+      "Visual sentiment and engagement indicators are heuristic estimates and may misinterpret camera angles, lighting, or quiet concentration",
+      "Highly technical architecture discussions or whiteboard-heavy sessions still require manual review to verify specialized terminology in the summary",
+      "Organizations with strict compliance requirements may need Enterprise administrative guardrails and explicit opt-in policies before enabling workspace-wide recording"
     ],
-    "pricing_overview": "<p>Read AI utilizes a tiered Freemium SaaS architecture. The Free tier allows a user to deploy the bot on a limited number of meetings per month, receiving basic text summaries to demonstrate value. The Pro/Enterprise tiers target heavy users and large organizations, unlocking unlimited meeting recording, deep workspace emotional analytics, custom reporting, and CRM integrations.</p>",
-    "comparison_summary": "<p>Read AI competes in the increasingly crowded \"Meeting Intelligence\" space alongside large-scale leader like Otter.ai, Fathom, and Gong. Otter is the king of pure text transcription. Gong is completely obsessed with high-end Sales revenue forecasting. Read AI differentiates itself as the ultimate *Corporate Behavioral Psychologist*. It sacrifices the pure sales-obsession of Gong to focus intensely on fixing the fundamentally broken, exhausting culture of multi-person video meetings, actively trying to make humanity better at communicating through AI observation.</p>",
+    "pricing_overview": "<p>Read AI operates on a freemium subscription model. The Free plan includes up to 5 meeting transcripts and reports per month (for meetings up to 1 hour) alongside basic search and summary features. Paid plans begin with the Pro tier at $19.75 per user per month billed monthly ($15 per user per month when billed annually), which unlocks unlimited meeting transcripts and workspace integrations, while the Enterprise tier ($29.75 per user per month billed monthly, or $22.50 per user per month billed annually) adds video playback and highlight reels, custom retention policies, and administrative guardrails.</p>",
+    "comparison_summary": "<p>Read AI competes in the meeting intelligence category alongside Otter.ai, Fathom, Fireflies.ai, and Gong. While Otter.ai focuses primarily on real-time text transcription and Gong specializes in enterprise revenue intelligence and CRM pipeline forecasting, Read AI differentiates itself by pairing cross-platform meeting summaries and search with participation analytics, talk-time balance reporting, and individual speaker coaching across video calls, emails, and team messaging.</p>",
     "legacyPrimaryUseCases": [
       "meeting transcription",
       "meeting summaries"

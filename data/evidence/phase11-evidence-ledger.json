@@ -427,9 +427,9 @@
     "id": "brisk-teaching",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.briskteaching.com/plans",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official plans, FAQ and help reviewed 23 September 2026. No claim about learning outcomes or compliance certification."
+    "finding": "Official plans, FAQ and help reviewed 29 October 2026; long_description and editorial narrative grammar normalised. No claim about learning outcomes or compliance certification."
   },
   {
     "evidenceId": "E0049",
@@ -453,19 +453,19 @@
     "evidenceId": "E0051",
     "id": "buffer-ai-assistant",
     "fieldScope": "[\"targetUsers\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
-    "sourceURL": "https://buffer.com/ai-assistant?cta=bufferSite-globalNav-tools-aiAssistant-1",
-    "reviewedAt": "2026-09-23",
+    "sourceURL": "https://buffer.com/ai-assistant",
+    "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official AI Assistant, pricing and platform API pages reviewed 23 September 2026; no performance guarantee."
+    "finding": "Official Buffer AI Assistant product page (https://buffer.com/ai-assistant), pricing page and platform API pages reviewed 29 October 2026: canonical product URL verified and AI Assistant confirmed included with unlimited credits across Free and paid plans."
   },
   {
     "evidenceId": "E0052",
     "id": "buffer-ai-assistant",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"trialDays\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://buffer.com/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official AI Assistant, pricing and platform API pages reviewed 23 September 2026; no performance guarantee."
+    "finding": "Official Buffer pricing and AI Assistant pages reviewed 29 October 2026: AI Assistant is included with unlimited credits on Free ($0, up to 3 channels, 10 scheduled posts/channel) and paid per-channel platform tiers (Essentials $6/channel/month monthly or $5/channel/month billed annually at $60/year; Team $12/channel/month monthly or $10/channel/month billed annually at $120/year, 14-day free trial)."
   },
   {
     "evidenceId": "E0053",
@@ -524,11 +524,11 @@
   {
     "evidenceId": "E0059",
     "id": "clearscope",
-    "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"trialDays\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"platforms\",\"licenseType\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"recurringFreeIntentIds\",\"finderIntentIds\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"trialDays\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\"]",
     "sourceURL": "https://www.clearscope.io/pricing",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official pricing, writing product and integration documentation reviewed on 28 September 2026. Suitability is editorial interpretation; no ranking or performance guarantee adopted."
+    "finding": "Official pricing and payment documentation reviewed on 29 October 2026: Essentials plan starts at $129/month (USD) with a 14-day free trial (50 tracked queries, 50 pages, 20 monthly discoveries, 20 monthly drafts, unlimited users and projects). Suitability is editorial interpretation; no ranking or performance guarantee adopted."
   },
   {
     "evidenceId": "E0060",
@@ -1939,9 +1939,9 @@
     "id": "readai",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.read.ai/plans-pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-29",
     "method": "official_source_review",
-    "finding": "Official pricing, API overview and trial documentation reviewed 23 September 2026; no measured coaching-effectiveness claim."
+    "finding": "Official pricing, API overview and trial documentation reviewed 29 October 2026; editorial narrative normalised to neutral SaaS directory tone with no measured coaching-effectiveness claim."
   },
   {
     "evidenceId": "E0217",

@@ -136,8 +136,8 @@ function run() {
   if (freeTrialTrue !== 272 || freeTrialFalse !== 16 || freeTrialNull !== 594) {
     logError(`hasFreeTrial counts wrong. Expected 272/16/594. Got ${freeTrialTrue}/${freeTrialFalse}/${freeTrialNull}`);
   }
-  if (priceNumber !== 67 || priceNull !== 815) {
-    logError(`startingPrice counts wrong. Expected 67/815. Got ${priceNumber}/${priceNull}`);
+  if (priceNumber !== 68 || priceNull !== 814) {
+    logError(`startingPrice counts wrong. Expected 68/814. Got ${priceNumber}/${priceNull}`);
   }
 
   // References check
