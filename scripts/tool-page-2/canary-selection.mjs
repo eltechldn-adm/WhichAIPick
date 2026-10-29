@@ -16,7 +16,7 @@ import path from 'path';
 export const CANARY_ENV_VAR = 'TOOL_PAGE_V2_CANARY';
 export const CANARY_MANIFEST_ENV_VAR = 'TOOL_PAGE_V2_CANARY_MANIFEST';
 export const DEFAULT_MANIFEST_RELATIVE_PATH = 'data/release/tool-page-v2-canary.json';
-export const MAX_CANARY_TOOLS = 16;
+export const MAX_CANARY_TOOLS = 20;
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export class CanarySelectionError extends Error {

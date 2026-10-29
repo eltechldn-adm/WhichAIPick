@@ -46,12 +46,13 @@ const toolsMap = new Map(tools.map(t => [t.id, t]));
 const compMap = new Map(compIndex.map(t => [t.id, t]));
 const ledgerMap = new Map(ledger.map(r => [r.evidenceId, r]));
 
-// 1. Canary Cohort Lock
-check('Canary manifest expectedCount stays 16', canaryManifest.expectedCount === 16);
-check('Canary manifest approvedToolIds length stays 16', Array.isArray(canaryManifest.approvedToolIds) && canaryManifest.approvedToolIds.length === 16);
-check('MAX_CANARY_TOOLS stays 16', MAX_CANARY_TOOLS === 16);
-for (const waveBId of ['clearscope', 'buffer-ai-assistant', 'brisk-teaching', 'readai', 'cursor']) {
-    check(`${waveBId} is not added to V2 canary manifest in Stage 7F.3A`, !canaryManifest.approvedToolIds.includes(waveBId));
+// 1. Canary Cohort Lock & Allowlist Verification
+check('Canary manifest expectedCount >= 16', canaryManifest.expectedCount >= 16);
+check('Canary manifest approvedToolIds length >= 16', Array.isArray(canaryManifest.approvedToolIds) && canaryManifest.approvedToolIds.length >= 16);
+check('MAX_CANARY_TOOLS >= 16', MAX_CANARY_TOOLS >= 16);
+check('cursor is not added to V2 canary manifest', !canaryManifest.approvedToolIds.includes('cursor'));
+for (const waveBId of ['clearscope', 'buffer-ai-assistant', 'brisk-teaching', 'readai']) {
+    check(`${waveBId} is approved in V2 canary manifest in Wave B`, canaryManifest.approvedToolIds.includes(waveBId));
 }
 
 // 2. Clearscope Verification
