@@ -48,6 +48,11 @@ function escAttr(str = '') {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+/** Safe JavaScript string literal for inline <script> embedding (prevents </script> breakout) */
+function safeInlineJsString(str = '') {
+  return JSON.stringify(String(str)).replace(/</g, '\\u003c');
+}
+
 /** Build a bullet list <ul> from an array of strings */
 function buildList(items = [], className = '') {
   if (!items || items.length === 0) return '';
@@ -733,7 +738,7 @@ function buildCategoryPage(categoryName, categoryTools) {
   <script src="/js/main.js?v=6.4"></script>
   <script src="/js/descriptions.js?v=1.7"></script>
   <script src="/js/layout.js?v=1.8" defer></script>
-  <script>window.BROWSE_CONFIG = { category: '${escAttr(categoryName)}' };</script>
+  <script>window.BROWSE_CONFIG = { category: ${safeInlineJsString(categoryName)} };</script>
   <script src="/js/browse.js?v=1.0" defer></script>
 </body>
 
