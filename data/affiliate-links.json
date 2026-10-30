@@ -26,17 +26,6 @@
     "notes": "Found in tools.json. Verify with Runway's affiliate programme before activating."
   },
   {
-    "toolId": "synthesia",
-    "officialUrl": "https://www.synthesia.io",
-    "affiliateUrl": "https://www.synthesia.com/?ref=whichaipick",
-    "network": "direct",
-    "status": "unverified",
-    "verifiedAt": null,
-    "commissionRate": null,
-    "cookieDuration": null,
-    "notes": "Found in tools.json. Note: domain in affiliate URL (.com) differs from official (.io) — verify the correct affiliate landing URL."
-  },
-  {
     "toolId": "writesonic",
     "officialUrl": "https://writesonic.com",
     "affiliateUrl": "https://writesonic.com/?ref=whichaipick",

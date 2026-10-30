@@ -274102,7 +274102,7 @@
   {
     "id": "synthesia",
     "canonicalName": "Synthesia",
-    "website_url": "https://www.synthesia.com/",
+    "website_url": "https://www.synthesia.io/",
     "primaryCategory": "Video & Audio",
     "primaryUseCases": [
       "avatar-led training videos",
@@ -274147,7 +274147,7 @@
     "remainingFieldGaps": "[]",
     "recommendationEligible": true,
     "verificationSources": [
-      "https://www.synthesia.com/",
+      "https://www.synthesia.io/",
       "https://www.synthesia.io/pricing",
       "https://help.synthesia.io/en/articles/15972650-what-are-synthesia-s-pricing-plans",
       "https://docs.synthesia.io/reference/introduction"
@@ -274274,7 +274274,7 @@
       "apiAvailable": {
         "method": "preserved_reviewed_value",
         "sources": [
-          "https://www.synthesia.com/",
+          "https://www.synthesia.io/",
           "https://www.synthesia.io/pricing",
           "https://help.synthesia.io/en/articles/15972650-what-are-synthesia-s-pricing-plans",
           "https://docs.synthesia.io/reference/introduction"
@@ -274286,7 +274286,7 @@
       "openSource": {
         "method": "reviewed_no_whole_product_open_source_license_verified",
         "sources": [
-          "https://www.synthesia.com/",
+          "https://www.synthesia.io/",
           "https://www.synthesia.io/pricing",
           "https://help.synthesia.io/en/articles/15972650-what-are-synthesia-s-pricing-plans",
           "https://docs.synthesia.io/reference/introduction"
@@ -274298,7 +274298,7 @@
       "selfHosted": {
         "method": "reviewed_no_supported_self_hosted_product_verified",
         "sources": [
-          "https://www.synthesia.com/",
+          "https://www.synthesia.io/",
           "https://www.synthesia.io/pricing",
           "https://help.synthesia.io/en/articles/15972650-what-are-synthesia-s-pricing-plans",
           "https://docs.synthesia.io/reference/introduction"
@@ -274367,7 +274367,7 @@
       "deploymentModes": {
         "method": "preserved_reviewed_value",
         "sources": [
-          "https://www.synthesia.com/",
+          "https://www.synthesia.io/",
           "https://www.synthesia.io/pricing",
           "https://help.synthesia.io/en/articles/15972650-what-are-synthesia-s-pricing-plans",
           "https://docs.synthesia.io/reference/introduction"
@@ -274498,7 +274498,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official product and pricing sources reviewed on 22 September 2026. Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial.",
-    "pricingEvidenceNotes": "Basic USD 0 with limited monthly credits; Starter USD 29 billed monthly. Annual display and FAQ amounts conflict, so no annual price is certified here.",
+    "pricingEvidenceNotes": "Free plan at USD 0 with 3 mins/month and limited avatars; Starter USD 19 billed monthly ($14/month billed annually at $168/year) with 10 mins/month and no watermark. Creator at USD 89/month ($59/mo annual) and custom Enterprise.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -274526,7 +274526,7 @@
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Synthesia turns scripts into avatar-led videos for training and communication. Its Basic plan lets users explore creation with a limited credit allowance. Paid plans add capabilities such as video downloads and removal of the Synthesia logo. Separate API families support video generation, uploads, billing and interactive avatars, with eligibility defined for each API.",
     "pricingScope": "Synthesia hosted avatar-video service; API availability and download rights vary by plan.",
-    "startingPrice": 29,
+    "startingPrice": 19,
     "priceCurrency": "USD",
     "billingPeriod": "month",
     "startingPlan": "Starter",
@@ -274559,7 +274559,7 @@
       "video.avatar",
       "video.generate"
     ],
-    "affiliate_url": "https://www.synthesia.com/?ref=whichaipick",
+    "affiliate_url": null,
     "tags": [],
     "how_it_works": "<p>Users create a new video project in the Synthesia web interface, write or paste a script, and select from available AI avatars and voice options. The platform synthesises the video by animating the avatar to deliver the script with appropriate lip sync and expression. Users can add slides, screen recordings, images, and background music. Finished videos are rendered in the cloud and can be shared via link or exported as MP4 files. Custom AI avatars can be created from an approved recorded video of a real person.</p>",
     "workflows": [
