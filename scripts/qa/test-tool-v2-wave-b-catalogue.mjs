@@ -50,7 +50,7 @@ const ledgerMap = new Map(ledger.map(r => [r.evidenceId, r]));
 check('Canary manifest expectedCount >= 16', canaryManifest.expectedCount >= 16);
 check('Canary manifest approvedToolIds length >= 16', Array.isArray(canaryManifest.approvedToolIds) && canaryManifest.approvedToolIds.length >= 16);
 check('MAX_CANARY_TOOLS >= 16', MAX_CANARY_TOOLS >= 16);
-check('cursor is not added to V2 canary manifest', !canaryManifest.approvedToolIds.includes('cursor'));
+check('cursor is approved in V2 canary manifest in Stage 7G', canaryManifest.approvedToolIds.includes('cursor'));
 for (const waveBId of ['clearscope', 'buffer-ai-assistant', 'brisk-teaching', 'readai']) {
     check(`${waveBId} is approved in V2 canary manifest in Wave B`, canaryManifest.approvedToolIds.includes(waveBId));
 }

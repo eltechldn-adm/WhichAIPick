@@ -36,7 +36,7 @@ const WAVE_B_TOOLS = [
     'readai'
 ];
 
-const EXPECTED_20 = [...ORIGINAL_CANARIES, ...WAVE_A_TOOLS, ...WAVE_B_TOOLS];
+const EXPECTED_21 = [...ORIGINAL_CANARIES, ...WAVE_A_TOOLS, ...WAVE_B_TOOLS, 'cursor'];
 
 let totalChecks = 0;
 let passedChecks = 0;
@@ -105,14 +105,14 @@ async function run() {
     check(!fs.existsSync(path.join(ROOT, 'data', 'tool-page-v2-canary.json')), 'No duplicate data/tool-page-v2-canary.json manifest exists');
 
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-    check(manifest.expectedCount === 20, 'Manifest expectedCount === 20', `actual=${manifest.expectedCount}`);
+    check(manifest.expectedCount === 21, 'Manifest expectedCount === 21', `actual=${manifest.expectedCount}`);
     check(
-        JSON.stringify(manifest.approvedToolIds) === JSON.stringify(EXPECTED_20),
-        'Manifest approvedToolIds matches exact 16 previous + 4 Wave B IDs in order'
+        JSON.stringify(manifest.approvedToolIds) === JSON.stringify(EXPECTED_21),
+        'Manifest approvedToolIds matches exact 16 previous + 4 Wave B + Cursor IDs in order'
     );
 
     // Explicit exclusions
-    for (const excluded of ['cursor', 'midjourney', 'elevenlabs', 'jasper', 'notion-ai']) {
+    for (const excluded of ['midjourney', 'elevenlabs', 'jasper', 'notion-ai']) {
         check(!manifest.approvedToolIds.includes(excluded), `Excluded tool "${excluded}" is NOT in canary manifest`);
     }
 
@@ -138,11 +138,11 @@ async function run() {
             check(false, `Ambiguous template for ${tool.id}`);
         }
     }
-    check(v2Count === 20, 'Generated V2 page count is exactly 20', `actual=${v2Count}`);
-    check(v1Count === 862, 'Generated V1 page count is exactly 862', `actual=${v1Count}`);
+    check(v2Count === 21, 'Generated V2 page count is exactly 21', `actual=${v2Count}`);
+    check(v1Count === 861, 'Generated V1 page count is exactly 861', `actual=${v1Count}`);
     check(
-        JSON.stringify([...v2Found].sort()) === JSON.stringify([...EXPECTED_20].sort()),
-        'Exact 20 V2 pages match approved allowlist with zero extras'
+        JSON.stringify([...v2Found].sort()) === JSON.stringify([...EXPECTED_21].sort()),
+        'Exact 21 V2 pages match approved allowlist with zero extras'
     );
 
     // Sitemap check
@@ -219,12 +219,17 @@ async function run() {
         }
     }
 
-    // 4. Cursor Integrity (Remains V1)
-    console.log('--- CURSOR SAFETY CHECK ---');
+    // 4. Cursor Integrity (Migrated to V2)
+    console.log('--- CURSOR SAFETY & AFFILIATE CHECK ---');
     const cursorHtml = fs.readFileSync(path.join(ROOT, 'tools', 'cursor', 'index.html'), 'utf8');
-    check(cursorHtml.includes('class="tool-detail-page"'), 'cursor: Remains V1 tool-detail-page template');
-    check(!cursorHtml.includes('class="tool-page-v2"'), 'cursor: Does NOT have tool-page-v2 template');
+    check(cursorHtml.includes('class="tool-page-v2"'), 'cursor: Has V2 tool-page-v2 template');
+    check(!cursorHtml.includes('class="tool-detail-page"'), 'cursor: Does NOT have V1 tool-detail-page template');
     check(cursorHtml.includes('https://cursor.com/?ref=whichaipick'), 'cursor: Preserves affiliate link');
+    check(cursorHtml.includes('rel="sponsored noopener noreferrer"'), 'cursor: Preserves rel="sponsored noopener noreferrer"');
+    check(cursorHtml.includes('class="tool-v2-affiliate-note"'), 'cursor: Displays affiliate disclosure note');
+    check(cursorHtml.includes('href="/disclosure.html"'), 'cursor: Affiliate note links to disclosure.html');
+    check(cursorHtml.includes('$8'), 'cursor: Displays $8 starting price in UI');
+    check(cursorHtml.includes('Plus'), 'cursor: Displays Plus plan in narrative');
 
     // 5. Playwright Browser Tests
     console.log('--- SECTION 7: PLAYWRIGHT BROWSER VERIFICATION ---');
@@ -257,8 +262,9 @@ async function run() {
             }
         });
 
-        // Test each of the 4 Wave B tools
-        for (const id of WAVE_B_TOOLS) {
+        // Test each of the 4 Wave B tools + Cursor
+        const testTools = [...WAVE_B_TOOLS, 'cursor'];
+        for (const id of testTools) {
             currentConsoleErrors = [];
             currentPageErrors = [];
             currentExternalFavicons = [];

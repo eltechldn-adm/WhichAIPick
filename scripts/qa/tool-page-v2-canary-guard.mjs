@@ -20,6 +20,103 @@ const DOMAIN = 'https://whichaipick.com';
 const failures = [];
 const fail = (message) => failures.push(message);
 
+export function sanitizeExternalHttpUrl(rawUrl) {
+    if (!rawUrl || typeof rawUrl !== 'string') return null;
+    const trimmed = rawUrl.trim();
+    if (!/^https?:\/\//i.test(trimmed)) return null;
+    try {
+        const parsed = new URL(trimmed);
+        if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return null;
+        if (!parsed.hostname) return null;
+        return trimmed;
+    } catch {
+        return null;
+    }
+}
+
+export function auditV2OutboundLinks(id, html, record) {
+    const errs = [];
+    const safeAffiliateUrl = sanitizeExternalHttpUrl(record?.affiliate_url || record?.affiliateUrl);
+    const safeWebsiteUrl = sanitizeExternalHttpUrl(record?.website_url || record?.websiteUrl);
+    const hasAffiliate = Boolean(safeAffiliateUrl);
+    const expectedOutboundUrl = safeAffiliateUrl || safeWebsiteUrl;
+
+    if (expectedOutboundUrl) {
+        const escapedUrl = expectedOutboundUrl.replace(/&/g, '&amp;');
+        if (!html.includes(`href="${escapedUrl}"`)) {
+            errs.push(`${id}: V2 primary outbound link missing (${expectedOutboundUrl})`);
+        }
+        if (hasAffiliate) {
+            if (!html.includes('rel="sponsored noopener noreferrer"')) {
+                errs.push(`${id}: V2 affiliate link missing rel="sponsored noopener noreferrer"`);
+            }
+            if (!html.includes('class="tool-v2-affiliate-note"')) {
+                errs.push(`${id}: V2 affiliate page missing affiliate disclosure note`);
+            }
+        } else {
+            if (!html.includes('rel="noopener noreferrer"')) {
+                errs.push(`${id}: V2 outbound link missing rel="noopener noreferrer"`);
+            }
+            if (html.includes('class="tool-v2-affiliate-note"')) {
+                errs.push(`${id}: Non-affiliate V2 page must not include affiliate disclosure note`);
+            }
+        }
+    }
+    if (safeWebsiteUrl) {
+        const escapedSchema = `"url":"${safeWebsiteUrl}"`;
+        const spacedSchema = `"url": "${safeWebsiteUrl}"`;
+        if (!html.includes(escapedSchema) && !html.includes(spacedSchema)) {
+            errs.push(`${id}: V2 JSON-LD schema canonical website URL missing (${safeWebsiteUrl})`);
+        }
+    }
+    return errs;
+}
+
+// Unit verification of outbound link auditing logic (fail-closed test suite)
+(() => {
+    // 1. Non-affiliate tool passing
+    const mockRecordNonAff = { website_url: 'https://example.com/' };
+    const mockHtmlNonAff = '<a href="https://example.com/" target="_blank" rel="noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><script type="application/ld+json">{"url":"https://example.com/"}</script>';
+    const passNonAff = auditV2OutboundLinks('mock-non-aff', mockHtmlNonAff, mockRecordNonAff);
+    if (passNonAff.length !== 0) throw new Error(`Unit test failed (non-affiliate valid): ${passNonAff.join('; ')}`);
+
+    // 2. Non-affiliate missing href (negative)
+    const failNonAffHref = auditV2OutboundLinks('mock-non-aff', '<div>No links</div>', mockRecordNonAff);
+    if (!failNonAffHref.some(e => e.includes('outbound link missing'))) throw new Error('Unit test failed: did not catch missing non-affiliate link');
+
+    // 3. Affiliate tool passing
+    const mockRecordAff = { website_url: 'https://cursor.com/', affiliate_url: 'https://cursor.com/?ref=whichaipick' };
+    const mockHtmlAff = '<a href="https://cursor.com/?ref=whichaipick" target="_blank" rel="sponsored noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><p class="tool-v2-affiliate-note">Disclosure</p><script type="application/ld+json">{"url":"https://cursor.com/"}</script>';
+    const passAff = auditV2OutboundLinks('cursor', mockHtmlAff, mockRecordAff);
+    if (passAff.length !== 0) throw new Error(`Unit test failed (affiliate valid): ${passAff.join('; ')}`);
+
+    // 4. Affiliate tool with raw link (negative)
+    const mockHtmlAffRaw = '<a href="https://cursor.com/" target="_blank" rel="noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><script type="application/ld+json">{"url":"https://cursor.com/"}</script>';
+    const failAffRaw = auditV2OutboundLinks('cursor', mockHtmlAffRaw, mockRecordAff);
+    if (!failAffRaw.some(e => e.includes('outbound link missing'))) throw new Error('Unit test failed: did not catch raw link when affiliate expected');
+
+    // 5. Affiliate tool missing sponsored rel (negative)
+    const mockHtmlAffNoRel = '<a href="https://cursor.com/?ref=whichaipick" target="_blank" rel="noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><p class="tool-v2-affiliate-note">Disclosure</p><script type="application/ld+json">{"url":"https://cursor.com/"}</script>';
+    const failAffRel = auditV2OutboundLinks('cursor', mockHtmlAffNoRel, mockRecordAff);
+    if (!failAffRel.some(e => e.includes('missing rel="sponsored noopener noreferrer"'))) throw new Error('Unit test failed: did not catch missing sponsored rel');
+
+    // 6. Affiliate tool missing disclosure note (negative)
+    const mockHtmlAffNoNote = '<a href="https://cursor.com/?ref=whichaipick" target="_blank" rel="sponsored noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><script type="application/ld+json">{"url":"https://cursor.com/"}</script>';
+    const failAffNote = auditV2OutboundLinks('cursor', mockHtmlAffNoNote, mockRecordAff);
+    if (!failAffNote.some(e => e.includes('missing affiliate disclosure note'))) throw new Error('Unit test failed: did not catch missing disclosure note');
+
+    // 7. Non-affiliate tool incorrectly displaying affiliate disclosure note (negative)
+    const mockHtmlNonAffWithNote = '<a href="https://example.com/" target="_blank" rel="noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><p class="tool-v2-affiliate-note">Disclosure</p><script type="application/ld+json">{"url":"https://example.com/"}</script>';
+    const failNonAffWithNote = auditV2OutboundLinks('mock-non-aff', mockHtmlNonAffWithNote, mockRecordNonAff);
+    if (!failNonAffWithNote.some(e => e.includes('must not include affiliate disclosure note'))) throw new Error('Unit test failed: did not catch unexpected disclosure note on non-affiliate page');
+
+    // 8. Invalid affiliate protocol e.g. javascript: falls back to safe website URL
+    const mockRecordBadAff = { website_url: 'https://example.com/', affiliate_url: 'javascript:alert(1)' };
+    const mockHtmlBadAff = '<a href="https://example.com/" target="_blank" rel="noopener noreferrer" class="tool-v2-btn-primary">Visit Website</a><script type="application/ld+json">{"url":"https://example.com/"}</script>';
+    const passBadAff = auditV2OutboundLinks('mock-bad-aff', mockHtmlBadAff, mockRecordBadAff);
+    if (passBadAff.length !== 0) throw new Error('Unit test failed: invalid affiliate protocol was not rejected');
+})();
+
 const tools = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'tools.json'), 'utf8'));
 const toolIds = tools.map(t => t.id);
 
@@ -86,7 +183,8 @@ for (const id of toolIds) {
         if (html.includes('/css/global.css')) fail(`${id}: V2 must not load preview css/global.css`);
         if (!html.includes(`href="/compare#tools=${id}"`)) fail(`${id}: V2 missing compare link`);
         const record = tools.find(t => t.id === id);
-        if (record.website_url && !html.includes(`href="${record.website_url.replace(/&/g, '&amp;')}"`)) fail(`${id}: V2 official website link missing`);
+        const linkErrors = auditV2OutboundLinks(id, html, record);
+        for (const err of linkErrors) fail(err);
     }
 }
 

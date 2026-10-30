@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "description": "Tool Page V2 canary allowlist. Inert unless the build sets TOOL_PAGE_V2_CANARY=1.",
-  "expectedCount": 20,
+  "expectedCount": 21,
   "approvedToolIds": [
     "aider",
     "activepieces",
@@ -22,6 +22,7 @@
     "clearscope",
     "buffer-ai-assistant",
     "brisk-teaching",
-    "readai"
+    "readai",
+    "cursor"
   ]
 }
