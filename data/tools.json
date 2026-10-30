@@ -274150,7 +274150,8 @@
       "https://www.synthesia.io/",
       "https://www.synthesia.io/pricing",
       "https://help.synthesia.io/en/articles/15972650-what-are-synthesia-s-pricing-plans",
-      "https://docs.synthesia.io/reference/introduction"
+      "https://docs.synthesia.io/reference/introduction",
+      "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
     ],
     "fieldProvenance": {
       "canonicalName": {
@@ -274231,18 +274232,20 @@
       "pricingModel": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "hasFreeTier": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "hasFreeTrial": {
         "method": "unknown",
@@ -274419,42 +274422,47 @@
       "pricingScope": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "startingPrice": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "priceCurrency": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "billingPeriod": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "startingPlan": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "trialDays": {
         "method": "unknown",
@@ -274465,10 +274473,11 @@
       "freeTierScope": {
         "method": "official_source_review",
         "sources": [
-          "https://www.synthesia.io/pricing"
+          "https://www.synthesia.io/pricing",
+          "https://help.synthesia.io/en/articles/17217419-what-s-changing-in-synthesia-plans-on-october-1-2026"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Synthesia hosted avatar-video service; API availability and download rights vary by plan."
+        "checkedAt": "2026-10-30",
+        "note": "Verified October 1, 2026 plan update. Starter USD 19/mo ($14/mo annual), Pro USD 89/mo (was Creator), Basic includes 10 mins/mo and 500 credits."
       },
       "capabilityScope": {
         "method": "official_source_review",
@@ -274498,7 +274507,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official product and pricing sources reviewed on 22 September 2026. Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial.",
-    "pricingEvidenceNotes": "Free plan at USD 0 with 3 mins/month and limited avatars; Starter USD 19 billed monthly ($14/month billed annually at $168/year) with 10 mins/month and no watermark. Creator at USD 89/month ($59/mo annual) and custom Enterprise.",
+    "pricingEvidenceNotes": "Basic USD 0 with 10 mins/month video, 3 survey responses, 500 monthly credits, and 60 mins Interactive Avatar; Starter USD 19 billed monthly ($14/month billed annually at $168/year, promotional USD 9 first month) with 1,250 additional monthly credits and no watermark. Pro (formerly Creator) USD 89 billed monthly ($59/mo billed annually at $708/year, promotional USD 49 first month) with 6,500 credits. Enterprise custom quote.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -274524,14 +274533,14 @@
     "reviewedAt": "2026-09-22",
     "nextReviewDate": "2026-10-22",
     "publicationScope": "directory_summary_only",
-    "sourceSummary": "Synthesia turns scripts into avatar-led videos for training and communication. Its Basic plan lets users explore creation with a limited credit allowance. Paid plans add capabilities such as video downloads and removal of the Synthesia logo. Separate API families support video generation, uploads, billing and interactive avatars, with eligibility defined for each API.",
+    "sourceSummary": "Synthesia turns scripts into avatar-led videos for training and communication. Its free Basic plan includes 10 minutes of video, 3 survey responses, and 500 credits per month. Paid plans (Starter and Pro) add usage-credit pools, watermark removal, and video downloads. Separate API families support video generation, uploads, billing, and interactive avatars, with eligibility defined for each API.",
     "pricingScope": "Synthesia hosted avatar-video service; API availability and download rights vary by plan.",
     "startingPrice": 19,
     "priceCurrency": "USD",
     "billingPeriod": "month",
     "startingPlan": "Starter",
     "trialDays": null,
-    "freeTierScope": "Limited Basic creation allowance; downloads and branding controls are paid features.",
+    "freeTierScope": "Basic plan includes 10 minutes/month video allowance, 3 survey responses, 500 credits/month, and one-time 60 minutes Interactive Avatar allowance; downloads and watermark removal are paid features.",
     "capabilityScope": "Use through the desktop web editor. API families have different plan requirements. Download and logo-removal rights require paid-plan review. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
     "licenseType": "unknown",
     "licenseName": null,
@@ -274616,7 +274625,7 @@
       "API access is not available on all plans",
       "Per-video or credit costs can add up at high volumes"
     ],
-    "pricing_overview": "<p>Synthesia offers a free tier for limited personal use with restricted avatar and video options. Paid plans are priced per seat per month and increase the number of videos, avatar choices, and advanced features such as custom avatars and analytics. Enterprise plans offer custom pricing, API access, and dedicated account support.</p>",
+    "pricing_overview": "<p>Synthesia offers a free Basic plan with 10 minutes of video per month, 3 survey responses, 500 general credits, and a 60-minute one-time interactive avatar allowance. The Starter plan ($19/month standard, or $14/month billed annually at $168/year) adds a 1,250 monthly credit pool, watermark-free videos, and downloads. The Pro plan (formerly Creator, $89/month standard, or $59/month billed annually at $708/year) includes 6,500 monthly credits and advanced production features, with multi-seat scaling up to Pro 8×. Enterprise plans offer custom volume, dedicated support, and full API access.</p>",
     "comparison_summary": "<p>Synthesia's primary competitors in the AI avatar video space are HeyGen and D-ID. HeyGen has gained notable traction with real-time video translation features. D-ID targets more developer-focused use cases via API. For general video generation without avatars, Runway and Pika are different category tools. Synthesia differentiates on enterprise readiness, avatar variety, and multilingual production capabilities.</p>",
     "legacyPrimaryUseCases": [
       "avatar-led training videos",
@@ -274630,7 +274639,7 @@
     "category": "Video & Audio",
     "pricing_model": "freemium",
     "has_free_tier": true,
-    "description": "Synthesia turns scripts into avatar-led videos for training and communication. Its Basic plan lets users explore creation with a limited credit allowance. Paid plans add capabilities such as video downloads and removal of the Synthesia logo. Separate API families support video generation, uploads, billing and interactive avatars, with eligibility defined for each API."
+    "description": "Synthesia turns scripts into avatar-led videos for training and communication. Its free Basic plan includes 10 minutes of video, 3 survey responses, and 500 credits per month. Paid plans (Starter and Pro) add usage-credit pools, watermark removal, and video downloads. Separate API families support video generation, uploads, billing, and interactive avatars, with eligibility defined for each API."
   },
   {
     "id": "synthflow",

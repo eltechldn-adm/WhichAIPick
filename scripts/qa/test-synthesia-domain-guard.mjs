@@ -86,6 +86,15 @@ check('data/tools.json fieldProvenance contains no references to synthesia.com',
   assert.ok(!fpStr.includes('synthesia.com'), 'fieldProvenance still contains synthesia.com');
 });
 
+check('data/tools.json has accurate October 2026 plan facts (Basic, Starter, Pro)', () => {
+  assert.ok(synTool.pricingEvidenceNotes.includes('10 mins/month'), 'Missing 10 mins/month in pricingEvidenceNotes');
+  assert.ok(synTool.pricingEvidenceNotes.includes('500 monthly credits'), 'Missing 500 monthly credits in pricingEvidenceNotes');
+  assert.ok(synTool.pricingEvidenceNotes.includes('Pro (formerly Creator)'), 'Missing Pro (formerly Creator) in pricingEvidenceNotes');
+  assert.ok(synTool.pricingEvidenceNotes.includes('6,500 credits'), 'Missing 6,500 credits in pricingEvidenceNotes');
+  assert.ok(synTool.freeTierScope.includes('10 minutes/month'), 'Missing 10 minutes/month in freeTierScope');
+  assert.ok(synTool.pricing_overview.includes('Pro plan (formerly Creator'), 'Missing Pro (formerly Creator in pricing_overview');
+});
+
 // 2. Verify data/tools.phase11.staged.json
 const stagedTools = JSON.parse(fs.readFileSync(STAGED_PATH, 'utf8'));
 const synStaged = stagedTools.find(t => t.id === 'synthesia');
@@ -145,6 +154,12 @@ check('tools/synthesia/index.html Schema.org url is https://www.synthesia.io/', 
 
 check('tools/synthesia/index.html favicon points to synthesia.io', () => {
   assert.ok(synHtml.includes('domain=synthesia.io'), 'Favicon does not point to synthesia.io');
+});
+
+check('tools/synthesia/index.html renders updated October 2026 pricing overview', () => {
+  assert.ok(synHtml.includes('Pro plan (formerly Creator'), 'Missing Pro plan (formerly Creator in tools/synthesia/index.html');
+  assert.ok(synHtml.includes('1,250 monthly credit pool'), 'Missing 1,250 credit pool in tools/synthesia/index.html');
+  assert.ok(synHtml.includes('6,500 monthly credits'), 'Missing 6,500 credits in tools/synthesia/index.html');
 });
 
 // 7. Verify category/video-audio/index.html
