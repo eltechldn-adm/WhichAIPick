@@ -36,24 +36,24 @@ check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, { expectedCount
 check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, { expectedCount: 2, approvedToolIds: ['aider', 'Bad ID!'] }), 'malformed ID'));
 check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, { expectedCount: 2, approvedToolIds: ['aider', 7] }), 'non-string ID'));
 check(() => throwsCanary(() => run({ TOOL_PAGE_V2_CANARY: '1' }, null), 'null manifest'));
-const many20 = Array.from({ length: 20 }, (_, i) => `tool-${i}`);
-const many21 = Array.from({ length: 21 }, (_, i) => `tool-${i}`);
-const many22 = Array.from({ length: 22 }, (_, i) => `tool-${i}`);
-const manyTools = [...tools, ...many22.map(id => ({ id, directoryEligible: true }))];
-check(() => assert.strictEqual(MAX_CANARY_TOOLS, 21, 'MAX_CANARY_TOOLS is exactly 21 for Cursor migration'));
+const many45 = Array.from({ length: 45 }, (_, i) => `tool-${i}`);
+const many46 = Array.from({ length: 46 }, (_, i) => `tool-${i}`);
+const many47 = Array.from({ length: 47 }, (_, i) => `tool-${i}`);
+const manyTools = [...tools, ...many47.map(id => ({ id, directoryEligible: true }))];
+check(() => assert.strictEqual(MAX_CANARY_TOOLS, 46, 'MAX_CANARY_TOOLS is exactly 46 for Wave C migration'));
 check(() => assert.deepStrictEqual(
-    resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 20, approvedToolIds: many20 }) }),
-    many20,
-    '20 valid IDs accepted'
+    resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 45, approvedToolIds: many45 }) }),
+    many45,
+    '45 valid IDs accepted'
 ));
 check(() => assert.deepStrictEqual(
-    resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 21, approvedToolIds: many21 }) }),
-    many21,
-    '21 valid IDs accepted (exact Cursor migration cap)'
+    resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 46, approvedToolIds: many46 }) }),
+    many46,
+    '46 valid IDs accepted (exact Wave C migration cap)'
 ));
 check(() => throwsCanary(
-    () => resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 22, approvedToolIds: many22 }) }),
-    '22 IDs rejected (cap prevents exceeding MAX_CANARY_TOOLS=21)'
+    () => resolveCanarySelection({ root: '/x', tools: manyTools, env: { TOOL_PAGE_V2_CANARY: '1' }, manifestReader: () => ({ expectedCount: 47, approvedToolIds: many47 }) }),
+    '47 IDs rejected (cap prevents exceeding MAX_CANARY_TOOLS=46)'
 ));
 check(() => throwsCanary(() => resolveCanarySelection({ root: '/nonexistent-root', tools, env: { TOOL_PAGE_V2_CANARY: '1' } }), 'missing manifest file'));
 

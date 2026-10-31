@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "description": "Tool Page V2 canary allowlist. Inert unless the build sets TOOL_PAGE_V2_CANARY=1.",
-  "expectedCount": 21,
+  "expectedCount": 46,
   "approvedToolIds": [
     "aider",
     "activepieces",
@@ -23,6 +23,31 @@
     "buffer-ai-assistant",
     "brisk-teaching",
     "readai",
-    "cursor"
+    "cursor",
+    "10web",
+    "adalo",
+    "ada",
+    "artbreeder",
+    "bardeen",
+    "consensus",
+    "copyai",
+    "coursebox",
+    "descript",
+    "elevenlabs",
+    "firefliesai",
+    "gamma",
+    "grain",
+    "midjourney",
+    "otterai",
+    "perplexity-ai",
+    "prowritingaid",
+    "replit",
+    "runway",
+    "scholarcy",
+    "surfer-seo",
+    "synthesia",
+    "twain",
+    "writesonic",
+    "zapier-ai"
   ]
 }

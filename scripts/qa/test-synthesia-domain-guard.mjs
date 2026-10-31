@@ -134,26 +134,30 @@ check('Evidence ledger entry E0260 has synthesia.io and reviewedAt 2026-10-30', 
   assert.ok(!e260.finding.includes('synthesia.com'));
 });
 
-// 6. Verify tools/synthesia/index.html (V1 page)
+// 6. Verify tools/synthesia/index.html (V1 or V2 page)
 const synHtml = fs.readFileSync(SYNTHESIA_HTML_PATH, 'utf8');
 
 check('tools/synthesia/index.html contains no references to synthesia.com', () => {
   assert.ok(!synHtml.includes('synthesia.com'), 'tools/synthesia/index.html contains synthesia.com');
 });
 
-check('tools/synthesia/index.html renders non-affiliate Visit Synthesia CTA to synthesia.io', () => {
+check('tools/synthesia/index.html renders non-affiliate Visit CTA to synthesia.io', () => {
   assert.ok(synHtml.includes('href="https://www.synthesia.io/"'), 'Missing link to synthesia.io');
-  assert.ok(synHtml.includes('>Visit Synthesia</a>'), 'Missing Visit Synthesia CTA label');
+  assert.ok(synHtml.includes('>Visit Synthesia</a>') || synHtml.includes('>Visit Website</a>'), 'Missing Visit CTA label');
   assert.ok(!synHtml.includes('(Affiliate Link)'), 'Still contains (Affiliate Link) label');
   assert.ok(!synHtml.includes('class="tool-affiliate-note"'), 'Still contains affiliate note disclosure');
+  assert.ok(!synHtml.includes('class="tool-v2-affiliate-note"'), 'Still contains V2 affiliate note disclosure');
 });
 
 check('tools/synthesia/index.html Schema.org url is https://www.synthesia.io/', () => {
-  assert.ok(synHtml.includes('"url": "https://www.synthesia.io/"'), 'Schema.org url does not match');
+  assert.ok(synHtml.includes('"url": "https://www.synthesia.io/"') || synHtml.includes('"url":"https://www.synthesia.io/"'), 'Schema.org url does not match');
 });
 
-check('tools/synthesia/index.html favicon points to synthesia.io', () => {
-  assert.ok(synHtml.includes('domain=synthesia.io'), 'Favicon does not point to synthesia.io');
+check('tools/synthesia/index.html favicon does not link to synthesia.com', () => {
+  assert.ok(!synHtml.includes('domain=synthesia.com'), 'Favicon points to synthesia.com');
+  if (synHtml.includes('class="tool-detail-page"')) {
+    assert.ok(synHtml.includes('domain=synthesia.io'), 'V1 Favicon does not point to synthesia.io');
+  }
 });
 
 check('tools/synthesia/index.html renders updated October 2026 pricing overview', () => {
