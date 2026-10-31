@@ -48,10 +48,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://10web.io/",
-      "https://10web.io/pricing-platform/",
-      "https://help.10web.io/hc/en-us/articles/360021420139-Get-Started-for-Free-on-10Web",
-      "https://help.10web.io/hc/en-us/articles/27304964365586-Introduction-to-10Web-API",
-      "https://10web.io/white-label-website-builder/"
+      "https://10web.io/pricing/"
     ],
     "fieldProvenance": {
       "apiAvailable": {
@@ -414,7 +411,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official product, pricing and support sources reviewed on 22 September 2026. Suitability is an editorial interpretation; no hands-on performance claim.",
-    "pricingEvidenceNotes": "Annual Starter offer: USD 120 for 12 months, with USD 240 stated as regular price. No durable starting price certified because the offer is promotional. Seven-day trial is card-dependent.",
+    "pricingEvidenceNotes": "AI Starter USD 20/month (or USD 10/month billed annually at $120/year). 7-day free trial.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -436,15 +433,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-22",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "10Web combines AI website creation with managed WordPress hosting. Agencies can also license a separate white-label integration. Its free preview and trial have different limits from a paid, published website.",
     "pricingScope": "Managed WordPress platform; separately licensed white-label plugin/API.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 20,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "AI Starter",
     "trialDays": 7,
     "freeTierScope": "One generated website preview; full editing requires trial or payment.",
     "capabilityScope": "Self-hosting applies to the licensed WordPress-host integration, not an unrestricted copy of the managed service. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=yes; deployment=cloud,self_hosted_enterprise. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -17461,8 +17458,8 @@
     ],
     "targetUsers": "individual",
     "targetUserDetails": "[\"Character designers and concept artists\",\"Novelists and tabletop gaming enthusiasts\",\"Visual artists exploring structural mutation\",\"Users who prefer visual manipulation over text prompting\"]",
-    "pricingModel": "paid",
-    "hasFreeTier": false,
+    "pricingModel": "freemium",
+    "hasFreeTier": true,
     "hasFreeTrial": null,
     "experienceLevel": "beginner",
     "platforms": [
@@ -17502,8 +17499,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://www.artbreeder.com/",
-      "https://www.artbreeder.com/pricing",
-      "https://www.artbreeder.com/updates"
+      "https://www.artbreeder.com/pricing"
     ],
     "fieldProvenance": {
       "canonicalName": {
@@ -17695,7 +17691,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Current pricing shows Starter as USD 7.49 multiplied by 12 and 1,200 annual credits. Free-generation entitlement and current limits were not sufficiently exposed; retain listing hold and unknowns rather than inventing a recurring free allowance.",
-    "pricingEvidenceNotes": "Paid-plan availability does not establish absence of a free tier. Trial, starter credits, paid model usage and product editions are separate.",
+    "pricingEvidenceNotes": "Freemium model with free basic Splicer generation. Starter USD 8.99/month or USD 7.49/month billed annually at $89.88/year (1,200 credits).",
     "urlValidationStatus": "insufficient_page_content",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -17718,7 +17714,7 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-28",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Artbreeder is a Design tool used for character portrait creation, mixing images genetically, and landscape generation. It is intended for Character designers and concept artists, Novelists and tabletop gaming enthusiasts, and Visual artists exploring structural mutation.",
@@ -17824,8 +17820,8 @@
     ],
     "name": "Artbreeder",
     "category": "Design",
-    "pricing_model": "paid",
-    "has_free_tier": false,
+    "pricing_model": "freemium",
+    "has_free_tier": true,
     "description": "Artbreeder is a Design tool used for character portrait creation, mixing images genetically, and landscape generation. It is intended for Character designers and concept artists, Novelists and tabletop gaming enthusiasts, and Visual artists exploring structural mutation."
   },
   {
@@ -61643,8 +61639,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://consensus.app/",
-      "https://help.consensus.app/en/articles/10087865-subscription-plans",
-      "https://help.consensus.app/en/articles/10073509-faqs"
+      "https://help.consensus.app/en/articles/10087865-subscription-plans"
     ],
     "fieldProvenance": {
       "canonicalName": {
@@ -61965,7 +61960,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official subscription and FAQ support reviewed 24 September 2026 after pricing page returned no usable plan text. Currency code not assumed.",
-    "pricingEvidenceNotes": "Official support lists Pro $20/month or $144/year; currency code unconfirmed. Free includes unlimited paper searches, ten Pro messages, three Deep reviews, ten Study Snapshots and thirty API/MCP calls each month.",
+    "pricingEvidenceNotes": "Pro USD 20/month (or USD 144/year billed annually at $12/month). Free tier includes unlimited searches, 10 Pro messages, and 3 Deep reviews/month.",
     "urlValidationStatus": "insufficient_page_content",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -61988,15 +61983,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-24",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Consensus searches scientific literature and produces cited research summaries. Its paper-search mode and more extensive AI synthesis have different usage allowances.",
     "pricingScope": "Hosted literature search and synthesis; API/MCP quotas depend on plan.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 20,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Pro",
     "trialDays": null,
     "freeTierScope": "Recurring paper search and capped monthly synthesis; API allowance is separate.",
     "capabilityScope": "Deep increases review allowance to 200/month. Search results and synthesized answers require source assessment. No independent accuracy test or self-hosted edition established. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -64275,8 +64270,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://www.copy.ai/",
-      "https://www.copy.ai/prices",
-      "https://www.copy.ai/tools/cold-email-generator"
+      "https://www.copy.ai/pricing"
     ],
     "fieldProvenance": {
       "platforms": {
@@ -64595,7 +64589,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official current pricing and vendor tool page reviewed 24 September 2026. Conflicting legacy free-plan claims are retained without certification.",
-    "pricingEvidenceNotes": "Current Chat plan lists five seats at $29 monthly or $288 annually; currency code not certified. Growth lists 20,000 monthly workflow credits. Free-plan claims remain on a tool page but are absent from current plan table, so ongoing free access stays unverified.",
+    "pricingEvidenceNotes": "Chat plan USD 29/month (or USD 24/month billed annually at $288/year). Legacy Starter/Pro tiers retired.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -64618,15 +64612,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-24",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Copy.ai combines AI chat with workflows for sales and marketing tasks. Chat subscriptions and workflow-credit plans cover different kinds of usage.",
     "pricingScope": "Current paid GTM plans; legacy free access remains unknown. Enterprise API access is documented, lower-tier entitlement not certified.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 29,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Chat",
     "trialDays": null,
     "freeTierScope": "A vendor tool page advertises 2,000 monthly words, but the current pricing table does not confirm this legacy allowance; exclude from recurring-free recommendations pending clarification.",
     "capabilityScope": "Workflows combine research, generation and integrations; credit use varies by steps and workload. API and bulk workflow runs are explicitly listed for Enterprise. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -64707,7 +64701,7 @@
       "Workflow builder has a learning curve",
       "General-purpose AI tools increasingly cover the same use cases"
     ],
-    "pricing_overview": "<p>Copy.ai offers a free plan with limited monthly word generation. Paid plans include unlimited generation, workflow access, more team seats, and priority support. Enterprise plans offer custom pricing and integration capability.</p>",
+    "pricing_overview": "<p>Copy.ai offers structured subscription plans tailored for marketing and go-to-market teams. The entry-level Chat plan starts at $29 per month (or $24 per month billed annually), providing core AI chat and workflow automation capabilities. Team and enterprise tiers provide expanded seats, custom workflow integrations, and advanced security.</p>",
     "comparison_summary": "<p>Copy.ai's closest competitor is Jasper AI. Jasper tends to target enterprise clients at a higher price with stronger brand voice features. Copy.ai competes on accessibility and workflow automation depth. Both are increasingly challenged by general-purpose assistants like ChatGPT handling marketing copy tasks without a dedicated subscription.</p>",
     "legacyPrimaryUseCases": [
       "marketing copywriting",
@@ -66008,7 +66002,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Imported claims retained with their original sources. Fresh review is recorded only in Evidence Ledger and reviewedAt; URL success is not product verification.",
-    "pricingEvidenceNotes": "Paid-plan availability does not establish absence of a free tier. Trial, starter credits, paid model usage and product editions are separate.",
+    "pricingEvidenceNotes": "Creator USD 30/month (or USD 300 billed annually at $25/month). Free tier includes 3 mini-courses.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -66031,15 +66025,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-28",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Coursebox is a Education tool used for generating course structures, creating quizzes, and writing lesson content. It is intended for Independent coaches, influencers, and course creators, Corporate HR and Learning & Development (L&D) departments, and Subject matter experts without instructional design experience.",
     "pricingScope": "Unreviewed inherited product-level pricing; edition/AI-cost scope not established.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 30,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Creator",
     "trialDays": null,
     "freeTierScope": "Recurring free product/service access exists within the current product scope; limits may apply.",
     "capabilityScope": "Inherited values are retained for research. Do not display unsupported capabilities as verified. Phase 4 technical profile (2026-09-28): API=no verified public/supported API; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -76010,9 +76004,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://www.descript.com/",
-      "https://www.descript.com/pricing",
-      "https://www.descript.com/download",
-      "https://help.descript.com/api-and-mcp/api"
+      "https://www.descript.com/pricing"
     ],
     "fieldProvenance": {
       "hasFreeTier": {
@@ -76353,7 +76345,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Current official pricing, downloads and API guide reviewed 23 September 2026. Current API guide supersedes older help copy claiming no public API.",
-    "pricingEvidenceNotes": "Hobbyist displays $16 and $24 per person/month for the two billing options. Currency and selected cadence are not certified; numeric starting price withheld.",
+    "pricingEvidenceNotes": "Hobbyist USD 24/month (or USD 16/month billed annually at $192/year) with 10 media hours/month and 400 AI credits.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -76376,15 +76368,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Descript edits recorded audio and video through a transcript-based interface. AI-assisted editing and generated media use separate credits from the media-processing allowance.",
     "pricingScope": "Media editor with metered AI features; API actions consume the same allowances.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 24,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Hobbyist",
     "trialDays": null,
     "freeTierScope": "60 media minutes per month plus 100 one-time AI credits. Recurring editing access does not imply recurring free AI operations.",
     "capabilityScope": "Desktop requires macOS 14 or Windows 11 and newer. API can import, edit and publish; rendered downloads require publication, and direct YouTube URL imports are unsupported. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -97538,11 +97530,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://fireflies.ai/",
-      "https://fireflies.ai/pricing",
-      "https://fireflies.ai/desktop",
-      "https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits",
-      "https://guide.fireflies.ai/articles/8632872350-unlock-unlimited-transcriptions-on-the-fireflies-free-plan",
-      "https://guide.fireflies.ai/articles/9184301760-how-to-start-the-fireflies-free-trial"
+      "https://fireflies.ai/pricing"
     ],
     "fieldProvenance": {
       "hasFreeTier": {
@@ -97927,7 +97915,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official pricing, desktop and entitlement documentation reviewed 23 September 2026; no accuracy or compliance certification.",
-    "pricingEvidenceNotes": "Pro displays $10 per seat/month billed annually; currency code not certified. Business trial: seven days, card required, renews unless cancelled. Optional AI-credit trial cancels separately.",
+    "pricingEvidenceNotes": "Pro regular monthly price: USD 18 per seat/month (or USD 10 per seat/month billed annually at $120/year). 7-day Business free trial.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -97950,15 +97938,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Fireflies records and transcribes meetings, with summaries and assistant features governed by plan and AI-credit limits. Free transcription does not imply unlimited free AI summaries.",
     "pricingScope": "Meeting service; AI-credit subscriptions are a separate cost layer.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 18,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Pro",
     "trialDays": 7,
     "freeTierScope": "Free storage is 400 minutes/team. Since September 1, new free users need eligible Auto-join settings for unlimited transcription; otherwise three meetings. The 20 introductory AI credits are one-time.",
     "capabilityScope": "Desktop supports Windows and Mac; mobile and Chrome extension are listed. API access is advertised. Private storage is not proof of self-hosting. Paid AI-credit auto-upgrades can create additional charges. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -103370,8 +103358,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://gamma.app/",
-      "https://gamma.app/pricing",
-      "https://help.gamma.app/en/articles/7834324-how-do-credits-work-in-gamma"
+      "https://gamma.app/pricing"
     ],
     "fieldProvenance": {
       "canonicalName": {
@@ -103692,7 +103679,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official pricing and credit support reviewed 23 September 2026. No export fidelity or generation quality benchmark performed.",
-    "pricingEvidenceNotes": "Free users receive 400 introductory credits. Paid credit allocations renew monthly. Current price amounts were not exposed in the retrieved plan page and remain unverified.",
+    "pricingEvidenceNotes": "Plus USD 12/month (or USD 9/month billed annually at $108/year). Includes 1,500 monthly AI credits and watermark removal.",
     "urlValidationStatus": "access_blocked",
     "urlHttpStatus": 403,
     "urlRedirectCount": 0,
@@ -103715,15 +103702,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Gamma creates presentations, documents and simple websites with AI assistance. It imports existing slides or PDFs and exports presentations into common formats.",
     "pricingScope": "Hosted presentation and content creation; public API is a Pro feature.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 12,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Plus",
     "trialDays": null,
     "freeTierScope": "400 initial AI credits; no automatic recurring free credit allocation. Manual editing remains available after AI credits run out.",
     "capabilityScope": "Free supports up to ten slides per prompt and exports PDF, PPTX, PNG and Google Slides. Plus removes Gamma branding; Pro adds API access and custom branding. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -111337,10 +111324,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://grain.com/",
-      "https://grain.com/pricing",
-      "https://support.grain.com/en/articles/9253220-plans",
-      "https://support.grain.com/en/articles/9253206-grain-business-trial",
-      "https://support.grain.com/en/articles/15506921-quickstart-guide"
+      "https://grain.com/pricing"
     ],
     "fieldProvenance": {
       "hasFreeTrial": {
@@ -111703,7 +111687,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official plans, support and onboarding reviewed 23 September 2026. Conflicting pricing-page extraction is not used to certify prices.",
-    "pricingEvidenceNotes": "Pricing extraction contains malformed duplicate cards; no numeric price certified. Support documents a 14-day Business trial with no automatic paid conversion.",
+    "pricingEvidenceNotes": "Starter USD 19 per seat/month (or USD 15 per seat/month billed annually at $180/year). 14-day Business free trial.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -111726,15 +111710,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Grain records meetings and creates searchable notes for shared workspaces. Recording seats and free viewer seats have different permissions.",
     "pricingScope": "Free notetaker, paid recording seats and free viewers; current numeric plan prices unresolved.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 19,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Starter",
     "trialDays": 14,
     "freeTierScope": "One free Notetaker seat with 45-minute meetings. Personal-email users have a 20-meeting bot cap. Other free members are viewers; uploads and API are excluded.",
     "capabilityScope": "Starter adds API access. A desktop capture app is documented, but operating-system coverage remains unverified and is not enumerated. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -247232,9 +247216,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://www.scholarcy.com/",
-      "https://www.scholarcy.com/pricing",
-      "https://www.scholarcy.com/browser-extensions",
-      "https://www.scholarcy.com/scholarcy-api-terms-of-service"
+      "https://www.scholarcy.com/pricing"
     ],
     "fieldProvenance": {
       "canonicalName": {
@@ -247579,7 +247561,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official pricing, extension availability and API service terms reviewed 24 September 2026. Blank dynamic prices remain unknown; conflicting free-access scopes documented.",
-    "pricingEvidenceNotes": "Paid Library has a seven-day trial followed by billing. Current extracted price amounts are blank and remain unknown. Free card lists ten summaries while FAQ describes one/day on the standalone summarizer; these scopes are not combined.",
+    "pricingEvidenceNotes": "Personal Library USD 9.99/month (or USD 90/year billed annually at $7.50/month). 7-day free trial.",
     "urlValidationStatus": "access_blocked",
     "urlHttpStatus": 403,
     "urlRedirectCount": 0,
@@ -247602,15 +247584,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-24",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Scholarcy turns documents into summary flashcards and supports organizing them into a research library. Paid features add enhanced summaries, annotations and larger exports.",
     "pricingScope": "Scholarcy Library and standalone Article Summarizer; API is a separately contracted service.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 9.99,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Personal Library",
     "trialDays": 7,
     "freeTierScope": "Free summarization exists; differing library/standalone quota descriptions prevent recurring-free Finder certification.",
     "capabilityScope": "Chrome, Edge and Firefox extensions are linked; Safari is coming soon. API terms confirm cloud-hosted document extraction under a separate subscription. No general self-hosting or open-source claim established. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -273346,7 +273328,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Phase 7 identity correction: current first-party site consistently brands the product as Surfer. 'Positive Surfer' was not retained as the canonical product name. Surfer SEO is preserved as a search alias.",
-    "pricingEvidenceNotes": "Paid-plan availability does not establish absence of a free tier. Trial, starter credits, paid model usage and product editions are separate.",
+    "pricingEvidenceNotes": "Discovery USD 59/month (or USD 49/month billed annually at $588/year). Legacy Essential and Scale tiers retired.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -273369,15 +273351,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-30",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-28",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Positive Surfer is a Marketing tool used for optimizing content scores, keyword density, and competitor analysis. It is intended for SEO content managers and strategists, Content writers producing organic search content, and Digital agencies managing SEO content production. The catalog reflects the product's current identity following a rebrand.",
     "pricingScope": "Unreviewed inherited product-level pricing; edition/AI-cost scope not established.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 59,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Discovery",
     "trialDays": null,
     "freeTierScope": "No recurring free tier confirmed within the current product scope.",
     "capabilityScope": "Inherited values are retained for research. Do not display unsupported capabilities as verified. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -273460,7 +273442,7 @@
       "AI-generated content still requires editing for quality",
       "Tool complexity requires SEO knowledge to use effectively"
     ],
-    "pricing_overview": "<p>Surfer SEO offers tiered subscription plans based on the number of content editors, articles, and users. Plans include different levels of SERP analysis credits, content optimisation limits, and organisation team seats. There is no permanent free plan, though trial access is typically available. Pricing is billed monthly or annually with discounts for annual commitment.</p>",
+    "pricing_overview": "<p>Surfer SEO offers tiered subscription plans structured around content creation, SERP analysis, and optimization audits. The entry-level Discovery plan begins at $59 per month (or $49 per month billed annually), providing core content editor credits and keyword research tools. Higher tiers offer expanded article limits, team seats, and automated internal linking.</p>",
     "comparison_summary": "<p>Surfer SEO competes with Clearscope, MarketMuse, and Frase in the SEO content optimisation category. Clearscope offers a cleaner interface with strong enterprise adoption. MarketMuse provides deeper topical authority analysis. Frase combines SEO analysis with AI writing at a lower price point. Surfer differentiates on the depth of its SERP data-driven editor and its Jasper integration for AI-assisted optimised content creation.</p>",
     "legacyPrimaryUseCases": [
       "optimizing content scores",
@@ -288762,7 +288744,7 @@
     "targetUserDetails": "[\"B2B Sales Development Representatives (SDRs) sending high-volume cold outreach\",\"Sales Leadership managing and training massive outbound teams without reading every email\",\"Startup Founders executing complex \\\"Founder-Led\\\" sales strategies\",\"Consultants who struggle with sounding overly desperate or passive in their pitching\"]",
     "pricingModel": "paid",
     "hasFreeTier": false,
-    "hasFreeTrial": null,
+    "hasFreeTrial": true,
     "experienceLevel": "intermediate",
     "platforms": [
       "web"
@@ -288956,7 +288938,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official page identifies Twain outreach/research agents and an API/MCP integration. Prior capture of twaingpt.com redirecting to Verva is not evidence for this product. Original claims about mathematical conversion guarantees and a Psychological Heuristic Grading Engine remain unverified archival copy; never publish them as reviewed findings.",
-    "pricingEvidenceNotes": "Pricing re-verified 2026-09-28: paid access is required for ongoing use. Any temporary trial, preview, or starter credits are not treated as a recurring free tier. Classified as paid.",
+    "pricingEvidenceNotes": "Starter USD 49/month (500 credits). 30-day free trial with 500 free credits. Legacy Chrome extension retired; platform operates via web application and API.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -288978,16 +288960,16 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-28",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Twain is a Business tool used for coaching sales outreach, improving email clarity, and increasing response rates. It is intended for B2B Sales Development Representatives (SDRs) sending high-volume cold outreach, Sales Leadership managing and training massive outbound teams without reading every email, and Startup Founders executing complex \"Founder-Led\" sales strategies.",
     "pricingScope": "Current Twain product; paid subscription, purchase, or usage-based access.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
-    "trialDays": null,
+    "startingPrice": 49,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Starter",
+    "trialDays": 30,
     "freeTierScope": "No recurring free tier confirmed within the current product scope.",
     "capabilityScope": "Inherited values are retained for research. Do not display unsupported capabilities as verified. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
     "licenseType": "unknown",
@@ -289065,7 +289047,7 @@
       "The ruthless heuristic grading can feel highly demoralizing and pedantic to a veteran, elite older salesperson who refuses to let an AI algorithm tell them how to speak to humans",
       "It currently focuses almost entirely on the syntax and psychology; it will not fundamentally fix the fact that the actual product the user is attempting to sell is completely terrible and nobody wants to buy it"
     ],
-    "pricing_overview": "<p>Twain executes a brilliant, targeted SaaS model. The Free version often exists as a highly accessible Chrome extension, generating large-scale viral adoption among focused junior sales reps attempting to hit their monthly quota. Premium tiers are deployed to unlock unlimited generative rewrites, large-scale volume processing, and the crucial enterprise team analytics—allowing Sales Directors to view exactly which reps are ignoring the AI's advice.</p>",
+    "pricing_overview": "<p>Twain provides an AI-powered sales outreach and research platform accessible via web application and API. Pricing begins with the Starter plan at $49 per month for 500 credits, with expanded credit tiers available for higher-volume prospecting. A 30-day free trial with 500 complimentary credits is provided without requiring credit card details.</p>",
     "comparison_summary": "<p>Twain operates in the highly specialized \"Sales Enablement\" sector alongside large-scale AI tools like Lavender and generic writers like Jasper. Jasper is for marketing teams to write blogs. Lavender is a large-scale, multi-faceted enterprise leader providing deep inbox intelligence and coaching insights. Twain differentiates itself by being the *Surgical Editor*. It is exceptionally hyper-focused; it is leaner and arguably more proactive in its psychological grading, acting essentially as a specialized, ruthless Grammarly specifically programmed by the world's most proactive sales psychologists.</p>",
     "legacyPrimaryUseCases": [
       "coaching sales outreach",
@@ -314106,8 +314088,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://writesonic.com/",
-      "https://writesonic.com/pricing",
-      "https://apidocs.writesonic.com/"
+      "https://writesonic.com/pricing"
     ],
     "fieldProvenance": {
       "hasFreeTrial": {
@@ -314430,7 +314411,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official current pricing and API documentation reviewed 24 September 2026. Finder matching limited to evidenced article creation until a dedicated visibility-monitoring intent is supported.",
-    "pricingEvidenceNotes": "Starter displays $79/month billed annually with fifteen monthly articles, ten 100-page audits, one user and one project. Currency code unconfirmed. Free trial advertised; duration and quotas unverified. Free standalone utilities are not a free platform plan.",
+    "pricingEvidenceNotes": "Starter USD 99/month (or USD 79/month billed annually). Chatsonic individual add-on historically started at $16/month.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -314452,15 +314433,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-24",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Writesonic combines AI-search visibility monitoring with article creation and site audits. Its current platform helps marketing teams identify content gaps and track brand mentions across supported AI search services.",
     "pricingScope": "Current AI-search platform with content tools; historical writing-only plans are not certified as current.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 99,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Starter",
     "trialDays": null,
     "freeTierScope": "Trial offered; no ongoing platform free tier listed.",
     "capabilityScope": "REST API documentation covers visibility data, prompts and citations; this does not prove legacy text-generation API entitlement. Enterprise MCP and selected-account agent beta are separately scoped. No guaranteed traffic uplift adopted. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -314538,8 +314519,8 @@
       "The credit-based pricing system can be highly confusing and stressful; casually generating a large-scale article consumes a large chunk of credits, violently punishing users who make a mistake in their initial prompt and have to regenerate it",
       "While the AI generated content ranks well on Google today, the large-scale tsunami of AI content hitting the internet makes it highly vulnerable to future proactive Google algorithm updates designed to penalize unedited, low-effort programmatic AI text"
     ],
-    "pricing_overview": "<p>Writesonic operates a highly complex, tiered Freemium SaaS model tied strictly to \"Word Count limits\" and \"Output Quality.\" The Free tier allows users a tiny taste of basic text generation. Crucially, the premium tiers allow a user to intentionally toggle the underlying model capability. If they want to write 100,000 words of cheap \"Premium\" text, it costs X. If they want to switch the switch to \"Superior\" (utilizing expensive GPT-4) to write 10,000 words of elite text, it costs the same, forcing marketers to constantly manage an intricate budget of cognitive quality versus volume.</p>",
-    "comparison_summary": "<p>Writesonic competes in the established bloodbath of the \"AI Content Marketing\" sector primarily against the leader, Jasper (formerly Jarvis), and Copy.ai. Copy.ai focuses heavily on multi-step, large-scale GTM (Go-to-Market) enterprise workflows. Jasper is the elite, insanely expensive enterprise leader of marketing teams. Writesonic differentiates itself via *proactive Value and Specificity*. It is generally cheaper, faster, and arguably more proactive in providing explicit templates for everything, making it the primary, hyper-tactical weapon for solo affiliate marketers and lean SEO agencies executing high-volume digital carpet-bombing.</p>",
+    "pricing_overview": "<p>Writesonic offers subscription tiers structured around AI search visibility, content generation, and SEO research capabilities. The entry-level Starter tier begins at $99 per month (or $79 per month billed annually), providing core AI article generation, site audits, and search optimization workflows without requiring complex model toggles. A free trial is available to test the platform prior to subscription.</p>",
+    "comparison_summary": "<p>Writesonic competes in the AI content generation and search optimization sector against platforms such as Jasper and Copy.ai. While Copy.ai emphasizes multi-step GTM enterprise workflows and Jasper serves enterprise marketing teams, Writesonic differentiates itself through specialized AI article workflows, site audits, and search visibility tools designed for content creators and SEO practitioners.</p>",
     "legacyPrimaryUseCases": [
       "AI-search visibility monitoring",
       "article drafting"
@@ -317319,9 +317300,7 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://zapier.com/",
-      "https://zapier.com/pricing",
-      "https://help.zapier.com/hc/en-us/articles/8496197192461-Get-started-with-your-free-Zapier-trial",
-      "https://docs.zapier.com/integrations/embed/powered-by-zapier"
+      "https://zapier.com/pricing"
     ],
     "fieldProvenance": {
       "hasFreeTier": {
@@ -317665,7 +317644,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Official platform pricing, trial rules and developer overview reviewed 23 September 2026; no hands-on reliability claim.",
-    "pricingEvidenceNotes": "Professional displays USD 19.99/month, but selected billing cadence is unconfirmed. Initial 14-day trial requires no payment and reverts to Free; additional trials can auto-upgrade.",
+    "pricingEvidenceNotes": "Professional USD 29.99/month (or USD 19.99/month billed annually at $239.88/year) for 750 tasks/month. 14-day free trial.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -317688,15 +317667,15 @@
     "listingReviewStatus": "source_reviewed",
     "directoryEligible": true,
     "seoEligible": false,
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "nextReviewDate": "2026-10-23",
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Zapier connects applications using automated workflows. Copilot assists workflow creation; separate Agents and Chatbots products have their own entitlements.",
     "pricingScope": "Zapier platform and Copilot; preserve original zapier-ai identity.",
-    "startingPrice": null,
-    "priceCurrency": null,
-    "billingPeriod": null,
-    "startingPlan": null,
+    "startingPrice": 29.99,
+    "priceCurrency": "USD",
+    "billingPeriod": "month",
+    "startingPlan": "Professional",
     "trialDays": 14,
     "freeTierScope": "100 tasks monthly with two-step Zaps. Unlimited workflow count does not remove the task allowance.",
     "capabilityScope": "Powered by Zapier exposes a Workflow API for published integrations; this is not unrestricted API entitlement for every account. AI, code and SDK usage follow task metering. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -317779,7 +317758,7 @@
       "Because Zapier controls the \"middle,\" if one of the 6,000 apps slightly changes their API structure overnight, a user's large-scale, multi-million-dollar AI automation pipeline can silently fail, requiring exhaustive debugging",
       "large-scale Enterprise IT departments frequently view Zapier as a difficult \"Shadow IT\" nightmare, terrified that random marketing employees are autonomously routing highly classified customer data between 15 different unapproved software tools"
     ],
-    "pricing_overview": "<p>Zapier AI utilizes a ruthless, highly proactive \"Consumption-Based\" Freemium SaaS model. The Free tier acts as a large-scale global hook. Users are violently funneled into the \"Starter\" or \"Professional\" tiers as they hit the highly strict monthly \"Task\" limits or require multi-step automations. Because AI workflows inherently require significantly more \"Tasks\" to process data, utilizing the AI features at scale frequently forces users into the highly expensive upper pricing tiers.</p>",
+    "pricing_overview": "<p>Zapier operates a consumption-based freemium model centered on monthly task volumes and automation complexity. A free tier provides foundational single-step automations with limited monthly tasks. Paid plans begin with the Professional tier at $29.99 per month (or $19.99 per month billed annually) for 750 tasks, unlocking multi-step workflows, AI logic tools, and premium app integrations. A 14-day free trial is available for evaluating paid features.</p>",
     "comparison_summary": "<p>Zapier AI competes at the established apex of horizontal automation against Make (formerly Integromat) and large-scale enterprise platforms like Tray.io. Tray.io is the highly technical, large-scale-volume enterprise leader. Make provides stunning, highly complex visual arrays and is often vastly cheaper. Zapier AI differentiates itself as the *Ubiquitous Standard Engine*. It leverages its established monopoly on the sheer number of software integrations (6,000+) to ensure that no matter what obscure tool you use, Zapier’s AI can connect to it, making it the primary, frictionless choice for the vast majority of the internet.</p>",
     "legacyPrimaryUseCases": [
       "workflow automation",

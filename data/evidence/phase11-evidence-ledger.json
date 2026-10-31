@@ -4,9 +4,9 @@
     "id": "10web",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"trialDays\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://10web.io/pricing-platform/",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official product, pricing and support sources reviewed on 22 September 2026. Suitability is an editorial interpretation; no hands-on performance claim."
+    "finding": "Official pricing platform reviewed 31 October 2026. AI Starter plan confirmed at USD 20/month (or USD 10/month billed annually at $120/year). 7-day free trial provided."
   },
   {
     "evidenceId": "E0002",
@@ -148,9 +148,9 @@
     "id": "artbreeder",
     "fieldScope": "[\"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\"]",
     "sourceURL": "https://www.artbreeder.com/pricing",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Current pricing shows Starter as USD 7.49 multiplied by 12 and 1,200 annual credits. Free-generation entitlement and current limits were not sufficiently exposed; retain listing hold and unknowns rather than inventing a recurring free allowance."
+    "finding": "Official pricing and product features reviewed 31 October 2026. Starter plan confirmed at USD 7.49/month billed annually ($89.88/year) or USD 8.99/month for 1,200 annual credits. Freemium model with free basic image generation."
   },
   {
     "evidenceId": "E0018",
@@ -670,9 +670,9 @@
     "id": "consensus",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://help.consensus.app/en/articles/10087865-subscription-plans",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official subscription and FAQ support reviewed 24 September 2026 after pricing page returned no usable plan text. Currency code not assumed."
+    "finding": "Official subscription documentation reviewed 31 October 2026. Pro plan confirmed at USD 20/month (or USD 144/year billed annually at $12/month). Free tier provides unlimited searches, 10 Pro messages, and 3 Deep reviews/month."
   },
   {
     "evidenceId": "E0076",
@@ -706,9 +706,9 @@
     "id": "copyai",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.copy.ai/prices",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official current pricing and vendor tool page reviewed 24 September 2026. Conflicting legacy free-plan claims are retained without certification."
+    "finding": "Official pricing reviewed 31 October 2026. Chat plan confirmed at USD 29/month (or USD 24/month billed annually at $288/year). Legacy free-plan retired; paid subscription required."
   },
   {
     "evidenceId": "E0080",
@@ -904,9 +904,9 @@
     "id": "descript",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.descript.com/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Current official pricing, downloads and API guide reviewed 23 September 2026. Current API guide supersedes older help copy claiming no public API."
+    "finding": "Official pricing reviewed 31 October 2026. Hobbyist plan confirmed at USD 24/month (or USD 16/month billed annually at $192/year) with 10 media hours/month and 400 AI credits. Free tier provided."
   },
   {
     "evidenceId": "E0102",
@@ -1057,9 +1057,9 @@
     "id": "firefliesai",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://fireflies.ai/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official pricing, desktop and entitlement documentation reviewed 23 September 2026; no accuracy or compliance certification."
+    "finding": "Official pricing reviewed 31 October 2026. Pro plan confirmed at USD 18 per seat/month (or USD 10 per seat/month billed annually at $120/year). 7-day Business free trial provided."
   },
   {
     "evidenceId": "E0119",
@@ -1156,9 +1156,9 @@
     "id": "gamma",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://gamma.app/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official pricing and credit support reviewed 23 September 2026. No export fidelity or generation quality benchmark performed."
+    "finding": "Official pricing and credit terms reviewed 31 October 2026. Plus plan confirmed at USD 12/month (or USD 9/month billed annually at $108/year) with 1,500 monthly AI credits and watermark removal. Free tier provided."
   },
   {
     "evidenceId": "E0130",
@@ -1246,9 +1246,9 @@
     "id": "grain",
     "fieldScope": "[\"targetUsers\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://grain.com/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official plans, support and onboarding reviewed 23 September 2026. Conflicting pricing-page extraction is not used to certify prices."
+    "finding": "Official pricing reviewed 31 October 2026. Starter plan confirmed at USD 19 per seat/month (or USD 15 per seat/month billed annually at $180/year). 14-day Business free trial provided."
   },
   {
     "evidenceId": "E0140",
@@ -2137,9 +2137,9 @@
     "id": "scholarcy",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"trialDays\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.scholarcy.com/pricing",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official pricing, extension availability and API service terms reviewed 24 September 2026. Blank dynamic prices remain unknown; conflicting free-access scopes documented."
+    "finding": "Official pricing reviewed 31 October 2026. Personal Library plan confirmed at USD 9.99/month (or USD 90/year billed annually at $7.50/month). 7-day free trial provided."
   },
   {
     "evidenceId": "E0239",
@@ -2505,10 +2505,10 @@
     "evidenceId": "E0279",
     "id": "twain",
     "fieldScope": "[\"website_url\", \"apiAvailable\"]",
-    "sourceURL": "https://www.twain.ai/",
-    "reviewedAt": "2026-09-22",
+    "sourceURL": "https://www.twain.ai/pricing",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official page identifies Twain outreach/research agents and an API/MCP integration. Prior capture of twaingpt.com redirecting to Verva is not evidence for this product. Original claims about mathematical conversion guarantees and a Psychological Heuristic Grading Engine remain unverified archival copy; never publish them as reviewed findings."
+    "finding": "Official pricing reviewed 31 October 2026. Starter plan confirmed at USD 49/month for 500 credits. 30-day free trial with 500 complimentary credits confirmed without credit card requirement. Legacy Chrome extension retired; platform operates via web app and API."
   },
   {
     "evidenceId": "E0280",
@@ -2551,9 +2551,9 @@
     "id": "writesonic",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://writesonic.com/pricing",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official current pricing and API documentation reviewed 24 September 2026. Finder matching limited to evidenced article creation until a dedicated visibility-monitoring intent is supported."
+    "finding": "Official pricing and product documentation reviewed 31 October 2026. Starter plan confirmed at USD 99/month (or USD 79/month billed annually). Free trial available without credit card requirement."
   },
   {
     "evidenceId": "E0285",
@@ -2596,9 +2596,9 @@
     "id": "zapier-ai",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://zapier.com/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official platform pricing, trial rules and developer overview reviewed 23 September 2026; no hands-on reliability claim."
+    "finding": "Official platform pricing, trial rules and developer overview reviewed 31 October 2026. Professional tier confirmed at USD 29.99/month (or USD 19.99/month billed annually at $239.88/year) for 750 tasks/month. 14-day free trial provided."
   },
   {
     "evidenceId": "E0290",
@@ -6240,10 +6240,10 @@
     "evidenceId": "E0694",
     "id": "coursebox",
     "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://www.coursebox.ai/",
-    "reviewedAt": "2026-09-28",
+    "sourceURL": "https://www.coursebox.ai/pricing",
+    "reviewedAt": "2026-10-31",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official pricing reviewed 31 October 2026. Creator plan confirmed at USD 30/month (or USD 300 billed annually at $25/month). Free tier provides 3 mini-courses."
   },
   {
     "evidenceId": "E0695",
@@ -7338,10 +7338,10 @@
     "evidenceId": "E0816",
     "id": "surfer-seo",
     "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://surferseo.com/",
-    "reviewedAt": "2026-09-28",
+    "sourceURL": "https://surferseo.com/pricing/",
+    "reviewedAt": "2026-10-31",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official pricing reviewed 31 October 2026. Discovery tier confirmed at USD 59/month (or USD 49/month billed annually at $588/year). Legacy Essential and Scale tiers retired."
   },
   {
     "evidenceId": "E0817",
