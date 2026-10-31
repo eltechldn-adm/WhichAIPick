@@ -247,9 +247,9 @@
     "id": "bardeen",
     "fieldScope": "[\"targetUsers\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.bardeen.ai/",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official product, pricing and support sources reviewed on 22 September 2026. Suitability is an editorial interpretation; no hands-on performance claim."
+    "finding": "Official product documentation reviewed 31 October 2026. Browser-native automation extension provides on-page data extraction and workflow integration with Google Sheets, Notion, and CRMs."
   },
   {
     "evidenceId": "E0029",
@@ -535,9 +535,9 @@
     "id": "clearscope",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.clearscope.io/product/write",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official pricing, writing product and integration documentation reviewed on 28 September 2026. Suitability is editorial interpretation; no ranking or performance guarantee adopted."
+    "finding": "Official product documentation reviewed 31 October 2026. Content scoring provides heuristic topic coverage benchmarks without guaranteed search ranking accuracy."
   },
   {
     "evidenceId": "E0061",
@@ -1651,9 +1651,9 @@
     "id": "midjourney",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official product and pricing sources reviewed on 22 September 2026. Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial."
+    "finding": "Official documentation and web creation interface reviewed. Standalone web generation is available at midjourney.com alongside Discord community workflows."
   },
   {
     "evidenceId": "E0185",
@@ -2508,7 +2508,7 @@
     "sourceURL": "https://www.twain.ai/pricing",
     "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official pricing reviewed 31 October 2026. Starter plan confirmed at USD 49/month for 500 credits. 30-day free trial with 500 complimentary credits confirmed without credit card requirement. Legacy Chrome extension retired; platform operates via web app and API."
+    "finding": "Official pricing and product documentation reviewed 31 October 2026. Starter plan confirmed at USD 49/month with 30-day free trial. AI writing coach provides structural and tone feedback on sales drafts without conversion guarantees."
   },
   {
     "evidenceId": "E0280",
@@ -2623,9 +2623,9 @@
     "id": "replit",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://replit.com/",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-10-31",
     "method": "official_source_review",
-    "finding": "Official product and pricing sources reviewed on 22 September 2026. Scope is the directory summary and stated fields; no hands-on evaluation or approval of inherited editorial."
+    "finding": "Official product documentation reviewed 31 October 2026. Core Replit plan confirmed at USD 20/month. Cloud environment provides Replit AI and Replit Agent for natural language software creation and instant deployment."
   },
   {
     "evidenceId": "E0293",
