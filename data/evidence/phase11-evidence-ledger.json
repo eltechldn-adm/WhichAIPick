@@ -7337,11 +7337,11 @@
   {
     "evidenceId": "E0816",
     "id": "surfer-seo",
-    "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://surferseo.com/pricing/",
+    "fieldScope": "identity;category;directory_summary;pricing;free_trial",
+    "sourceURL": "https://surferseo.com/pricing/; https://docs.surferseo.com/en/articles/12944181-how-does-the-surfer-trial-work",
     "reviewedAt": "2026-10-31",
     "method": "source_review",
-    "finding": "Official pricing reviewed 31 October 2026. Discovery tier confirmed at USD 59/month (or USD 49/month billed annually at $588/year). Legacy Essential and Scale tiers retired."
+    "finding": "Official pricing and trial reviewed 31 October 2026. Discovery tier confirmed at USD 59/month (or USD 49/month billed annually at $588/year). 7-day free trial granting Pro plan access verified for new accounts via official help center documentation."
   },
   {
     "evidenceId": "E0817",

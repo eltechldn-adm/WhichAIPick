@@ -273132,7 +273132,7 @@
     "targetUserDetails": "[\"SEO content managers and strategists\",\"Content writers producing organic search content\",\"Digital agencies managing SEO content production\",\"In-house marketing teams with SEO targets\",\"Bloggers targeting search traffic\"]",
     "pricingModel": "paid",
     "hasFreeTier": false,
-    "hasFreeTrial": null,
+    "hasFreeTrial": true,
     "experienceLevel": "intermediate",
     "platforms": [
       "web",
@@ -273177,7 +273177,8 @@
     "recommendationEligible": true,
     "verificationSources": [
       "https://surferseo.com/",
-      "https://surferseo.com/pricing/"
+      "https://surferseo.com/pricing/",
+      "https://docs.surferseo.com/en/articles/12944181-how-does-the-surfer-trial-work"
     ],
     "fieldProvenance": {
       "apiAvailable": {
@@ -273253,9 +273254,12 @@
         "note": "Preserved baseline value; not newly verified."
       },
       "hasFreeTrial": {
-        "method": "unknown",
-        "sources": [],
-        "note": "No sufficiently specific evidence recorded for this field."
+        "method": "official_documentation_review",
+        "sources": [
+          "https://docs.surferseo.com/en/articles/12944181-how-does-the-surfer-trial-work"
+        ],
+        "reviewedAt": "2026-10-31",
+        "note": "Surfer offers a 7-day free trial on the Pro plan for eligible new accounts with billing details required at checkout."
       },
       "experienceLevel": {
         "method": "editorial_experience_rubric_phase2",
@@ -273319,6 +273323,14 @@
         "reviewedAt": "2026-09-28",
         "phase": "phase4_technical_capabilities",
         "meaning": "Normalized current deployment profile using cloud, local, self_hosted, self_hosted_enterprise, or local_worker."
+      },
+      "trialDays": {
+        "method": "official_documentation_review",
+        "sources": [
+          "https://docs.surferseo.com/en/articles/12944181-how-does-the-surfer-trial-work"
+        ],
+        "reviewedAt": "2026-10-31",
+        "note": "7-day trial duration."
       }
     },
     "dataProvenance": {
@@ -273328,7 +273340,7 @@
       "lifecycle": "existing_editorial"
     },
     "evidenceNotes": "Phase 7 identity correction: current first-party site consistently brands the product as Surfer. 'Positive Surfer' was not retained as the canonical product name. Surfer SEO is preserved as a search alias.",
-    "pricingEvidenceNotes": "Discovery USD 59/month (or USD 49/month billed annually at $588/year). Legacy Essential and Scale tiers retired.",
+    "pricingEvidenceNotes": "Discovery USD 59/month (or USD 49/month billed annually at $588/year). Verified 7-day free trial on Pro plan for eligible new accounts (requires billing details at checkout; converts to selected plan unless cancelled before trial ends; https://docs.surferseo.com/en/articles/12944181-how-does-the-surfer-trial-work). Legacy Essential and Scale tiers retired.",
     "urlValidationStatus": "reachable",
     "urlHttpStatus": 200,
     "urlRedirectCount": 0,
@@ -273360,7 +273372,7 @@
     "priceCurrency": "USD",
     "billingPeriod": "month",
     "startingPlan": "Discovery",
-    "trialDays": null,
+    "trialDays": 7,
     "freeTierScope": "No recurring free tier confirmed within the current product scope.",
     "capabilityScope": "Inherited values are retained for research. Do not display unsupported capabilities as verified. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
     "licenseType": "unknown",
