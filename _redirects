@@ -8,38 +8,72 @@
 # (Removed to prevent Cloudflare redirect chains. CF handles this natively)
 /start-here.html /start-here/        301
 
-# ── Legacy browse stub ─────────────────────────────────────────
+# ── Legacy browse & directory stubs ────────────────────────────
 /browse.html        /tools/               301
 /tool.html          /tools/               301
+/tools.html         /tools/               301
+/shortlist          /my-tools/            301
 /shortlist/         /my-tools/            301
+/my-tools.html      /my-tools/            301
+
+# ── Historical navigation aliases ─────────────────────────────
+/quiz               /find                 301
+/quiz/              /find                 301
+/finder             /find                 301
+/finder/            /find                 301
+/categories         /category             301
+/categories/        /category             301
 
 # ── Phase 4.5 Canonical Consolidations ────────────────────────
-/tools/bing-chat/      /tools/microsoft-copilot/ 301
-/tools/breeze-ai/      /tools/hubspot-ai/        301
-/tools/framer-ai/      /tools/framer/            301
-/tools/replit-ai/      /tools/replit/            301
-/tools/perplexity/     /tools/perplexity-ai/     301
-/tools/canva/          /tools/canva-ai/          301
-/tools/pika-labs/      /tools/pika/              301
+/tools/bing-chat        /tools/microsoft-copilot/ 301
+/tools/bing-chat/       /tools/microsoft-copilot/ 301
+/tools/breeze-ai        /tools/hubspot-ai/        301
+/tools/breeze-ai/       /tools/hubspot-ai/        301
+/tools/framer-ai        /tools/framer/            301
+/tools/framer-ai/       /tools/framer/            301
+/tools/replit-ai        /tools/replit/            301
+/tools/replit-ai/       /tools/replit/            301
+/tools/perplexity       /tools/perplexity-ai/     301
+/tools/perplexity/      /tools/perplexity-ai/     301
+/tools/canva            /tools/canva-ai/          301
+/tools/canva/           /tools/canva-ai/          301
+/tools/pika-labs        /tools/pika/              301
+/tools/pika-labs/       /tools/pika/              301
 
 # ── Phase 4.5 Strong Replacements ─────────────────────────────
-/tools/fig/            /tools/amazon-q/          301
-/tools/dall-e-3/       /tools/chatgpt/           301
+/tools/fig              /tools/amazon-q/          301
+/tools/fig/             /tools/amazon-q/          301
+/tools/dall-e-3         /tools/chatgpt/           301
+/tools/dall-e-3/        /tools/chatgpt/           301
 
 # ── Phase 4.5 Category Merges ─────────────────────────────────
+/category/sales             /category/business/  301
 /category/sales/            /category/business/  301
+/category/customer-support  /category/business/  301
 /category/customer-support/ /category/business/  301
 
 # ── Phase 6B.2B Comparison Redirects ────────────────────────
+/compare/claude-vs-chatgpt         /compare/chatgpt-vs-claude/        301
 /compare/claude-vs-chatgpt/        /compare/chatgpt-vs-claude/        301
+/compare/gemini-vs-chatgpt         /compare/chatgpt-vs-gemini/        301
 /compare/gemini-vs-chatgpt/        /compare/chatgpt-vs-gemini/        301
+/compare/perplexity-vs-chatgpt     /compare/chatgpt-vs-perplexity/    301
 /compare/perplexity-vs-chatgpt/    /compare/chatgpt-vs-perplexity/    301
+/compare/github-copilot-vs-cursor  /compare/cursor-vs-github-copilot/ 301
 /compare/github-copilot-vs-cursor/ /compare/cursor-vs-github-copilot/ 301
+/compare/lovable-vs-replit         /compare/replit-vs-lovable/        301
 /compare/lovable-vs-replit/        /compare/replit-vs-lovable/        301
+/compare/bolt-vs-lovable           /compare/lovable-vs-bolt/          301
 /compare/bolt-vs-lovable/          /compare/lovable-vs-bolt/          301
+/compare/leonardo-ai-vs-midjourney /compare/midjourney-vs-leonardo-ai/ 301
 /compare/leonardo-ai-vs-midjourney/ /compare/midjourney-vs-leonardo-ai/ 301
+/compare/chatgpt-images-vs-midjourney /compare/midjourney-vs-chatgpt-images/ 301
 /compare/chatgpt-images-vs-midjourney/ /compare/midjourney-vs-chatgpt-images/ 301
+/compare/midjourney-vs-dalle       /compare/midjourney-vs-chatgpt-images/ 301
 /compare/midjourney-vs-dalle/      /compare/midjourney-vs-chatgpt-images/ 301
+/compare/midjourney-vs-chatgpt     /compare/midjourney-vs-chatgpt-images/ 301
 /compare/midjourney-vs-chatgpt/    /compare/midjourney-vs-chatgpt-images/ 301
+/compare/dalle-vs-midjourney       /compare/midjourney-vs-chatgpt-images/ 301
 /compare/dalle-vs-midjourney/      /compare/midjourney-vs-chatgpt-images/ 301
+/compare/chatgpt-vs-midjourney     /compare/midjourney-vs-chatgpt-images/ 301
 /compare/chatgpt-vs-midjourney/    /compare/midjourney-vs-chatgpt-images/ 301
