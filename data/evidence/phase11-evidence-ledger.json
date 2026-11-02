@@ -4,9 +4,9 @@
     "id": "10web",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"trialDays\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://10web.io/pricing-platform/",
-    "reviewedAt": "2026-10-31",
+    "reviewedAt": "2026-11-02",
     "method": "official_source_review",
-    "finding": "Official pricing platform reviewed 31 October 2026. AI Starter plan confirmed at USD 20/month (or USD 10/month billed annually at $120/year). 7-day free trial provided."
+    "finding": "Official pricing platform and documentation reviewed November 2026. AI Starter plan confirmed at USD 20/month (or USD 10/month billed annually at $120/year) with 7-day free trial. Generates editable WordPress sites on Google Cloud hosting within the extensible WordPress plugin and theme ecosystem."
   },
   {
     "evidenceId": "E0002",
@@ -94,9 +94,9 @@
     "id": "adalo",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.adalo.com/pricing",
-    "reviewedAt": "2026-09-22",
+    "reviewedAt": "2026-11-02",
     "method": "official_source_review",
-    "finding": "Official product, pricing and support sources reviewed on 22 September 2026. Suitability is an editorial interpretation; no hands-on performance claim."
+    "finding": "Official pricing and publishing documentation reviewed November 2026. Free tier allows in-editor building and previewing. Publishing a live custom-domain web app requires a paid Starter plan ($36/mo billed annually), while native Apple App Store and Google Play distribution requires Professional plan ($52/mo billed annually) plus separate third-party developer accounts."
   },
   {
     "evidenceId": "E0012",
@@ -1246,9 +1246,9 @@
     "id": "grain",
     "fieldScope": "[\"targetUsers\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://grain.com/pricing",
-    "reviewedAt": "2026-10-31",
+    "reviewedAt": "2026-11-02",
     "method": "official_source_review",
-    "finding": "Official pricing reviewed 31 October 2026. Starter plan confirmed at USD 19 per seat/month (or USD 15 per seat/month billed annually at $180/year). 14-day Business free trial provided."
+    "finding": "Official pricing and product documentation reviewed November 2026. Starter plan confirmed at USD 19/month (or USD 15/month billed annually) with 14-day trial. Workflows verified for meeting recording, searchable transcripts, highlight video clips, and sharing across Slack and Notion."
   },
   {
     "evidenceId": "E0140",
@@ -1462,9 +1462,9 @@
     "id": "kapwing",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.kapwing.com/pricing",
-    "reviewedAt": "2026-09-27",
+    "reviewedAt": "2026-11-02",
     "method": "official_source_review",
-    "finding": "Official pricing and support reviewed 27 September 2026. Enterprise trial eligibility and workspace-wide quotas must remain visible; no generic consumer paid-plan trial claim."
+    "finding": "Official product and pricing documentation reviewed November 2026. Pro plan confirmed at USD 24/month. Workflow verified for browser-based collaborative editing, subtitle generation, and text-based trimming, differentiated from mobile-first timeline editors like CapCut."
   },
   {
     "evidenceId": "E0164",
@@ -1624,9 +1624,9 @@
     "id": "marketmuse",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\"]",
     "sourceURL": "https://www.marketmuse.com/pricing/",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-11-02",
     "method": "official_source_review",
-    "finding": "Official pricing and research/usage support reviewed 24 September 2026. Finder scope is analysis of content, not unrestricted generated writing; advanced-plan conflict retained."
+    "finding": "Official pricing and product documentation reviewed November 2026. Free tier provides 7-day access. Workflows verified for domain-wide content inventory analysis, topic coverage modeling, and structured content brief generation without ranking guarantees."
   },
   {
     "evidenceId": "E0182",
