@@ -170291,7 +170291,7 @@
     "targetUserDetails": "[\"content strategists\",\"SEO teams\"]",
     "pricingModel": "freemium",
     "hasFreeTier": true,
-    "hasFreeTrial": true,
+    "hasFreeTrial": false,
     "experienceLevel": "beginner",
     "platforms": [
       "web"
