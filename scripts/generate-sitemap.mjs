@@ -13,6 +13,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { isToolIndexable } from './seo/indexing-policy.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
@@ -110,9 +111,9 @@ function generateSitemap() {
         urls = [...urls, ...scanDirectory(dir)];
     });
 
-    // Load tools to filter out noindex ones
+    // Load tools to filter out noindex ones using authoritative indexing policy
     const toolsJson = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'data', 'tools.json'), 'utf8'));
-    const indexableToolIds = new Set(toolsJson.filter(t => !t.contentReviewRequired).map(t => t.id));
+    const indexableToolIds = new Set(toolsJson.filter(isToolIndexable).map(t => t.id));
 
     // Phase 3: generated tool pages
     const toolPages = scanGeneratedPages('tools', PRIORITY.TOOLS).filter(p => {

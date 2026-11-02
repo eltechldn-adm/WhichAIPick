@@ -3,6 +3,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { isCanaryRequested, resolveCanarySelection, CanarySelectionError } from '../tool-page-2/canary-selection.mjs';
+import { isToolIndexable } from '../seo/indexing-policy.mjs';
 
 /**
  * Verifies the FINAL generated /tools/{id}/index.html output (after the complete build),
@@ -210,7 +211,7 @@ const sitemapPath = path.join(ROOT, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
     const sitemap = fs.readFileSync(sitemapPath, 'utf8');
     if (sitemap.includes('tool-page-v2-preview') || sitemap.includes('pages.dev')) fail('Sitemap contains preview URLs');
-    const expectedUrls = tools.filter(t => !t.contentReviewRequired).map(t => `${DOMAIN}/tools/${t.id}/`);
+    const expectedUrls = tools.filter(isToolIndexable).map(t => `${DOMAIN}/tools/${t.id}/`);
     for (const url of expectedUrls) {
         if (countOf(sitemap, new RegExp(`<loc>${url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>`, 'g')) !== 1) fail(`Sitemap membership wrong for ${url}`);
     }

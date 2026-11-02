@@ -1,0 +1,883 @@
+tool_id,tool_name,category,template_version,how_it_works,features,strengths,pricing,strict_visible_words,main_selector_words,boilerplate_count,current_robots,current_sitemap,candidate_decision,target_robots,target_sitemap
+"10web","10Web","Development",V2,NO,YES,YES,YES,1226,613,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"11x","11x","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"360learning","360Learning","Education",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"abridge","Abridge","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"activepieces","ActivePieces","Automation",V2,NO,YES,YES,YES,1246,623,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"ada","Ada","Business",V2,NO,YES,YES,YES,1282,641,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"adalo","Adalo","Development",V2,NO,YES,YES,YES,1406,703,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"adcreativeai","AdCreative.ai","Marketing",V2,NO,YES,YES,YES,1364,682,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"adobe-firefly","Adobe Firefly","Design",V1,YES,YES,YES,YES,1132,566,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"adwisely","Adwisely","Marketing",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"aftershoot","Aftershoot","Design",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"agno","Agno","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ai-studios","AI Studios","Video & Audio",V1,NO,NO,NO,NO,214,107,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ai21-labs","AI21 Labs","Development",V1,YES,YES,YES,YES,1006,503,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"ai2sql","AI2sql","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"aiarty-image-enhancer","Aiarty Image Enhancer","Design",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"aider","Aider","Development",V2,NO,NO,NO,YES,514,257,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"airops","AirOps","Content Creation",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"aisdr","AiSDR","Marketing",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"aisera","Aisera","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"aiva","AIVA","Video & Audio",V1,YES,YES,YES,YES,1142,571,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"akiflow","Akiflow","Productivity",V2,NO,NO,NO,YES,284,142,0,index,follow,YES,PROTECTED_V2_CANARY,index,follow,YES
+"akkio","Akkio","Business",V1,YES,YES,YES,YES,1170,585,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"akool","Akool","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"albert","Albert","Marketing",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"algor-education","Algor Education","Education",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"alphasense","AlphaSense","Research",V1,NO,NO,NO,NO,176,88,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"altered","Altered","Video & Audio",V1,NO,NO,NO,NO,192,96,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"amazon-codewhisperer","Amazon Q Developer","Development",V1,YES,YES,YES,YES,1220,610,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"amazon-q","Amazon Q","Business",V1,YES,YES,YES,YES,1276,638,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"ambience-healthcare","Ambience Healthcare","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"amplemarket","Amplemarket","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"anara","Anara","Research",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"anima","Anima","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"answer-ai","Answer.AI","Education",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"answerthis","AnswerThis","Research",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"anthropic-claude-api","Anthropic Claude API","Development",V1,YES,YES,YES,YES,1060,530,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"antigravity","Antigravity","Development",V1,YES,YES,YES,YES,1148,574,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"anythingllm","AnythingLLM","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"anyword","Anyword","Content Creation",V2,NO,YES,YES,YES,1178,589,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"apify","Apify","Automation",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"apollo","Apollo","Marketing",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"appgyver","SAP Build Apps","Development",V1,YES,YES,YES,YES,1248,624,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"apple-intelligence","Apple Intelligence","Productivity",V1,YES,YES,YES,YES,1278,639,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"aqua-voice","Aqua Voice","Productivity",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"arcads","Arcads","Marketing",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"arize-ai","Arize AI","Development",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"arko-ai","Arko AI","Design",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"artbreeder","Artbreeder","Design",V2,NO,YES,YES,YES,1268,634,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"arthur-ai","Arthur AI","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"artisan","Artisan","Marketing",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"arvow","Arvow","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ashby","Ashby","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"askcodi","AskCodi","Development",V1,YES,YES,YES,YES,1090,545,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"askyourpdf","AskYourPDF","Research",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"assembled","Assembled","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"assemblyai","AssemblyAI","Video & Audio",V2,NO,YES,YES,YES,1274,637,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"async","Async","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"athenahq","AthenaHQ","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"atomicwork","Atomicwork","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"attention","Attention","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"attention-insight","Attention Insight","Design",V1,YES,YES,YES,YES,1136,568,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"audimee","Audimee","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"audiopen","AudioPen","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"audioshake","AudioShake","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"augmedix","Augmedix","Business",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"augment-code","Augment Code","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"auphonic","Auphonic","Video & Audio",V1,NO,NO,NO,NO,178,89,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"automation-anywhere","Automation Anywhere","Automation",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"automator","Automator","Automation",V1,YES,YES,YES,YES,1202,601,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"avoma","Avoma","Productivity",V1,YES,YES,YES,YES,1088,544,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"backstory","Backstory","Business",V1,NO,NO,NO,NO,178,89,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"balto","Balto","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bardeen","Bardeen","Automation",V2,NO,YES,YES,YES,1286,643,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"base44","Base44","Business",V1,YES,YES,YES,YES,2094,1047,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"baseten","Baseten","Development",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"beatoven","Beatoven","Video & Audio",V1,YES,YES,YES,YES,1140,570,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"beautifulai","Beautiful.ai","Design",V2,NO,YES,YES,YES,1082,541,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"bee","Bee","Productivity",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"beforesunset-ai","BeforeSunset AI","Productivity",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"better-analyst","Better Analyst","Business",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bhuman","BHuman","Video & Audio",V1,NO,NO,NO,NO,196,98,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bika-ai","Bika.ai","Automation",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bito","Bito","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"blackbox-ai","BlackBox AI","Development",V1,YES,YES,YES,YES,1062,531,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"bland-ai","Bland AI","Automation",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"blaze","Blaze","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bluedot","Bluedot","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"blueprint","Blueprint","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bluewillow","BlueWillow","Design",V1,YES,YES,YES,YES,1256,628,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"boldvoice","BoldVoice","Education",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bolt","Bolt.new","Development",V1,YES,YES,YES,YES,2226,1113,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"booke-ai","Booke AI","Business",V1,YES,YES,YES,YES,1244,622,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"boomy","Boomy","Video & Audio",V1,YES,YES,YES,YES,1156,578,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"botika","Botika","Design",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"botpress","Botpress","Business",V2,NO,YES,YES,YES,1274,637,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"botsonic","Botsonic","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"braintrust","Braintrust","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"brand24","Brand24","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"brandmark","Brandmark","Design",V1,YES,YES,YES,YES,1184,592,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"brandwatch","Brandwatch","Marketing",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"brave-leo","Brave Leo","Productivity",V1,NO,NO,NO,NO,164,82,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bricks","Bricks","Business",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"brighthire","BrightHire","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"brisk-teaching","Brisk Teaching","Education",V2,NO,YES,YES,YES,1296,648,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"browse-ai","Browse AI","Automation",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"browser-use","Browser Use","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"browserbase","Browserbase","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"bubble","Bubble","Development",V1,YES,YES,YES,YES,984,492,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"buffer-ai-assistant","Buffer AI Assistant","Marketing",V2,NO,YES,YES,YES,1572,786,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"builder-io","Builder.io","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"byword","Byword","Content Creation",V1,NO,NO,NO,NO,166,83,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"canva-ai","Canva AI","Design",V1,YES,YES,YES,YES,1314,657,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"capacities","Capacities","Productivity",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"capcut","CapCut","Video & Audio",V1,YES,YES,YES,YES,1006,503,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"captions","Captions","Video & Audio",V1,NO,NO,NO,NO,212,106,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cartesia","Cartesia","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"casetext-cocounsel","Thomson Reuters CoCounsel","Business",V1,YES,YES,YES,YES,1318,659,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"castmagic","Castmagic","Video & Audio",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"celtra","Celtra","Marketing",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cerebras","Cerebras","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"certainly","Certainly","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chalkie","Chalkie","Education",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chatbase","Chatbase","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chatbox","Chatbox","Productivity",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chatfuel","Chatfuel","Business",V1,YES,YES,YES,YES,1290,645,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"chatgpt","ChatGPT","Productivity",V1,YES,YES,YES,YES,1046,523,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"chatgpt-advanced-data-analysis","ChatGPT Advanced Data Analysis","Research",V1,YES,YES,YES,YES,1314,657,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"chathub","ChatHub","Productivity",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chatpdf","ChatPDF","Research",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chattermill","Chattermill","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"checksub","Checksub","Video & Audio",V1,NO,NO,NO,NO,186,93,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"chorusai","Chorus by ZoomInfo","Business",V1,YES,YES,YES,YES,1286,643,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"chroma","Chroma","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"claid","Claid","Design",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"clari","Clari","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"claude","Claude","Productivity",V2,NO,YES,YES,YES,1086,543,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"clay","Clay","Marketing",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cleanlab","Cleanlab","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cleanuppictures","Cleanup.pictures","Design",V1,YES,YES,YES,YES,1104,552,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"cleanvoice","Cleanvoice","Video & Audio",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"clearscope","Clearscope","Marketing",V2,NO,YES,YES,YES,1436,718,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"cleft","Cleft","Productivity",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cleo","Cleo","Business",V1,YES,YES,YES,YES,1312,656,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"clerkio","Clerk.io","Marketing",V1,YES,YES,YES,YES,1334,667,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"clickup-ai","ClickUp AI","Productivity",V1,YES,YES,YES,YES,1036,518,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"cline","Cline","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"clipchamp","Clipchamp","Video & Audio",V1,YES,YES,YES,YES,988,494,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"clipdrop","Clipdrop","Design",V1,YES,YES,YES,YES,998,499,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"clipping-magic","Clipping Magic","Design",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cloudflare-workers-ai","Cloudflare Workers AI","Development",V1,YES,YES,YES,YES,1242,621,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"coassemble","Coassemble","Education",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"coda-ai","Superhuman Docs AI","Productivity",V1,YES,YES,YES,YES,1094,547,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"codeant-ai","CodeAnt AI","Development",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"codeium","Devin Desktop","Development",V1,YES,YES,YES,YES,1068,534,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"coderabbit","CodeRabbit","Development",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"codescene","CodeScene","Development",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"codex-openai","Codex (OpenAI)","Development",V1,YES,YES,YES,YES,1050,525,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"coefficient","Coefficient","Business",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cognigy","Cognigy","Business",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cognii","Cognii","Education",V1,YES,YES,YES,YES,1392,696,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"cohere-api","Cohere API","Development",V1,YES,YES,YES,YES,1056,528,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"colormind","Colormind","Design",V1,YES,YES,YES,YES,1238,619,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"colossyan","Colossyan","Video & Audio",V1,YES,YES,YES,YES,1172,586,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"common-room","Common Room","Marketing",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"composio","Composio","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"condens","Condens","Research",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"conker","Conker","Education",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"consensus","Consensus","Research",V2,NO,YES,YES,YES,1216,608,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"contentbot","ContentBot","Content Creation",V1,YES,YES,YES,YES,1094,547,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"contentshake-ai","ContentShake AI","Content Creation",V1,YES,YES,YES,YES,1400,700,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"contentstudio","ContentStudio","Content Creation",V1,YES,YES,YES,YES,1382,691,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"continue","Continue","Development",V1,YES,YES,YES,YES,1406,703,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"conversica","Conversica","Marketing",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"coohom","Coohom","Design",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"copyai","Copy.ai","Content Creation",V2,NO,YES,YES,YES,974,487,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"copymatic","Copymatic","Content Creation",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"copysmith","Copysmith","Content Creation",V1,YES,YES,YES,YES,1106,553,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"cosine","Cosine","Development",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"coursebox","Coursebox","Education",V2,NO,YES,YES,YES,1350,675,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"craft","Craft","Productivity",V1,YES,YES,YES,YES,1330,665,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"craiyon","Craiyon","Design",V1,YES,YES,YES,YES,956,478,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"crawl4ai","Crawl4AI","Development",V2,NO,NO,NO,YES,284,142,0,index,follow,YES,PROTECTED_V2_CANARY,index,follow,YES
+"creatify","Creatify","Video & Audio",V1,YES,YES,YES,YES,1254,627,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"cresta","Cresta","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"crewai","CrewAI","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"curipod","Curipod","Education",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cursor","Cursor","Development",V2,NO,YES,YES,YES,1426,713,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"customgpt","CustomGPT","Business",V1,NO,NO,NO,NO,166,83,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"cutout-pro","Cutout.Pro","Design",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"d-id","D-ID","Video & Audio",V1,YES,YES,YES,YES,980,490,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"darrow","Darrow","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dataiku","Dataiku","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dataloop","Dataloop","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"datarobot","DataRobot","Research",V2,NO,YES,YES,YES,1304,652,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"debuild","Debuild","Development",V1,YES,YES,YES,YES,1414,707,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"decagon","Decagon","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"decktopus","Decktopus","Design",V1,YES,YES,YES,YES,1218,609,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"deep-image","Deep Image","Design",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"deepai","DeepAI","Development",V1,YES,YES,YES,YES,1078,539,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"deepgram","Deepgram","Video & Audio",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"deepinfra","DeepInfra","Development",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"deepl","DeepL","Productivity",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"deepscribe","DeepScribe","Business",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"defog","Defog","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"demandbase","Demandbase","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"describely","Describely","Content Creation",V1,YES,YES,YES,YES,1436,718,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"descript","Descript","Video & Audio",V2,NO,YES,YES,YES,1172,586,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"descript-overdub","Descript Overdub","Video & Audio",V1,YES,YES,YES,YES,1384,692,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"diffit","Diffit","Education",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dify","Dify","Development",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"digen","Digen","Video & Audio",V1,NO,NO,NO,NO,210,105,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dimensions","Dimensions","Research",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dixa","Dixa","Business",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"docling","Docling","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"docsbot","DocsBot","Business",V1,NO,NO,NO,NO,274,137,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"docsumo","Docsumo","Automation",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"docyt","Docyt","Business",V1,YES,YES,YES,YES,1450,725,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"donotpay","DoNotPay","Business",V1,YES,YES,YES,YES,1076,538,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"dora-run","Dora","Design",V1,YES,YES,YES,YES,2156,1078,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"dovetail","Dovetail","Research",V1,NO,NO,NO,NO,170,85,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dreamstudio","Brand Studio","Design",V1,YES,YES,YES,YES,1154,577,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"drift","Drift","Business",V1,YES,YES,YES,YES,1524,762,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"dubverse","Dubverse","Video & Audio",V1,NO,NO,NO,NO,194,97,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"duck-ai","Duck.ai","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"duolingo-max","Duolingo Max","Education",V1,YES,YES,YES,YES,1168,584,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"durable","Durable","Development",V1,YES,YES,YES,YES,1122,561,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"dust","Dust","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dyad","Dyad","Development",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"dzine","Dzine","Design",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"e2b","E2B","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"easy-peasy-ai","Easy-Peasy.AI","Content Creation",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"edge-impulse","Edge Impulse","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"educaidor","Educaidor","Education",V1,YES,YES,YES,YES,1434,717,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"eightfold-ai","Eightfold AI","Business",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"elai","Elai","Video & Audio",V1,NO,NO,NO,NO,196,98,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"eleos-health","Eleos Health","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"elevenlabs","ElevenLabs","Video & Audio",V2,NO,YES,YES,YES,1166,583,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"elicit","Elicit","Research",V1,YES,YES,YES,YES,1046,523,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"ellipsis","Ellipsis","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"elsa-speak","ELSA Speak","Education",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"emastered","eMastered","Video & Audio",V1,NO,NO,NO,NO,202,101,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"encord","Encord","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"enterpret","Enterpret","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"equals","Equals","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"erase-bg","Erase.bg","Design",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"eve","Eve","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"evenup","EvenUp","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"evoto","Evoto","Design",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"exa","Exa","Development",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"explainpaper","Explainpaper","Research",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"extend","Extend","Automation",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"factors-ai","Factors.ai","Marketing",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"factory","Factory","Development",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"fadr","Fadr","Video & Audio",V1,NO,NO,NO,NO,212,106,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"fal","fal","Development",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"fathom","Fathom","Productivity",V1,YES,YES,YES,YES,1038,519,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"feedhive","FeedHive","Marketing",V1,YES,YES,YES,YES,1518,759,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"fellow","Fellow","Productivity",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"fiddler-ai","Fiddler AI","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"figma","Figma","Design",V1,YES,YES,YES,YES,1080,540,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"filevine","Filevine","Business",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"finalround-ai","FinalRound AI","Education",V1,YES,YES,YES,YES,1446,723,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"finance-pal","Finance Pal","Business",V1,YES,YES,YES,YES,1530,765,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"finch","Finch","Design",V1,YES,YES,YES,YES,1738,869,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"findem","Findem","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"firecrawl","Firecrawl","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"firefliesai","Fireflies.ai","Productivity",V2,NO,YES,YES,YES,1076,538,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"fireworks-ai","Fireworks AI","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"flair-ai","Flair AI","Design",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"flick","Flick","Marketing",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"fliki","Fliki","Video & Audio",V1,YES,YES,YES,YES,1010,505,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"flutterflow","FlutterFlow","Development",V1,YES,YES,YES,YES,990,495,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"forethought","Forethought","Business",V1,YES,YES,YES,YES,1482,741,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"framer","Framer","Design",V1,YES,YES,YES,YES,1308,654,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"frase","Frase","Content Creation",V1,YES,YES,YES,YES,1046,523,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"freed","Freed","Business",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"freshdesk-ai","Freshdesk AI","Business",V1,YES,YES,YES,YES,1110,555,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"friendliai","FriendliAI","Development",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"functionize","Functionize","Development",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"fyxer","Fyxer","Productivity",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"galileo","Galileo","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"galileo-ai","Google Stitch","Design",V1,YES,YES,YES,YES,1478,739,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"gamma","Gamma","Design",V2,NO,YES,YES,YES,1030,515,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"gemini-notebook","Gemini Notebook","Research",V1,NO,NO,NO,NO,192,96,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"genmo","Genmo","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"giskard","Giskard","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"github-copilot","GitHub Copilot","Development",V2,NO,YES,YES,YES,1234,617,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"gitlab-duo","GitLab Duo","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gizmo","Gizmo","Education",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"glass-health","Glass Health","Research",V1,YES,YES,YES,YES,1536,768,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"glean","Glean","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"glide","Glide Classic","Development",V1,YES,YES,YES,YES,1016,508,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"gling","Gling","Video & Audio",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gong","Gong","Business",V1,YES,YES,YES,YES,1092,546,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"goodie","Goodie","Marketing",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"google-ai-studio","Google AI Studio","Development",V1,YES,YES,YES,YES,1082,541,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"google-flow-music","Google Flow Music","Video & Audio",V1,NO,NO,NO,NO,242,121,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"google-gemini","Google Gemini","Productivity",V1,YES,YES,YES,YES,940,470,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"gorgias","Gorgias","Business",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gpt-for-work","GPT for Work","Business",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gpt-researcher","GPT Researcher","Research",V1,NO,NO,NO,NO,170,85,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gpt4all","GPT4All","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gradescope-ai","Gradescope AI","Education",V1,YES,YES,YES,YES,1466,733,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"grain","Grain","Productivity",V2,NO,YES,YES,YES,1286,643,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"grammarly","Grammarly","Content Creation",V1,YES,YES,YES,YES,1006,503,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"granola","Granola","Productivity",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"greptile","Greptile","Development",V1,NO,NO,NO,NO,132,66,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gridlex","Gridlex","Business",V1,YES,YES,YES,YES,1740,870,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"grok","Grok","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"groq","Groq","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"growthbar","GrowthBar","Marketing",V1,YES,YES,YES,YES,1746,873,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"guardrails-ai","Guardrails AI","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gumloop","Gumloop","Automation",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"gupshup","Gupshup","Business",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"h2o-ai","H2O.ai","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hailuo-ai","Hailuo AI","Video & Audio",V1,NO,NO,NO,NO,226,113,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"happy-scribe","Happy Scribe","Video & Audio",V1,YES,YES,YES,YES,1588,794,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"haptik","Haptik","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"harvey-ai","Harvey AI","Business",V1,YES,YES,YES,YES,1558,779,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"haystack","Haystack","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hebbia","Hebbia","Research",V1,NO,NO,NO,NO,168,84,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hedra","Hedra","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"heidi","Heidi","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"helicone","Helicone","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"help-scout-ai","Help Scout AI","Business",V1,YES,YES,YES,YES,1558,779,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"heptabase","Heptabase","Productivity",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hex","Hex","Research",V1,YES,YES,YES,YES,1414,707,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"heygen","HeyGen","Video & Audio",V1,YES,YES,YES,YES,960,480,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"higgsfield","Higgsfield","Video & Audio",V1,NO,NO,NO,NO,208,104,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hireez","hireEZ","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hirevue","HireVue","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hitpaw-fotorpea","HitPaw FotorPea","Design",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"homestyler","Homestyler","Design",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hootsuite-insights","Hootsuite Insights","Marketing",V1,YES,YES,YES,YES,1524,762,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"hoppy-copy","Hoppy Copy","Marketing",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hostinger-ai-builder","Hostinger AI Builder","Development",V1,YES,YES,YES,YES,1842,921,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"hubspot-ai","HubSpot AI","Business",V1,YES,YES,YES,YES,1398,699,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"hugging-face","Hugging Face","Development",V1,YES,YES,YES,YES,952,476,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"humata","Humata","Research",V1,NO,NO,NO,NO,166,83,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hume-ai","Hume AI","Video & Audio",V1,NO,NO,NO,NO,208,104,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hunch","Hunch","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hypefury","Hypefury","Marketing",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"hyperwrite","HyperWrite","Content Creation",V1,YES,YES,YES,YES,1072,536,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"hypotenuse-ai","Hypotenuse AI","Content Creation",V1,YES,YES,YES,YES,1344,672,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"icertis","Icertis","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ideogram","Ideogram","Design",V1,YES,YES,YES,YES,1106,553,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"immersive-translate","Immersive Translate","Productivity",V1,NO,NO,NO,NO,216,108,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"inbox-zero","Inbox Zero","Productivity",V1,NO,NO,NO,NO,166,83,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"inkeep","Inkeep","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"instantlyai","Instantly.ai","Marketing",V1,YES,YES,YES,YES,1516,758,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"intercom-fin","Intercom Fin","Business",V1,YES,YES,YES,YES,1090,545,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"interior-ai","Interior AI","Design",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"invideo","InVideo","Video & Audio",V1,YES,YES,YES,YES,978,489,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"iris-ai","Iris.ai","Research",V1,NO,NO,NO,NO,178,89,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ironclad","Ironclad","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"jacquard","Jacquard","Marketing",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"jamie","Jamie","Productivity",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"jan","Jan","Development",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"jasper-ai","Jasper AI","Content Creation",V1,YES,YES,YES,YES,986,493,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"jenni-ai","Jenni AI","Research",V1,YES,YES,YES,YES,1372,686,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"jetbrains-junie","JetBrains Junie","Development",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"jina-ai","Jina AI","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"joggai","JoggAI","Marketing",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"juicebox","Juicebox","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"julius-ai","Julius AI","Research",V1,YES,YES,YES,YES,1404,702,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"jungle","Jungle","Education",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"junia-ai","Junia AI","Content Creation",V1,NO,NO,NO,NO,190,95,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"juro","Juro","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kaedim","Kaedim","Design",V1,NO,NO,NO,NO,132,66,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kaiber","Kaiber","Video & Audio",V1,NO,NO,NO,NO,198,99,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kapa-ai","Kapa.ai","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kapwing","Kapwing","Video & Audio",V2,NO,YES,YES,YES,1178,589,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"keatext","Keatext","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"keenious","Keenious","Research",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"khan-academy-khanmigo","Khan Academy Khanmigo","Education",V1,YES,YES,YES,YES,1136,568,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"khoj","Khoj","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"khroma","Khroma","Design",V1,YES,YES,YES,YES,1550,775,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"kickresume","Kickresume","Productivity",V1,YES,YES,YES,YES,1780,890,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"kilo","Kilo","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kimi","Kimi","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kiro","Kiro","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kits-ai","Kits AI","Video & Audio",V1,NO,NO,NO,NO,208,104,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"klap","Klap","Video & Audio",V1,NO,NO,NO,NO,188,94,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kling-ai","Kling AI","Video & Audio",V1,NO,NO,NO,NO,212,106,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"knowt","Knowt","Education",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"koala","Koala","Marketing",V1,NO,NO,NO,NO,170,85,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kognitos","Kognitos","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kommunicate","Kommunicate","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"kore-ai","Kore.ai","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"krea","Krea","Video & Audio",V1,NO,NO,NO,NO,224,112,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"krisp","Krisp","Video & Audio",V1,YES,YES,YES,YES,1026,513,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"kustomer-ai","Kustomer AI","Business",V1,YES,YES,YES,YES,1626,813,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"label-studio","Label Studio","Development",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"labelbox","Labelbox","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lalalai","Lalal.ai","Video & Audio",V1,YES,YES,YES,YES,1594,797,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lancedb","LanceDB","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"landbot","Landbot","Marketing",V1,YES,YES,YES,YES,1652,826,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"landingai","LandingAI","Development",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"landr","LANDR","Video & Audio",V1,NO,NO,NO,NO,208,104,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"langchain","LangChain","Development",V1,YES,YES,YES,YES,1178,589,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"langflow","Langflow","Development",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"langfuse","Langfuse","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"langotalk","Langotalk","Education",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"languagetool","LanguageTool","Content Creation",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lately","Lately","Marketing",V1,YES,YES,YES,YES,1698,849,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lavender","Lavender","Marketing",V1,YES,YES,YES,YES,1654,827,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lawdroid","LawDroid","Business",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lawgeex","Lawgeex","Business",V1,YES,YES,YES,YES,1836,918,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"layer-ai","Layer AI","Design",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lazyapply","LazyApply","Productivity",V1,YES,YES,YES,YES,1726,863,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"leah","Leah","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"learnworlds","LearnWorlds","Education",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"leena-ai","Leena AI","Business",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"legalmation","LegalMation","Business",V1,YES,YES,YES,YES,1738,869,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"legalon","LegalOn","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"legora","Legora","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lemlist","Lemlist","Marketing",V1,YES,YES,YES,YES,1560,780,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"leonardo-ai","Leonardo AI","Design",V1,YES,YES,YES,YES,1072,536,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"let's-enhance","Let's Enhance","Design",V1,YES,YES,YES,YES,1754,877,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"letta","Letta","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"letterdrop","Letterdrop","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"letterly","Letterly","Productivity",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"level-ai","Level AI","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"levity","Levity","Automation",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lex","Lex","Content Creation",V1,YES,YES,YES,YES,1650,825,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"librechat","LibreChat","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lindy","Lindy","Automation",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lingolette","Lingolette","Education",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lingq","LingQ","Education",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"linksquares","LinkSquares","Business",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"listen-labs","Listen Labs","Research",V1,NO,NO,NO,NO,188,94,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"listnr","Listnr","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"litellm","LiteLLM","Development",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"llamaindex","LlamaIndex","Development",V1,YES,YES,YES,YES,1212,606,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lm-studio","LM Studio","Development",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"locofy","Locofy","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"logically","Logically","Research",V1,NO,NO,NO,NO,178,89,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"logicballs","LogicBalls","Content Creation",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"looka","Looka","Design",V1,YES,YES,YES,YES,1616,808,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lookx","LookX","Design",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"looppanel","Looppanel","Research",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"loora","Loora","Education",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lorikeet","Lorikeet","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"loudly","Loudly","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"lovable","Lovable","Development",V1,YES,YES,YES,YES,2198,1099,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"ltx-studio","LTX Studio","Video & Audio",V1,NO,NO,NO,NO,220,110,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"luma-ai","Luma AI","Video & Audio",V1,YES,YES,YES,YES,1028,514,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lumen5","Lumen5","Video & Audio",V1,YES,YES,YES,YES,984,492,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"luminance","Luminance","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"luminar-neo","Luminar Neo","Design",V1,YES,YES,YES,YES,1564,782,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"lutra","Lutra","Automation",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mabl","mabl","Development",V1,NO,NO,NO,NO,120,60,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"macwhisper","MacWhisper","Video & Audio",V1,NO,NO,NO,NO,284,142,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"madgicx","Madgicx","Marketing",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"maestra","Maestra","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"magic-patterns","Magic Patterns","Design",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"magical","Magical","Automation",V1,YES,YES,YES,YES,1596,798,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"magician-figma","Magician (Figma)","Design",V1,YES,YES,YES,YES,1898,949,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"magicschool-ai","MagicSchool AI","Education",V1,YES,YES,YES,YES,1526,763,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"make-integromat","Make (Integromat)","Automation",V1,YES,YES,YES,YES,966,483,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"maket","Maket","Design",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"makeugc","MakeUGC","Marketing",V1,NO,NO,NO,NO,128,64,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"manus","Manus","Research",V1,YES,YES,YES,YES,2002,1001,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"manychat","ManyChat","Marketing",V1,YES,YES,YES,YES,1106,553,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"mapify","Mapify","Productivity",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"marketmuse","MarketMuse","Content Creation",V2,NO,YES,YES,YES,1200,600,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"marpipe","Marpipe","Marketing",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"marqo","Marqo","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"marvin","Marvin","Research",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mastra","Mastra","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mathpix","Mathpix","Education",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"maxai","MaxAI","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"meetgeek","MeetGeek","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mem","Mem","Productivity",V1,YES,YES,YES,YES,1156,578,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"mem0","Mem0","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"memrise","Memrise","Education",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mentalyc","Mentalyc","Business",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"meshy","Meshy","Design",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"meta-ai","Meta AI","Research",V1,YES,YES,YES,YES,1064,532,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"metabob","Metabob","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"metaview","Metaview","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"metricool","Metricool","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"microsoft-copilot","Microsoft Copilot","Productivity",V1,YES,YES,YES,YES,1162,581,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"microsoft-power-automate","Microsoft Power Automate","Automation",V1,YES,YES,YES,YES,1618,809,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"midjourney","Midjourney","Design",V2,NO,YES,YES,YES,1266,633,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"mindgrasp","Mindgrasp","Education",V2,NO,NO,NO,YES,302,151,0,index,follow,YES,PROTECTED_V2_CANARY,index,follow,YES
+"mindsmith","Mindsmith","Education",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mindstudio","MindStudio","Development",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mintlify-writer","Mintlify Writer","Development",V1,YES,YES,YES,YES,1762,881,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"minuteslink","MinutesLink","Productivity",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"miro-ai","Miro AI","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mixedbread","Mixedbread","Development",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mnml-ai","mnml.ai","Design",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mockup-ai","Mockup AI","Design",V1,YES,YES,YES,YES,1912,956,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"modal","Modal","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"moises","Moises","Video & Audio",V1,NO,NO,NO,NO,222,111,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mokker","Mokker","Design",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"momentic","Momentic","Development",V1,NO,NO,NO,NO,128,64,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"momentum","Momentum","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"monarch-money","Monarch Money","Business",V1,YES,YES,YES,YES,1620,810,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"monica","Monica","Productivity",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"monkeylearn","Medallia Text Analytics","Research",V1,YES,YES,YES,YES,1932,966,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"mostly-ai","MOSTLY AI","Development",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"motion","Motion","Productivity",V1,YES,YES,YES,YES,964,482,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"moveworks","Moveworks","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"msty","Msty","Productivity",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mubert","Mubert","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"munch-studio","Munch Studio","Marketing",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"murf-ai","Murf AI","Video & Audio",V1,YES,YES,YES,YES,996,498,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"musicfy","Musicfy","Video & Audio",V1,NO,NO,NO,NO,192,96,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mutiny","Mutiny","Marketing",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"mymind","MyMind","Productivity",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"n8n","n8n","Automation",V2,NO,YES,YES,YES,1100,550,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"nabla-copilot","Nabla Copilot","Business",V1,YES,YES,YES,YES,1418,709,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"nano-banana","Nano Banana (Gemini Image)","Design",V1,YES,YES,YES,YES,1126,563,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"nanonets","Nanonets","Automation",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"napkin-ai","Napkin AI","Productivity",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"narakeet","Narakeet","Video & Audio",V1,NO,NO,NO,NO,190,95,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"narrative","Narrative","Design",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"neuronwriter","NeuronWriter","Content Creation",V1,YES,YES,YES,YES,1346,673,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"nightcafe","NightCafe","Design",V1,YES,YES,YES,YES,1692,846,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"nosto","Nosto","Marketing",V1,YES,YES,YES,YES,1584,792,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"notion","Notion","Productivity",V1,YES,YES,YES,YES,1040,520,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"notion-ai","Notion AI","Productivity",V1,YES,YES,YES,YES,1064,532,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"notta","Notta","Productivity",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"novelai","NovelAI","Content Creation",V1,NO,NO,NO,NO,168,84,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"novelcrafter","Novelcrafter","Content Creation",V1,NO,NO,NO,NO,276,138,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"novita-ai","Novita AI","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"numerade","Numerade","Education",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"numerous-ai","Numerous.ai","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"oasis","Oasis","Productivity",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"observe-ai","Observe.AI","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"obviously-ai","Obviously AI","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ocoya","Ocoya","Marketing",V1,YES,YES,YES,YES,1712,856,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"octane-ai","Octane AI","Marketing",V1,YES,YES,YES,YES,1698,849,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"octoparse","Octoparse","Automation",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ollama","Ollama","Development",V1,NO,NO,NO,NO,284,142,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"omneky","Omneky","Marketing",V1,YES,YES,YES,YES,1666,833,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"onlook","Onlook","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"onyx","Onyx","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"open-webui","Open WebUI","Development",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"openai-api","OpenAI API","Development",V1,YES,YES,YES,YES,1620,810,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"openai-playground","OpenAI Playground","Development",V1,YES,YES,YES,YES,1312,656,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"openart","OpenArt","Video & Audio",V1,NO,NO,NO,NO,220,110,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"opencode","OpenCode","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"openhands","OpenHands","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"openread","OpenRead","Research",V1,NO,NO,NO,NO,178,89,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"openrouter","OpenRouter","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"opera-ai","Opera AI","Productivity",V1,NO,NO,NO,NO,164,82,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"optimonk","OptiMonk","Marketing",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"opusclip","OpusClip","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"otterai","Otter.ai","Productivity",V2,NO,YES,YES,YES,990,495,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"outset","Outset","Research",V1,NO,NO,NO,NO,176,88,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"palette-fm","Palette.fm","Design",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"paper-digest","Paper Digest","Research",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"paperguide","Paperguide","Research",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"paperpal","Paperpal","Content Creation",V1,NO,NO,NO,NO,198,99,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"paradox","Paradox","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"parloa","Parloa","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"parseur","Parseur","Automation",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"patronus-ai","Patronus AI","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"paxton","Paxton","Business",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pazi","Pazi","Automation",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pdf-ai","PDF.ai","Research",V1,NO,NO,NO,NO,176,88,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pearai","PearAI","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pebblely","Pebblely","Design",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"peec-ai","Peec AI","Marketing",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pencil","Pencil","Design",V1,YES,YES,YES,YES,1710,855,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"penfriend","Penfriend","Content Creation",V1,NO,NO,NO,NO,190,95,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"perplexity-ai","Perplexity AI","Research",V2,NO,YES,YES,YES,1446,723,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"perplexity-pages","Perplexity Pages","Research",V1,YES,YES,YES,YES,1174,587,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"persado","Persado","Marketing",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"photor","Photor","Design",V1,YES,YES,YES,YES,1786,893,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"photoroom","Photoroom","Design",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"piccopilot","PicCopilot","Design",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pictory","Pictory","Video & Audio",V1,YES,YES,YES,YES,1442,721,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"picwish","PicWish","Design",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pieces","Pieces","Development",V1,YES,YES,YES,YES,1904,952,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"pika","Pika","Video & Audio",V1,YES,YES,YES,YES,1968,984,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"pinecone","Pinecone","Development",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pipedream","Pipedream","Automation",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pitch","Pitch","Design",V1,YES,YES,YES,YES,1460,730,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"pixelcut","Pixelcut","Design",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pixlr-ai","Pixlr AI","Design",V1,YES,YES,YES,YES,1774,887,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"pixray","Pixray","Design",V1,YES,YES,YES,YES,1598,799,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"pixverse","PixVerse","Video & Audio",V1,NO,NO,NO,NO,228,114,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"planner-5d","Planner 5D","Design",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"plaud","Plaud","Productivity",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"playground-ai","Playground AI","Design",V1,YES,YES,YES,YES,1702,851,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"podsqueeze","Podsqueeze","Video & Audio",V1,NO,NO,NO,NO,196,98,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"polyai","PolyAI","Business",V1,YES,YES,YES,YES,1758,879,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"polymer","Polymer","Research",V1,YES,YES,YES,YES,1548,774,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"poolside","Poolside","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"portkey","Portkey","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"postwise","Postwise","Marketing",V1,YES,YES,YES,YES,1784,892,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"powerdrill","Powerdrill","Business",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"praktika","Praktika","Education",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"predisai","Predis.ai","Marketing",V1,YES,YES,YES,YES,1742,871,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"presentationsai","Presentations.AI","Design",V1,YES,YES,YES,YES,1556,778,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"privategpt","PrivateGPT","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"profound","Profound","Marketing",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"promethean-ai","Promethean AI","Design",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"promptfoo","Promptfoo","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"prowritingaid","ProWritingAid","Content Creation",V2,NO,YES,YES,YES,1326,663,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"pydantic-ai","Pydantic AI","Development",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"pylon","Pylon","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"qa-wolf","QA Wolf","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"qdrant","Qdrant","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"qodo","Qodo","Development",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"quadratic","Quadratic","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"quartr","Quartr","Research",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"questionwell","QuestionWell","Education",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"quickads","Quickads","Marketing",V1,YES,YES,YES,YES,1818,909,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"quillbot","QuillBot","Content Creation",V1,YES,YES,YES,YES,958,479,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"quilt","Quilt","Research",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"quizizz-ai","Wayground AI","Education",V1,YES,YES,YES,YES,1824,912,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"quso-ai","quso.ai","Video & Audio",V1,NO,NO,NO,NO,198,99,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"qwiet-ai","Qwiet AI","Development",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rankscale","Rankscale","Marketing",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rasa","Rasa","Development",V1,YES,YES,YES,YES,1800,900,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"rasa-io","Rasa.io","Marketing",V1,NO,NO,NO,NO,130,65,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rask-ai","Rask AI","Video & Audio",V1,NO,NO,NO,NO,200,100,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rattle","Rattle","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"raycast","Raycast","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"readai","Read.ai","Productivity",V2,NO,YES,YES,YES,1424,712,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"readdy-ai","Readdy","Design",V1,YES,YES,YES,YES,2360,1180,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"rebuy","Rebuy","Marketing",V1,YES,YES,YES,YES,1866,933,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"recall","Recall","Productivity",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"recast-studio","Recast Studio","Video & Audio",V1,NO,NO,NO,NO,210,105,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"reclaim","Reclaim","Productivity",V1,YES,YES,YES,YES,1970,985,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"recraft","Recraft","Design",V1,NO,NO,NO,NO,272,136,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"reducto","Reducto","Automation",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"reflect","Reflect","Productivity",V1,YES,YES,YES,YES,1884,942,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"regieai","Regie.ai","Business",V1,YES,YES,YES,YES,1922,961,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"reimaginehome","REimagineHome","Design",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"relevance-ai","Relevance AI","Automation",V1,NO,NO,NO,NO,170,85,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"relume","Relume","Design",V1,YES,YES,YES,YES,2008,1004,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"remini","Remini","Design",V1,YES,YES,YES,YES,1888,944,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"remnote","RemNote","Education",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"removal-ai","Removal.AI","Design",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"removebg","remove.bg","Design",V1,YES,YES,YES,YES,1976,988,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"replai","Replai","Marketing",V1,YES,YES,YES,YES,1322,661,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"replicate","Replicate","Development",V1,YES,YES,YES,YES,1676,838,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"replika","Replika","Productivity",V1,YES,YES,YES,YES,1740,870,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"replit","Replit","Development",V2,NO,YES,YES,YES,1682,841,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"replyio","Reply.io","Marketing",V1,YES,YES,YES,YES,1718,859,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"research-rabbit","Research Rabbit","Research",V1,YES,YES,YES,YES,1608,804,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"resemble-ai","Resemble AI","Video & Audio",V1,YES,YES,YES,YES,1744,872,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"respond-io","Respond.io","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"resume-worded","Resume Worded","Productivity",V1,YES,YES,YES,YES,1736,868,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"retell-ai","Retell AI","Automation",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"retool","Retool","Development",V1,YES,YES,YES,YES,1784,892,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"retouch4me","Retouch4me","Design",V1,NO,NO,NO,NO,132,66,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rev-ai","Rev AI","Video & Audio",V1,YES,YES,YES,YES,1650,825,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"revisely","Revisely","Education",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"reweb","Reweb","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rezi","Rezi","Productivity",V1,YES,YES,YES,YES,2000,1000,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"rezolve-ai","Rezolve.ai","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"richpanel","Richpanel","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"riff","Riff","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"riverside","Riverside","Video & Audio",V1,NO,NO,NO,NO,190,95,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"roboflow","Roboflow","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rodin","Rodin","Design",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rogo","Rogo","Research",V1,NO,NO,NO,NO,168,84,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"roomgpt","RoomGPT","Design",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"roomote","Roomote","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rossum","Rossum","Automation",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"rows","Rows","Business",V1,YES,YES,YES,YES,2038,1019,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"runpod","RunPod","Development",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"runway","Runway","Video & Audio",V2,NO,YES,YES,YES,1264,632,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"rytr","Rytr","Content Creation",V1,YES,YES,YES,YES,1646,823,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"salesforce-einstein","Salesforce Einstein","Business",V1,YES,YES,YES,YES,1134,567,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sambanova","SambaNova","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sana-learn","Sana Learn","Education",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sanebox","SaneBox","Productivity",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"saner-ai","Saner.AI","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scalenut","Scalenut","Content Creation",V1,YES,YES,YES,YES,1798,899,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"scenario","Scenario","Design",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scholarai","ScholarAI","Research",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scholarcy","Scholarcy","Research",V2,NO,YES,YES,YES,1296,648,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"schoolai","SchoolAI","Education",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scispace","Scispace","Research",V1,YES,YES,YES,YES,1768,884,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"scisummary","SciSummary","Research",V1,NO,NO,NO,NO,176,88,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scite","Scite","Research",V1,NO,NO,NO,NO,186,93,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scratchpad","Scratchpad","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"screenloop","Screenloop","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"scrunch-ai","Scrunch AI","Marketing",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"seekout","SeekOut","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"semantic-scholar","Semantic Scholar","Research",V1,NO,NO,NO,NO,198,99,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sembly","Sembly","Productivity",V1,YES,YES,YES,YES,1948,974,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"semrush","Semrush","Marketing",V1,YES,YES,YES,YES,2078,1039,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sentisum","SentiSum","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"seo-ai","SEO.ai","Content Creation",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"seowriting-ai","SEOWriting.ai","Content Creation",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"seventh-sense","Seventh Sense","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sheetai","SheetAI","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"shopify-magic","Shopify Magic","Business",V1,YES,YES,YES,YES,2078,1039,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"shortly-ai","Shortly AI","Content Creation",V1,YES,YES,YES,YES,2056,1028,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"shortwave","Shortwave","Productivity",V1,YES,YES,YES,YES,2042,1021,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sierra","Sierra","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"siliconflow","SiliconFlow","Development",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sim","Sim","Automation",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"simplified","Simplified","Design",V1,YES,YES,YES,YES,2148,1074,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sitegpt","SiteGPT","Business",V1,NO,NO,NO,NO,276,138,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"sivi-ai","Sivi AI","Design",V1,YES,YES,YES,YES,1926,963,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"skedpal","SkedPal","Productivity",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sleekflow","SleekFlow","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"slidesai","SlidesAI","Design",V1,YES,YES,YES,YES,1732,866,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"slidespeak","SlideSpeak","Productivity",V1,YES,YES,YES,YES,1750,875,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sloyd","Sloyd","Design",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"smalltalk2me","SmallTalk2Me","Education",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"smartlead","Smartlead","Marketing",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"smartly","Smartly","Marketing",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"smartwriter","Smartwriter","Marketing",V1,YES,YES,YES,YES,2072,1036,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"snyk","Snyk","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"socialbee","SocialBee","Marketing",V1,NO,NO,NO,NO,132,66,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"softr","Softr","Development",V1,YES,YES,YES,YES,2120,1060,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sonara","Sonara","Productivity",V1,YES,YES,YES,YES,2150,1075,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"soundful","Soundful","Video & Audio",V1,NO,NO,NO,NO,196,98,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"soundraw","Soundraw","Video & Audio",V1,YES,YES,YES,YES,1906,953,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sourcegraph-cody","Sourcegraph Cody","Development",V1,YES,YES,YES,YES,2064,1032,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"sourcely","Sourcely","Research",V1,NO,NO,NO,NO,194,97,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sourcery","Sourcery","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sourcetable","Sourcetable","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"spacely-ai","Spacely AI","Design",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"spark","Spark","Productivity",V1,YES,YES,YES,YES,1804,902,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"speak","Speak","Education",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"speechgen","SpeechGen","Video & Audio",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"speechify","Speechify","Video & Audio",V1,YES,YES,YES,YES,1800,900,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"speechmatics","Speechmatics","Video & Audio",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"speedy-brand","Speedy Brand","Marketing",V1,YES,YES,YES,YES,1888,944,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"spellbook","Spellbook","Business",V1,YES,YES,YES,YES,1976,988,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"spline-ai","Spline AI","Design",V1,NO,NO,NO,NO,160,80,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"spotdraft","SpotDraft","Business",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sprout-social","Sprout Social","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sqlai-ai","SQLAI.ai","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"squibler","Squibler","Content Creation",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"stable-audio","Stable Audio","Video & Audio",V1,NO,NO,NO,NO,214,107,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"stable-diffusion","Stable Diffusion","Design",V1,YES,YES,YES,YES,1058,529,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"stack-ai","Stack AI","Development",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"starryai","Starryai","Design",V1,YES,YES,YES,YES,2060,1030,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"studyable","Studyable","Education",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"submagic","Submagic","Video & Audio",V1,NO,NO,NO,NO,202,101,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sudowrite","Sudowrite","Content Creation",V1,YES,YES,YES,YES,1804,902,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"suki","Suki","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"suno","Suno","Video & Audio",V1,YES,YES,YES,YES,2020,1010,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"superannotate","SuperAnnotate","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"superhuman","Superhuman","Productivity",V1,YES,YES,YES,YES,2076,1038,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"superwhisper","Superwhisper","Productivity",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"supio","Supio","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"surfer-seo","Surfer","Marketing",V2,NO,YES,YES,YES,1252,626,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"sweep","Sweep","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"sybill","Sybill","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"synthesia","Synthesia","Video & Audio",V2,NO,YES,YES,YES,1290,645,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"synthflow","Synthflow","Automation",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tabby","Tabby","Development",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tableau-ai","Tableau AI","Research",V1,YES,YES,YES,YES,1794,897,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tabnine","Tabnine","Development",V1,YES,YES,YES,YES,1050,525,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tactiq","Tactiq","Productivity",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tali-ai","Tali AI","Business",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"talkpal","Talkpal","Education",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tana","Tana","Productivity",V1,YES,YES,YES,YES,2118,1059,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"taplio","Taplio","Marketing",V1,YES,YES,YES,YES,2234,1117,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"taskade","Taskade","Productivity",V1,YES,YES,YES,YES,2242,1121,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tasklet","Tasklet","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tavily","Tavily","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tavus","Tavus","Video & Audio",V1,NO,NO,NO,NO,202,101,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"teachmate","Teachmate","Education",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"teachy","Teachy","Education",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"teal","Teal","Productivity",V1,YES,YES,YES,YES,2340,1170,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"teleporthq","TeleportHQ","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"testfit","TestFit","Design",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"testim","Testim","Development",V1,NO,NO,NO,NO,124,62,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"texta","Texta","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"textcortex","TextCortex","Content Creation",V1,YES,YES,YES,YES,1784,892,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"textio","Textio","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"the-brief","The Brief","Marketing",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"thematic","Thematic","Business",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"thena","Thena","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"thoughtspot","ThoughtSpot","Research",V1,YES,YES,YES,YES,1786,893,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tidio","Tidio","Business",V1,YES,YES,YES,YES,2174,1087,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tiledesk","Tiledesk","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"timebolt","TimeBolt","Video & Audio",V1,NO,NO,NO,NO,198,99,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tl;dv","tl;dv","Productivity",V1,YES,YES,YES,YES,1920,960,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"together-ai","Together AI","Development",V1,YES,YES,YES,YES,2210,1105,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"topaz-ai","Topaz AI","Design",V1,YES,YES,YES,YES,2292,1146,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tortus","Tortus","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"trae","Trae","Development",V1,NO,NO,NO,NO,132,66,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"trayio","Tray.io","Automation",V1,YES,YES,YES,YES,2212,1106,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"trengo","Trengo","Business",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"trevor-ai","Trevor AI","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"trinka","Trinka","Content Creation",V1,NO,NO,NO,NO,182,91,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"trint","Trint","Video & Audio",V1,YES,YES,YES,YES,1836,918,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"tugan","Tugan","Marketing",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"twain","Twain","Business",V2,NO,YES,YES,YES,1468,734,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"twee","Twee","Education",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"tweet-hunter","Tweet Hunter","Marketing",V1,YES,YES,YES,YES,1848,924,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"type","Type","Content Creation",V1,NO,NO,NO,NO,184,92,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"typeface","Typeface","Marketing",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"typefully","Typefully","Marketing",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"typingmind","TypingMind","Productivity",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"udio","Udio","Video & Audio",V1,YES,YES,YES,YES,1124,562,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"uipath","UiPath","Automation",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"uizard","Uizard","Design",V1,YES,YES,YES,YES,1842,921,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"ultimateai","Zendesk AI Agents","Business",V1,YES,YES,YES,YES,1828,914,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"ultralytics","Ultralytics","Development",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"unbounce","Unbounce","Marketing",V1,NO,NO,NO,NO,132,66,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"undermind","Undermind","Research",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"unicorn-platform","Unicorn Platform","Development",V1,YES,YES,YES,YES,1814,907,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"unify","Unify","Marketing",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"uniphore","Uniphore","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"univerbal","Univerbal","Education",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"unstructured","Unstructured","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"upheal","Upheal","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"upscalemedia","Upscale.media","Design",V1,YES,YES,YES,YES,1830,915,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"upscayl","Upscayl","Design",V1,NO,NO,NO,NO,260,130,0,index,follow,YES,PROTECTED_BRAND_SKELETON,index,follow,YES
+"usergems","UserGems","Marketing",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ux-pilot","UX Pilot","Design",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"v0-by-vercel","v0 by Vercel","Development",V1,YES,YES,YES,YES,1084,542,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"v7","V7","Automation",V1,NO,NO,NO,NO,152,76,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vanceai","VanceAI","Design",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vanna-ai","Vanna AI","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vapi","Vapi","Video & Audio",V1,NO,NO,NO,NO,196,98,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vectorshift","VectorShift","Business",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"veed","VEED","Video & Audio",V1,NO,NO,NO,NO,196,98,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vellum","Vellum","Productivity",V1,NO,NO,NO,NO,162,81,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"veras","Veras","Design",V1,NO,NO,NO,NO,134,67,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vercel-ai-sdk","Vercel AI SDK","Development",V1,YES,YES,YES,YES,1338,669,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"veryfi","Veryfi","Automation",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vicai","Vic.ai","Business",V1,YES,YES,YES,YES,1870,935,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"vidu","Vidu","Video & Audio",V1,NO,NO,NO,NO,216,108,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"visenze","ViSenze","Business",V1,YES,YES,YES,YES,1930,965,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"vista-social","Vista Social","Marketing",V1,NO,NO,NO,NO,156,78,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vizard","Vizard","Video & Audio",V1,NO,NO,NO,NO,192,96,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"vmake","Vmake","Video & Audio",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"voiceflow","Voiceflow","Development",V1,YES,YES,YES,YES,1112,556,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"voicemaker","Voicemaker","Video & Audio",V1,NO,NO,NO,NO,192,96,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"voicemod","Voicemod","Video & Audio",V1,NO,NO,NO,NO,198,99,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"voicenotes","Voicenotes","Productivity",V1,NO,NO,NO,NO,178,89,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"void","Void","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"voyage-ai","Voyage AI","Development",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"warmerai","Warmer.ai","Marketing",V1,YES,YES,YES,YES,1000,500,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"warmly","Warmly","Marketing",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"warp","Warp","Development",V1,YES,YES,YES,YES,1150,575,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"wati","WATI","Business",V1,NO,NO,NO,NO,136,68,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wavel-ai","Wavel AI","Video & Audio",V1,NO,NO,NO,NO,190,95,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"weaviate","Weaviate","Development",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"webflow","Webflow","Development",V1,YES,YES,YES,YES,1118,559,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"wellsaid","WellSaid","Video & Audio",V1,NO,NO,NO,NO,174,87,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"whimsical","Whimsical","Productivity",V1,NO,NO,NO,NO,144,72,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wisecut","Wisecut","Video & Audio",V1,NO,NO,NO,NO,192,96,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wispr-flow","Wispr Flow","Productivity",V1,NO,NO,NO,NO,180,90,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wix-ai","Wix AI","Development",V1,YES,YES,YES,YES,1190,595,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"wolfram-alpha","Wolfram Alpha","Research",V1,NO,NO,NO,NO,186,93,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wondercraft","Wondercraft","Video & Audio",V1,NO,NO,NO,NO,188,94,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wordhero","WordHero","Content Creation",V1,NO,NO,NO,NO,194,97,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wordtune","Wordtune","Content Creation",V1,YES,YES,YES,YES,1088,544,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"workato","Workato","Automation",V1,YES,YES,YES,YES,1314,657,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"worldengen","WorldEngen by Masterpiece X","Design",V1,NO,NO,NO,NO,176,88,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wotnot","WotNot","Business",V1,NO,NO,NO,NO,148,74,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"wren-ai","Wren AI","Business",V1,NO,NO,NO,NO,158,79,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"writecream","Writecream","Content Creation",V1,YES,YES,YES,YES,1128,564,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"writefull","Writefull","Content Creation",V1,NO,NO,NO,NO,176,88,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"writer","Writer","Content Creation",V1,NO,NO,NO,NO,154,77,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"writesonic","Writesonic","Content Creation",V2,NO,YES,YES,YES,1542,771,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"wysa","Wysa","Productivity",V1,YES,YES,YES,YES,2254,1127,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"xmind-ai","Xmind AI","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"ydata","YData","Development",V1,NO,NO,NO,NO,140,70,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"yellowai","Yellow.ai","Business",V1,YES,YES,YES,YES,2180,1090,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"yoodli","Yoodli","Education",V1,YES,YES,YES,YES,2212,1106,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"youcom","You.com","Research",V1,YES,YES,YES,YES,1962,981,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"yuma-ai","Yuma AI","Business",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"z-ai","Z.ai","Productivity",V1,NO,NO,NO,NO,150,75,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"zapier-ai","Zapier AI","Automation",V2,NO,YES,YES,YES,1430,715,0,index,follow,YES,INDEXABLE_V2,index,follow,YES
+"zed","Zed","Development",V1,NO,NO,NO,NO,146,73,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"zencastr","Zencastr","Video & Audio",V1,NO,NO,NO,NO,204,102,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"zendesk-ai","Zendesk AI","Business",V1,YES,YES,YES,YES,2318,1159,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"zep","Zep","Development",V1,NO,NO,NO,NO,138,69,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"zilliz","Zilliz","Development",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO
+"zipchat","Zipchat","Business",V1,YES,YES,YES,YES,2350,1175,0,index,follow,YES,INDEXABLE_RICH_V1,index,follow,YES
+"zowie","Zowie","Business",V1,NO,NO,NO,NO,142,71,0,index,follow,YES,NOINDEX_LOW_VALUE_STUB,noindex,follow,NO

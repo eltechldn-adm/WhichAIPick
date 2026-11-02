@@ -16,6 +16,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { resolveCanarySelection, CanarySelectionError } from './tool-page-2/canary-selection.mjs';
 import { renderProductionToolPageV2 } from './tool-page-2/render-production-tool-page-v2.mjs';
+import { getToolRobotsDirective } from './seo/indexing-policy.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
@@ -308,7 +309,7 @@ function buildToolPage(tool) {
   // Remove undefined keys
   Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
 
-  const robotsMeta = tool.contentReviewRequired ? 'noindex,follow' : 'index,follow';
+  const robotsMeta = getToolRobotsDirective(tool);
 
   return `<!DOCTYPE html>
 <html lang="en">

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { buildToolPageViewModel } from './build-tool-page-view-model.mjs';
 import { renderToolPageV2 } from './render-tool-page-v2.mjs';
+import { getToolRobotsDirective } from '../seo/indexing-policy.mjs';
 
 /**
  * Production adapter for the existing Tool Page V2 renderer.
@@ -54,7 +55,7 @@ export function renderProductionToolPageV2(tool, { root, domain, headerHtml, foo
     return renderToolPageV2(viewModel, {
         mode: 'production',
         canonicalUrl: `${domain}/tools/${tool.id}/`,
-        robots: tool.contentReviewRequired ? 'noindex,follow' : 'index,follow',
+        robots: getToolRobotsDirective(tool),
         metaTitle: `${name} — AI ${category} Tool | WhichAIPick`,
         metaDescription,
         domain,
