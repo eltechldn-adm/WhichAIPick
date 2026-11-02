@@ -646,10 +646,12 @@ function renderResultsPage(recommendations) {
             `;
         }
 
+        const toolUrl = `/tools/${encodeURIComponent(tool.id)}/`;
+
         toolsHtml += `
             <div class="tool-result-card">
                 <div class="tool-result-label">${label}</div>
-                <h4><a href="/tool.html?id=${encodeURIComponent(tool.id)}">${tool.name}</a></h4>
+                <h4><a href="${toolUrl}">${tool.name}</a></h4>
                 <div class="tool-result-category">${tool.category}</div>
                 ${priceBadge}
                 
@@ -661,7 +663,7 @@ function renderResultsPage(recommendations) {
                 ${tradeOffHtml}
                 
                 <div class="tool-result-actions">
-                    <a href="/tool.html?id=${encodeURIComponent(tool.id)}" class="btn btn-sm btn-primary">View Tool</a>
+                    <a href="${toolUrl}" class="btn btn-sm btn-primary">View Tool</a>
                     <button class="btn btn-sm btn-secondary" onclick="window.Shortlist && window.Shortlist.add('${tool.id}'); if(window.Analytics) Analytics.track('finder_tool_saved');">Save to Shortlist</button>
                     <a href="/compare.html?tools=${encodeURIComponent(tool.id)}" class="btn btn-sm btn-secondary">Compare</a>
                 </div>
