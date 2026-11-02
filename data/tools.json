@@ -2778,18 +2778,18 @@
       "pricingScope": {
         "method": "official_source_review",
         "sources": [
-          "https://www.adalo.com/pricing"
+          "https://www.adalo.com/pricing/"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Adalo editor and hosted app platform; iOS/Android are publication targets, not asserted native editor platforms."
+        "checkedAt": "2026-11-02",
+        "note": "Official pricing platform and documentation reviewed November 2026. Entry Builder tier confirmed at USD 65/month standard monthly rate (or USD 624/year billed annually, equivalent to $52/month)."
       },
       "startingPrice": {
         "method": "official_source_review",
         "sources": [
-          "https://www.adalo.com/pricing"
+          "https://www.adalo.com/pricing/"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Adalo editor and hosted app platform; iOS/Android are publication targets, not asserted native editor platforms."
+        "checkedAt": "2026-11-02",
+        "note": "Official pricing platform and documentation reviewed November 2026. Entry Builder tier confirmed at USD 65/month standard monthly rate (or USD 624/year billed annually, equivalent to $52/month)."
       },
       "priceCurrency": {
         "method": "official_source_review",
@@ -2802,18 +2802,18 @@
       "billingPeriod": {
         "method": "official_source_review",
         "sources": [
-          "https://www.adalo.com/pricing"
+          "https://www.adalo.com/pricing/"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Adalo editor and hosted app platform; iOS/Android are publication targets, not asserted native editor platforms."
+        "checkedAt": "2026-11-02",
+        "note": "Official pricing platform and documentation reviewed November 2026. Entry Builder tier confirmed at USD 65/month standard monthly rate (or USD 624/year billed annually, equivalent to $52/month)."
       },
       "startingPlan": {
         "method": "official_source_review",
         "sources": [
-          "https://www.adalo.com/pricing"
+          "https://www.adalo.com/pricing/"
         ],
-        "checkedAt": "2026-09-22",
-        "note": "Adalo editor and hosted app platform; iOS/Android are publication targets, not asserted native editor platforms."
+        "checkedAt": "2026-11-02",
+        "note": "Official pricing platform and documentation reviewed November 2026. Entry Builder tier confirmed at USD 65/month standard monthly rate (or USD 624/year billed annually, equivalent to $52/month)."
       },
       "trialDays": {
         "method": "unknown",
@@ -2880,10 +2880,10 @@
     "publicationScope": "directory_summary_only",
     "sourceSummary": "Adalo is a visual app builder with AI-assisted building and editing. The free plan supports prototypes; paid plans enable published web and mobile apps.",
     "pricingScope": "Adalo editor and hosted app platform; iOS/Android are publication targets, not asserted native editor platforms.",
-    "startingPrice": 36,
+    "startingPrice": 65,
     "priceCurrency": "USD",
-    "billingPeriod": "month_billed_annually",
-    "startingPlan": "Starter",
+    "billingPeriod": "month",
+    "startingPlan": "Builder",
     "trialDays": null,
     "freeTierScope": "Free building and testing; published apps require a paid plan.",
     "capabilityScope": "AI assistant is labelled beta. API access is plan-qualified. Source-code export and self-hosting were not established. Phase 4 technical profile (2026-09-28): API=yes; open source=no verified whole-product OSS edition; self-hosted=no verified self-hosted product; deployment=cloud. False values are scoped to currently reviewed public/supported product capabilities, not private/internal vendor functionality.",
@@ -2911,7 +2911,7 @@
     ],
     "affiliate_url": null,
     "tags": [],
-    "how_it_works": "<p>Users design applications by placing visual components (such as lists, forms, buttons, and navigation bars) onto mobile or web canvas screens. Navigation actions are configured by linking buttons directly to target screens. An integrated relational database stores user data, collections, and media, which dynamically populate UI components. Builders can test and preview the app immediately inside the editor; when ready for launch, paid plans compile the project for web hosting or generate build packages for distribution through the Apple App Store and Google Play.</p>",
+    "how_it_works": "<p>Users design applications by placing visual components (such as lists, forms, buttons, and navigation bars) onto mobile or web canvas screens. Navigation actions are configured by linking buttons directly to target screens. An integrated relational database stores user data, collections, and media, which dynamically populate UI components. Builders can test and preview the app immediately inside the visual editor; when ready for launch, the Builder plan compiles the project for custom-domain web hosting or generates native build packages for distribution through the Apple App Store and Google Play.</p>",
     "workflows": [
       {
         "title": "Startup MVP Launch",
@@ -2953,17 +2953,17 @@
     "pros": [
       "Low barrier to entry for designing interactive mobile app layouts visually",
       "Visual screen linking and component properties make navigation flow easy to understand",
-      "Built-in build and publishing workflows assist with Apple App Store and Google Play deployment on supported paid plans",
+      "Built-in publishing workflows for web, Apple App Store, and Google Play are included in the entry Builder tier",
       "Pre-built UI components provide native-looking elements without writing front-end code"
     ],
     "cons": [
+      "Source code export is not bundled with standard monthly subscriptions and requires a separately priced export service",
+      "Publishing to native mobile app stores requires separate, independent developer accounts and fees with Apple ($99/year) and Google Play ($25 one-time)",
       "Application performance can decrease on complex workflows with large database collections",
-      "Source code cannot be exported for independent external hosting or custom development",
-      "Native mobile app store publishing is restricted to higher-tier paid plans and requires separate developer accounts with Apple and Google",
       "Customizing layouts beyond the pre-configured visual component library is restricted"
     ],
-    "pricing_overview": "<p>Adalo provides a Free tier designed for building, testing, and previewing applications within the visual editor. Publishing a live web app to a custom domain or deploying native mobile applications to the Apple App Store and Google Play requires an active paid subscription (such as the Starter or Professional plan). Deploying to native app stores also requires independent, active Apple Developer ($99/year) and Google Play ($25 one-time) developer accounts, and higher plan tiers are required for increased database records and custom API integrations.</p>",
-    "comparison_summary": "<p>Adalo competes with visual app development platforms including FlutterFlow, Bubble, and Glide. Bubble provides powerful relational database logic and web application capabilities, but is primarily web-focused. Glide enables rapid internal tool creation powered by spreadsheets, with structured layout constraints. FlutterFlow offers full Flutter source code export and deep technical configurability, but requires understanding programming paradigms. Adalo differentiates itself by providing an approachable, purely visual drag-and-drop canvas tailored for non-technical builders designing mobile-first user interfaces and published store applications.</p>",
+    "pricing_overview": "<p>Adalo provides a Free tier designed for building, testing, and previewing applications within the visual editor. Publishing applications to the web on a custom domain, as well as native mobile deployment to the Apple App Store and Google Play, is included in the entry-level Builder plan at $65/month (or $624/year when paid annually, equivalent to $52/month). Publishing native applications to mobile app stores also requires independent, active Apple Developer ($99/year) and Google Play ($25 one-time) developer accounts. Higher plan tiers (such as Business) provide expanded database storage and team collaboration seats, while source-code export is available as an independently priced service.</p>",
+    "comparison_summary": "<p>Adalo competes with visual app development platforms including FlutterFlow, Bubble, and Glide. Bubble provides powerful relational database logic and web application capabilities, but is primarily web-focused. Glide enables rapid internal tool creation powered by spreadsheets, with structured layout constraints. FlutterFlow includes native Flutter source code export in standard developer tiers, whereas Adalo provides export as a separately priced service alongside its drag-and-drop visual canvas and AI-assisted builder tailored for non-technical creators deploying native mobile and web applications.</p>",
     "legacyPrimaryUseCases": [
       "no-code app building",
       "mobile app prototyping"
@@ -170600,8 +170600,8 @@
         "sources": [
           "https://www.marketmuse.com/pricing/"
         ],
-        "checkedAt": "2026-09-24",
-        "note": "Hosted content planning and analysis; no public API entitlement established."
+        "checkedAt": "2026-11-02",
+        "note": "Official pricing and product documentation reviewed November 2026. Permanent Free tier confirmed at $0/month (1 user seat, 10 queries per month across Topic Navigator and Optimize applications, no credit card required)."
       },
       "startingPrice": {
         "method": "unknown",
@@ -170778,7 +170778,7 @@
       "Not an AI content generator; it focuses on strategy and optimization over automated writing",
       "Overkill for small businesses or individual bloggers"
     ],
-    "pricing_overview": "<p>MarketMuse relies heavily on enterprise pricing. While they occasionally offer a highly limited free tier or standard plan for smaller agencies, the core value of the platform (domain-wide inventory and personalized metrics) is locked behind Premium enterprise contracts that cost thousands of dollars annually.</p>",
+    "pricing_overview": "<p>MarketMuse provides a permanent Free plan that includes 1 user seat and 10 queries per month across core applications (such as Topic Navigator and basic content scoring), requiring no credit card. Full domain-wide content inventory analysis, personalized difficulty metrics, and comprehensive content brief generation are reserved for customized paid and enterprise plans (such as Optimize, Research, and Strategy) designed for content marketing teams and publishing agencies.</p>",
     "comparison_summary": "<p>MarketMuse competes with content optimization tools such as Surfer SEO, Clearscope, and Frase. While platforms like Clearscope and Surfer focus primarily on optimizing individual articles during drafting, MarketMuse emphasizes broad domain-level strategy. It analyzes an entire site's content inventory to evaluate topic coverage, identify content gaps, and assist editorial teams in prioritizing long-term content plans based on domain-specific topic depth.</p>",
     "legacyPrimaryUseCases": [
       "content topic analysis",
