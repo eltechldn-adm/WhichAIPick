@@ -3415,18 +3415,18 @@
     "id": "chatpdf",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://www.chatpdf.com/",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-11-03",
     "method": "official_source_review",
-    "finding": "Official homepage FAQ and backend API docs reviewed 24 September 2026 after pricing route failed. Unsupported native operating systems and subscription price left unknown."
+    "finding": "Official application interface, RAG retrieval engine, page citation workflow, and pricing documentation reviewed November 2026. Freemium model confirmed with Free tier (2 PDFs/day, 120 pages/file, 10MB limit, 50 questions/day). ChatPDF Plus confirmed at $9.99/mo (or $69.99/yr annual) providing unlimited documents, unlimited questions, 2,000 pages per PDF, 32MB file limits, and multi-file folder querying."
   },
   {
     "evidenceId": "E0381",
     "id": "chatpdf",
     "fieldScope": "[\"targetUsers\", \"apiAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://www.chatpdf.com/docs/api/backend",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-11-03",
     "method": "official_source_review",
-    "finding": "Official homepage FAQ and backend API docs reviewed 24 September 2026 after pricing route failed. Unsupported native operating systems and subscription price left unknown."
+    "finding": "Official application interface, RAG retrieval engine, page citation workflow, and pricing documentation reviewed November 2026. Freemium model confirmed with Free tier (2 PDFs/day, 120 pages/file, 10MB limit, 50 questions/day). ChatPDF Plus confirmed at $9.99/mo (or $69.99/yr annual) providing unlimited documents, unlimited questions, 2,000 pages per PDF, 32MB file limits, and multi-file folder querying."
   },
   {
     "evidenceId": "E0382",
@@ -4324,18 +4324,18 @@
     "id": "cleanvoice",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://cleanvoice.ai/pricing/",
-    "reviewedAt": "2026-09-25",
+    "reviewedAt": "2026-11-03",
     "method": "official_source_review",
-    "finding": "Official pricing and API v2 documentation reviewed 25 September 2026. Pricing taxes and credit expiry are distinct from service feature access; no ongoing core-service free plan established."
+    "finding": "Official audio processing specifications, digital audio workstation export integrations (Audacity, Premiere, Reaper), and pricing documentation reviewed November 2026. Paid service with free 30-minute processing trial (no credit card required). Pay-as-you-go credit packs confirmed at 5 hours ($11), 10 hours ($20), and 30 hours ($45) valid for 2 years. Subscriptions confirmed at 10 hrs ($11/mo), 30 hrs ($30/mo), and 100 hrs ($90/mo) with rollover."
   },
   {
     "evidenceId": "E0482",
     "id": "cleanvoice",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://docs.cleanvoice.ai/docs/v2",
-    "reviewedAt": "2026-09-25",
+    "reviewedAt": "2026-11-03",
     "method": "official_source_review",
-    "finding": "Official pricing and API v2 documentation reviewed 25 September 2026. Pricing taxes and credit expiry are distinct from service feature access; no ongoing core-service free plan established."
+    "finding": "Official audio processing specifications, digital audio workstation export integrations (Audacity, Premiere, Reaper), and pricing documentation reviewed November 2026. Paid service with free 30-minute processing trial (no credit card required). Pay-as-you-go credit packs confirmed at 5 hours ($11), 10 hours ($20), and 30 hours ($45) valid for 2 years. Subscriptions confirmed at 10 hrs ($11/mo), 30 hrs ($30/mo), and 100 hrs ($90/mo) with rollover."
   },
   {
     "evidenceId": "E0483",
@@ -7771,9 +7771,9 @@
     "id": "browse-ai",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.browse.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official product documentation, workflow integrations, browser extension capabilities, and credit-based pricing reviewed November 2026. Freemium model confirmed with Free Plan (50 credits/mo, 2 sites). Paid plans confirmed at Personal ($48/mo monthly / $19/mo annual, 2,000 credits/mo), Professional ($87/mo monthly / $69/mo annual, 5,000 credits/mo), and Custom Enterprise. 1 credit extracts 10 rows on standard sites with higher multipliers on anti-bot domains."
   },
   {
     "evidenceId": "E0865",
@@ -9166,9 +9166,9 @@
     "id": "flair-ai",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://flair.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official product photography canvas, 3D prop staging tools, lighting synthesis models, and pricing documentation reviewed November 2026. Freemium model confirmed with free introductory trial quota (~5 images) for non-commercial evaluation. Paid commercial subscriptions confirmed at Pro (~$10/mo with commercial license and monthly generation credits), Pro+ (~$26–$35/mo with 80 images, 3 videos), and Scale (~$55+/mo). Unused credits do not roll over."
   },
   {
     "evidenceId": "E1020",
@@ -9490,9 +9490,9 @@
     "id": "anythingllm",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://anythingllm.com/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official GitHub repository, desktop releases, Docker documentation, and cloud pricing reviewed November 2026. Desktop application (macOS, Windows, Linux) and Docker container are 100% free and open source under MIT license with embedded LanceDB vector database and BYOK / local model support (Ollama, LM Studio). AnythingLLM Cloud confirmed as optional managed hosting by Mintplex Labs at Basic ($50/mo), Pro ($99/mo), and custom Enterprise."
   },
   {
     "evidenceId": "E1056",
@@ -10669,9 +10669,9 @@
     "id": "diffit",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://web.diffit.me/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official instructional platform, Lexile leveling engine, Google/Microsoft export integrations, and pricing reviewed November 2026. Freemium model confirmed with Basic Plan ($0 forever for teachers with core reading leveling, vocab, questions, and 90-day history). Diffit for Teachers confirmed at $14.99/mo ($149.99/yr annual) with unlimited history, direct Google Workspace/Microsoft exports, and interactive student digital activities. School/district licenses priced on institutional enrollment."
   },
   {
     "evidenceId": "E1187",
@@ -11479,9 +11479,9 @@
     "id": "capacities",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://capacities.io/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official documentation, object schema guides, cross-device sync specifications, and pricing reviewed November 2026. Freemium model confirmed with Basic Free plan ($0 forever, unlimited spaces, objects, blocks, and mobile/desktop sync with 5GB media storage). Capacities Pro confirmed at $9.99/mo ($99.99/yr annual) with integrated AI assistant, whiteboards, task actions, and smart queries. Believer supporter tier confirmed at $12.49/mo."
   },
   {
     "evidenceId": "E1277",
