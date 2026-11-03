@@ -1,9 +1,9 @@
 {
   "environment": "local",
-  "buildTime": "2026-10-08T20:19:23.982Z",
+  "buildTime": "2026-11-03T00:38:50.066Z",
   "schemaVersion": "9G",
-  "branch": "phase-review",
-  "commitHash": "df1b9f3242987bf0297ae737c117f14238763632",
+  "branch": "content/priority-enrichment-batch1",
+  "commitHash": "52931db433043f1df59f849d8f10caedc72ef76c",
   "toolCount": 882,
   "eligibleCount": 879,
   "contentReviewCount": 0,
