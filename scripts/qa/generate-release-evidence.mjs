@@ -9,7 +9,7 @@ const ROOT = path.resolve(__dirname, '..', '..');
 
 export function runCmd(cmd, options = {}) {
   try {
-    const stdout = execSync(cmd, { cwd: ROOT, encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'], ...options });
+    const stdout = execSync(cmd, { cwd: ROOT, encoding: 'utf8', maxBuffer: 50 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'], ...options });
     return { exitCode: 0, stdout: stdout.trim(), stderr: '' };
   } catch (error) {
     return {

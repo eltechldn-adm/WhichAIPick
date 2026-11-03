@@ -493,16 +493,18 @@ export function checkEvidenceLedgerCompleteness(tool, ledger = []) {
 }
 
 // ── Check L: Generated-page consistency ──────────────────────────────────
-export function checkGeneratedPageConsistency(toolId, root = ROOT) {
+export function checkGeneratedPageConsistency(toolId, root = ROOT, htmlOverride = null) {
   const issues = [];
-  const filePath = path.join(root, 'tools', toolId, 'index.html');
+  let html = htmlOverride;
 
-  if (!fs.existsSync(filePath)) {
-    issues.push({ code: 'L_PAGE_MISSING', message: `Generated static page missing: ${filePath}` });
-    return issues;
+  if (html === null) {
+    const filePath = path.join(root, 'tools', toolId, 'index.html');
+    if (!fs.existsSync(filePath)) {
+      issues.push({ code: 'L_PAGE_MISSING', message: `Generated static page missing: ${filePath}` });
+      return issues;
+    }
+    html = fs.readFileSync(filePath, 'utf8');
   }
-
-  const html = fs.readFileSync(filePath, 'utf8');
 
   // Check 1: H1 count
   const h1Matches = html.match(/<h1[ >]/g) || [];
@@ -654,7 +656,33 @@ export function runEditorialQualityGuard(options = {}) {
 
 // Direct CLI execution
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const result = runEditorialQualityGuard();
+  const args = process.argv.slice(2);
+  let targetToolIds = null;
+  let baseRef = 'origin/main';
+  let checkHtml = true;
+
+  for (const arg of args) {
+    if (arg.startsWith('--targets=')) {
+      targetToolIds = arg.slice('--targets='.length).split(',').map(s => s.trim()).filter(Boolean);
+    } else if (arg.startsWith('--base=')) {
+      baseRef = arg.slice('--base='.length).trim();
+    } else if (arg === '--no-html' || arg === '--check-html=false') {
+      checkHtml = false;
+    }
+  }
+
+  let baselineTools = null;
+  if (targetToolIds && targetToolIds.length > 0) {
+    try {
+      const { execSync } = await import('child_process');
+      const raw = execSync(`git show ${baseRef}:data/tools.json`, { cwd: ROOT, encoding: 'utf8', maxBuffer: 50 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+      baselineTools = JSON.parse(raw);
+    } catch (err) {
+      console.warn(`[WARN] Could not fetch baseline data/tools.json from git ref "${baseRef}": ${err.message}. Skipping git diff invariance check.`);
+    }
+  }
+
+  const result = runEditorialQualityGuard({ targetToolIds, baselineTools, checkHtml });
   if (!result.success) {
     process.exit(1);
   }

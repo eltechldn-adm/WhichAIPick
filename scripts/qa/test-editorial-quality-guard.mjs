@@ -17,6 +17,8 @@ import {
   checkEvidenceLedgerCompleteness,
   checkGeneratedPageConsistency
 } from './editorial-quality-guard.mjs';
+import { simulateEnrichment } from '../reconcile-content-backlog.mjs';
+import { generateReleaseEvidence } from './generate-release-evidence.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,7 +37,7 @@ const ALL_14_IDS = [...BATCH1, ...BATCH2];
 
 console.log('======================================================');
 console.log('WHICHAIPICK EDITORIAL QUALITY GUARD TEST SUITE');
-console.log('Testing Positive Fixtures & Injected Deliberate Errors');
+console.log('Testing Positive Fixtures, Injected Defects & Check L');
 console.log('======================================================\n');
 
 let totalAssertions = 0;
@@ -58,9 +60,9 @@ for (const id of ALL_14_IDS) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PART 2: DELIBERATE DEFECT INJECTION (Negative Testing)
+// PART 2: DELIBERATE DEFECT INJECTION (Negative Testing: Checks A - K)
 // ─────────────────────────────────────────────────────────────────────────────
-console.log('\n--- PART 2: Injected Defect Detection Tests ---');
+console.log('\n--- PART 2: Injected Defect Detection Tests (Checks A - K) ---');
 
 function cloneTool(id) {
   const original = tools.find(t => t.id === id);
@@ -114,7 +116,7 @@ function cloneTool(id) {
 
 // Test 6: Invalid currency code
 {
-  const fixture = cloneTool('cleanvoice');
+  const fixture = cloneTool('docsbot');
   fixture.priceCurrency = 'XYZ_CRYPTO';
   const issues = checkCurrencyAndBillingFrequency(fixture);
   assert(issues.some(i => i.code === 'D_INVALID_CURRENCY'), 'Should detect unsupported currency');
@@ -238,7 +240,150 @@ function cloneTool(id) {
   pass('Defect detected: Missing evidence ledger record (K_MISSING_EVIDENCE_RECORD)');
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// PART 3: TARGETED TESTS FOR CHECK L (Generated Static Page Consistency)
+// ─────────────────────────────────────────────────────────────────────────────
+console.log('\n--- PART 3: Check L Static HTML Consistency Tests ---');
+
+// Helper to construct baseline valid HTML for Check L
+function createValidHtml(toolId) {
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>${toolId} — AI Tool | WhichAIPick</title>
+  <meta name="description" content="Substantive verified description of ${toolId} AI tool for testing purposes.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://whichaipick.com/tools/${toolId}/">
+</head>
+<body>
+  <h1>${toolId}</h1>
+  <section><h2>How It Works</h2><p>Explaining how the tool operates step-by-step.</p></section>
+  <section><h2>Key Features</h2><p>Feature groups detailed breakdown.</p></section>
+  <section><h2>Strengths & Limitations</h2><p>Pros and cons analysis.</p></section>
+  <section><h2>Pricing</h2><p>Transparent pricing breakdown $20/month.</p></section>
+</body>
+</html>
+  `.trim();
+}
+
+// Test 19: Check L - Clean HTML passes
+{
+  const html = createValidHtml('ollama');
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert.strictEqual(issues.length, 0, 'Valid HTML must produce 0 issues');
+  pass('Check L baseline: Valid HTML satisfies all criteria');
+}
+
+// Test 20: Check L - Missing H1 tag
+{
+  const html = createValidHtml('ollama').replace('<h1>ollama</h1>', '');
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert(issues.some(i => i.code === 'L_INVALID_H1_COUNT'), 'Should detect missing H1');
+  pass('Check L defect detected: Missing H1 tag (L_INVALID_H1_COUNT)');
+}
+
+// Test 21: Check L - Multiple H1 tags
+{
+  const html = createValidHtml('ollama').replace('<h1>ollama</h1>', '<h1>First H1</h1><h1>Second H1</h1>');
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert(issues.some(i => i.code === 'L_INVALID_H1_COUNT'), 'Should detect multiple H1 tags');
+  pass('Check L defect detected: Multiple H1 tags (L_INVALID_H1_COUNT)');
+}
+
+// Test 22: Check L - Incorrect Canonical URL
+{
+  const html = createValidHtml('ollama').replace(
+    'href="https://whichaipick.com/tools/ollama/"',
+    'href="https://whichaipick.com/tools/wrong-canonical/"'
+  );
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert(issues.some(i => i.code === 'L_INCORRECT_CANONICAL'), 'Should detect incorrect canonical URL');
+  pass('Check L defect detected: Incorrect canonical link (L_INCORRECT_CANONICAL)');
+}
+
+// Test 23: Check L - Missing Robots Meta Tag
+{
+  const html = createValidHtml('ollama').replace('<meta name="robots" content="index,follow">', '');
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert(issues.some(i => i.code === 'L_INVALID_ROBOTS'), 'Should detect missing robots meta');
+  pass('Check L defect detected: Missing robots meta (L_INVALID_ROBOTS)');
+}
+
+// Test 24: Check L - Missing Required Section Heading
+{
+  const html = createValidHtml('ollama').replace('<h2>Strengths & Limitations</h2>', '');
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert(issues.some(i => i.code === 'L_MISSING_HTML_HEADING'), 'Should detect missing section heading');
+  pass('Check L defect detected: Missing required heading (L_MISSING_HTML_HEADING)');
+}
+
+// Test 25: Check L - Unresolved Template Token Leak
+{
+  const html = createValidHtml('ollama').replace('Explaining how the tool operates', 'Explaining {{ tool.summary }}');
+  const issues = checkGeneratedPageConsistency('ollama', ROOT, html);
+  assert(issues.some(i => i.code === 'L_TEMPLATE_TOKEN_LEAK'), 'Should detect template token leak');
+  pass('Check L defect detected: Unresolved template token leak (L_TEMPLATE_TOKEN_LEAK)');
+}
+
+// Test 26: Check L - Missing file on disk
+{
+  const issues = checkGeneratedPageConsistency('completely-nonexistent-tool-xyz-12345', ROOT, null);
+  assert(issues.some(i => i.code === 'L_PAGE_MISSING'), 'Should detect missing static page file');
+  pass('Check L defect detected: Missing static page on disk (L_PAGE_MISSING)');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PART 4: BACKLOG TRACKER DYNAMIC SIMULATION
+// ─────────────────────────────────────────────────────────────────────────────
+console.log('\n--- PART 4: Backlog Tracker Dynamic Simulation ---');
+{
+  // Pick an actual skeletal tool (e.g. 11x) and simulate enrichment
+  const sim = simulateEnrichment('11x');
+  assert.strictEqual(sim.skeletalDiff, -1, 'Skeletal count must decrease by exactly 1');
+  assert.strictEqual(sim.richDiff, 1, 'Rich V1 count must increase by exactly 1');
+  assert.strictEqual(sim.totalDiff, 0, 'Total tool count must remain invariant at 882');
+  pass(`Simulation proof: Skeletal (${sim.baselineCounts.skeletalV1} -> ${sim.simulatedCounts.skeletalV1}), Rich (${sim.baselineCounts.richV1} -> ${sim.simulatedCounts.richV1}), Total invariant`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PART 5: EVIDENCE GENERATOR ROBUSTNESS & SECURITY
+// ─────────────────────────────────────────────────────────────────────────────
+console.log('\n--- PART 5: Evidence Generator Robustness & Security ---');
+{
+  const evidence = generateReleaseEvidence({ runSuites: false, verbose: false });
+  
+  // 1. Exact 40-character Git SHA (never short prefix)
+  assert.strictEqual(typeof evidence.gitIdentity.headCommitSha, 'string');
+  assert.strictEqual(evidence.gitIdentity.headCommitSha.length, 40, 'HEAD SHA must be full 40-character string');
+  assert(/^[0-9a-f]{40}$/i.test(evidence.gitIdentity.headCommitSha), 'HEAD SHA must be valid hex');
+  pass('Evidence generator: Exact 40-char full Git SHA captured directly from Git CLI');
+
+  // 2. Skipped checks marked NOT TESTED (never invented)
+  assert.strictEqual(evidence.previewDeployment.id, null);
+  assert.strictEqual(evidence.previewDeployment.status, 'NOT TESTED');
+  pass('Evidence generator: Null preview deployment explicitly marked [NOT TESTED]');
+
+  // 3. Secret Leakage Protection
+  const jsonReport = JSON.stringify(evidence);
+  const secretPatterns = [/api[_-]?key/i, /token[_-]?secret/i, /password/i, /bearer\s+[a-z0-9]/i];
+  for (const pat of secretPatterns) {
+    assert(!pat.test(jsonReport), `Generated evidence must not leak secrets matching ${pat}`);
+  }
+  pass('Evidence generator: Zero secret or credential exposure in evidence output');
+
+  // 4. Catalogue Invariants Verified
+  assert.strictEqual(evidence.catalogueInvariants.totalTools.actual, 882);
+  assert.strictEqual(evidence.catalogueInvariants.eligibleTools.actual, 879);
+  assert.strictEqual(evidence.catalogueInvariants.ineligibleTools.actual, 3);
+  assert.strictEqual(evidence.catalogueInvariants.v2CanaryTools.actual, 46);
+  assert.strictEqual(evidence.catalogueInvariants.sitemapUrls.actual, 959);
+  assert.strictEqual(evidence.catalogueInvariants.redirectRules.actual, 59);
+  pass('Evidence generator: All 6 catalogue invariants verified with [VERIFIED] status');
+}
+
 console.log('\n======================================================');
 console.log(`TOTAL TEST ASSERTIONS: ${totalAssertions}`);
-console.log('🎉 ALL EDITORIAL QUALITY GUARD TESTS PASSED WITH ZERO DEFECTS!');
+console.log('🎉 ALL EDITORIAL QUALITY & FAILURE TESTS PASSED CLEANLY!');
 console.log('======================================================\n');

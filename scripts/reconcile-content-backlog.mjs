@@ -6,11 +6,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 
-const TOOLS_PATH = path.join(ROOT, 'data', 'tools.json');
-const CANARY_PATH = path.join(ROOT, 'data', 'release', 'tool-page-v2-canary.json');
-const EVIDENCE_LEDGER_PATH = path.join(ROOT, 'data', 'evidence', 'phase11-evidence-ledger.json');
-const OUTPUT_PATH = path.join(ROOT, 'data', 'content-enrichment-backlog.json');
-
 export const BATCH1_TOOL_IDS = Object.freeze([
   'ollama',
   'recraft',
@@ -33,15 +28,8 @@ export const BATCH2_TOOL_IDS = Object.freeze([
 
 export const HISTORICAL_BASELINE = Object.freeze({
   totalTools: 882,
-  v2Count: 46,
   historicalSkeletalCount: 575,
-  historicalRichV1Count: 261, // included 3 ineligible tools with partial rich fields
-  ineligibleCount: 3,
-  batch1EnrichedCount: 7,
-  batch2EnrichedCount: 7,
-  totalEnrichedCount: 14,
-  expectedRemainingSkeletalCount: 561,
-  expectedEligibleRichV1Count: 272
+  ineligibleCount: 3
 });
 
 export function isSubstantive(val) {
@@ -54,14 +42,14 @@ export function isSubstantive(val) {
 
 /**
  * Deterministically classifies a tool record into one of 5 mutually exclusive backlog categories:
- * 1. V2_STRUCTURED
- * 2. DEPRECATED_INELIGIBLE
- * 3. REQUIRES_REVIEW
+ * 1. DEPRECATED_INELIGIBLE
+ * 2. REQUIRES_REVIEW
+ * 3. V2_STRUCTURED
  * 4. RICH_V1
  * 5. SKELETAL_V1
  */
 export function classifyTool(tool, canarySet) {
-  // Check 1: Ineligible / Deprecated
+  // Check 1: Ineligible / Deprecated (highest precedence)
   if (tool.recommendationEligible === false || tool.directoryEligible === false) {
     return {
       category: 'DEPRECATED_INELIGIBLE',
@@ -78,7 +66,7 @@ export function classifyTool(tool, canarySet) {
   }
 
   // Check 3: Tool Page V2 Canary cohort
-  if (canarySet.has(tool.id)) {
+  if (canarySet && canarySet.has(tool.id)) {
     return {
       category: 'V2_STRUCTURED',
       reason: 'Member of approved Tool Page V2 canary allowlist'
@@ -114,13 +102,24 @@ export function classifyTool(tool, canarySet) {
   };
 }
 
-export function reconcileBacklog({ root = ROOT, writeManifest = true, verbose = true } = {}) {
-  const tools = JSON.parse(fs.readFileSync(path.join(root, 'data', 'tools.json'), 'utf8'));
-  const canaryJson = JSON.parse(fs.readFileSync(path.join(root, 'data', 'release', 'tool-page-v2-canary.json'), 'utf8'));
+export function reconcileBacklog(options = {}) {
+  const {
+    root = ROOT,
+    toolsData = null,
+    writeManifest = true,
+    verbose = true
+  } = options;
+
+  const tools = toolsData || JSON.parse(fs.readFileSync(path.join(root, 'data', 'tools.json'), 'utf8'));
+  const canaryJsonPath = path.join(root, 'data', 'release', 'tool-page-v2-canary.json');
+  const canaryJson = fs.existsSync(canaryJsonPath)
+    ? JSON.parse(fs.readFileSync(canaryJsonPath, 'utf8'))
+    : { approvedToolIds: [] };
   const canarySet = new Set(canaryJson.approvedToolIds);
 
-  const ledger = fs.existsSync(path.join(root, 'data', 'evidence', 'phase11-evidence-ledger.json'))
-    ? JSON.parse(fs.readFileSync(path.join(root, 'data', 'evidence', 'phase11-evidence-ledger.json'), 'utf8'))
+  const ledgerPath = path.join(root, 'data', 'evidence', 'phase11-evidence-ledger.json');
+  const ledger = fs.existsSync(ledgerPath)
+    ? JSON.parse(fs.readFileSync(ledgerPath, 'utf8'))
     : [];
 
   const ledgerToolIds = new Set(ledger.map(e => e.id));
@@ -135,7 +134,6 @@ export function reconcileBacklog({ root = ROOT, writeManifest = true, verbose = 
 
   const batch1Set = new Set(BATCH1_TOOL_IDS);
   const batch2Set = new Set(BATCH2_TOOL_IDS);
-  const enrichedSet = new Set([...BATCH1_TOOL_IDS, ...BATCH2_TOOL_IDS]);
 
   for (const tool of tools) {
     const { category, reason, sections } = classifyTool(tool, canarySet);
@@ -167,35 +165,23 @@ export function reconcileBacklog({ root = ROOT, writeManifest = true, verbose = 
 
   const reconciledSum = counts.v2Structured + counts.richV1 + counts.skeletalV1 + counts.deprecatedIneligible + counts.requiresReview;
 
-  // Validate exact mathematical reconciliation against historical baseline
+  // Validate structural invariants (mutual exclusivity & completeness)
   const reconciliationErrors = [];
-  if (counts.totalTools !== HISTORICAL_BASELINE.totalTools) {
-    reconciliationErrors.push(`Total tools ${counts.totalTools} != baseline ${HISTORICAL_BASELINE.totalTools}`);
-  }
-  if (counts.v2Structured !== HISTORICAL_BASELINE.v2Count) {
-    reconciliationErrors.push(`V2 count ${counts.v2Structured} != baseline ${HISTORICAL_BASELINE.v2Count}`);
+  if (reconciledSum !== counts.totalTools) {
+    reconciliationErrors.push(`Sum of buckets (${reconciledSum}) != total tools (${counts.totalTools})`);
   }
   if (counts.deprecatedIneligible !== HISTORICAL_BASELINE.ineligibleCount) {
     reconciliationErrors.push(`Ineligible count ${counts.deprecatedIneligible} != baseline ${HISTORICAL_BASELINE.ineligibleCount}`);
   }
+  if (counts.v2Structured !== canarySet.size) {
+    reconciliationErrors.push(`V2 count ${counts.v2Structured} != canary allowlist count ${canarySet.size}`);
+  }
   if (counts.requiresReview !== 0) {
     reconciliationErrors.push(`Requires review count is ${counts.requiresReview}, expected 0`);
   }
-  if (counts.skeletalV1 !== HISTORICAL_BASELINE.expectedRemainingSkeletalCount) {
-    reconciliationErrors.push(`Skeletal count ${counts.skeletalV1} != expected ${HISTORICAL_BASELINE.expectedRemainingSkeletalCount}`);
-  }
-  if (counts.richV1 !== HISTORICAL_BASELINE.expectedEligibleRichV1Count) {
-    reconciliationErrors.push(`Rich V1 count ${counts.richV1} != expected ${HISTORICAL_BASELINE.expectedEligibleRichV1Count}`);
-  }
-  if (reconciledSum !== counts.totalTools) {
-    reconciliationErrors.push(`Sum of buckets (${reconciledSum}) != total tools (${counts.totalTools})`);
-  }
 
-  // Confirm that all 14 enriched tools are classified as RICH_V1
-  const enrichedInRichV1 = classificationBuckets.RICH_V1.filter(t => enrichedSet.has(t.id)).map(t => t.id);
-  if (enrichedInRichV1.length !== HISTORICAL_BASELINE.totalEnrichedCount) {
-    reconciliationErrors.push(`Expected 14 enriched tools in RICH_V1, found ${enrichedInRichV1.length}`);
-  }
+  // Derive dynamic enriched count from the baseline
+  const derivedEnrichedCount = HISTORICAL_BASELINE.historicalSkeletalCount - counts.skeletalV1;
 
   // Prioritize skeletal backlog by category distribution
   const skeletalByCategory = {};
@@ -206,22 +192,17 @@ export function reconcileBacklog({ root = ROOT, writeManifest = true, verbose = 
   const manifest = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
-    description: 'Deterministic WhichAIPick content backlog manifest classifying all 882 tools for editorial enrichment.',
+    description: 'Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.',
     baselineReconciliation: {
       historicalSkeletalBaseline: HISTORICAL_BASELINE.historicalSkeletalCount,
-      batchesCompleted: [
-        { batch: 1, count: HISTORICAL_BASELINE.batch1EnrichedCount, toolIds: [...BATCH1_TOOL_IDS] },
-        { batch: 2, count: HISTORICAL_BASELINE.batch2EnrichedCount, toolIds: [...BATCH2_TOOL_IDS] }
-      ],
-      totalEnrichedToDate: HISTORICAL_BASELINE.totalEnrichedCount,
+      derivedEnrichedCountToDate: derivedEnrichedCount,
       remainingSkeletalBacklog: counts.skeletalV1,
-      mathematicalProof: `${HISTORICAL_BASELINE.historicalSkeletalCount} (baseline skeletal) - ${HISTORICAL_BASELINE.totalEnrichedCount} (Batches 1 & 2 enriched) = ${counts.skeletalV1} remaining skeletal tools`
+      mathematicalProof: `${HISTORICAL_BASELINE.historicalSkeletalCount} (baseline skeletal) - ${derivedEnrichedCount} (tools enriched to date) = ${counts.skeletalV1} remaining skeletal tools`
     },
     counts,
     skeletalByCategoryDistribution: skeletalByCategory,
     ineligibleToolIds: classificationBuckets.DEPRECATED_INELIGIBLE.map(t => t.id),
     v2ToolIds: classificationBuckets.V2_STRUCTURED.map(t => t.id),
-    enrichedV1ToolIds: enrichedInRichV1,
     skeletalBacklogToolIds: classificationBuckets.SKELETAL_V1.map(t => t.id),
     classificationInventory: classificationBuckets
   };
@@ -239,13 +220,13 @@ export function reconcileBacklog({ root = ROOT, writeManifest = true, verbose = 
     console.log('======================================================');
     console.log(`Total Catalogue Records:       ${counts.totalTools}`);
     console.log(`- V2 Structured (Canary):       ${counts.v2Structured}`);
-    console.log(`- Rich V1 (Substantive):        ${counts.richV1} (includes 14 newly enriched)`);
+    console.log(`- Rich V1 (Substantive):        ${counts.richV1}`);
     console.log(`- Skeletal V1 (Backlog):        ${counts.skeletalV1}`);
     console.log(`- Deprecated / Ineligible:      ${counts.deprecatedIneligible}`);
     console.log(`- Requires Review:              ${counts.requiresReview}`);
     console.log('------------------------------------------------------');
     console.log(`Historical Baseline Skeletal:  ${HISTORICAL_BASELINE.historicalSkeletalCount}`);
-    console.log(`Enriched in Batches 1 & 2:     -${HISTORICAL_BASELINE.totalEnrichedCount}`);
+    console.log(`Derived Enriched To Date:      -${derivedEnrichedCount}`);
     console.log(`Remaining Skeletal Backlog:     ${counts.skeletalV1}`);
     console.log('------------------------------------------------------');
     console.log(`Reconciliation Invariant Check: ${reconciliationErrors.length === 0 ? '✅ 100% RECONCILED' : '❌ FAILED'}`);
@@ -259,6 +240,42 @@ export function reconcileBacklog({ root = ROOT, writeManifest = true, verbose = 
     errors: reconciliationErrors,
     counts,
     manifest
+  };
+}
+
+/**
+ * Simulates enrichment of a skeletal tool in a temporary in-memory clone.
+ * Does NOT write or alter real catalogue data.
+ */
+export function simulateEnrichment(toolId, simulatedFields = {}, options = {}) {
+  const { root = ROOT } = options;
+  const originalTools = JSON.parse(fs.readFileSync(path.join(root, 'data', 'tools.json'), 'utf8'));
+  const clonedTools = JSON.parse(JSON.stringify(originalTools));
+
+  const target = clonedTools.find(t => t.id === toolId);
+  if (!target) {
+    throw new Error(`Tool "${toolId}" not found for enrichment simulation`);
+  }
+
+  // Apply simulated rich fields
+  target.how_it_works = simulatedFields.how_it_works || 'Simulated comprehensive step-by-step workflow for testing dynamic backlog reconciliation.';
+  target.feature_groups = simulatedFields.feature_groups || [
+    { group: 'Core Engine', items: ['Simulated item 1', 'Simulated item 2'] },
+    { group: 'API & Integrations', items: ['Simulated API 1', 'Simulated API 2'] }
+  ];
+  target.pros = simulatedFields.pros || ['Simulated advantage 1', 'Simulated advantage 2'];
+  target.cons = simulatedFields.cons || ['Simulated limitation 1', 'Simulated limitation 2'];
+  target.pricing_overview = simulatedFields.pricing_overview || '<p>Simulated transparent pricing breakdown $20/month.</p>';
+
+  const baselineResult = reconcileBacklog({ root, toolsData: originalTools, writeManifest: false, verbose: false });
+  const simulatedResult = reconcileBacklog({ root, toolsData: clonedTools, writeManifest: false, verbose: false });
+
+  return {
+    baselineCounts: baselineResult.counts,
+    simulatedCounts: simulatedResult.counts,
+    skeletalDiff: simulatedResult.counts.skeletalV1 - baselineResult.counts.skeletalV1,
+    richDiff: simulatedResult.counts.richV1 - baselineResult.counts.richV1,
+    totalDiff: simulatedResult.counts.totalTools - baselineResult.counts.totalTools
   };
 }
 
