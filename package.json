@@ -33,6 +33,11 @@
     "generate:build-info": "node scripts/generate-build-info.mjs",
     "qa:canary:config": "node scripts/qa/tool-page-v2-canary-config-guard.mjs",
     "qa:canary:output": "node scripts/qa/tool-page-v2-canary-guard.mjs",
+    "qa:backlog": "node scripts/reconcile-content-backlog.mjs",
+    "qa:editorial": "node scripts/qa/editorial-quality-guard.mjs",
+    "qa:editorial:fixtures": "node scripts/qa/test-editorial-quality-guard.mjs",
+    "qa:source-of-truth": "node scripts/qa/test-source-of-truth-invariance.mjs",
+    "qa:evidence": "node scripts/qa/generate-release-evidence.mjs",
     "predeploy": "node scripts/prune-generated-routes.mjs --execute && node scripts/generate-static-pages.mjs && npm run generate:seo && node scripts/inject-header.mjs && node scripts/inject-footer.mjs && node scripts/inject-counts.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-build-info.mjs && npm run qa:guards && npm run qa:canary:config && npm run qa:canary:output",
     "build:cloudflare": "npm run build:data && npm run qa && TOOL_PAGE_V2_CANARY=1 npm run predeploy"
   },
