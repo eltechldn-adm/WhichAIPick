@@ -155,24 +155,24 @@ async function run() {
     }
 
     // ----------------------------------------------------
-    // 2. EMPTY CONTENT SUPPRESSION (DOCSBOT)
+    // 2. EMPTY CONTENT SUPPRESSION (11X)
     // ----------------------------------------------------
-    console.log('\n--- 2. EMPTY CONTENT SUPPRESSION (DOCSBOT) ---');
-    const docsbot = tools.find(x => x.id === 'docsbot');
-    recordCheck('2-EMPTY', 'docsbot exists in catalogue', !!docsbot);
-    recordCheck('2-EMPTY', 'docsbot has no pricing_overview', !docsbot.pricing_overview);
-    recordCheck('2-EMPTY', 'docsbot has no comparison_summary', !docsbot.comparison_summary);
+    console.log('\n--- 2. EMPTY CONTENT SUPPRESSION (11X) ---');
+    const emptyTool = tools.find(x => x.id === '11x');
+    recordCheck('2-EMPTY', '11x exists in catalogue', !!emptyTool);
+    recordCheck('2-EMPTY', '11x has no pricing_overview', !emptyTool.pricing_overview);
+    recordCheck('2-EMPTY', '11x has no comparison_summary', !emptyTool.comparison_summary);
 
-    const docsbotVm = buildToolPageViewModel(docsbot);
-    const docsbotHtml = renderToolPageV2(docsbotVm, null);
+    const emptyToolVm = buildToolPageViewModel(emptyTool);
+    const emptyToolHtml = renderToolPageV2(emptyToolVm, null);
 
-    recordCheck('2-EMPTY', 'docsbot: "How It Compares" heading cleanly omitted', !docsbotHtml.includes('<h2>How It Compares</h2>'));
-    recordCheck('2-EMPTY', 'docsbot: .tool-v2-comparison-summary container omitted', !docsbotHtml.includes('tool-v2-comparison-summary'));
-    recordCheck('2-EMPTY', 'docsbot: .tool-v2-pricing-overview container omitted', !docsbotHtml.includes('tool-v2-pricing-overview'));
-    recordCheck('2-EMPTY', 'docsbot: Structured "Pricing & Access" heading retained', docsbotHtml.includes('<h2>Pricing & Access</h2>'));
-    recordCheck('2-EMPTY', 'docsbot: Free Tier status preserved', docsbotHtml.includes(docsbotVm.pricing.display.freeTierLabel));
-    recordCheck('2-EMPTY', 'docsbot: Free Trial unconfirmed fallback preserved', docsbotHtml.includes('Trial availability not confirmed'));
-    recordCheck('2-EMPTY', 'docsbot: Zero empty h2 headings', !docsbotHtml.includes('<h2></h2>') && !docsbotHtml.includes('<h2> </h2>'));
+    recordCheck('2-EMPTY', '11x: "How It Compares" heading cleanly omitted', !emptyToolHtml.includes('<h2>How It Compares</h2>'));
+    recordCheck('2-EMPTY', '11x: .tool-v2-comparison-summary container omitted', !emptyToolHtml.includes('tool-v2-comparison-summary'));
+    recordCheck('2-EMPTY', '11x: .tool-v2-pricing-overview container omitted', !emptyToolHtml.includes('tool-v2-pricing-overview'));
+    recordCheck('2-EMPTY', '11x: Structured "Pricing & Access" heading retained', emptyToolHtml.includes('<h2>Pricing & Access</h2>'));
+    recordCheck('2-EMPTY', '11x: Free Tier status preserved', emptyToolHtml.includes(emptyToolVm.pricing.display.freeTierLabel));
+    recordCheck('2-EMPTY', '11x: Free Trial unconfirmed fallback preserved', emptyToolHtml.includes('Trial availability not confirmed'));
+    recordCheck('2-EMPTY', '11x: Zero empty h2 headings', !emptyToolHtml.includes('<h2></h2>') && !emptyToolHtml.includes('<h2> </h2>'));
 
     // ----------------------------------------------------
     // 3. SECURITY & HTML ESCAPING

@@ -93,11 +93,11 @@ async function run() {
         recordCheck('1-FIXTURE', `Tool ${id} has populated feature_groups`, !!t.feature_groups && Object.keys(t.feature_groups).length > 0);
     }
 
-    const docsbot = tools.find(x => x.id === 'docsbot');
-    recordCheck('1-FIXTURE', 'Tool docsbot exists in tools.json', !!docsbot);
-    recordCheck('1-FIXTURE', 'Tool docsbot has NO pros', !docsbot.pros || docsbot.pros.length === 0);
-    recordCheck('1-FIXTURE', 'Tool docsbot has NO cons', !docsbot.cons || docsbot.cons.length === 0);
-    recordCheck('1-FIXTURE', 'Tool docsbot has NO feature_groups', !docsbot.feature_groups || Object.keys(docsbot.feature_groups).length === 0);
+    const emptyTool = tools.find(x => x.id === '11x');
+    recordCheck('1-FIXTURE', 'Tool 11x exists in tools.json', !!emptyTool);
+    recordCheck('1-FIXTURE', 'Tool 11x has NO pros', !emptyTool.pros || emptyTool.pros.length === 0);
+    recordCheck('1-FIXTURE', 'Tool 11x has NO cons', !emptyTool.cons || emptyTool.cons.length === 0);
+    recordCheck('1-FIXTURE', 'Tool 11x has NO feature_groups', !emptyTool.feature_groups || Object.keys(emptyTool.feature_groups).length === 0);
 
     // ----------------------------------------------------
     // 2. UNIT RENDERING: POPULATED EDITORIAL FIELDS
@@ -141,16 +141,16 @@ async function run() {
     // ----------------------------------------------------
     // 3. UNIT RENDERING: EMPTY CONTENT (DOCSBOT)
     // ----------------------------------------------------
-    console.log('\n--- 3. UNIT RENDERING: EMPTY CONTENT (DOCSBOT) ---');
-    const docsbotVm = buildToolPageViewModel(docsbot);
-    const docsbotHtml = renderToolPageV2(docsbotVm, null);
+    console.log('\n--- 3. UNIT RENDERING: EMPTY CONTENT (11X) ---');
+    const emptyToolVm = buildToolPageViewModel(emptyTool);
+    const emptyToolHtml = renderToolPageV2(emptyToolVm, null);
 
-    recordCheck('3-EMPTY', 'docsbot: Key Features heading omitted', !docsbotHtml.includes('<h2>Key Features</h2>'));
-    recordCheck('3-EMPTY', 'docsbot: Strengths & Limitations heading omitted', !docsbotHtml.includes('<h2>Strengths & Limitations</h2>'));
-    recordCheck('3-EMPTY', 'docsbot: .tool-v2-feature-groups container omitted', !docsbotHtml.includes('tool-v2-feature-groups'));
-    recordCheck('3-EMPTY', 'docsbot: .tool-v2-pros-cons container omitted', !docsbotHtml.includes('tool-v2-pros-cons'));
-    recordCheck('3-EMPTY', 'docsbot: No empty h2 tags', !docsbotHtml.includes('<h2></h2>') && !docsbotHtml.includes('<h2> </h2>'));
-    recordCheck('3-EMPTY', 'docsbot: No empty h3 tags', !docsbotHtml.includes('<h3></h3>') && !docsbotHtml.includes('<h3> </h3>'));
+    recordCheck('3-EMPTY', '11x: Key Features heading omitted', !emptyToolHtml.includes('<h2>Key Features</h2>'));
+    recordCheck('3-EMPTY', '11x: Strengths & Limitations heading omitted', !emptyToolHtml.includes('<h2>Strengths & Limitations</h2>'));
+    recordCheck('3-EMPTY', '11x: .tool-v2-feature-groups container omitted', !emptyToolHtml.includes('tool-v2-feature-groups'));
+    recordCheck('3-EMPTY', '11x: .tool-v2-pros-cons container omitted', !emptyToolHtml.includes('tool-v2-pros-cons'));
+    recordCheck('3-EMPTY', '11x: No empty h2 tags', !emptyToolHtml.includes('<h2></h2>') && !emptyToolHtml.includes('<h2> </h2>'));
+    recordCheck('3-EMPTY', '11x: No empty h3 tags', !emptyToolHtml.includes('<h3></h3>') && !emptyToolHtml.includes('<h3> </h3>'));
 
     // ----------------------------------------------------
     // 4. EDGE CASES: PARTIAL DATA & DEDUPLICATION
