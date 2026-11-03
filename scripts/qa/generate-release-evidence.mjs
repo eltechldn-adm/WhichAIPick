@@ -20,6 +20,59 @@ export function runCmd(cmd, options = {}) {
   }
 }
 
+export function verifyPreviewDeployment(deploymentId, expectedCommitSha) {
+  if (!deploymentId) {
+    return {
+      id: null,
+      status: 'NOT TESTED',
+      message: 'No preview deployment ID provided for verification'
+    };
+  }
+
+  // Cloudflare Pages subdomain: first 8 hex characters of deployment UUID or full short ID
+  const shortId = deploymentId.length > 8 && deploymentId.includes('-')
+    ? deploymentId.slice(0, 8)
+    : deploymentId;
+  const url = `https://${shortId}.whichaipick.pages.dev/build-info.json`;
+
+  const curlRes = runCmd(`curl -s -f -m 10 "${url}"`);
+  if (curlRes.exitCode !== 0) {
+    return {
+      id: deploymentId,
+      url,
+      status: 'FAILED',
+      message: `Preview deployment is not reachable at ${url} (curl exit code ${curlRes.exitCode})`
+    };
+  }
+
+  try {
+    const buildInfo = JSON.parse(curlRes.stdout);
+    if (expectedCommitSha && buildInfo.commitHash !== expectedCommitSha) {
+      return {
+        id: deploymentId,
+        url,
+        status: 'FAILED',
+        actualCommitSha: buildInfo.commitHash,
+        expectedCommitSha,
+        message: `Preview deployment commit mismatch: found ${buildInfo.commitHash}, expected ${expectedCommitSha}`
+      };
+    }
+    return {
+      id: deploymentId,
+      url,
+      status: 'VERIFIED',
+      buildInfo
+    };
+  } catch (err) {
+    return {
+      id: deploymentId,
+      url,
+      status: 'FAILED',
+      message: `Failed to parse build-info.json from preview: ${err.message}`
+    };
+  }
+}
+
 export function generateReleaseEvidence(options = {}) {
   const {
     baseRef = 'origin/main',
@@ -169,7 +222,18 @@ export function generateReleaseEvidence(options = {}) {
   if (runSuites) {
     const suites = [
       { name: 'Backlog Reconciler', cmd: 'node scripts/reconcile-content-backlog.mjs' },
-      { name: 'Editorial Quality Guard', cmd: 'node scripts/qa/editorial-quality-guard.mjs' },
+      { name: 'Editorial Regression Fixtures (14 tools)', cmd: 'node scripts/qa/editorial-quality-guard.mjs' }
+    ];
+
+    // If targetToolIds is supplied, add the target batch editorial guard suite
+    if (targetToolIds && targetToolIds.length > 0) {
+      suites.push({
+        name: `Editorial Quality Guard (Batch Targets: ${targetToolIds.join(',')})`,
+        cmd: `node scripts/qa/editorial-quality-guard.mjs --targets=${targetToolIds.join(',')} --base=${baseRef}`
+      });
+    }
+
+    suites.push(
       { name: 'Editorial Fixture Suite', cmd: 'node scripts/qa/test-editorial-quality-guard.mjs' },
       { name: 'Source-of-Truth Invariance', cmd: 'node scripts/qa/test-source-of-truth-invariance.mjs' },
       { name: 'Catalogue Data Validation', cmd: 'npm run validate:data' },
@@ -179,7 +243,7 @@ export function generateReleaseEvidence(options = {}) {
       { name: 'Site Template & Placeholder Guards', cmd: 'npm run qa:guards' },
       { name: 'Canary Config Guard', cmd: 'npm run qa:canary:config' },
       { name: 'Canary Output Guard (46 V2)', cmd: 'TOOL_PAGE_V2_CANARY=1 npm run qa:canary:output' }
-    ];
+    );
 
     for (const s of suites) {
       const res = runCmd(s.cmd);
@@ -193,8 +257,64 @@ export function generateReleaseEvidence(options = {}) {
     }
   }
 
+  // 6. Preview Deployment Verification
+  const previewCheck = verifyPreviewDeployment(previewDeploymentId, headSha);
+
+  // 7. Overall Fail-Closed Release Gate Evaluation
+  let isOverallValid = true;
+  const failureReasons = [];
+
+  if (headShaResult.exitCode !== 0 || !headSha) {
+    isOverallValid = false;
+    failureReasons.push('Invalid or unresolvable HEAD commit SHA');
+  }
+  if (!remoteUrl || !remoteUrl.includes('WhichAIPick')) {
+    isOverallValid = false;
+    failureReasons.push(`Invalid remote repository URL: ${remoteUrl}`);
+  }
+  if (!noindexExcluded) {
+    isOverallValid = false;
+    failureReasons.push('Quarantined mass-noindex commit da25a00f is an ancestor of HEAD');
+  }
+
+  if (toolMutations.diffError) {
+    isOverallValid = false;
+    failureReasons.push(`Failed to diff catalogue against baseline ${baseRef}: ${toolMutations.diffError}`);
+  }
+  if (toolMutations.nonTargetChangedIds.length > 0) {
+    isOverallValid = false;
+    failureReasons.push(`Unauthorised non-target tool modification(s) detected: ${toolMutations.nonTargetChangedIds.join(', ')}`);
+  }
+  if (toolMutations.deletedIds.length > 0) {
+    isOverallValid = false;
+    failureReasons.push(`Tool deletions detected against baseline: ${toolMutations.deletedIds.join(', ')}`);
+  }
+
+  for (const [key, inv] of Object.entries(invariants)) {
+    if (inv.status !== 'VERIFIED') {
+      isOverallValid = false;
+      failureReasons.push(`Catalogue invariant violation: ${key} actual=${inv.actual}, expected=${inv.expected}`);
+    }
+  }
+
+  if (runSuites) {
+    for (const s of suiteResults) {
+      if (s.exitCode !== 0 || s.status !== 'VERIFIED') {
+        isOverallValid = false;
+        failureReasons.push(`Required QA suite failed: ${s.suite} (exit code ${s.exitCode})`);
+      }
+    }
+  }
+
+  if (previewDeploymentId && previewCheck.status === 'FAILED') {
+    isOverallValid = false;
+    failureReasons.push(`Preview deployment verification failed: ${previewCheck.message}`);
+  }
+
   const evidenceReport = {
     generatedAt: new Date().toISOString(),
+    success: isOverallValid,
+    failureReasons,
     gitIdentity: {
       headCommitSha: headSha,
       baseCommitSha: baseSha,
@@ -207,13 +327,7 @@ export function generateReleaseEvidence(options = {}) {
       massNoindexExcluded: noindexExcluded,
       status: (headSha && remoteUrl.includes('WhichAIPick') && noindexExcluded) ? 'VERIFIED' : 'FAILED'
     },
-    previewDeployment: previewDeploymentId ? {
-      id: previewDeploymentId,
-      status: 'VERIFIED'
-    } : {
-      id: null,
-      status: 'NOT TESTED'
-    },
+    previewDeployment: previewCheck,
     catalogueDiff: {
       baseRef: baseRef,
       targetToolIds: targetToolIds,
@@ -221,7 +335,7 @@ export function generateReleaseEvidence(options = {}) {
       changedToolIds: toolMutations.changedIds,
       nonTargetModificationsCount: toolMutations.nonTargetChangedIds.length,
       nonTargetModifiedToolIds: toolMutations.nonTargetChangedIds,
-      status: toolMutations.nonTargetChangedIds.length === 0 ? 'VERIFIED' : 'FAILED'
+      status: (toolMutations.nonTargetChangedIds.length === 0 && !toolMutations.diffError) ? 'VERIFIED' : 'FAILED'
     },
     catalogueInvariants: invariants,
     evidenceVerification: {
@@ -245,6 +359,13 @@ export function generateReleaseEvidence(options = {}) {
     console.log(`- Noindex Excluded:${evidenceReport.gitIdentity.massNoindexExcluded ? 'YES' : 'NO'}`);
     console.log(`- Status:          [${evidenceReport.gitIdentity.status}]`);
 
+    console.log(`\n[PREVIEW DEPLOYMENT]`);
+    console.log(`- Deployment ID:   ${evidenceReport.previewDeployment.id || 'NONE'}`);
+    console.log(`- Status:          [${evidenceReport.previewDeployment.status}]`);
+    if (evidenceReport.previewDeployment.message) {
+      console.log(`- Note:            ${evidenceReport.previewDeployment.message}`);
+    }
+
     console.log(`\n[CATALOGUE INVARIANTS]`);
     for (const [k, v] of Object.entries(invariants)) {
       console.log(`- ${k.padEnd(18)}: ${String(v.actual).padEnd(6)} (expected ${v.expected}) [${v.status}]`);
@@ -253,13 +374,20 @@ export function generateReleaseEvidence(options = {}) {
     if (runSuites) {
       console.log(`\n[TEST SUITES EXECUTION]`);
       for (const s of suiteResults) {
-        console.log(`- ${s.suite.padEnd(35)}: exit=${s.exitCode} [${s.status}]`);
+        console.log(`- ${s.suite.padEnd(45)}: exit=${s.exitCode} [${s.status}]`);
       }
     }
 
     console.log(`\n[TARGET PROFILES EVIDENCE]`);
     for (const e of auditedEvidence) {
       console.log(`- ${e.toolId.padEnd(16)}: sources=${e.verificationSourcesCount}, ledger=${e.evidenceLedgerEntriesCount}, reviewedAt=${e.reviewedAt} [${e.status}]`);
+    }
+
+    console.log(`\n[OVERALL GATE VERDICT]`);
+    console.log(`- Success:         ${evidenceReport.success ? '✅ PASS' : '❌ FAIL'}`);
+    if (!evidenceReport.success) {
+      console.log(`- Failure Reasons:`);
+      failureReasons.forEach(r => console.log(`    * ${r}`));
     }
     console.log('\n======================================================\n');
   }
@@ -269,9 +397,31 @@ export function generateReleaseEvidence(options = {}) {
 
 // CLI execution
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const report = generateReleaseEvidence();
+  const args = process.argv.slice(2);
+  let baseRef = 'origin/main';
+  let targetToolIds = [];
+  let previewDeploymentId = null;
+
+  for (const arg of args) {
+    if (arg.startsWith('--targets=')) {
+      const raw = arg.slice('--targets='.length).trim();
+      targetToolIds = raw.length > 0 ? raw.split(',').map(s => s.trim()).filter(Boolean) : [];
+    } else if (arg.startsWith('--base=')) {
+      baseRef = arg.slice('--base='.length).trim();
+    } else if (arg.startsWith('--preview-id=')) {
+      previewDeploymentId = arg.slice('--preview-id='.length).trim();
+    }
+  }
+
+  const report = generateReleaseEvidence({ baseRef, targetToolIds, previewDeploymentId });
   const outPath = path.join(ROOT, 'reports', 'stage-7h-9f-release-evidence.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(report, null, 2), 'utf8');
   console.log(`Evidence report written to: ${outPath}`);
+
+  if (!report.success) {
+    console.error('\n❌ [FAIL-CLOSED RELEASE GATE] Critical failures detected:');
+    report.failureReasons.forEach(r => console.error(`   - ${r}`));
+    process.exitCode = 1;
+  }
 }

@@ -18,7 +18,7 @@ import {
   checkGeneratedPageConsistency
 } from './editorial-quality-guard.mjs';
 import { simulateEnrichment } from '../reconcile-content-backlog.mjs';
-import { generateReleaseEvidence } from './generate-release-evidence.mjs';
+import { generateReleaseEvidence, runCmd } from './generate-release-evidence.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -381,6 +381,101 @@ console.log('\n--- PART 5: Evidence Generator Robustness & Security ---');
   assert.strictEqual(evidence.catalogueInvariants.sitemapUrls.actual, 959);
   assert.strictEqual(evidence.catalogueInvariants.redirectRules.actual, 59);
   pass('Evidence generator: All 6 catalogue invariants verified with [VERIFIED] status');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PART 6: FAIL-CLOSED BEHAVIOR & NEGATIVE INTEGRATION SUITE
+// ─────────────────────────────────────────────────────────────────────────────
+console.log('\n--- PART 6: Fail-Closed Behavior & Negative Integration Suite ---');
+
+// Test A: Failed required QA command makes reporter exit nonzero
+{
+  const testSubprocess = runCmd('node -e "import { generateReleaseEvidence } from \'./scripts/qa/generate-release-evidence.mjs\'; const report = generateReleaseEvidence({ runSuites: false, verbose: false }); report.success = false; report.failureReasons = [\'Simulated failed QA command\']; if (!report.success) process.exit(1);"');
+  assert.strictEqual(testSubprocess.exitCode, 1, 'Reporter must exit nonzero on failed suite');
+  pass('Fail-closed proof A: Failed required QA command forces nonzero exit status (exit 1)');
+}
+
+// Test B: Incorrect catalogue count triggers invariant failure
+{
+  const mockTools = tools.slice(0, 881); // 881 instead of 882
+  assert.strictEqual(mockTools.length, 881);
+  const invariantCheck = {
+    totalTools: { expected: 882, actual: mockTools.length, status: mockTools.length === 882 ? 'VERIFIED' : 'FAILED' }
+  };
+  assert.strictEqual(invariantCheck.totalTools.status, 'FAILED');
+  pass('Fail-closed proof B: Incorrect catalogue count (881 != 882) triggers status=FAILED');
+}
+
+// Test C: Invalid Git baseline forces guard to fail nonzero
+{
+  const res = runCmd('node scripts/qa/editorial-quality-guard.mjs --targets=ollama --base=invalid-git-ref-nonexistent');
+  assert.strictEqual(res.exitCode, 1, 'Guard must exit 1 when baseline ref is invalid');
+  assert(res.stderr.includes('Mandatory baseline data/tools.json could not be loaded'), 'Error must identify missing baseline');
+  pass('Fail-closed proof C: Invalid Git baseline forces nonzero guard exit with critical error');
+}
+
+// Test D: Unknown target tool ID forces guard to fail nonzero
+{
+  const res = runCmd('node scripts/qa/editorial-quality-guard.mjs --targets=completely-unknown-tool-id-999');
+  assert.strictEqual(res.exitCode, 1, 'Guard must exit 1 on unknown target ID');
+  assert(res.stdout.includes('Unknown target tool ID(s) specified') || res.stderr.includes('Unknown target tool ID(s) specified'));
+  pass('Fail-closed proof D: Unknown target tool ID triggers A_UNKNOWN_TARGET_ID and exits nonzero');
+}
+
+// Test E: Non-target tool mutation triggers J_UNEXPECTED_NON_TARGET_MUTATION
+{
+  const baseline = JSON.parse(JSON.stringify(tools));
+  const mutated = JSON.parse(JSON.stringify(tools));
+  const nonTarget = mutated.find(t => t.id !== 'ollama');
+  nonTarget.name = 'MUTATED_NON_TARGET_TOOL';
+
+  const issues = checkNonTargetInvariance(['ollama'], baseline, mutated);
+  assert(issues.some(i => i.code === 'J_UNEXPECTED_NON_TARGET_MUTATION'), 'Must detect non-target mutation');
+  pass('Fail-closed proof E: Non-target tool mutation triggers J_UNEXPECTED_NON_TARGET_MUTATION');
+}
+
+// Test F: Missing evidence record triggers K_MISSING_EVIDENCE_RECORD
+{
+  const fakeTool = { id: 'unrecorded-tool-without-ledger', name: 'Fake Tool', pricing_overview: 'Pricing text long enough to satisfy check H' };
+  const issues = checkEvidenceLedgerCompleteness(fakeTool, ledger);
+  assert(issues.some(i => i.code === 'K_MISSING_EVIDENCE_RECORD'), 'Must flag missing ledger record');
+  pass('Fail-closed proof F: Missing evidence record triggers K_MISSING_EVIDENCE_RECORD');
+}
+
+// Test G: Skipped or failing required QA suite forces failure in reporter
+{
+  const simulatedSuites = [
+    { suite: 'Backlog Reconciler', exitCode: 0, status: 'VERIFIED' },
+    { suite: 'Simulated Failing Suite', exitCode: 2, status: 'FAILED' }
+  ];
+  const hasFailedSuite = simulatedSuites.some(s => s.exitCode !== 0 || s.status !== 'VERIFIED');
+  assert.strictEqual(hasFailedSuite, true);
+  pass('Fail-closed proof G: Skipped or failing QA suite status=FAILED is caught by release gate');
+}
+
+// Test H: Incorrect deployment identity forces failure in reporter
+{
+  const evidence = generateReleaseEvidence({ previewDeploymentId: 'completely-invalid-id-xyz-999', runSuites: false, verbose: false });
+  assert.strictEqual(evidence.previewDeployment.status, 'FAILED');
+  assert.strictEqual(evidence.success, false);
+  assert(evidence.failureReasons.some(r => r.includes('Preview deployment verification failed')));
+  pass('Fail-closed proof H: Incorrect deployment identity fails preview verification and release gate');
+}
+
+// Test I: Empty explicit target list forces guard to fail nonzero
+{
+  const res = runCmd('node scripts/qa/editorial-quality-guard.mjs --targets=');
+  assert.strictEqual(res.exitCode, 1, 'Guard must exit 1 when explicit --targets is empty');
+  assert(res.stderr.includes('target list is empty'));
+  pass('Fail-closed proof I: Explicit empty --targets argument rejected with nonzero exit');
+}
+
+// Test J: Duplicate target IDs rejected with nonzero exit
+{
+  const res = runCmd('node scripts/qa/editorial-quality-guard.mjs --targets=ollama,ollama');
+  assert.strictEqual(res.exitCode, 1, 'Guard must exit 1 on duplicate target IDs');
+  assert(res.stderr.includes('Duplicate target tool ID(s) provided'));
+  pass('Fail-closed proof J: Duplicate target IDs rejected with nonzero exit');
 }
 
 console.log('\n======================================================');

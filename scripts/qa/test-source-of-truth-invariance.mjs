@@ -1,7 +1,9 @@
 import assert from 'assert';
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import XLSX from 'xlsx';
 import { checkNonTargetInvariance } from './editorial-quality-guard.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -31,9 +33,9 @@ function pass(label) {
   console.log(`  ✅ [PASS] ${label}`);
 }
 
-// ── 1. Authoritative Excel Workbook ──────────────────────────────────────
+// ── 1. Authoritative Excel Workbook Exists ───────────────────────────────
 assert(fs.existsSync(WORKBOOK_PATH), 'Phase 11 Excel workbook must exist');
-pass('Phase 11 authoritative Excel workbook present on disk');
+pass('Authoritative Excel workbook present on disk');
 
 // ── 2. Staged and Published Parity ────────────────────────────────────────
 const stagedRaw = fs.readFileSync(STAGED_PATH, 'utf8');
@@ -45,7 +47,89 @@ assert.strictEqual(staged.length, published.length, 'Staged count must match pub
 assert.strictEqual(stagedRaw, publishedRaw, 'Staged catalogue must match published tools.json byte-for-byte');
 pass(`Staged catalogue matches published tools.json 100% byte-for-byte (${published.length} tools)`);
 
-// ── 3. Comparison Index Integrity ────────────────────────────────────────
+// ── 3. Safe Workbook Regeneration Reproducibility (Isolated Temp Dir) ─────
+// Distinguish from file presence: independently re-runs workbook transformation
+// in a safe isolated temporary directory without overwriting production data.
+{
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'whichaipick-import-test-'));
+  const tempOutPath = path.join(tempDir, 'tools.phase11.staged.test.json');
+  try {
+    const WHITELIST_FIELDS = [
+      'affiliate_url', 'tags', 'how_it_works', 'workflows', 'feature_groups',
+      'pros', 'cons', 'pricing_overview', 'comparison_summary'
+    ];
+    const JSON_FIELDS = [
+      'primaryUseCases', 'platforms', 'aliases', 'verificationSources',
+      'finderIntentIds', 'deploymentModes', 'useCaseIds', 'audienceTags',
+      'evidenceIds', 'recurringFreeIntentIds',
+      'dataProvenance', 'fieldProvenance', 'bestFor', 'notIdealFor'
+    ];
+
+    const workbook = XLSX.readFile(WORKBOOK_PATH);
+    const catalogRaw = XLSX.utils.sheet_to_json(workbook.Sheets['Catalog'], { defval: null });
+    const legacyData = {};
+    published.forEach(t => { legacyData[t.id] = t; });
+
+    const regeneratedTools = catalogRaw.map(row => {
+      const tool = { ...row };
+      for (const key of Object.keys(tool)) {
+        if (tool[key] === 'null' || tool[key] === '') tool[key] = null;
+      }
+      JSON_FIELDS.forEach(field => {
+        if (typeof tool[field] === 'string') {
+          try { tool[field] = JSON.parse(tool[field]); } catch(e) {}
+        } else if (tool[field] === null) {
+          tool[field] = [];
+        }
+      });
+      const booleanFields = [
+        'hasFreeTier', 'hasFreeTrial', 'apiAvailable', 'openSource', 'selfHosted',
+        'contentReviewRequired', 'categoryReviewRequired', 'pricingNeedsReview',
+        'metadataReviewRequired', 'recommendationEligible', 'directoryEligible',
+        'seoEligible', 'paidPlanAvailable', 'criticalHold', 'legacyIdException'
+      ];
+      booleanFields.forEach(field => {
+        if (tool[field] === 'TRUE' || tool[field] === 'true' || tool[field] === true) tool[field] = true;
+        else if (tool[field] === 'FALSE' || tool[field] === 'false' || tool[field] === false) tool[field] = false;
+      });
+      const oldT = legacyData[tool.id];
+      if (oldT) {
+        WHITELIST_FIELDS.forEach(f => {
+          if (oldT[f] !== undefined) tool[f] = oldT[f];
+        });
+        if (oldT.primaryUseCases !== undefined) tool.legacyPrimaryUseCases = oldT.primaryUseCases;
+        if (oldT.long_description && (!tool.long_description || oldT.long_description.length > tool.long_description.length)) {
+          tool.long_description = oldT.long_description;
+        }
+        if (oldT.best_for && !tool.bestFor) tool.best_for = oldT.best_for;
+        else if (tool.bestFor) tool.best_for = tool.bestFor;
+      } else {
+        if (tool.bestFor) tool.best_for = tool.bestFor;
+      }
+      tool.name = tool.canonicalName;
+      tool.category = tool.primaryCategory;
+      tool.pricing_model = tool.pricingModel;
+      tool.has_free_tier = tool.hasFreeTier;
+      tool.description = tool.sourceSummary || tool.shortDescription || '';
+      return tool;
+    });
+    regeneratedTools.sort((a, b) => a.id.localeCompare(b.id));
+
+    fs.writeFileSync(tempOutPath, JSON.stringify(regeneratedTools, null, 2), 'utf8');
+    const regeneratedRaw = fs.readFileSync(tempOutPath, 'utf8');
+
+    assert.strictEqual(
+      regeneratedRaw,
+      stagedRaw,
+      'Workbook regeneration in temp directory must match staged catalogue 100% byte-for-byte'
+    );
+    pass('Workbook regeneration in isolated temp directory reproduces staged catalogue 100% byte-for-byte');
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
+// ── 4. Comparison Index Integrity ────────────────────────────────────────
 assert(fs.existsSync(COMPARISON_INDEX_PATH), 'Comparison index must exist');
 const compIndex = JSON.parse(fs.readFileSync(COMPARISON_INDEX_PATH, 'utf8'));
 assert(Array.isArray(compIndex) && compIndex.length > 0, 'Comparison index must be non-empty array');
@@ -58,7 +142,7 @@ for (const entry of compIndex) {
 }
 pass(`Comparison index validated (${compIndex.length} entries, ${compToolRefs} tool IDs verified in published catalogue)`);
 
-// ── 4. Evidence Ledger Coverage for Proven Fixtures ───────────────────────
+// ── 5. Evidence Ledger Coverage for Proven Fixtures ───────────────────────
 assert(fs.existsSync(LEDGER_PATH), 'Evidence ledger must exist');
 const ledger = JSON.parse(fs.readFileSync(LEDGER_PATH, 'utf8'));
 const ledgerToolIds = new Set(ledger.map(e => e.id));
@@ -68,7 +152,7 @@ for (const id of PROVEN_REGRESSION_FIXTURES) {
 }
 pass(`All ${PROVEN_REGRESSION_FIXTURES.length} proven regression profiles have evidence ledger records`);
 
-// ── 5. Static HTML Consistency for Proven Fixtures ────────────────────────
+// ── 6. Static HTML Consistency for Proven Fixtures ────────────────────────
 for (const id of PROVEN_REGRESSION_FIXTURES) {
   const htmlPath = path.join(ROOT, 'tools', id, 'index.html');
   assert(fs.existsSync(htmlPath), `Static HTML page for ${id} must exist`);
@@ -81,20 +165,20 @@ for (const id of PROVEN_REGRESSION_FIXTURES) {
 }
 pass(`All ${PROVEN_REGRESSION_FIXTURES.length} proven regression profiles render full editorial sections in static HTML`);
 
-// ── 6. Dynamic Non-Target Partitioning ────────────────────────────────────
+// ── 7. Dynamic Non-Target Partitioning ────────────────────────────────────
 // Non-target count is derived dynamically: total - targets
 const targetCohort = PROVEN_REGRESSION_FIXTURES;
 const nonTargetCount = published.length - targetCohort.length;
 assert.strictEqual(published.length, nonTargetCount + targetCohort.length, 'Catalogue partition must be exhaustive and mutually exclusive');
 pass(`Dynamic catalogue partitioning validated: ${targetCohort.length} targets, ${nonTargetCount} non-targets (total ${published.length})`);
 
-// ── 7. Mutation Detection Proof (Non-Target Invariance Guard) ─────────────
+// ── 8. Mutation Detection Proof (Non-Target Invariance Guard) ─────────────
 // Prove the guard catches unauthorized mutations on non-target records
 {
   const baseline = JSON.parse(JSON.stringify(published));
   const mutatedCurrent = JSON.parse(JSON.stringify(published));
   
-  // Pick an untouched tool outside the target cohort (e.g. chatgpt)
+  // Pick an untouched tool outside the target cohort (e.g. 10web)
   const nonTargetTool = mutatedCurrent.find(t => !targetCohort.includes(t.id));
   assert(nonTargetTool, 'Must find a non-target tool for mutation proof');
   const originalName = nonTargetTool.name;
@@ -105,7 +189,7 @@ pass(`Dynamic catalogue partitioning validated: ${targetCohort.length} targets, 
   pass(`Guard successfully detected simulated unauthorized mutation on non-target "${nonTargetTool.id}"`);
 }
 
-// ── 8. Documentation: Reliance on Legacy-Preserved Fields ──────────────────
+// ── 9. Documentation: Reliance on Legacy-Preserved Fields ──────────────────
 /**
  * ARCHITECTURAL NOTE: DATA RECOVERY & PRESERVED FIELDS
  *

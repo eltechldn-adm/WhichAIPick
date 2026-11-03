@@ -591,6 +591,70 @@ export function runEditorialQualityGuard(options = {}) {
   const ledgerPath = path.join(root, 'data', 'evidence', 'phase11-evidence-ledger.json');
   const ledger = fs.existsSync(ledgerPath) ? JSON.parse(fs.readFileSync(ledgerPath, 'utf8')) : [];
 
+  let invarianceIssues = [];
+  let totalIssues = 0;
+
+  // Validation 1: Check for unknown target IDs when targetToolIds is supplied
+  if (targetToolIds && targetToolIds.length > 0) {
+    const unknownIds = targetToolIds.filter(id => !allToolIds.has(id));
+    if (unknownIds.length > 0) {
+      const issue = {
+        code: 'A_UNKNOWN_TARGET_ID',
+        message: `Unknown target tool ID(s) specified: ${unknownIds.join(', ')}.`
+      };
+      invarianceIssues.push(issue);
+      totalIssues += unknownIds.length;
+      if (verbose) {
+        console.error(`❌ [FAIL] ${issue.message}`);
+      }
+    }
+
+    // Validation 2: Check for duplicate target IDs
+    const seen = new Set();
+    const duplicates = [];
+    for (const id of targetToolIds) {
+      if (seen.has(id)) duplicates.push(id);
+      seen.add(id);
+    }
+    if (duplicates.length > 0) {
+      const issue = {
+        code: 'A_DUPLICATE_TARGET_ID',
+        message: `Duplicate target tool ID(s) specified: ${duplicates.join(', ')}.`
+      };
+      invarianceIssues.push(issue);
+      totalIssues += duplicates.length;
+      if (verbose) {
+        console.error(`❌ [FAIL] ${issue.message}`);
+      }
+    }
+
+    // Validation 3: When targetToolIds is supplied, baselineTools is mandatory
+    if (!baselineTools || !Array.isArray(baselineTools) || baselineTools.length === 0) {
+      const issue = {
+        code: 'J_MISSING_BASELINE',
+        message: 'Mandatory baselineTools was not provided or is invalid for target cohort verification.'
+      };
+      invarianceIssues.push(issue);
+      totalIssues += 1;
+      if (verbose) {
+        console.error(`❌ [FAIL] ${issue.message}`);
+      }
+    } else {
+      // Check J: Invariance on non-targets against baseline
+      const checkJIssues = checkNonTargetInvariance(targetToolIds, baselineTools, tools);
+      if (checkJIssues.length > 0) {
+        totalIssues += checkJIssues.length;
+        invarianceIssues.push(...checkJIssues);
+        if (verbose) {
+          console.log(`\n  ❌ [INVARIANCE FAIL] Non-target mutation(s) detected:`);
+          checkJIssues.forEach(i => console.log(`      [${i.code}] ${i.message}`));
+        }
+      } else if (verbose) {
+        console.log(`\n  ✅ [PASS] Non-target catalogue records 100% invariant`);
+      }
+    }
+  }
+
   const targets = targetToolIds
     ? tools.filter(t => targetToolIds.includes(t.id))
     : tools.filter(t => [
@@ -606,7 +670,6 @@ export function runEditorialQualityGuard(options = {}) {
   }
 
   const auditReports = [];
-  let totalIssues = 0;
 
   for (const tool of targets) {
     const report = auditToolProfile(tool, { ledger, allToolIds, root, checkStaticHtml: checkHtml });
@@ -620,21 +683,6 @@ export function runEditorialQualityGuard(options = {}) {
         console.log(`  ❌ [FAIL] ${tool.id} — ${report.issueCount} issue(s) detected:`);
         report.issues.forEach(i => console.log(`      [${i.code}] ${i.message}`));
       }
-    }
-  }
-
-  // Check J: Invariance on non-targets if baseline provided
-  let invarianceIssues = [];
-  if (baselineTools && targetToolIds) {
-    invarianceIssues = checkNonTargetInvariance(targetToolIds, baselineTools, tools);
-    if (invarianceIssues.length > 0) {
-      totalIssues += invarianceIssues.length;
-      if (verbose) {
-        console.log(`\n  ❌ [INVARIANCE FAIL] Non-target mutation(s) detected:`);
-        invarianceIssues.forEach(i => console.log(`      [${i.code}] ${i.message}`));
-      }
-    } else if (verbose) {
-      console.log(`\n  ✅ [PASS] Non-target catalogue records 100% invariant`);
     }
   }
 
@@ -658,12 +706,15 @@ export function runEditorialQualityGuard(options = {}) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
   let targetToolIds = null;
+  let targetsExplicitlySupplied = false;
   let baseRef = 'origin/main';
   let checkHtml = true;
 
   for (const arg of args) {
     if (arg.startsWith('--targets=')) {
-      targetToolIds = arg.slice('--targets='.length).split(',').map(s => s.trim()).filter(Boolean);
+      targetsExplicitlySupplied = true;
+      const raw = arg.slice('--targets='.length).trim();
+      targetToolIds = raw.length > 0 ? raw.split(',').map(s => s.trim()).filter(Boolean) : [];
     } else if (arg.startsWith('--base=')) {
       baseRef = arg.slice('--base='.length).trim();
     } else if (arg === '--no-html' || arg === '--check-html=false') {
@@ -671,14 +722,44 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     }
   }
 
+  // 1. Empty target list must fail when explicitly supplied
+  if (targetsExplicitlySupplied && (!targetToolIds || targetToolIds.length === 0)) {
+    console.error('❌ [CRITICAL ERROR] --targets was explicitly supplied but target list is empty.');
+    process.exit(1);
+  }
+
+  // 2. Reject duplicate target IDs
+  if (targetToolIds && targetToolIds.length > 0) {
+    const seen = new Set();
+    const duplicates = [];
+    for (const id of targetToolIds) {
+      if (seen.has(id)) duplicates.push(id);
+      seen.add(id);
+    }
+    if (duplicates.length > 0) {
+      console.error(`❌ [CRITICAL ERROR] Duplicate target tool ID(s) provided: ${duplicates.join(', ')}`);
+      process.exit(1);
+    }
+  }
+
+  // 3. When --targets is supplied, baseline retrieval is mandatory
   let baselineTools = null;
   if (targetToolIds && targetToolIds.length > 0) {
     try {
       const { execSync } = await import('child_process');
-      const raw = execSync(`git show ${baseRef}:data/tools.json`, { cwd: ROOT, encoding: 'utf8', maxBuffer: 50 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+      const raw = execSync(`git show ${baseRef}:data/tools.json`, {
+        cwd: ROOT,
+        encoding: 'utf8',
+        maxBuffer: 50 * 1024 * 1024,
+        stdio: ['pipe', 'pipe', 'pipe']
+      });
       baselineTools = JSON.parse(raw);
+      if (!Array.isArray(baselineTools) || baselineTools.length === 0) {
+        throw new Error('Baseline data/tools.json is empty or not an array');
+      }
     } catch (err) {
-      console.warn(`[WARN] Could not fetch baseline data/tools.json from git ref "${baseRef}": ${err.message}. Skipping git diff invariance check.`);
+      console.error(`❌ [CRITICAL ERROR] Mandatory baseline data/tools.json could not be loaded from "${baseRef}": ${err.message}`);
+      process.exit(1);
     }
   }
 
