@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 
-const PREVIEW_BASE = 'https://ee62a622.whichaipick.pages.dev';
+const PREVIEW_BASE = process.env.PREVIEW_URL || 'https://0dd2e1d5.whichaipick.pages.dev';
 const TOOLS = [
   { id: 'browse-ai', name: 'Browse AI', expectedPrice: 'Free Plan' },
   { id: 'chatpdf', name: 'ChatPDF', expectedPrice: 'Free Plan' },

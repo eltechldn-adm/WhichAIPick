@@ -4326,7 +4326,7 @@
     "sourceURL": "https://cleanvoice.ai/pricing/",
     "reviewedAt": "2026-11-03",
     "method": "official_source_review",
-    "finding": "Official audio processing specifications, digital audio workstation export integrations (Audacity, Premiere, Reaper), and pricing documentation reviewed November 2026. Paid service with free 30-minute processing trial (no credit card required). Pay-as-you-go credit packs confirmed at 5 hours ($11), 10 hours ($20), and 30 hours ($45) valid for 2 years. Subscriptions confirmed at 10 hrs ($11/mo), 30 hrs ($30/mo), and 100 hrs ($90/mo) with rollover."
+    "finding": "Official audio processing specifications, digital audio workstation export integrations (Audacity, Premiere, Reaper), and pricing documentation reviewed November 2026. Paid service with free 30-minute processing trial (no credit card required). Pay-as-you-go credit packs confirmed at 5 hours ($11), 10 hours ($20), and 30 hours ($45) valid for 2 years. Subscriptions confirmed at 10 hrs ($11/mo monthly / $110/yr annual), 30 hrs ($28/mo monthly / $300/yr annual), and 100 hrs ($90/mo monthly / $900/yr annual) with rollover."
   },
   {
     "evidenceId": "E0482",
@@ -4335,7 +4335,7 @@
     "sourceURL": "https://docs.cleanvoice.ai/docs/v2",
     "reviewedAt": "2026-11-03",
     "method": "official_source_review",
-    "finding": "Official audio processing specifications, digital audio workstation export integrations (Audacity, Premiere, Reaper), and pricing documentation reviewed November 2026. Paid service with free 30-minute processing trial (no credit card required). Pay-as-you-go credit packs confirmed at 5 hours ($11), 10 hours ($20), and 30 hours ($45) valid for 2 years. Subscriptions confirmed at 10 hrs ($11/mo), 30 hrs ($30/mo), and 100 hrs ($90/mo) with rollover."
+    "finding": "Official audio processing specifications, digital audio workstation export integrations (Audacity, Premiere, Reaper), and pricing documentation reviewed November 2026. Paid service with free 30-minute processing trial (no credit card required). Pay-as-you-go credit packs confirmed at 5 hours ($11), 10 hours ($20), and 30 hours ($45) valid for 2 years. Subscriptions confirmed at 10 hrs ($11/mo monthly / $110/yr annual), 30 hrs ($28/mo monthly / $300/yr annual), and 100 hrs ($90/mo monthly / $900/yr annual) with rollover."
   },
   {
     "evidenceId": "E0483",
@@ -9168,7 +9168,7 @@
     "sourceURL": "https://flair.ai/",
     "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Official product photography canvas, 3D prop staging tools, lighting synthesis models, and pricing documentation reviewed November 2026. Freemium model confirmed with free introductory trial quota (~5 images) for non-commercial evaluation. Paid commercial subscriptions confirmed at Pro (~$10/mo with commercial license and monthly generation credits), Pro+ (~$26–$35/mo with 80 images, 3 videos), and Scale (~$55+/mo). Unused credits do not roll over."
+    "finding": "Official product photography canvas, 3D prop staging tools, lighting synthesis models, and pricing documentation reviewed November 2026. Freemium model confirmed with free introductory trial quota (~5 images) for non-commercial evaluation. Paid commercial subscriptions confirmed at Pro ($10/mo monthly / $8/mo annual at $96/yr with commercial license and 2 video generations), Pro+ ($35/mo monthly / $26/mo annual at $312/yr with custom models), and Scale ($55/mo monthly / $38/mo annual at $456/yr for 150 images/5 videos, scaling to $199/mo for 540 images). Unused credits do not roll over."
   },
   {
     "evidenceId": "E1020",
@@ -11481,7 +11481,7 @@
     "sourceURL": "https://capacities.io/",
     "reviewedAt": "2026-11-03",
     "method": "source_review",
-    "finding": "Official documentation, object schema guides, cross-device sync specifications, and pricing reviewed November 2026. Freemium model confirmed with Basic Free plan ($0 forever, unlimited spaces, objects, blocks, and mobile/desktop sync with 5GB media storage). Capacities Pro confirmed at $9.99/mo ($99.99/yr annual) with integrated AI assistant, whiteboards, task actions, and smart queries. Believer supporter tier confirmed at $12.49/mo."
+    "finding": "Official documentation, object schema guides, cross-device sync specifications, and pricing reviewed November 2026. Freemium model confirmed with Basic Free plan ($0 forever, unlimited spaces, objects, blocks, and mobile/desktop sync with 5GB media storage). Capacities Pro confirmed at $11.99/mo monthly or $9.99/mo annual ($119.88/yr) with integrated AI assistant, whiteboards, task actions, and smart queries. Believer supporter tier confirmed at $14.99/mo monthly or $12.49/mo annual ($149.88/yr). Pro+/Believer+ add-on confirmed for larger monthly AI budgets."
   },
   {
     "evidenceId": "E1277",
