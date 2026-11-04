@@ -171,14 +171,14 @@ const ENRICHMENTS = {
         group: 'IDE Integration & Security',
         items: [
           'Official editor extensions for Visual Studio Code, JetBrains IDEs (IntelliJ, PyCharm, WebStorm), and Vim/Neovim',
-          '100% air-gapped execution ensuring proprietary code never leaves the internal local network',
+          'Supports air-gapped deployment configurations keeping source code within internal networks',
           'User access token management and team authentication for centralized corporate deployment',
           'Open-source codebase distributed under the Apache 2.0 license allowing complete security auditing'
         ]
       }
     ],
     pros: [
-      'Guarantees total data sovereignty and privacy because all code analysis and inference occur entirely on local infrastructure',
+      'Enables strong data sovereignty because all code analysis and inference can execute on local infrastructure',
       'No recurring per-seat subscription fees or metered token usage costs when hosting on owned hardware',
       'Broad IDE support ensures engineers can use their preferred development environment without disruption',
       'Open-source architecture permits custom model fine-tuning on internal proprietary engineering libraries'
@@ -238,13 +238,13 @@ const ENRICHMENTS = {
           'GitHub pull request review integration posting automated code health assessments and suggested fixes',
           'Custom rule creation via YAML configurations to enforce team-specific coding patterns and architecture conventions',
           'Centralized team management dashboard tracking aggregate code quality trends across repositories',
-          'Enterprise data security controls guaranteeing zero code training on private user repositories'
+          'Enterprise security policies with commitments not to train models on private user repositories'
         ]
       }
     ],
     pros: [
       'Actionable refactoring suggestions teach developers idiomatic coding patterns and clean code principles',
-      'Hybrid static AST and LLM architecture delivers near-instantaneous feedback without latency delays',
+      'Hybrid static AST and LLM architecture delivers low-latency feedback during editing',
       'Free tier provides robust local refactoring capabilities for individual open-source developers',
       'Integration across both IDE and GitHub ensures consistent quality standards throughout the development cycle'
     ],
@@ -270,9 +270,9 @@ const ENRICHMENTS = {
   },
 
   zed: {
-    long_description: `<p>Zed is a high-performance, open-source code editor developed in Rust and designed for developer productivity, speed, and integrated AI workflows. Engineered by the original creators of Atom and Tree-sitter, Zed leverages GPU acceleration (via the GPUI framework) to render text at 120 frames per second with virtually instantaneous startup times and low memory consumption.</p><p>In addition to its ultra-responsive native editing capabilities and built-in real-time collaboration features, Zed integrates AI directly into the editing experience. Developers can summon assistant panels, perform inline code transformations, and seamlessly switch between frontier LLM providers (including Anthropic Claude, OpenAI, and local Ollama instances) using either direct API keys or Zed's hosted proxy service.</p>`,
+    long_description: `<p>Zed is a high-performance, open-source code editor developed in Rust and designed for developer productivity, speed, and integrated AI workflows. Engineered by the original creators of Atom and Tree-sitter, Zed leverages GPU acceleration (via the GPUI framework) to render text at 120 frames per second with rapid startup times and modest memory consumption.</p><p>In addition to its ultra-responsive native editing capabilities and built-in real-time collaboration features, Zed integrates AI directly into the editing experience. Developers can summon assistant panels, perform inline code transformations, and seamlessly switch between frontier LLM providers (including Anthropic Claude, OpenAI, and local Ollama instances) using either direct API keys or Zed's hosted proxy service.</p>`,
     bestFor: [
-      'Software engineers seeking a blazingly fast, lightweight, GPU-accelerated code editor that uses minimal system RAM',
+      'Software engineers seeking a responsive, lightweight, GPU-accelerated code editor with modest memory consumption',
       'Developers wanting built-in AI assistance with flexible multi-provider model switching and local model support',
       'Remote engineering teams requiring real-time multiplayer pair programming and screen-sharing directly in the editor'
     ],
@@ -282,16 +282,16 @@ const ENRICHMENTS = {
       'Engineers seeking an all-in-one GUI for complex database visualization and graphical deployment dashboards'
     ],
     primaryUseCases: [
-      'Ultra-low-latency code editing, navigation, and multi-buffer searching on large enterprise codebases',
+      'Fast code editing, navigation, and multi-buffer searching on large enterprise codebases',
       'Executing inline AI prompt transformations, code generation, and multi-file agentic conversations',
       'Collaborative real-time multiplayer pair programming with integrated audio channels and shared workspaces'
     ],
-    how_it_works: `<p>Zed is engineered from the ground up as a native compiled binary in Rust, bypassing the Electron web framework entirely. It renders text directly to the GPU using GPUI, ensuring that keystrokes register with near-zero latency even in multi-gigabyte source repositories. Syntax parsing is powered by Tree-sitter, providing precise syntax highlighting and instant structural code navigation.</p><p>For AI capabilities, Zed features an integrated Assistant panel and inline prompt transformation interface. Developers can highlight code, type natural language instructions, and stream diff transformations directly into the active editor buffer. Users can connect their own Anthropic, OpenAI, or Ollama endpoints, or subscribe to Zed Pro to route requests through Zed's hosted infrastructure without configuring separate API keys.</p>`,
+    how_it_works: `<p>Zed is engineered from the ground up as a native compiled binary in Rust, bypassing the Electron web framework entirely. It renders text directly to the GPU using GPUI, designed for low-latency keystroke responsiveness across large source repositories. Syntax parsing is powered by Tree-sitter, providing precise syntax highlighting and instant structural code navigation.</p><p>For AI capabilities, Zed features an integrated Assistant panel and inline prompt transformation interface. Developers can highlight code, type natural language instructions, and stream diff transformations directly into the active editor buffer. Users can connect their own Anthropic, OpenAI, or Ollama endpoints, or subscribe to Zed Pro to route requests through Zed's hosted infrastructure without configuring separate API keys.</p>`,
     feature_groups: [
       {
         group: 'Performance & Editor Architecture',
         items: [
-          'GPU-accelerated text rendering via GPUI delivering fluid 120 FPS scrolling and instantaneous startup times',
+          'GPU-accelerated text rendering via GPUI delivering fluid 120 FPS scrolling and rapid startup times',
           'Native Rust architecture with minimal RAM footprint compared to Electron-based code editors',
           'Tree-sitter structural syntax parsing for accurate highlighting, bracket matching, and AST-aware selection',
           'Built-in terminal emulation and multi-buffer search across large multi-repository projects'
@@ -308,19 +308,19 @@ const ENRICHMENTS = {
       }
     ],
     pros: [
-      'Exceptional performance and responsiveness with near-zero keystroke latency and lightweight system resource usage',
+      'High rendering responsiveness and lightweight system resource footprint compared to traditional Electron editors',
       'Native multi-model flexibility lets developers switch effortlessly between Anthropic, OpenAI, and local offline models',
       'Open-source codebase (GPL/Apache 2.0) with an active, transparent developer community',
       'Integrated real-time multiplayer collaboration eliminates the need for third-party screen sharing tools during pairing'
     ],
     cons: [
-      'Extension ecosystem is growing but smaller than Visual Studio Code extensive ten-year marketplace',
+      'Extension ecosystem is growing but smaller than Visual Studio Code\'s extensive marketplace',
       'Windows support has matured more recently than the battle-tested macOS and Linux builds',
       'Does not yet have the autonomous background multi-step terminal agent workflows of tools like Cline or Cursor',
       'Custom keybinding configuration requires learning Zed JSON schema rather than a graphical preferences panel'
     ],
-    pricing_overview: `<p>Zed code editor is free and open-source software ($0 per month) for individual developers and commercial teams. All core editor features, multiplayer collaboration, and BYOK (Bring Your Own Key) AI capabilities are included without fee.</p><p>For developers who prefer not to manage individual API keys, <strong>Zed Pro</strong> is available for $10 per month (or $8 per month billed annually at $96 per year), providing fast, unmetered access to Anthropic Claude and OpenAI models via Zed hosted proxy alongside advanced collaborative channels, backed by a 14-day free trial. Custom enterprise agreements with single sign-on (SSO), centralized billing, and custom deployment SLAs are also available.</p>`,
-    comparison_summary: `<p>Compared to <strong>Cursor</strong> (/tools/cursor/), which is an Electron-based VS Code fork with deep multi-file agentic background indexing, Zed is a native Rust editor focused on ultra-low latency, 120 FPS GPU rendering, and lightweight resource consumption. Compared to <strong>GitHub Copilot</strong> (/tools/github-copilot/), Zed supports multi-provider model switching (including local models via <strong>Ollama</strong> (/tools/ollama/)) rather than locking developers into a single proprietary catalog. Compared to <strong>Cline</strong> (/tools/cline/), which is an extension running inside VS Code, Zed is a complete standalone editor with built-in multiplayer pairing.</p>`,
+    pricing_overview: `<p>The Zed code editor is free and open-source software ($0 per month) for individual developers and commercial teams. All core editor features, multiplayer collaboration, and BYOK (Bring Your Own Key) AI capabilities are included without fee.</p><p>For developers who prefer not to manage individual API keys, <strong>Zed Pro</strong> is available for $10 per month (or $8 per month billed annually at $96 per year), providing fast, unmetered access to Anthropic Claude and OpenAI models via Zed hosted proxy alongside advanced collaborative channels, backed by a 14-day free trial. Custom enterprise agreements with single sign-on (SSO), centralized billing, and custom deployment SLAs are also available.</p>`,
+    comparison_summary: `<p>Compared to <strong>Cursor</strong> (/tools/cursor/), which is an Electron-based VS Code fork with deep multi-file agentic background indexing, Zed is a native Rust editor focused on native GPU-rendered editor performance and lightweight resource consumption. Compared to <strong>GitHub Copilot</strong> (/tools/github-copilot/), Zed supports multi-provider model switching (including local models via <strong>Ollama</strong> (/tools/ollama/)) rather than locking developers into a single proprietary catalog. Compared to <strong>Cline</strong> (/tools/cline/), which is an extension running inside VS Code, Zed is a complete standalone editor with built-in multiplayer pairing.</p>`,
     pricingModel: 'freemium',
     hasFreeTier: true,
     hasFreeTrial: true,

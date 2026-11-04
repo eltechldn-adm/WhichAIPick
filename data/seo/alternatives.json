@@ -39,8 +39,8 @@
                         "edge": "A terminal-first, Git-native coding assistant that works with your local terminal and editor, automatically authoring structured Git commit messages for every multi-file change."
                     },
                     {
-                        "id": "continue",
-                        "edge": "An open-source extension for VS Code and JetBrains that provides inline autocomplete and chat while giving developers total freedom to connect any commercial API or local Ollama endpoint."
+                        "id": "tabnine",
+                        "edge": "An established, independent AI coding assistant providing private code completions and chat across all major IDEs (VS Code, JetBrains, Eclipse), with strong data privacy controls that do not train models on private code."
                     },
                     {
                         "id": "tabby",

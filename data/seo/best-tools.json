@@ -85,9 +85,9 @@
                 "reason": "Operates directly in the command line, authoring clean, structured Git commits automatically for multi-file edits across complex projects."
             },
             {
-                "id": "continue",
-                "badge": "Best Open-Source VS Code Extension",
-                "reason": "Modular in-editor assistant supporting custom local model endpoints, Ollama, and commercial LLMs without changing editors."
+                "id": "tabnine",
+                "badge": "Best for Enterprise Privacy & Multi-IDE Support",
+                "reason": "Provides context-aware code completions across VS Code, JetBrains, and Eclipse without training models on proprietary code, with on-premise deployment options."
             },
             {
                 "id": "replit",

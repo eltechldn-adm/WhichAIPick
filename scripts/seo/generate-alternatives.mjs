@@ -16,6 +16,35 @@ const altDefs = JSON.parse(fs.readFileSync(ALTS_DEF_PATH, 'utf-8'));
 let baseTemplate = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
 const seoHeroTemplate = fs.readFileSync(SEO_HERO_PATH, 'utf-8');
 
+function getNormalizedCardDescription(tool, maxLength = 160) {
+    let raw = tool.short_description || tool.shortDescription || tool.description || tool.sourceSummary || '';
+    if (!raw && tool.long_description) {
+        raw = tool.long_description;
+    }
+    if (!raw) return '';
+
+    // Strip HTML tags to prevent nested markup
+    let text = raw.replace(/<[^>]+>/g, ' ');
+    // Normalize whitespace
+    text = text.replace(/\s+/g, ' ').trim();
+
+    if (text.length > maxLength) {
+        text = text.slice(0, maxLength).trim();
+        const lastSpace = text.lastIndexOf(' ');
+        if (lastSpace > maxLength - 30) {
+            text = text.slice(0, lastSpace);
+        }
+        text += '...';
+    }
+
+    return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 function generateToolCard(tool, editorialContext) {
     const priceBadgeHTML = tool.has_free_tier ? `<div class="tool-card-badge">Free Tier</div>` : '';
     const useCasesHTML = Array.isArray(tool.primaryUseCases) 
@@ -32,7 +61,7 @@ ${priceBadgeHTML ? '      ' + priceBadgeHTML + '\n' : ''}      <div class="tool-
             </button>
           </div>
           <div class="tool-card-category">${tool.category || 'Uncategorized'}</div>
-          <p class="tool-card-desc">${tool.short_description || tool.long_description?.substring(0, 100) + '...' || ''}</p>
+          <p class="tool-card-desc">${getNormalizedCardDescription(tool)}</p>
           <div class="tool-card-tags">${useCasesHTML}</div>
           <div class="seo-tool-context" style="margin-top: 1rem; padding: 1rem; background: rgba(0, 240, 255, 0.05); border-left: 2px solid var(--accent-cyan); border-radius: 0 8px 8px 0; font-size: 0.875rem;">
             <strong>Alternative Edge:</strong> ${editorialContext}
