@@ -158,7 +158,6 @@
                 <li><strong>Analytics:</strong> To understand how visitors use our website and improve our content</li>
                 <li><strong>Performance:</strong> To monitor site performance and technical issues</li>
             </ul>
-            </ul>
         </div>
 
         <div class="legal-section">
@@ -182,7 +181,7 @@
             <h2>Managing Cookies</h2>
             <p>You can manage your consent preferences on our site at any time by clicking the button below:</p>
             <p>
-                <button onclick="if(window.WAIP_Consent) window.WAIP_Consent.showPreferences()" style="background: #f97316; border: none; color: white; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Manage Cookie Preferences</button>
+                <button id="waip-manage-cookies-btn" data-waip-consent-manage type="button" onclick="if(window.WAIP_Consent) window.WAIP_Consent.showPreferences()" style="background: #f97316; border: none; color: white; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Manage Cookie Preferences</button>
             </p>
 
             <p>You also have control over cookies through your browser settings. You can:</p>
@@ -254,6 +253,7 @@
                     <li><a href="/privacy">Privacy Policy</a></li>
                     <li><a href="/terms">Terms of Service</a></li>
                     <li><a href="/cookies">Cookie Policy</a></li>
+                    <li><a href="#cookie-settings" id="waip-cookie-settings" role="button" aria-label="Manage cookie and privacy settings">Cookie Settings</a></li>
                     <li><a href="/accessibility">Accessibility Statement</a></li>
                     <li><a href="/report-misuse">Report Misuse</a></li>
                 </ul>
