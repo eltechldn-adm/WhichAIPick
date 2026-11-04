@@ -36,11 +36,18 @@ const TOOLS = [
 ];
 
 async function run() {
-  console.log(`[PLAYWRIGHT AUDIT] Testing AdSense Low-Value Pilot pages...\n`);
+  const remoteBase = process.env.PREVIEW_URL;
+  let server = null;
+  let baseUrl = remoteBase;
 
-  const server = createStaticServer(WORKTREE_ROOT);
-  await new Promise(resolve => server.listen(8765, resolve));
-  const baseUrl = 'http://localhost:8765';
+  if (remoteBase) {
+    console.log(`[PLAYWRIGHT AUDIT] Testing against REMOTE Cloudflare preview: ${remoteBase}\n`);
+  } else {
+    server = createStaticServer(WORKTREE_ROOT);
+    await new Promise(resolve => server.listen(8765, resolve));
+    baseUrl = 'http://localhost:8765';
+    console.log(`[PLAYWRIGHT AUDIT] Testing against LOCAL server: ${baseUrl}\n`);
+  }
 
   const browser = await chromium.launch();
   let totalChecks = 0;
@@ -199,7 +206,7 @@ async function run() {
 
   } finally {
     await browser.close();
-    server.close();
+    if (server) server.close();
   }
 
   console.log(`\n======================================================`);
