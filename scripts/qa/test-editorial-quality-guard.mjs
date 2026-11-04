@@ -18,7 +18,7 @@ import {
   checkGeneratedPageConsistency
 } from './editorial-quality-guard.mjs';
 import { simulateEnrichment } from '../reconcile-content-backlog.mjs';
-import { generateReleaseEvidence, runCmd } from './generate-release-evidence.mjs';
+import { generateReleaseEvidence, evaluateQuarantineStatus, runCmd } from './generate-release-evidence.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -388,11 +388,25 @@ console.log('\n--- PART 5: Evidence Generator Robustness & Security ---');
 // ─────────────────────────────────────────────────────────────────────────────
 console.log('\n--- PART 6: Fail-Closed Behavior & Negative Integration Suite ---');
 
-// Test A: Failed required QA command makes reporter exit nonzero
+// Test A: Real failed-suite injection in an isolated harness
 {
-  const testSubprocess = runCmd('node -e "import { generateReleaseEvidence } from \'./scripts/qa/generate-release-evidence.mjs\'; const report = generateReleaseEvidence({ runSuites: false, verbose: false }); report.success = false; report.failureReasons = [\'Simulated failed QA command\']; if (!report.success) process.exit(1);"');
-  assert.strictEqual(testSubprocess.exitCode, 1, 'Reporter must exit nonzero on failed suite');
-  pass('Fail-closed proof A: Failed required QA command forces nonzero exit status (exit 1)');
+  const res = runCmd('node scripts/qa/generate-release-evidence.mjs --inject-failing-suite');
+  assert.strictEqual(res.exitCode, 1, 'Reporter must exit 1 when a suite fails');
+  assert(
+    res.stderr.includes('Required QA suite failed: Injected Failing Suite') ||
+    res.stdout.includes('Required QA suite failed: Injected Failing Suite'),
+    'Error log must identify the failed suite'
+  );
+
+  const reportPath = path.join(ROOT, 'reports', 'stage-7h-9f-release-evidence.json');
+  assert(fs.existsSync(reportPath), 'JSON report must survive on disk after suite failure for diagnosis');
+  const savedReport = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+  assert.strictEqual(savedReport.success, false, 'Report success flag must be false');
+  const failedSuite = savedReport.testSuites.find(s => s.suite === 'Injected Failing Suite');
+  assert(failedSuite, 'Report must contain record of failing suite');
+  assert.strictEqual(failedSuite.exitCode, 42, 'Report must record actual nonzero exit code 42');
+  assert.strictEqual(failedSuite.status, 'FAILED', 'Failing suite status must be FAILED');
+  pass('Fail-closed proof A: Genuine failed-suite integration verified (real exit 42 -> reporter exit 1 -> JSON report preserved)');
 }
 
 // Test B: Incorrect catalogue count triggers invariant failure
@@ -410,7 +424,11 @@ console.log('\n--- PART 6: Fail-Closed Behavior & Negative Integration Suite ---
 {
   const res = runCmd('node scripts/qa/editorial-quality-guard.mjs --targets=ollama --base=invalid-git-ref-nonexistent');
   assert.strictEqual(res.exitCode, 1, 'Guard must exit 1 when baseline ref is invalid');
-  assert(res.stderr.includes('Mandatory baseline data/tools.json could not be loaded'), 'Error must identify missing baseline');
+  assert(
+    res.stderr.includes('Mandatory baseline data/tools.json could not be loaded') ||
+    res.stdout.includes('Mandatory baseline data/tools.json could not be loaded'),
+    'Error must identify missing baseline'
+  );
   pass('Fail-closed proof C: Invalid Git baseline forces nonzero guard exit with critical error');
 }
 
@@ -476,6 +494,45 @@ console.log('\n--- PART 6: Fail-Closed Behavior & Negative Integration Suite ---
   assert.strictEqual(res.exitCode, 1, 'Guard must exit 1 on duplicate target IDs');
   assert(res.stderr.includes('Duplicate target tool ID(s) provided'));
   pass('Fail-closed proof J: Duplicate target IDs rejected with nonzero exit');
+}
+
+// Test K: Invalid Git baseline handling in evidence reporter
+{
+  const res = runCmd('node scripts/qa/generate-release-evidence.mjs --base=nonexistent-git-ref --no-suites');
+  assert.strictEqual(res.exitCode, 1, 'Reporter must exit 1 on nonexistent base ref');
+  assert(
+    res.stderr.includes('Base Git ref') ||
+    res.stderr.includes('Catalogue baseline comparison failed') ||
+    res.stdout.includes('Catalogue baseline comparison failed')
+  );
+
+  const reportPath = path.join(ROOT, 'reports', 'stage-7h-9f-release-evidence.json');
+  assert(fs.existsSync(reportPath), 'JSON report must survive on disk');
+  const savedReport = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+  assert.strictEqual(savedReport.success, false, 'Report success must be false');
+  assert.strictEqual(savedReport.catalogueDiff.status, 'FAILED', 'Diff status must be FAILED');
+  assert.strictEqual(savedReport.catalogueDiff.comparisonExecuted, false, 'Comparison must not be marked executed');
+  pass('Fail-closed proof K: Invalid baseline ref in reporter forces exit 1, diff status FAILED, and comparisonExecuted false');
+}
+
+// Test L: Deterministic quarantine exit-code evaluation (0=FAIL, 1=PASS, 128=FAIL)
+{
+  const exit0 = evaluateQuarantineStatus(0);
+  assert.strictEqual(exit0.excluded, false, 'Exit 0 means ancestor -> not excluded');
+  assert.strictEqual(exit0.status, 'FAILED', 'Exit 0 status must be FAILED');
+
+  const exit1 = evaluateQuarantineStatus(1);
+  assert.strictEqual(exit1.excluded, true, 'Exit 1 means not ancestor -> excluded');
+  assert.strictEqual(exit1.status, 'VERIFIED', 'Exit 1 status must be VERIFIED');
+
+  const exit128 = evaluateQuarantineStatus(128);
+  assert.strictEqual(exit128.excluded, false, 'Exit 128 means error -> not verified');
+  assert.strictEqual(exit128.status, 'FAILED', 'Exit 128 status must be FAILED');
+
+  const exit255 = evaluateQuarantineStatus(255);
+  assert.strictEqual(exit255.excluded, false, 'Exit 255 means error -> not verified');
+  assert.strictEqual(exit255.status, 'FAILED', 'Exit 255 status must be FAILED');
+  pass('Fail-closed proof L: Deterministic quarantine exit-code semantics verified (0=FAIL, 1=PASS, 128=FAIL, 255=FAIL)');
 }
 
 console.log('\n======================================================');

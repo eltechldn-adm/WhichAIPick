@@ -9,7 +9,14 @@ const ROOT = path.resolve(__dirname, '..', '..');
 
 export function runCmd(cmd, options = {}) {
   try {
-    const stdout = execSync(cmd, { cwd: ROOT, encoding: 'utf8', maxBuffer: 50 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'], ...options });
+    const stdout = execSync(cmd, {
+      cwd: ROOT,
+      encoding: 'utf8',
+      maxBuffer: 25 * 1024 * 1024,
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: { ...process.env, WHICHAIPICK_EVIDENCE_RUNNING: '1', ...options.env },
+      ...options
+    });
     return { exitCode: 0, stdout: stdout.trim(), stderr: '' };
   } catch (error) {
     return {
@@ -18,6 +25,28 @@ export function runCmd(cmd, options = {}) {
       stderr: (error.stderr || '').toString().trim()
     };
   }
+}
+
+export function evaluateQuarantineStatus(exitCode) {
+  if (exitCode === 1) {
+    return {
+      excluded: true,
+      status: 'VERIFIED',
+      message: 'Quarantined commit is not an ancestor (exit 1: excluded)'
+    };
+  }
+  if (exitCode === 0) {
+    return {
+      excluded: false,
+      status: 'FAILED',
+      message: 'Quarantined commit IS an ancestor of HEAD (exit 0: ancestor violation)'
+    };
+  }
+  return {
+    excluded: false,
+    status: 'FAILED',
+    message: `Quarantine verification check failed unexpectedly with exit code ${exitCode}`
+  };
 }
 
 export function verifyPreviewDeployment(deploymentId, expectedCommitSha) {
@@ -29,11 +58,10 @@ export function verifyPreviewDeployment(deploymentId, expectedCommitSha) {
     };
   }
 
-  // Cloudflare Pages subdomain: first 8 hex characters of deployment UUID or full short ID
-  const shortId = deploymentId.length > 8 && deploymentId.includes('-')
-    ? deploymentId.slice(0, 8)
-    : deploymentId;
-  const url = `https://${shortId}.whichaipick.pages.dev/build-info.json`;
+  // Cloudflare Pages subdomain: first 8 hex characters of deployment UUID or full short ID / branch alias
+  const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(deploymentId);
+  const subdomain = isUuid ? deploymentId.slice(0, 8) : deploymentId;
+  const url = `https://${subdomain}.whichaipick.pages.dev/build-info.json`;
 
   const curlRes = runCmd(`curl -s -f -m 10 "${url}"`);
   if (curlRes.exitCode !== 0) {
@@ -78,9 +106,18 @@ export function generateReleaseEvidence(options = {}) {
     baseRef = 'origin/main',
     targetToolIds = [],
     runSuites = true,
+    injectFailingSuite = false,
     previewDeploymentId = null,
-    verbose = true
+    verbose = true,
+    forceSuites = false
   } = options;
+
+  // Protect against recursion fork cascades and memory exhaustion
+  const isEvidenceRunning = process.env.WHICHAIPICK_EVIDENCE_RUNNING === '1';
+  let shouldRunSuites = runSuites;
+  if (isEvidenceRunning && !forceSuites) {
+    shouldRunSuites = false;
+  }
 
   // 1. Exact Git metadata queried directly via CLI (NEVER reconstructed)
   const headShaResult = runCmd('git rev-parse HEAD');
@@ -92,17 +129,21 @@ export function generateReleaseEvidence(options = {}) {
 
   const headSha = headShaResult.stdout;
   const baseSha = baseShaResult.stdout;
+  const baseShaValid = baseShaResult.exitCode === 0 && baseSha && /^[0-9a-f]{40}$/i.test(baseSha);
   const remoteUrl = remoteUrlResult.stdout;
   const branch = branchResult.stdout;
   const uncommittedChanges = statusResult.stdout ? statusResult.stdout.split('\n') : [];
   const changedFiles = diffFilesResult.stdout ? diffFilesResult.stdout.split('\n').filter(Boolean) : [];
 
-  // Excluded mass-noindex check
+  // Excluded mass-noindex check with strict exit-code semantics
   const noindexAncestorResult = runCmd('git merge-base --is-ancestor da25a00f57cd863f4d659544d81bbe83326d256f HEAD');
-  const noindexExcluded = noindexAncestorResult.exitCode !== 0;
+  const quarantineCheck = evaluateQuarantineStatus(noindexAncestorResult.exitCode);
+  const noindexExcluded = quarantineCheck.excluded;
 
-  // 2. Tool Catalogue Diffs vs Base
+  // 2. Tool Catalogue Diffs vs Base (Strict Verification)
   let toolMutations = {
+    comparisonExecuted: false,
+    diffError: null,
     totalChanged: 0,
     changedIds: [],
     nonTargetChangedIds: [],
@@ -110,43 +151,54 @@ export function generateReleaseEvidence(options = {}) {
     deletedIds: []
   };
 
-  try {
-    const baseToolsRaw = runCmd(`git show ${baseRef}:data/tools.json`).stdout;
-    if (baseToolsRaw) {
-      const baseTools = JSON.parse(baseToolsRaw);
-      const currentTools = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'tools.json'), 'utf8'));
+  if (!baseShaValid) {
+    toolMutations.diffError = `Base Git ref "${baseRef}" cannot be resolved to a valid commit SHA: ${baseShaResult.stderr || 'unresolvable ref'}`;
+  } else {
+    try {
+      const baseToolsRes = runCmd(`git show ${baseRef}:data/tools.json`);
+      if (baseToolsRes.exitCode !== 0 || !baseToolsRes.stdout || baseToolsRes.stdout.trim().length === 0) {
+        toolMutations.diffError = `Failed to retrieve baseline data/tools.json from "${baseRef}": ${baseToolsRes.stderr || 'git show returned empty content'}`;
+      } else {
+        const baseTools = JSON.parse(baseToolsRes.stdout);
+        if (!Array.isArray(baseTools) || baseTools.length === 0) {
+          toolMutations.diffError = `Baseline data/tools.json from "${baseRef}" is empty or not an array`;
+        } else {
+          const currentTools = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'tools.json'), 'utf8'));
 
-      const baseMap = new Map(baseTools.map(t => [t.id, t]));
-      const currentMap = new Map(currentTools.map(t => [t.id, t]));
+          const baseMap = new Map(baseTools.map(t => [t.id, t]));
+          const currentMap = new Map(currentTools.map(t => [t.id, t]));
 
-      const targetSet = new Set(targetToolIds);
-      const changed = [];
-      const nonTargetChanged = [];
+          const targetSet = new Set(targetToolIds);
+          const changed = [];
+          const nonTargetChanged = [];
 
-      for (const [id, cur] of currentMap.entries()) {
-        const base = baseMap.get(id);
-        if (!base) {
-          toolMutations.addedIds.push(id);
-        } else if (JSON.stringify(base) !== JSON.stringify(cur)) {
-          changed.push(id);
-          if (targetToolIds.length > 0 && !targetSet.has(id)) {
-            nonTargetChanged.push(id);
+          for (const [id, cur] of currentMap.entries()) {
+            const base = baseMap.get(id);
+            if (!base) {
+              toolMutations.addedIds.push(id);
+            } else if (JSON.stringify(base) !== JSON.stringify(cur)) {
+              changed.push(id);
+              if (targetToolIds.length > 0 && !targetSet.has(id)) {
+                nonTargetChanged.push(id);
+              }
+            }
           }
+
+          for (const id of baseMap.keys()) {
+            if (!currentMap.has(id)) {
+              toolMutations.deletedIds.push(id);
+            }
+          }
+
+          toolMutations.totalChanged = changed.length;
+          toolMutations.changedIds = changed;
+          toolMutations.nonTargetChangedIds = nonTargetChanged;
+          toolMutations.comparisonExecuted = true;
         }
       }
-
-      for (const id of baseMap.keys()) {
-        if (!currentMap.has(id)) {
-          toolMutations.deletedIds.push(id);
-        }
-      }
-
-      toolMutations.totalChanged = changed.length;
-      toolMutations.changedIds = changed;
-      toolMutations.nonTargetChangedIds = nonTargetChanged;
+    } catch (err) {
+      toolMutations.diffError = `Invalid baseline JSON in ${baseRef}:data/tools.json: ${err.message}`;
     }
-  } catch (err) {
-    toolMutations.diffError = err.message;
   }
 
   // 3. Catalogue Invariants
@@ -219,7 +271,18 @@ export function generateReleaseEvidence(options = {}) {
 
   // 5. Suite Execution
   const suiteResults = [];
-  if (runSuites) {
+  if (injectFailingSuite) {
+    // When injecting a failure for integration testing, execute ONLY the failing command.
+    // This prevents recursive suite execution and excessive RAM allocation.
+    const res = runCmd('node -e "console.error(\\\"Intentional suite failure for integration test\\\"); process.exit(42);"');
+    suiteResults.push({
+      suite: 'Injected Failing Suite',
+      command: 'node -e "console.error(\\\"Intentional suite failure for integration test\\\"); process.exit(42);"',
+      exitCode: res.exitCode,
+      status: 'FAILED',
+      summary: `FAIL (${res.exitCode}): ${res.stderr.slice(0, 100)}`
+    });
+  } else if (shouldRunSuites) {
     const suites = [
       { name: 'Backlog Reconciler', cmd: 'node scripts/reconcile-content-backlog.mjs' },
       { name: 'Editorial Regression Fixtures (14 tools)', cmd: 'node scripts/qa/editorial-quality-guard.mjs' }
@@ -268,18 +331,22 @@ export function generateReleaseEvidence(options = {}) {
     isOverallValid = false;
     failureReasons.push('Invalid or unresolvable HEAD commit SHA');
   }
+  if (!baseShaValid) {
+    isOverallValid = false;
+    failureReasons.push(`Base Git ref "${baseRef}" cannot be resolved to a valid commit SHA`);
+  }
   if (!remoteUrl || !remoteUrl.includes('WhichAIPick')) {
     isOverallValid = false;
     failureReasons.push(`Invalid remote repository URL: ${remoteUrl}`);
   }
-  if (!noindexExcluded) {
+  if (!quarantineCheck.excluded || quarantineCheck.status !== 'VERIFIED') {
     isOverallValid = false;
-    failureReasons.push('Quarantined mass-noindex commit da25a00f is an ancestor of HEAD');
+    failureReasons.push(`Quarantine check failure: ${quarantineCheck.message}`);
   }
 
-  if (toolMutations.diffError) {
+  if (toolMutations.diffError || toolMutations.comparisonExecuted !== true) {
     isOverallValid = false;
-    failureReasons.push(`Failed to diff catalogue against baseline ${baseRef}: ${toolMutations.diffError}`);
+    failureReasons.push(`Catalogue baseline comparison failed or skipped: ${toolMutations.diffError || 'Catalogue comparison not executed'}`);
   }
   if (toolMutations.nonTargetChangedIds.length > 0) {
     isOverallValid = false;
@@ -317,25 +384,30 @@ export function generateReleaseEvidence(options = {}) {
     failureReasons,
     gitIdentity: {
       headCommitSha: headSha,
-      baseCommitSha: baseSha,
+      baseCommitSha: baseShaValid ? baseSha : null,
       remoteUrl: remoteUrl,
       branch: branch,
       cleanWorktree: uncommittedChanges.length === 0,
       uncommittedChangeCount: uncommittedChanges.length,
       changedFilesCount: changedFiles.length,
       changedFiles: changedFiles,
-      massNoindexExcluded: noindexExcluded,
-      status: (headSha && remoteUrl.includes('WhichAIPick') && noindexExcluded) ? 'VERIFIED' : 'FAILED'
+      massNoindexExcluded: quarantineCheck.excluded,
+      quarantineStatus: quarantineCheck.status,
+      quarantineMessage: quarantineCheck.message,
+      status: (headSha && baseShaValid && remoteUrl.includes('WhichAIPick') && quarantineCheck.excluded) ? 'VERIFIED' : 'FAILED'
     },
     previewDeployment: previewCheck,
     catalogueDiff: {
       baseRef: baseRef,
+      baseSha: baseShaValid ? baseSha : null,
       targetToolIds: targetToolIds,
+      comparisonExecuted: toolMutations.comparisonExecuted === true,
       totalToolsChanged: toolMutations.totalChanged,
       changedToolIds: toolMutations.changedIds,
       nonTargetModificationsCount: toolMutations.nonTargetChangedIds.length,
       nonTargetModifiedToolIds: toolMutations.nonTargetChangedIds,
-      status: (toolMutations.nonTargetChangedIds.length === 0 && !toolMutations.diffError) ? 'VERIFIED' : 'FAILED'
+      status: (toolMutations.comparisonExecuted === true && toolMutations.nonTargetChangedIds.length === 0 && !toolMutations.diffError) ? 'VERIFIED' : 'FAILED',
+      error: toolMutations.diffError || null
     },
     catalogueInvariants: invariants,
     evidenceVerification: {
@@ -352,11 +424,11 @@ export function generateReleaseEvidence(options = {}) {
     console.log('======================================================\n');
     console.log(`[GIT IDENTITY]`);
     console.log(`- HEAD SHA:        ${evidenceReport.gitIdentity.headCommitSha}`);
-    console.log(`- Base SHA:        ${evidenceReport.gitIdentity.baseCommitSha}`);
+    console.log(`- Base SHA:        ${evidenceReport.gitIdentity.baseCommitSha || 'UNRESOLVED'}`);
     console.log(`- Remote URL:      ${evidenceReport.gitIdentity.remoteUrl}`);
     console.log(`- Branch:          ${evidenceReport.gitIdentity.branch}`);
     console.log(`- Clean Worktree:  ${evidenceReport.gitIdentity.cleanWorktree ? 'YES' : 'NO'}`);
-    console.log(`- Noindex Excluded:${evidenceReport.gitIdentity.massNoindexExcluded ? 'YES' : 'NO'}`);
+    console.log(`- Noindex Excluded:${evidenceReport.gitIdentity.massNoindexExcluded ? 'YES' : 'NO'} (${evidenceReport.gitIdentity.quarantineStatus})`);
     console.log(`- Status:          [${evidenceReport.gitIdentity.status}]`);
 
     console.log(`\n[PREVIEW DEPLOYMENT]`);
@@ -364,6 +436,14 @@ export function generateReleaseEvidence(options = {}) {
     console.log(`- Status:          [${evidenceReport.previewDeployment.status}]`);
     if (evidenceReport.previewDeployment.message) {
       console.log(`- Note:            ${evidenceReport.previewDeployment.message}`);
+    }
+
+    console.log(`\n[CATALOGUE DIFF vs BASELINE]`);
+    console.log(`- Base Ref:        ${baseRef}`);
+    console.log(`- Comparison Run:  ${toolMutations.comparisonExecuted ? 'YES' : 'NO'}`);
+    console.log(`- Non-Target Diff: ${toolMutations.nonTargetChangedIds.length} modification(s) [${evidenceReport.catalogueDiff.status}]`);
+    if (toolMutations.diffError) {
+      console.log(`- Error:           ${toolMutations.diffError}`);
     }
 
     console.log(`\n[CATALOGUE INVARIANTS]`);
@@ -401,6 +481,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   let baseRef = 'origin/main';
   let targetToolIds = [];
   let previewDeploymentId = null;
+  let injectFailingSuite = false;
+  let runSuites = true;
 
   for (const arg of args) {
     if (arg.startsWith('--targets=')) {
@@ -410,10 +492,21 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
       baseRef = arg.slice('--base='.length).trim();
     } else if (arg.startsWith('--preview-id=')) {
       previewDeploymentId = arg.slice('--preview-id='.length).trim();
+    } else if (arg === '--inject-failing-suite') {
+      injectFailingSuite = true;
+    } else if (arg === '--no-suites') {
+      runSuites = false;
     }
   }
 
-  const report = generateReleaseEvidence({ baseRef, targetToolIds, previewDeploymentId });
+  const report = generateReleaseEvidence({
+    baseRef,
+    targetToolIds,
+    previewDeploymentId,
+    injectFailingSuite,
+    runSuites,
+    forceSuites: true
+  });
   const outPath = path.join(ROOT, 'reports', 'stage-7h-9f-release-evidence.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(report, null, 2), 'utf8');
