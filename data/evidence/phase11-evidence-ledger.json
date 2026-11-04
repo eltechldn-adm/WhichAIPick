@@ -7800,7 +7800,7 @@
     "sourceURL": "https://www.gumloop.com/",
     "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Official visual AI workflow canvas, web scraping nodes, document extraction engine, and pricing reviewed November 2026. Paid service with a 14-day free trial of the Pro plan (credit card required upfront; early 5,000 credit free tier deprecated). Subscriptions confirmed at Pro starting at $37/mo monthly (or ~$29/mo billed annually) with 20,000 monthly credits (7,400 base + 12,600 bonus), unlimited seats, 5 concurrent runs, 25 agent chats, 35+ AI models, and an 8% task orchestration fee. Credit overage priced at ~$0.005 per credit. Enterprise tier adds custom credit allowances with rollover, dedicated Slack channel, custom MCP servers, and SOC 2 / HIPAA compliance."
+    "finding": "Official visual AI workflow canvas, web scraping nodes, document extraction engine, and pricing reviewed November 2026. Paid service with a 14-day free trial of the Pro plan (credit card required upfront; current public pricing does not advertise an ongoing free tier). Subscriptions confirmed at Pro starting at $37/mo monthly (or ~$29/mo billed annually) with 20,000 monthly credits (7,400 base + 12,600 bonus), unlimited seats, 5 concurrent runs, 25 agent chats, 35+ AI models, and an 8% task orchestration fee. Credit overage priced at ~$0.005 per credit. Enterprise tier adds custom credit allowances with rollover, dedicated Slack channel, custom MCP servers, and SOC 2 / HIPAA compliance."
   },
   {
     "evidenceId": "E0868",

@@ -100,6 +100,23 @@ function scanGeneratedPages(subDir, priority) {
         }));
 }
 
+function parseSitemapDates(xmlContent) {
+    const map = new Map();
+    const locRegex = /<url>[\s\S]*?<loc>https:\/\/whichaipick\.com([^<]+)<\/loc>[\s\S]*?<lastmod>([^<]+)<\/lastmod>[\s\S]*?<\/url>/g;
+    let match;
+    while ((match = locRegex.exec(xmlContent)) !== null) {
+        map.set(match[1].trim(), match[2].trim());
+    }
+    return map;
+}
+
+function getExistingSitemapDates() {
+    const sitemapPath = path.join(PROJECT_ROOT, 'sitemap.xml');
+    if (!fs.existsSync(sitemapPath)) return new Map();
+    const content = fs.readFileSync(sitemapPath, 'utf8');
+    return parseSitemapDates(content);
+}
+
 function generateSitemap() {
     console.log('Generating sitemap…');
     const today = getFormattedDate();
@@ -110,9 +127,11 @@ function generateSitemap() {
         urls = [...urls, ...scanDirectory(dir)];
     });
 
-    // Load tools to filter out noindex ones
+    // Load tools to filter out noindex ones and track review dates
     const toolsJson = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'data', 'tools.json'), 'utf8'));
     const indexableToolIds = new Set(toolsJson.filter(t => !t.contentReviewRequired).map(t => t.id));
+    const toolsMap = new Map(toolsJson.map(t => [t.id, t]));
+    const existingDates = getExistingSitemapDates();
 
     // Phase 3: generated tool pages
     const toolPages = scanGeneratedPages('tools', PRIORITY.TOOLS).filter(p => {
@@ -155,9 +174,22 @@ function generateSitemap() {
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
     urls.forEach(url => {
+        let lastmod = existingDates.get(url.loc) || today;
+
+        // For tool pages, if tool was genuinely reviewed today, update lastmod
+        if (url.loc.startsWith('/tools/')) {
+            const parts = url.loc.split('/').filter(Boolean);
+            if (parts.length === 2 && parts[0] === 'tools') {
+                const tool = toolsMap.get(parts[1]);
+                if (tool && tool.reviewedAt === today) {
+                    lastmod = tool.reviewedAt;
+                }
+            }
+        }
+
         xml += '  <url>\n';
         xml += `    <loc>${DOMAIN}${url.loc}</loc>\n`;
-        xml += `    <lastmod>${today}</lastmod>\n`;
+        xml += `    <lastmod>${lastmod}</lastmod>\n`;
         xml += `    <changefreq>${url.freq}</changefreq>\n`;
         xml += `    <priority>${url.priority.toFixed(1)}</priority>\n`;
         xml += '  </url>\n';
