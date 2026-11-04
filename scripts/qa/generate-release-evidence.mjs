@@ -115,8 +115,16 @@ export function generateReleaseEvidence(options = {}) {
   // Protect against recursion fork cascades and memory exhaustion
   const isEvidenceRunning = process.env.WHICHAIPICK_EVIDENCE_RUNNING === '1';
   let shouldRunSuites = runSuites;
+  let nestedRecursionBlocked = false;
+
   if (isEvidenceRunning && !forceSuites) {
-    shouldRunSuites = false;
+    if (runSuites && !injectFailingSuite) {
+      // Fail-closed handling of unexpected nested invocations:
+      // If a nested invocation attempts to execute test suites while an evidence run is already active,
+      // block execution and fail the gate to prevent runaway child process cascades.
+      shouldRunSuites = false;
+      nestedRecursionBlocked = true;
+    }
   }
 
   // 1. Exact Git metadata queried directly via CLI (NEVER reconstructed)
@@ -327,6 +335,11 @@ export function generateReleaseEvidence(options = {}) {
   let isOverallValid = true;
   const failureReasons = [];
 
+  if (nestedRecursionBlocked) {
+    isOverallValid = false;
+    failureReasons.push('Unexpected nested evidence generation detected under active WHICHAIPICK_EVIDENCE_RUNNING (fail-closed recursion protection)');
+  }
+
   if (headShaResult.exitCode !== 0 || !headSha) {
     isOverallValid = false;
     failureReasons.push('Invalid or unresolvable HEAD commit SHA');
@@ -483,6 +496,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   let previewDeploymentId = null;
   let injectFailingSuite = false;
   let runSuites = true;
+  let forceSuites = false;
 
   for (const arg of args) {
     if (arg.startsWith('--targets=')) {
@@ -496,6 +510,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
       injectFailingSuite = true;
     } else if (arg === '--no-suites') {
       runSuites = false;
+    } else if (arg === '--force-suites') {
+      forceSuites = true;
     }
   }
 
@@ -505,7 +521,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     previewDeploymentId,
     injectFailingSuite,
     runSuites,
-    forceSuites: true
+    forceSuites
   });
   const outPath = path.join(ROOT, 'reports', 'stage-7h-9f-release-evidence.json');
   fs.mkdirSync(path.dirname(outPath), { recursive: true });

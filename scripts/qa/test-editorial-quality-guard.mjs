@@ -535,6 +535,29 @@ console.log('\n--- PART 6: Fail-Closed Behavior & Negative Integration Suite ---
   pass('Fail-closed proof L: Deterministic quarantine exit-code semantics verified (0=FAIL, 1=PASS, 128=FAIL, 255=FAIL)');
 }
 
+// Test M: Unexpected nested evidence generation under active runner fails closed (exit 1)
+{
+  const res = runCmd('node scripts/qa/generate-release-evidence.mjs', {
+    env: { WHICHAIPICK_EVIDENCE_RUNNING: '1' }
+  });
+  assert.strictEqual(res.exitCode, 1, 'Nested CLI invocation must fail-closed with exit 1');
+  assert(
+    res.stderr.includes('Unexpected nested evidence generation detected') ||
+    res.stdout.includes('Unexpected nested evidence generation detected'),
+    'Error log must identify blocked nested recursion'
+  );
+
+  const reportPath = path.join(ROOT, 'reports', 'stage-7h-9f-release-evidence.json');
+  assert(fs.existsSync(reportPath), 'JSON report must survive on disk');
+  const savedReport = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+  assert.strictEqual(savedReport.success, false, 'Report success must be false on blocked nested run');
+  assert(
+    savedReport.failureReasons.some(r => r.includes('Unexpected nested evidence generation detected')),
+    'Report must record nested recursion failure reason'
+  );
+  pass('Fail-closed proof M: Unexpected nested CLI invocation triggers fail-closed gate without recursive forking');
+}
+
 console.log('\n======================================================');
 console.log(`TOTAL TEST ASSERTIONS: ${totalAssertions}`);
 console.log('🎉 ALL EDITORIAL QUALITY & FAILURE TESTS PASSED CLEANLY!');
