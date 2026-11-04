@@ -2974,18 +2974,18 @@
     "id": "paperpal",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://paperpal.com/pricing",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official live pricing plus January 15 2026 vendor article reviewed 24 September 2026. Historical allowances remain explicitly dated; no competitor claims imported."
+    "finding": "Official pricing ($12/mo annual Prime, $29/mo annual Pro) and Turnitin-powered plagiarism checking allowances (7k free / 10k Prime / 30k Pro) reviewed 04 November 2026; non-guarantee of publication verified."
   },
   {
     "evidenceId": "E0332",
     "id": "paperpal",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://paperpal.com/blog/news-updates/top-5-ai-tools-for-academic-writing",
-    "reviewedAt": "2026-09-24",
+    "sourceURL": "https://paperpal.com/pricing",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official live pricing plus January 15 2026 vendor article reviewed 24 September 2026. Historical allowances remain explicitly dated; no competitor claims imported."
+    "finding": "Official pricing ($12/mo annual Prime, $29/mo annual Pro) and Turnitin-powered plagiarism checking allowances (7k free / 10k Prime / 30k Pro) reviewed 04 November 2026; non-guarantee of publication verified."
   },
   {
     "evidenceId": "E0333",
@@ -3396,19 +3396,19 @@
     "evidenceId": "E0378",
     "id": "askyourpdf",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://askyourpdf.com/pricing",
-    "reviewedAt": "2026-09-24",
+    "sourceURL": "https://beta.askyourpdf.com/pricing",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official pricing and developer pages reviewed 24 September 2026; mobile store links and extension listed on developer page. Model roster and old plugin entitlement not certified."
+    "finding": "Official pricing ($11.99/mo annual Premium, $14.99/mo annual Pro), daily limits (1 doc Free / 50 docs Premium / 150 docs Pro), and clickable citation navigation reviewed 04 November 2026; RAG retrieval limits verified."
   },
   {
     "evidenceId": "E0379",
     "id": "askyourpdf",
     "fieldScope": "[\"targetUsers\", \"platforms\", \"apiAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://askyourpdf.com/developers",
-    "reviewedAt": "2026-09-24",
+    "sourceURL": "https://beta.askyourpdf.com/pricing",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official pricing and developer pages reviewed 24 September 2026; mobile store links and extension listed on developer page. Model roster and old plugin entitlement not certified."
+    "finding": "Official pricing ($11.99/mo annual Premium, $14.99/mo annual Pro), daily limits (1 doc Free / 50 docs Premium / 150 docs Pro), and clickable citation navigation reviewed 04 November 2026; RAG retrieval limits verified."
   },
   {
     "evidenceId": "E0380",
@@ -7833,10 +7833,10 @@
     "evidenceId": "E0871",
     "id": "nanonets",
     "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://nanonets.com/",
-    "reviewedAt": "2026-09-28",
+    "sourceURL": "https://nanonets.com/pricing",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official consumption pricing ($50 trial credits, $100/mo for 100 credits) and workflow block complexity rates ($0.02 simple / $0.10 standard / $0.30 complex AI) reviewed 04 November 2026; typical invoice processing cost $0.50-$1.00 verified."
   },
   {
     "evidenceId": "E0872",
@@ -8985,19 +8985,19 @@
     "evidenceId": "E0999",
     "id": "deepl",
     "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://www.deepl.com/en",
-    "reviewedAt": "2026-09-28",
+    "sourceURL": "https://www.deepl.com/en/pro",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official Pro pricing ($8.74/mo annual Individual), data security terms, DeepL Write add-on and API separation reviewed 04 November 2026; immediate memory deletion on paid tiers with user-saved glossaries stored in account confirmed."
   },
   {
     "evidenceId": "E1000",
     "id": "languagetool",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://languagetool.org/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official pricing and open-source HTTP server documentation reviewed 04 November 2026; rule-based local server vs cloud neural AI rephraser distinction verified; starting price left null pending regional checkout confirmation."
   },
   {
     "evidenceId": "E1001",
