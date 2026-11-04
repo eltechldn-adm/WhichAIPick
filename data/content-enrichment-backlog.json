@@ -1,32 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T21:40:21.621Z",
+  "generatedAt": "2026-11-04T10:24:43.094Z",
   "description": "Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.",
   "baselineReconciliation": {
     "historicalSkeletalBaseline": 575,
-    "derivedEnrichedCountToDate": 14,
-    "remainingSkeletalBacklog": 561,
-    "mathematicalProof": "575 (baseline skeletal) - 14 (tools enriched to date) = 561 remaining skeletal tools"
+    "derivedEnrichedCountToDate": 24,
+    "remainingSkeletalBacklog": 551,
+    "mathematicalProof": "575 (baseline skeletal) - 24 (tools enriched to date) = 551 remaining skeletal tools"
   },
   "counts": {
     "totalTools": 882,
     "v2Structured": 46,
-    "richV1": 272,
-    "skeletalV1": 561,
+    "richV1": 282,
+    "skeletalV1": 551,
     "deprecatedIneligible": 3,
     "requiresReview": 0
   },
   "skeletalByCategoryDistribution": {
-    "Marketing": 56,
-    "Education": 35,
-    "Business": 111,
+    "Marketing": 55,
+    "Education": 34,
+    "Business": 110,
     "Design": 46,
-    "Development": 122,
-    "Video & Audio": 66,
+    "Development": 120,
+    "Video & Audio": 65,
     "Content Creation": 18,
-    "Research": 33,
-    "Automation": 24,
-    "Productivity": 50
+    "Research": 32,
+    "Productivity": 49,
+    "Automation": 22
   },
   "ineligibleToolIds": [
     "amazon-codewhisperer",
@@ -105,8 +105,6 @@
     "anima",
     "answer-ai",
     "answerthis",
-    "apify",
-    "apollo",
     "aqua-voice",
     "arcads",
     "arize-ai",
@@ -122,11 +120,9 @@
     "atomicwork",
     "attention",
     "audimee",
-    "audiopen",
     "audioshake",
     "augmedix",
     "augment-code",
-    "auphonic",
     "automation-anywhere",
     "backstory",
     "balto",
@@ -136,14 +132,12 @@
     "better-analyst",
     "bhuman",
     "bika-ai",
-    "bito",
     "bland-ai",
     "blaze",
     "bluedot",
     "blueprint",
     "boldvoice",
     "botika",
-    "botsonic",
     "braintrust",
     "brand24",
     "brandwatch",
@@ -166,7 +160,6 @@
     "chathub",
     "chattermill",
     "checksub",
-    "chroma",
     "claid",
     "clari",
     "clay",
@@ -183,7 +176,6 @@
     "common-room",
     "composio",
     "condens",
-    "conker",
     "conversica",
     "coohom",
     "copymatic",
@@ -233,7 +225,6 @@
     "evenup",
     "evoto",
     "exa",
-    "explainpaper",
     "extend",
     "factors-ai",
     "factory",
@@ -269,7 +260,6 @@
     "grok",
     "groq",
     "guardrails-ai",
-    "gumloop",
     "gupshup",
     "h2o-ai",
     "hailuo-ai",
@@ -1391,6 +1381,42 @@
         ]
       },
       {
+        "id": "apify",
+        "name": "Apify",
+        "category": "Automation",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 19,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "apollo",
+        "name": "Apollo",
+        "category": "Marketing",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 59,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "apple-intelligence",
         "name": "Apple Intelligence",
         "category": "Productivity",
@@ -1434,6 +1460,42 @@
         "hasFreeTier": false,
         "hasFreeTrial": true,
         "startingPrice": 29,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "audiopen",
+        "name": "AudioPen",
+        "category": "Productivity",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 11,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "auphonic",
+        "name": "Auphonic",
+        "category": "Video & Audio",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 13,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -1506,6 +1568,24 @@
         "hasFreeTier": false,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "bito",
+        "name": "Bito",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 15,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -1596,6 +1676,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "botsonic",
+        "name": "Botsonic",
+        "category": "Business",
+        "pricingModel": "paid",
+        "hasFreeTier": false,
+        "hasFreeTrial": true,
+        "startingPrice": 19,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -1812,6 +1910,24 @@
         "hasFreeTier": false,
         "hasFreeTrial": true,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "chroma",
+        "name": "Chroma",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -2082,6 +2198,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": true,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "conker",
+        "name": "Conker",
+        "category": "Education",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 5.99,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -2525,6 +2659,24 @@
         ]
       },
       {
+        "id": "explainpaper",
+        "name": "Explainpaper",
+        "category": "Research",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 16,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "fathom",
         "name": "Fathom",
         "category": "Productivity",
@@ -2928,6 +3080,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": true,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "gumloop",
+        "name": "Gumloop",
+        "category": "Automation",
+        "pricingModel": "paid",
+        "hasFreeTier": false,
+        "hasFreeTrial": true,
+        "startingPrice": 37,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -6444,32 +6614,6 @@
         "substantiveSections": []
       },
       {
-        "id": "apify",
-        "name": "Apify",
-        "category": "Automation",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "apollo",
-        "name": "Apollo",
-        "category": "Marketing",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "aqua-voice",
         "name": "Aqua Voice",
         "category": "Productivity",
@@ -6665,19 +6809,6 @@
         "substantiveSections": []
       },
       {
-        "id": "audiopen",
-        "name": "AudioPen",
-        "category": "Productivity",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "audioshake",
         "name": "AudioShake",
         "category": "Video & Audio",
@@ -6709,19 +6840,6 @@
         "category": "Development",
         "pricingModel": "paid",
         "hasFreeTier": false,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "auphonic",
-        "name": "Auphonic",
-        "category": "Video & Audio",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
@@ -6847,19 +6965,6 @@
         "substantiveSections": []
       },
       {
-        "id": "bito",
-        "name": "Bito",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "bland-ai",
         "name": "Bland AI",
         "category": "Automation",
@@ -6930,19 +7035,6 @@
         "category": "Design",
         "pricingModel": "paid",
         "hasFreeTier": false,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "botsonic",
-        "name": "Botsonic",
-        "category": "Business",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
         "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
@@ -7237,19 +7329,6 @@
         "substantiveSections": []
       },
       {
-        "id": "chroma",
-        "name": "Chroma",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "claid",
         "name": "Claid",
         "category": "Design",
@@ -7452,19 +7531,6 @@
         "hasFreeTier": true,
         "hasFreeTrial": true,
         "startingPrice": 15,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "conker",
-        "name": "Conker",
-        "category": "Education",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
@@ -8108,19 +8174,6 @@
         "substantiveSections": []
       },
       {
-        "id": "explainpaper",
-        "name": "Explainpaper",
-        "category": "Research",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "extend",
         "name": "Extend",
         "category": "Automation",
@@ -8569,19 +8622,6 @@
         "pricingModel": "freemium",
         "hasFreeTier": true,
         "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "gumloop",
-        "name": "Gumloop",
-        "category": "Automation",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,

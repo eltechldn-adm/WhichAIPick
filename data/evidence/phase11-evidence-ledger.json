@@ -3478,18 +3478,18 @@
     "id": "explainpaper",
     "fieldScope": "[\"targetUsers\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://www.explainpaper.com/",
-    "reviewedAt": "2026-09-24",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official homepage and pricing reviewed 24 September 2026. Free task matching limited to passage analysis, not paid whole-paper summaries."
+    "finding": "Official academic PDF reader interface, Snap Explain visual figure interpretation, Zotero reference sync, and pricing reviewed November 2026. Freemium model confirmed with Free Plan ($0/mo, unlimited highlight explanations with standard AI models, follow-up questions, Zotero library integration). Explainpaper Pro confirmed at $16/mo monthly (or $12/mo billed annually at $144/yr, saving 25%, 7-day free trial) unlocking frontier AI models (Claude 3.5 Sonnet / GPT-4o), full-paper summaries with key takeaways, Snap Explain for charts/equations, clickable section navigation outlines, and smart highlight memory. Custom Teams plans available."
   },
   {
     "evidenceId": "E0388",
     "id": "explainpaper",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"trialDays\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://www.explainpaper.com/pricing",
-    "reviewedAt": "2026-09-24",
+    "sourceURL": "https://www.explainpaper.com/",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official homepage and pricing reviewed 24 September 2026. Free task matching limited to passage analysis, not paid whole-paper summaries."
+    "finding": "Official academic PDF reader interface, Snap Explain visual figure interpretation, Zotero reference sync, and pricing reviewed November 2026. Freemium model confirmed with Free Plan ($0/mo, unlimited highlight explanations with standard AI models, follow-up questions, Zotero library integration). Explainpaper Pro confirmed at $16/mo monthly (or $12/mo billed annually at $144/yr, saving 25%, 7-day free trial) unlocking frontier AI models (Claude 3.5 Sonnet / GPT-4o), full-paper summaries with key takeaways, Snap Explain for charts/equations, clickable section navigation outlines, and smart highlight memory. Custom Teams plans available."
   },
   {
     "evidenceId": "E0389",
@@ -4197,19 +4197,19 @@
     "evidenceId": "E0467",
     "id": "auphonic",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://auphonic.com/pricing",
-    "reviewedAt": "2026-09-25",
+    "sourceURL": "https://auphonic.com/",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official pricing comparison and API documentation reviewed 25 September 2026. Credit duration, free-feature exclusions and export jingle retained explicitly."
+    "finding": "Official audio post-production specifications, broadcast loudness standards (EBU R128, -16 LUFS), and pricing reviewed November 2026. Freemium model confirmed with Free Plan XS ($0/mo, 2 hours/mo processed audio, credits reset monthly without rollover, includes audio watermark). Recurring subscriptions confirmed at Small S ($13/mo monthly / $11/mo annual at $132/yr or €12/mo, 9 hours/mo), Medium M ($26/mo monthly / $22/mo annual, 21 hours/mo), Large L ($52/mo monthly / $44/mo annual, 45 hours/mo), and Extra Large XL ($104/mo monthly / $88/mo annual, 100 hours/mo). One-time non-expiring credits confirmed at 9 hours ($14 / €13), 25 hours ($36 / €34), and 100 hours ($125 / €119)."
   },
   {
     "evidenceId": "E0468",
     "id": "auphonic",
     "fieldScope": "[\"targetUsers\", \"apiAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://auphonic.com/help/api/index.html",
-    "reviewedAt": "2026-09-25",
+    "sourceURL": "https://auphonic.com/",
+    "reviewedAt": "2026-11-04",
     "method": "official_source_review",
-    "finding": "Official pricing comparison and API documentation reviewed 25 September 2026. Credit duration, free-feature exclusions and export jingle retained explicitly."
+    "finding": "Official audio post-production specifications, broadcast loudness standards (EBU R128, -16 LUFS), and pricing reviewed November 2026. Freemium model confirmed with Free Plan XS ($0/mo, 2 hours/mo processed audio, credits reset monthly without rollover, includes audio watermark). Recurring subscriptions confirmed at Small S ($13/mo monthly / $11/mo annual at $132/yr or €12/mo, 9 hours/mo), Medium M ($26/mo monthly / $22/mo annual, 21 hours/mo), Large L ($52/mo monthly / $44/mo annual, 45 hours/mo), and Extra Large XL ($104/mo monthly / $88/mo annual, 100 hours/mo). One-time non-expiring credits confirmed at 9 hours ($14 / €13), 25 hours ($36 / €34), and 100 hours ($125 / €119)."
   },
   {
     "evidenceId": "E0469",
@@ -7735,9 +7735,9 @@
     "id": "apify",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://apify.com/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official product documentation, platform architecture specifications, and credit-based pricing reviewed November 2026. Freemium model confirmed with Free Plan ($5/mo free prepaid usage credit, 16 GB max Actor RAM, 5 included datacenter proxies, 7-day data retention). Paid plans confirmed at Starter ($19/mo monthly / $17/mo annual at $204/yr, $19 credit, 64 GB RAM, 32 runs, $0.20/CU), Scale ($199/mo monthly / $179/mo annual at $2,148/yr, $199 credit, 256 GB RAM, 128 runs, $0.16/CU), Business ($999/mo monthly / $899/mo annual), and custom Enterprise."
   },
   {
     "evidenceId": "E0861",
@@ -7798,9 +7798,9 @@
     "id": "gumloop",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.gumloop.com/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official visual AI workflow canvas, web scraping nodes, document extraction engine, and pricing reviewed November 2026. Paid service with a 14-day free trial of the Pro plan (credit card required upfront; early 5,000 credit free tier deprecated). Subscriptions confirmed at Pro starting at $37/mo monthly (or ~$29/mo billed annually) with 20,000 monthly credits (7,400 base + 12,600 bonus), unlimited seats, 5 concurrent runs, 25 agent chats, 35+ AI models, and an 8% task orchestration fee. Credit overage priced at ~$0.005 per credit. Enterprise tier adds custom credit allowances with rollover, dedicated Slack channel, custom MCP servers, and SOC 2 / HIPAA compliance."
   },
   {
     "evidenceId": "E0868",
@@ -8077,9 +8077,9 @@
     "id": "botsonic",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://botsonic.com/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official conversational AI agent platform, omnichannel connectors, agentic actions, and pricing reviewed November 2026. Paid service with a 7-day free trial on paid plans (no permanent free tier). Subscriptions confirmed at Starter ($19/mo monthly / $16/mo annual at $192/yr, 1 seat, 1,000 messages/mo, 1 chatbot, 10M characters, 3 Agentic Actions, GPT-4o mini), Professional ($49/mo monthly / $41/mo annual at $492/yr, 2 seats, 3,000 messages/mo, 2 chatbots, 50M characters, 5 Agentic Actions, GPT-4o, Slack/Calendly sync), Advanced ($299/mo monthly / $249/mo annual at $2,988/yr, 5 seats, 12,000 messages/mo, unlimited sitemaps, API access), and custom Enterprise."
   },
   {
     "evidenceId": "E0899",
@@ -9535,9 +9535,9 @@
     "id": "bito",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://bito.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official IDE extensions (VS Code, JetBrains), GitHub/GitLab PR review bot, security scanning, and pricing reviewed November 2026. Freemium model confirmed with Free Plan ($0/mo for individual developers, AI chat in IDEs, basic completions, public repo PR summaries). Paid team plans confirmed at Team ($15/seat/mo monthly / $12/seat/mo annual at $144/seat/yr, 5,000 lines of code reviewed per seat/month, line-level PR suggestions, impact analysis), Professional ($25/seat/mo monthly / $20/seat/mo annual at $240/seat/yr, 14-day free trial), and custom Enterprise (VPC/on-premise deployment, custom review rules, SSO/SAML, SOC 2 Type II)."
   },
   {
     "evidenceId": "E1061",
@@ -9589,9 +9589,9 @@
     "id": "chroma",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.trychroma.com/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official GitHub repository, documentation, Apache 2.0 open-source licensing, and Chroma Cloud serverless pricing reviewed November 2026. Open-Source Edition confirmed 100% free forever ($0) under Apache 2.0 license for self-hosting. Chroma Cloud serverless confirmed with Starter Tier ($0/mo with $5 free monthly usage credits). Usage-based consumption confirmed at ~$0.33 per GiB-month storage, ~$2.50 per logical GiB written, ~$0.0075 per TiB queried, ~$0.09 per GiB returned, and ~$0.03 per collection fork. Custom Enterprise contracts available for dedicated VPC, private networking, and custom SLAs."
   },
   {
     "evidenceId": "E1067",
@@ -10651,9 +10651,9 @@
     "id": "conker",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.conker.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official K-12 and higher-ed assessment builder by Mote Technologies Ltd., curriculum alignment standards (Common Core, NGSS, TEKS), and pricing reviewed November 2026. Freemium model confirmed with Free Plan ($0/mo, share up to 5 quizzes, 50 student responses, 10 questions/quiz, 1,200 words reading input). Conker Pro confirmed at $5.99/mo monthly (or ~$4.99/mo billed annually at ~$59.99/yr) unlocking unlimited quizzes, unlimited student responses, up to 40 questions per quiz, 5,000 words reading input, quiz analytics, and Google Forms/Canvas export. Custom Schools plans available for school districts."
   },
   {
     "evidenceId": "E1185",
@@ -10975,9 +10975,9 @@
     "id": "apollo",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.apollo.io/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official B2B lead generation database, email sequencing features, Chrome extension capabilities, and pricing reviewed November 2026. Freemium model confirmed with Free Plan ($0/mo, 900 email credits/yr granted monthly, basic filters, limited sequences). Paid plans confirmed at Basic ($59/seat/mo monthly / $49/seat/mo annual at $588/yr, 30k email credits/yr, unlimited sequences, CRM sync), Professional ($99/seat/mo monthly / $79/seat/mo annual at $948/yr, 48k email credits/yr, dialer, call recording, A/B testing), Organization ($149/seat/mo monthly / $119/seat/mo annual at $1,428/yr, 3-seat minimum, 72k credits/yr, intent data), and custom Enterprise. 14-day free trial available for paid plans."
   },
   {
     "evidenceId": "E1221",
@@ -11434,9 +11434,9 @@
     "id": "audiopen",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.audiopen.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official voice note application, rewrite style options, PWA interface, and non-renewing access pass pricing reviewed November 2026. Freemium model confirmed with Free Plan ($0 forever, 3-minute voice notes, basic rewrite styles, 10 note storage). AudioPen Prime confirmed as non-renewing prepaid access passes at 3-Month Pass ($33 total, $11/mo equivalent), 1-Year Pass ($99 total, $8.25/mo equivalent), and 2-Year Pass ($159 total, $6.63/mo equivalent) unlocking 15-minute voice recordings, unlimited note storage, audio file uploads (up to 100 MB each, 100 files/4 weeks), custom writing styles, SuperSummaries, and webhook integrations."
   },
   {
     "evidenceId": "E1272",
