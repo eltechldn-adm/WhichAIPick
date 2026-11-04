@@ -1,9 +1,9 @@
 {
   "environment": "local",
-  "buildTime": "2026-11-04T11:11:14.350Z",
+  "buildTime": "2026-11-04T14:53:59.941Z",
   "schemaVersion": "9G",
-  "branch": "content/batch3-enrichment",
-  "commitHash": "8f85f0063b4e52599316b203961f8c723aaf3246",
+  "branch": "content/adsense-value-pilot",
+  "commitHash": "0284dbadc63826568c92c4c9b9aebccd60ed8d48",
   "toolCount": 882,
   "eligibleCount": 879,
   "contentReviewCount": 0,

@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T10:24:43.094Z",
+  "generatedAt": "2026-11-04T14:56:12.242Z",
   "description": "Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.",
   "baselineReconciliation": {
     "historicalSkeletalBaseline": 575,
-    "derivedEnrichedCountToDate": 24,
-    "remainingSkeletalBacklog": 551,
-    "mathematicalProof": "575 (baseline skeletal) - 24 (tools enriched to date) = 551 remaining skeletal tools"
+    "derivedEnrichedCountToDate": 29,
+    "remainingSkeletalBacklog": 546,
+    "mathematicalProof": "575 (baseline skeletal) - 29 (tools enriched to date) = 546 remaining skeletal tools"
   },
   "counts": {
     "totalTools": 882,
     "v2Structured": 46,
-    "richV1": 282,
-    "skeletalV1": 551,
+    "richV1": 287,
+    "skeletalV1": 546,
     "deprecatedIneligible": 3,
     "requiresReview": 0
   },
@@ -21,7 +21,7 @@
     "Education": 34,
     "Business": 110,
     "Design": 46,
-    "Development": 120,
+    "Development": 115,
     "Video & Audio": 65,
     "Content Creation": 18,
     "Research": 32,
@@ -165,11 +165,9 @@
     "clay",
     "cleanlab",
     "cleft",
-    "cline",
     "clipping-magic",
     "coassemble",
     "codeant-ai",
-    "coderabbit",
     "codescene",
     "coefficient",
     "cognigy",
@@ -527,7 +525,6 @@
     "socialbee",
     "soundful",
     "sourcely",
-    "sourcery",
     "sourcetable",
     "spacely-ai",
     "speak",
@@ -549,7 +546,6 @@
     "sweep",
     "sybill",
     "synthflow",
-    "tabby",
     "tactiq",
     "tali-ai",
     "talkpal",
@@ -628,7 +624,6 @@
     "ydata",
     "yuma-ai",
     "z-ai",
-    "zed",
     "zencastr",
     "zep",
     "zilliz",
@@ -2029,6 +2024,24 @@
         ]
       },
       {
+        "id": "cline",
+        "name": "Cline",
+        "category": "Development",
+        "pricingModel": "free",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "clipchamp",
         "name": "Clipchamp",
         "category": "Video & Audio",
@@ -2108,6 +2121,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "coderabbit",
+        "name": "CodeRabbit",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 15,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -5449,6 +5480,24 @@
         ]
       },
       {
+        "id": "sourcery",
+        "name": "Sourcery",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 10,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "spark",
         "name": "Spark",
         "category": "Productivity",
@@ -5599,6 +5648,24 @@
         "pricingModel": "paid",
         "hasFreeTier": false,
         "hasFreeTrial": true,
+        "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "tabby",
+        "name": "Tabby",
+        "category": "Development",
+        "pricingModel": "free",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
@@ -6266,6 +6333,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "zed",
+        "name": "Zed",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 10,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -7394,19 +7479,6 @@
         "substantiveSections": []
       },
       {
-        "id": "cline",
-        "name": "Cline",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "clipping-magic",
         "name": "Clipping Magic",
         "category": "Design",
@@ -7435,19 +7507,6 @@
       {
         "id": "codeant-ai",
         "name": "CodeAnt AI",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "coderabbit",
-        "name": "CodeRabbit",
         "category": "Development",
         "pricingModel": "freemium",
         "hasFreeTier": true,
@@ -12100,19 +12159,6 @@
         "substantiveSections": []
       },
       {
-        "id": "sourcery",
-        "name": "Sourcery",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "sourcetable",
         "name": "Sourcetable",
         "category": "Business",
@@ -12379,19 +12425,6 @@
         "pricingModel": "enterprise",
         "hasFreeTier": false,
         "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "tabby",
-        "name": "Tabby",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
@@ -13406,19 +13439,6 @@
         "pricingModel": "freemium",
         "hasFreeTier": true,
         "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "zed",
-        "name": "Zed",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,

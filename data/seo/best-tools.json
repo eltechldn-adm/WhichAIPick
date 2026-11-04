@@ -42,7 +42,59 @@
         "intentDescription": "The landscape of AI coding assistants has moved beyond simple autocomplete to full agentic workflows. Developers need tools that understand their entire repository context and can autonomously plan and execute multi-file changes.",
         "searchTerms": ["code", "developer", "programming", "ide"],
         "minToolsToMap": 8,
-        "editorialGuidance": "Consider your team's workflow and budget. If you value flexibility and BYOK (Bring Your Own Key), look for open-source agents. For strict corporate environments, standardized enterprise platforms with strong IP indemnification are usually required."
+        "editorialGuidance": "Selecting an AI coding assistant requires balancing agentic autonomy against workflow friction, latency, and data privacy. For rapid multi-file feature development, standalone AI IDEs like Cursor and Zed provide deep codebase indexing and low-latency interaction. If you prefer to stay within standard VS Code while controlling API costs directly, BYOK agents like Cline offer maximum flexibility and tool extensibility via the Model Context Protocol (MCP). For enterprise environments with strict IP governance or air-gapped security mandates, look to GitHub Copilot for legal indemnification or self-hosted solutions like Tabby to ensure proprietary source code remains strictly within internal networks. Finally, automated PR reviewers like CodeRabbit and refactoring tools like Sourcery complement authoring assistants by catching regressions before code merges to production.",
+        "curatedShortlist": [
+            {
+                "id": "cursor",
+                "badge": "Best for Agentic Multi-File Refactoring",
+                "reason": "Deep semantic codebase indexing combined with multi-file composer capabilities enables complex autonomous changes across entire repositories."
+            },
+            {
+                "id": "cline",
+                "badge": "Best for In-Editor BYOK Autonomy",
+                "reason": "Runs directly inside standard VS Code with human-in-the-loop terminal execution, browser testing, and Model Context Protocol (MCP) tool integration with zero subscription markup."
+            },
+            {
+                "id": "zed",
+                "badge": "Best for Ultra-Low Latency & Speed",
+                "reason": "Rust-native GPU-accelerated code editor rendering at 120 FPS with multi-model switching, minimal RAM usage, and built-in multiplayer pair programming."
+            },
+            {
+                "id": "github-copilot",
+                "badge": "Best for Enterprise Standardization",
+                "reason": "Battle-tested multi-IDE support across VS Code, JetBrains, and Visual Studio with predictable flat-rate pricing and commercial IP indemnification."
+            },
+            {
+                "id": "coderabbit",
+                "badge": "Best for Pull Request Automation",
+                "reason": "Automates GitHub and GitLab code reviews with contextual line-by-line feedback, architectural sequence diagrams, and 1-click commit fixes."
+            },
+            {
+                "id": "tabby",
+                "badge": "Best for Self-Hosted Data Sovereignty",
+                "reason": "Open-source, self-hosted code completion server running on private GPU hardware with zero telemetry or code transmission to external clouds."
+            },
+            {
+                "id": "sourcery",
+                "badge": "Best for Proactive Code Refactoring",
+                "reason": "Combines abstract syntax tree (AST) static analysis with LLMs to eliminate dead code, reduce cyclomatic complexity, and generate unit tests."
+            },
+            {
+                "id": "aider",
+                "badge": "Best for Terminal & Git-Native Workflows",
+                "reason": "Operates directly in the command line, authoring clean, structured Git commits automatically for multi-file edits across complex projects."
+            },
+            {
+                "id": "continue",
+                "badge": "Best Open-Source VS Code Extension",
+                "reason": "Modular in-editor assistant supporting custom local model endpoints, Ollama, and commercial LLMs without changing editors."
+            },
+            {
+                "id": "replit",
+                "badge": "Best for Cloud Prototyping & Collaboration",
+                "reason": "Zero-setup cloud development environment with integrated agent workflows for instant prototyping, hosting, and full-stack deployment."
+            }
+        ]
     },
     {
         "slug": "customer-support",

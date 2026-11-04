@@ -83,22 +83,60 @@ function buildPage(def) {
         return;
     }
 
-    let matchedTools = tools.filter(t => {
-        if (!t.primaryUseCases) return false;
-        if (t.contentReviewRequired) return false;
-        if (t.id === targetTool.id) return false; // Don't match itself
-        
-        const uses = t.primaryUseCases.map(u => u.toLowerCase());
-        const cats = (t.category || '').toLowerCase();
-        
-        return def.searchTerms.some(term => 
-            uses.some(u => u.includes(term)) || cats.includes(term)
-        );
-    });
+    let toolsHTML = '';
+    let totalMatchedCount = 0;
 
-    if (matchedTools.length < def.minToolsToMap) {
-        console.log(`[SKIP] /alternatives/${def.slug}/ - Found ${matchedTools.length} tools, needs ${def.minToolsToMap}. Deferring generation (noindex condition).`);
-        return;
+    if (Array.isArray(def.curatedGroups) && def.curatedGroups.length > 0) {
+        toolsHTML = def.curatedGroups.map(group => {
+            const groupTools = group.items.map(item => {
+                const t = tools.find(x => x.id === item.id);
+                if (!t || t.contentReviewRequired || t.recommendationEligible === false) return null;
+                return {
+                    tool: t,
+                    edge: item.edge || `A strong alternative in the ${t.category || 'AI'} space.`
+                };
+            }).filter(Boolean);
+
+            totalMatchedCount += groupTools.length;
+
+            const cardsHTML = groupTools.map(gt => generateToolCard(gt.tool, gt.edge)).join('');
+
+            return `
+            <div class="alternatives-group" style="margin-bottom: 3.5rem;">
+                <div class="alternatives-group-header" style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.75rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">${group.title}</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">${group.description}</p>
+                </div>
+                <div class="tools-grid">
+                    ${cardsHTML}
+                </div>
+            </div>`;
+        }).join('');
+    } else {
+        let matchedTools = tools.filter(t => {
+            if (!t.primaryUseCases) return false;
+            if (t.contentReviewRequired) return false;
+            if (t.id === targetTool.id) return false; // Don't match itself
+            
+            const uses = t.primaryUseCases.map(u => u.toLowerCase());
+            const cats = (t.category || '').toLowerCase();
+            
+            return def.searchTerms.some(term => 
+                uses.some(u => u.includes(term)) || cats.includes(term)
+            );
+        });
+
+        totalMatchedCount = matchedTools.length;
+
+        if (matchedTools.length < def.minToolsToMap) {
+            console.log(`[SKIP] /alternatives/${def.slug}/ - Found ${matchedTools.length} tools, needs ${def.minToolsToMap}. Deferring generation (noindex condition).`);
+            return;
+        }
+
+        toolsHTML = matchedTools.map(t => {
+            const context = `A strong alternative in the ${t.category || 'AI'} space. Overlaps with ${targetTool.name} on ${t.primaryUseCases[0] || 'core'} capabilities.`;
+            return generateToolCard(t, context);
+        }).join('');
     }
 
     const dirPath = path.join(DIST_DIR, def.slug);
@@ -113,17 +151,12 @@ function buildPage(def) {
             <a href="#tools" class="btn btn-primary">View Alternatives</a>
         </div>
         `)
-        .replace('{{STATS_BLOCK}}', `<div class="seo-hero-stats"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${matchedTools.length} alternatives found</span></div>`);
-
-    let toolsHTML = matchedTools.map(t => {
-        const context = `A strong alternative in the ${t.category || 'AI'} space. Overlaps with ${targetTool.name} on ${t.primaryUseCases[0] || 'core'} capabilities.`;
-        return generateToolCard(t, context);
-    }).join('');
+        .replace('{{STATS_BLOCK}}', `<div class="seo-hero-stats"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${totalMatchedCount} alternatives found</span></div>`);
 
     const contentHTML = `
         ${hero}
         <div class="container" style="padding-top: 2rem;">
-            <div id="tools" class="tools-grid" style="margin-top: 2rem;">
+            <div id="tools" ${def.curatedGroups ? '' : 'class="tools-grid"'} style="margin-top: 2rem;">
                 ${toolsHTML}
             </div>
         </div>
@@ -140,7 +173,7 @@ function buildPage(def) {
         .replace('<script src="/js/browse.js"></script>', '');
 
     fs.writeFileSync(path.join(dirPath, 'index.html'), finalHTML);
-    console.log(`[GENERATED] /alternatives/${def.slug}/ (${matchedTools.length} tools)`);
+    console.log(`[GENERATED] /alternatives/${def.slug}/ (${totalMatchedCount} tools)`);
 }
 
 fs.mkdirSync(DIST_DIR, { recursive: true });

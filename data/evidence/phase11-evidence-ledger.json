@@ -9607,9 +9607,9 @@
     "id": "cline",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://cline.bot/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Verified free open-source BYOK agent architecture (Apache 2.0) for VS Code with MCP support via official repository and site."
   },
   {
     "evidenceId": "E1069",
@@ -9625,9 +9625,9 @@
     "id": "coderabbit",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.coderabbit.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Verified pull request AI review platform with free tier for open source, $15/mo Pro tier ($12/mo billed annually at $144/year), and 14-day trial."
   },
   {
     "evidenceId": "E1071",
@@ -10426,9 +10426,9 @@
     "id": "sourcery",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.sourcery.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Verified in-editor refactoring and code quality assistant with free plan, $10/mo Pro ($8/mo billed annually at $96/year), and 14-day trial."
   },
   {
     "evidenceId": "E1160",
@@ -10462,9 +10462,9 @@
     "id": "tabby",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.tabbyml.com/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Verified self-hosted open-source code completion server (Apache 2.0) with free community deployment and optional managed cloud tier."
   },
   {
     "evidenceId": "E1164",
@@ -10570,9 +10570,9 @@
     "id": "zed",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://zed.dev/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-04",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Verified high-performance Rust GPU-accelerated code editor with free open-source core, BYOK support, and $10/mo Zed Pro hosted tier with 14-day trial."
   },
   {
     "evidenceId": "E1176",

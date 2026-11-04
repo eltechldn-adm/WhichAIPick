@@ -3,10 +3,70 @@
         "slug": "cursor",
         "targetTool": "cursor",
         "title": "Best Cursor Alternatives in 2026",
-        "metaDescription": "Compare the best alternatives to Cursor for AI coding. Evaluate BYOK, open-source, and performance-focused IDEs like Zed, Cline, and Windsurf.",
-        "intentDescription": "Cursor has revolutionized AI coding, but it's not the only option. Whether you are looking for an open-source alternative, want to use your own API keys to save costs, or simply prefer a more lightweight editor, there are powerful agentic coding alternatives available.",
+        "metaDescription": "Compare the best alternatives to Cursor for AI coding. Evaluate BYOK, open-source, and performance-focused developer tools like Zed, Cline, and GitHub Copilot.",
+        "intentDescription": "Cursor has established a major presence in AI-assisted coding, but developers increasingly seek specialized alternatives. Whether you need open-source tooling, prefer to Bring Your Own Key (BYOK) to reduce subscription overhead, require local offline model execution, or prefer an ultra-fast GPU-accelerated editor, several dedicated alternatives deliver tailored workflows.",
         "minToolsToMap": 3,
-        "searchTerms": ["code", "developer", "ide"]
+        "searchTerms": ["code", "developer", "ide"],
+        "curatedGroups": [
+            {
+                "title": "Direct Competitors (AI-Native IDEs & Editors)",
+                "description": "Standalone editors built from the ground up to integrate AI into active editing, file navigation, and project execution.",
+                "items": [
+                    {
+                        "id": "zed",
+                        "edge": "Built natively in Rust with 120 FPS GPU rendering and near-zero latency, Zed offers an ultra-fast, lightweight alternative to Cursor heavier Electron footprint, supporting multi-provider model switching (Claude, OpenAI, Ollama) and real-time multiplayer pair programming."
+                    },
+                    {
+                        "id": "replit",
+                        "edge": "Provides an all-in-one cloud workspace and integrated AI agent, enabling developers to prototype, build, and deploy full-stack applications in the browser without local development environment setup."
+                    }
+                ]
+            },
+            {
+                "title": "In-Editor Extensions & BYOK Agents",
+                "description": "Modular agents and extensions that operate inside your existing editor, allowing developers to bring their own API keys and retain existing configurations.",
+                "items": [
+                    {
+                        "id": "cline",
+                        "edge": "An autonomous in-editor agent for Visual Studio Code that executes terminal commands, performs browser-based UI testing, and integrates custom tools via the Model Context Protocol (MCP) on a 100% BYOK cost model."
+                    },
+                    {
+                        "id": "github-copilot",
+                        "edge": "The enterprise standard for multi-IDE code completion across VS Code, JetBrains, and Visual Studio, offering predictable flat-rate monthly pricing and comprehensive enterprise IP indemnification."
+                    },
+                    {
+                        "id": "aider",
+                        "edge": "A terminal-first, Git-native coding assistant that works with your local terminal and editor, automatically authoring structured Git commit messages for every multi-file change."
+                    },
+                    {
+                        "id": "continue",
+                        "edge": "An open-source extension for VS Code and JetBrains that provides inline autocomplete and chat while giving developers total freedom to connect any commercial API or local Ollama endpoint."
+                    },
+                    {
+                        "id": "tabby",
+                        "edge": "A self-hosted, open-source code completion server running on private GPU hardware, ensuring source code never leaves corporate firewalls or private networks."
+                    }
+                ]
+            },
+            {
+                "title": "Code Review & Quality Assistants",
+                "description": "Specialized automated platforms that inspect code diffs, refactor logic, and ensure production readiness before changes are merged.",
+                "items": [
+                    {
+                        "id": "coderabbit",
+                        "edge": "Automates GitHub and GitLab pull request reviews with line-by-line feedback, architectural sequence diagrams, and 1-click commit fixes before human reviewers inspect the code."
+                    },
+                    {
+                        "id": "sourcery",
+                        "edge": "Focuses on proactive in-editor AST refactoring, cyclomatic complexity reduction, and automated unit test generation to clean up existing codebases before deployment."
+                    },
+                    {
+                        "id": "bito",
+                        "edge": "A developer productivity platform offering automated code reviews, vulnerability checks, and automated documentation generation across IDE and CI/CD pipelines."
+                    }
+                ]
+            }
+        ]
     },
     {
         "slug": "perplexity-ai",

@@ -84,21 +84,49 @@ function generateBreadcrumbs(title, slug) {
 }
 
 function buildPage(def) {
-    // 1. Find relevant tools
-    let matchedTools = tools.filter(t => {
-        if (!t.primaryUseCases) return false;
-        if (t.contentReviewRequired) return false; // MUST be editorially complete
-        const uses = t.primaryUseCases.map(u => u.toLowerCase());
-        const cats = (t.category || '').toLowerCase();
-        
-        return def.searchTerms.some(term => 
-            uses.some(u => u.includes(term)) || cats.includes(term)
-        );
-    });
+    let toolsHTML = '';
+    let totalCount = 0;
 
-    if (matchedTools.length < def.minToolsToMap) {
-        console.log(`[SKIP] /best-ai-tools/${def.slug}/ - Found ${matchedTools.length} tools, needs ${def.minToolsToMap}. Deferring generation (noindex condition).`);
-        return; // Skip generation to avoid thin content
+    if (Array.isArray(def.curatedShortlist) && def.curatedShortlist.length > 0) {
+        const mappedList = def.curatedShortlist.map(item => {
+            const t = tools.find(x => x.id === item.id);
+            if (!t || t.contentReviewRequired || t.recommendationEligible === false) return null;
+            return {
+                tool: t,
+                badge: item.badge,
+                reason: item.reason
+            };
+        }).filter(Boolean);
+
+        totalCount = mappedList.length;
+
+        toolsHTML = mappedList.map(item => {
+            const context = `<strong>${item.badge}:</strong> ${item.reason}`;
+            return generateToolCard(item.tool, context);
+        }).join('');
+    } else {
+        let matchedTools = tools.filter(t => {
+            if (!t.primaryUseCases) return false;
+            if (t.contentReviewRequired) return false; // MUST be editorially complete
+            const uses = t.primaryUseCases.map(u => u.toLowerCase());
+            const cats = (t.category || '').toLowerCase();
+            
+            return def.searchTerms.some(term => 
+                uses.some(u => u.includes(term)) || cats.includes(term)
+            );
+        });
+
+        totalCount = matchedTools.length;
+
+        if (matchedTools.length < def.minToolsToMap) {
+            console.log(`[SKIP] /best-ai-tools/${def.slug}/ - Found ${matchedTools.length} tools, needs ${def.minToolsToMap}. Deferring generation (noindex condition).`);
+            return; // Skip generation to avoid thin content
+        }
+
+        toolsHTML = matchedTools.map(t => {
+            const context = `Recommended for ${def.title.replace('Best AI Tools for ', '').replace(' in 2026', '')} workflows. Highlighted use cases include ${t.primaryUseCases.slice(0,2).join(' and ')}.`;
+            return generateToolCard(t, context);
+        }).join('');
     }
 
     const dirPath = path.join(DIST_DIR, def.slug);
@@ -115,13 +143,7 @@ function buildPage(def) {
             <a href="/compare/" class="btn btn-secondary">Compare tools</a>
         </div>
         `)
-        .replace('{{STATS_BLOCK}}', `<div class="seo-hero-stats"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${matchedTools.length} verified tools</span></div>`);
-
-    // 3. Generate Tool Cards with Context
-    let toolsHTML = matchedTools.map(t => {
-        const context = `Recommended for ${def.title.replace('Best AI Tools for ', '').replace(' in 2026', '')} workflows. Highlighted use cases include ${t.primaryUseCases.slice(0,2).join(' and ')}.`;
-        return generateToolCard(t, context);
-    }).join('');
+        .replace('{{STATS_BLOCK}}', `<div class="seo-hero-stats"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ${totalCount} verified tools</span></div>`);
 
     const editorialHTML = `<div class="seo-editorial-guidance" style="margin: 4rem 0; padding: 2rem; background: var(--bg-surface); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
         <h2>How to Choose</h2>
@@ -150,7 +172,7 @@ function buildPage(def) {
         .replace('<script src="/js/browse.js"></script>', ''); // Remove standard browse logic to keep static
 
     fs.writeFileSync(path.join(dirPath, 'index.html'), finalHTML);
-    console.log(`[GENERATED] /best-ai-tools/${def.slug}/ (${matchedTools.length} tools)`);
+    console.log(`[GENERATED] /best-ai-tools/${def.slug}/ (${totalCount} tools)`);
 }
 
 // Ensure base dir exists
