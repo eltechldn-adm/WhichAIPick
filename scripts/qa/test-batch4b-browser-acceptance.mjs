@@ -137,9 +137,9 @@ const TOOLS = [
     id: 'lindy',
     name: 'Lindy',
     category: 'Automation',
-    expectedPriceSnippet: '$49.99 per active user per month',
+    expectedPriceSnippet: 'Lindy is currently presenting different Team entry offers. Its official pricing page has shown $29.99 per active user per month with 3,000 monthly credits, and $49.99 per active user per month with 5,000 monthly credits. Which offer is available can depend on the pricing version presented to the visitor. Higher published selections include $99.99 per active user per month for 15,000 credits and $199.99 for 35,000 credits. These charges apply per active user rather than to an entire workspace at a flat price. Check the offer shown during checkout before subscribing.',
     expectedSourceSummary: "Researched from Lindy's official pricing, usage, documentation and security information reviewed on 5 November 2026. No firsthand testing or productivity benchmark claimed.",
-    forbiddenPriceSnippets: ['$29.99', '3,000'],
+    forbiddenPriceSnippets: ['Paid team usage currently starts at $49.99', 'Paid usage begins with the Team plan at $29.99'],
     workflows: [
       {
         title: 'Meeting follow-up',

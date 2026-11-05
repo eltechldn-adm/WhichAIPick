@@ -417,15 +417,15 @@ export const ENRICHMENTS = {
       'Advanced computer-use functionality requires an eligible higher plan.',
       'Connecting business tools introduces permission-management and data-governance responsibilities.'
     ],
-    pricing_overview: `<p>Lindy offers a <strong>7-day free trial with $50 in introductory credits</strong>, without requiring a credit card. It does not provide an ongoing unrestricted free subscription.</p><p>Paid team usage currently starts at <strong>$49.99 per active user per month</strong>, with 5,000 monthly credits per active seat. Higher published selections include <strong>$99.99 per user per month for 15,000 credits</strong> and <strong>$199.99 per user per month for 35,000 credits</strong>. Higher-volume and Enterprise arrangements are available. The listed amounts are per active user, not the total bill for a multi-user team.</p><p>Credits from active seats are pooled within the workspace. Monthly subscription credits do <strong>not</strong> roll over, while separately purchased top-up credits remain available until used. Top-ups are advertised at <strong>$10 per 1,000 credits</strong>.</p><p>A key billing consideration is that colleagues who actively use Lindy through shared Slack interactions can become billable seats after their introductory trial. Administrators should manage memberships and credit limits carefully.</p><p>Lindy states that credit-consuming work pauses when the available pool is depleted, helping avoid uncontrolled usage charges. Phone-related features may have additional credit and number costs.</p>`,
+    pricing_overview: `<p>Lindy offers a <strong>7-day free trial with $50 in introductory credits</strong>, without requiring a credit card. It does not provide an ongoing unrestricted free subscription.</p><p>Lindy is currently presenting different Team entry offers. Its official pricing page has shown <strong>$29.99 per active user per month</strong> with 3,000 monthly credits, and <strong>$49.99 per active user per month</strong> with 5,000 monthly credits. Which offer is available can depend on the pricing version presented to the visitor. Higher published selections include <strong>$99.99 per active user per month for 15,000 credits</strong> and <strong>$199.99 for 35,000 credits</strong>. These charges apply per active user rather than to an entire workspace at a flat price. Check the offer shown during checkout before subscribing.</p><p>Credits from active seats are pooled within the workspace. Monthly subscription credits do <strong>not</strong> roll over, while separately purchased top-up credits remain available until used. Top-ups are advertised at <strong>$10 per 1,000 credits</strong>.</p><p>A key billing consideration is that colleagues who actively use Lindy through shared Slack interactions can become billable seats after their introductory trial. Administrators should manage memberships and credit limits carefully.</p><p>Lindy states that credit-consuming work pauses when the available pool is depleted, helping avoid uncontrolled usage charges. Phone-related features may have additional credit and number costs.</p>`,
     comparison_summary: `<p>Choose <strong>Lindy</strong> when the goal is to use an AI assistant across email, meetings, Slack and connected business applications.</p><p>Consider <strong>Zapier</strong> or <strong>Make</strong> when predictable trigger-and-action workflows are more important than conversational assistance. Consider <strong>Relay.app</strong> or <strong>Gumloop</strong> when you prefer a structured automation builder for specific processes.</p><p>Lindy makes the most sense where the value of contextual assistance and saved administrative work justifies the ongoing seat and credit costs.</p>`,
     pricingModel: 'paid',
     hasFreeTier: false,
     hasFreeTrial: true,
-    startingPrice: 49.99,
+    startingPrice: null,
     priceCurrency: 'USD',
     billingPeriod: 'month',
-    startingPlan: 'Team',
+    startingPlan: null,
     trialDays: 7,
     apiAvailable: false,
     platforms: ['web'],
@@ -467,21 +467,21 @@ const EVIDENCE_BY_ID = {
     fieldScope: '["pricingModel", "hasFreeTier", "startingPrice", "priceCurrency", "billingPeriod", "startingPlan", "freeTierScope", "pricingScope", "bestFor", "notIdealFor", "sourceSummary", "long_description", "shortDescription"]',
     method: 'official_source_review',
     reviewedAt: '2026-11-05',
-    finding: 'Official subscription help documentation reviewed 05 November 2026: Free tier confirmed to grant 60-200 introductory lifetime credits with no recurring monthly generative AI credit allowance; Android-only restriction on $4.99/mo Lite tier verified.'
+    finding: 'Official subscription help documentation (https://captions.ai/help/docs/subscriptions) reviewed 05 November 2026: Free tier confirmed to grant 60-200 introductory lifetime credits with no recurring monthly generative AI credit allowance; Android-only restriction on $4.99/mo Lite tier and Basic ($9.99/mo, 200 monthly credits, formerly Pro) verified.'
   },
   E0474: {
     sourceURL: 'https://captions.ai/help/docs/api/pricing',
     fieldScope: '["platforms", "apiAvailable", "pricingScope", "capabilityScope", "sourceSummary", "long_description", "shortDescription"]',
     method: 'official_source_review',
     reviewedAt: '2026-11-05',
-    finding: 'Official Mirage API documentation and API pricing reviewed 05 November 2026: separately billed developer API confirmed at $0.15/minute for AI Twin & Video Captioning (1-minute minimum) and $0.15/second for Avatar X generation (5-second minimum).'
+    finding: 'Official Mirage API pricing documentation (https://captions.ai/help/docs/api/pricing) reviewed 05 November 2026: separately billed usage-based developer API confirmed at $0.15/minute for Video Captions (input video duration rounded up to a full minute) and $0.15/second for Avatar X video generation (generated video duration rounded up to 6-second increments). Legacy help.mirage.app and help.captions.ai Intercom article URLs verified obsolete (HTTP 404).'
   },
   E0475: {
     sourceURL: 'https://mirage.app/legal/privacy-policy',
     fieldScope: '["canonicalName", "website_url", "operationalStatus", "sourceSummary", "capabilityScope", "long_description", "shortDescription"]',
     method: 'official_source_review',
     reviewedAt: '2026-11-05',
-    finding: 'Official Mirage privacy policy and product pages reviewed 05 November 2026: Captions product active under parent company Mirage (Captions LLC, d/b/a Mirage) with voice/likeness processing disclosures verified.'
+    finding: 'Official Mirage privacy policy (https://mirage.app/legal/privacy-policy) and product pages reviewed 05 November 2026: Captions product active under parent company Mirage (Captions LLC, d/b/a Mirage) with voice/likeness processing disclosures verified.'
   },
   E0476: {
     sourceURL: 'https://www.cartesia.ai/pricing',
@@ -509,7 +509,7 @@ const EVIDENCE_BY_ID = {
     fieldScope: '["targetUsers", "pricingModel", "hasFreeTier", "hasFreeTrial", "paidPlanAvailable", "startingPrice", "priceCurrency", "billingPeriod", "startingPlan", "trialDays", "platforms", "apiAvailable", "deploymentModes", "bestFor", "notIdealFor", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "pricingScope", "capabilityScope", "primaryCategory", "primaryUseCases", "long_description", "shortDescription"]',
     method: 'official_source_review',
     reviewedAt: '2026-11-05',
-    finding: 'Official pricing page and billing docs reviewed 05 November 2026: 7-day free trial with $50 introductory credits verified; live server-side experiment (plus-49-packaging) confirmed serving Team starting at $49.99/active user/month for 5,000 monthly credits on arm v2, with higher options at $99.99/user/mo (15,000 credits) and $199.99/user/mo (35,000 credits), pooled workspace credits, non-rollover monthly credits, $10/1,000 top-up credits and chargeable Slack active seats after 7-day trial.'
+    finding: 'Official pricing page and billing docs reviewed 05 November 2026: 7-day free trial with $50 introductory credits verified; active server-side pricing experiment (experimentKey: plus-49-packaging) confirmed presenting two different entry offers on https://www.lindy.ai/pricing ($29.99/active user/month for 3,000 monthly credits on control arm vs $49.99/active user/month for 5,000 monthly credits on v2 arm), with higher selections at $99.99/active user/month (15,000 credits) and $199.99/active user/month (35,000 credits), pooled workspace credits, non-rollover monthly credits, $10/1,000 top-up credits and chargeable Slack active seats after 7-day trial. Structured startingPrice and startingPlan set to null while dual public entry offers remain active.'
   }
 };
 

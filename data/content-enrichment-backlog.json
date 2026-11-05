@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T22:22:20.152Z",
+  "generatedAt": "2026-11-05T22:47:38.496Z",
   "description": "Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.",
   "baselineReconciliation": {
     "historicalSkeletalBaseline": 575,
@@ -3892,7 +3892,7 @@
         "pricingModel": "paid",
         "hasFreeTier": false,
         "hasFreeTrial": true,
-        "startingPrice": 49.99,
+        "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",

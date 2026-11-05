@@ -4254,7 +4254,7 @@
     "sourceURL": "https://captions.ai/help/docs/subscriptions",
     "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official subscription help documentation reviewed 05 November 2026: Free tier confirmed to grant 60-200 introductory lifetime credits with no recurring monthly generative AI credit allowance; Android-only restriction on $4.99/mo Lite tier verified."
+    "finding": "Official subscription help documentation (https://captions.ai/help/docs/subscriptions) reviewed 05 November 2026: Free tier confirmed to grant 60-200 introductory lifetime credits with no recurring monthly generative AI credit allowance; Android-only restriction on $4.99/mo Lite tier and Basic ($9.99/mo, 200 monthly credits, formerly Pro) verified."
   },
   {
     "evidenceId": "E0474",
@@ -4263,7 +4263,7 @@
     "sourceURL": "https://captions.ai/help/docs/api/pricing",
     "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official Mirage API documentation and API pricing reviewed 05 November 2026: separately billed developer API confirmed at $0.15/minute for AI Twin & Video Captioning (1-minute minimum) and $0.15/second for Avatar X generation (5-second minimum)."
+    "finding": "Official Mirage API pricing documentation (https://captions.ai/help/docs/api/pricing) reviewed 05 November 2026: separately billed usage-based developer API confirmed at $0.15/minute for Video Captions (input video duration rounded up to a full minute) and $0.15/second for Avatar X video generation (generated video duration rounded up to 6-second increments). Legacy help.mirage.app and help.captions.ai Intercom article URLs verified obsolete (HTTP 404)."
   },
   {
     "evidenceId": "E0475",
@@ -4272,7 +4272,7 @@
     "sourceURL": "https://mirage.app/legal/privacy-policy",
     "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official Mirage privacy policy and product pages reviewed 05 November 2026: Captions product active under parent company Mirage (Captions LLC, d/b/a Mirage) with voice/likeness processing disclosures verified."
+    "finding": "Official Mirage privacy policy (https://mirage.app/legal/privacy-policy) and product pages reviewed 05 November 2026: Captions product active under parent company Mirage (Captions LLC, d/b/a Mirage) with voice/likeness processing disclosures verified."
   },
   {
     "evidenceId": "E0476",
@@ -7818,7 +7818,7 @@
     "sourceURL": "https://www.lindy.ai/pricing",
     "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing page and billing docs reviewed 05 November 2026: 7-day free trial with $50 introductory credits verified; live server-side experiment (plus-49-packaging) confirmed serving Team starting at $49.99/active user/month for 5,000 monthly credits on arm v2, with higher options at $99.99/user/mo (15,000 credits) and $199.99/user/mo (35,000 credits), pooled workspace credits, non-rollover monthly credits, $10/1,000 top-up credits and chargeable Slack active seats after 7-day trial."
+    "finding": "Official pricing page and billing docs reviewed 05 November 2026: 7-day free trial with $50 introductory credits verified; active server-side pricing experiment (experimentKey: plus-49-packaging) confirmed presenting two different entry offers on https://www.lindy.ai/pricing ($29.99/active user/month for 3,000 monthly credits on control arm vs $49.99/active user/month for 5,000 monthly credits on v2 arm), with higher selections at $99.99/active user/month (15,000 credits) and $199.99/active user/month (35,000 credits), pooled workspace credits, non-rollover monthly credits, $10/1,000 top-up credits and chargeable Slack active seats after 7-day trial. Structured startingPrice and startingPlan set to null while dual public entry offers remain active."
   },
   {
     "evidenceId": "E0870",
