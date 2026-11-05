@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T22:31:41.912Z",
+  "generatedAt": "2026-11-05T17:56:25.072Z",
   "description": "Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.",
   "baselineReconciliation": {
     "historicalSkeletalBaseline": 575,
@@ -4508,7 +4508,7 @@
         "category": "Content Creation",
         "pricingModel": "freemium",
         "hasFreeTier": true,
-        "hasFreeTrial": true,
+        "hasFreeTrial": false,
         "startingPrice": 12,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,

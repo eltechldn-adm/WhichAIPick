@@ -30,11 +30,41 @@ function createStaticServer(root) {
 }
 
 const TOOLS = [
-  { id: 'deepl', name: 'DeepL', category: 'Productivity', expectedPriceSnippet: '$8.74/month' },
-  { id: 'languagetool', name: 'LanguageTool', category: 'Content Creation', expectedPriceSnippet: 'LanguageTool offers a free service and paid Premium' },
-  { id: 'paperpal', name: 'Paperpal', category: 'Content Creation', expectedPriceSnippet: 'Prime at $12/month' },
-  { id: 'askyourpdf', name: 'AskYourPDF', category: 'Research', expectedPriceSnippet: '$11.99/month' },
-  { id: 'nanonets', name: 'Nanonets', category: 'Automation', expectedPriceSnippet: '$100/month for 100 credits' }
+  {
+    id: 'deepl',
+    name: 'DeepL',
+    category: 'Productivity',
+    expectedPriceSnippet: '$8.74/month',
+    workflows: ['Customer support', 'Document localisation', 'Software localisation']
+  },
+  {
+    id: 'languagetool',
+    name: 'LanguageTool',
+    category: 'Content Creation',
+    expectedPriceSnippet: 'LanguageTool offers a free service and paid Premium',
+    workflows: ['Multilingual emails', 'Team documentation', 'Local technical writing']
+  },
+  {
+    id: 'paperpal',
+    name: 'Paperpal',
+    category: 'Content Creation',
+    expectedPriceSnippet: 'Prime at $12/month',
+    workflows: ['Manuscript editing', 'Thesis preparation', 'Pre-submission review']
+  },
+  {
+    id: 'askyourpdf',
+    name: 'AskYourPDF',
+    category: 'Research',
+    expectedPriceSnippet: '$11.99/month',
+    workflows: ['Research literature', 'Technical documentation', 'Financial reports']
+  },
+  {
+    id: 'nanonets',
+    name: 'Nanonets',
+    category: 'Automation',
+    expectedPriceSnippet: '$100/month for 100 credits',
+    workflows: ['Invoice processing', 'Logistics records', 'Operations automation']
+  }
 ];
 
 async function run() {
@@ -115,8 +145,19 @@ async function run() {
       assert(pricingBody.includes(tool.expectedPriceSnippet), `Pricing body contains expected snippet ("${tool.expectedPriceSnippet}")`);
 
       // Check Workflows Visibility in Public DOM
-      const workflowsHeading = await pageDesktop.locator('h2:text("Practical Workflows"), h3:text("Practical Workflows")').count();
-      console.log(`  ℹ️ WORKFLOWS STATUS: Practical Workflows heading in rendered HTML = ${workflowsHeading > 0 ? 'VISIBLE' : 'NOT RENDERED (Template Limitation)'}`);
+      const workflowsH2 = await pageDesktop.locator('h2:text("Practical Workflows")').count();
+      assert(workflowsH2 === 1, `Practical Workflows h2 heading present on ${tool.id} (actual=${workflowsH2})`);
+
+      const workflowList = await pageDesktop.locator('ol.tool-workflow-list');
+      assert((await workflowList.count()) === 1, `Semantic <ol class="tool-workflow-list"> element present on ${tool.id}`);
+
+      const workflowItems = await pageDesktop.locator('ol.tool-workflow-list li').count();
+      assert(workflowItems === 3, `Exactly 3 workflow items in ol.tool-workflow-list on ${tool.id} (actual=${workflowItems})`);
+
+      for (const expectedTitle of tool.workflows) {
+        const titleMatch = await pageDesktop.locator(`ol.tool-workflow-list li strong:text("${expectedTitle}:")`).count();
+        assert(titleMatch === 1, `Workflow title "${expectedTitle}:" rendered inside strong tag on ${tool.id}`);
+      }
 
       // Check Nested Paragraph Defect
       const nestedP = await pageDesktop.locator('p p').count();

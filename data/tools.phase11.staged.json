@@ -203817,7 +203817,7 @@
     "targetUserDetails": "[\"researchers\",\"graduate students\"]",
     "pricingModel": "freemium",
     "hasFreeTier": true,
-    "hasFreeTrial": true,
+    "hasFreeTrial": false,
     "experienceLevel": "beginner",
     "platforms": [
       "web",

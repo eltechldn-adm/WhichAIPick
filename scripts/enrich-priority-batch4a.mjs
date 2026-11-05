@@ -269,7 +269,7 @@ export const ENRICHMENTS = {
     comparison_summary: `<p><strong>Choose Paperpal</strong> when academic phrasing, research-document editing and similarity checking are central to your workflow.</p><p><strong>Consider Grammarly</strong> if you mainly need a broader everyday writing assistant.</p><p><strong>Consider QuillBot</strong> when paraphrasing and rewriting are more important than specialised manuscript preparation.</p><p>Paperpal is most valuable as an aid to academic authors who retain responsibility for their evidence, citations and final wording.</p>`,
     pricingModel: 'freemium',
     hasFreeTier: true,
-    hasFreeTrial: true,
+    hasFreeTrial: false,
     startingPrice: 12,
     priceCurrency: 'USD',
     billingPeriod: 'month',

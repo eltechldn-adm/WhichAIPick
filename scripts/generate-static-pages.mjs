@@ -260,6 +260,30 @@ function buildToolPage(tool) {
       </div>`
     : '';
 
+  // Practical workflows (Batch 4A approved cohort)
+  const BATCH4A_WORKFLOW_TARGETS = new Set([
+    'deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets'
+  ]);
+
+  let workflowsHtml = '';
+  if (BATCH4A_WORKFLOW_TARGETS.has(slug) && Array.isArray(tool.workflows) && tool.workflows.length > 0) {
+    const listItems = tool.workflows.map(w => {
+      const title = escAttr(w.title || '').trim();
+      const desc = escAttr(w.description || '').trim();
+      if (!title && !desc) return '';
+      return `<li><strong>${title}:</strong> ${desc}</li>`;
+    }).filter(Boolean).join('\n            ');
+
+    if (listItems) {
+      workflowsHtml = `<div class="tool-section">
+          <h2>Practical Workflows</h2>
+          <ol class="tool-workflow-list">
+            ${listItems}
+          </ol>
+        </div>`;
+    }
+  }
+
   // How it works
   const howHtml = tool.how_it_works
     ? `<div class="tool-section">
@@ -427,7 +451,10 @@ function buildToolPage(tool) {
           ${featuresHtml}
         </div>` : ''}
 
-        <!-- Strengths & Limitations -->
+        ${workflowsHtml ? `<!-- Practical Workflows -->
+        ${workflowsHtml}
+
+        ` : ''}<!-- Strengths & Limitations -->
         ${(prosList || consList) ? `<div class="tool-section">
           <h2>Strengths & Limitations</h2>
           <div class="tool-pros-cons">
