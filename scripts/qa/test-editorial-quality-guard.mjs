@@ -33,7 +33,9 @@ const allToolIds = new Set(tools.map(t => t.id));
 
 const BATCH1 = ['ollama', 'recraft', 'upscayl', 'docsbot', 'macwhisper', 'sitegpt', 'novelcrafter'];
 const BATCH2 = ['browse-ai', 'chatpdf', 'capacities', 'diffit', 'cleanvoice', 'anythingllm', 'flair-ai'];
-const ALL_14_IDS = [...BATCH1, ...BATCH2];
+const BATCH4A = ['deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets'];
+const BATCH4B = ['castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'];
+const ALL_24_IDS = [...BATCH1, ...BATCH2, ...BATCH4A, ...BATCH4B];
 
 console.log('======================================================');
 console.log('WHICHAIPICK EDITORIAL QUALITY GUARD TEST SUITE');
@@ -47,10 +49,10 @@ function pass(msg) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PART 1: POSITIVE FIXTURES (All 14 enriched tools must pass 100%)
+// PART 1: POSITIVE FIXTURES (All 24 enriched tools must pass 100%)
 // ─────────────────────────────────────────────────────────────────────────────
-console.log('--- PART 1: Clean Positive Fixtures (14 Tools) ---');
-for (const id of ALL_14_IDS) {
+console.log('--- PART 1: Clean Positive Fixtures (24 Tools) ---');
+for (const id of ALL_24_IDS) {
   const tool = tools.find(t => t.id === id);
   assert(tool, `Tool ${id} must exist in catalogue`);
   const report = auditToolProfile(tool, { ledger, allToolIds, root: ROOT, checkStaticHtml: true });
@@ -105,13 +107,66 @@ function cloneTool(id) {
   pass('Defect detected: Contradictory paid-only claim on free tier (B_CONTRADICTORY_PAID_ONLY)');
 }
 
-// Test 5: Ambiguous bare price without billing frequency
+// Test 5: Ambiguous bare price without billing frequency (including disconnected 'allowance' later in sentence)
 {
   const fixture = cloneTool('browse-ai');
   fixture.pricing_overview = '<p>The Pro subscription costs $99 directly.</p>';
   const issues = checkMonthlyVsAnnualPricing(fixture);
   assert(issues.some(i => i.code === 'C_AMBIGUOUS_BILLING_PERIOD'), 'Should detect bare price without billing period');
   pass('Defect detected: Bare price lacking frequency (C_AMBIGUOUS_BILLING_PERIOD)');
+
+  const fixtureAllowance = cloneTool('browse-ai');
+  fixtureAllowance.pricing_overview = '<p>Paid plans start at $29 with a generous usage allowance for teams.</p>';
+  const issuesAllowance = checkMonthlyVsAnnualPricing(fixtureAllowance);
+  assert(issuesAllowance.some(i => i.code === 'C_AMBIGUOUS_BILLING_PERIOD'), 'Should detect bare price even when "allowance" appears later in sentence');
+  pass('Defect detected: Bare price "$29 with a generous usage allowance" rejected (C_AMBIGUOUS_BILLING_PERIOD)');
+}
+
+// Test 5b: Per-minute rate falsely labelled as a monthly subscription
+{
+  const fixtureStructured = cloneTool('bland-ai');
+  fixtureStructured.startingPrice = 0.14;
+  fixtureStructured.billingPeriod = 'month';
+  fixtureStructured.pricing_overview = '<p>Connected calls cost $0.14 per minute with pro-rata per-second billing.</p>';
+  const issuesStructured = checkCurrencyAndBillingFrequency(fixtureStructured);
+  assert(issuesStructured.some(i => i.code === 'D_METERED_RATE_MISLABELLED_MONTHLY'), 'Should detect metered per-minute rate stored with billingPeriod=month');
+  pass('Defect detected: Per-minute rate stored as monthly subscription (D_METERED_RATE_MISLABELLED_MONTHLY)');
+
+  const fixtureProse = cloneTool('bland-ai');
+  fixtureProse.pricing_overview = '<p>Connected voice calls cost $0.14 per minute per month on the standard plan.</p>';
+  const issuesProse = checkMonthlyVsAnnualPricing(fixtureProse);
+  assert(issuesProse.some(i => i.code === 'C_CONTRADICTORY_PRICE_UNIT'), 'Should detect contradictory per-minute + per-month unit on same price');
+  pass('Defect detected: Per-minute rate falsely labelled as monthly in prose (C_CONTRADICTORY_PRICE_UNIT)');
+}
+
+// Test 5c: Annual rate described as monthly with no billing caveat
+{
+  const fixtureAnnual = cloneTool('paperpal');
+  fixtureAnnual.billingPeriod = 'month_billed_annually';
+  fixtureAnnual.pricing_overview = '<p>Paperpal Prime costs $12/month for full access to grammar and editing tools.</p>';
+  const issuesAnnual = checkMonthlyVsAnnualPricing(fixtureAnnual);
+  assert(issuesAnnual.some(i => i.code === 'C_MISSING_ANNUAL_BILLING_CAVEAT'), 'Should detect month_billed_annually without annual caveat in prose');
+  pass('Defect detected: Annual rate described as monthly without annual billing caveat (C_MISSING_ANNUAL_BILLING_CAVEAT)');
+}
+
+// Test 5d: $0 platform fee presented as unlimited free calling
+{
+  const fixtureZeroFee = cloneTool('bland-ai');
+  fixtureZeroFee.hasFreeTier = false;
+  fixtureZeroFee.hasFreeTrial = null;
+  fixtureZeroFee.pricing_overview = '<p>The Start plan has a $0 monthly platform fee with unlimited free calling for all teams.</p>';
+  const issuesZeroFee = checkFreeTierVsTrial(fixtureZeroFee);
+  assert(issuesZeroFee.some(i => i.code === 'B_FALSE_UNLIMITED_FREE_CLAIM'), 'Should detect $0 platform fee falsely presented as unlimited free calling');
+  pass('Defect detected: $0 platform fee presented as unlimited free calling (B_FALSE_UNLIMITED_FREE_CLAIM)');
+}
+
+// Test 5e: Per-user charge described as whole-workspace cost
+{
+  const fixtureSeat = cloneTool('lindy');
+  fixtureSeat.pricing_overview = '<p>Paid usage begins with the Team plan at $49.99 per active user per month, which is a flat rate for the entire workspace.</p>';
+  const issuesSeat = checkMonthlyVsAnnualPricing(fixtureSeat);
+  assert(issuesSeat.some(i => i.code === 'C_CONTRADICTORY_SEAT_BILLING'), 'Should detect per-user charge described as whole-workspace flat cost');
+  pass('Defect detected: Per-user charge described as whole-workspace cost (C_CONTRADICTORY_SEAT_BILLING)');
 }
 
 // Test 6: Invalid currency code

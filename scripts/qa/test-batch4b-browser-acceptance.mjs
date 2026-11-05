@@ -34,6 +34,7 @@ const TOOLS = [
     name: 'Castmagic',
     category: 'Video & Audio',
     expectedPriceSnippet: 'library totals, not monthly allowances',
+    expectedSourceSummary: "Source-researched from Castmagic's official product, pricing and privacy documentation on 5 November 2026; no firsthand testing claimed.",
     workflows: [
       {
         title: 'Podcast publishing',
@@ -59,6 +60,7 @@ const TOOLS = [
     name: 'Captions',
     category: 'Video & Audio',
     expectedPriceSnippet: 'Lite costs $4.99/month and works only on Android.',
+    expectedSourceSummary: 'Based on published Captions and Mirage product, subscription, API and privacy information reviewed on 5 November 2026; no firsthand testing claimed.',
     workflows: [
       {
         title: 'Short-form video editing',
@@ -84,6 +86,7 @@ const TOOLS = [
     name: 'Cartesia',
     category: 'Video & Audio',
     expectedPriceSnippet: 'promotional Managed Agents rate of $0.03 per minute through 31 December 2026',
+    expectedSourceSummary: "Researched from Cartesia's official pricing, product and developer documentation on 5 November 2026. Promotional rates and vendor-reported technical capabilities require rechecking over time.",
     workflows: [
       {
         title: 'Voice-enabled application',
@@ -109,6 +112,7 @@ const TOOLS = [
     name: 'Bland AI',
     category: 'Automation',
     expectedPriceSnippet: 'Start plan has a $0 monthly platform fee, but this does not mean unlimited free usage.',
+    expectedSourceSummary: "Based on Bland AI's official pricing and developer documentation reviewed on 5 November 2026. No claims of tested call quality or measured latency are made.",
     workflows: [
       {
         title: 'Customer enquiry routing',
@@ -133,7 +137,9 @@ const TOOLS = [
     id: 'lindy',
     name: 'Lindy',
     category: 'Automation',
-    expectedPriceSnippet: '$29.99 per active user per month',
+    expectedPriceSnippet: '$49.99 per active user per month',
+    expectedSourceSummary: "Researched from Lindy's official pricing, usage, documentation and security information reviewed on 5 November 2026. No firsthand testing or productivity benchmark claimed.",
+    forbiddenPriceSnippets: ['$29.99', '3,000'],
     workflows: [
       {
         title: 'Meeting follow-up',
@@ -246,6 +252,18 @@ async function run() {
       // Check Pricing Narrative Content
       const pricingBody = await pageDesktop.locator('.tool-section:has(h2:text("Pricing"))').textContent();
       assert(pricingBody.includes(tool.expectedPriceSnippet), `Pricing body contains expected snippet ("${tool.expectedPriceSnippet}")`);
+      if (tool.forbiddenPriceSnippets) {
+        const fullBodyText = await pageDesktop.locator('body').textContent();
+        for (const forbidden of tool.forbiddenPriceSnippets) {
+          assert(!fullBodyText.includes(forbidden), `Page body does NOT contain stale snippet "${forbidden}" on ${tool.id}`);
+        }
+      }
+
+      // Check Editorial Transparency (sourceSummary) Visible in Public DOM
+      const sourceSummaryLocator = pageDesktop.locator('.tool-source-summary');
+      assert((await sourceSummaryLocator.count()) === 1, `Editorial transparency .tool-source-summary element present on ${tool.id}`);
+      const sourceSummaryText = (await sourceSummaryLocator.textContent()).trim();
+      assert(sourceSummaryText === tool.expectedSourceSummary, `Editorial transparency text matches "${tool.expectedSourceSummary}" on ${tool.id}`);
 
       // Check Workflows Visibility in Public DOM (all 3 titles + full descriptions)
       const workflowList = await pageDesktop.locator('ol.tool-workflow-list');

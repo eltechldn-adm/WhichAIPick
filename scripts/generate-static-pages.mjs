@@ -265,6 +265,12 @@ function buildToolPage(tool) {
     'deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets',
     'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'
   ]);
+  const BATCH4B_TRANSPARENCY_TARGETS = new Set([
+    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'
+  ]);
+  const transparencyHtml = (BATCH4B_TRANSPARENCY_TARGETS.has(slug) && tool.sourceSummary)
+    ? `\n            <p class="tool-source-summary" style="margin-top: 0.5rem;">${escAttr(tool.sourceSummary)}</p>`
+    : '';
 
   let workflowsHtml = '';
   if (BATCH4A_WORKFLOW_TARGETS.has(slug) && Array.isArray(tool.workflows) && tool.workflows.length > 0) {
@@ -425,7 +431,7 @@ function buildToolPage(tool) {
             <a href="/compare#tools=${escAttr(slug)}" class="btn btn-secondary btn-lg tool-compare-cta">Compare ${escAttr(name)}</a>
           </div>
           <div class="tool-editorial-links text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--c-text-muted);">
-            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>
+            <p>Our tools are evaluated against our <a href="/review-methodology.html" style="color: var(--c-accent); text-decoration: underline;">Scoring Methodology</a>. <br>Spot an error? <a href="/corrections-policy.html" style="color: var(--c-accent); text-decoration: underline;">Request a Correction</a>.</p>${transparencyHtml}
           </div>
         </div>
 

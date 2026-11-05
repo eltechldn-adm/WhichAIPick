@@ -417,15 +417,15 @@ export const ENRICHMENTS = {
       'Advanced computer-use functionality requires an eligible higher plan.',
       'Connecting business tools introduces permission-management and data-governance responsibilities.'
     ],
-    pricing_overview: `<p>Lindy offers a <strong>7-day free trial with $50 in introductory credits</strong>, without requiring a credit card. It does not provide an ongoing unrestricted free subscription.</p><p>Paid team usage starts at <strong>$29.99 per active user per month</strong>, including 3,000 monthly credits per seat. Larger credit allocations are available, including published options at <strong>$99.99/month for 15,000 credits</strong> and <strong>$199.99/month for 35,000 credits</strong>, with higher-volume and Enterprise arrangements.</p><p>Credits from active seats are pooled within the workspace. Monthly subscription credits do <strong>not</strong> roll over, while separately purchased top-up credits remain available until used. Top-ups are advertised at <strong>$10 per 1,000 credits</strong>.</p><p>A key billing consideration is that colleagues who actively use Lindy through shared Slack interactions can become billable seats after their introductory trial. Administrators should manage memberships and credit limits carefully.</p><p>Lindy states that credit-consuming work pauses when the available pool is depleted, helping avoid uncontrolled usage charges. Phone-related features may have additional credit and number costs.</p>`,
+    pricing_overview: `<p>Lindy offers a <strong>7-day free trial with $50 in introductory credits</strong>, without requiring a credit card. It does not provide an ongoing unrestricted free subscription.</p><p>Paid team usage currently starts at <strong>$49.99 per active user per month</strong>, with 5,000 monthly credits per active seat. Higher published selections include <strong>$99.99 per user per month for 15,000 credits</strong> and <strong>$199.99 per user per month for 35,000 credits</strong>. Higher-volume and Enterprise arrangements are available. The listed amounts are per active user, not the total bill for a multi-user team.</p><p>Credits from active seats are pooled within the workspace. Monthly subscription credits do <strong>not</strong> roll over, while separately purchased top-up credits remain available until used. Top-ups are advertised at <strong>$10 per 1,000 credits</strong>.</p><p>A key billing consideration is that colleagues who actively use Lindy through shared Slack interactions can become billable seats after their introductory trial. Administrators should manage memberships and credit limits carefully.</p><p>Lindy states that credit-consuming work pauses when the available pool is depleted, helping avoid uncontrolled usage charges. Phone-related features may have additional credit and number costs.</p>`,
     comparison_summary: `<p>Choose <strong>Lindy</strong> when the goal is to use an AI assistant across email, meetings, Slack and connected business applications.</p><p>Consider <strong>Zapier</strong> or <strong>Make</strong> when predictable trigger-and-action workflows are more important than conversational assistance. Consider <strong>Relay.app</strong> or <strong>Gumloop</strong> when you prefer a structured automation builder for specific processes.</p><p>Lindy makes the most sense where the value of contextual assistance and saved administrative work justifies the ongoing seat and credit costs.</p>`,
     pricingModel: 'paid',
     hasFreeTier: false,
     hasFreeTrial: true,
-    startingPrice: 29.99,
+    startingPrice: 49.99,
     priceCurrency: 'USD',
     billingPeriod: 'month',
-    startingPlan: 'Plus',
+    startingPlan: 'Team',
     trialDays: 7,
     apiAvailable: false,
     platforms: ['web'],
@@ -440,12 +440,77 @@ export const ENRICHMENTS = {
   }
 };
 
-const FINDINGS = {
-  castmagic: 'Official product, pricing ($29/mo or $239/yr Hobby; $69/mo or $579/yr Starter; $199/mo or $1,669/yr Team) and privacy/terms documentation reviewed 05 November 2026; non-renewing library transcription hour allowances (30/100/400 hours) and API plan eligibility caveats verified.',
-  captions: 'Official Captions and Mirage product, subscription (Free introductory credits; $4.99/mo Android-only Lite; $9.99/mo Basic; $24.99/mo Max; $69.99/mo Frontier), API pricing ($0.15/min captioning, $0.15/sec Avatar X) and privacy documentation reviewed 05 November 2026.',
-  cartesia: 'Official pricing ($0/mo non-commercial Free; $5/mo Pro; $49/mo Startup; $299/mo Scale), developer docs and Managed Agents promotional rate ($0.03/min through 31 December 2026, normally $0.06/min; plus telephony and LLM usage) reviewed 05 November 2026.',
-  'bland-ai': 'Official pricing (Start $0 platform fee + $0.14/min connected + $0.05/min transfer; Build $299/mo + $0.12/min + $0.04/min; Scale $499/mo + $0.11/min + $0.03/min), REST API and enterprise infrastructure documentation reviewed 05 November 2026.',
-  lindy: 'Official pricing (7-day trial with $50 credits; $29.99/active user/month Plus with 3,000 non-rollover monthly credits; $99.99/mo for 15,000; $199.99/mo for 35,000; $10 per 1,000 top-up credits), usage and security documentation reviewed 05 November 2026.'
+const EVIDENCE_BY_ID = {
+  E0478: {
+    sourceURL: 'https://www.castmagic.io/pricing',
+    fieldScope: '["targetUsers", "pricingModel", "hasFreeTier", "hasFreeTrial", "paidPlanAvailable", "platforms", "apiAvailable", "licenseType", "deploymentModes", "bestFor", "notIdealFor", "recurringFreeIntentIds", "finderIntentIds", "freeAccessType", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "pricingScope", "freeTierScope", "capabilityScope", "audienceTags", "primaryCategory", "primaryUseCases", "targetUserDetails", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official pricing page reviewed 05 November 2026: Hobby ($29/mo or $239/yr, 30 library hours), Starter ($69/mo or $579/yr, 100 library hours), Team ($199/mo or $1,669/yr for 5 seats, 400 library hours) and Business & Scale confirmed; included transcription hours verified as non-renewing library totals rather than monthly allowances, and annual plan headline monthly equivalents ($19/$48/$139) verified as rounded down.'
+  },
+  E0479: {
+    sourceURL: 'https://www.castmagic.io/privacy',
+    fieldScope: '["targetUsers", "deploymentModes", "bestFor", "notIdealFor", "recurringFreeIntentIds", "finderIntentIds", "freeAccessType", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "capabilityScope", "audienceTags", "primaryCategory", "primaryUseCases", "targetUserDetails", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official product homepage, privacy policy and terms reviewed 05 November 2026: post-recording content repurposing workspace (60+ languages, Magic Chat, Spaces, clips/audiograms) and API eligibility caveats between feature table and FAQ verified.'
+  },
+  E0472: {
+    sourceURL: 'https://captions.ai/pricing',
+    fieldScope: '["targetUsers", "pricingModel", "hasFreeTier", "paidPlanAvailable", "platforms", "apiAvailable", "licenseType", "deploymentModes", "bestFor", "notIdealFor", "recurringFreeIntentIds", "finderIntentIds", "freeAccessType", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "pricingScope", "startingPrice", "priceCurrency", "billingPeriod", "startingPlan", "freeTierScope", "capabilityScope", "audienceTags", "primaryCategory", "primaryUseCases", "targetUserDetails", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official pricing page reviewed 05 November 2026: Lite ($4.99/mo Android-only), Basic ($9.99/mo, 200 monthly credits), Max ($24.99/mo, 500 monthly credits, AI Edit/Clips/AI Twin) and Frontier ($69.99/mo for 1,400 credits, plus 2,800 and 5,600 credit tiers) verified.'
+  },
+  E0473: {
+    sourceURL: 'https://captions.ai/help/docs/subscriptions',
+    fieldScope: '["pricingModel", "hasFreeTier", "startingPrice", "priceCurrency", "billingPeriod", "startingPlan", "freeTierScope", "pricingScope", "bestFor", "notIdealFor", "sourceSummary", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official subscription help documentation reviewed 05 November 2026: Free tier confirmed to grant 60-200 introductory lifetime credits with no recurring monthly generative AI credit allowance; Android-only restriction on $4.99/mo Lite tier verified.'
+  },
+  E0474: {
+    sourceURL: 'https://captions.ai/help/docs/api/pricing',
+    fieldScope: '["platforms", "apiAvailable", "pricingScope", "capabilityScope", "sourceSummary", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official Mirage API documentation and API pricing reviewed 05 November 2026: separately billed developer API confirmed at $0.15/minute for AI Twin & Video Captioning (1-minute minimum) and $0.15/second for Avatar X generation (5-second minimum).'
+  },
+  E0475: {
+    sourceURL: 'https://mirage.app/legal/privacy-policy',
+    fieldScope: '["canonicalName", "website_url", "operationalStatus", "sourceSummary", "capabilityScope", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official Mirage privacy policy and product pages reviewed 05 November 2026: Captions product active under parent company Mirage (Captions LLC, d/b/a Mirage) with voice/likeness processing disclosures verified.'
+  },
+  E0476: {
+    sourceURL: 'https://www.cartesia.ai/pricing',
+    fieldScope: '["targetUsers", "pricingModel", "hasFreeTier", "paidPlanAvailable", "platforms", "apiAvailable", "licenseType", "deploymentModes", "bestFor", "notIdealFor", "recurringFreeIntentIds", "finderIntentIds", "freeAccessType", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "pricingScope", "startingPrice", "priceCurrency", "billingPeriod", "startingPlan", "freeTierScope", "capabilityScope", "audienceTags", "primaryCategory", "primaryUseCases", "targetUserDetails", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official pricing page reviewed 05 November 2026: Free ($0/mo, 20k model credits + $1 Managed Agents allowance, non-commercial use only), Pro ($5/mo, 100k model credits + $5 agent allowance, commercial rights and Instant Voice Cloning), Startup ($49/mo, 1.25M credits), Scale ($299/mo, 8M credits) and Enterprise verified.'
+  },
+  E0477: {
+    sourceURL: 'https://docs.cartesia.ai/pricing.md',
+    fieldScope: '["targetUsers", "platforms", "apiAvailable", "deploymentModes", "bestFor", "notIdealFor", "sourceSummary", "pricingScope", "capabilityScope", "primaryUseCases", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official developer pricing and Zero Data Retention documentation reviewed 05 November 2026: Sonic TTS (~1 credit/char), Ink-2 streaming STT (3 credits/sec), time-limited Managed Agents promotional rate of $0.03/min through 31 December 2026 (reduced from $0.06/min; plus $0.014/min telephony and separate LLM usage) and Enterprise ZDR scope (eligible speech API inference, excluding stored voice clones) verified.'
+  },
+  E0863: {
+    sourceURL: 'https://www.bland.ai/pricing',
+    fieldScope: '["targetUsers", "pricingModel", "hasFreeTier", "paidPlanAvailable", "platforms", "apiAvailable", "deploymentModes", "bestFor", "notIdealFor", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "pricingScope", "capabilityScope", "primaryCategory", "primaryUseCases", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official pricing page and developer billing/infrastructure docs (docs.bland.ai/platform/billing.md) reviewed 05 November 2026: Start ($0/mo platform fee, $0.14/min connected talk time, $0.05/min transfer), Build ($299/mo, $0.12/min connected, $0.04/min transfer), Scale ($499/mo, $0.11/min connected, $0.03/min transfer), REST API availability (apiAvailable=true, platforms=["web","api"]) and BYO telephony carrier cost rules verified.'
+  },
+  E0869: {
+    sourceURL: 'https://www.lindy.ai/pricing',
+    fieldScope: '["targetUsers", "pricingModel", "hasFreeTier", "hasFreeTrial", "paidPlanAvailable", "startingPrice", "priceCurrency", "billingPeriod", "startingPlan", "trialDays", "platforms", "apiAvailable", "deploymentModes", "bestFor", "notIdealFor", "canonicalName", "website_url", "operationalStatus", "sourceSummary", "pricingScope", "capabilityScope", "primaryCategory", "primaryUseCases", "long_description", "shortDescription"]',
+    method: 'official_source_review',
+    reviewedAt: '2026-11-05',
+    finding: 'Official pricing page and billing docs reviewed 05 November 2026: 7-day free trial with $50 introductory credits verified; live server-side experiment (plus-49-packaging) confirmed serving Team starting at $49.99/active user/month for 5,000 monthly credits on arm v2, with higher options at $99.99/user/mo (15,000 credits) and $199.99/user/mo (35,000 credits), pooled workspace credits, non-rollover monthly credits, $10/1,000 top-up credits and chargeable Slack active seats after 7-day trial.'
+  }
 };
 
 export function main() {
@@ -558,15 +623,13 @@ export function main() {
     let updatedLedgerCount = 0;
 
     items.forEach(item => {
-      if (item && FINDINGS[item.id]) {
-        item.reviewedAt = '2026-11-05';
-        item.finding = FINDINGS[item.id];
-        if (ENRICHMENTS[item.id] && ENRICHMENTS[item.id].verificationSources && ENRICHMENTS[item.id].verificationSources[0]) {
-          // Keep secondary sourceURLs distinct if already in verificationSources, otherwise use primary pricing/docs source
-          if (!ENRICHMENTS[item.id].verificationSources.includes(item.sourceURL)) {
-            item.sourceURL = ENRICHMENTS[item.id].verificationSources[0];
-          }
-        }
+      if (item && EVIDENCE_BY_ID[item.evidenceId]) {
+        const spec = EVIDENCE_BY_ID[item.evidenceId];
+        item.sourceURL = spec.sourceURL;
+        item.fieldScope = spec.fieldScope;
+        item.method = spec.method;
+        item.reviewedAt = spec.reviewedAt;
+        item.finding = spec.finding;
         updatedLedgerCount++;
         console.log(`  ✓ Updated evidence ledger record for ${item.id} (${item.evidenceId})`);
       }

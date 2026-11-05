@@ -109,6 +109,19 @@ export function checkFreeTierVsTrial(tool) {
         });
       }
     }
+
+    // Check for false "unlimited free calling/usage" or "free forever" claims when hasFreeTier=false
+    const falseUnlimitedMatch = allText.match(/\b(?:unlimited\s+free\s+(?:calling|calls|usage|minutes|access|plan|tier)|free\s+forever|forever\s+free)\b/i);
+    if (falseUnlimitedMatch) {
+      const idx = falseUnlimitedMatch.index;
+      const prefix = allText.slice(Math.max(0, idx - 40), idx).toLowerCase();
+      if (!/\b(?:no|not|without|never|does\s+not\s+mean|doesn't\s+mean|expecting)\b/.test(prefix)) {
+        issues.push({
+          code: 'B_FALSE_UNLIMITED_FREE_CLAIM',
+          message: `Tool "${tool.id}" has hasFreeTier=false but editorial copy affirmatively claims "${falseUnlimitedMatch[0]}".`
+        });
+      }
+    }
   }
 
   // If claimed hasFreeTier is true, ensure text does not state there is no free plan
@@ -157,9 +170,10 @@ export function checkMonthlyVsAnnualPricing(tool) {
     // Valid price context indicators:
     // - Subscriptions: /mo, /month, /yr, /year, billed, monthly, annually
     // - Pay-per-unit / Metered: /hour, /hr, /min, /minute, /generation, /image, /credit, /token, /page, /seat, /user, /license
+    // - Explicit spending/credit allowance immediately qualifying the dollar amount
     // - Bundles / Packs: "5 hours for $11", "for $11 ($2.20/hour)", "pack", "credits valid for", "one-time"
     // - Ranges: "$0.05–$0.08+"
-    const hasValidContext = /(?:\/|\bper\s+(?:(?:connected|transfer|active)\s+)?|\bfor\s+)(?:mo|month|yr|year|hour|hr|min|minute|sec|second|credit|token|generation|image|page|seat|user|license|styles?|vector)|\b(?:billed|annually|monthly|subscription|one-time|pack|bundle|allowance\b|credits?\b|hours?\b|tokens?\b|generations?\b|licenses?\b|years?\b)|[–\-\+]/i.test(suffix) ||
+    const hasValidContext = /(?:\/|\bper\s+(?:(?:connected|transfer|active)\s+)?|\bfor\s+)(?:mo|month|yr|year|hour|hr|min|minute|sec|second|credit|token|generation|image|page|seat|user|license|styles?|vector)|\b(?:billed|annually|monthly|subscription|one-time|pack|bundle|credits?\b|hours?\b|tokens?\b|generations?\b|licenses?\b|years?\b)|^\s*(?:Managed\s+Agents\s+|agent\s+|spending\s+|credit\s+|monthly\s+){1,3}allowance\b|[–\-\+]/i.test(suffix) ||
       /(?:\d+\s+(?:hours?|credits?|tokens?|generations?|images?|pages?|minutes?|licenses?)\s+(?:for|at)\s+|(?:starts?|starts?\s+around|starting\s+at|ranging\s+from|from|to|roughly|approx(?:imately)?)\s+)$/i.test(prefix);
 
     if (!hasValidContext) {
@@ -168,6 +182,31 @@ export function checkMonthlyVsAnnualPricing(tool) {
         message: `Tool "${tool.id}" pricing overview contains bare price "${fullPrice}" without clear billing frequency or unit in context: "${windowText.trim()}".`
       });
     }
+
+    // Check for conflicting metered (per-minute/second) and monthly subscription labels on the same price
+    if (/^(?:\s|<[^>]+>)*(?:\/|\bper\s+(?:(?:connected|transfer)\s+)?)(?:min|minute|sec|second)\b[\s\S]{0,25}\b(?:per\s+month|\/mo(?:nth)?|monthly\s+subscription)\b/i.test(suffix)) {
+      issues.push({
+        code: 'C_CONTRADICTORY_PRICE_UNIT',
+        message: `Tool "${tool.id}" pricing overview attaches conflicting per-minute/second and monthly subscription labels to "${fullPrice}".`
+      });
+    }
+  }
+
+  // If structured billingPeriod is month_billed_annually, prose must disclose annual billing
+  if (tool.billingPeriod === 'month_billed_annually' && !/\b(?:annual|annually|year|yr)\b/i.test(pricingHtml)) {
+    issues.push({
+      code: 'C_MISSING_ANNUAL_BILLING_CAVEAT',
+      message: `Tool "${tool.id}" has billingPeriod="month_billed_annually" but pricing_overview omits any annual billing disclosure.`
+    });
+  }
+
+  // If prose establishes per-user/per-seat billing, it must not contradictorily claim a flat whole-workspace cost
+  if (/\bper\s+(?:active\s+)?(?:user|seat)\b/i.test(pricingHtml) &&
+      /\b(?:flat\s+(?:rate|fee|cost|price)\s+for\s+(?:the\s+)?(?:entire|whole)\s+(?:workspace|team|company)|whole-workspace\s+(?:flat\s+)?(?:cost|fee|price)|covers?\s+unlimited\s+(?:team\s+)?(?:users|seats)\s+at\s+no\s+extra\s+cost)\b/i.test(pricingHtml)) {
+    issues.push({
+      code: 'C_CONTRADICTORY_SEAT_BILLING',
+      message: `Tool "${tool.id}" pricing overview contradicts per-user/per-seat billing with a flat whole-workspace or unlimited-seat claim.`
+    });
   }
 
   return issues;
@@ -211,6 +250,24 @@ export function checkCurrencyAndBillingFrequency(tool) {
         code: 'D_INVALID_BILLING_PERIOD',
         message: `Tool "${tool.id}" has startingPrice=${startingPrice} but invalid billingPeriod="${billingPeriod}".`
       });
+    }
+
+    // Detect per-minute/per-second metered rate falsely labelled as a monthly subscription in structured fields
+    if ((billingPeriod === 'month' || billingPeriod === 'monthly') && tool.pricing_overview) {
+      const escapedPrice = String(startingPrice).replace('.', '\\.');
+      const exactPriceMatches = [...tool.pricing_overview.matchAll(new RegExp(`\\$${escapedPrice}(?!\\d)`, 'g'))];
+      if (exactPriceMatches.length > 0) {
+        const allMetered = exactPriceMatches.every(m => {
+          const after = tool.pricing_overview.slice(m.index + m[0].length, m.index + m[0].length + 40);
+          return /^(?:\s|<[^>]+>)*(?:\/|\bper\s+(?:(?:connected|transfer)\s+)?)(?:min|minute|sec|second|call)\b/i.test(after);
+        });
+        if (allMetered) {
+          issues.push({
+            code: 'D_METERED_RATE_MISLABELLED_MONTHLY',
+            message: `Tool "${tool.id}" has startingPrice=$${startingPrice} with billingPeriod="${billingPeriod}", but pricing_overview describes $${startingPrice} exclusively as a per-minute/per-second metered rate.`
+          });
+        }
+      }
     }
   }
 
