@@ -4243,72 +4243,72 @@
     "id": "captions",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://captions.ai/pricing",
-    "reviewedAt": "2026-09-27",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing, September2026help and September2025company announcement reviewed 27 September 2026. App identity preserved; platform billing and free-credit conflict retained."
+    "finding": "Official Captions and Mirage product, subscription (Free introductory credits; $4.99/mo Android-only Lite; $9.99/mo Basic; $24.99/mo Max; $69.99/mo Frontier), API pricing ($0.15/min captioning, $0.15/sec Avatar X) and privacy documentation reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0473",
     "id": "captions",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://captions.ai/help/docs/subscriptions",
-    "reviewedAt": "2026-09-27",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing, September2026help and September2025company announcement reviewed 27 September 2026. App identity preserved; platform billing and free-credit conflict retained."
+    "finding": "Official Captions and Mirage product, subscription (Free introductory credits; $4.99/mo Android-only Lite; $9.99/mo Basic; $24.99/mo Max; $69.99/mo Frontier), API pricing ($0.15/min captioning, $0.15/sec Avatar X) and privacy documentation reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0474",
     "id": "captions",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://captions.ai/help/",
-    "reviewedAt": "2026-09-27",
+    "sourceURL": "https://captions.ai/",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing, September2026help and September2025company announcement reviewed 27 September 2026. App identity preserved; platform billing and free-credit conflict retained."
+    "finding": "Official Captions and Mirage product, subscription (Free introductory credits; $4.99/mo Android-only Lite; $9.99/mo Basic; $24.99/mo Max; $69.99/mo Frontier), API pricing ($0.15/min captioning, $0.15/sec Avatar X) and privacy documentation reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0475",
     "id": "captions",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://captions.ai/blog/introducing-mirage-the-future-video-starts-now",
-    "reviewedAt": "2026-09-27",
+    "sourceURL": "https://captions.ai/",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing, September2026help and September2025company announcement reviewed 27 September 2026. App identity preserved; platform billing and free-credit conflict retained."
+    "finding": "Official Captions and Mirage product, subscription (Free introductory credits; $4.99/mo Android-only Lite; $9.99/mo Basic; $24.99/mo Max; $69.99/mo Frontier), API pricing ($0.15/min captioning, $0.15/sec Avatar X) and privacy documentation reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0476",
     "id": "cartesia",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://www.cartesia.ai/pricing",
-    "reviewedAt": "2026-09-27",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing and documentation reviewed 27 September 2026. Model-version discrepancy and temporary promotion retained."
+    "finding": "Official pricing ($0/mo non-commercial Free; $5/mo Pro; $49/mo Startup; $299/mo Scale), developer docs and Managed Agents promotional rate ($0.03/min through 31 December 2026, normally $0.06/min; plus telephony and LLM usage) reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0477",
     "id": "cartesia",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://docs.cartesia.ai/get-started/overview",
-    "reviewedAt": "2026-09-27",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing and documentation reviewed 27 September 2026. Model-version discrepancy and temporary promotion retained."
+    "finding": "Official pricing ($0/mo non-commercial Free; $5/mo Pro; $49/mo Startup; $299/mo Scale), developer docs and Managed Agents promotional rate ($0.03/min through 31 December 2026, normally $0.06/min; plus telephony and LLM usage) reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0478",
     "id": "castmagic",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://www.castmagic.io/pricing",
-    "reviewedAt": "2026-09-25",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing and contact FAQ reviewed 25 September 2026. Annual arithmetic mismatch and API-tier wording retained as uncertainty; broad unlimited-output claims do not erase transcription-library limits."
+    "finding": "Official product, pricing ($29/mo or $239/yr Hobby; $69/mo or $579/yr Starter; $199/mo or $1,669/yr Team) and privacy/terms documentation reviewed 05 November 2026; non-renewing library transcription hour allowances (30/100/400 hours) and API plan eligibility caveats verified."
   },
   {
     "evidenceId": "E0479",
     "id": "castmagic",
     "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://www.castmagic.io/contact",
-    "reviewedAt": "2026-09-25",
+    "sourceURL": "https://www.castmagic.io/",
+    "reviewedAt": "2026-11-05",
     "method": "official_source_review",
-    "finding": "Official pricing and contact FAQ reviewed 25 September 2026. Annual arithmetic mismatch and API-tier wording retained as uncertainty; broad unlimited-output claims do not erase transcription-library limits."
+    "finding": "Official product, pricing ($29/mo or $239/yr Hobby; $69/mo or $579/yr Starter; $199/mo or $1,669/yr Team) and privacy/terms documentation reviewed 05 November 2026; non-renewing library transcription hour allowances (30/100/400 hours) and API plan eligibility caveats verified."
   },
   {
     "evidenceId": "E0480",
@@ -7762,9 +7762,9 @@
     "id": "bland-ai",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.bland.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-05",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official pricing (Start $0 platform fee + $0.14/min connected + $0.05/min transfer; Build $299/mo + $0.12/min + $0.04/min; Scale $499/mo + $0.11/min + $0.03/min), REST API and enterprise infrastructure documentation reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0864",
@@ -7816,9 +7816,9 @@
     "id": "lindy",
     "fieldScope": "identity;category;directory_summary",
     "sourceURL": "https://www.lindy.ai/",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-11-05",
     "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "finding": "Official pricing (7-day trial with $50 credits; $29.99/active user/month Plus with 3,000 non-rollover monthly credits; $99.99/mo for 15,000; $199.99/mo for 35,000; $10 per 1,000 top-up credits), usage and security documentation reviewed 05 November 2026."
   },
   {
     "evidenceId": "E0870",

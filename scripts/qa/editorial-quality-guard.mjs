@@ -159,7 +159,7 @@ export function checkMonthlyVsAnnualPricing(tool) {
     // - Pay-per-unit / Metered: /hour, /hr, /min, /minute, /generation, /image, /credit, /token, /page, /seat, /user, /license
     // - Bundles / Packs: "5 hours for $11", "for $11 ($2.20/hour)", "pack", "credits valid for", "one-time"
     // - Ranges: "$0.05–$0.08+"
-    const hasValidContext = /(?:\/|\bper\s+|\bfor\s+)(?:mo|month|yr|year|hour|hr|min|minute|sec|second|credit|token|generation|image|page|seat|user|license|styles?|vector)|\b(?:billed|annually|monthly|subscription|one-time|pack|bundle|credits?\b|hours?\b|tokens?\b|generations?\b|licenses?\b|years?\b)|[–\-\+]/i.test(suffix) ||
+    const hasValidContext = /(?:\/|\bper\s+(?:(?:connected|transfer|active)\s+)?|\bfor\s+)(?:mo|month|yr|year|hour|hr|min|minute|sec|second|credit|token|generation|image|page|seat|user|license|styles?|vector)|\b(?:billed|annually|monthly|subscription|one-time|pack|bundle|allowance\b|credits?\b|hours?\b|tokens?\b|generations?\b|licenses?\b|years?\b)|[–\-\+]/i.test(suffix) ||
       /(?:\d+\s+(?:hours?|credits?|tokens?|generations?|images?|pages?|minutes?|licenses?)\s+(?:for|at)\s+|(?:starts?|starts?\s+around|starting\s+at|ranging\s+from|from|to|roughly|approx(?:imately)?)\s+)$/i.test(prefix);
 
     if (!hasValidContext) {

@@ -260,9 +260,10 @@ function buildToolPage(tool) {
       </div>`
     : '';
 
-  // Practical workflows (Batch 4A approved cohort)
+  // Practical workflows (Batch 4A & 4B approved cohorts)
   const BATCH4A_WORKFLOW_TARGETS = new Set([
-    'deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets'
+    'deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets',
+    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'
   ]);
 
   let workflowsHtml = '';
