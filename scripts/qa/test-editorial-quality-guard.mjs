@@ -135,6 +135,47 @@ function cloneTool(id) {
   pass('Defect detected: Cross-sentence bare price "$34.99 for Max" rejected (C_AMBIGUOUS_BILLING_PERIOD)');
 }
 
+// Test 5a: Batch 4C Check C positive boundaries and additional negative boundaries
+{
+  const posMetered = cloneTool('langfuse');
+  posMetered.pricing_overview = '<p>Core includes 100,000 units, with additional usage starting at <strong>$8 per 100,000 units</strong>.</p>';
+  assert.strictEqual(checkMonthlyVsAnnualPricing(posMetered).length, 0, 'Metered "$8 per 100,000 units" must pass Check C');
+  pass('Positive boundary: "$8 per 100,000 units" accepted by Check C');
+
+  const posList = cloneTool('photoroom');
+  posList.pricing_overview = '<p>The source research identified published US monthly prices of <strong>$12.99 for Pro</strong>, <strong>$34.99 for Max</strong> and <strong>$99 for Ultra</strong>.</p>';
+  assert.strictEqual(checkMonthlyVsAnnualPricing(posList).length, 0, 'Same-sentence monthly plan-price list must pass Check C');
+  pass('Positive boundary: same-sentence monthly plan-price list accepted by Check C');
+
+  const posAnnualEq = cloneTool('photoroom');
+  posAnnualEq.pricing_overview = '<p>Pro is <strong>$7.50/month billed yearly</strong> ($89.99/year), and Ultra is <strong>$82.50/month billed yearly</strong>.</p>';
+  assert.strictEqual(checkMonthlyVsAnnualPricing(posAnnualEq).length, 0, 'Consistent qualified annual equivalent must pass Check C');
+  pass('Positive boundary: consistent "$7.50/month billed yearly ($89.99/year)" accepted by Check C');
+
+  const negPlanNoPeriod = cloneTool('photoroom');
+  negPlanNoPeriod.pricing_overview = '<p>Photoroom offers <strong>$29 for Pro</strong> with extra exports.</p>';
+  assert(checkMonthlyVsAnnualPricing(negPlanNoPeriod).some(i => i.code === 'C_AMBIGUOUS_BILLING_PERIOD'), '"$29 for Pro" without a billing-period qualifier must fail');
+  pass('Defect detected: "$X for <Plan>" without any monthly/annual qualifier rejected (C_AMBIGUOUS_BILLING_PERIOD)');
+
+  const negInconsistentEq = cloneTool('photoroom');
+  negInconsistentEq.pricing_overview = '<p>Max costs <strong>$20.99/month billed yearly</strong> ($250/year) on the annual option.</p>';
+  assert(checkMonthlyVsAnnualPricing(negInconsistentEq).some(i => i.code === 'C_INCONSISTENT_ANNUAL_EQUIVALENT'), 'Contradictory $20.99/month vs $250/year equivalent must fail');
+  pass('Defect detected: contradictory "$20.99/month billed yearly ($250/year)" equivalent (C_INCONSISTENT_ANNUAL_EQUIVALENT)');
+
+  const negMonthlyAsAnnual = cloneTool('chatbase');
+  negMonthlyAsAnnual.billingPeriod = 'annual';
+  negMonthlyAsAnnual.pricing_overview = '<p>Hobby costs <strong>$40/month</strong> and includes 700 message credits.</p>';
+  assert(checkCurrencyAndBillingFrequency(negMonthlyAsAnnual).some(i => i.code === 'D_MONTHLY_RATE_MISLABELLED_ANNUAL'), 'Monthly price stored as annual must fail');
+  pass('Defect detected: monthly price stored with billingPeriod="annual" (D_MONTHLY_RATE_MISLABELLED_ANNUAL)');
+
+  const posAnnualStructured = cloneTool('chatbase');
+  posAnnualStructured.billingPeriod = 'annual';
+  posAnnualStructured.startingPrice = 384;
+  posAnnualStructured.pricing_overview = '<p>Hobby is <strong>$384/year</strong> when billed annually.</p>';
+  assert(!checkCurrencyAndBillingFrequency(posAnnualStructured).some(i => i.code === 'D_MONTHLY_RATE_MISLABELLED_ANNUAL'), 'Genuine annual price must not trigger D_MONTHLY_RATE_MISLABELLED_ANNUAL');
+  pass('Positive boundary: genuine "$384/year" with billingPeriod="annual" not flagged');
+}
+
 // Test 5b: Per-minute rate falsely labelled as a monthly subscription
 {
   const fixtureStructured = cloneTool('bland-ai');

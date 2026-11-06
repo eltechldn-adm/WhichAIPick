@@ -195,6 +195,24 @@ export function checkMonthlyVsAnnualPricing(tool) {
     }
   }
 
+  // Annual-equivalent consistency: within one sentence, a "$X/month billed yearly|annually" equivalent
+  // must agree with an explicitly stated yearly total "$Y/year|per year" (Y / 12 ≈ X, ±$0.05 rounding).
+  const plainSentences = pricingHtml.replace(/<[^>]+>/g, ' ').split(/(?<!\d)\.(?!\d)|;/);
+  for (const sentence of plainSentences) {
+    const monthlyEquivalents = [...sentence.matchAll(/\$(\d+(?:\.\d{1,2})?)\s*(?:\/\s*mo(?:nth)?|per\s+month)\s*,?\s*billed\s+(?:yearly|annually)/gi)];
+    const yearlyTotals = [...sentence.matchAll(/\$(\d[\d,]*(?:\.\d{1,2})?)\s*(?:\/\s*(?:yr|year)\b|per\s+year\b)/gi)];
+    if (monthlyEquivalents.length === 1 && yearlyTotals.length === 1) {
+      const monthly = parseFloat(monthlyEquivalents[0][1]);
+      const yearly = parseFloat(yearlyTotals[0][1].replace(/,/g, ''));
+      if (Math.abs(yearly / 12 - monthly) > 0.05) {
+        issues.push({
+          code: 'C_INCONSISTENT_ANNUAL_EQUIVALENT',
+          message: `Tool "${tool.id}" pricing overview pairs "$${monthlyEquivalents[0][1]}/month billed yearly" with a yearly total of "$${yearlyTotals[0][1]}" (≈ $${(yearly / 12).toFixed(2)}/month).`
+        });
+      }
+    }
+  }
+
   // If structured billingPeriod is month_billed_annually, prose must disclose annual billing
   if (tool.billingPeriod === 'month_billed_annually' && !/\b(?:annual|annually|year|yr)\b/i.test(pricingHtml)) {
     issues.push({
@@ -268,6 +286,25 @@ export function checkCurrencyAndBillingFrequency(tool) {
           issues.push({
             code: 'D_METERED_RATE_MISLABELLED_MONTHLY',
             message: `Tool "${tool.id}" has startingPrice=$${startingPrice} with billingPeriod="${billingPeriod}", but pricing_overview describes $${startingPrice} exclusively as a per-minute/per-second metered rate.`
+          });
+        }
+      }
+    }
+
+    // Detect a monthly subscription price stored as an annual price in structured fields
+    if (billingPeriod === 'annual' && tool.pricing_overview) {
+      const escapedPrice = String(startingPrice).replace('.', '\\.');
+      const exactPriceMatches = [...tool.pricing_overview.matchAll(new RegExp(`\\$${escapedPrice}(?!\\d)`, 'g'))];
+      if (exactPriceMatches.length > 0) {
+        const allMonthly = exactPriceMatches.every(m => {
+          const after = tool.pricing_overview.slice(m.index + m[0].length, m.index + m[0].length + 60);
+          return /^(?:\s|<[^>]+>)*(?:\/\s*mo(?:nth)?\b|per\s+month\b)/i.test(after) &&
+            !/\bbilled\s+(?:yearly|annually)\b/i.test(after);
+        });
+        if (allMonthly) {
+          issues.push({
+            code: 'D_MONTHLY_RATE_MISLABELLED_ANNUAL',
+            message: `Tool "${tool.id}" has startingPrice=$${startingPrice} with billingPeriod="annual", but pricing_overview describes $${startingPrice} exclusively as a monthly rate.`
           });
         }
       }
