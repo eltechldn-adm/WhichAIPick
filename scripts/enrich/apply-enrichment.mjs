@@ -214,6 +214,7 @@ export async function applyEnrichment(options = {}) {
             `cannot be assigned to "${toolId}".`
           );
         }
+        ledgerMap.set(ev.evidenceId, { evidenceId: ev.evidenceId, id: toolId });
       }
     }
   }

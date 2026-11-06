@@ -535,6 +535,7 @@ export function validateBatch(payload, options = {}) {
 
   // 4. Per-Tool Verification
   const allowedToolKeys = new Set([...TOOL_PAYLOAD_REQUIRED_KEYS, ...TOOL_PAYLOAD_OPTIONAL_KEYS]);
+  const seenEvidenceIds = new Map();
 
   for (const id of targetIds) {
     const tool = toolsObj[id];
@@ -844,6 +845,13 @@ export function validateBatch(payload, options = {}) {
         }
         if (!ev.evidenceId || !/^E\d{4}$/.test(ev.evidenceId)) {
           issues.push({ code: 'EVIDENCE_ID_INVALID', message: `Tool "${id}" evidence[${evIdx}] evidenceId must match "^E\\d{4}$" (got "${ev.evidenceId}").` });
+        } else if (seenEvidenceIds.has(ev.evidenceId) && seenEvidenceIds.get(ev.evidenceId) !== id) {
+          issues.push({
+            code: 'EVIDENCE_ID_DUPLICATE',
+            message: `Evidence ID "${ev.evidenceId}" in tool "${id}" is duplicated; already assigned to tool "${seenEvidenceIds.get(ev.evidenceId)}".`
+          });
+        } else {
+          seenEvidenceIds.set(ev.evidenceId, id);
         }
         if (!ev.sourceURL || !ev.sourceURL.startsWith('http')) {
           issues.push({ code: 'EVIDENCE_SOURCE_URL_INVALID', message: `Tool "${id}" evidence[${evIdx}] sourceURL must be valid HTTP/HTTPS URL.` });
