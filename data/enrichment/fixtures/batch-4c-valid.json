@@ -1,0 +1,530 @@
+{
+  "batchId": "batch-4c",
+  "researchDate": "2026-11-06",
+  "description": "Historical Batch 4C editorial enrichment payload (replay validation fixture)",
+  "mode": "replay",
+  "targetToolIds": [
+    "clay",
+    "photoroom",
+    "langfuse",
+    "chatbase",
+    "deepgram"
+  ],
+  "tools": {
+    "clay": {
+      "shortDescription": "Clay combines business data enrichment, AI account research and sales workflows to help teams build and act on prospect lists.",
+      "long_description": "<p>Clay is a sales prospecting and go-to-market data platform that brings information from multiple providers into one workspace. It helps revenue teams research businesses, enrich contact records and prepare more relevant outreach using structured data and AI-assisted research.</p><p>Its spreadsheet-like interface supports workflows that combine existing contact lists, third-party enrichment services and custom research questions. Clay's waterfall enrichment can check multiple providers in sequence, while Claygent can collect information from public sources and organise findings into table columns.</p><p>Clay offers a free tier and paid plans designed for larger prospecting and revenue operations. Its pricing separates platform Actions from Data Credits, so users should understand both allowances before building workflows that process substantial numbers of records.</p>",
+      "sourceSummary": "Research-based profile using Clay's official product, pricing and billing documentation reviewed on 5–6 November 2026. Pricing allowances are vendor-reported; no firsthand product testing or independently measured enrichment accuracy is claimed.",
+      "how_it_works": "<p>A team starts by importing a list of companies or contacts, creating an audience or collecting records from supported sources. Clay can then run enrichment steps to find additional business data, such as contact details, company attributes or relevant account signals.</p><p>Users build workflows in tables, choose data providers and define conditions for each step. Claygent can research public information, while supported integrations can transfer qualified records into outreach tools or business systems. Advanced CRM synchronisation, data warehouse connectivity and HTTP API workflows are plan-dependent.</p><p>Every workflow consumes resources according to Clay's billing rules. Actions measure platform processing, while Data Credits pay for certain marketplace data services. Users bringing their own supported API keys may avoid Clay Data Credit charges for those calls, although Actions and external provider charges can still apply.</p>",
+      "feature_groups": [
+        {
+          "group": "Business Data Enrichment",
+          "items": [
+            "Multi-provider waterfall enrichment for contact and company records.",
+            "Access to a marketplace of business-data providers.",
+            "Structured tables for managing enrichment results and qualification fields."
+          ]
+        },
+        {
+          "group": "AI Research and Prospecting",
+          "items": [
+            "Claygent for researching companies and public business information.",
+            "Account signals including supported job changes and company developments.",
+            "Custom research prompts, reusable functions and prospecting workflows."
+          ]
+        },
+        {
+          "group": "Workflow Automation and Activation",
+          "items": [
+            "Clay Sequencer and supported outreach integrations.",
+            "CRM synchronisation, data warehouse connections and webhooks on qualifying plans.",
+            "Audience management, scheduled workflows and supported advertising integrations."
+          ]
+        }
+      ],
+      "bestFor": [
+        "B2B sales teams researching and enriching prospect accounts across several providers.",
+        "Revenue operations teams building repeatable lead qualification and outreach workflows.",
+        "Marketing teams combining account signals, enrichment data and existing CRM records."
+      ],
+      "notIdealFor": [
+        "Beginners seeking a simple contact database with a single predictable usage charge.",
+        "Small teams that require advanced CRM or HTTP API integrations but cannot justify the Growth subscription.",
+        "Organisations requiring a self-hosted prospecting platform."
+      ],
+      "workflows": [
+        {
+          "title": "Multi-provider lead enrichment",
+          "description": "Import a list of target businesses, check supported data providers in sequence for missing contact information, and review matched results before exporting the qualified records."
+        },
+        {
+          "title": "AI-assisted account research",
+          "description": "Use Claygent to review a prospect's website and public company information, extract relevant business details into table columns, and prepare a personalised outreach draft for approval."
+        },
+        {
+          "title": "Signal-driven sales operations",
+          "description": "Monitor supported hiring or company-change signals, enrich the relevant accounts, and send qualifying records to a connected CRM or outreach system using an eligible paid plan."
+        }
+      ],
+      "pros": [
+        "Combines several enrichment providers within one workflow.",
+        "Supports AI-assisted research alongside structured data operations.",
+        "Offers flexible integrations for advanced revenue operations.",
+        "Provides a free entry tier for testing small prospecting workflows."
+      ],
+      "cons": [
+        "Two separate usage allowances make forecasting costs more involved.",
+        "Advanced CRM, warehouse and HTTP API capabilities require higher-tier access.",
+        "Enriched data still needs accuracy and compliance checks before outreach.",
+        "Self-hosted deployment is not offered as a standard option."
+      ],
+      "pricing_overview": "<p>Clay's <strong>Free plan</strong> includes 500 Actions and 100 Data Credits per month, with tables limited to 200 rows. <strong>Launch starts at $185 per month on monthly billing</strong>, or an advertised $167 per month when billed annually. Launch introduces larger processing allowances, phone enrichment and supported account signals. A 14-day paid-plan trial is advertised.</p><p><strong>Growth starts at $495 per month on monthly billing</strong>, or $446 per month when billed annually. It adds capabilities such as CRM auto-sync, data warehouse integration, web intent signals, webhooks and HTTP API steps. Enterprise pricing is negotiated for larger deployments and additional governance requirements.</p><p>Clay uses two resource meters: <strong>Actions</strong>, which do not roll over, and <strong>Data Credits</strong>, which can carry over within stated plan limits. Paid Data Credit top-ups may cost more than bundled credits. Buyers should also check the exact Launch credit allocation during checkout: Clay's published FAQ lists 2,500 entry-level Data Credits, while its interactive pricing selector has shown 3,000. Do not treat either figure as a guaranteed allowance without confirming the selected plan.</p>",
+      "comparison_summary": "<p>Choose <strong>Clay</strong> when the main challenge is combining business data, researching accounts and constructing qualification workflows across multiple providers. Its strength is coordinating data and research processes rather than simply sending large volumes of emails.</p><p>Consider <strong>Instantly</strong> or <strong>Lemlist</strong> when outreach execution is the central requirement. Consider <strong>Amplemarket</strong> when evaluating an integrated prospecting and sales engagement platform, or <strong>Bardeen</strong> for more general browser and workflow automation.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": true,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 185,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Launch",
+      "trialDays": 14,
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "verificationSources": [
+        "https://www.clay.com/",
+        "https://www.clay.com/pricing",
+        "https://www.clay.com/faq/what-features-are-included-in-the-new-plans-how-do-i-pick-the-right-plan",
+        "https://university.clay.com/docs/plans-and-billing",
+        "https://www.clay.com/privacy"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1229",
+          "sourceURL": "https://www.clay.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Clay product, pricing, FAQ and billing documentation (https://www.clay.com/, https://www.clay.com/pricing, https://www.clay.com/faq/what-features-are-included-in-the-new-plans-how-do-i-pick-the-right-plan, https://university.clay.com/docs/plans-and-billing, https://www.clay.com/privacy) reviewed 5-6 November 2026: Free tier (500 Actions/mo, 100 Data Credits/mo, 200-row table limit), Launch starting at $185/mo monthly ($167/mo billed annually, 14-day trial), Growth starting at $495/mo monthly ($446/mo billed annually, unlocking CRM auto-sync, data warehouse integration, web intent signals, webhooks and HTTP API), dual-meter Actions (non-rollover) vs Data Credits (rollover within plan limits; top-ups cost more than bundled credits; BYOK avoids Clay Data Credits), and vendor source discrepancy on entry Launch Data Credits (published FAQ and option value list 2,500 Data Credits/mo vs static Webflow selector text displaying 3,000) verified."
+        }
+      ],
+      "freeTierScope": "Free plan includes 500 Actions/month and 100 Data Credits/month with a 200-row table limit.",
+      "pricingScope": "Dual-meter platform (Actions + Data Credits); Launch starts at $185/month on monthly billing ($167/month billed annually) with a 14-day trial; Growth starts at $495/month on monthly billing ($446/month billed annually). Entry Launch Data Credit allowance differs between published FAQ (2,500) and interactive pricing selector display (3,000)."
+    },
+    "photoroom": {
+      "shortDescription": "Photoroom helps sellers and marketing teams remove image backgrounds, create product visuals and prepare catalogue images using AI editing tools.",
+      "long_description": "<p>Photoroom is an AI-powered image-editing platform focused on product photography and commerce. It helps businesses create consistent listing images, replace backgrounds, improve existing product photographs and produce promotional visuals without repeating every stage of a traditional studio workflow.</p><p>Users can work through its web and mobile applications to edit individual photos or process multiple product images. Depending on the subscription, Photoroom offers tools for background removal, AI-generated product scenes, virtual fashion imagery, video creation and shared brand assets.</p><p>Photoroom also provides developer APIs for image-processing workflows. Its self-serve app subscriptions and API subscriptions have separate pricing and usage allowances, making this distinction important for businesses planning automated catalogue processing.</p>",
+      "sourceSummary": "Research-based profile using Photoroom's official app pricing, API documentation and product information reviewed on 5–6 November 2026. Prices and plan limits are vendor-published; no firsthand output-quality assessment is claimed.",
+      "how_it_works": "<p>Users upload a product photograph, select an editing operation and review the generated result. Core editing tools can remove backgrounds, retouch objects or adjust images, while additional AI tools can create product scenes, virtual model imagery and promotional content on eligible plans.</p><p>Paid app users can organise brand assets, reuse consistent layouts and process images in batches. Higher tiers increase monthly export allowances and unlock additional capabilities such as video generation, Shopify integration and higher-resolution output.</p><p>Developers can use a separate API subscription to automate supported image operations from an e-commerce system or another application. Generated visuals still require a quality review, particularly where AI editing could alter a product's colour, proportions, details or appearance.</p>",
+      "feature_groups": [
+        {
+          "group": "Product Image Editing",
+          "items": [
+            "Automatic background removal, retouching and resizing.",
+            "AI backgrounds, shadows and product presentation tools.",
+            "Supported enhancement, expansion and visual correction features."
+          ]
+        },
+        {
+          "group": "Commercial Content Production",
+          "items": [
+            "Brand Library and shared team Spaces.",
+            "Batch editing and standardised product catalogue exports.",
+            "Product video and fashion imagery tools on qualifying subscriptions."
+          ]
+        },
+        {
+          "group": "Developer and E-commerce Integration",
+          "items": [
+            "Separate background-removal and image-editing APIs.",
+            "Shopify integration on supported higher app tiers.",
+            "Enterprise options for larger image-processing operations and visual quality controls."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Online retailers preparing consistent product photographs for marketplaces and stores.",
+        "Product marketing teams creating promotional imagery from existing merchandise photos.",
+        "Developers automating image standardisation and background removal through an API."
+      ],
+      "notIdealFor": [
+        "Developers expecting a Pro, Max or Ultra app subscription to include API processing credits.",
+        "Users requiring advanced video generation or 4K output on the entry-level Pro plan.",
+        "Organisations that need an open-source or self-hosted editing system."
+      ],
+      "workflows": [
+        {
+          "title": "Marketplace listing preparation",
+          "description": "Import smartphone product photographs, remove distracting backgrounds, apply consistent framing and brand styling, and review the exported images before publishing listings."
+        },
+        {
+          "title": "Apparel product merchandising",
+          "description": "Use eligible virtual model, ghost mannequin and image correction tools to prepare alternative clothing presentations, checking that colours, garment details and fit remain accurately represented."
+        },
+        {
+          "title": "Automated catalogue processing",
+          "description": "Connect a supported Photoroom API to a product ingestion pipeline, remove or replace backgrounds, standardise image dimensions and route uncertain results for human review."
+        }
+      ],
+      "pros": [
+        "Designed around common e-commerce product imagery tasks.",
+        "Combines manual editing, AI tools and batch processing.",
+        "Offers shared brand assets and collaboration features.",
+        "Provides dedicated APIs for automated image workflows."
+      ],
+      "cons": [
+        "App subscriptions and API usage require separate commercial consideration.",
+        "Paid app plans impose monthly export and AI credit allowances.",
+        "Advanced video and high-resolution features are restricted to higher tiers.",
+        "AI-generated product scenes may need manual correction to preserve product accuracy."
+      ],
+      "pricing_overview": "<p>Photoroom provides free access to selected basic editing features. Its paid app plans include <strong>Pro</strong>, <strong>Max</strong> and <strong>Ultra</strong>, with prices varying by billing period and region. The source research identified published US monthly prices of <strong>$12.99 for Pro</strong>, <strong>$34.99 for Max</strong> and <strong>$99 for Ultra</strong>. Annual subscription options may have lower monthly-equivalent costs; the official pricing page has displayed <strong>$7.50/month billed yearly for Pro</strong>, <strong>$20.99/month billed yearly for Max</strong> and <strong>$82.50/month billed yearly for Ultra</strong>. Confirm the applicable local checkout price before purchasing.</p><p>Paid app plans include monthly AI credit and export allowances. The published export limits are <strong>1,000 for Pro</strong>, <strong>3,000 for Max</strong> and <strong>10,000 for Ultra</strong>. AI credits are consumed by eligible generative features, while core editing tools are subject to stated fair-use limits. Shopify integration and video generation are available on qualifying higher plans.</p><p><strong>Standard app subscriptions do not include an API allowance.</strong> Photoroom's separate API options include Basic background removal, starting from <strong>$20/month for 1,000 images</strong>, and Plus image editing, starting from <strong>$100/month for 1,000 images</strong>, with different operations and usage rates. Enterprise arrangements can provide a shared commercial allocation across app and API usage.</p>",
+      "comparison_summary": "<p>Choose <strong>Photoroom</strong> when producing and standardising e-commerce visuals is the priority. Its combination of product-specific editing, batch work and commercial presentation features makes it a different proposition from a general-purpose design editor.</p><p>Consider <strong>Remove.bg</strong> for focused background removal, <strong>Canva Magic Studio</strong> for broader marketing design, or <strong>Pebblely</strong> and <strong>Claid.ai</strong> when comparing AI product-scene generation and automated commerce imagery.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": true,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 12.99,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Pro",
+      "trialDays": null,
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "ios",
+        "android",
+        "api"
+      ],
+      "verificationSources": [
+        "https://www.photoroom.com/",
+        "https://www.photoroom.com/pricing",
+        "https://www.photoroom.com/api/pricing",
+        "https://www.photoroom.com/legal/privacy"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1033",
+          "sourceURL": "https://www.photoroom.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Photoroom app pricing, Schema.org offer metadata, API pricing and privacy documentation (https://www.photoroom.com/, https://www.photoroom.com/pricing, https://www.photoroom.com/api/pricing, https://www.photoroom.com/legal/privacy) reviewed 5-6 November 2026: free basic access, published US monthly app prices ($12.99/mo Pro, $34.99/mo Max, $99/mo Ultra in Schema.org ItemList #plans; $7.50/mo, $20.99/mo and $82.50/mo billed yearly in SSR HTML, with client-side geo-localised currency display such as GBP £9.99/£5.99), monthly export limits (1,000 Pro, 3,000 Max, 10,000 Ultra), strict separation between self-serve app plans (no API allowance included) and developer API plans (Basic background removal from $20/mo for 1,000 images, Plus image editing from $100/mo for 1,000 images), and shared Enterprise wallet verified."
+        }
+      ],
+      "freeTierScope": "Free access to selected basic editing features; paid app plans impose monthly export and AI credit limits and do not include API usage.",
+      "pricingScope": "Self-serve app plans (Pro $12.99/month, Max $34.99/month, Ultra $99/month in published US monthly pricing; $7.50/month, $20.99/month and $82.50/month billed yearly, with regional currency localisation at checkout) are billed separately from developer API plans (Basic background removal from $20/month for 1,000 images, Plus image editing from $100/month for 1,000 images).",
+      "targetUsers": "mixed"
+    },
+    "langfuse": {
+      "shortDescription": "Langfuse helps engineering teams trace, evaluate and improve LLM applications through observability, prompt management and testing tools.",
+      "long_description": "<p>Langfuse is an AI application observability and evaluation platform for teams building software with language models, retrieval pipelines and autonomous agents. It helps developers examine what happened inside an AI workflow, identify failures and assess changes before deploying them.</p><p>The platform captures traces of model requests, agent steps and other application events. Teams can inspect latency, token consumption, costs, outputs and evaluation results, then connect those findings to prompt versions, test datasets and release decisions.</p><p>Langfuse offers both managed cloud subscriptions and an open-source self-hosted edition. Its core software is available under the MIT licence, while additional managed service and Enterprise capabilities follow separate commercial terms.</p>",
+      "sourceSummary": "Research-based profile using Langfuse's official cloud, self-hosting, security and product documentation reviewed on 5–6 November 2026. Vendor-published features and limits are described without claiming independent performance testing.",
+      "how_it_works": "<p>Developers instrument an AI application using supported SDKs, OpenTelemetry or integrations. As users interact with the application, Langfuse receives trace information describing model calls, retrieval operations, tool executions and other recorded events.</p><p>Engineers use the Langfuse interface to investigate unexpected behaviour, inspect model usage and compare results across sessions or application versions. They can also manage prompt versions, construct evaluation datasets and run automated or human assessments.</p><p>Langfuse's observability depends on the data an application sends to it. Teams should review logging controls and avoid recording unnecessary sensitive information. Self-hosting provides more control over infrastructure but requires maintaining the supporting services and data stores.</p>",
+      "feature_groups": [
+        {
+          "group": "LLM Observability",
+          "items": [
+            "Tracing of model requests, retrieval steps and agent tool calls.",
+            "Token, cost, latency and session monitoring.",
+            "SDKs, APIs and OpenTelemetry-based integrations."
+          ]
+        },
+        {
+          "group": "Prompt Management and Evaluation",
+          "items": [
+            "Version-controlled prompts and release labels.",
+            "Evaluation datasets, experiments and assessment scores.",
+            "Human annotation and supported model-based evaluation workflows."
+          ]
+        },
+        {
+          "group": "Deployment and Engineering Integration",
+          "items": [
+            "Managed cloud dashboard and APIs.",
+            "Open-source self-hosted deployment with Docker or Kubernetes.",
+            "Security, access management and support options depending on deployment and plan."
+          ]
+        }
+      ],
+      "bestFor": [
+        "AI engineering teams diagnosing production model and agent behaviour.",
+        "Developers managing prompt releases and regression evaluations.",
+        "Organisations needing self-hosted control over their AI observability infrastructure."
+      ],
+      "notIdealFor": [
+        "Non-technical users searching for a ready-made AI assistant or no-code application builder.",
+        "Teams without the operational resources to maintain a self-hosted database and telemetry stack.",
+        "Cloud Pro subscribers expecting all enterprise access-management features without additional charges."
+      ],
+      "workflows": [
+        {
+          "title": "Production agent troubleshooting",
+          "description": "Instrument an agent's model calls and tool steps, inspect failed or expensive traces, and identify where delays, unexpected responses or resource consumption originated."
+        },
+        {
+          "title": "Prompt release management",
+          "description": "Store and version prompts in Langfuse, compare candidate changes against selected examples, and control which approved prompt version an application retrieves."
+        },
+        {
+          "title": "Evaluation-based regression testing",
+          "description": "Collect representative application traces, create an evaluation dataset and run automated or human assessments before releasing a new model or workflow configuration."
+        }
+      ],
+      "pros": [
+        "Combines observability, evaluation and prompt management.",
+        "Supports integration with different language-model providers and application frameworks.",
+        "Offers a free managed cloud tier and MIT-licensed self-hosted core.",
+        "Provides visibility into costs and intermediate steps within AI workflows."
+      ],
+      "cons": [
+        "Setup generally requires development or engineering experience.",
+        "Telemetry quality depends on correct application instrumentation.",
+        "Higher governance and historical-retention capabilities have paid-plan requirements.",
+        "Self-hosting introduces infrastructure and operational costs even when the software licence is free."
+      ],
+      "pricing_overview": "<p><strong>Langfuse Cloud Hobby is free</strong>, with 50,000 monthly units, a two-user limit and 30 days of data access. <strong>Core costs $29/month</strong>, includes 100,000 units and allows additional usage at a published rate starting at <strong>$8 per 100,000 units</strong>. Core increases historical data access and supports unlimited users.</p><p><strong>Pro costs $199/month</strong>, with longer retention and additional governance or support features. The optional <strong>Teams Add-on costs $300/month</strong> and adds capabilities such as Enterprise SSO and fine-grained access controls. <strong>Cloud Enterprise is advertised at $2,499/month</strong>, with further enterprise service and support options.</p><p>The <strong>self-hosted open-source core is free under the MIT licence</strong>, but hosting, storage, monitoring and maintenance are separate responsibilities. Langfuse counts billable events using units that cover recorded traces, observations and related evaluation activity. Users should estimate event volume rather than assuming that one end-user conversation consumes only one billable unit.</p>",
+      "comparison_summary": "<p>Choose <strong>Langfuse</strong> when debugging AI applications, managing prompts and evaluating model behaviour are the primary engineering needs. It is especially relevant when a team wants a dedicated observability layer rather than relying only on application logs.</p><p>Consider <strong>Helicone</strong> for an alternative LLM observability and gateway approach, <strong>Braintrust</strong> for model evaluation workflows, or <strong>Arize AI</strong> for broader AI observability use cases. Teams should compare instrumentation requirements, evaluation features, governance controls and total operating costs.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": null,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 29,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Core",
+      "trialDays": null,
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "verificationSources": [
+        "https://langfuse.com/",
+        "https://langfuse.com/pricing",
+        "https://langfuse.com/pricing-self-host",
+        "https://langfuse.com/self-hosting",
+        "https://langfuse.com/security"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1117",
+          "sourceURL": "https://langfuse.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Langfuse cloud pricing, self-hosting and security documentation (https://langfuse.com/, https://langfuse.com/pricing, https://langfuse.com/pricing-self-host, https://langfuse.com/self-hosting, https://langfuse.com/security) reviewed 5-6 November 2026: Cloud Hobby ($0/mo, 50,000 units/mo, 2 users, 30-day retention), Core ($29/mo, 100,000 units/mo + $8 per 100,000 units, unlimited users, 90-day retention), Pro ($199/mo, optional $300/mo Teams Add-on for Enterprise SSO and fine-grained RBAC), Cloud Enterprise ($2,499/mo), MIT-licensed open-source self-hosted community core with separate commercial Enterprise licensing (licenseType=\"mixed\", licenseName=\"MIT community core; commercial enterprise features\"), and billable observation unit accounting (traces + observations + scores) verified."
+        }
+      ],
+      "freeTierScope": "Langfuse Cloud Hobby includes 50,000 monthly units (2 users, 30-day retention), and the self-hosted community core is free under the MIT licence; infrastructure and enterprise features are separate.",
+      "pricingScope": "Langfuse Cloud paid plans start at $29/month (Core, 100,000 units plus $8 per 100,000 units), $199/month (Pro, optional $300/month Teams Add-on), and $2,499/month (Cloud Enterprise); MIT-licensed self-hosted community core excludes infrastructure and commercial Enterprise features.",
+      "licenseType": "mixed",
+      "licenseName": "MIT community core; commercial enterprise features"
+    },
+    "chatbase": {
+      "shortDescription": "Chatbase helps businesses build customer-facing AI agents that answer questions using company information and connect conversations to supported business workflows.",
+      "long_description": "<p>Chatbase is an AI customer-support and sales agent platform that allows businesses to build assistants using their own documents, website content and operational instructions. Its purpose is to help customers find answers and complete routine service tasks without requiring every conversation to begin with a human employee.</p><p>Teams can configure an agent's knowledge sources, instructions and supported actions, then make it available through website chat and other connected channels. Higher subscription tiers provide additional helpdesk, voice, API and business integration capabilities.</p><p>Chatbase currently advertises paid self-service subscriptions with introductory trials rather than a permanent public free tier. Businesses comparing plans should pay particular attention to which channels and integrations are available at each price point.</p>",
+      "sourceSummary": "Research-based profile using Chatbase's official product and pricing documentation reviewed on 5–6 November 2026. Descriptions reflect published capabilities and plan entitlements; no firsthand resolution-rate or accuracy testing is claimed.",
+      "how_it_works": "<p>An organisation starts by providing approved documentation, website pages or other supported knowledge sources. Chatbase uses that information when responding to customer questions, while administrators can define procedures for common situations.</p><p>For more complex workflows, supported AI Actions can retrieve or update information in connected business systems. A customer might ask about an order, for example, and the agent could use an approved integration to request order status. Teams can test conversations, monitor results and provide human handoff where supported.</p><p>Automated support needs ongoing oversight. Businesses should keep source information current, restrict the agent's access to appropriate data and require review or escalation for sensitive decisions and actions.</p>",
+      "feature_groups": [
+        {
+          "group": "Knowledge-Grounded Customer Answers",
+          "items": [
+            "Agents informed by approved files and website content.",
+            "Custom instructions and plain-language procedures.",
+            "Testing tools and conversation analytics."
+          ]
+        },
+        {
+          "group": "Customer Service Workflows",
+          "items": [
+            "Supported AI Actions for order, booking and information workflows.",
+            "Website and connected messaging-channel deployment.",
+            "Helpdesk and human handoff features on eligible plans."
+          ]
+        },
+        {
+          "group": "Integrations and Administration",
+          "items": [
+            "Business integrations including selected CRM and helpdesk services.",
+            "API and voice capabilities on qualifying subscriptions.",
+            "Advanced reporting, governance and enterprise access options."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Online businesses automating routine product, delivery and returns enquiries.",
+        "Customer service teams connecting an AI assistant to approved operational systems.",
+        "SaaS teams providing answers from product documentation and support resources."
+      ],
+      "notIdealFor": [
+        "Users seeking a permanent free customer-support chatbot subscription.",
+        "Hobby subscribers expecting API access, voice calling or advanced CRM integrations.",
+        "Organisations requiring open-source or self-hosted customer-support infrastructure."
+      ],
+      "workflows": [
+        {
+          "title": "Order and returns assistance",
+          "description": "Configure a support agent to request an order reference, check an approved order data source, explain the relevant return policy and escalate exceptions to a person."
+        },
+        {
+          "title": "Multichannel knowledge support",
+          "description": "Import product and help-centre documentation, test common and difficult customer questions, and deploy the approved agent across supported customer communication channels."
+        },
+        {
+          "title": "Customer issue analysis",
+          "description": "Review support conversations and available analytics to identify repeated questions, missing documentation and topics that require better agent instructions or human intervention."
+        }
+      ],
+      "pros": [
+        "Combines company knowledge with configurable customer-facing AI agents.",
+        "Supports operational actions rather than only static question answering.",
+        "Offers several customer communication channels and integrations.",
+        "Provides testing and analytics for reviewing agent performance."
+      ],
+      "cons": [
+        "No permanent public free subscription is currently advertised.",
+        "API, advanced integrations and voice capabilities require higher plans.",
+        "Message-credit usage can rise when workflows involve multiple model requests.",
+        "Human oversight remains necessary for sensitive decisions and customer complaints."
+      ],
+      "pricing_overview": "<p>Chatbase advertises a <strong>7-day trial</strong> for its paid self-service plans. <strong>Hobby costs $40/month on monthly billing</strong>, or <strong>$32/month when billed annually</strong>, and includes 700 monthly message credits. Hobby supports basic agent capabilities but does <strong>not</strong> include API access, voice/telephony or several advanced helpdesk and CRM integrations.</p><p><strong>Basic costs $150/month</strong>, or <strong>$120/month billed annually</strong>, with 4,000 monthly message credits. It unlocks API access, supported voice functionality, the Chatbase Helpdesk inbox and advanced integrations. <strong>Business costs $500/month</strong>, or <strong>$400/month billed annually</strong>, with 15,000 monthly message credits and additional capacity. Enterprise pricing is negotiated.</p><p>Subscription credits do not roll over, and actions requiring multiple model calls may consume more than one request's worth of credits. Published extras include <strong>$40 per 1,000 additional message credits</strong>, <strong>$25/month for an extra agent</strong>, and <strong>$99/month to remove Chatbase branding</strong>. Buyers should assess total costs using expected message volume, selected models and required integrations.</p>",
+      "comparison_summary": "<p>Choose <strong>Chatbase</strong> when a business needs a managed customer-facing AI agent using its documentation, instructions and connected workflows. Its main appeal is deploying an agent without building the underlying conversational software from scratch.</p><p>Consider <strong>Intercom Fin</strong> when evaluating AI support within a broader customer service platform, <strong>Tidio</strong> for a different live-chat and automation mix, or <strong>Botpress</strong> when more configurable agent-building workflows are important. Compare human escalation, channel access and the effective cost of resolving real customer requests.</p>",
+      "pricingModel": "paid",
+      "hasFreeTier": false,
+      "hasFreeTrial": true,
+      "freeAccessType": "trial_only",
+      "startingPrice": 40,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Hobby",
+      "trialDays": 7,
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "verificationSources": [
+        "https://www.chatbase.co/",
+        "https://www.chatbase.co/pricing"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E0902",
+          "sourceURL": "https://www.chatbase.co/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Chatbase product and pricing pages (https://www.chatbase.co/, https://www.chatbase.co/pricing) reviewed 5-6 November 2026: no permanent public free tier advertised (corrected pricingModel=\"paid\", hasFreeTier=false, freeAccessType=\"trial_only\"); 7-day free trial (trialDays=7) across paid self-serve plans: Hobby ($40/mo monthly or $32/mo billed annually, 700 monthly message credits; excludes API access, voice/telephony and advanced helpdesk/CRM integrations), Basic ($150/mo monthly or $120/mo billed annually, 4,000 monthly message credits; unlocks API access, voice functionality, Chatbase Helpdesk and advanced integrations), Business ($500/mo monthly or $400/mo billed annually, 15,000 credits), non-rollover monthly credits, multi-call AI Action credit consumption, and paid add-ons ($40/1,000 extra credits, $25/mo extra agent, $99/mo branding removal) verified."
+        }
+      ],
+      "freeTierScope": "No recurring free tier; temporary 7-day trial access is advertised for paid self-service plans.",
+      "pricingScope": "Paid self-service plans starting at $40/month on monthly billing ($32/month billed annually) for Hobby with a 7-day trial; API access, voice/telephony, Chatbase Helpdesk and advanced CRM integrations require Basic ($150/month monthly or $120/month billed annually) or higher."
+    },
+    "deepgram": {
+      "shortDescription": "Deepgram provides APIs for speech transcription, generated speech and conversational voice agents, with usage-based billing for developers.",
+      "long_description": "<p>Deepgram is a speech AI infrastructure platform for developers building applications that listen, transcribe, speak or hold automated voice conversations. It provides speech-to-text models, text-to-speech services and a Voice Agent API that combines speech processing with conversational logic.</p><p>Teams use Deepgram for use cases such as live transcription, recorded audio analysis, telephone automation and voice-enabled software. Its API-focused approach gives developers control over how speech capabilities are integrated into their own applications.</p><p>Deepgram offers a pay-as-you-go entry model with a one-time introductory credit rather than a recurring free usage allowance. Costs depend on which services, models and optional features are used, and Enterprise customers can discuss dedicated deployment requirements.</p>",
+      "sourceSummary": "Research-based profile using Deepgram's official pricing, product and self-hosting documentation reviewed on 5–6 November 2026. Published technical specifications are vendor-reported; no independent accuracy, latency or reliability benchmarks are claimed.",
+      "how_it_works": "<p>An application sends recorded or streaming audio to Deepgram's speech recognition API. Deepgram returns recognised text using the selected model and options. Developers can add capabilities such as speaker diarization, formatting or supported redaction where appropriate.</p><p>For speech output, an application sends text to a Deepgram text-to-speech service and receives generated audio. The Voice Agent API supports an integrated conversational process involving speech recognition, language-model reasoning, tool use and speech generation.</p><p>Deepgram charges according to service-specific usage units, including processed audio duration, text characters or voice-agent connection time. Additional options and multiple audio channels can increase charges, so developers should review billing calculations and processing settings before scaling production workloads.</p>",
+      "feature_groups": [
+        {
+          "group": "Speech Recognition",
+          "items": [
+            "Streaming and pre-recorded speech-to-text APIs.",
+            "Flux and Nova model options for supported use cases.",
+            "Optional speaker diarization, formatting, redaction and related features."
+          ]
+        },
+        {
+          "group": "Speech Generation and Voice Agents",
+          "items": [
+            "Text-to-speech through supported Aura and Flux models.",
+            "Voice Agent API for conversational application development.",
+            "Integration with external application logic and supported model configurations."
+          ]
+        },
+        {
+          "group": "Developer and Enterprise Infrastructure",
+          "items": [
+            "APIs and documentation for custom software integration.",
+            "Audio analysis features and usage-based billing.",
+            "Enterprise self-hosted deployment options using supported GPU infrastructure."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Software developers adding speech recognition or generated voice to applications.",
+        "Contact-centre platforms analysing recorded or live customer conversations.",
+        "Enterprises needing configurable speech APIs and potential private infrastructure deployment."
+      ],
+      "notIdealFor": [
+        "Consumers seeking a finished meeting-notes or podcast-editing application.",
+        "Users expecting a fresh allocation of free API credits every month.",
+        "Teams unable to estimate audio-channel, add-on and connection-duration costs."
+      ],
+      "workflows": [
+        {
+          "title": "Real-time voice application",
+          "description": "Stream incoming audio to Deepgram, process the recognised speech within an application's conversation logic, and return a generated spoken response through the selected voice service."
+        },
+        {
+          "title": "Recorded call analysis",
+          "description": "Transcribe customer calls, use supported options to distinguish speakers or redact selected information, and generate structured summaries for an authorised support or quality-assurance workflow."
+        },
+        {
+          "title": "Enterprise speech deployment",
+          "description": "Evaluate Deepgram's self-hosted container requirements, provision compatible GPU infrastructure and integrate speech services into an approved private environment."
+        }
+      ],
+      "pros": [
+        "Covers transcription, generated speech and voice-agent development.",
+        "Supports streaming and recorded audio workflows.",
+        "Offers a one-time introductory credit with no monthly platform minimum.",
+        "Provides enterprise deployment and data-handling options."
+      ],
+      "cons": [
+        "Most use cases require software development and API integration.",
+        "The introductory $200 credit does not renew monthly.",
+        "Multichannel audio and optional recognition features can increase usage bills.",
+        "Enterprise self-hosted deployment requires commercial arrangements and suitable GPU infrastructure."
+      ],
+      "pricing_overview": "<p>Deepgram's <strong>Pay As You Go plan has no monthly platform minimum</strong> and includes a <strong>one-time $200 introductory credit</strong> that the vendor states does not expire. Usage is billed after credits are consumed. <strong>Growth starts from $4,000 per year in prepaid credits</strong>, with eligible discounted rates, while Enterprise offers negotiated commercial and deployment terms.</p><p>For speech recognition, published Pay As You Go examples include <strong>$0.0077 per minute for Flux STT English</strong> and <strong>$0.0077 per minute for Nova-3 monolingual streaming</strong>, with a lower published rate for selected prerecorded transcription. Audio is generally billed by processed duration, with multichannel recordings charged according to the combined duration across channels. Optional diarization, redaction and similar features may add separate charges.</p><p>Text-to-speech uses character-based billing, and the Voice Agent API uses connection-time billing. Deepgram's prices vary by model and configuration, so comparisons should use a complete estimated workload rather than treating one speech-to-text rate as the price of an entire voice-agent application.</p>",
+      "comparison_summary": "<p>Choose <strong>Deepgram</strong> when the priority is integrating speech recognition, speech generation or voice-agent services into existing applications. It is particularly relevant when a team wants to compare speech-model rates and retain flexibility over application architecture.</p><p>Consider <strong>Cartesia</strong> for another developer-oriented speech and managed-agent stack, <strong>AssemblyAI</strong> for transcription and speech analysis APIs, or <strong>Bland AI</strong> for a more integrated business telephony automation platform. The relevant decision depends on speech features, integration effort, data-handling requirements and total usage costs.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": true,
+      "freeAccessType": "one_time_credits",
+      "startingPrice": null,
+      "priceCurrency": null,
+      "billingPeriod": null,
+      "startingPlan": null,
+      "trialDays": null,
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "verificationSources": [
+        "https://deepgram.com/",
+        "https://deepgram.com/pricing",
+        "https://developers.deepgram.com/docs/self-hosted-introduction",
+        "https://deepgram.com/privacy"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E0483",
+          "sourceURL": "https://deepgram.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Deepgram pricing and privacy documentation (https://deepgram.com/, https://deepgram.com/pricing, https://deepgram.com/privacy) reviewed 5-6 November 2026: Pay As You Go ($0 monthly minimum, one-time $200 non-expiring introductory credit; freeAccessType=\"one_time_credits\", startingPrice=null preserved), Growth ($4,000+/yr prepaid credits), Enterprise custom terms, published PAYG speech recognition rates ($0.0077/min for Flux STT English and Nova-3 monolingual streaming, lower prerecorded rates), per-channel multichannel audio billing, optional add-on feature charges (diarization, redaction), character-billed TTS (Aura/Flux) and connection-time-billed Voice Agent API verified."
+        },
+        {
+          "evidenceId": "E0484",
+          "sourceURL": "https://developers.deepgram.com/docs/self-hosted-introduction",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Deepgram self-hosted container documentation (https://developers.deepgram.com/docs/self-hosted-introduction) reviewed 5-6 November 2026: Enterprise-gated self-hosted container deployment on customer-managed GPU infrastructure (deploymentModes=[\"cloud\", \"self_hosted_enterprise\"], openSource=false, selfHosted=true) verified without claiming independent accuracy or latency benchmarks."
+        }
+      ]
+    }
+  }
+}
