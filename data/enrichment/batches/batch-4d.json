@@ -193,7 +193,7 @@
       "billingPeriod": "month",
       "startingPlan": "Free",
       "trialDays": null,
-      "freeTierScope": null,
+      "freeTierScope": "Free development environment with full connector access, MCP tools, and daily compute credit allowances",
       "pricingScope": "$0 Free development tier with MCP and connector access; Startup plan at $99/month billed annually ($150/month monthly) for production external user deployments",
       "apiAvailable": true,
       "platforms": [
@@ -202,7 +202,7 @@
       "verificationSources": [
         "https://pipedream.com/",
         "https://pipedream.com/pricing",
-        "https://pipedream.com/docs/"
+        "https://pipedream.com/docs"
       ],
       "evidence": [
         {
@@ -292,7 +292,7 @@
       "billingPeriod": "month",
       "startingPlan": "Free",
       "trialDays": null,
-      "freeTierScope": null,
+      "freeTierScope": "1 browser hour per month with 3 concurrent browsers and 15-minute max session duration",
       "pricingScope": "$0 Free tier includes 1 browser hour and 3 concurrent browsers; Developer plan at $20/month includes 100 browser hours ($0.12/hour overage)",
       "apiAvailable": true,
       "platforms": [
@@ -300,12 +300,13 @@
       ],
       "verificationSources": [
         "https://www.browserbase.com/",
-        "https://docs.browserbase.com/"
+        "https://www.browserbase.com/pricing",
+        "https://docs.browserbase.com/welcome/introduction"
       ],
       "evidence": [
         {
           "evidenceId": "E1334",
-          "sourceURL": "https://www.browserbase.com/",
+          "sourceURL": "https://www.browserbase.com/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
           "finding": "Official Browserbase product and pricing specifications reviewed 6 November 2026: Free tier ($0/month) includes 1 browser hour, 3 concurrent browser sessions, and 15-minute session timeout; Developer tier ($20/month) includes 100 browser hours ($0.12/hour overage) and 25 concurrent sessions; Startup tier ($99/month) includes 500 browser hours ($0.10/hour overage) and 100 concurrent sessions; Playwright, Puppeteer, Selenium, and Stagehand compatibility verified."
@@ -390,7 +391,7 @@
       "billingPeriod": "month",
       "startingPlan": "Basic",
       "trialDays": null,
-      "freeTierScope": null,
+      "freeTierScope": "Unlimited meetings and local transcription with a rolling 30-day meeting history window",
       "pricingScope": "$0 Basic tier includes unlimited meetings and bot-free transcription with a 30-day note history window; Business tier at $14/user/month unlocks unlimited history and CRM integrations",
       "apiAvailable": true,
       "platforms": [
@@ -400,13 +401,13 @@
         "android"
       ],
       "verificationSources": [
-        "https://granola.ai/",
-        "https://granola.ai/pricing"
+        "https://www.granola.ai/",
+        "https://www.granola.ai/pricing"
       ],
       "evidence": [
         {
           "evidenceId": "E1335",
-          "sourceURL": "https://granola.ai/pricing",
+          "sourceURL": "https://www.granola.ai/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
           "finding": "Official Granola product and pricing documentation reviewed 6 November 2026: Basic plan ($0/month) includes unlimited meetings, transcription, and bot-free audio capture with a rolling 30-day history window; Business plan ($14/user/month) unlocks unlimited history, advanced reasoning models, Notion/HubSpot integrations, and MCP/API access; Enterprise tier ($35/user/month) provides SSO and SCIM; native desktop apps for macOS and Windows, plus iOS/Android mobile apps verified."
@@ -491,7 +492,7 @@
       "billingPeriod": "usage",
       "startingPlan": "Free",
       "trialDays": null,
-      "freeTierScope": null,
+      "freeTierScope": "Free developer tier with organization rate limits (RPM, TPM, TPD) across supported models",
       "pricingScope": "$0 Free developer tier with standing organization rate limits; Pay-As-You-Go metered per 1M tokens with prompt caching and 50% batch discounts",
       "apiAvailable": true,
       "platforms": [
@@ -500,7 +501,7 @@
       ],
       "verificationSources": [
         "https://groq.com/",
-        "https://console.groq.com/docs",
+        "https://console.groq.com/docs/overview",
         "https://console.groq.com/docs/models",
         "https://console.groq.com/docs/rate-limits"
       ],
@@ -592,7 +593,7 @@
       "billingPeriod": "month",
       "startingPlan": "Raycast Free",
       "trialDays": 7,
-      "freeTierScope": null,
+      "freeTierScope": "Permanent free desktop launcher, window management, snippets, and open extension store (AI excluded)",
       "pricingScope": "$0 Raycast Free includes core launcher and extensions; Raycast Pro at $8/month billed annually ($10/month monthly) includes 500 AI credits, cloud sync, and clipboard history",
       "apiAvailable": true,
       "platforms": [
@@ -690,7 +691,7 @@
       "hasFreeTrial": false,
       "freeAccessType": "none",
       "startingPrice": null,
-      "priceCurrency": "USD",
+      "priceCurrency": null,
       "billingPeriod": null,
       "startingPlan": "Enterprise",
       "trialDays": null,
@@ -706,13 +707,13 @@
       ],
       "verificationSources": [
         "https://www.glean.com/",
-        "https://www.glean.com/product",
-        "https://help.glean.com/"
+        "https://www.glean.com/platform",
+        "https://docs.glean.com/"
       ],
       "evidence": [
         {
           "evidenceId": "E1338",
-          "sourceURL": "https://www.glean.com/product",
+          "sourceURL": "https://www.glean.com/platform",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
           "finding": "Official Glean product and enterprise architecture documentation reviewed 6 November 2026: Enterprise sales-led model with custom annual invoicing confirmed; no public pricing card or self-serve trial available; permission-aware indexing with continuous ACL synchronization across 100+ workplace SaaS tools; SAML SSO, SOC 2 compliance, and Glean Apps custom agent studio verified."
@@ -797,7 +798,7 @@
       "billingPeriod": "month",
       "startingPlan": "Researcher",
       "trialDays": null,
-      "freeTierScope": null,
+      "freeTierScope": "1,000 API credits per month with 100 requests per minute rate limit",
       "pricingScope": "$0 Researcher plan includes 1,000 free API credits/month; Project plan at $30/month includes 4,000 credits ($0.0075/credit); Pay-As-You-Go available at $0.008/credit",
       "apiAvailable": true,
       "platforms": [
@@ -805,14 +806,14 @@
         "api"
       ],
       "verificationSources": [
-        "https://tavily.com/",
-        "https://tavily.com/pricing",
+        "https://www.tavily.com/",
+        "https://www.tavily.com/pricing",
         "https://docs.tavily.com/"
       ],
       "evidence": [
         {
           "evidenceId": "E1339",
-          "sourceURL": "https://tavily.com/pricing",
+          "sourceURL": "https://www.tavily.com/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
           "finding": "Official Tavily pricing and API documentation reviewed 6 November 2026: Free Researcher tier ($0/month) includes 1,000 recurring monthly API credits with 100 RPM limit without credit card; Project tier ($30/month) provides 4,000 credits ($0.0075/credit); Bootstrap ($100/month) provides 15,000 credits; Startup ($220/month) provides 38,000 credits; Pay-As-You-Go available at $0.008/credit; basic search (1 credit), advanced search (2 credits), and extract (1 credit per 5 URLs) consumption rules verified."
@@ -906,7 +907,7 @@
       ],
       "verificationSources": [
         "https://www.augmentcode.com/",
-        "https://docs.augmentcode.com/"
+        "https://docs.augmentcode.com/introduction"
       ],
       "evidence": [
         {
