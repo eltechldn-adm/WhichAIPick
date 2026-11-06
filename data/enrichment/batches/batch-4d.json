@@ -231,8 +231,8 @@
         {
           "group": "Anti-Bot & Stealth Capabilities",
           "items": [
-            "Advanced browser fingerprint evasion to navigate modern dynamic web applications without bot detection.",
-            "Automated CAPTCHA solving capabilities integrated directly into remote session execution.",
+            "Managed stealth mode on Developer and Startup plans to navigate dynamic web pages without bot detection.",
+            "Automated CAPTCHA solving capabilities integrated into remote session execution on paid plans.",
             "Managed residential and datacenter proxy rotation with geographic IP targeting options."
           ]
         },
@@ -272,16 +272,16 @@
       "pros": [
         "Eliminates the operational overhead of running, scaling, and maintaining headless Chromium clusters.",
         "Seamless drop-in compatibility with established automation libraries like Playwright, Puppeteer, and Selenium.",
-        "Provides built-in stealth features, proxy rotation, and CAPTCHA solving to overcome common scraping obstacles.",
+        "Paid plans (Developer and Startup) include built-in stealth mode and CAPTCHA solving to overcome scraping blocks.",
         "Detailed session recordings and network logs simplify debugging non-deterministic agent interactions."
       ],
       "cons": [
-        "Free tier is strictly limited to 1 browser hour per month with a 15-minute maximum session duration.",
-        "Connecting over remote WebSockets introduces slight latency compared to running local browser processes.",
+        "Free tier strictly excludes CAPTCHA solving and stealth mode, limiting unassisted scraping of bot-protected sites.",
+        "Free tier is restricted to 1 browser hour per month with a 15-minute session timeout and 7-day data retention.",
         "High-volume scraping with residential proxy bandwidth and heavy CAPTCHA solving incurs variable usage charges.",
-        "Requires software engineering expertise in browser automation frameworks to build and maintain scripts."
+        "Connecting over remote WebSockets introduces slight latency compared to running local browser processes."
       ],
-      "pricing_overview": "<p>Browserbase uses a tiered subscription model combined with usage-based overage rates for browser hours. The Free tier costs $0/month and includes 1 browser hour per month, support for up to 3 concurrent browsers, a 15-minute maximum session duration limit, and 7-day data retention. The Developer plan is priced at $20/month, providing 100 browser hours per month, up to 25 concurrent browser sessions, and a 6-hour session duration limit, with additional browser hours billed at $0.12/hour. The Startup plan costs $99/month, including 500 browser hours per month, up to 100 concurrent browsers, and a 6-hour session limit, with overage billed at $0.10/hour. Custom Scale plans are available for enterprise organizations requiring 250+ concurrent sessions, dedicated proxies, custom data retention, and enterprise service level agreements. Residential proxy bandwidth and advanced CAPTCHA solving incur additional consumption charges based on volume.</p>",
+      "pricing_overview": "<p>Browserbase uses a tiered subscription model combined with usage-based overage rates for browser hours. The Free tier costs $0/month and includes 1 browser hour per month, support for up to 3 concurrent browsers, a 15-minute maximum session duration limit, and 7-day data retention, but excludes automated CAPTCHA solving and stealth mode. The Developer plan is priced at $20/month, providing 100 browser hours per month, up to 25 concurrent browser sessions, a 6-hour session duration limit, 30-day data retention, automated CAPTCHA solving, and basic stealth mode, with additional browser hours billed at $0.12/hour. The Startup plan costs $99/month, including 500 browser hours per month, up to 100 concurrent browsers, a 6-hour session limit, 30-day retention, CAPTCHA solving, and basic stealth mode, with overage billed at $0.10/hour. Custom Scale plans offer 250+ concurrent sessions, advanced stealth mode, dedicated proxies, and custom retention SLAs. Residential proxy bandwidth and model gateway requests incur separate usage charges.</p>",
       "comparison_summary": "<p>Unlike traditional cloud test grids like BrowserStack and Sauce Labs that focus on manual cross-browser compatibility testing, Browserbase is purpose-built for programmatic AI agents and web automation. Compared to self-hosted Puppeteer clusters or scraping platforms like Apify, Browserbase provides managed stealth infrastructure, session replays, and Stagehand integration with standard Playwright API compatibility.</p>",
       "pricingModel": "freemium",
       "hasFreeTier": true,
@@ -292,8 +292,8 @@
       "billingPeriod": "month",
       "startingPlan": "Free",
       "trialDays": null,
-      "freeTierScope": "1 browser hour per month with 3 concurrent browsers and 15-minute max session duration",
-      "pricingScope": "$0 Free tier includes 1 browser hour and 3 concurrent browsers; Developer plan at $20/month includes 100 browser hours ($0.12/hour overage)",
+      "freeTierScope": "1 browser hour per month with 3 concurrent browsers and 15-minute session limit (excludes CAPTCHA solving and stealth mode)",
+      "pricingScope": "$0 Free tier includes 1 browser hour and 3 concurrent browsers (excludes CAPTCHA solving and stealth mode); Developer plan at $20/month includes 100 hours with CAPTCHA solving and stealth mode",
       "apiAvailable": true,
       "platforms": [
         "web"
@@ -309,38 +309,38 @@
           "sourceURL": "https://www.browserbase.com/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
-          "finding": "Official Browserbase product and pricing specifications reviewed 6 November 2026: Free tier ($0/month) includes 1 browser hour, 3 concurrent browser sessions, and 15-minute session timeout; Developer tier ($20/month) includes 100 browser hours ($0.12/hour overage) and 25 concurrent sessions; Startup tier ($99/month) includes 500 browser hours ($0.10/hour overage) and 100 concurrent sessions; Playwright, Puppeteer, Selenium, and Stagehand compatibility verified."
+          "finding": "Official Browserbase product and pricing specifications reviewed 6 November 2026: Free tier ($0/month) includes 1 browser hour, 3 concurrent browser sessions, and 15-minute session timeout, excluding CAPTCHA solving and stealth mode; Developer tier ($20/month) includes 100 browser hours ($0.12/hour overage), 25 concurrent sessions, CAPTCHA solving, and basic stealth mode; Startup tier ($99/month) includes 500 browser hours ($0.10/hour overage), 100 concurrent sessions, CAPTCHA solving, and basic stealth mode; Playwright and Stagehand compatibility verified."
         }
       ]
     },
     "granola": {
-      "shortDescription": "Human-in-the-loop AI meeting notepad that transcribes audio locally without inviting a bot.",
-      "long_description": "<p>Granola is an artificial intelligence meeting notepad application designed for founders, product managers, designers, consultants, and professionals who participate in frequent collaborative calls. Traditional meeting transcription tools typically rely on automated video bots that join calls as external participants, which can introduce social friction, distract meeting attendees, or violate internal organizational policies. Granola bypasses this limitation by capturing system audio and microphone input directly on the user's local operating system.</p>\n<p>The platform takes a human-in-the-loop approach to meeting documentation. During a call, the user types shorthand notes, key bullet points, or customer reactions in a clean note-taking interface. Concurrently, Granola transcribes the spoken conversation in the background. Following the call, the application combines the user's handwritten notes with the audio transcript, using artificial intelligence models to expand shorthand bullets into structured, coherent meeting summaries that retain the author's voice and intent.</p>\n<p>Granola provides native desktop applications for macOS and Windows, as well as mobile companion apps for iOS and Android. It includes conversational chat capabilities allowing users to query discussions across individual meetings or historical call archives. By keeping audio capture local and emphasizing user-guided notes, Granola balances automated transcription accuracy with authentic human editorial perspective.</p>",
-      "sourceSummary": "Research-based profile using Granola's official pricing, platform availability and product documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent transcription accuracy benchmarks are claimed.",
-      "how_it_works": "<p>A user installs the native Granola desktop application on macOS or Windows and connects their digital calendar. When a meeting begins on Zoom, Google Meet, Microsoft Teams, or Slack, the user starts recording with a single click. Granola captures local microphone input and internal computer audio directly through system audio loopback without sending an external bot into the call.</p>\n<p>While the conversation takes place, the user types quick bullet points or notes inside the editor. In the background, speech-to-text models process the incoming audio stream. Once the call concludes, the user clicks to generate notes, and Granola synthesizes the typed bullets with the verbatim transcript, applying custom templates to produce structured summaries, key takeaways, and action items.</p>\n<p>Users can edit the generated notes, share formatted summaries to Slack, or ask natural language questions in an interactive side panel to extract quotes or clarify details. In accordance with platform privacy practices, original audio recordings are automatically deleted after transcription is complete across all subscription tiers.</p>",
+      "shortDescription": "AI meeting notepad capturing device audio locally with secure cloud transcription and human-in-the-loop synthesis.",
+      "long_description": "<p>Granola is an artificial intelligence meeting notepad application designed for founders, product managers, designers, consultants, and professionals who participate in frequent collaborative calls. Traditional meeting transcription tools typically rely on automated video bots that join calls as external participants, which can introduce social friction, distract meeting attendees, or violate internal organizational policies. Granola bypasses this limitation by capturing system audio and microphone input directly on the user's local operating system, eliminating the need to deploy meeting bots into calls.</p>\n<p>The platform takes a human-in-the-loop approach to meeting documentation. During a call, the user types shorthand notes, key bullet points, or customer reactions in a clean note-taking interface. While device audio capture occurs locally on the user's machine, speech-to-text transcription and generative AI synthesis are processed via secure cloud infrastructure. Following the call, Granola combines the user's typed notes with the cloud transcript, applying AI models to expand shorthand bullets into structured, coherent meeting summaries that preserve the author's authentic voice and intent.</p>\n<p>Granola provides native desktop applications for macOS and Windows, as well as mobile companion apps for iOS and Android. It includes conversational chat capabilities and Model Context Protocol (MCP) integrations with Claude and ChatGPT, enabling users to query recent 30-day personal notes on the Basic plan or full workspace archives on Business tiers. In accordance with platform privacy practices, original audio recordings are automatically deleted after cloud transcription is complete across all subscription tiers.</p>",
+      "sourceSummary": "Research-based profile using Granola's official pricing, security and product documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent transcription accuracy benchmarks are claimed.",
+      "how_it_works": "<p>A user installs the native Granola desktop application on macOS or Windows and connects their digital calendar. When a meeting begins on Zoom, Google Meet, Microsoft Teams, or Slack, the user starts recording with a single click. Granola captures local microphone input and internal computer audio directly through device audio loopback without sending an external bot into the call. Captured audio streams are securely transmitted to cloud services for automated speech-to-text processing.</p>\n<p>While the conversation takes place, the user types quick bullet points or notes inside the editor. In the cloud, speech-to-text models process the incoming audio stream into a verbatim transcript. Once the call concludes, Granola synthesizes the typed bullets with the transcript, applying custom templates to produce structured summaries, key takeaways, and action items. Once transcription and note generation are complete, the underlying audio recording is permanently deleted from servers.</p>\n<p>Users can review and edit generated notes, share formatted summaries to Slack, or query discussions via interactive side panels. Teams can connect Granola to Claude or ChatGPT via the Model Context Protocol (MCP) to query recent 30-day personal notes on the free Basic tier, or access full workspace archives and dedicated developer API endpoints on the paid Business tier.</p>",
       "feature_groups": [
         {
-          "group": "Bot-Free Audio Capture",
+          "group": "Device Audio Capture & Cloud Transcription",
           "items": [
-            "Direct system and microphone audio capture on macOS and Windows without external meeting bots.",
-            "Compatible with major video conferencing tools including Zoom, Google Meet, Microsoft Teams, and Slack.",
-            "Automatic audio deletion following transcription processing to ensure participant privacy."
+            "Direct device microphone and system audio capture on macOS and Windows without external meeting bots.",
+            "Secure cloud speech-to-text transcription with automatic audio file deletion after processing.",
+            "Compatible with major conferencing tools including Zoom, Google Meet, Microsoft Teams, and Slack."
           ]
         },
         {
           "group": "Human-in-the-Loop Note Synthesis",
           "items": [
-            "Editor merging user-typed shorthand notes with verbatim audio transcripts for enhanced accuracy.",
+            "Editor merging user-typed shorthand notes with verbatim cloud transcripts for authentic summaries.",
             "Customizable note-taking templates for customer discovery, 1:1 meetings, sprint syncs, and interviews.",
             "Conversational AI chat allowing users to query transcripts and extract specific meeting decisions."
           ]
         },
         {
-          "group": "Cross-Platform & Workflows",
+          "group": "MCP Integrations & Workspace Knowledge",
           "items": [
-            "Native desktop applications for macOS and Windows, complemented by iOS and Android mobile apps.",
-            "Export and sharing integrations with Slack, Notion, HubSpot, Attio, Affinity, and Zapier.",
-            "Model Context Protocol (MCP) and developer API access available on Business subscription tiers."
+            "Model Context Protocol (MCP) integration querying personal notes from the last 30 days on Basic.",
+            "Business plan expands MCP to full workspace history and unlocks dedicated developer API access.",
+            "Export and sharing integrations with Slack, Notion, HubSpot, Attio, Affinity, and Zapier."
           ]
         }
       ],
@@ -369,18 +369,18 @@
         }
       ],
       "pros": [
-        "Captures internal system audio locally without deploying an intrusive bot into video conference calls.",
+        "Captures internal audio directly on the user device without deploying an intrusive bot into video conference calls.",
         "Synthesizes user-typed notes with speech transcripts to maintain human perspective and context.",
-        "Free plan allows unlimited meetings and transcriptions without rigid minute or call limits.",
-        "Cross-platform availability with native desktop apps for macOS and Windows, plus mobile access."
+        "Free plan allows unlimited meetings and transcriptions without rigid monthly call duration caps.",
+        "Supports Model Context Protocol (MCP) integration with ChatGPT and Claude even on the free Basic tier."
       ],
       "cons": [
-        "Free plan limits in-app note visibility to a rolling 30-day window, locking older notes until upgrading.",
-        "Advanced CRM integrations (Notion, HubSpot, Attio) and MCP access require a paid Business plan.",
-        "Does not record video feeds or captured screen shares, focusing strictly on audio and text notes.",
-        "Requires running the desktop application locally to capture meeting audio streams."
+        "Audio transcription and AI note synthesis require cloud processing and cannot operate in offline mode.",
+        "Basic plan limits in-app note visibility and MCP queries to a rolling 30-day historical window.",
+        "Developer API access and advanced CRM integrations (Notion, HubSpot, Attio) require a paid Business plan.",
+        "Focuses strictly on audio and text notes, without recording visual video feeds or shared screens."
       ],
-      "pricing_overview": "<p>Granola offers a freemium pricing structure split into Basic, Business, and Enterprise plans. The Basic plan is completely free ($0/month) and includes unlimited meetings, transcriptions, bot-free audio capture, AI chat within meetings, custom templates, and Slack integration; however, it limits in-app history visibility to a rolling 30-day window. The Business plan costs $14/user/month and unlocks unlimited meeting history, advanced AI reasoning models, Model Context Protocol (MCP) and API access, and workflow integrations with Notion, HubSpot, Attio, Affinity, and Zapier. The Enterprise plan starts at $35/user/month, adding administrative controls, Single Sign-On (SSO), SCIM provisioning, organization-wide auto-deletion schedules, priority support, and team-wide opt-outs for AI model training. Audio recordings are automatically deleted after transcription across all tiers.</p>",
+      "pricing_overview": "<p>Granola offers a freemium pricing structure split into Basic, Business, and Enterprise tiers. The Basic plan is completely free ($0/month) and includes unlimited meetings, device audio capture, cloud transcription, in-meeting AI chat, custom templates, Slack integration, and Model Context Protocol (MCP) access to personal notes from the last 30 days; however, in-app note visibility is constrained to that rolling 30-day window. The Business plan costs $14/user/month and unlocks unlimited meeting history, advanced AI reasoning models, expanded MCP access across personal and workspace notes, full developer API access, and workflow integrations with Notion, HubSpot, Attio, Affinity, and Zapier. The Enterprise plan starts at $35/user/month, adding administrative controls for MCP and APIs, Single Sign-On (SSO), SCIM provisioning, organization-wide auto-deletion schedules, priority support, and team-wide opt-outs for AI model training. Device audio recordings are automatically deleted after cloud transcription is complete across all tiers.</p>",
       "comparison_summary": "<p>Unlike traditional AI meeting assistants like Otter.ai, Fireflies.ai, and Fathom that send visible bot participants into calls, Granola captures audio locally on the host machine with zero bot presence. Compared to basic transcription utilities, Granola prioritizes human-in-the-loop note taking by combining user-typed bullet points with underlying transcripts to generate summaries that reflect the author's authentic perspective.</p>",
       "pricingModel": "freemium",
       "hasFreeTier": true,
@@ -391,8 +391,8 @@
       "billingPeriod": "month",
       "startingPlan": "Basic",
       "trialDays": null,
-      "freeTierScope": "Unlimited meetings and local transcription with a rolling 30-day meeting history window",
-      "pricingScope": "$0 Basic tier includes unlimited meetings and bot-free transcription with a 30-day note history window; Business tier at $14/user/month unlocks unlimited history and CRM integrations",
+      "freeTierScope": "Unlimited meetings and cloud transcription with a rolling 30-day history window and 30-day MCP query access",
+      "pricingScope": "$0 Basic tier includes unlimited meetings with a 30-day history window and 30-day MCP note queries; Business tier at $14/user/month unlocks unlimited history, workspace MCP, and API access",
       "apiAvailable": true,
       "platforms": [
         "macos",
@@ -402,7 +402,9 @@
       ],
       "verificationSources": [
         "https://www.granola.ai/",
-        "https://www.granola.ai/pricing"
+        "https://www.granola.ai/pricing",
+        "https://www.granola.ai/security",
+        "https://www.granola.ai/blog/local-first-ai-notetaker-vs-cloud"
       ],
       "evidence": [
         {
@@ -410,7 +412,7 @@
           "sourceURL": "https://www.granola.ai/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
-          "finding": "Official Granola product and pricing documentation reviewed 6 November 2026: Basic plan ($0/month) includes unlimited meetings, transcription, and bot-free audio capture with a rolling 30-day history window; Business plan ($14/user/month) unlocks unlimited history, advanced reasoning models, Notion/HubSpot integrations, and MCP/API access; Enterprise tier ($35/user/month) provides SSO and SCIM; native desktop apps for macOS and Windows, plus iOS/Android mobile apps verified."
+          "finding": "Official Granola product, security, and pricing documentation reviewed 6 November 2026: Device audio capture is local while transcription and AI summaries run in secure cloud; audio files auto-deleted after processing; Basic plan ($0/month) includes unlimited meetings and 30-day history/MCP window; Business plan ($14/user/month) unlocks unlimited history, workspace MCP, and API access; Enterprise tier ($35/user/month) provides SSO and SCIM."
         }
       ]
     },
@@ -821,33 +823,33 @@
       ]
     },
     "augment-code": {
-      "shortDescription": "AI coding assistant and agent built on proprietary Context Engine for large-scale codebases.",
-      "long_description": "<p>Augment Code is an artificial intelligence developer platform and coding assistant designed for professional software engineers, engineering managers, and technical enterprises working on large, complex codebases. While standard AI coding tools rely on limited local context windows or simple file indexing, Augment Code utilizes a proprietary Context Engine engineered to continuously index and understand multi-million-line monolithic repositories, private APIs, internal dependencies, and cross-service architectural relationships.</p>\n<p>The platform integrates directly into developer integrated development environments (IDEs) including Visual Studio Code and JetBrains tools such as IntelliJ, PyCharm, and WebStorm. Augment Code provides context-aware inline code completion, multi-file code editing, and an interactive chat interface that references actual codebase entities. Because its Context Engine maintains a global understanding of the repository, suggestions adhere accurately to existing internal coding conventions, private frameworks, and architectural design patterns.</p>\n<p>Augment Code is engineered with strict enterprise data privacy and security protections, holding SOC 2 Type II compliance and enforcing policies that guarantee customer source code is never used to train foundational AI models. By solving the context limitations that typically cause AI coding tools to hallucinate or write incompatible code in large repositories, Augment Code serves as a production-grade coding copilot for professional engineering organizations.</p>",
-      "sourceSummary": "Research-based profile using Augment Code's official pricing, documentation and developer setup resources reviewed on 6 November 2026. Published specifications are vendor-reported; no independent code completion acceptance or speed benchmarks are claimed.",
-      "how_it_works": "<p>A developer installs the Augment Code extension within VS Code or a JetBrains IDE and authenticates their account. The platform connects to the developer's Git repository, and its cloud Context Engine begins indexing the codebase, parsing abstract syntax trees, symbol references, and cross-file relationships into a semantic index.</p>\n<p>As the developer writes code, Augment Code evaluates cursor position, open files, and relevant codebase dependencies in real time, delivering multiline inline suggestions that fit the existing codebase style. When using the chat panel, developers can ask questions about architectural patterns, ask for refactoring plans, or request multi-file feature implementations.</p>\n<p>Augment Code presents suggested edits as clean diffs directly inside the IDE editor. Developers can review, accept, or modify proposed changes across files before committing to Git. Monthly usage is managed through credit allocations, with credit consumption tracked across chat queries, code edits, and context indexing operations.</p>",
+      "shortDescription": "Software development platform and coding agent powered by a whole-repository Context Engine and Cosmos sandboxes.",
+      "long_description": "<p>Augment Code is an artificial intelligence developer platform and coding assistant designed for professional software engineers, engineering managers, and technical enterprises working on large, complex codebases. While standard AI coding tools rely on limited local context windows or simple file indexing, Augment Code utilizes a proprietary Context Engine engineered to continuously index and understand multi-million-line monolithic repositories, private APIs, internal dependencies, and cross-service architectural relationships.</p>\n<p>The platform integrates directly into developer integrated development environments (IDEs) including Visual Studio Code and JetBrains tools such as IntelliJ, PyCharm, and WebStorm, complemented by the Auggie CLI and the Cosmos cloud compute execution environment. Augment Code provides context-aware inline code completion, multi-file code editing, and an interactive chat interface that references actual codebase entities, internal libraries, and private architectural design patterns.</p>\n<p>Augment Code is engineered with strict enterprise data privacy and security protections, holding SOC 2 Type II certification, CMEK and ISO 42001 compliance options, and enforcing policies that guarantee customer source code is never used to train foundational AI models. By combining whole-codebase context with transparent token-based billing across models, compute, and service fees, Augment Code serves as a production-grade coding copilot for professional engineering organizations.</p>",
+      "sourceSummary": "Research-based profile using Augment Code's official pricing, token-based billing and developer documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent code completion acceptance or speed benchmarks are claimed.",
+      "how_it_works": "<p>A developer installs the Augment Code extension within VS Code or a JetBrains IDE and authenticates their account. The platform connects to the developer's Git repository, and its cloud Context Engine begins indexing the codebase, parsing abstract syntax trees, symbol references, and cross-file relationships into a semantic index.</p>\n<p>As the developer writes code, Augment Code evaluates cursor position, open files, and relevant codebase dependencies in real time, delivering multiline inline suggestions that fit the existing codebase style. When using the chat panel or Auggie CLI, developers can ask questions about architectural patterns, ask for refactoring plans, or dispatch autonomous tasks to Cosmos cloud sandboxes.</p>\n<p>Augment Code presents suggested edits as clean diffs directly inside the IDE editor. Developers can review, accept, or modify proposed changes across files before committing to Git. Monthly usage is tracked in real dollars, drawing from included usage allowances across model token fees, Cosmos compute time, and the platform service fee.</p>",
       "feature_groups": [
         {
           "group": "Proprietary Context Engine",
           "items": [
             "Global codebase indexing engineered to understand large repositories with millions of lines of code.",
-            "Continuous synchronization tracking code changes across branches, private libraries, and dependencies.",
-            "Accurate dependency mapping ensuring suggestions conform to existing project architecture."
+            "Continuous synchronization tracking code changes across branches, private libraries, and internal APIs.",
+            "Accurate dependency mapping ensuring generated code conforms to existing project architecture."
           ]
         },
         {
-          "group": "IDE Integration & Editing",
+          "group": "Cosmos Compute & Developer Tooling",
           "items": [
-            "Native extensions supporting Visual Studio Code and JetBrains IDEs (IntelliJ, PyCharm, WebStorm).",
-            "Context-aware inline code autocomplete delivering multiline function and logic suggestions.",
-            "Multi-file code editing capabilities generating coordinated refactoring diffs across project files."
+            "Native IDE extensions for Visual Studio Code and JetBrains IDEs (IntelliJ, PyCharm, WebStorm).",
+            "Cosmos cloud sandbox execution supporting daemon mode and up to 50 concurrent developer sessions.",
+            "Auggie CLI access and Model Context Protocol (MCP) support for automated agent workflows."
           ]
         },
         {
-          "group": "Enterprise Security & Compliance",
+          "group": "Enterprise Security & Team Architecture",
           "items": [
-            "SOC 2 Type II certified infrastructure with end-to-end data encryption in transit and at rest.",
-            "Strict data privacy policy ensuring customer source code is never used to train foundational AI models.",
-            "Enterprise administrative controls including single sign-on (SSO), SCIM, and customer-managed keys."
+            "Flat team subscriptions for up to 50 seats with zero individual per-user licensing fees.",
+            "Transparent dollar-based usage billing across model API prices, Cosmos compute, and service fees.",
+            "Strict enterprise security with SOC 2 Type II compliance and zero AI model training on customer data."
           ]
         }
       ],
@@ -876,30 +878,30 @@
         }
       ],
       "pros": [
-        "Proprietary Context Engine handles massive codebases that exceed the effective context of standard coding tools.",
-        "Generates code that accurately respects internal company libraries, naming conventions, and project architecture.",
-        "Supports coordinated multi-file edits, streamlining complex refactoring across multiple project files.",
-        "Enterprise security posture ensures customer source code is never retained or used for model training."
+        "Flat team subscription model includes up to 50 seats with no per-user fee penalty.",
+        "Proprietary Context Engine deeply indexes large multi-million-line codebases with semantic understanding.",
+        "Transparent dollar-denominated billing draws from included usage across LLMs, compute, and platform fees.",
+        "Strict enterprise privacy posture with SOC 2 Type II compliance and zero AI training on customer code."
       ],
       "cons": [
-        "Does not offer a permanent free plan; requires a credit card to activate the initial evaluation trial.",
-        "Higher starting price than entry-level consumer coding assistants, reflecting enterprise-grade context indexing.",
-        "Initial repository indexing on massive codebases consumes noticeable local computing and network resources.",
-        "Supported IDE ecosystem is currently focused on VS Code and JetBrains, excluding smaller specialized editors."
+        "Does not offer a permanent free plan; requires paid subscription to deploy Cosmos and active developer tools.",
+        "LLM token usage incurs a flat 40% platform service fee on top of underlying provider API list prices.",
+        "Exceeding monthly included usage ($20 on Standard, $100 on Business) incurs variable pay-as-you-go top-up charges.",
+        "Sandboxed Cosmos compute is metered at $0.19 per hour in 5-minute increments once included usage is exhausted."
       ],
-      "pricing_overview": "<p>Augment Code uses a credit-based subscription model across individual, team, and enterprise tiers. There is no permanent free tier. New users can activate a trial plan providing a one-time allocation of 30,000 evaluation credits upon signup, which requires a valid credit card. The Indie plan is designed for solo developers and freelancers, starting at $20/month for 40,000 monthly credits for a single user. The Standard plan is tailored for engineering teams of up to 20 users, priced at $60/month per developer and providing 130,000 pooled credits per user. The Max plan is designed for high-volume power teams of up to 20 users, priced at $200/month per developer and providing 450,000 pooled credits per user. If monthly credit allocations are exhausted before the billing cycle renews, users can purchase pay-as-you-go top-ups, such as $15 for 24,000 additional credits. Enterprise plans with custom credit pools, SSO, SCIM, and dedicated engineering support are available via sales consultation.</p>",
-      "comparison_summary": "<p>Compared to standard AI coding assistants like GitHub Copilot, Augment Code differentiates itself through its deep Context Engine, which indexes whole repositories rather than just open files, allowing it to accurately reference private internal frameworks. Against developer-centric alternatives like Cursor, Augment Code operates as an extension inside standard VS Code and JetBrains distributions rather than requiring engineers to switch to a separate fork.</p>",
+      "pricing_overview": "<p>Augment Code uses a transparent token-based pricing model denominated in actual dollars rather than abstract credit pools. Plans are billed as a flat monthly subscription with zero per-seat charges for teams of up to 50 developers. The Standard plan costs $20/month flat and includes up to 50 user seats along with $20/month of included usage across LLM tokens, Cosmos compute, and platform service fees. The Business plan costs $100/month flat and also includes up to 50 user seats along with $100/month of included monthly usage. All usage draws from this single dollar balance, billed across three transparent components: LLM tokens at the model provider's public API list price, Cosmos compute at $0.19 per hour (billed in 5-minute increments), and a flat 40% platform service fee applied strictly to LLM token consumption to fund the Context Engine. Once monthly included usage is exhausted, teams can purchase pay-as-you-go top-ups at the same standard rates. Enterprise plans offering custom user limits, bespoke usage allowances, volume discounts, SSO/OIDC/SCIM, CMEK, and dedicated support are available via sales consultation. There is no permanent free tier, and customer source code is never used for AI model training.</p>",
+      "comparison_summary": "<p>Compared to per-seat developer tools like GitHub Copilot ($19/user/month) and Cursor ($20/user/month), Augment Code offers a flat team pricing structure ($20/month flat for Standard, $100/month flat for Business) covering up to 50 developer seats without individual seat licensing penalties. Against standalone code completion tools, Augment Code combines its whole-repository Context Engine with Cosmos cloud sandboxes and the Auggie CLI, billing transparently across public model API rates and compute time rather than forcing proprietary token markups.</p>",
       "pricingModel": "paid",
       "hasFreeTier": false,
-      "hasFreeTrial": true,
-      "freeAccessType": "trial_only",
+      "hasFreeTrial": false,
+      "freeAccessType": "none",
       "startingPrice": 20,
       "priceCurrency": "USD",
       "billingPeriod": "month",
-      "startingPlan": "Indie",
+      "startingPlan": "Standard",
       "trialDays": null,
       "freeTierScope": null,
-      "pricingScope": "Indie plan starts at $20/month (40,000 credits/month); Standard plan at $60/month per developer (130,000 pooled credits/month) for teams up to 20 users",
+      "pricingScope": "Standard plan starts at $20/month flat (up to 50 seats, $20 included usage); Business plan at $100/month flat (up to 50 seats, $100 included usage); additional usage billed pay-as-you-go",
       "apiAvailable": true,
       "platforms": [
         "web",
@@ -907,15 +909,17 @@
       ],
       "verificationSources": [
         "https://www.augmentcode.com/",
+        "https://www.augmentcode.com/pricing",
+        "https://docs.augmentcode.com/models/token-based-pricing",
         "https://docs.augmentcode.com/introduction"
       ],
       "evidence": [
         {
           "evidenceId": "E1340",
-          "sourceURL": "https://www.augmentcode.com/",
+          "sourceURL": "https://www.augmentcode.com/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
-          "finding": "Official Augment Code platform and pricing specifications reviewed 6 November 2026: Trial plan provides 30,000 one-time evaluation credits upon signup with credit card; Indie plan starts at $20/month for 40,000 credits (single user); Standard team plan is $60/month per developer for 130,000 pooled credits (up to 20 users); Max plan is $200/month per developer for 450,000 pooled credits; Context Engine large-repo indexing and VS Code/JetBrains support verified."
+          "finding": "Official Augment Code pricing and token-based billing documentation reviewed 6 November 2026: Standard plan ($20/month flat, up to 50 seats) includes $20/month usage across LLM tokens, compute, and platform fee; Business plan ($100/month flat, up to 50 seats) includes $100/month usage; usage billed as LLM tokens at provider list price, Cosmos compute at $0.19/hour (5-minute increments), and 40% LLM service fee; pay-as-you-go top-ups available; no per-seat charges; SOC 2 Type II certified and zero AI model training on customer code verified."
         }
       ]
     },
@@ -977,16 +981,16 @@
       "pros": [
         "Produces video with impressive physical realism, fluid motion, and coherent environmental lighting.",
         "Versatile camera controls allow creators to direct cinematic camera movements across generated scenes.",
-        "Offers a free plan providing 66 daily recurring credits for ongoing experimentation and testing.",
-        "Paid plans unlock clean watermark-free exports, 1080p resolution, and full commercial usage rights."
+        "Generous promotional check-in allowance provides daily credits for creators to test video generation.",
+        "Paid plans remove watermarks, unlock 1080p and 4K resolution, and grant commercial distribution rights."
       ],
       "cons": [
-        "Free plan credits expire every 24 hours without rolling over and produce watermarked non-commercial video.",
-        "High-resolution rendering (1080p and 4K) and extended clip lengths consume monthly credits rapidly.",
-        "Generation queues on standard plans can experience significant waiting delays during peak usage hours.",
-        "Like all diffusion models, complex anatomical motion and intricate hands can occasionally exhibit minor artifacts."
+        "Free plan outputs carry a prominent watermark and are strictly prohibited from commercial monetization.",
+        "Promotional free credits do not roll over across days, and subscription credits expire after 30 days.",
+        "First-month promotional rates revert to standard renewal pricing ($10/month Standard, $37/month Pro) after introductory periods.",
+        "Like all generative diffusion tools, fine human hand details and complex multi-subject interactions can show variance."
       ],
-      "pricing_overview": "<p>Kling AI operates on a credit-based pricing model offering a daily free allowance alongside monthly and annual subscriptions. The Free plan costs $0/month and provides 66 daily credits that refresh every 24 hours on a use-it-or-lose-it basis without rollover; free outputs are limited to 720p resolution, include a visible platform watermark, and are restricted to personal non-commercial use. Paid subscriptions remove watermarks, unlock commercial usage rights, provide priority generation queues, and support 1080p HD rendering. The Standard plan starts at approximately $10/month monthly (or approximately $6.60/month when billed annually as $79.20/year) and includes 660 monthly credits. The Pro plan costs approximately $37/month monthly (or $24.42/month billed annually as $293.04/year), providing 3,000 monthly credits and access to professional-tier models. Higher-volume options include the Premier plan at approximately $92/month for 8,000 credits, and the Ultra plan at approximately $180/month for 26,000 credits. Generations consume credits dynamically based on duration, resolution, and motion mode, typically ranging from 6 to 12 credits per second for standard video up to 30 credits per second for 4K video.</p>",
+      "pricing_overview": "<p>Kling AI operates on a credit-based commercial model offering promotional free allowances alongside monthly and annual subscriptions. Under current platform policies, registered free accounts can claim daily promotional check-in credits (typically up to 66 credits per day subject to ongoing platform event guidelines), which expire every 24 hours without rollover; free outputs are rendered at 720p, include visible platform watermarks, and are strictly restricted to personal non-commercial use. Paid subscriptions remove watermarks, unlock commercial usage rights, provide priority generation queues, and support 1080p HD and 4K rendering. The Standard plan has a regular list price of $10/month monthly (or approximately $6.60/month billed annually as $79.20/year, with introductory first-month promotional rates of ~$6.99/month to $8.80/month frequently available) and includes 660 monthly credits valid for 30 days. The Pro plan list price is $37/month monthly (or $24.42/month billed annually as $293.04/year; introductory rates ~$25.99/month to $32.56/month), providing 3,000 monthly credits. Higher-volume tiers include Premier at $92/month for 8,000 credits and Ultra at $180/month for 26,000 credits. Operations consume credits dynamically based on duration, resolution, and motion mode, typically ranging between 6 and 30 credits per second. Paid plans grant commercial distribution rights, though users remain responsible for third-party copyright and likeness clearances.</p>",
       "comparison_summary": "<p>Compared to competing generative video platforms like Runway Gen-3 and Luma Dream Machine, Kling AI is widely recognized for its realistic physics simulation, consistent character movements, and natural lighting fidelity. While tools like Pika and Haiper focus on playful short-form effects, Kling AI offers granular cinematic camera motion controls, high-resolution rendering, and a generous daily free credit allowance for creator experimentation.</p>",
       "pricingModel": "freemium",
       "hasFreeTier": true,
@@ -997,15 +1001,16 @@
       "billingPeriod": "month",
       "startingPlan": "Free",
       "trialDays": null,
-      "freeTierScope": "66 daily non-rollover credits for personal non-commercial video generation with watermark",
-      "pricingScope": "$0 Free tier includes 66 daily credits (non-rollover) for watermarked non-commercial video; Standard plan starts at ~$10/month (~$6.60/month billed annually) for 660 monthly credits, 1080p HD, and commercial rights",
+      "freeTierScope": "Daily promotional check-in credits (up to 66/day subject to event terms, non-rollover) for watermarked non-commercial video",
+      "pricingScope": "$0 Free tier includes daily promotional credits (up to 66/day, non-rollover) for watermarked non-commercial video; Standard plan starts at $10/month list (~$6.60/month billed annually) for 660 credits and commercial rights",
       "apiAvailable": true,
       "platforms": [
         "web"
       ],
       "verificationSources": [
         "https://kling.ai/",
-        "https://kling.ai/pricing"
+        "https://kling.ai/pricing",
+        "https://kling.ai/docs/point-policy"
       ],
       "evidence": [
         {
@@ -1013,7 +1018,7 @@
           "sourceURL": "https://kling.ai/pricing",
           "method": "official_source_review",
           "reviewedAt": "2026-11-06",
-          "finding": "Official Kling AI pricing, commercial policies, and platform features reviewed 6 November 2026: Free plan ($0/month) includes 66 daily credits (non-rollover) with watermarks and personal non-commercial license; Standard plan starts at ~$10/month monthly (~$6.60/month billed annually at $79.20/year) with 660 monthly credits, 1080p HD, and commercial usage rights; Pro plan ($37/month, 3,000 credits), Premier ($92/month, 8,000 credits), and Ultra ($180/month, 26,000 credits) verified; generation costs scaling from 6 to 30 credits per second verified."
+          "finding": "Official Kling AI pricing, credit, and user policies reviewed 6 November 2026: Free tier provides daily promotional check-in credits (up to 66/day subject to event terms, non-rollover) for watermarked, personal non-commercial video; Standard plan list price is $10/month monthly (~$6.60/month billed annually at $79.20/year; introductory first-month promo ~$6.99 to $8.80) with 660 monthly credits (30-day validity) and commercial distribution rights; Pro plan ($37/month list, 3,000 credits), Premier ($92/month, 8,000 credits), and Ultra ($180/month, 26,000 credits) verified; generation costs scaling from 6 to 30 credits per second verified."
         }
       ]
     }
