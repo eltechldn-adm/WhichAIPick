@@ -164,17 +164,20 @@ export function checkMonthlyVsAnnualPricing(tool) {
 
     const idx = match.index;
     const prefix = pricingHtml.slice(Math.max(0, idx - 40), idx);
+    const sentencePrefix = pricingHtml.slice(Math.max(0, idx - 120), idx);
     const suffix = pricingHtml.slice(idx + fullPrice.length, Math.min(pricingHtml.length, idx + fullPrice.length + 50));
     const windowText = `${prefix} ${fullPrice} ${suffix}`;
 
     // Valid price context indicators:
     // - Subscriptions: /mo, /month, /yr, /year, billed, monthly, annually
-    // - Pay-per-unit / Metered: /hour, /hr, /min, /minute, /generation, /image, /credit, /token, /page, /seat, /user, /license
+    // - Pay-per-unit / Metered: /hour, /hr, /min, /minute, /generation, /image, /credit, /token, /page, /seat, /user, /license, per <number> units
     // - Explicit spending/credit allowance immediately qualifying the dollar amount
+    // - Same-sentence list qualified by "monthly/annual/yearly prices of $X for <Plan>"
     // - Bundles / Packs: "5 hours for $11", "for $11 ($2.20/hour)", "pack", "credits valid for", "one-time"
     // - Ranges: "$0.05–$0.08+"
-    const hasValidContext = /(?:\/|\bper\s+(?:(?:connected|transfer|active)\s+)?|\bfor\s+)(?:mo|month|yr|year|hour|hr|min|minute|sec|second|credit|token|generation|image|page|seat|user|license|styles?|vector)|\b(?:billed|annually|monthly|subscription|one-time|pack|bundle|credits?\b|hours?\b|tokens?\b|generations?\b|licenses?\b|years?\b)|^\s*(?:Managed\s+Agents\s+|agent\s+|spending\s+|credit\s+|monthly\s+){1,3}allowance\b|[–\-\+]/i.test(suffix) ||
-      /(?:\d+\s+(?:hours?|credits?|tokens?|generations?|images?|pages?|minutes?|licenses?)\s+(?:for|at)\s+|(?:starts?|starts?\s+around|starting\s+at|ranging\s+from|from|to|roughly|approx(?:imately)?)\s+)$/i.test(prefix);
+    const hasValidContext = /(?:\/|\bper\s+(?:(?:connected|transfer|active)\s+)?|\bfor\s+)(?:mo|month|yr|year|hour|hr|min|minute|sec|second|credit|token|generation|image|page|seat|user|license|styles?|vector)|\bper\s+[\d,]+\s+units?\b|\b(?:billed|annually|monthly|subscription|one-time|pack|bundle|credits?\b|hours?\b|tokens?\b|generations?\b|licenses?\b|years?\b)|^\s*(?:Managed\s+Agents\s+|agent\s+|spending\s+|credit\s+|monthly\s+){1,3}allowance\b|[–\-\+]/i.test(suffix) ||
+      /(?:\d+\s+(?:hours?|credits?|tokens?|generations?|images?|pages?|minutes?|licenses?)\s+(?:for|at)\s+|(?:starts?|starts?\s+around|starting\s+at|ranging\s+from|from|to|roughly|approx(?:imately)?)\s+)$/i.test(prefix) ||
+      (/\b(?:monthly|annual|yearly)\s+prices?\s+of\b(?:[^.;]|\.(?=\d))*$/i.test(sentencePrefix) && /^\s*(?:<\/strong>)?\s*for\s+[A-Z]/i.test(suffix));
 
     if (!hasValidContext) {
       issues.push({

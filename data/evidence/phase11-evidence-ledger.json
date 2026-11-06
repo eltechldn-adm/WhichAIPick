@@ -4342,18 +4342,18 @@
     "id": "deepgram",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"platforms\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://deepgram.com/pricing",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-11-06",
     "method": "official_source_review",
-    "finding": "Official pricing and self-hosting introduction reviewed 23 September 2026; vendor accuracy and latency superlatives excluded."
+    "finding": "Official Deepgram pricing and privacy documentation (https://deepgram.com/, https://deepgram.com/pricing, https://deepgram.com/privacy) reviewed 5-6 November 2026: Pay As You Go ($0 monthly minimum, one-time $200 non-expiring introductory credit; freeAccessType=\"one_time_credits\", startingPrice=null preserved), Growth ($4,000+/yr prepaid credits), Enterprise custom terms, published PAYG speech recognition rates ($0.0077/min for Flux STT English and Nova-3 monolingual streaming, lower prerecorded rates), per-channel multichannel audio billing, optional add-on feature charges (diarization, redaction), character-billed TTS (Aura/Flux) and connection-time-billed Voice Agent API verified."
   },
   {
     "evidenceId": "E0484",
     "id": "deepgram",
     "fieldScope": "[\"targetUsers\", \"apiAvailable\", \"selfHosted\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
     "sourceURL": "https://developers.deepgram.com/docs/self-hosted-introduction",
-    "reviewedAt": "2026-09-23",
+    "reviewedAt": "2026-11-06",
     "method": "official_source_review",
-    "finding": "Official pricing and self-hosting introduction reviewed 23 September 2026; vendor accuracy and latency superlatives excluded."
+    "finding": "Official Deepgram self-hosted container documentation (https://developers.deepgram.com/docs/self-hosted-introduction) reviewed 5-6 November 2026: Enterprise-gated self-hosted container deployment on customer-managed GPU infrastructure (deploymentModes=[\"cloud\", \"self_hosted_enterprise\"], openSource=false, selfHosted=true) verified without claiming independent accuracy or latency benchmarks."
   },
   {
     "evidenceId": "E0485",
@@ -8111,11 +8111,11 @@
   {
     "evidenceId": "E0902",
     "id": "chatbase",
-    "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://www.chatbase.co/",
-    "reviewedAt": "2026-09-28",
-    "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"trialDays\", \"platforms\", \"apiAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
+    "sourceURL": "https://www.chatbase.co/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Chatbase product and pricing pages (https://www.chatbase.co/, https://www.chatbase.co/pricing) reviewed 5-6 November 2026: no permanent public free tier advertised (corrected pricingModel=\"paid\", hasFreeTier=false, freeAccessType=\"trial_only\"); 7-day free trial (trialDays=7) across paid self-serve plans: Hobby ($40/mo monthly or $32/mo billed annually, 700 monthly message credits; excludes API access, voice/telephony and advanced helpdesk/CRM integrations), Basic ($150/mo monthly or $120/mo billed annually, 4,000 monthly message credits; unlocks API access, voice functionality, Chatbase Helpdesk and advanced integrations), Business ($500/mo monthly or $400/mo billed annually, 15,000 credits), non-rollover monthly credits, multi-call AI Action credit consumption, and paid add-ons ($40/1,000 extra credits, $25/mo extra agent, $99/mo branding removal) verified."
   },
   {
     "evidenceId": "E0903",
@@ -9290,11 +9290,11 @@
   {
     "evidenceId": "E1033",
     "id": "photoroom",
-    "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://www.photoroom.com/",
-    "reviewedAt": "2026-09-28",
-    "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"platforms\", \"apiAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
+    "sourceURL": "https://www.photoroom.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Photoroom app pricing, Schema.org offer metadata, API pricing and privacy documentation (https://www.photoroom.com/, https://www.photoroom.com/pricing, https://www.photoroom.com/api/pricing, https://www.photoroom.com/legal/privacy) reviewed 5-6 November 2026: free basic access, published US monthly app prices ($12.99/mo Pro, $34.99/mo Max, $99/mo Ultra in Schema.org ItemList #plans; $7.50/mo, $20.99/mo and $82.50/mo billed yearly in SSR HTML, with client-side geo-localised currency display such as GBP £9.99/£5.99), monthly export limits (1,000 Pro, 3,000 Max, 10,000 Ultra), strict separation between self-serve app plans (no API allowance included) and developer API plans (Basic background removal from $20/mo for 1,000 images, Plus image editing from $100/mo for 1,000 images), and shared Enterprise wallet verified."
   },
   {
     "evidenceId": "E1034",
@@ -10046,11 +10046,11 @@
   {
     "evidenceId": "E1117",
     "id": "langfuse",
-    "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://langfuse.com/",
-    "reviewedAt": "2026-09-28",
-    "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"platforms\", \"apiAvailable\", \"openSource\", \"selfHosted\", \"licenseType\", \"licenseName\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
+    "sourceURL": "https://langfuse.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Langfuse cloud pricing, self-hosting and security documentation (https://langfuse.com/, https://langfuse.com/pricing, https://langfuse.com/pricing-self-host, https://langfuse.com/self-hosting, https://langfuse.com/security) reviewed 5-6 November 2026: Cloud Hobby ($0/mo, 50,000 units/mo, 2 users, 30-day retention), Core ($29/mo, 100,000 units/mo + $8 per 100,000 units, unlimited users, 90-day retention), Pro ($199/mo, optional $300/mo Teams Add-on for Enterprise SSO and fine-grained RBAC), Cloud Enterprise ($2,499/mo), MIT-licensed open-source self-hosted community core with separate commercial Enterprise licensing (licenseType=\"mixed\", licenseName=\"MIT community core; commercial enterprise features\"), and billable observation unit accounting (traces + observations + scores) verified."
   },
   {
     "evidenceId": "E1118",
@@ -11054,11 +11054,11 @@
   {
     "evidenceId": "E1229",
     "id": "clay",
-    "fieldScope": "identity;category;directory_summary",
-    "sourceURL": "https://www.clay.com/",
-    "reviewedAt": "2026-09-28",
-    "method": "source_review",
-    "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+    "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"hasFreeTrial\", \"paidPlanAvailable\", \"startingPrice\", \"priceCurrency\", \"billingPeriod\", \"startingPlan\", \"trialDays\", \"platforms\", \"apiAvailable\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
+    "sourceURL": "https://www.clay.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Clay product, pricing, FAQ and billing documentation (https://www.clay.com/, https://www.clay.com/pricing, https://www.clay.com/faq/what-features-are-included-in-the-new-plans-how-do-i-pick-the-right-plan, https://university.clay.com/docs/plans-and-billing, https://www.clay.com/privacy) reviewed 5-6 November 2026: Free tier (500 Actions/mo, 100 Data Credits/mo, 200-row table limit), Launch starting at $185/mo monthly ($167/mo billed annually, 14-day trial), Growth starting at $495/mo monthly ($446/mo billed annually, unlocking CRM auto-sync, data warehouse integration, web intent signals, webhooks and HTTP API), dual-meter Actions (non-rollover) vs Data Credits (rollover within plan limits; top-ups cost more than bundled credits; BYOK avoids Clay Data Credits), and vendor source discrepancy on entry Launch Data Credits (published FAQ and option value list 2,500 Data Credits/mo vs static Webflow selector text displaying 3,000) verified."
   },
   {
     "evidenceId": "E1230",

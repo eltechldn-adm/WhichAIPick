@@ -35,7 +35,8 @@ const BATCH1 = ['ollama', 'recraft', 'upscayl', 'docsbot', 'macwhisper', 'sitegp
 const BATCH2 = ['browse-ai', 'chatpdf', 'capacities', 'diffit', 'cleanvoice', 'anythingllm', 'flair-ai'];
 const BATCH4A = ['deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets'];
 const BATCH4B = ['castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'];
-const ALL_24_IDS = [...BATCH1, ...BATCH2, ...BATCH4A, ...BATCH4B];
+const BATCH4C = ['clay', 'photoroom', 'langfuse', 'chatbase', 'deepgram'];
+const ALL_29_IDS = [...BATCH1, ...BATCH2, ...BATCH4A, ...BATCH4B, ...BATCH4C];
 
 console.log('======================================================');
 console.log('WHICHAIPICK EDITORIAL QUALITY GUARD TEST SUITE');
@@ -49,10 +50,10 @@ function pass(msg) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PART 1: POSITIVE FIXTURES (All 24 enriched tools must pass 100%)
+// PART 1: POSITIVE FIXTURES (All 29 enriched tools must pass 100%)
 // ─────────────────────────────────────────────────────────────────────────────
-console.log('--- PART 1: Clean Positive Fixtures (24 Tools) ---');
-for (const id of ALL_24_IDS) {
+console.log('--- PART 1: Clean Positive Fixtures (29 Tools) ---');
+for (const id of ALL_29_IDS) {
   const tool = tools.find(t => t.id === id);
   assert(tool, `Tool ${id} must exist in catalogue`);
   const report = auditToolProfile(tool, { ledger, allToolIds, root: ROOT, checkStaticHtml: true });
@@ -120,6 +121,18 @@ function cloneTool(id) {
   const issuesAllowance = checkMonthlyVsAnnualPricing(fixtureAllowance);
   assert(issuesAllowance.some(i => i.code === 'C_AMBIGUOUS_BILLING_PERIOD'), 'Should detect bare price even when "allowance" appears later in sentence');
   pass('Defect detected: Bare price "$29 with a generous usage allowance" rejected (C_AMBIGUOUS_BILLING_PERIOD)');
+
+  const fixtureBusinessUnits = cloneTool('langfuse');
+  fixtureBusinessUnits.pricing_overview = '<p>Enterprise access costs $8 for several business units across the organization.</p>';
+  const issuesBusinessUnits = checkMonthlyVsAnnualPricing(fixtureBusinessUnits);
+  assert(issuesBusinessUnits.some(i => i.code === 'C_AMBIGUOUS_BILLING_PERIOD'), 'Should reject bare price followed by "business units" without "per <number> units"');
+  pass('Defect detected: Bare price "$8 for several business units" rejected (C_AMBIGUOUS_BILLING_PERIOD)');
+
+  const fixtureCrossSentence = cloneTool('photoroom');
+  fixtureCrossSentence.pricing_overview = '<p>Published US monthly prices of $12.99 for Pro. Later, Max costs $34.99 for Max.</p>';
+  const issuesCrossSentence = checkMonthlyVsAnnualPricing(fixtureCrossSentence);
+  assert(issuesCrossSentence.some(i => i.code === 'C_AMBIGUOUS_BILLING_PERIOD' && i.message.includes('$34.99')), 'Should reject cross-sentence bare price "$34.99 for Max" when separated by period');
+  pass('Defect detected: Cross-sentence bare price "$34.99 for Max" rejected (C_AMBIGUOUS_BILLING_PERIOD)');
 }
 
 // Test 5b: Per-minute rate falsely labelled as a monthly subscription

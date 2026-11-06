@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T22:47:38.496Z",
+  "generatedAt": "2026-11-06T09:41:55.069Z",
   "description": "Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.",
   "baselineReconciliation": {
     "historicalSkeletalBaseline": 575,
-    "derivedEnrichedCountToDate": 39,
-    "remainingSkeletalBacklog": 536,
-    "mathematicalProof": "575 (baseline skeletal) - 39 (tools enriched to date) = 536 remaining skeletal tools"
+    "derivedEnrichedCountToDate": 44,
+    "remainingSkeletalBacklog": 531,
+    "mathematicalProof": "575 (baseline skeletal) - 44 (tools enriched to date) = 531 remaining skeletal tools"
   },
   "counts": {
     "totalTools": 882,
     "v2Structured": 46,
-    "richV1": 297,
-    "skeletalV1": 536,
+    "richV1": 302,
+    "skeletalV1": 531,
     "deprecatedIneligible": 3,
     "requiresReview": 0
   },
   "skeletalByCategoryDistribution": {
-    "Marketing": 55,
+    "Marketing": 54,
     "Education": 34,
-    "Business": 110,
-    "Design": 46,
-    "Development": 115,
-    "Video & Audio": 62,
+    "Business": 109,
+    "Design": 45,
+    "Development": 114,
+    "Video & Audio": 61,
     "Content Creation": 16,
     "Research": 31,
     "Productivity": 48,
@@ -150,14 +150,12 @@
     "cerebras",
     "certainly",
     "chalkie",
-    "chatbase",
     "chatbox",
     "chathub",
     "chattermill",
     "checksub",
     "claid",
     "clari",
-    "clay",
     "cleanlab",
     "cleft",
     "clipping-magic",
@@ -183,7 +181,6 @@
     "dataloop",
     "decagon",
     "deep-image",
-    "deepgram",
     "deepinfra",
     "deepscribe",
     "defog",
@@ -313,7 +310,6 @@
     "landingai",
     "landr",
     "langflow",
-    "langfuse",
     "langotalk",
     "lawdroid",
     "layer-ai",
@@ -426,7 +422,6 @@
     "peec-ai",
     "penfriend",
     "persado",
-    "photoroom",
     "piccopilot",
     "picwish",
     "pinecone",
@@ -1906,6 +1901,24 @@
         ]
       },
       {
+        "id": "chatbase",
+        "name": "Chatbase",
+        "category": "Business",
+        "pricingModel": "paid",
+        "hasFreeTier": false,
+        "hasFreeTrial": true,
+        "startingPrice": 40,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "chatfuel",
         "name": "Chatfuel",
         "category": "Business",
@@ -2003,6 +2016,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": false,
         "startingPrice": 0,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "clay",
+        "name": "Clay",
+        "category": "Marketing",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 185,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -2542,6 +2573,24 @@
         "pricingModel": "paid",
         "hasFreeTier": false,
         "hasFreeTrial": null,
+        "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "deepgram",
+        "name": "Deepgram",
+        "category": "Video & Audio",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
@@ -3706,6 +3755,24 @@
         ]
       },
       {
+        "id": "langfuse",
+        "name": "Langfuse",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": null,
+        "startingPrice": 29,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "languagetool",
         "name": "LanguageTool",
         "category": "Content Creation",
@@ -4649,6 +4716,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "photoroom",
+        "name": "Photoroom",
+        "category": "Design",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 12.99,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -7454,19 +7539,6 @@
         "substantiveSections": []
       },
       {
-        "id": "chatbase",
-        "name": "Chatbase",
-        "category": "Business",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "chatbox",
         "name": "Chatbox",
         "category": "Productivity",
@@ -7538,19 +7610,6 @@
         "pricingModel": "enterprise",
         "hasFreeTier": false,
         "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "clay",
-        "name": "Clay",
-        "category": "Marketing",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
@@ -7876,19 +7935,6 @@
         "pricingModel": "paid",
         "hasFreeTier": false,
         "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "deepgram",
-        "name": "Deepgram",
-        "category": "Video & Audio",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
@@ -9573,19 +9619,6 @@
         "substantiveSections": []
       },
       {
-        "id": "langfuse",
-        "name": "Langfuse",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "langotalk",
         "name": "Langotalk",
         "category": "Education",
@@ -11035,19 +11068,6 @@
         "pricingModel": "enterprise",
         "hasFreeTier": false,
         "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "photoroom",
-        "name": "Photoroom",
-        "category": "Design",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": true,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,

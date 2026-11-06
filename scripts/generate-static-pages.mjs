@@ -260,13 +260,15 @@ function buildToolPage(tool) {
       </div>`
     : '';
 
-  // Practical workflows (Batch 4A & 4B approved cohorts)
+  // Practical workflows (Batch 4A, 4B & 4C approved cohorts)
   const BATCH4A_WORKFLOW_TARGETS = new Set([
     'deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets',
-    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'
+    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy',
+    'clay', 'photoroom', 'langfuse', 'chatbase', 'deepgram'
   ]);
   const BATCH4B_TRANSPARENCY_TARGETS = new Set([
-    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy'
+    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy',
+    'clay', 'photoroom', 'langfuse', 'chatbase', 'deepgram'
   ]);
   const transparencyHtml = (BATCH4B_TRANSPARENCY_TARGETS.has(slug) && tool.sourceSummary)
     ? `\n            <p class="tool-source-summary" style="margin-top: 0.5rem;">${escAttr(tool.sourceSummary)}</p>`
