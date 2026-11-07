@@ -218,11 +218,11 @@ export function generateReleaseEvidence(options = {}) {
   const redirectRules = redirectsRaw.split('\n').filter(l => l.trim() && !l.trim().startsWith('#')).length;
 
   const invariants = {
-    totalTools: { expected: 882, actual: tools.length, status: tools.length === 882 ? 'VERIFIED' : 'FAILED' },
+    totalTools: { expected: 881, actual: tools.length, status: tools.length === 881 ? 'VERIFIED' : 'FAILED' },
     eligibleTools: {
-      expected: 879,
+      expected: 878,
       actual: tools.filter(t => t.recommendationEligible === true).length,
-      status: tools.filter(t => t.recommendationEligible === true).length === 879 ? 'VERIFIED' : 'FAILED'
+      status: tools.filter(t => t.recommendationEligible === true).length === 878 ? 'VERIFIED' : 'FAILED'
     },
     ineligibleTools: {
       expected: 3,
@@ -235,9 +235,9 @@ export function generateReleaseEvidence(options = {}) {
       status: canaryJson.approvedToolIds.length === 46 ? 'VERIFIED' : 'FAILED'
     },
     sitemapUrls: {
-      expected: 959,
+      expected: 958,
       actual: sitemapUrls,
-      status: sitemapUrls === 959 ? 'VERIFIED' : 'FAILED'
+      status: sitemapUrls === 958 ? 'VERIFIED' : 'FAILED'
     },
     redirectRules: {
       expected: 59,

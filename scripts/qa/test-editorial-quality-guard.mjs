@@ -483,11 +483,11 @@ console.log('\n--- PART 5: Evidence Generator Robustness & Security ---');
   pass('Evidence generator: Zero secret or credential exposure in evidence output');
 
   // 4. Catalogue Invariants Verified
-  assert.strictEqual(evidence.catalogueInvariants.totalTools.actual, 882);
-  assert.strictEqual(evidence.catalogueInvariants.eligibleTools.actual, 879);
+  assert.strictEqual(evidence.catalogueInvariants.totalTools.actual, 881);
+  assert.strictEqual(evidence.catalogueInvariants.eligibleTools.actual, 878);
   assert.strictEqual(evidence.catalogueInvariants.ineligibleTools.actual, 3);
   assert.strictEqual(evidence.catalogueInvariants.v2CanaryTools.actual, 46);
-  assert.strictEqual(evidence.catalogueInvariants.sitemapUrls.actual, 959);
+  assert.strictEqual(evidence.catalogueInvariants.sitemapUrls.actual, 958);
   assert.strictEqual(evidence.catalogueInvariants.redirectRules.actual, 59);
   pass('Evidence generator: All 6 catalogue invariants verified with [VERIFIED] status');
 }
@@ -520,13 +520,13 @@ console.log('\n--- PART 6: Fail-Closed Behavior & Negative Integration Suite ---
 
 // Test B: Incorrect catalogue count triggers invariant failure
 {
-  const mockTools = tools.slice(0, 881); // 881 instead of 882
-  assert.strictEqual(mockTools.length, 881);
+  const mockTools = tools.slice(0, 880); // 880 instead of 881
+  assert.strictEqual(mockTools.length, 880);
   const invariantCheck = {
-    totalTools: { expected: 882, actual: mockTools.length, status: mockTools.length === 882 ? 'VERIFIED' : 'FAILED' }
+    totalTools: { expected: 881, actual: mockTools.length, status: mockTools.length === 881 ? 'VERIFIED' : 'FAILED' }
   };
   assert.strictEqual(invariantCheck.totalTools.status, 'FAILED');
-  pass('Fail-closed proof B: Incorrect catalogue count (881 != 882) triggers status=FAILED');
+  pass('Fail-closed proof B: Incorrect catalogue count (880 != 881) triggers status=FAILED');
 }
 
 // Test C: Invalid Git baseline forces guard to fail nonzero

@@ -5,9 +5,9 @@ function runQA() {
 
     let errors = 0;
 
-    // records = 882
-    if (data.length !== 882) {
-        console.error(`[ERROR] Expected 882 records, found ${data.length}`);
+    // records = 881
+    if (data.length !== 881) {
+        console.error(`[ERROR] Expected 881 records, found ${data.length}`);
         errors++;
     }
 

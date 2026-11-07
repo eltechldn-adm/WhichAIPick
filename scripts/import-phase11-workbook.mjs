@@ -44,8 +44,8 @@ function run() {
     process.exit(1);
   }
 
-  if (catalogRaw.length !== 882) {
-    console.error(`[ERROR] Unexpected record count. Expected 882, got ${catalogRaw.length}`);
+  if (catalogRaw.length !== 881) {
+    console.error(`[ERROR] Unexpected record count. Expected 881, got ${catalogRaw.length}`);
     process.exit(1);
   }
 

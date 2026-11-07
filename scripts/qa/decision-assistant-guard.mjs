@@ -12,10 +12,10 @@ const INDEX_PATH = path.join(ROOT, 'data/comparison-index.json');
 
 const tools = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf-8'));
 
-if (tools.length !== 882) throw new Error(`Expected 882 tools, got ${tools.length}`);
+if (tools.length !== 881) throw new Error(`Expected 881 tools, got ${tools.length}`);
 
 const recEligible = tools.filter(t => t.recommendationEligible);
-if (recEligible.length !== 879) throw new Error(`Expected 879 recommendation eligible, got ${recEligible.length}`);
+if (recEligible.length !== 878) throw new Error(`Expected 878 recommendation eligible, got ${recEligible.length}`);
 
 const recIneligible = tools.filter(t => !t.recommendationEligible);
 if (recIneligible.length !== 3) throw new Error(`Expected 3 recommendation ineligible, got ${recIneligible.length}`);

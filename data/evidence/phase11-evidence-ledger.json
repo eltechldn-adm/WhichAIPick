@@ -4563,42 +4563,6 @@
     "finding": "Current product/API pages and dated official subscription terms reviewed on 28 September 2026. Preserve the 2025 policy date; do not label its price table a freshly verified 2026 offer. Suitability is editorial interpretation."
   },
   {
-    "evidenceId": "E0508",
-    "id": "hedra",
-    "fieldScope": "[\"targetUsers\", \"pricingModel\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://www.hedra.com/pricing",
-    "reviewedAt": "2026-09-27",
-    "method": "official_source_review",
-    "finding": "Official sources reviewed27September2026; same-brand lookalike domains were not accepted as official evidence."
-  },
-  {
-    "evidenceId": "E0509",
-    "id": "hedra",
-    "fieldScope": "[\"targetUsers\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://www.hedra.com/studio",
-    "reviewedAt": "2026-09-27",
-    "method": "official_source_review",
-    "finding": "Official sources reviewed27September2026; same-brand lookalike domains were not accepted as official evidence."
-  },
-  {
-    "evidenceId": "E0510",
-    "id": "hedra",
-    "fieldScope": "[\"targetUsers\", \"selfHosted\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://www.hedra.com/inference",
-    "reviewedAt": "2026-09-27",
-    "method": "official_source_review",
-    "finding": "Official sources reviewed27September2026; same-brand lookalike domains were not accepted as official evidence."
-  },
-  {
-    "evidenceId": "E0511",
-    "id": "hedra",
-    "fieldScope": "[\"targetUsers\", \"hasFreeTier\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",
-    "sourceURL": "https://www.hedra.com/uses/ai-content-creation-platform",
-    "reviewedAt": "2026-09-27",
-    "method": "official_source_review",
-    "finding": "Official sources reviewed27September2026; same-brand lookalike domains were not accepted as official evidence."
-  },
-  {
     "evidenceId": "E0512",
     "id": "higgsfield",
     "fieldScope": "[\"targetUsers\", \"pricingModel\", \"hasFreeTier\", \"paidPlanAvailable\", \"platforms\", \"apiAvailable\", \"licenseType\", \"deploymentModes\", \"bestFor\", \"notIdealFor\", \"recurringFreeIntentIds\", \"finderIntentIds\", \"freeAccessType\", \"canonicalName\", \"website_url\", \"operationalStatus\", \"sourceSummary\", \"pricingScope\", \"freeTierScope\", \"capabilityScope\", \"audienceTags\", \"primaryCategory\", \"primaryUseCases\", \"targetUserDetails\", \"long_description\", \"shortDescription\"]",

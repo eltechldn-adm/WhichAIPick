@@ -697,7 +697,6 @@
 [WARNING] Tool gling is missing best_for editorial guidance.
 [WARNING] Tool google-flow-music is missing best_for editorial guidance.
 [WARNING] Tool hailuo-ai is missing best_for editorial guidance.
-[WARNING] Tool hedra is missing best_for editorial guidance.
 [WARNING] Tool higgsfield is missing best_for editorial guidance.
 [WARNING] Tool hume-ai is missing best_for editorial guidance.
 [WARNING] Tool immersive-translate is missing best_for editorial guidance.
@@ -1195,7 +1194,6 @@
 [WARNING] Tool gling ("Gling") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
 [WARNING] Tool google-flow-music ("Google Flow Music") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
 [WARNING] Tool hailuo-ai ("Hailuo AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
-[WARNING] Tool hedra ("Hedra") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
 [WARNING] Tool higgsfield ("Higgsfield") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
 [WARNING] Tool hume-ai ("Hume AI") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
 [WARNING] Tool immersive-translate ("Immersive Translate") is flagged contentReviewRequired=true. Editorial review needed before Phase 5.
