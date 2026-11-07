@@ -27,8 +27,8 @@ export const BATCH2_TOOL_IDS = Object.freeze([
 ]);
 
 export const HISTORICAL_BASELINE = Object.freeze({
-  totalTools: 882,
-  historicalSkeletalCount: 575,
+  totalTools: 881,
+  historicalSkeletalCount: 574,
   ineligibleCount: 3
 });
 

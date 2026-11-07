@@ -37,7 +37,7 @@ function run() {
   const logError = (msg) => { console.error(`[ERROR] ${msg}`); errors++; };
 
   // Core counts
-  if (stagedTools.length !== 882) logError(`Expected 882 records, got ${stagedTools.length}`);
+  if (stagedTools.length !== 881) logError(`Expected 881 records, got ${stagedTools.length}`);
 
   let dirEligible = 0;
   let recEligible = 0;
@@ -127,17 +127,17 @@ function run() {
     }
   });
 
-  if (dirEligible !== 882) logError(`directoryEligible count is ${dirEligible}, expected 882`);
-  if (recEligible !== 879) logError(`recommendationEligible count is ${recEligible}, expected 879`);
-  if (opActive !== 882) logError(`operationalStatus=active count is ${opActive}, expected 882`);
+  if (dirEligible !== 881) logError(`directoryEligible count is ${dirEligible}, expected 881`);
+  if (recEligible !== 878) logError(`recommendationEligible count is ${recEligible}, expected 878`);
+  if (opActive !== 881) logError(`operationalStatus=active count is ${opActive}, expected 881`);
   if (criticalHold !== 0) logError(`criticalHold count is ${criticalHold}, expected 0`);
   if (dupOfId !== 0) logError(`duplicateOfId populated count is ${dupOfId}, expected 0`);
 
-  if (freeTrialTrue !== 273 || freeTrialFalse !== 17 || freeTrialNull !== 592) {
-    logError(`hasFreeTrial counts wrong. Expected 273/17/592. Got ${freeTrialTrue}/${freeTrialFalse}/${freeTrialNull}`);
+  if (freeTrialTrue !== 273 || freeTrialFalse !== 26 || freeTrialNull !== 582) {
+    logError(`hasFreeTrial counts wrong. Expected 273/26/582. Got ${freeTrialTrue}/${freeTrialFalse}/${freeTrialNull}`);
   }
-  if (priceNumber !== 81 || priceNull !== 801) {
-    logError(`startingPrice counts wrong. Expected 81/801. Got ${priceNumber}/${priceNull}`);
+  if (priceNumber !== 101 || priceNull !== 780) {
+    logError(`startingPrice counts wrong. Expected 101/780. Got ${priceNumber}/${priceNull}`);
   }
 
   // References check

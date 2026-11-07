@@ -1,6 +1,6 @@
 {
-  "totalRecords": 882,
-  "generatedCount": 882,
+  "totalRecords": 881,
+  "generatedCount": 881,
   "excludedCount": 0,
   "quarantinedCount": 0,
   "tools": [
@@ -4833,21 +4833,6 @@
       "outputPath": "tool-page-v2-preview/catalog/hebbia/index.html",
       "sizeBytes": 6786,
       "sha256": "345479f97c844c36d8fa8fd4ac20d4ef65c2e2d937ff3e95e273c71874a8dd1b"
-    },
-    {
-      "id": "hedra",
-      "name": "Hedra",
-      "category": "Video & Audio",
-      "pricingModel": "freemium",
-      "operationalStatus": "active",
-      "lifecycleStatus": "active",
-      "directoryEligible": true,
-      "recommendationEligible": true,
-      "evidenceReviewedAt": "2026-09-27",
-      "hasFeaturedComparisons": false,
-      "outputPath": "tool-page-v2-preview/catalog/hedra/index.html",
-      "sizeBytes": 7155,
-      "sha256": "3bd9c106cbde7995e3da134373ef4becea16ac8f2ee3e7b4977c492fe4abd40b"
     },
     {
       "id": "heidi",

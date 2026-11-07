@@ -23,8 +23,8 @@ const P = (goal, extra = {}) => ({ goal: { value: goal, label: goal }, ...extra 
 const free = { budget: { value: 'free_plan', label: 'Confirmed free plan' } };
 
 // 66. Catalogue counts
-assertEqual(tools.length, 882, 'tools');
-assertEqual(tools.filter(t => t.recommendationEligible === true).length, 879, 'recommendationEligible');
+assertEqual(tools.length, 881, 'tools');
+assertEqual(tools.filter(t => t.recommendationEligible === true).length, 878, 'recommendationEligible');
 assertEqual(tools.filter(t => t.recommendationEligible !== true).length, 3, 'restricted');
 assertEqual(tools.filter(t => !t.recommendationEligible).map(t => t.id).sort().join(','), RESTRICTED.join(','), 'restricted ids');
 

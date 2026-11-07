@@ -21,8 +21,8 @@ if (!Array.isArray(toolsData)) {
 }
 
 const activeToolIds = new Set(toolsData.map(t => t.id));
-if (activeToolIds.size !== 882 || toolsData.length !== 882) {
-  console.error(`[PRUNE FATAL] Expected 882 tools, got ${toolsData.length}. Active unique IDs: ${activeToolIds.size}`);
+if (activeToolIds.size !== 881 || toolsData.length !== 881) {
+  console.error(`[PRUNE FATAL] Expected 881 tools, got ${toolsData.length}. Active unique IDs: ${activeToolIds.size}`);
   process.exit(1);
 }
 

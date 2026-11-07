@@ -200,7 +200,7 @@ function run() {
     // Production Isolation Check
     assert.ok(fs.existsSync('tools'), 'Production tools directory missing');
     const prodCount = fs.readdirSync('tools').filter(e => fs.statSync(path.join('tools', e)).isDirectory()).length;
-    assert.strictEqual(prodCount, 882, `Production tools directory modified (expected 882, found ${prodCount})`);
+    assert.strictEqual(prodCount, 881, `Production tools directory modified (expected 881, found ${prodCount})`);
 
     if (fs.existsSync(SITEMAP_PATH)) {
         const sitemap = fs.readFileSync(SITEMAP_PATH, 'utf8');
