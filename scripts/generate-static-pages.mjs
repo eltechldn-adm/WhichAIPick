@@ -260,27 +260,30 @@ function buildToolPage(tool) {
       </div>`
     : '';
 
-  // Practical workflows (Batch 4A, 4B & 4C approved cohorts)
-  const BATCH4A_WORKFLOW_TARGETS = new Set([
-    'deepl', 'languagetool', 'paperpal', 'askyourpdf', 'nanonets',
-    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy',
-    'clay', 'photoroom', 'langfuse', 'chatbase', 'deepgram'
-  ]);
-  const BATCH4B_TRANSPARENCY_TARGETS = new Set([
-    'castmagic', 'captions', 'cartesia', 'bland-ai', 'lindy',
-    'clay', 'photoroom', 'langfuse', 'chatbase', 'deepgram'
-  ]);
-  const transparencyHtml = (BATCH4B_TRANSPARENCY_TARGETS.has(slug) && tool.sourceSummary)
+  // Data-driven editorial transparency disclosure
+  // Render sourceSummary only when it contains an approved research/source disclosure statement
+  const hasTransparencyDisclosure = typeof tool.sourceSummary === 'string' &&
+    tool.sourceSummary.trim().length > 0 &&
+    tool.editorialStatus === 'source_based_summary' &&
+    /(?:research-based profile|source-researched|researched from|based on (?:published|bland ai|[a-z0-9 -]+ official))/i.test(tool.sourceSummary.trim());
+
+  const transparencyHtml = hasTransparencyDisclosure
     ? `\n            <p class="tool-source-summary" style="margin-top: 0.5rem;">${escAttr(tool.sourceSummary)}</p>`
     : '';
 
+  // Data-driven practical workflows rendering
+  // Validates structure, rejects unapproved content, empty lists and placeholders
+  const PLACEHOLDER_PATTERN = /^(?:\[.*?\]|todo|tbd|placeholder|insert\b|n\/a)$/i;
+
   let workflowsHtml = '';
-  if (BATCH4A_WORKFLOW_TARGETS.has(slug) && Array.isArray(tool.workflows) && tool.workflows.length > 0) {
+  if (tool.editorialStatus === 'source_based_summary' && Array.isArray(tool.workflows) && tool.workflows.length > 0) {
     const listItems = tool.workflows.map(w => {
-      const title = escAttr(w.title || '').trim();
-      const desc = escAttr(w.description || '').trim();
-      if (!title && !desc) return '';
-      return `<li><strong>${title}:</strong> ${desc}</li>`;
+      if (!w || typeof w !== 'object') return '';
+      const rawTitle = typeof w.title === 'string' ? w.title.trim() : '';
+      const rawDesc = typeof w.description === 'string' ? w.description.trim() : '';
+      if (!rawTitle || !rawDesc) return '';
+      if (PLACEHOLDER_PATTERN.test(rawTitle) || PLACEHOLDER_PATTERN.test(rawDesc)) return '';
+      return `<li><strong>${escAttr(rawTitle)}:</strong> ${escAttr(rawDesc)}</li>`;
     }).filter(Boolean).join('\n            ');
 
     if (listItems) {

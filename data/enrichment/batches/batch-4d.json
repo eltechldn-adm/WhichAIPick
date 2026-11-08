@@ -1,0 +1,1026 @@
+{
+  "batchId": "batch-4d",
+  "researchDate": "2026-11-06",
+  "description": "Batch 4D editorial enrichment: 10 Skeletal V1 tools across AI dev, automation, productivity, marketing, enterprise and video.",
+  "mode": "new",
+  "targetToolIds": [
+    "smartlead",
+    "pipedream",
+    "browserbase",
+    "granola",
+    "groq",
+    "raycast",
+    "glean",
+    "tavily",
+    "augment-code",
+    "kling-ai"
+  ],
+  "tools": {
+    "smartlead": {
+      "shortDescription": "AI-powered cold email automation platform with unlimited mailbox connections and automated warm-up.",
+      "long_description": "<p>Smartlead is a cold email outreach and sales engagement platform designed for sales development representatives, revenue teams, and lead generation agencies that manage high-volume outbound campaigns. The platform centers on email deliverability infrastructure, enabling organizations to connect unlimited sending mailboxes across Google Workspace, Microsoft 365, and private SMTP accounts without paying per-seat licensing penalties. By distributing campaign volume across multiple domains and accounts, Smartlead helps teams maintain high sender reputation and avoid landing in spam folders.</p>\n<p>The core system combines multi-stage campaign sequencing with automated peer-to-peer warm-up networks. Smartlead monitors domain health and automatically throttles sending on accounts showing early signs of spam drift. It also provides a centralized master inbox that aggregates prospect responses across all active domains and client accounts, using artificial intelligence sentiment categorization to classify replies as interested leads, meeting requests, or objections for rapid follow-up.</p>\n<p>Unlike traditional CRM-centric sales platforms that charge per user seat or per connected email address, Smartlead bases its commercial structure on total monthly email volume and active contact storage. This architecture makes it well-suited for outbound sales teams that rely on secondary domain infrastructure to protect primary business domains while scaling multi-touch outbound prospecting cadences.</p>",
+      "sourceSummary": "Research-based profile using Smartlead's official pricing, deliverability and product documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent deliverability or inbox placement benchmarks are claimed.",
+      "how_it_works": "<p>A team begins by configuring secondary sending domains with necessary DNS authentication records, including SPF, DKIM, and DMARC. Once domains are configured, mailboxes are connected to Smartlead via OAuth or custom SMTP and IMAP settings, and enrolled into automated warm-up schedules to gradually build sender reputation through simulated interactions.</p>\n<p>Users then build outbound campaigns by importing prospect lists, defining personalized email templates with dynamic liquid syntax variables, and establishing multi-step follow-up sequences. Smartlead distributes message delivery across all connected mailboxes according to user-defined daily volume limits, rotating inboxes automatically to maintain balanced sending activity across domains.</p>\n<p>Incoming prospect replies are directed to a unified master inbox where team members can review messages across all accounts. The platform uses natural language processing to identify positive lead sentiment, tag conversations, and trigger automated webhook notifications or CRM updates to sync qualified pipeline opportunities into tools like HubSpot and Salesforce.</p>",
+      "feature_groups": [
+        {
+          "group": "Deliverability & Warm-Up Infrastructure",
+          "items": [
+            "Connect unlimited email accounts across Google Workspace, Microsoft 365, and private SMTP/IMAP servers.",
+            "Automated peer-to-peer warm-up network simulating natural sending patterns and reply interactions.",
+            "Spam-drift detection that automatically pauses or throttles sending on accounts showing placement issues."
+          ]
+        },
+        {
+          "group": "Campaign Sequencing & Sending",
+          "items": [
+            "Multi-step outbound campaigns with automated follow-ups, conditional logic, and send-time optimization.",
+            "Inbox rotation distributing message volume across multiple connected accounts to protect domain reputation.",
+            "Dynamic personalization tags supporting custom liquid syntax and company-level variables."
+          ]
+        },
+        {
+          "group": "Master Inbox & Lead Management",
+          "items": [
+            "Unified master inbox aggregating prospect responses across all client workspaces and connected domains.",
+            "AI sentiment analysis categorizing replies by interest level, meeting requests, and objection types.",
+            "CRM integration and webhook triggers for automated lead routing and pipeline status updates."
+          ]
+        }
+      ],
+      "bestFor": [
+        "B2B sales teams and lead generation agencies managing multi-domain outbound campaigns across dozens of sending inboxes.",
+        "Growth marketers seeking automated sender warm-up pools without paying per-mailbox subscription fees.",
+        "Outbound sales representatives needing a consolidated master inbox to triage replies across multiple email accounts."
+      ],
+      "notIdealFor": [
+        "Inbound marketing teams sending permission-based marketing newsletters or broad customer announcements.",
+        "Solopreneurs sending small, low-volume personal outreach campaigns under 50 emails per week.",
+        "Organizations requiring integrated multichannel phone dialing and LinkedIn automation within a single tool."
+      ],
+      "workflows": [
+        {
+          "title": "Multi-domain cold email sequencing",
+          "description": "Configure multiple secondary domains with DNS authentication, assign sending quotas across mailboxes, and launch scheduled multi-step outbound cadences."
+        },
+        {
+          "title": "Automated sender reputation warm-up",
+          "description": "Enroll newly provisioned email accounts into peer warm-up networks to build sending history before initiating outbound prospect messaging."
+        },
+        {
+          "title": "Unified response triage",
+          "description": "Monitor incoming prospect replies across connected domains in a single master inbox, filter by interested sentiment, and trigger CRM pipeline updates."
+        }
+      ],
+      "pros": [
+        "Supports connecting an unlimited number of sending mailboxes without charging additional per-seat fees.",
+        "Built-in automated email warm-up network helps maintain sender reputation across new outbound domains.",
+        "Unified master inbox streamlines response triage across dozens of separate client and team email accounts.",
+        "Smart sending algorithms distribute volume across mailboxes to reduce spam-filter triggers."
+      ],
+      "cons": [
+        "Base plan excludes API access, webhook notifications, and automated CRM synchronization.",
+        "Requires diligent DNS setup (SPF, DKIM, DMARC) across multiple secondary domains to avoid deliverability penalties.",
+        "High-volume outbound operations incur additional infrastructure costs for third-party domain and mailbox hosting.",
+        "Platform is strictly tailored to cold email and lacks native voice dialing or SMS channels."
+      ],
+      "pricing_overview": "<p>Smartlead offers tiered subscription plans based on monthly email sending volume and stored active contacts. The Base plan starts at $39/month billed monthly (or $32.50/month billed annually) and includes 6,000 email sends and 2,000 active contacts, with unlimited connected mailboxes and warm-up access. The Pro plan is priced at $94/month billed monthly (or $78.30/month billed annually), scaling limits to 90,000 monthly sends, 30,000 contacts, and unlocking full REST API access, webhooks, and CRM integrations. Higher-volume tiers include Unlimited Smart at $174/month billed monthly ($144.50/month billed annually) for 150,000 sends, and Unlimited Prime at $379/month billed monthly ($314.60/month billed annually) for 500,000 sends with dedicated IP options. A 14-day free trial offering up to 2,500 test sends is available without requiring a credit card, but there is no permanent free tier.</p>",
+      "comparison_summary": "<p>Compared to traditional sales engagement platforms like Salesloft and Outreach that charge steep per-seat fees, Smartlead focuses on infrastructure efficiency by allowing unlimited mailbox connections on all plans. Against cold-email competitors like Instantly, Smartlead distinguishes itself through granular webhook integrations, flexible API controls on its Pro tier, and centralized master inbox management for agencies handling multiple client accounts.</p>",
+      "pricingModel": "paid",
+      "hasFreeTier": false,
+      "hasFreeTrial": true,
+      "freeAccessType": "trial_only",
+      "startingPrice": 39,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Base",
+      "trialDays": 14,
+      "freeTierScope": null,
+      "pricingScope": "$39/month monthly ($32.50/month billed annually) Base Plan; Pro at $94/month unlocks API and CRM sync",
+      "apiAvailable": true,
+      "platforms": [
+        "web"
+      ],
+      "verificationSources": [
+        "https://www.smartlead.ai/",
+        "https://www.smartlead.ai/pricing",
+        "https://help.smartlead.ai/"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1332",
+          "sourceURL": "https://www.smartlead.ai/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Smartlead product and pricing documentation reviewed 6 November 2026: Base tier starts at $39/month monthly ($32.50/month billed annually) for 6,000 sends and 2,000 contacts; Pro tier starts at $94/month monthly ($78.30/month billed annually) unlocking API and webhooks; Unlimited Smart at $174/month and Unlimited Prime at $379/month provide higher sending limits; 14-day free trial with 2,500 sends available without credit card; unlimited mailbox connections on all plans verified."
+        }
+      ]
+    },
+    "pipedream": {
+      "shortDescription": "Serverless integration and workflow automation platform for developers and AI agents.",
+      "long_description": "<p>Pipedream is a serverless integration platform and workflow engine designed for software engineers, technical operations teams, and artificial intelligence developers. It bridges the gap between visual low-code automation tools and full-stack backend development by allowing users to build event-driven workflows that combine pre-built API integrations with custom Node.js and Python code execution. Workflows can be triggered by incoming HTTP webhooks, cron schedules, email events, or real-time event streams from third-party services.</p>\n<p>The platform features a registry of over two thousand pre-integrated applications and thousands of pre-configured triggers and actions. Developers can import any public npm or PyPI package directly into workflow code steps without configuring Docker containers or virtual machines. Pipedream Connect extends this capability by providing managed OAuth token storage and authentication flows, allowing developers to embed third-party integrations into their own client-facing applications and AI agent architectures via the Model Context Protocol.</p>\n<p>Pipedream manages backend state, authentication refresh tokens, secrets, and execution retry policies automatically. Its execution model meters resources using usage credits tied to compute time and memory allocation rather than charging rigid per-task fees, making it an efficient runtime environment for both rapid prototyping and production-grade API event pipelines.</p>",
+      "sourceSummary": "Research-based profile using Pipedream's official pricing, documentation and developer specifications reviewed on 6 November 2026. Published specifications are vendor-reported; no independent reliability or throughput benchmarks are claimed.",
+      "how_it_works": "<p>A developer starts by selecting an event trigger, such as an incoming webhook endpoint, a scheduled timer, or an event listener from a supported service like GitHub or Stripe. Pipedream automatically provisions an endpoint URL and begins capturing incoming HTTP payloads, displaying structured JSON data in an interactive event inspector for step-by-step debugging.</p>\n<p>Workflows are constructed as a sequential chain of steps that combine pre-built integration actions with custom code steps written in JavaScript, TypeScript, or Python. Within code blocks, developers can access event data, import external libraries, make authenticated API calls using managed OAuth credentials, and maintain persistent key-value state across workflow runs.</p>\n<p>When an event occurs, Pipedream spins up an ephemeral compute environment to execute the workflow steps, handling retries and error logging automatically. Completed run traces, execution duration, and outbound API payloads are preserved in the execution inspector, allowing engineers to audit runs and monitor production event streams.</p>",
+      "feature_groups": [
+        {
+          "group": "Serverless Code & Runtime",
+          "items": [
+            "Native Node.js, TypeScript, and Python code step execution within event-driven workflow chains.",
+            "Instant support for any public npm and PyPI packages without container setup or build steps.",
+            "Built-in key-value data stores for maintaining state across workflow executions."
+          ]
+        },
+        {
+          "group": "Managed Authentication & Connect",
+          "items": [
+            "Managed OAuth 2.0 handling token refresh and credential storage across thousands of pre-built apps.",
+            "Pipedream Connect enabling developers to embed third-party integrations into customer applications.",
+            "Model Context Protocol (MCP) server support allowing AI agents to invoke external actions as tools."
+          ]
+        },
+        {
+          "group": "Event Triggers & Monitoring",
+          "items": [
+            "Instant HTTP webhook triggers with dedicated endpoints and live request inspectors.",
+            "Scheduled cron triggers, email-based triggers, and real-time polling triggers for external SaaS APIs.",
+            "Detailed execution logs, step-level timing metrics, and automated retry policies on failed events."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Software engineers and technical teams building event-driven API workflows that require custom code and external libraries.",
+        "AI application developers seeking managed authentication and tool execution for agents via the Model Context Protocol.",
+        "Technical product teams embedding third-party SaaS integrations into customer-facing applications."
+      ],
+      "notIdealFor": [
+        "Non-technical business users seeking purely visual, no-code automation platforms without writing code.",
+        "High-performance compute workloads requiring continuous long-running background daemon processes.",
+        "Teams with strict air-gapped on-premises data isolation policies that prohibit cloud-hosted automation runtimes."
+      ],
+      "workflows": [
+        {
+          "title": "Event-driven webhook processing",
+          "description": "Receive webhook notifications from payment processors, parse the payload using custom Python code, and update customer records in an external database."
+        },
+        {
+          "title": "AI agent tool integration",
+          "description": "Expose connected SaaS actions as Model Context Protocol tools for autonomous AI agents to execute authenticated queries and updates."
+        },
+        {
+          "title": "Scheduled data synchronization",
+          "description": "Run scheduled cron triggers to poll third-party APIs for updated records, transform data formats, and synchronize state with cloud data warehouses."
+        }
+      ],
+      "pros": [
+        "Allows developers to write real Node.js and Python code with access to external packages in any workflow step.",
+        "Manages OAuth authentication and token refreshing automatically across thousands of pre-built integrations.",
+        "Includes a generous permanent Free tier for prototyping, building, and personal development workflows.",
+        "Native support for the Model Context Protocol enables straightforward integration with modern AI agent stacks."
+      ],
+      "cons": [
+        "Free tier is strictly restricted to development environments and cannot power production customer-facing apps.",
+        "Requires programming knowledge in JavaScript or Python to build complex logic and data transformations.",
+        "Workflows are subject to serverless execution timeouts and memory limits on standard tiers.",
+        "Additional external end-users on production Connect plans incur incremental monthly licensing charges."
+      ],
+      "pricing_overview": "<p>Pipedream operates on a freemium pricing model combining monthly subscriptions with compute usage credits. The Free plan costs $0/month and provides full access to developer features, pre-built connectors, and MCP tools within a development environment, subject to daily credit allowances. Deploying live integrations and apps for external production users requires the Startup plan, priced at $99/month billed annually (or $150/month billed monthly). The Startup plan includes 100 external end users, 10,000 monthly usage credits, and standard security compliance, with additional end users costing approximately $2/user/month and extra credits billed at $0.012/credit. Custom Business plans are available for enterprise organizations requiring HIPAA compliance, dedicated egress IP addresses, and single sign-on. Usage credits meter execution time, with one credit approximately equivalent to 30 seconds of compute at 256MB memory.</p>",
+      "comparison_summary": "<p>Compared to visual-only automation tools like Zapier and Make, Pipedream is built primarily for developers who want to write real code and import npm or PyPI packages directly into workflow steps. While Zapier charges by individual task runs, Pipedream meters executions by compute duration and memory, offering greater cost efficiency for high-volume API transforms and developer-led AI agent toolchains.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": false,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Free",
+      "trialDays": null,
+      "freeTierScope": "Free development environment with full connector access, MCP tools, and daily compute credit allowances",
+      "pricingScope": "$0 Free development tier with MCP and connector access; Startup plan at $99/month billed annually ($150/month monthly) for production external user deployments",
+      "apiAvailable": true,
+      "platforms": [
+        "web"
+      ],
+      "verificationSources": [
+        "https://pipedream.com/",
+        "https://pipedream.com/pricing",
+        "https://pipedream.com/docs"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1333",
+          "sourceURL": "https://pipedream.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Pipedream pricing and platform documentation reviewed 6 November 2026: Free tier ($0/month) provides full feature, MCP and connector access in development environment; Startup plan ($99/month billed annually, $150/month billed monthly) unlocks production environment deployments with 100 end users ($2/user/month for additional users) and 10,000 usage credits ($0.012/credit for overages); custom Business plans support HIPAA and static egress IPs; compute credit model based on duration and memory verified."
+        }
+      ]
+    },
+    "browserbase": {
+      "shortDescription": "Developer platform providing headless cloud browser infrastructure for AI agents and web automation.",
+      "long_description": "<p>Browserbase is a cloud headless browser platform engineered specifically for artificial intelligence agents, automated web scrapers, and browser automation workflows. Managing scalable Chromium browser infrastructure poses complex operational hurdles, including memory leaks, bot detection challenges, residential proxy rotation, and session persistence. Browserbase abstracts this operational complexity by providing hosted browser instances in remote cloud sandboxes accessible via standard developer APIs.</p>\n<p>The platform provides native compatibility with major automation frameworks including Playwright, Puppeteer, and Selenium, allowing engineers to connect existing browser scripts by updating connection endpoint URLs. Browserbase incorporates fingerprint evasion techniques, automated CAPTCHA solving, and residential IP routing to access public web pages without getting blocked. It also records full session replays, DOM snapshots, and network inspection logs for debugging agent behaviors.</p>\n<p>To support autonomous agents that browse the web interactively, Browserbase created Stagehand, an open-source browser automation framework powered by artificial intelligence. By combining headless browser orchestration with session observability and anti-bot mitigation, Browserbase serves as infrastructure for developers building autonomous data collection agents, synthetic workflow QA tests, and web-navigating copilots.</p>",
+      "sourceSummary": "Research-based profile using Browserbase's official pricing, API documentation and infrastructure specifications reviewed on 6 November 2026. Published specifications are vendor-reported; no independent uptime or anti-bot bypass benchmarks are claimed.",
+      "how_it_works": "<p>A developer configures their local Playwright, Puppeteer, or Selenium script to connect to Browserbase using a remote WebSocket endpoint authenticated with an API key. Instead of launching a local Chromium process on the developer's machine or server, Browserbase spins up an isolated browser container in its cloud infrastructure.</p>\n<p>The client application sends standard navigation commands, selector clicks, and form submissions over the WebSocket connection. Browserbase executes these actions within the remote browser, managing browser fingerprints, solving CAPTCHAs, and routing traffic through residential or datacenter proxies as configured in session parameters.</p>\n<p>Throughout the session, Browserbase records live video, DOM states, console messages, and network requests. Developers can inspect completed sessions through a cloud dashboard or programmatically retrieve session recordings and extracted data via REST API endpoints for auditing and QA analysis.</p>",
+      "feature_groups": [
+        {
+          "group": "Cloud Browser Infrastructure",
+          "items": [
+            "Managed cloud Chromium instances accessible via remote WebSocket connections from Playwright and Puppeteer.",
+            "Isolated container sandboxes ensuring clean browser state and eliminating local memory overhead.",
+            "High concurrency support scaling from developer testing to hundreds of parallel browser sessions."
+          ]
+        },
+        {
+          "group": "Anti-Bot & Stealth Capabilities",
+          "items": [
+            "Managed stealth mode on Developer and Startup plans to navigate dynamic web pages without bot detection.",
+            "Automated CAPTCHA solving capabilities integrated into remote session execution on paid plans.",
+            "Managed residential and datacenter proxy rotation with geographic IP targeting options."
+          ]
+        },
+        {
+          "group": "Observability & Agent Tooling",
+          "items": [
+            "Live session video recordings, DOM snapshots, and complete network activity logs for debugging.",
+            "Native integration with Stagehand, an open-source AI web browsing framework for autonomous agents.",
+            "REST API endpoints for session creation, lifecycle management, and programmatic artifact retrieval."
+          ]
+        }
+      ],
+      "bestFor": [
+        "AI developers building autonomous web-browsing agents that need to navigate dynamic web pages without maintenance overhead.",
+        "Data engineers and web scraping teams requiring managed residential proxy rotation and anti-bot evasion infrastructure.",
+        "Quality assurance engineers seeking cloud browser testing with full video recordings and network debugging logs."
+      ],
+      "notIdealFor": [
+        "Non-technical users seeking a simple no-code browser extension for casual web scraping.",
+        "Applications requiring ultra-low-latency local screen rendering with zero network round-trip overhead.",
+        "Workloads with strict data residency regulations that prohibit routing browser traffic through third-party cloud infrastructure."
+      ],
+      "workflows": [
+        {
+          "title": "Autonomous agent web navigation",
+          "description": "Connect an LLM agent to a remote Browserbase session via Stagehand or Playwright to navigate complex web applications and extract structured data."
+        },
+        {
+          "title": "Anti-bot protected data extraction",
+          "description": "Scrape dynamic web pages through managed residential proxies with automated fingerprint masking and CAPTCHA resolution."
+        },
+        {
+          "title": "Automated end-to-end UI testing",
+          "description": "Execute automated regression test suites across cloud Chromium instances, inspecting full video replays and network traces on failure."
+        }
+      ],
+      "pros": [
+        "Eliminates the operational overhead of running, scaling, and maintaining headless Chromium clusters.",
+        "Seamless drop-in compatibility with established automation libraries like Playwright, Puppeteer, and Selenium.",
+        "Paid plans (Developer and Startup) include built-in stealth mode and CAPTCHA solving to overcome scraping blocks.",
+        "Detailed session recordings and network logs simplify debugging non-deterministic agent interactions."
+      ],
+      "cons": [
+        "Free tier strictly excludes CAPTCHA solving and stealth mode, limiting unassisted scraping of bot-protected sites.",
+        "Free tier is restricted to 1 browser hour per month with a 15-minute session timeout and 7-day data retention.",
+        "High-volume scraping with residential proxy bandwidth and heavy CAPTCHA solving incurs variable usage charges.",
+        "Connecting over remote WebSockets introduces slight latency compared to running local browser processes."
+      ],
+      "pricing_overview": "<p>Browserbase uses a tiered subscription model combined with usage-based overage rates for browser hours. The Free tier costs $0/month and includes 1 browser hour per month, support for up to 3 concurrent browsers, a 15-minute maximum session duration limit, and 7-day data retention, but excludes automated CAPTCHA solving and stealth mode. The Developer plan is priced at $20/month, providing 100 browser hours per month, up to 25 concurrent browser sessions, a 6-hour session duration limit, 30-day data retention, automated CAPTCHA solving, and basic stealth mode, with additional browser hours billed at $0.12/hour. The Startup plan costs $99/month, including 500 browser hours per month, up to 100 concurrent browsers, a 6-hour session limit, 30-day retention, CAPTCHA solving, and basic stealth mode, with overage billed at $0.10/hour. Custom Scale plans offer 250+ concurrent sessions, advanced stealth mode, dedicated proxies, and custom retention SLAs. Residential proxy bandwidth and model gateway requests incur separate usage charges.</p>",
+      "comparison_summary": "<p>Unlike traditional cloud test grids like BrowserStack and Sauce Labs that focus on manual cross-browser compatibility testing, Browserbase is purpose-built for programmatic AI agents and web automation. Compared to self-hosted Puppeteer clusters or scraping platforms like Apify, Browserbase provides managed stealth infrastructure, session replays, and Stagehand integration with standard Playwright API compatibility.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": false,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Free",
+      "trialDays": null,
+      "freeTierScope": "1 browser hour per month with 3 concurrent browsers and 15-minute session limit (excludes CAPTCHA solving and stealth mode)",
+      "pricingScope": "$0 Free tier includes 1 browser hour and 3 concurrent browsers (excludes CAPTCHA solving and stealth mode); Developer plan at $20/month includes 100 hours with CAPTCHA solving and stealth mode",
+      "apiAvailable": true,
+      "platforms": [
+        "web"
+      ],
+      "verificationSources": [
+        "https://www.browserbase.com/",
+        "https://www.browserbase.com/pricing",
+        "https://docs.browserbase.com/welcome/introduction"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1334",
+          "sourceURL": "https://www.browserbase.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Browserbase product and pricing specifications reviewed 6 November 2026: Free tier ($0/month) includes 1 browser hour, 3 concurrent browser sessions, and 15-minute session timeout, excluding CAPTCHA solving and stealth mode; Developer tier ($20/month) includes 100 browser hours ($0.12/hour overage), 25 concurrent sessions, CAPTCHA solving, and basic stealth mode; Startup tier ($99/month) includes 500 browser hours ($0.10/hour overage), 100 concurrent sessions, CAPTCHA solving, and basic stealth mode; Playwright and Stagehand compatibility verified."
+        }
+      ]
+    },
+    "granola": {
+      "shortDescription": "AI meeting notepad capturing device audio locally with secure cloud transcription and human-in-the-loop synthesis.",
+      "long_description": "<p>Granola is an artificial intelligence meeting notepad application designed for founders, product managers, designers, consultants, and professionals who participate in frequent collaborative calls. Traditional meeting transcription tools typically rely on automated video bots that join calls as external participants, which can introduce social friction, distract meeting attendees, or violate internal organizational policies. Granola bypasses this limitation by capturing system audio and microphone input directly on the user's local operating system, eliminating the need to deploy meeting bots into calls.</p>\n<p>The platform takes a human-in-the-loop approach to meeting documentation. During a call, the user types shorthand notes, key bullet points, or customer reactions in a clean note-taking interface. While device audio capture occurs locally on the user's machine, speech-to-text transcription and generative AI synthesis are processed via secure cloud infrastructure. Following the call, Granola combines the user's typed notes with the cloud transcript, applying AI models to expand shorthand bullets into structured, coherent meeting summaries that preserve the author's authentic voice and intent.</p>\n<p>Granola provides native desktop applications for macOS and Windows, as well as mobile companion apps for iOS and Android. It includes conversational chat capabilities and Model Context Protocol (MCP) integrations with Claude and ChatGPT, enabling users to query recent 30-day personal notes on the Basic plan or full workspace archives on Business tiers. In accordance with platform privacy practices, original audio recordings are automatically deleted after cloud transcription is complete across all subscription tiers.</p>",
+      "sourceSummary": "Research-based profile using Granola's official pricing, security and product documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent transcription accuracy benchmarks are claimed.",
+      "how_it_works": "<p>A user installs the native Granola desktop application on macOS or Windows and connects their digital calendar. When a meeting begins on Zoom, Google Meet, Microsoft Teams, or Slack, the user starts recording with a single click. Granola captures local microphone input and internal computer audio directly through device audio loopback without sending an external bot into the call. Captured audio streams are securely transmitted to cloud services for automated speech-to-text processing.</p>\n<p>While the conversation takes place, the user types quick bullet points or notes inside the editor. In the cloud, speech-to-text models process the incoming audio stream into a verbatim transcript. Once the call concludes, Granola synthesizes the typed bullets with the transcript, applying custom templates to produce structured summaries, key takeaways, and action items. Once transcription and note generation are complete, the underlying audio recording is permanently deleted from servers.</p>\n<p>Users can review and edit generated notes, share formatted summaries to Slack, or query discussions via interactive side panels. Teams can connect Granola to Claude or ChatGPT via the Model Context Protocol (MCP) to query recent 30-day personal notes on the free Basic tier, or access full workspace archives and dedicated developer API endpoints on the paid Business tier.</p>",
+      "feature_groups": [
+        {
+          "group": "Device Audio Capture & Cloud Transcription",
+          "items": [
+            "Direct device microphone and system audio capture on macOS and Windows without external meeting bots.",
+            "Secure cloud speech-to-text transcription with automatic audio file deletion after processing.",
+            "Compatible with major conferencing tools including Zoom, Google Meet, Microsoft Teams, and Slack."
+          ]
+        },
+        {
+          "group": "Human-in-the-Loop Note Synthesis",
+          "items": [
+            "Editor merging user-typed shorthand notes with verbatim cloud transcripts for authentic summaries.",
+            "Customizable note-taking templates for customer discovery, 1:1 meetings, sprint syncs, and interviews.",
+            "Conversational AI chat allowing users to query transcripts and extract specific meeting decisions."
+          ]
+        },
+        {
+          "group": "MCP Integrations & Workspace Knowledge",
+          "items": [
+            "Model Context Protocol (MCP) integration querying personal notes from the last 30 days on Basic.",
+            "Business plan expands MCP to full workspace history and unlocks dedicated developer API access.",
+            "Export and sharing integrations with Slack, Notion, HubSpot, Attio, Affinity, and Zapier."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Founders, product leaders, and consultants who prefer taking active notes without having a visible bot join calls.",
+        "Sales reps and account managers conducting customer discovery interviews who need structured CRM summaries.",
+        "Professionals working in privacy-sensitive environments that restrict third-party meeting bot integrations."
+      ],
+      "notIdealFor": [
+        "Teams looking for completely unattended meeting recording where no human attendee is present.",
+        "Users on the Free plan who require in-app access to meeting archives older than 30 days without upgrading.",
+        "Organizations seeking automated video screen recording alongside audio transcription."
+      ],
+      "workflows": [
+        {
+          "title": "Customer interview synthesis",
+          "description": "Capture shorthand notes during discovery calls while Granola records local audio, producing structured problem statements and pain-point summaries."
+        },
+        {
+          "title": "Team sync action item tracking",
+          "description": "Record internal standups and sprint planning calls to automatically extract decisions, task assignments, and follow-up deadlines."
+        },
+        {
+          "title": "Meeting knowledge querying",
+          "description": "Use the interactive AI chat assistant to search across meeting discussions, extract direct quotes, and review agreed specifications."
+        }
+      ],
+      "pros": [
+        "Captures internal audio directly on the user device without deploying an intrusive bot into video conference calls.",
+        "Synthesizes user-typed notes with speech transcripts to maintain human perspective and context.",
+        "Free plan allows unlimited meetings and transcriptions without rigid monthly call duration caps.",
+        "Supports Model Context Protocol (MCP) integration with ChatGPT and Claude even on the free Basic tier."
+      ],
+      "cons": [
+        "Audio transcription and AI note synthesis require cloud processing and cannot operate in offline mode.",
+        "Basic plan limits in-app note visibility and MCP queries to a rolling 30-day historical window.",
+        "Developer API access and advanced CRM integrations (Notion, HubSpot, Attio) require a paid Business plan.",
+        "Focuses strictly on audio and text notes, without recording visual video feeds or shared screens."
+      ],
+      "pricing_overview": "<p>Granola offers a freemium pricing structure split into Basic, Business, and Enterprise tiers. The Basic plan is completely free ($0/month) and includes unlimited meetings, device audio capture, cloud transcription, in-meeting AI chat, custom templates, Slack integration, and Model Context Protocol (MCP) access to personal notes from the last 30 days; however, in-app note visibility is constrained to that rolling 30-day window. The Business plan costs $14/user/month and unlocks unlimited meeting history, advanced AI reasoning models, expanded MCP access across personal and workspace notes, full developer API access, and workflow integrations with Notion, HubSpot, Attio, Affinity, and Zapier. The Enterprise plan starts at $35/user/month, adding administrative controls for MCP and APIs, Single Sign-On (SSO), SCIM provisioning, organization-wide auto-deletion schedules, priority support, and team-wide opt-outs for AI model training. Device audio recordings are automatically deleted after cloud transcription is complete across all tiers.</p>",
+      "comparison_summary": "<p>Unlike traditional AI meeting assistants like Otter.ai, Fireflies.ai, and Fathom that send visible bot participants into calls, Granola captures audio locally on the host machine with zero bot presence. Compared to basic transcription utilities, Granola prioritizes human-in-the-loop note taking by combining user-typed bullet points with underlying transcripts to generate summaries that reflect the author's authentic perspective.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": false,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Basic",
+      "trialDays": null,
+      "freeTierScope": "Unlimited meetings and cloud transcription with a rolling 30-day history window and 30-day MCP query access",
+      "pricingScope": "$0 Basic tier includes unlimited meetings with a 30-day history window and 30-day MCP note queries; Business tier at $14/user/month unlocks unlimited history, workspace MCP, and API access",
+      "apiAvailable": true,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios",
+        "android"
+      ],
+      "verificationSources": [
+        "https://www.granola.ai/",
+        "https://www.granola.ai/pricing",
+        "https://www.granola.ai/security",
+        "https://www.granola.ai/blog/local-first-ai-notetaker-vs-cloud"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1335",
+          "sourceURL": "https://www.granola.ai/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Granola product, security, and pricing documentation reviewed 6 November 2026: Device audio capture is local while transcription and AI summaries run in secure cloud; audio files auto-deleted after processing; Basic plan ($0/month) includes unlimited meetings and 30-day history/MCP window; Business plan ($14/user/month) unlocks unlimited history, workspace MCP, and API access; Enterprise tier ($35/user/month) provides SSO and SCIM."
+        }
+      ]
+    },
+    "groq": {
+      "shortDescription": "High-speed AI inference platform powered by custom Language Processing Units (LPUs).",
+      "long_description": "<p>Groq is an artificial intelligence inference infrastructure platform built on proprietary Language Processing Units (LPUs). While conventional cloud computing architectures deploy graphics processing units (GPUs) designed for parallel graphics rendering to serve machine learning models, Groq engineered a deterministic processor tailored specifically for sequential token generation in large language models. This architectural focus allows Groq to deliver inference speeds reaching hundreds of tokens per second with minimal latency.</p>\n<p>The platform hosts leading open-weights models, including Meta's Llama family, Google's Gemma architectures, Mistral systems, and OpenAI's Whisper audio models. Developers connect to GroqCloud using standard REST APIs that mirror the OpenAI specification, allowing existing software applications, chatbots, and autonomous agents to swap underlying inference endpoints with minimal code modifications. Groq supports advanced serving features including JSON mode, tool calling, and prompt prefix caching.</p>\n<p>By drastically decreasing generation latency, Groq unlocks interactive artificial intelligence use cases that are impractical on slower hardware. Conversational voice applications, real-time code autocomplete tools, multi-agent debates, and high-throughput document extraction pipelines benefit from near-instantaneous streaming responses, making Groq an important component of the open-source inference ecosystem.</p>",
+      "sourceSummary": "Research-based profile using Groq's official API documentation, model specifications and rate limits reviewed on 6 November 2026. Published specifications are vendor-reported; no independent hardware speed or uptime benchmarks are claimed.",
+      "how_it_works": "<p>A developer creates an account on GroqCloud and generates an API key from the developer console. Because the Groq REST API adheres to OpenAI-compatible request and response schemas, developers can configure official client libraries in Python or TypeScript by simply pointing the base URL to Groq's cloud endpoint.</p>\n<p>When an application submits a prompt, Groq's compiler maps model weights and tensor operations across interconnected LPUs in a predictable, deterministic sequence. Tokens are computed and streamed back to the client application over server-sent events (SSE) at speeds frequently exceeding 300 to 500 tokens per second depending on model architecture.</p>\n<p>The platform tracks token usage across prompt inputs and completion outputs, enforcing organization-level rate limits for requests per minute, tokens per minute, and daily quotas. Production teams can monitor latency metrics, configure automated prompt caching to discount repeated prefixes, and submit asynchronous batch jobs for non-real-time workloads.</p>",
+      "feature_groups": [
+        {
+          "group": "LPU Inference Architecture",
+          "items": [
+            "Proprietary Language Processing Unit hardware designed for deterministic sequential token generation.",
+            "Low-latency inference achieving streaming generation speeds of hundreds of tokens per second.",
+            "Hosted open-weights models including Llama, Gemma, and Whisper architectures."
+          ]
+        },
+        {
+          "group": "Developer API & Integration",
+          "items": [
+            "OpenAI-compatible REST API endpoints allowing drop-in substitution in existing applications.",
+            "Native support for function calling, structured JSON output mode, and prompt prefix caching.",
+            "Official client libraries for Python and TypeScript with full streaming support."
+          ]
+        },
+        {
+          "group": "Performance & Scalability",
+          "items": [
+            "Batch API processing offering 50% discounts for non-real-time asynchronous workloads.",
+            "High-speed Whisper audio transcription models processing voice files rapidly.",
+            "Organization-level quota management, usage analytics, and enterprise throughput options."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Developers building conversational voice agents where low end-to-end latency is required for natural interaction.",
+        "AI application architects seeking cost-effective, high-speed inference on popular open-weights models.",
+        "Engineering teams running complex agentic workflows that require fast multi-step model evaluation."
+      ],
+      "notIdealFor": [
+        "Teams requiring proprietary closed frontier models such as Claude 3.7 Sonnet or OpenAI o3.",
+        "Organizations looking to train foundational model weights or perform custom model fine-tuning.",
+        "Workloads requiring massive local state retention without connection to cloud API endpoints."
+      ],
+      "workflows": [
+        {
+          "title": "Real-time voice agent inference",
+          "description": "Route speech-to-text transcripts through Groq-hosted open-weights models to generate conversational responses with minimal latency."
+        },
+        {
+          "title": "Agentic tool-calling execution",
+          "description": "Run multi-step reasoning agents that parse tool definitions and execute structured function calls at high token generation speeds."
+        },
+        {
+          "title": "High-throughput audio transcription",
+          "description": "Submit recorded audio files to Groq-hosted Whisper models to generate accurate text transcripts and timestamped segments in seconds."
+        }
+      ],
+      "pros": [
+        "Delivers industry-leading inference speeds and low latency on popular open-weights models.",
+        "OpenAI API compatibility allows existing codebases and agent frameworks to switch endpoints easily.",
+        "Includes a permanent Free developer tier with standing organization rate limits for prototyping.",
+        "Cost-effective usage-based pricing with significant discounts for prompt caching and batch jobs."
+      ],
+      "cons": [
+        "Free developer tier enforces strict organization rate limits that return HTTP 429 errors when exceeded.",
+        "Focuses strictly on model inference and does not support custom model training or fine-tuning.",
+        "Model availability is limited to supported open-weights architectures and subject to periodic rotation.",
+        "Context window sizes are constrained by the underlying open-source model architecture parameters."
+      ],
+      "pricing_overview": "<p>Groq operates on a usage-based pay-as-you-go pricing model accompanied by a permanent free developer tier. The Free tier costs $0/month and provides access to supported models under organization-level rate limits (such as 30 requests per minute and daily token allowances) without requiring a credit card. On-demand production usage is billed per million (1M) tokens consumed, split between input and output tokens. For example, OpenAI GPT-OSS 20B is priced at approximately $0.075 per 1M input tokens and $0.30 per 1M output tokens, while larger 120B models cost approximately $0.15 per 1M input tokens and $0.60 per 1M output tokens. Hosted Whisper audio models are billed based on recorded audio duration, such as Whisper Large V3 Turbo at approximately $0.04 per audio hour. Groq offers a 50% discount on input tokens through automatic prompt prefix caching, as well as a 50% discount on non-real-time jobs processed through its Batch API within a 24-hour to 7-day window. Enterprise commitments with custom SLAs are available through direct consultation.</p>",
+      "comparison_summary": "<p>Compared to traditional GPU cloud providers like Together AI, Fireworks AI, and Amazon Bedrock, Groq differentiates itself through its proprietary LPU silicon, which delivers significantly faster token generation speeds and lower time-to-first-token latency. While GPU providers often offer broader fine-tuning and proprietary model hosting, Groq focuses specifically on optimizing raw inference throughput and response speed for open-weights models.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": false,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "usage",
+      "startingPlan": "Free",
+      "trialDays": null,
+      "freeTierScope": "Free developer tier with organization rate limits (RPM, TPM, TPD) across supported models",
+      "pricingScope": "$0 Free developer tier with standing organization rate limits; Pay-As-You-Go metered per 1M tokens with prompt caching and 50% batch discounts",
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "verificationSources": [
+        "https://groq.com/",
+        "https://console.groq.com/docs/overview",
+        "https://console.groq.com/docs/models",
+        "https://console.groq.com/docs/rate-limits"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1336",
+          "sourceURL": "https://console.groq.com/docs/models",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official GroqCloud documentation, rate limits and model pricing reviewed 6 November 2026: Free developer tier ($0/month) provides standing organization quotas (RPM, TPM, TPD) without credit card; Pay-As-You-Go usage billed per 1M tokens (e.g. GPT-OSS 20B at $0.075 input, $0.30 output; Whisper models at $0.04 to $0.111 per audio hour); 50% discounts for prompt caching and Batch API jobs; LPU hardware acceleration and OpenAI API compatibility verified."
+        }
+      ]
+    },
+    "raycast": {
+      "shortDescription": "Extensible desktop command launcher for macOS and Windows with integrated AI assistant.",
+      "long_description": "<p>Raycast is an extensible keyboard-centric desktop launcher application for macOS and Windows, designed for software engineers, product designers, technical writers, and power users. Operating as an alternative to default system search bars like Apple Spotlight, Raycast provides instant access to local applications, files, clipboard history, window management, system settings, and parameterized text snippets through customizable keyboard shortcuts, keeping users focused in their work without reaching for a mouse.</p>\n<p>Beyond traditional desktop utilities, Raycast incorporates a developer platform supported by an open extension store containing thousands of community and official extensions. Users can manage GitHub pull requests, create Linear tickets, control Spotify playback, search documentation, and query external databases directly from the command bar. Engineers can also write custom extensions in TypeScript and React using Raycast's native developer API to automate bespoke internal workflows.</p>\n<p>The application integrates native artificial intelligence features under Raycast Pro, enabling users to invoke AI quick-chat, summarize clipboard text, translate languages, and draft emails from any desktop context. Raycast allows users to choose between native bundled AI credits, connecting their own third-party API keys (BYOK), or linking existing consumer ChatGPT and Claude subscriptions, providing flexibility in how desktop AI capabilities are funded and utilized.</p>",
+      "sourceSummary": "Research-based profile using Raycast's official pricing, user manual and developer documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent performance or productivity benchmarks are claimed.",
+      "how_it_works": "<p>A user opens Raycast with a global keyboard shortcut (such as Option+Space) to bring up the command bar. Users can search for local applications, calculate mathematical expressions, manage window tiling, or paste formatted snippets directly into active software windows.</p>\n<p>When searching for integrations, users browse the Raycast Store to install extensions for tools like GitHub, Jira, Notion, or Slack. Extensions run locally using Node.js and present structured interactive lists, markdown detail panes, and customizable keyboard action menus directly within the Raycast window.</p>\n<p>To use AI features, users press a shortcut to open Raycast AI chat or trigger inline text commands. The system routes prompts through configured models, applying selected prompts to clipboard contents or generating responses inline. Users can route requests through Raycast Pro monthly credit pools, link their personal OpenAI or Anthropic API keys, or connect active ChatGPT Plus accounts.</p>",
+      "feature_groups": [
+        {
+          "group": "Desktop Productivity & Launching",
+          "items": [
+            "Keyboard-driven command bar for launching apps, searching files, and managing system preferences.",
+            "Window management commands for snapping, resizing, and tiling application windows across displays.",
+            "Built-in clipboard history manager, parameterized text snippets, and floating desktop notes."
+          ]
+        },
+        {
+          "group": "Open Extension Ecosystem",
+          "items": [
+            "Community extension store featuring thousands of pre-built integrations for developer and SaaS tools.",
+            "TypeScript and React API allowing developers to build, test, and publish custom extension packages.",
+            "Custom script commands supporting Bash, Python, AppleScript, and Node.js automation scripts."
+          ]
+        },
+        {
+          "group": "Raycast AI & Model Flexibility",
+          "items": [
+            "Global AI chat window and inline text transformation commands accessible from any desktop context.",
+            "Flexible model access supporting bundled AI credits, Bring-Your-Own-Key (BYOK), or linked accounts.",
+            "Cloud synchronization syncing extensions, snippets, hotkeys, and quicklinks across multiple computers."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Software developers, product managers, and power users who navigate operating systems primarily via keyboard.",
+        "Engineering teams seeking shared snippets, quicklinks, and custom internal extension tools.",
+        "Professionals who want instant AI chat and text transformations accessible across all desktop applications."
+      ],
+      "notIdealFor": [
+        "Casual computer users who prefer traditional mouse navigation and graphical folder browsing.",
+        "Users on the free plan who expect full AI capabilities without upgrading or providing custom API keys.",
+        "Teams requiring complete feature parity on Windows while mature macOS extensions continue porting."
+      ],
+      "workflows": [
+        {
+          "title": "Contextual AI text transformation",
+          "description": "Highlight text in any application, invoke Raycast AI with a hotkey, and apply custom prompts to summarize, rephrase, or format code."
+        },
+        {
+          "title": "Developer issue management",
+          "description": "Search GitHub repositories, triage open pull requests, and create Linear issue tickets directly from the desktop command bar."
+        },
+        {
+          "title": "Cross-device snippet synchronization",
+          "description": "Store parameterized code templates and text snippets in Raycast, synchronizing them securely across multiple workstations via cloud sync."
+        }
+      ],
+      "pros": [
+        "Fast, lightweight native desktop launcher with comprehensive keyboard navigation and window controls.",
+        "Vibrant extension ecosystem with thousands of integrations built on standard TypeScript and React.",
+        "Permanent Free plan includes core productivity tools, window management, snippets, and store extensions.",
+        "Flexible AI routing supports native credit packages, personal API keys (BYOK), or linked subscriptions."
+      ],
+      "cons": [
+        "Core Raycast AI capabilities require a paid Pro subscription or bringing personal third-party API keys.",
+        "Windows client is newer than the macOS application and lacks parity with certain Mac-specific extensions.",
+        "Bundled monthly AI credits on Pro tiers roll over for only one additional billing cycle before expiring.",
+        "High-volume team collaboration, unlimited shared commands, and centralized team AI require paid per-user Teams licensing, though Teams Free includes a private store with limited shared items."
+      ],
+      "pricing_overview": "<p>Raycast operates on a freemium model distinguishing its core desktop launcher from AI-enhanced paid tiers. The Raycast Free plan costs $0/month and provides full access to core launcher features, window management, snippets, basic clipboard history, and the open extension store across macOS and Windows, but excludes Raycast AI. Raycast Pro is priced at $8/month billed annually as $96/year (or $10/month billed monthly), unlocking 500 monthly AI credits, cross-device cloud sync, unlimited clipboard history, custom themes, and dictation. Higher individual tiers include Raycast Pro+ at $20/month with 3,000 monthly AI credits and advanced models, and Raycast Max at $50/month with 7,500 monthly AI credits for heavy power users. A 7-day free trial of Raycast Pro is available for new users without requiring an upfront credit card. Raycast for Teams includes a free tier providing a private extension store with limited shared commands, snippets, and quicklinks, while paid Teams plans start at $12/user/month billed annually ($15/user/month billed monthly) to unlock unlimited team sharing and centralized AI management. Users can also utilize Bring Your Own Key (BYOK) with personal API keys or connect existing ChatGPT and Claude subscriptions.</p>",
+      "comparison_summary": "<p>Compared to default system tools like Apple Spotlight and Windows Search, Raycast provides significantly deeper extensibility, keyboard window tiling, and an active community extension marketplace. Against launcher alternatives like Alfred, Raycast distinguishes itself with a modern TypeScript extension API, native cross-platform support for Windows, and integrated AI capabilities that support flexible BYOK and linked consumer subscription models.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": true,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Raycast Free",
+      "trialDays": 7,
+      "freeTierScope": "Permanent free desktop launcher, window management, snippets, and open extension store (AI excluded)",
+      "pricingScope": "$0 Raycast Free includes core launcher and extensions; Raycast Pro at $8/month billed annually ($10/month monthly) includes 500 AI credits, cloud sync, and clipboard history",
+      "apiAvailable": true,
+      "platforms": [
+        "macos",
+        "windows",
+        "ios"
+      ],
+      "verificationSources": [
+        "https://www.raycast.com/",
+        "https://www.raycast.com/pricing",
+        "https://manual.raycast.com/",
+        "https://developers.raycast.com/"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1337",
+          "sourceURL": "https://www.raycast.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Raycast product and pricing specifications reviewed 6 November 2026: Raycast Free ($0/month) includes core launcher, snippets, window management, and extensions across macOS and Windows without AI; Raycast Pro ($8/month billed annually at $96/year, or $10/month monthly) includes 500 AI credits, cloud sync, and clipboard history; Pro+ ($20/month, 3,000 credits) and Max ($50/month, 7,500 credits) tiers verified; 7-day Pro trial available without credit card; BYOK and linked subscription support verified."
+        }
+      ]
+    },
+    "glean": {
+      "shortDescription": "Enterprise AI search, workplace knowledge discovery, and work graph platform.",
+      "long_description": "<p>Glean is an enterprise artificial intelligence search and workplace knowledge discovery platform designed for mid-market and large enterprise organizations. Modern enterprises frequently suffer from fragmented knowledge spread across disconnected cloud software applications, including document repositories, chat channels, issue trackers, customer relationship managers, and code hosts. Glean indexes company information across these separate repositories into a unified knowledge graph, enabling employees to search and synthesize corporate intelligence from a centralized portal.</p>\n<p>The platform distinguishes itself through its permission-aware architecture. Enterprise search engines must respect complex data governance and identity rules to ensure employees never view documents, customer details, or compensation data they are not authorized to see. Glean integrates with corporate identity providers like Okta and Active Directory, continuously synchronizing access control lists (ACLs) so that search results and generative AI answers are designed to reflect the documented permissions of the querying user in connected identity systems.</p>\n<p>In addition to enterprise search, Glean provides generative chat assistants and an application studio for building custom internal agents. Employees can query corporate policies, draft technical briefs with source citations, or deploy specialized bots that automate routine workflow inquiries across connected systems. By combining deep connector integration with strict enterprise security compliance, Glean serves as a centralized intelligence layer for modern corporate workforces.</p>",
+      "sourceSummary": "Research-based profile using Glean's official product documentation, enterprise architecture and compliance resources reviewed on 6 November 2026. Published specifications are vendor-reported; no independent retrieval accuracy or uptime benchmarks are claimed.",
+      "how_it_works": "<p>An enterprise IT team deploys Glean by configuring connections to company cloud applications, including Google Workspace, Microsoft 365, Slack, Jira, Confluence, Salesforce, and GitHub. Glean crawls and indexes structured and unstructured data, establishing semantic relationships between employees, projects, documents, and communication threads to build an enterprise work graph.</p>\n<p>Glean continuously syncs access control lists and user permissions from connected applications and identity providers. When an employee submits a natural language search query or asks a question in Glean Chat, the system applies semantic retrieval algorithms across indexed company content while applying permission filters designed to exclude documents that the user is not authorized to view based on synced access control lists.</p>\n<p>Search results and synthesized generative answers are returned with clickable citations linking to the authoritative source documents across connected tools. Administrators can monitor organization search analytics, configure custom company-specific dictionary acronyms, and deploy specialized internal agents via the Glean Apps studio to automate departmental support workflows.</p>",
+      "feature_groups": [
+        {
+          "group": "Enterprise Search & Work Graph",
+          "items": [
+            "Unified search indexing across Google Workspace, Microsoft 365, Slack, Jira, Salesforce, and GitHub.",
+            "Semantic work graph mapping relationships between colleagues, teams, documents, and project contexts.",
+            "Generative assistant delivering cited natural language answers grounded in verified company documents."
+          ]
+        },
+        {
+          "group": "Permissions & Security Governance",
+          "items": [
+            "Continuous synchronization of access control lists (ACLs) designed to enforce enterprise permissions from connected data sources.",
+            "Enterprise identity provider integration supporting SAML, OIDC, Okta, and Microsoft Entra ID.",
+            "SOC 2 Type II compliance, encryption in transit and at rest, and zero customer data training policies."
+          ]
+        },
+        {
+          "group": "Enterprise Agent Studio & Insights",
+          "items": [
+            "Glean Apps studio enabling teams to build and deploy custom internal AI agents without code.",
+            "Company acronym directory and people search providing verified organizational context.",
+            "Administrative analytics dashboards tracking knowledge retrieval efficiency and popular search queries."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Mid-market and enterprise organizations with hundreds to thousands of employees managing fragmented SaaS repositories.",
+        "IT and security leaders seeking permission-aware access control synchronization for enterprise AI search.",
+        "Knowledge management teams seeking to reduce employee time spent searching across disparate corporate apps."
+      ],
+      "notIdealFor": [
+        "Individual users, freelancers, or small startups with simple document structures that do not require enterprise indexing.",
+        "Organizations seeking a self-serve credit-card tool without involving enterprise IT security procurement.",
+        "Teams looking for public web search or general consumer information retrieval."
+      ],
+      "workflows": [
+        {
+          "title": "Unified enterprise document discovery",
+          "description": "Search across company Google Drive, Confluence, Slack, and Jira instances simultaneously to locate technical specifications and project decisions."
+        },
+        {
+          "title": "Permission-aware policy querying",
+          "description": "Ask natural language questions about internal HR and IT policies, receiving direct answers with citations to documents matching the user access permissions."
+        },
+        {
+          "title": "Custom department agent deployment",
+          "description": "Build specialized internal agents in the Glean Apps studio to automate onboarding FAQs and route common employee support requests."
+        }
+      ],
+      "pros": [
+        "Comprehensive enterprise search across more than one hundred popular workplace SaaS tools and data sources.",
+        "Permission-aware indexing architecture designed to limit search results and AI answers to content the querying user is authorized to access.",
+        "Provides direct source citations for all synthesized answers, facilitating fact-checking and document verification.",
+        "Enterprise-grade security controls with SOC 2 compliance, SAML SSO, and zero model training on customer data."
+      ],
+      "cons": [
+        "Operates under an enterprise sales-led model with no self-serve checkout, public pricing card, or free plan.",
+        "Requires extensive organizational IT setup, connector authorization, and administrative oversight to deploy.",
+        "Search quality depends heavily on existing company documentation hygiene and active internal repository usage.",
+        "Inaccessible to individual professionals or early-stage startups due to enterprise contract requirements."
+      ],
+      "pricing_overview": "<p>Glean operates strictly under a sales-led enterprise commercial model tailored to organizational scale, employee headcount, and connector ecosystem requirements. The company does not publish a self-serve rate card, public tier breakdown, or credit-card checkout on its website. Interested organizations must request a formal consultation and product demonstration with the Glean sales team to receive a custom proposal. Agreements are structured as annual enterprise contracts covering seat licensing, platform maintenance, connector syncing, and enterprise support service levels. There is no permanent free tier, public developer sandbox, or self-serve trial available.</p>",
+      "comparison_summary": "<p>Compared to consumer-oriented AI search tools like Perplexity or open-web knowledge engines, Glean is designed strictly for private internal enterprise intranets. Against native search within individual platforms like Google Workspace or Microsoft Copilot, Glean offers neutral cross-platform indexing that connects heterogeneous tool stacks across Google, Microsoft, Slack, Atlassian, and Salesforce under a unified permission-aware architecture.</p>",
+      "pricingModel": "enterprise",
+      "hasFreeTier": false,
+      "hasFreeTrial": false,
+      "freeAccessType": "none",
+      "startingPrice": null,
+      "priceCurrency": null,
+      "billingPeriod": null,
+      "startingPlan": "Enterprise",
+      "trialDays": null,
+      "freeTierScope": null,
+      "pricingScope": "Enterprise sales-led model requiring direct sales consultation and custom organization quote; no public rate card or self-serve checkout is published",
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "windows",
+        "macos",
+        "ios",
+        "android"
+      ],
+      "verificationSources": [
+        "https://www.glean.com/",
+        "https://www.glean.com/platform",
+        "https://docs.glean.com/"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1338",
+          "sourceURL": "https://www.glean.com/platform",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Glean product and enterprise architecture documentation reviewed 6 November 2026: Enterprise sales-led model with custom annual invoicing confirmed; no public pricing card or self-serve trial available; permission-aware indexing with continuous ACL synchronization across 100+ workplace SaaS tools; SAML SSO, SOC 2 compliance, and Glean Apps custom agent studio verified."
+        }
+      ]
+    },
+    "tavily": {
+      "shortDescription": "Real-time search and web extraction API purpose-built for LLMs and autonomous AI agents.",
+      "long_description": "<p>Tavily is a search engine and web extraction API designed from the ground up for artificial intelligence agents, large language models, and retrieval-augmented generation (RAG) pipelines. Traditional consumer search engine APIs are engineered for human browsing, returning cluttered results full of advertising links, tracking scripts, navigation boilerplate, and unstructured HTML snippets that consume excessive LLM context windows. Tavily solves this challenge by retrieving, filtering, and structuring web data specifically for machine ingestion.</p>\n<p>The platform provides specialized search endpoints that return concise, relevant factual context formatted as clean markdown or structured JSON. When an artificial intelligence agent queries Tavily, the service conducts web retrieval, parses source pages, removes redundant page elements, and extracts key factual snippets tailored to the prompt query. It also includes dedicated extraction endpoints that pull clean markdown from specific URLs, as well as deep research capabilities that aggregate multi-source findings into consolidated briefs.</p>\n<p>Tavily integrates natively with leading agentic frameworks, including LangChain, LlamaIndex, CrewAI, AutoGen, and the Vercel AI SDK. By delivering real-time, factual web context with minimal latency and reduced token overhead, Tavily serves as an external retrieval layer that helps ground LLM responses in retrieved web sources, but the model must still evaluate source accuracy.</p>",
+      "sourceSummary": "Research-based profile using Tavily's official pricing, API documentation and developer quickstarts reviewed on 6 November 2026. Published specifications are vendor-reported; no independent search index coverage or latency benchmarks are claimed.",
+      "how_it_works": "<p>A developer signs up for an account on Tavily, receives an API key, and installs the official Python or TypeScript SDK into their application. In automated agent frameworks like LangChain or CrewAI, Tavily can be registered directly as a search tool using pre-built wrapper integrations.</p>\n<p>When an application requires external web information, it submits a query to Tavily's search endpoint with parameters defining search depth (basic or advanced), domain include or exclude lists, and topic filters. Tavily queries real-time web sources, extracts relevant passages, and returns clean JSON containing parsed snippets, source URLs, and publication dates.</p>\n<p>The client application injects the structured search context directly into the prompt payload of an underlying large language model. Because the returned text is stripped of ads, cookie banners, and navigation menus, the language model can reference cited web context without wasting tokens on formatting noise; this helps ground LLM responses in retrieved web sources, but the model must still evaluate source accuracy.</p>",
+      "feature_groups": [
+        {
+          "group": "AI-Optimized Search Engine",
+          "items": [
+            "Real-time web search tailored for machine comprehension, returning clean text and structured JSON.",
+            "Basic and advanced search depth options balancing speed and comprehensive source analysis.",
+            "Domain filtering parameters allowing applications to whitelist trusted sources or exclude low-quality sites."
+          ]
+        },
+        {
+          "group": "Web Content Extraction",
+          "items": [
+            "Clean markdown extraction from specific URLs, removing cookie banners, ads, and navigation clutter.",
+            "Automated web mapping and crawling capabilities for indexing multi-page site documentation.",
+            "Deep research endpoint aggregating multi-source findings into synthesized intelligence briefs."
+          ]
+        },
+        {
+          "group": "Developer & Agent Ecosystem",
+          "items": [
+            "Native tool integrations for LangChain, LlamaIndex, CrewAI, AutoGen, and Vercel AI SDK.",
+            "Simple HTTP header authentication using Bearer tokens across REST, Python, and TypeScript SDKs.",
+            "Deterministic credit accounting with predictable per-request and per-extraction costs."
+          ]
+        }
+      ],
+      "bestFor": [
+        "AI software engineers building RAG pipelines that require real-time web context without token bloat.",
+        "Developers orchestrating autonomous research agents that need to search, extract, and cite web sources.",
+        "Technical teams needing programmatic web content extraction without maintaining complex scraper infrastructure."
+      ],
+      "notIdealFor": [
+        "General internet users seeking a consumer search engine with a web portal interface for personal browsing.",
+        "Applications requiring comprehensive private corporate intranet search across internal enterprise documents.",
+        "High-volume visual image and video media search where textual information is secondary."
+      ],
+      "workflows": [
+        {
+          "title": "RAG context augmentation",
+          "description": "Query Tavily during user interactions to retrieve current web facts, injecting structured markdown into the LLM prompt to help ground LLM responses in retrieved web sources, while the model must still evaluate source accuracy."
+        },
+        {
+          "title": "Multi-source agent research",
+          "description": "Equip autonomous agents with Tavily tools to execute multi-hop web searches and compile cited research summaries on complex topics."
+        },
+        {
+          "title": "Clean documentation extraction",
+          "description": "Submit technical documentation URLs to Tavily Extract to retrieve clean markdown text for embedding into vector databases."
+        }
+      ],
+      "pros": [
+        "Delivers clean, structured text and markdown optimized specifically for LLM context windows.",
+        "Eliminates web scraping maintenance, CAPTCHA solving, and proxy rotation for developers.",
+        "Permanent Free plan includes 1,000 monthly API credits without requiring an upfront credit card.",
+        "Native integrations with major agent frameworks like LangChain, LlamaIndex, and CrewAI."
+      ],
+      "cons": [
+        "Advanced search queries and deep research tasks consume credit allocations at higher rates per call.",
+        "Free tier enforces a rate limit of 100 requests per minute, requiring request throttling in concurrent agents.",
+        "Focuses strictly on programmatic API access and does not offer a standalone consumer search UI.",
+        "Designed for public web retrieval and cannot access private gated enterprise repositories."
+      ],
+      "pricing_overview": "<p>Tavily operates on a credit-based pricing structure offering both monthly subscriptions and pay-as-you-go options. The Researcher plan is free ($0/month) and includes 1,000 API credits per month with a rate limit of 100 requests per minute, requiring no credit card to start. Paid monthly plans provide larger credit allowances at lower per-credit costs: the Project plan costs $30/month for 4,000 credits ($0.0075/credit); the Bootstrap plan costs $100/month for 15,000 credits ($0.0067/credit); the Startup plan costs $220/month for 38,000 credits ($0.0058/credit); and the Growth plan costs $500/month for 100,000 credits ($0.005/credit). Users can also select a Pay-As-You-Go option at $0.008 per credit. Operations consume credits according to task complexity: basic search costs 1 credit, advanced search costs 2 credits, URL content extraction costs 1 credit per 5 successful pages, and deep research tasks range between 4 and 250 credits per run. Custom Enterprise contracts with dedicated rate limits and SLAs are available.</p>",
+      "comparison_summary": "<p>Compared to traditional search APIs from Google and Bing that return raw HTML links intended for human consumers, Tavily filters out advertising and navigation clutter to deliver clean text tailored directly for LLM context windows. Against developer scraping tools like SerpApi, Tavily provides purpose-built RAG synthesis, direct answers, and native agent framework wrappers with predictable credit accounting.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": false,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Researcher",
+      "trialDays": null,
+      "freeTierScope": "1,000 API credits per month with 100 requests per minute rate limit",
+      "pricingScope": "$0 Researcher plan includes 1,000 free API credits/month; Project plan at $30/month includes 4,000 credits ($0.0075/credit); Pay-As-You-Go available at $0.008/credit",
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "verificationSources": [
+        "https://www.tavily.com/",
+        "https://www.tavily.com/pricing",
+        "https://docs.tavily.com/"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1339",
+          "sourceURL": "https://www.tavily.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Tavily pricing and API documentation reviewed 6 November 2026: Free Researcher tier ($0/month) includes 1,000 recurring monthly API credits with 100 RPM limit without credit card; Project tier ($30/month) provides 4,000 credits ($0.0075/credit); Bootstrap ($100/month) provides 15,000 credits; Startup ($220/month) provides 38,000 credits; Pay-As-You-Go available at $0.008/credit; basic search (1 credit), advanced search (2 credits), and extract (1 credit per 5 URLs) consumption rules verified."
+        }
+      ]
+    },
+    "augment-code": {
+      "shortDescription": "Software development platform and coding agent powered by a whole-repository Context Engine and Cosmos sandboxes.",
+      "long_description": "<p>Augment Code is an artificial intelligence developer platform and coding assistant designed for professional software engineers, engineering managers, and technical enterprises working on large, complex codebases. While standard AI coding tools rely on limited local context windows or simple file indexing, Augment Code utilizes a proprietary Context Engine engineered to continuously index and understand multi-million-line monolithic repositories, private APIs, internal dependencies, and cross-service architectural relationships.</p>\n<p>The platform integrates directly into developer integrated development environments (IDEs) including Visual Studio Code and JetBrains tools such as IntelliJ, PyCharm, and WebStorm, complemented by the Auggie CLI and the Cosmos cloud compute execution environment. Augment Code provides context-aware inline code completion, multi-file code editing, and an interactive chat interface that references actual codebase entities, internal libraries, and private architectural design patterns.</p>\n<p>Augment Code is engineered with strict enterprise data privacy and security protections, holding SOC 2 Type II certification, CMEK and ISO 42001 compliance options, and operating under vendor data privacy policies stating customer source code is not used to train foundational AI models. By combining whole-codebase context with transparent token-based billing across models, compute, and service fees, Augment Code serves as a production-grade coding copilot for professional engineering organizations.</p>",
+      "sourceSummary": "Research-based profile using Augment Code's official pricing, token-based billing and developer documentation reviewed on 6 November 2026. Published specifications are vendor-reported; no independent code completion acceptance or speed benchmarks are claimed.",
+      "how_it_works": "<p>A developer installs the Augment Code extension within VS Code or a JetBrains IDE and authenticates their account. The platform connects to the developer's Git repository, and its cloud Context Engine begins indexing the codebase, parsing abstract syntax trees, symbol references, and cross-file relationships into a semantic index.</p>\n<p>As the developer writes code, Augment Code evaluates cursor position, open files, and relevant codebase dependencies in real time, delivering multiline inline suggestions that fit the existing codebase style. When using the chat panel or Auggie CLI, developers can ask questions about architectural patterns, ask for refactoring plans, or dispatch autonomous tasks to Cosmos cloud sandboxes.</p>\n<p>Augment Code presents suggested edits as clean diffs directly inside the IDE editor. Developers can review, accept, or modify proposed changes across files before committing to Git. Monthly usage is tracked in real dollars, drawing from included usage allowances across model token fees, Cosmos compute time, and the platform service fee.</p>",
+      "feature_groups": [
+        {
+          "group": "Proprietary Context Engine",
+          "items": [
+            "Global codebase indexing engineered to understand large repositories with millions of lines of code.",
+            "Continuous synchronization tracking code changes across branches, private libraries, and internal APIs.",
+            "Dependency mapping engineered to help generated code conform to existing project architecture."
+          ]
+        },
+        {
+          "group": "Cosmos Compute & Developer Tooling",
+          "items": [
+            "Native IDE extensions for Visual Studio Code and JetBrains IDEs (IntelliJ, PyCharm, WebStorm).",
+            "Cosmos cloud sandbox execution supporting daemon mode and up to 50 concurrent developer sessions.",
+            "Auggie CLI access and Model Context Protocol (MCP) support for automated agent workflows."
+          ]
+        },
+        {
+          "group": "Enterprise Security & Team Architecture",
+          "items": [
+            "Flat team subscriptions for up to 50 seats with zero individual per-user licensing fees.",
+            "Transparent dollar-based usage billing across model API prices, Cosmos compute, and service fees.",
+            "Enterprise security controls with SOC 2 Type II compliance and explicit vendor policies prohibiting AI model training on customer code."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Software engineers working in large, complex monolithic codebases requiring deep architectural context.",
+        "Enterprise engineering teams that need context-aware code generation adhering to internal private frameworks.",
+        "Technical teams seeking coding assistance backed by SOC 2 compliance and strict IP data isolation policies."
+      ],
+      "notIdealFor": [
+        "Beginner programmers or hobbyists seeking a completely free, unmetered AI coding tool for personal side projects.",
+        "Developers working strictly in lightweight text editors that are not currently supported by official extensions.",
+        "Teams that prohibit any cloud-based code indexing or external telemetry connections."
+      ],
+      "workflows": [
+        {
+          "title": "Large-codebase feature development",
+          "description": "Implement new features that adhere to private internal APIs and utility libraries, referencing existing repository patterns automatically."
+        },
+        {
+          "title": "Coordinated multi-file refactoring",
+          "description": "Update interface signatures and refactor downstream call sites across multiple files simultaneously with dependency-aware reasoning."
+        },
+        {
+          "title": "Legacy codebase exploration",
+          "description": "Ask natural language questions about complex legacy code to understand execution paths, dependencies, and architectural constraints."
+        }
+      ],
+      "pros": [
+        "Flat team subscription model includes up to 50 seats with no per-user fee penalty.",
+        "Proprietary Context Engine deeply indexes large multi-million-line codebases with semantic understanding.",
+        "Transparent dollar-denominated billing draws from included usage across LLMs, compute, and platform fees.",
+        "Enterprise privacy posture with SOC 2 Type II compliance and documented vendor policies prohibiting AI model training on customer code."
+      ],
+      "cons": [
+        "Does not offer a permanent free plan; requires paid subscription to deploy Cosmos and active developer tools.",
+        "LLM token usage incurs a flat 40% platform service fee on top of underlying provider API list prices.",
+        "Exceeding monthly included usage ($20 on Standard, $100 on Business) incurs variable pay-as-you-go top-up charges.",
+        "Sandboxed Cosmos compute is metered at $0.19 per hour in 5-minute increments once included usage is exhausted."
+      ],
+      "pricing_overview": "<p>Augment Code uses a transparent token-based pricing model denominated in actual dollars rather than abstract credit pools. Plans are billed as a flat monthly subscription with zero per-seat charges for teams of up to 50 developers. The Standard plan costs $20/month flat and includes up to 50 user seats along with $20/month of included usage across LLM tokens, Cosmos compute, and platform service fees. The Business plan costs $100/month flat and also includes up to 50 user seats along with $100/month of included monthly usage. All usage draws from this single dollar balance, billed across three transparent components: LLM tokens at the model provider's public API list price, Cosmos compute at $0.19 per hour (billed in 5-minute increments), and a flat 40% platform service fee applied strictly to LLM token consumption to fund the Context Engine. Once monthly included usage is exhausted, teams can purchase pay-as-you-go top-ups at the same standard rates. Enterprise plans offering custom user limits, bespoke usage allowances, volume discounts, SSO/OIDC/SCIM, CMEK, and dedicated support are available via sales consultation. There is no permanent free tier, and vendor policies state customer source code is not used for AI model training.</p>",
+      "comparison_summary": "<p>Compared to per-seat developer tools like GitHub Copilot ($19/user/month) and Cursor ($20/user/month), Augment Code offers a flat team pricing structure ($20/month flat for Standard, $100/month flat for Business) covering up to 50 developer seats without individual seat licensing penalties. Against standalone code completion tools, Augment Code combines its whole-repository Context Engine with Cosmos cloud sandboxes and the Auggie CLI, billing transparently across public model API rates and compute time rather than forcing proprietary token markups.</p>",
+      "pricingModel": "paid",
+      "hasFreeTier": false,
+      "hasFreeTrial": false,
+      "freeAccessType": "none",
+      "startingPrice": 20,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Standard",
+      "trialDays": null,
+      "freeTierScope": null,
+      "pricingScope": "Standard plan starts at $20/month flat (up to 50 seats, $20 included usage); Business plan at $100/month flat (up to 50 seats, $100 included usage); additional usage billed pay-as-you-go",
+      "apiAvailable": true,
+      "platforms": [
+        "web",
+        "extension"
+      ],
+      "verificationSources": [
+        "https://www.augmentcode.com/",
+        "https://www.augmentcode.com/pricing",
+        "https://docs.augmentcode.com/models/token-based-pricing",
+        "https://docs.augmentcode.com/introduction"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1340",
+          "sourceURL": "https://www.augmentcode.com/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Augment Code pricing and token-based billing documentation reviewed 6 November 2026: Standard plan ($20/month flat, up to 50 seats) includes $20/month usage across LLM tokens, compute, and platform fee; Business plan ($100/month flat, up to 50 seats) includes $100/month usage; usage billed as LLM tokens at provider list price, Cosmos compute at $0.19/hour (5-minute increments), and 40% LLM service fee; pay-as-you-go top-ups available; no per-seat charges; SOC 2 Type II certified and vendor policies prohibiting AI model training on customer code verified."
+        }
+      ]
+    },
+    "kling-ai": {
+      "shortDescription": "Generative AI video creation platform producing high-definition cinematic video with realistic physics.",
+      "long_description": "<p>Kling AI is a generative artificial intelligence video creation platform developed by Kuaishou, designed for video editors, creative directors, digital marketing agencies, and visual storytellers. While early text-to-video systems suffered from rubbery physics, unstable camera motion, and low visual fidelity, Kling AI is built on advanced diffusion transformer architectures capable of generating cinematic video sequences with coherent physical dynamics, realistic lighting, and detailed motion simulation.</p>\n<p>The platform supports multiple creation modes, including text-to-video generation, image-to-video animation, video extension, and motion brush controls. Creators can upload still images or storyboards and animate them into high-definition video clips, specifying camera movements such as pans, tilts, zooms, and crane shots. Kling AI generates video outputs at 720p, 1080p, and native 4K resolutions, supporting realistic human facial expressions, fluid movement, and multi-element scene interaction.</p>\n<p>Kling AI operates on a credit-based commercial system offering a daily promotional free tier alongside recurring monthly subscription plans. While free generations include platform watermarks and are subject to platform terms regarding commercial deployment, paid subscription tiers unlock high-definition exports, commercial distribution rights under paid membership terms, priority generation queues, and developer REST API access, making it a viable generative production tool for digital media creators.</p>",
+      "sourceSummary": "Research-based profile using Kling AI's official pricing, platform terms and video generation specifications reviewed on 6 November 2026. Published specifications are vendor-reported; no independent generation speed or rendering benchmarks are claimed.",
+      "how_it_works": "<p>A creator logs into the Kling AI web studio and selects their desired creation mode, such as text-to-video or image-to-video. When animating from an image, the user uploads a source asset and enters a descriptive text prompt detailing the intended action, lighting changes, and environmental dynamics.</p>\n<p>The user configures generation settings, choosing duration (typically 5 or 10 seconds), aspect ratio, camera motion controls, and model fidelity settings. Once submitted, Kling AI's cloud servers process the diffusion pipeline, synthesizing realistic temporal frames and physics simulation to produce the final video clip.</p>\n<p>The generated video appears in the user's project gallery for preview. Users can extend the clip by generating continuous follow-up segments, upscale resolution to 1080p or 4K, or download the final video file for integration into commercial editing workflows and post-production software.</p>",
+      "feature_groups": [
+        {
+          "group": "Generative Video Synthesis",
+          "items": [
+            "Text-to-video and image-to-video generation delivering realistic physical dynamics and fluid motion.",
+            "High-resolution video output options supporting 720p, 1080p HD, and native 4K rendering.",
+            "Video extension tools enabling creators to extend generated scenes into continuous longer clips."
+          ]
+        },
+        {
+          "group": "Camera & Motion Controls",
+          "items": [
+            "Camera movement controls simulating cinematic pans, tilts, rolls, zooms, and tracking shots.",
+            "Motion brush capabilities allowing users to paint specific image regions to guide directional movement.",
+            "Aspect ratio adjustments supporting landscape (16:9), portrait (9:16), and square formats."
+          ]
+        },
+        {
+          "group": "Studio & Commercial Infrastructure",
+          "items": [
+            "Web-based creative studio interface with project history, prompt galleries, and rendering queues.",
+            "Commercial distribution rights under membership service terms and clean watermark-free exports on paid plans.",
+            "Developer REST API access for automated programmatic video generation and pipeline integration."
+          ]
+        }
+      ],
+      "bestFor": [
+        "Video editors, motion designers, and creative directors needing high-quality cinematic AI B-roll clips.",
+        "Digital marketing teams producing short-form video creative and visual advertising assets.",
+        "Storytellers and concept artists animating visual storyboards into moving concept previews."
+      ],
+      "notIdealFor": [
+        "Creators requiring watermark-free video or unambiguous commercial licensing without subscribing to a paid membership tier.",
+        "Long-form video producers seeking continuous multi-minute single-shot video generation.",
+        "Projects requiring deterministic, frame-accurate real-time editing without AI diffusion variance."
+      ],
+      "workflows": [
+        {
+          "title": "Still image storyboard animation",
+          "description": "Upload concept art or character still images, configure camera motion paths, and generate fluid animated video sequences."
+        },
+        {
+          "title": "Marketing video creative production",
+          "description": "Generate realistic dynamic video advertisements from descriptive text prompts for deployment across social advertising channels."
+        },
+        {
+          "title": "Cinematic B-roll generation",
+          "description": "Synthesize photorealistic environmental b-roll footage with custom lighting and camera angles for integration into video edits."
+        }
+      ],
+      "pros": [
+        "Produces video with impressive physical realism, fluid motion, and coherent environmental lighting.",
+        "Versatile camera controls allow creators to direct cinematic camera movements across generated scenes.",
+        "Generous promotional check-in allowance provides daily credits for creators to test video generation.",
+        "Paid membership plans remove platform watermarks, unlock 1080p and 4K resolution, and grant commercial distribution rights under membership service terms."
+      ],
+      "cons": [
+        "Free plan outputs include a visible platform watermark, and commercial usage rights depend on specific service terms that may require user clarification.",
+        "Promotional free credits do not roll over across days, and subscription credits expire after 30 days.",
+        "First-month promotional rates revert to standard renewal pricing ($10/month Standard, $37/month Pro) after introductory periods.",
+        "Like all generative diffusion tools, fine human hand details and complex multi-subject interactions can show variance."
+      ],
+      "pricing_overview": "<p>Kling AI operates on a credit-based commercial model offering promotional free allowances alongside monthly and annual subscriptions. Under current platform policies, registered free accounts can claim daily promotional check-in credits (typically up to 66 credits per day subject to ongoing platform event guidelines), which expire every 24 hours without rollover; free outputs are rendered at 720p and include visible platform watermarks, while commercial rights for free generations depend on applicable service terms and may require clarification for business deployment. Paid subscriptions remove watermarks, unlock commercial distribution rights under the paid membership service agreement, provide priority generation queues, and support 1080p HD and 4K rendering. The Standard plan has a regular list price of $10/month monthly (or approximately $6.60/month billed annually as $79.20/year, with introductory first-month promotional rates of ~$6.99/month to $8.80/month frequently available) and includes 660 monthly credits valid for 30 days. The Pro plan list price is $37/month monthly (or $24.42/month billed annually as $293.04/year; introductory rates ~$25.99/month to $32.56/month), providing 3,000 monthly credits. Higher-volume tiers include Premier at $92/month for 8,000 credits and Ultra at $180/month for 26,000 credits. Operations consume credits dynamically based on duration, resolution, and motion mode, typically ranging between 6 and 30 credits per second. Paid subscription tiers grant commercial distribution licenses subject to agreement terms, while users remain responsible for clearing third-party intellectual property and likeness rights.</p>",
+      "comparison_summary": "<p>Compared to competing generative video platforms like Runway Gen-3 and Luma Dream Machine, Kling AI is widely recognized for its realistic physics simulation, consistent character movements, and natural lighting fidelity. While tools like Pika and Haiper focus on playful short-form effects, Kling AI offers granular cinematic camera motion controls, high-resolution rendering, and a generous daily free credit allowance for creator experimentation.</p>",
+      "pricingModel": "freemium",
+      "hasFreeTier": true,
+      "hasFreeTrial": false,
+      "freeAccessType": "recurring_service",
+      "startingPrice": 0,
+      "priceCurrency": "USD",
+      "billingPeriod": "month",
+      "startingPlan": "Free",
+      "trialDays": null,
+      "freeTierScope": "Daily promotional check-in credits (up to 66/day subject to event terms, non-rollover) for watermarked video generation",
+      "pricingScope": "$0 Free tier includes daily promotional credits (up to 66/day, non-rollover) for watermarked video; Standard plan starts at $10/month list (~$6.60/month billed annually) for 660 credits with commercial terms",
+      "apiAvailable": true,
+      "platforms": [
+        "web"
+      ],
+      "verificationSources": [
+        "https://kling.ai/",
+        "https://kling.ai/pricing",
+        "https://kling.ai/docs/point-policy"
+      ],
+      "evidence": [
+        {
+          "evidenceId": "E1341",
+          "sourceURL": "https://kling.ai/pricing",
+          "method": "official_source_review",
+          "reviewedAt": "2026-11-06",
+          "finding": "Official Kling AI pricing, credit, and user policies reviewed 6 November 2026: Free tier provides daily promotional check-in credits (up to 66/day subject to event terms, non-rollover) for watermarked video generation; commercial rights depend on applicable terms; Standard plan list price is $10/month monthly (~$6.60/month billed annually at $79.20/year; introductory first-month promo ~$6.99/month to $8.80/month) with 660 monthly credits (30-day validity) and commercial distribution terms; Pro plan ($37/month list, 3,000 credits), Premier ($92/month, 8,000 credits), and Ultra ($180/month, 26,000 credits) verified; generation costs scaling from 6 to 30 credits per second verified."
+        }
+      ]
+    }
+  }
+}

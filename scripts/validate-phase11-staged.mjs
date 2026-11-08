@@ -133,11 +133,11 @@ function run() {
   if (criticalHold !== 0) logError(`criticalHold count is ${criticalHold}, expected 0`);
   if (dupOfId !== 0) logError(`duplicateOfId populated count is ${dupOfId}, expected 0`);
 
-  if (freeTrialTrue !== 273 || freeTrialFalse !== 26 || freeTrialNull !== 582) {
-    logError(`hasFreeTrial counts wrong. Expected 273/26/582. Got ${freeTrialTrue}/${freeTrialFalse}/${freeTrialNull}`);
+  if (freeTrialTrue !== 274 || freeTrialFalse !== 34 || freeTrialNull !== 573) {
+    logError(`hasFreeTrial counts wrong. Expected 274/34/573. Got ${freeTrialTrue}/${freeTrialFalse}/${freeTrialNull}`);
   }
-  if (priceNumber !== 101 || priceNull !== 780) {
-    logError(`startingPrice counts wrong. Expected 101/780. Got ${priceNumber}/${priceNull}`);
+  if (priceNumber !== 110 || priceNull !== 771) {
+    logError(`startingPrice counts wrong. Expected 110/771. Got ${priceNumber}/${priceNull}`);
   }
 
   // References check

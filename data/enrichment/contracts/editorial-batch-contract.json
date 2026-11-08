@@ -1,0 +1,333 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://whichaipick.com/schemas/editorial-batch-contract.json",
+  "title": "WhichAIPick Editorial Enrichment Batch Contract",
+  "description": "Declarative contract specifying the payload format for GPT-6 editorial enrichment batches supporting 1 to 20 tools under WhichAIPick MCD v2.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batchId",
+    "researchDate",
+    "targetToolIds",
+    "tools"
+  ],
+  "properties": {
+    "batchId": {
+      "type": "string",
+      "pattern": "^batch-[a-z0-9-]+$",
+      "description": "Unique identifier for the enrichment batch, e.g. batch-4c, batch-4d."
+    },
+    "researchDate": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO 8601 date when the official source research was completed."
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional human-readable description of the batch scope and cohort."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["new", "replay"],
+      "description": "Target validation mode: 'new' for un-enriched skeletal tools, 'replay' for historical regression testing."
+    },
+    "targetToolIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "description": "Ordered list of approved tool IDs in the batch (1 to 20 tools)."
+    },
+    "tools": {
+      "type": "object",
+      "description": "Map of tool IDs to their verified editorial and commercial payloads.",
+      "additionalProperties": {
+        "$ref": "#/definitions/toolPayload"
+      }
+    }
+  },
+  "definitions": {
+    "toolPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shortDescription",
+        "long_description",
+        "sourceSummary",
+        "how_it_works",
+        "feature_groups",
+        "bestFor",
+        "notIdealFor",
+        "workflows",
+        "pros",
+        "cons",
+        "pricing_overview",
+        "comparison_summary",
+        "pricingModel",
+        "hasFreeTier",
+        "hasFreeTrial",
+        "freeAccessType",
+        "startingPrice",
+        "priceCurrency",
+        "billingPeriod",
+        "startingPlan",
+        "trialDays",
+        "apiAvailable",
+        "platforms",
+        "verificationSources",
+        "evidence"
+      ],
+      "properties": {
+        "shortDescription": {
+          "type": "string",
+          "minLength": 30,
+          "maxLength": 250,
+          "description": "Single-sentence concise summary used in cards and meta descriptions."
+        },
+        "long_description": {
+          "type": "string",
+          "minLength": 60,
+          "maxLength": 2000,
+          "description": "Comprehensive introductory paragraph explaining product capability."
+        },
+        "sourceSummary": {
+          "type": "string",
+          "minLength": 50,
+          "maxLength": 600,
+          "description": "Editorial transparency disclosure explaining research basis and review date."
+        },
+        "how_it_works": {
+          "type": "string",
+          "minLength": 60,
+          "description": "HTML string containing 3 substantive paragraphs explaining operational workflow."
+        },
+        "feature_groups": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["group", "items"],
+            "properties": {
+              "group": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 100
+              },
+              "items": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 300
+                }
+              }
+            }
+          }
+        },
+        "bestFor": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 15,
+            "maxLength": 250
+          }
+        },
+        "notIdealFor": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 15,
+            "maxLength": 250
+          }
+        },
+        "workflows": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "description"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 80
+              },
+              "description": {
+                "type": "string",
+                "minLength": 20,
+                "maxLength": 400
+              }
+            }
+          }
+        },
+        "pros": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 200
+          }
+        },
+        "cons": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 200
+          }
+        },
+        "pricing_overview": {
+          "type": "string",
+          "minLength": 40,
+          "description": "HTML string containing pricing overview paragraphs and plan breakdowns."
+        },
+        "comparison_summary": {
+          "type": "string",
+          "minLength": 40,
+          "description": "HTML string providing objective comparison against market alternatives."
+        },
+        "pricingModel": {
+          "type": "string",
+          "enum": ["free", "freemium", "paid", "enterprise", "unknown"]
+        },
+        "hasFreeTier": {
+          "type": "boolean"
+        },
+        "hasFreeTrial": {
+          "type": "boolean"
+        },
+        "freeAccessType": {
+          "type": "string",
+          "enum": ["limited_preview", "none", "trial_only", "recurring_service", "software_only", "one_time_credits"]
+        },
+        "startingPrice": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "priceCurrency": {
+          "type": ["string", "null"],
+          "enum": ["USD", "EUR", "GBP", "AUD", "CAD", null]
+        },
+        "billingPeriod": {
+          "type": ["string", "null"],
+          "enum": ["month", "month_billed_annually", "one_time", "monthly", "annual", "usage", "free", null]
+        },
+        "startingPlan": {
+          "type": ["string", "null"]
+        },
+        "trialDays": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "freeTierScope": {
+          "type": ["string", "null"]
+        },
+        "pricingScope": {
+          "type": ["string", "null"]
+        },
+        "apiAvailable": {
+          "type": ["boolean", "null"]
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["web", "macos", "windows", "linux", "ios", "android", "api", "cli", "extension", "cloud", "discord"]
+          }
+        },
+        "verificationSources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/evidenceRecord"
+          }
+        },
+        "targetUsers": {
+          "type": "string",
+          "enum": ["individual", "team", "enterprise", "mixed", "unknown", "developers", "professionals", "researchers", "designers", "marketers", "creators"]
+        },
+        "licenseType": {
+          "type": ["string", "null"],
+          "enum": ["unknown", "open_source", "mixed", "source_available", "proprietary", null]
+        },
+        "licenseName": {
+          "type": ["string", "null"]
+        },
+        "openSource": {
+          "type": ["boolean", "null"]
+        },
+        "selfHosted": {
+          "type": ["boolean", "null"]
+        },
+        "deploymentModes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["cloud", "local", "self_hosted", "self_hosted_enterprise", "local_worker"]
+          }
+        }
+      }
+    },
+    "evidenceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidenceId",
+        "sourceURL",
+        "method",
+        "reviewedAt",
+        "finding"
+      ],
+      "properties": {
+        "evidenceId": {
+          "type": "string",
+          "pattern": "^E\\d{4}$"
+        },
+        "sourceURL": {
+          "type": "string",
+          "format": "uri"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["official_source_review"]
+        },
+        "reviewedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "finding": {
+          "type": "string",
+          "minLength": 20
+        },
+        "fieldScope": {
+          "type": ["string", "array"]
+        }
+      }
+    }
+  }
+}

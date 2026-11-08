@@ -11941,5 +11941,95 @@
     "reviewedAt": "2026-09-28",
     "method": "source_review",
     "finding": "Identity, taxonomy and directory-summary publication scope reviewed against the catalog source locator and September 2026 URL audit; unsupported metadata remains unknown rather than inferred."
+  },
+  {
+    "evidenceId": "E1332",
+    "id": "smartlead",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.smartlead.ai/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Smartlead product and pricing documentation reviewed 6 November 2026: Base tier starts at $39/month monthly ($32.50/month billed annually) for 6,000 sends and 2,000 contacts; Pro tier starts at $94/month monthly ($78.30/month billed annually) unlocking API and webhooks; Unlimited Smart at $174/month and Unlimited Prime at $379/month provide higher sending limits; 14-day free trial with 2,500 sends available without credit card; unlimited mailbox connections on all plans verified."
+  },
+  {
+    "evidenceId": "E1333",
+    "id": "pipedream",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://pipedream.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Pipedream pricing and platform documentation reviewed 6 November 2026: Free tier ($0/month) provides full feature, MCP and connector access in development environment; Startup plan ($99/month billed annually, $150/month billed monthly) unlocks production environment deployments with 100 end users ($2/user/month for additional users) and 10,000 usage credits ($0.012/credit for overages); custom Business plans support HIPAA and static egress IPs; compute credit model based on duration and memory verified."
+  },
+  {
+    "evidenceId": "E1334",
+    "id": "browserbase",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.browserbase.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Browserbase product and pricing specifications reviewed 6 November 2026: Free tier ($0/month) includes 1 browser hour, 3 concurrent browser sessions, and 15-minute session timeout, excluding CAPTCHA solving and stealth mode; Developer tier ($20/month) includes 100 browser hours ($0.12/hour overage), 25 concurrent sessions, CAPTCHA solving, and basic stealth mode; Startup tier ($99/month) includes 500 browser hours ($0.10/hour overage), 100 concurrent sessions, CAPTCHA solving, and basic stealth mode; Playwright and Stagehand compatibility verified."
+  },
+  {
+    "evidenceId": "E1335",
+    "id": "granola",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.granola.ai/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Granola product, security, and pricing documentation reviewed 6 November 2026: Device audio capture is local while transcription and AI summaries run in secure cloud; audio files auto-deleted after processing; Basic plan ($0/month) includes unlimited meetings and 30-day history/MCP window; Business plan ($14/user/month) unlocks unlimited history, workspace MCP, and API access; Enterprise tier ($35/user/month) provides SSO and SCIM."
+  },
+  {
+    "evidenceId": "E1336",
+    "id": "groq",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://console.groq.com/docs/models",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official GroqCloud documentation, rate limits and model pricing reviewed 6 November 2026: Free developer tier ($0/month) provides standing organization quotas (RPM, TPM, TPD) without credit card; Pay-As-You-Go usage billed per 1M tokens (e.g. GPT-OSS 20B at $0.075 input, $0.30 output; Whisper models at $0.04 to $0.111 per audio hour); 50% discounts for prompt caching and Batch API jobs; LPU hardware acceleration and OpenAI API compatibility verified."
+  },
+  {
+    "evidenceId": "E1337",
+    "id": "raycast",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.raycast.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Raycast product and pricing specifications reviewed 6 November 2026: Raycast Free ($0/month) includes core launcher, snippets, window management, and extensions across macOS and Windows without AI; Raycast Pro ($8/month billed annually at $96/year, or $10/month monthly) includes 500 AI credits, cloud sync, and clipboard history; Pro+ ($20/month, 3,000 credits) and Max ($50/month, 7,500 credits) tiers verified; 7-day Pro trial available without credit card; BYOK and linked subscription support verified."
+  },
+  {
+    "evidenceId": "E1338",
+    "id": "glean",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.glean.com/platform",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Glean product and enterprise architecture documentation reviewed 6 November 2026: Enterprise sales-led model with custom annual invoicing confirmed; no public pricing card or self-serve trial available; permission-aware indexing with continuous ACL synchronization across 100+ workplace SaaS tools; SAML SSO, SOC 2 compliance, and Glean Apps custom agent studio verified."
+  },
+  {
+    "evidenceId": "E1339",
+    "id": "tavily",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.tavily.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Tavily pricing and API documentation reviewed 6 November 2026: Free Researcher tier ($0/month) includes 1,000 recurring monthly API credits with 100 RPM limit without credit card; Project tier ($30/month) provides 4,000 credits ($0.0075/credit); Bootstrap ($100/month) provides 15,000 credits; Startup ($220/month) provides 38,000 credits; Pay-As-You-Go available at $0.008/credit; basic search (1 credit), advanced search (2 credits), and extract (1 credit per 5 URLs) consumption rules verified."
+  },
+  {
+    "evidenceId": "E1340",
+    "id": "augment-code",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://www.augmentcode.com/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Augment Code pricing and token-based billing documentation reviewed 6 November 2026: Standard plan ($20/month flat, up to 50 seats) includes $20/month usage across LLM tokens, compute, and platform fee; Business plan ($100/month flat, up to 50 seats) includes $100/month usage; usage billed as LLM tokens at provider list price, Cosmos compute at $0.19/hour (5-minute increments), and 40% LLM service fee; pay-as-you-go top-ups available; no per-seat charges; SOC 2 Type II certified and vendor policies prohibiting AI model training on customer code verified."
+  },
+  {
+    "evidenceId": "E1341",
+    "id": "kling-ai",
+    "fieldScope": "[\"targetUsers\",\"pricingModel\",\"hasFreeTier\",\"hasFreeTrial\",\"paidPlanAvailable\",\"startingPrice\",\"priceCurrency\",\"billingPeriod\",\"startingPlan\",\"trialDays\",\"platforms\",\"apiAvailable\",\"deploymentModes\",\"bestFor\",\"notIdealFor\",\"freeAccessType\",\"canonicalName\",\"website_url\",\"operationalStatus\",\"sourceSummary\",\"pricingScope\",\"freeTierScope\",\"capabilityScope\",\"audienceTags\",\"primaryCategory\",\"primaryUseCases\",\"targetUserDetails\",\"long_description\",\"shortDescription\"]",
+    "sourceURL": "https://kling.ai/pricing",
+    "reviewedAt": "2026-11-06",
+    "method": "official_source_review",
+    "finding": "Official Kling AI pricing, credit, and user policies reviewed 6 November 2026: Free tier provides daily promotional check-in credits (up to 66/day subject to event terms, non-rollover) for watermarked video generation; commercial rights depend on applicable terms; Standard plan list price is $10/month monthly (~$6.60/month billed annually at $79.20/year; introductory first-month promo ~$6.99/month to $8.80/month) with 660 monthly credits (30-day validity) and commercial distribution terms; Pro plan ($37/month list, 3,000 credits), Premier ($92/month, 8,000 credits), and Ultra ($180/month, 26,000 credits) verified; generation costs scaling from 6 to 30 credits per second verified."
   }
 ]
