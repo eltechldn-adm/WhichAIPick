@@ -466,5 +466,167 @@
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-uk-ai-subscriptions-2026",
+    "publisher": "Google",
+    "title": "Google UK AI Subscriptions and Plans (Free, AI Plus, AI Pro, AI Ultra)",
+    "url": "https://gemini.google/gb/subscriptions/?hl=en-GB",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-app-limits-2026",
+    "publisher": "Google",
+    "title": "Gemini App Context Window and Usage Limits",
+    "url": "https://support.google.com/gemini/answer/16275805",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-deep-research-2026",
+    "publisher": "Google",
+    "title": "Gemini Deep Research Multi-Step Reports",
+    "url": "https://support.google.com/gemini/answer/15719111",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-canvas-2026",
+    "publisher": "Google",
+    "title": "Gemini Canvas Collaborative Writing and Coding Workspace",
+    "url": "https://support.google.com/gemini/answer/16047321",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-gems-skills-2026",
+    "publisher": "Google",
+    "title": "Gemini Gems to Skills Transition and Reusable Instructions",
+    "url": "https://support.google.com/gemini/answer/18560919",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-nano-banana-2026",
+    "publisher": "Google",
+    "title": "Nano Banana 2 and Nano Banana Pro Image Generation in Gemini",
+    "url": "https://support.google.com/gemini/answer/14286560",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-scheduled-tasks-2026",
+    "publisher": "Google",
+    "title": "Gemini Scheduled Tasks Regional Availability and Limitations",
+    "url": "https://support.google.com/gemini/answer/17094710",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-code-assist-deprecation-2026",
+    "publisher": "Google",
+    "title": "Gemini Code Assist Deprecation for Individuals and Transition to Antigravity",
+    "url": "https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-code-assist-sunset-2026",
+    "publisher": "Google",
+    "title": "Gemini Code Assist Enterprise Sunset Notice and Subscription Transition",
+    "url": "https://docs.cloud.google.com/gemini/docs/codeassist/sunset",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-antigravity-dev-tools-2026",
+    "publisher": "Google",
+    "title": "Antigravity Developer Tools and AI-Powered Coding Environment Overview",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-api-code-execution-2026",
+    "publisher": "Google",
+    "title": "Gemini API Code Execution and Sandboxed Python Environment",
+    "url": "https://ai.google.dev/gemini-api/docs/code-execution",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-api-pricing-2026",
+    "publisher": "Google",
+    "title": "Gemini Developer API Pricing, Rate Limits and Token Costs",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-file-analysis-2026",
+    "publisher": "Google",
+    "title": "Gemini File, Spreadsheet and Data Analysis Documentation",
+    "url": "https://support.google.com/gemini/answer/14903178",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-connected-apps-2026",
+    "publisher": "Google",
+    "title": "Gemini Connected Apps and Extensions",
+    "url": "https://support.google.com/gemini/answer/13695044",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-live-2026",
+    "publisher": "Google",
+    "title": "Gemini Live Real-Time Spoken Voice Conversations on Mobile",
+    "url": "https://support.google.com/gemini/answer/15274899",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-work-codex-2026",
+    "publisher": "OpenAI",
+    "title": "ChatGPT Work and Codex Access across Plans",
+    "url": "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-scheduled-tasks-help-2026",
+    "publisher": "OpenAI",
+    "title": "Scheduled Tasks in ChatGPT for Consumer and Workspace Accounts",
+    "url": "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-codex-plans-2026",
+    "publisher": "OpenAI",
+    "title": "Using Codex and Codex Cloud with Your ChatGPT Plan",
+    "url": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
   }
 ]

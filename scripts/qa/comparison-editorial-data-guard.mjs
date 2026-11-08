@@ -14,7 +14,7 @@ function runGuard() {
         'OpenAI': ['openai.com', 'help.openai.com'],
         'Anthropic': ['anthropic.com', 'support.anthropic.com', 'docs.anthropic.com'],
         'GitHub': ['github.com', 'docs.github.com'],
-        'Google': ['google.com', 'support.google.com', 'gemini.google.com'],
+        'Google': ['google.com', 'support.google.com', 'gemini.google.com', 'gemini.google', 'google.dev'],
         'Midjourney': ['midjourney.com', 'docs.midjourney.com', 'help.midjourney.com'],
         'Perplexity': ['perplexity.ai'],
         'Cursor': ['cursor.com', 'docs.cursor.com'],

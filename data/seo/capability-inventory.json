@@ -100,12 +100,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Canvas) & Google Docs (\"Help me write\")",
+          "productProvidedBy": "Gemini Canvas",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (Gemini Canvas), Google One AI Premium ($19.99/mo; £18.99/mo UK) for Google Docs integration",
-          "availabilityAndLimitations": "Gemini web app provides a dedicated Canvas split-screen workspace with targeted inline editing, tone and length sliders, and direct export to Google Docs; Google Docs side panel and \"Help me write\" features require Google One AI Premium or Google Workspace add-ons.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free (Gemini Canvas); Google Workspace plans for Docs integration",
+          "availabilityAndLimitations": "Gemini Canvas provides a dedicated split-screen editing workspace for drafting and refining long-form text. Google Docs integration is a distinct Workspace and product-plan surface.",
+          "sourceId": "src-gemini-canvas-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/16047321",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -137,13 +137,13 @@
           "lastVerifiedDate": "2026-11-08"
         },
         "google-gemini": {
-          "state": "Available",
-          "productProvidedBy": "Gemini App (Saved Info & Custom Instructions)",
+          "state": "Limited",
+          "productProvidedBy": "Gemini App (Gems to Skills transition)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "Supports \"Saved info\" allowing users to store personal context, preferences, and style guidelines that Gemini automatically applies across conversations.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free, Google AI Plus, Google AI Pro, Google AI Ultra",
+          "availabilityAndLimitations": "Provides reusable custom instructions through Gems transitioning to Skills (Gems become read-only 17 November 2026 and are removed 17 December 2026 for eligible adult personal accounts; Workspace transition dates differ). Does not provide universal cross-chat memory across all account types.",
+          "sourceId": "src-gemini-gems-skills-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/18560919",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -176,12 +176,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Canvas Export to Slides) & Google Slides (\"Help me create\")",
+          "productProvidedBy": "Gemini App (Canvas) & Google Slides",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (outline & slide export in Canvas), Google One AI Premium / Google Workspace for native Google Slides creation",
-          "availabilityAndLimitations": "Gemini Canvas generates structured presentation decks with direct export to Google Slides; Google One AI Premium and Workspace tiers include in-app \"Help me create a presentation\" with AI-generated visuals inside Google Slides.",
-          "sourceId": "src-gemini-workspace-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
+          "requiredPlan": "Free (Canvas outline and slide drafting); Google Workspace plans ($7-$22/user/mo) for native Google Slides integration",
+          "availabilityAndLimitations": "Gemini Canvas can create and edit structured presentation slide outlines. In-app Google Slides generative features require separate Google Workspace business plans.",
+          "sourceId": "src-gemini-canvas-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/16047321",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -214,12 +214,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Google Search Grounding & Double-Check)",
+          "productProvidedBy": "Gemini App (Google Search integration)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "Real-time Google Search grounding with inline numbered source citations and Google's \"Double-check\" button to evaluate claims against live web pages.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free, Google AI Plus, Google AI Pro, Google AI Ultra",
+          "availabilityAndLimitations": "Available through the Gemini app and live Google Search integration; inline citations are generated where source matches are identified rather than automatically on every response.",
+          "sourceId": "src-gemini-connected-apps-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -252,12 +252,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini Advanced (Deep Research)",
-          "productLayer": "Paid subscription",
-          "requiredPlan": "Google One AI Premium ($19.99 / £18.99/mo) or Google Workspace Gemini Enterprise",
-          "availabilityAndLimitations": "Autonomous multi-step research agent that breaks broad inquiries into granular search plans, browses dozens of web pages iteratively, synthesizes evidence, and outputs structured comprehensive research reports with inline citations; subject to daily query caps.",
-          "sourceId": "src-gemini-pricing-2026",
-          "officialSourceUrl": "https://gemini.google.com/advanced",
+          "productProvidedBy": "Gemini App (Deep Research)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (eligible users); Google AI Pro (£18.99/mo) and Ultra provide higher research limits",
+          "availabilityAndLimitations": "Available on eligible Free accounts for multi-step research inquiries; Google AI Pro and Ultra subscriptions unlock higher research limits and advanced model options.",
+          "sourceId": "src-gemini-deep-research-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/15719111",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -289,11 +289,11 @@
           "lastVerifiedDate": "2026-11-08"
         },
         "google-gemini": {
-          "state": "Available",
-          "productProvidedBy": "NotebookLM & Google Colab",
+          "state": "Limited",
+          "productProvidedBy": "NotebookLM (Adjacent Google Product)",
           "productLayer": "Related product / CLI",
-          "requiredPlan": "Free (NotebookLM & Colab free tier), Google One AI Premium / Colab Pro for enhanced compute",
-          "availabilityAndLimitations": "Google provides NotebookLM as a dedicated research and note-taking workspace (supporting up to 50 sources, audio overviews, and source-grounded answers) and Google Colab for interactive Python notebooks; these are specialized separate Google products rather than built-in consumer Gemini chat features.",
+          "requiredPlan": "Free (NotebookLM personal Google account)",
+          "availabilityAndLimitations": "Google offers NotebookLM as an adjacent source-grounded research product with document notebooks and audio summaries, but Gemini does not include a dedicated built-in scientific research workspace inside the Gemini app.",
           "sourceId": "src-google-notebooklm-2026",
           "officialSourceUrl": "https://support.google.com/notebooklm/answer/14294096",
           "lastVerifiedDate": "2026-11-08"
@@ -328,12 +328,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Canvas Live Previews)",
+          "productProvidedBy": "Gemini App (Canvas)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "Gemini Canvas features a dedicated real-time preview toggle for rendered HTML/CSS layouts, JavaScript components, React prototypes, SVGs, and diagrams, allowing users to toggle between code editing and visual output.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free, Google AI Plus, Google AI Pro, Google AI Ultra",
+          "availabilityAndLimitations": "Available through Gemini Canvas, including interactive web application and code editing with live preview rendering directly in the workspace.",
+          "sourceId": "src-gemini-canvas-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/16047321",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -348,10 +348,10 @@
           "state": "Available",
           "productProvidedBy": "OpenAI Codex (Codex CLI, IDE Extension, Desktop & Cloud)",
           "productLayer": "Related product / CLI",
-          "requiredPlan": "Free & Go (limited desktop / API key), Plus ($20/mo), Pro ($100–$500/mo), Business ($20–$25/user/mo), Enterprise, or OpenAI API",
-          "availabilityAndLimitations": "OpenAI provides the open-source Codex CLI (@openai/codex) and IDE extensions (VS Code, Cursor). Free and Go accounts have limited desktop-only allowances or require pay-per-token API keys; full CLI and IDE integration are included with Plus, Pro, Business, and Enterprise plans. Separate Codex Cloud execution features (remote GitHub PR automation and cloud sandboxes) require paid subscription tiers or platform API credits, with distinct usage ceilings from local terminal execution.",
-          "sourceId": "src-openai-codex-2026",
-          "officialSourceUrl": "https://openai.com/codex",
+          "requiredPlan": "Included across ChatGPT plans (Free, Go, Plus, Pro, Business, Enterprise, Edu); Codex Cloud requires eligible Plus, Pro, Business, Enterprise, or Edu",
+          "availabilityAndLimitations": "Included across ChatGPT plans, including Free and Go, with plan-dependent usage limits. Codex Cloud has separate eligibility requiring an eligible Plus, Pro, Business, Enterprise, or education account (not Free or Go).",
+          "sourceId": "src-chatgpt-codex-plans-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
           "lastVerifiedDate": "2026-11-08"
         },
         "claude": {
@@ -366,12 +366,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini Code Assist (VS Code, JetBrains & Cloud CLI)",
+          "productProvidedBy": "Antigravity & Antigravity CLI (Related Developer Products)",
           "productLayer": "Related product / CLI",
-          "requiredPlan": "Google Cloud subscription / Gemini Code Assist Standard ($19/user/mo) or Enterprise ($45/user/mo); free trial available",
-          "availabilityAndLimitations": "Google provides Gemini Code Assist extensions for VS Code and JetBrains IDEs plus command-line cloud agent tooling for multi-file repository indexing, code generation, and test creation; managed via Google Cloud IAM rather than bundled directly in consumer Google One personal accounts.",
-          "sourceId": "src-google-code-assist-2026",
-          "officialSourceUrl": "https://cloud.google.com/gemini/docs/codeassist/overview",
+          "requiredPlan": "Separate developer tool access; consumer Code Assist extensions stopped serving individual, Pro, and Ultra tiers on 18 June 2026",
+          "availabilityAndLimitations": "Available through related Google developer products including Antigravity and Antigravity CLI. Gemini Code Assist extensions and CLI for individual consumer tiers ceased on 18 June 2026 (users directed to Antigravity); new enterprise subscriptions ended sales on 9 October 2026. These capabilities are separate developer tools and are not bundled in the consumer Gemini app.",
+          "sourceId": "src-google-antigravity-dev-tools-2026",
+          "officialSourceUrl": "https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -403,13 +403,13 @@
           "lastVerifiedDate": "2026-11-08"
         },
         "google-gemini": {
-          "state": "Available",
-          "productProvidedBy": "Gemini App (Python Code Execution)",
-          "productLayer": "Consumer app",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "Executes Python code in a secure cloud sandbox to solve computational problems, verify algorithms, and process uploaded tabular data directly within conversation turns.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "state": "Limited",
+          "productProvidedBy": "Gemini Developer API (Code Execution)",
+          "productLayer": "Developer API",
+          "requiredPlan": "Gemini Developer API account (Google AI Studio / Vertex AI)",
+          "availabilityAndLimitations": "Code execution in a sandboxed Python environment is documented and supported via the Gemini Developer API, requiring separate API access; parity across consumer Gemini app subscription plans is not guaranteed.",
+          "sourceId": "src-gemini-api-code-execution-2026",
+          "officialSourceUrl": "https://ai.google.dev/gemini-api/docs/code-execution",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -442,12 +442,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini 1.5 Pro (Gemini Advanced & Google AI Studio)",
-          "productLayer": "Underlying model",
-          "requiredPlan": "Google One AI Premium (1M tokens), Google AI Studio / Vertex AI (up to 2M tokens)",
-          "availabilityAndLimitations": "Native 1,000,000 token context window in Gemini Advanced (expanding up to 2M tokens via developer APIs), allowing users to process multi-hundred-page documents, full codebases, or long audio/video files in a single prompt.",
-          "sourceId": "src-gemini-pricing-2026",
-          "officialSourceUrl": "https://gemini.google.com/advanced",
+          "productProvidedBy": "Gemini App (Gemini 4 Argon & Gemini 3.x models)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (32K tokens), Google AI Plus (128K tokens), Google AI Pro / Ultra (1M tokens)",
+          "availabilityAndLimitations": "Consumer app context allowances are tiered by plan: Free tier includes 32K tokens, Google AI Plus provides 128K tokens, and Google AI Pro and Ultra provide 1M tokens. Developer API allowances are governed separately.",
+          "sourceId": "src-gemini-app-limits-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/16275805",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -479,13 +479,13 @@
           "lastVerifiedDate": "2026-11-08"
         },
         "google-gemini": {
-          "state": "Available",
-          "productProvidedBy": "Gemini App (Gems) & NotebookLM",
+          "state": "Limited",
+          "productProvidedBy": "Gemini App (Skills & Gems) & NotebookLM",
           "productLayer": "Consumer app",
-          "requiredPlan": "Google One AI Premium (Custom Gems); Free (NotebookLM notebooks)",
-          "availabilityAndLimitations": "Gemini Advanced users can build custom \"Gems\" with pre-defined system prompts and reference knowledge; NotebookLM provides persistent source-grounded research workspaces for personal Google accounts.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free (NotebookLM notebooks), Google AI plans (Gems to Skills)",
+          "availabilityAndLimitations": "Gemini provides reusable custom instructions via Gems (transitioning to Skills), and NotebookLM provides separate project research notebooks, but these adjacent features do not offer unified persistent project workspaces equivalent to competing platforms.",
+          "sourceId": "src-gemini-gems-skills-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/18560919",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -518,12 +518,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Data Analysis) & Google Sheets (\"Help me organize\")",
+          "productProvidedBy": "Gemini App (Spreadsheet Analysis) & Google Sheets",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (limited upload), Google One AI Premium (Gemini Advanced & Sheets integration)",
-          "availabilityAndLimitations": "Upload spreadsheets and CSVs to Gemini Advanced to run Python data analyses, generate summary statistics, and produce downloadable charts; Google Workspace tiers add \"Help me organize\" template creation inside Google Sheets.",
-          "sourceId": "src-gemini-workspace-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
+          "requiredPlan": "Free & Google AI plans (spreadsheet upload in Gemini); Google Workspace for native Sheets integration",
+          "availabilityAndLimitations": "Gemini Apps support uploading tabular files and spreadsheets for data exploration, summary analysis, and chart generation. In-sheet Gemini capabilities are a distinct Google Workspace surface.",
+          "sourceId": "src-gemini-file-analysis-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/14903178",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -556,12 +556,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Imagen 3)",
+          "productProvidedBy": "Gemini App (Nano Banana 2)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "Native photorealistic image generation and iterative styling powered by Imagen 3 across web and mobile Gemini apps.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free, Google AI Plus, Google AI Pro, Google AI Ultra",
+          "availabilityAndLimitations": "Supports native image generation and editing powered by Nano Banana 2 across the Gemini app; eligible paid plans may provide additional Nano Banana Pro access.",
+          "sourceId": "src-gemini-nano-banana-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/14286560",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -594,12 +594,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini 1.5 Pro / Flash (Native Multimodal Model)",
-          "productLayer": "Underlying model",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "Native multimodal vision and video comprehension, analyzing screenshots, diagrams, handwriting, complex PDF layouts, and uploaded video files.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "productProvidedBy": "Gemini App (Multimodal Input Analysis)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Google AI Plus, Google AI Pro, Google AI Ultra",
+          "availabilityAndLimitations": "Gemini Apps accept and analyze photos, screenshots, charts, PDFs, and video uploads, with file size and upload rate limits varying by plan tier.",
+          "sourceId": "src-gemini-file-analysis-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/14903178",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -632,12 +632,12 @@
         },
         "google-gemini": {
           "state": "Limited",
-          "productProvidedBy": "Gemini Canvas (SVG Code) & Google Vids",
+          "productProvidedBy": "Gemini Canvas & Google Video Tools",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (SVG in Canvas), Google Workspace (Google Vids)",
-          "availabilityAndLimitations": "Gemini Canvas can generate and render SVG vector code, and Google offers Google Vids for workspace video presentation creation, but Google does not provide dedicated interactive vector design or motion animation tools in the consumer Gemini app comparable to Claude Design or Motion.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free (SVG code in Canvas); Google Workspace / ecosystem tiers for video workflows",
+          "availabilityAndLimitations": "Gemini Canvas can generate and render SVG markup and visual prototypes, but Google does not provide a dedicated vector motion design studio in consumer Gemini comparable to specialized vector-motion platforms.",
+          "sourceId": "src-gemini-canvas-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/16047321",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -672,10 +672,10 @@
           "state": "Available",
           "productProvidedBy": "Gemini App (Gemini Live)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (Android/iOS mobile app for personal Google accounts), Google One AI Premium",
-          "availabilityAndLimitations": "Gemini Live enables natural, conversational spoken voice interactions with real-time interruptions, natural pausing, and multiple voice styles on Android and iOS.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free on supported mobile devices for personal Google accounts; Google AI plans",
+          "availabilityAndLimitations": "Gemini Live provides real-time spoken voice interactions with natural interruptions and fluid back-and-forth speech in supported Android and iOS mobile apps for eligible accounts; not universally available on web.",
+          "sourceId": "src-gemini-live-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/15274899",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -690,10 +690,10 @@
           "state": "Available",
           "productProvidedBy": "ChatGPT App (ChatGPT Work & Custom Actions)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (limited), Go, Plus, Pro; ChatGPT Work requires Business, Enterprise or Edu",
-          "availabilityAndLimitations": "Connects to Google Drive, Microsoft OneDrive, GitHub, Slack, and third-party tools via Custom GPT Actions in consumer tiers, or via managed ChatGPT Work workspace connectors in Business, Enterprise, and Edu accounts, alongside desktop application window context.",
-          "sourceId": "src-chatgpt-pricing-2026",
-          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "requiredPlan": "Eligible paid individual and organisational plans, including eligible Plus and Pro users, Business, Enterprise, and Edu",
+          "availabilityAndLimitations": "ChatGPT Work is available to eligible paid individual and organisational plans, including eligible Plus and Pro users (not exclusively Business/Enterprise/Edu), subject to rollout, plan, and workspace settings, alongside Custom GPT Actions and desktop context.",
+          "sourceId": "src-chatgpt-work-codex-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
           "lastVerifiedDate": "2026-11-08"
         },
         "claude": {
@@ -708,11 +708,11 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini App (Gemini Extensions)",
+          "productProvidedBy": "Gemini App (Connected Apps)",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free, Google One AI Premium",
-          "availabilityAndLimitations": "First-party Gemini Extensions connect directly to Google Workspace (Gmail, Docs, Drive), YouTube, Google Maps, Google Flights, Google Hotels, and Spotify across web and mobile apps.",
-          "sourceId": "src-gemini-workspace-2026",
+          "requiredPlan": "Free, Google AI Plus, Google AI Pro, Google AI Ultra",
+          "availabilityAndLimitations": "Integrates with Google ecosystem apps (Google Workspace, YouTube, Google Maps, Flights, Hotels) through Gemini Connected Apps. Available apps and permitted actions vary by account type, country, device, and permission settings.",
+          "sourceId": "src-gemini-connected-apps-2026",
           "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
           "lastVerifiedDate": "2026-11-08"
         }
@@ -726,12 +726,12 @@
       "providers": {
         "chatgpt": {
           "state": "Available",
-          "productProvidedBy": "ChatGPT Work & Scheduled Tasks",
-          "productLayer": "Paid subscription",
-          "requiredPlan": "ChatGPT Business, Enterprise & Edu (ChatGPT Work mode)",
-          "availabilityAndLimitations": "ChatGPT Work supports scheduled automated tasks (e.g. daily summaries, recurring tracker updates) for organization workspace accounts with centralized admin governance; individual consumer tiers (Free, Go, Plus, Pro) do not offer native in-app recurring task schedulers without third-party webhooks/Zapier.",
-          "sourceId": "src-chatgpt-work-2026",
-          "officialSourceUrl": "https://openai.com/index/chatgpt-for-work/",
+          "productProvidedBy": "ChatGPT App (Scheduled Tasks)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Available across eligible Free, Go, Plus, Pro, Business, Enterprise, and Edu (event-triggered tasks require an eligible paid account)",
+          "availabilityAndLimitations": "Available across eligible Free, Go, Plus, Pro, Business, Enterprise, and Edu accounts. Free and Go have lower limits; event-triggered tasks require an eligible paid account.",
+          "sourceId": "src-chatgpt-scheduled-tasks-help-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
           "lastVerifiedDate": "2026-11-08"
         },
         "claude": {
@@ -746,12 +746,12 @@
         },
         "google-gemini": {
           "state": "Limited",
-          "productProvidedBy": "Google Assistant Routines & Workspace Automations",
-          "productLayer": "Consumer app",
-          "requiredPlan": "Free (Google Assistant routines), Google Workspace",
-          "availabilityAndLimitations": "Supports scheduled routines and recurring briefings through Google Assistant integration, but does not provide native asynchronous scheduled task agents or background job execution queues within the standalone Gemini chat app.",
-          "sourceId": "src-gemini-workspace-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
+          "productProvidedBy": "Gemini App (Gemini Tasks)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Eligible Google AI Pro and Ultra personal accounts in supported countries",
+          "availabilityAndLimitations": "Gemini Tasks supports scheduled automated prompts on eligible Google AI Pro and Ultra personal accounts in select regions; currently excluded in the United Kingdom, European Economic Area, Switzerland, and Nigeria.",
+          "sourceId": "src-gemini-scheduled-tasks-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/17094710",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -784,12 +784,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Google AI Studio & Vertex AI Gemini API",
+          "productProvidedBy": "Google AI Studio & Gemini Developer API",
           "productLayer": "Developer API",
-          "requiredPlan": "Free tier (rate-limited via Google AI Studio) or Pay-as-you-go / Google Cloud billing",
-          "availabilityAndLimitations": "Developer API access with prompt caching, batch inference, structured outputs, system instructions, and model tuning; billed separately via Google Cloud / AI Studio, independent of Google One consumer plans.",
-          "sourceId": "src-google-vertex-gemini-2026",
-          "officialSourceUrl": "https://cloud.google.com/vertex-ai/generative-ai/docs/overview",
+          "requiredPlan": "Free tier (rate-limited) or Pay-as-you-go developer billing",
+          "availabilityAndLimitations": "Available via Google AI Studio and the Gemini Developer API with both free (rate-limited) and pay-as-you-go commercial tiers; API token billing is completely separate from consumer Google AI subscriptions.",
+          "sourceId": "src-gemini-api-pricing-2026",
+          "officialSourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -822,10 +822,10 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Gemini for Google Workspace (Gemini Business & Enterprise)",
+          "productProvidedBy": "Google Workspace (Starter, Standard, Plus, Enterprise)",
           "productLayer": "Business / Enterprise workspace",
-          "requiredPlan": "Gemini Business ($20/user/mo annual) or Gemini Enterprise ($30/user/mo annual), plus base Google Workspace plan",
-          "availabilityAndLimitations": "Available as an add-on to Google Workspace subscriptions with no minimum seat threshold (can be provisioned for 1 or more users), managed via Google Admin Console.",
+          "requiredPlan": "Business Starter ($7/user/mo), Business Standard ($14/user/mo), Business Plus ($22/user/mo), Enterprise (contact sales); annual commitment USD",
+          "availabilityAndLimitations": "Gemini features are integrated into current Google Workspace tiers (Business Starter, Standard, Plus, and Enterprise) with varying feature capabilities; legacy standalone Gemini add-on subscriptions are discontinued.",
           "sourceId": "src-google-workspace-pricing-2026",
           "officialSourceUrl": "https://workspace.google.com/pricing",
           "lastVerifiedDate": "2026-11-08"
@@ -859,13 +859,13 @@
           "lastVerifiedDate": "2026-11-08"
         },
         "google-gemini": {
-          "state": "Available",
-          "productProvidedBy": "Gemini Apps Activity Controls & Google Workspace Data Governance",
+          "state": "Limited",
+          "productProvidedBy": "Gemini Apps Activity Controls & Google Workspace Admin",
           "productLayer": "Business / Enterprise workspace",
-          "requiredPlan": "Free (Gemini Apps Activity toggle), Google Workspace (contractual no-training guarantee)",
-          "availabilityAndLimitations": "Consumer users can disable Gemini Apps Activity to stop data retention and human review; Google Workspace and Google Cloud agreements guarantee customer data is never used to train Google AI models without customer consent.",
-          "sourceId": "src-gemini-apps-help-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13275745",
+          "requiredPlan": "Free (consumer toggle); Google Workspace plans for commercial data protection",
+          "availabilityAndLimitations": "Consumer Gemini allows users to pause Gemini Apps Activity to stop data retention and human review, but does not offer contractual commercial privacy. Google Workspace accounts provide organizational data controls where user data is not trained on, but exact default settings across all hybrid tiers remain partially unverified without plan-specific contracts.",
+          "sourceId": "src-gemini-connected-apps-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -898,10 +898,10 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Google Workspace Enterprise & Google Cloud Vertex AI",
+          "productProvidedBy": "Google Workspace Enterprise & Google Cloud",
           "productLayer": "Business / Enterprise workspace",
-          "requiredPlan": "Google Workspace Enterprise or Google Cloud enterprise agreement",
-          "availabilityAndLimitations": "Enterprise-grade governance including SOC 1/2/3, ISO/IEC 27001, HIPAA BAA eligibility, SAML 2.0 SSO, SCIM automated user provisioning, audit logging, and data residency controls.",
+          "requiredPlan": "Google Workspace Enterprise & Google Cloud Enterprise agreements",
+          "availabilityAndLimitations": "Enterprise governance, SAML SSO, admin audit controls, and compliance certifications are provided through Google Workspace Enterprise and Google Cloud agreements; specific certifications such as HIPAA BAA coverage require designated enterprise plan agreements.",
           "sourceId": "src-google-workspace-pricing-2026",
           "officialSourceUrl": "https://workspace.google.com/pricing",
           "lastVerifiedDate": "2026-11-08"
@@ -936,12 +936,12 @@
         },
         "google-gemini": {
           "state": "Available",
-          "productProvidedBy": "Google One AI Premium (UK Web & Google Play Checkout)",
+          "productProvidedBy": "Google UK AI Subscriptions",
           "productLayer": "Paid subscription",
-          "requiredPlan": "Google One AI Premium (£18.99 GBP/month incl. VAT)",
-          "availabilityAndLimitations": "Google officially publishes and charges UK checkout pricing at £18.99 GBP per month (inclusive of UK VAT), including 2 TB of Google One storage across Drive, Gmail, and Photos.",
-          "sourceId": "src-google-one-ai-plans-2026",
-          "officialSourceUrl": "https://one.google.com/about/google-ai-plans/",
+          "requiredPlan": "Free (£0), Google AI Plus (£4.49/mo, 400 GB), Google AI Pro (£18.99/mo, 5 TB), Google AI Ultra (from £79.99/mo, from 20 TB)",
+          "availabilityAndLimitations": "Google officially publishes UK pricing in GBP: Free (£0/month), Google AI Plus (£4.49/month with 400 GB storage), Google AI Pro (£18.99/month with 5 TB storage), and Google AI Ultra (starting at £79.99/month with 20 TB storage).",
+          "sourceId": "src-google-uk-ai-subscriptions-2026",
+          "officialSourceUrl": "https://gemini.google/gb/subscriptions/?hl=en-GB",
           "lastVerifiedDate": "2026-11-08"
         }
       }
