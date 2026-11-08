@@ -448,5 +448,23 @@
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-code-assist-2026",
+    "publisher": "Google",
+    "title": "Google Cloud Gemini Code Assist for IDEs, CLI and Repositories",
+    "url": "https://cloud.google.com/gemini/docs/codeassist/overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-notebooklm-2026",
+    "publisher": "Google",
+    "title": "NotebookLM Grounded Research and Source Analysis Help Center",
+    "url": "https://support.google.com/notebooklm/answer/14294096",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
   }
 ]
