@@ -214,5 +214,122 @@
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-10-04"
+  },
+  {
+    "sourceId": "src-chatgpt-pricing-2026",
+    "publisher": "OpenAI",
+    "title": "ChatGPT Pricing and Plans (Free, Plus, Pro, Team, Enterprise)",
+    "url": "https://openai.com/chatgpt/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-search-2026",
+    "publisher": "OpenAI",
+    "title": "ChatGPT Search Documentation",
+    "url": "https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-images-2026",
+    "publisher": "OpenAI",
+    "title": "Creating Images in ChatGPT",
+    "url": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-voice-2026",
+    "publisher": "OpenAI",
+    "title": "Voice Conversations in ChatGPT",
+    "url": "https://help.openai.com/en/articles/8400625-voice-conversations-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-data-analysis-2026",
+    "publisher": "OpenAI",
+    "title": "Advanced Data Analysis in ChatGPT",
+    "url": "https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-canvas-2026",
+    "publisher": "OpenAI",
+    "title": "Canvas in ChatGPT for Writing and Coding",
+    "url": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-projects-2026",
+    "publisher": "OpenAI",
+    "title": "Projects in ChatGPT",
+    "url": "https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-openai-api-pricing-2026",
+    "publisher": "OpenAI",
+    "title": "OpenAI Platform API Pricing (Separate from ChatGPT Consumer Plans)",
+    "url": "https://openai.com/api/pricing/",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-pricing-2026",
+    "publisher": "Google",
+    "title": "Google Gemini and Google One AI Plans",
+    "url": "https://gemini.google.com/advanced",
+    "sourceType": "Official Product Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-workspace-2026",
+    "publisher": "Google",
+    "title": "Use Gemini in Google Workspace (Docs, Gmail, Drive, Sheets, Slides, Meet)",
+    "url": "https://support.google.com/gemini/answer/13695044",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-apps-help-2026",
+    "publisher": "Google",
+    "title": "Gemini Apps Help Center: Capabilities, File Uploads, Gems and Deep Research",
+    "url": "https://support.google.com/gemini/answer/13275745",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-workspace-pricing-2026",
+    "publisher": "Google",
+    "title": "Google Workspace Plans and Pricing with Gemini",
+    "url": "https://workspace.google.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-vertex-gemini-2026",
+    "publisher": "Google",
+    "title": "Gemini Models on Google Cloud Vertex AI and Developer APIs",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
   }
 ]

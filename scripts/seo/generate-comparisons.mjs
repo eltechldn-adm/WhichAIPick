@@ -104,10 +104,13 @@ function buildPage(def) {
 
     // Quick Answer
     if (def.quickAnswer?.length > 0) {
+        const introSummaryHTML = def.introSummary
+            ? `<p class="compare-intro-summary" style="margin-top: 0; margin-bottom: 1.25rem; color: var(--color-gray-200); line-height: 1.65;">${escapeHTML(def.introSummary)}</p>`
+            : '';
         contentHTML += `
             <section class="compare-section quick-answer-section" style="margin-bottom: 3rem; background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
                 <h2 style="margin-top: 0;">Quick Answer</h2>
-                <ul style="list-style: none; padding-left: 0;">
+                ${introSummaryHTML}<ul style="list-style: none; padding-left: 0;">
         `;
         def.quickAnswer.forEach(qa => {
             addSources(qa.sourceIds);
@@ -139,6 +142,9 @@ function buildPage(def) {
     }
 
     // Interactive Comparison (Reuse comparison-core)
+    const tableFootnoteHTML = def.tableFootnote
+        ? `\n            <p class="compare-table-footnote" style="margin-top: 1rem; margin-bottom: 0; font-size: 0.88rem; color: var(--color-gray-300); line-height: 1.55; background: rgba(255,255,255,0.03); padding: 0.85rem 1rem; border-radius: 8px; border-left: 3px solid var(--accent-cyan);">${escapeHTML(def.tableFootnote)}</p>`
+        : '';
     contentHTML += `
         <section class="compare-section interactive-compare-section" style="margin-bottom: 3rem;">
             <h2>Interactive Comparison</h2>
@@ -155,20 +161,57 @@ function buildPage(def) {
                         ${renderComparisonTableRows([toolA, toolB])}
                     </tbody>
                 </table>
-            </div>
+            </div>${tableFootnoteHTML}
             <div style="margin-top: 1.5rem; text-align: center;">
                 <a href="/compare#tools=${escapeHTML(toolA.id)},${escapeHTML(toolB.id)}" class="btn btn-primary">Open interactive comparison</a>
             </div>
         </section>
     `;
 
+    // Product Scope (Apps, Subscriptions, Models, APIs & Enterprise)
+    if (def.productScope?.length > 0) {
+        contentHTML += `
+            <section class="compare-section product-scope-section" style="margin-bottom: 3rem;">
+                <h2>Apps, Subscriptions, Models, APIs &amp; Enterprise Explained</h2>
+                <p style="color: var(--color-gray-300); margin-top: 0; margin-bottom: 1.25rem; line-height: 1.6;">AI assistant names are often used interchangeably for consumer apps, paid subscriptions, foundation models, business workspaces, and developer APIs. Here is how ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)} separate each product layer:</p>
+                <div class="table-responsive table-responsive-cards" tabindex="0" role="region" aria-label="Product scope comparison between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Product layer'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}'; --label-4: 'Practical takeaway';">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th scope="col" style="padding: 1rem;">Product layer</th>
+                                <th scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
+                                <th scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
+                                <th scope="col" style="padding: 1rem;">Practical takeaway</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        `;
+        def.productScope.forEach(ps => {
+            contentHTML += `
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 1rem; font-weight: bold;">${escapeHTML(ps.layer)}</td>
+                    <td style="padding: 1rem;">${escapeHTML(ps.toolADetail)}</td>
+                    <td style="padding: 1rem;">${escapeHTML(ps.toolBDetail)}</td>
+                    <td style="padding: 1rem; font-size: 0.9rem; color: var(--color-gray-300);">${escapeHTML(ps.whatToKnow)}</td>
+                </tr>
+            `;
+        });
+        contentHTML += `</tbody></table></div></section>`;
+    }
+
     // Use Case Decisions
     if (def.useCaseDecisions?.length > 0) {
+        const useCaseWrapperAttrs = def.responsiveUseCaseTable
+            ? `class="table-responsive table-responsive-cards" tabindex="0" role="region" aria-label="Use case comparison between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}"`
+            : `class="table-responsive"`;
+        const useCaseTableStyle = def.responsiveUseCaseTable
+            ? `width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Use case'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}'; --label-4: 'What matters';`
+            : `width: 100%; border-collapse: collapse; text-align: left;`;
         contentHTML += `
             <section class="compare-section use-cases-section" style="margin-bottom: 3rem;">
                 <h2>Which Is Better for Different Use Cases?</h2>
-                <div class="table-responsive">
-                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <div ${useCaseWrapperAttrs}>
+                    <table style="${useCaseTableStyle}">
                         <thead>
                             <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                                 <th style="padding: 1rem;">Use case</th>
@@ -191,6 +234,35 @@ function buildPage(def) {
             `;
         });
         contentHTML += `</tbody></table></div></section>`;
+    }
+
+    // Strengths & Limitations
+    if (def.strengthsAndLimitations) {
+        contentHTML += `
+            <section class="compare-section strengths-limitations-section" style="margin-bottom: 3rem;">
+                <h2>Strengths &amp; Limitations</h2>
+                <div class="strengths-limitations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        `;
+        [
+            { label: toolA.canonicalName, data: def.strengthsAndLimitations.toolA },
+            { label: toolB.canonicalName, data: def.strengthsAndLimitations.toolB }
+        ].forEach(side => {
+            if (!side.data) return;
+            contentHTML += `
+                <div class="strengths-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h3 style="margin-top: 0; color: var(--accent-cyan);">${escapeHTML(side.label)}</h3>
+                    <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-gray-300); margin-bottom: 0.5rem;">Key Strengths</h4>
+                    <ul style="padding-left: 1.25rem; margin-top: 0; margin-bottom: 1.25rem;">
+                        ${(side.data.strengths || []).map(item => `<li style="margin-bottom: 0.5rem;">${escapeHTML(item)}</li>`).join('')}
+                    </ul>
+                    <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-gray-300); margin-bottom: 0.5rem;">Notable Limitations</h4>
+                    <ul style="padding-left: 1.25rem; margin-top: 0; margin-bottom: 0;">
+                        ${(side.data.limitations || []).map(item => `<li style="margin-bottom: 0.5rem;">${escapeHTML(item)}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        });
+        contentHTML += `</div></section>`;
     }
 
     // Choose X If...
@@ -258,8 +330,34 @@ function buildPage(def) {
                 </div>
             `;
         });
+        let pricingBreakdownHTML = '';
+        if (def.pricingBreakdown?.length > 0) {
+            pricingBreakdownHTML = `
+                <div class="pricing-breakdown-block" style="margin-top: 1.75rem;">
+                    <h3 style="font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Free vs Paid Plan Breakdown</h3>
+                    <div class="table-responsive table-responsive-cards" tabindex="0" role="region" aria-label="Free vs paid plan breakdown between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Plan tier'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}';">
+                            <thead>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                    <th scope="col" style="padding: 1rem;">Plan tier</th>
+                                    <th scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
+                                    <th scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${def.pricingBreakdown.map(row => `
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">${escapeHTML(row.tier)}</td>
+                                    <td style="padding: 1rem;">${escapeHTML(row.toolADetail)}</td>
+                                    <td style="padding: 1rem;">${escapeHTML(row.toolBDetail)}</td>
+                                </tr>`).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>`;
+        }
         contentHTML += `
-                </div>
+                </div>${pricingBreakdownHTML}
                 <p style="font-size: 0.9rem; color: var(--color-gray-400); margin-top: 1rem;">
                     Pricing research checked: ${escapeHTML(def.pricingResearch.toolA.checkedAt)}.
                     Pricing can change. Check the official pricing page before purchasing.
@@ -300,6 +398,39 @@ function buildPage(def) {
             }
         });
         contentHTML += `</div></section>`;
+    }
+
+    // Related Tool Profiles & Comparisons
+    if (def.relatedLinks) {
+        contentHTML += `
+            <section class="compare-section related-links-section" style="margin-bottom: 3rem;">
+                <h2>Related Tool Profiles &amp; Comparisons</h2>
+        `;
+        if (def.relatedLinks.toolProfiles?.length > 0) {
+            contentHTML += `
+                <h3 style="font-size: 1.15rem; margin-top: 0; margin-bottom: 0.75rem;">Reviewed Tool Profiles</h3>
+                <div class="related-links-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.75rem;">
+                    ${def.relatedLinks.toolProfiles.map(item => `
+                    <div class="alt-card" style="background: var(--bg-surface); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <a href="${escapeHTML(item.href)}" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">${escapeHTML(item.label)}</a>
+                        <div style="font-size: 0.88rem; color: var(--color-gray-300); margin-top: 0.35rem;">${escapeHTML(item.caption)}</div>
+                    </div>`).join('')}
+                </div>
+            `;
+        }
+        if (def.relatedLinks.comparisons?.length > 0) {
+            contentHTML += `
+                <h3 style="font-size: 1.15rem; margin-top: 0; margin-bottom: 0.75rem;">Related Comparisons</h3>
+                <div class="related-links-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+                    ${def.relatedLinks.comparisons.map(item => `
+                    <div class="alt-card" style="background: var(--bg-surface); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <a href="${escapeHTML(item.href)}" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">${escapeHTML(item.label)}</a>
+                        <div style="font-size: 0.88rem; color: var(--color-gray-300); margin-top: 0.35rem;">${escapeHTML(item.caption)}</div>
+                    </div>`).join('')}
+                </div>
+            `;
+        }
+        contentHTML += `</section>`;
     }
 
     // FAQ

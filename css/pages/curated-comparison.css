@@ -71,3 +71,73 @@
     background-color: rgba(255,255,255,0.2);
     border-radius: 4px;
 }
+
+/* Responsive Data Tables with Container Queries (modern-web-guidance: responsive-table) */
+.curated-comparison .table-responsive-cards {
+    container-type: inline-size;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    border-radius: 8px;
+}
+
+.curated-comparison .table-responsive-cards:focus-visible {
+    outline: 2px solid var(--accent-cyan, #ff8a3d);
+    outline-offset: 2px;
+}
+
+@container (width < 600px) {
+    .curated-comparison .table-responsive-cards table,
+    .curated-comparison .table-responsive-cards tbody {
+        display: block;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .curated-comparison .table-responsive-cards thead {
+        display: none;
+    }
+
+    .curated-comparison .table-responsive-cards tr {
+        display: grid;
+        gap: 0.45rem;
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+        background: #161d2e;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 8px;
+    }
+
+    .curated-comparison .table-responsive-cards td {
+        display: block;
+        padding: 0.25rem 0 !important;
+        line-height: 1.5;
+        overflow-wrap: break-word;
+    }
+
+    .curated-comparison .table-responsive-cards td::before {
+        font-weight: 700;
+        color: var(--accent-cyan, #ff8a3d);
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.15rem;
+    }
+
+    .curated-comparison .table-responsive-cards td:nth-child(1)::before {
+        content: var(--label-1);
+    }
+
+    .curated-comparison .table-responsive-cards td:nth-child(2)::before {
+        content: var(--label-2);
+    }
+
+    .curated-comparison .table-responsive-cards td:nth-child(3)::before {
+        content: var(--label-3);
+    }
+
+    .curated-comparison .table-responsive-cards td:nth-child(4)::before {
+        content: var(--label-4);
+    }
+}
+

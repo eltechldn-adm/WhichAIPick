@@ -194,109 +194,544 @@
       "google-gemini"
     ],
     "status": "research-ready",
-    "title": "ChatGPT vs Gemini: Which AI Assistant Fits Your Workflow?",
-    "metaDescription": "Compare ChatGPT and Gemini across pricing, workflows, capabilities, and who each is well-suited suited to.",
+    "title": "ChatGPT vs Google Gemini: Free vs Paid, Workflows and Pricing",
+    "metaDescription": "Compare ChatGPT and Google Gemini across free and paid plans ($20/mo), Google Workspace integration, coding, research, voice, APIs, and daily workflows.",
+    "introSummary": "ChatGPT and Google Gemini are both general-purpose multimodal AI assistants with capable free tiers and ~$20/month flagship consumer plans, but they are built around different work environments. ChatGPT operates as a standalone workspace featuring an interactive Canvas editor, sandboxed Python data analysis, persistent Projects, and native ChatGPT Images generation. Google Gemini connects directly into Google Workspace apps (Gmail, Docs, Drive, Sheets, Slides, and Meet) and bundles 2 TB of Google One cloud storage on its standard consumer paid plan.",
     "quickAnswer": [
       {
-        "text": "Choose ChatGPT if you need native web research, native image generation, and standalone data analysis.",
+        "text": "Choose ChatGPT if you want a standalone workspace for iterative writing and coding in Canvas, Python-based spreadsheet analysis, persistent Projects, and native image generation.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
-          "src-chatgpt-search",
-          "src-chatgpt-images"
+          "src-chatgpt-pricing-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026",
+          "src-chatgpt-images-2026"
         ]
       },
       {
-        "text": "Choose Gemini if you rely heavily on Google Workspace integrations (Docs, Gmail).",
+        "text": "Choose Google Gemini if your daily work lives in Gmail, Google Docs, Drive, Sheets, Slides, and Meet and you want native side-panel assistance across your Google account.",
         "classification": "EDITORIAL INTERPRETATION",
         "sourceIds": [
-          "src-gemini-workspace"
+          "src-gemini-workspace-2026",
+          "src-gemini-pricing-2026"
         ]
       },
       {
-        "text": "The main trade-off is ChatGPT's broader standalone capabilities versus Gemini's deep Google ecosystem integration.",
-        "classification": "EDITORIAL INTERPRETATION",
+        "text": "Both offer free tiers and ~$20/month entry paid plans: ChatGPT Plus costs $20/month, while Google AI Pro (Gemini Advanced) costs $19.99/month and bundles 2 TB of Google One storage.",
+        "classification": "OFFICIAL SOURCE FACT",
         "sourceIds": [
-          "src-chatgpt-pricing",
-          "src-gemini-workspace"
+          "src-chatgpt-pricing-2026",
+          "src-gemini-pricing-2026"
+        ]
+      },
+      {
+        "text": "Consumer chat subscriptions do not include developer API credits on either platform: OpenAI bills API usage separately via the OpenAI Platform, while Google provides developer API access through Google AI Studio and Vertex AI.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "sourceIds": [
+          "src-openai-api-pricing-2026",
+          "src-google-vertex-gemini-2026"
         ]
       }
     ],
     "keyDifferences": [
       {
-        "topic": "Ecosystem",
-        "description": "Gemini connects directly to Google Drive, Docs, and Gmail. ChatGPT provides its own ecosystem for file storage and analysis.",
+        "topic": "Ecosystem & Workspace Integration",
+        "description": "Google Gemini connects natively to Gmail, Google Docs, Drive, Sheets, Slides, and Meet via Workspace extensions and side panels. ChatGPT operates as a dedicated workspace with Projects, Custom GPTs, Canvas, and cloud file connectors.",
         "sourceIds": [
-          "src-gemini-workspace",
-          "src-chatgpt-pricing"
+          "src-gemini-workspace-2026",
+          "src-chatgpt-projects-2026",
+          "src-chatgpt-canvas-2026"
+        ]
+      },
+      {
+        "topic": "Free vs Paid Subscriptions",
+        "description": "Both assistants provide a free tier for everyday chat, web search, and multimodal prompts. Flagship consumer plans start around $20/month (ChatGPT Plus at $20/month; Google AI Pro with Gemini Advanced at $19.99/month including 2 TB of Google One storage), while high-usage tiers (ChatGPT Pro at $200/month; Google AI Ultra at $249.99/month) target heavy reasoning and media workloads.",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-gemini-pricing-2026"
+        ]
+      },
+      {
+        "topic": "Product Scope: Apps, Models, APIs & Enterprise",
+        "description": "Both ecosystems separate consumer apps (chatgpt.com and gemini.google.com), underlying model families (OpenAI GPT and reasoning series vs Google Gemini models), business plans (ChatGPT Team/Enterprise vs Google Workspace with Gemini), and usage-billed developer APIs (OpenAI Platform API vs Google AI Studio and Vertex AI).",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-openai-api-pricing-2026",
+          "src-google-workspace-pricing-2026",
+          "src-google-vertex-gemini-2026"
+        ]
+      },
+      {
+        "topic": "Web Research & Document Synthesis",
+        "description": "Both assistants support live web search and multi-step Deep Research reports. Gemini can cross-reference web findings directly against files in your Google Drive, whereas ChatGPT pairs web search with uploaded files and Python data execution inside Projects.",
+        "sourceIds": [
+          "src-chatgpt-search-2026",
+          "src-chatgpt-projects-2026",
+          "src-gemini-apps-help-2026",
+          "src-gemini-workspace-2026"
+        ]
+      },
+      {
+        "topic": "Writing, Coding & Data Analysis",
+        "description": "ChatGPT includes an interactive Canvas editor for side-by-side writing and code revisions plus a sandboxed Python environment (Advanced Data Analysis) for inspecting spreadsheets and charts. Gemini offers its own Canvas workspace, one-click export to Google Docs, Sheets, and Google Colab, and large-context document and code review.",
+        "sourceIds": [
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026",
+          "src-gemini-apps-help-2026"
+        ]
+      },
+      {
+        "topic": "Voice & Multimodal Capabilities",
+        "description": "ChatGPT features Advanced Voice Mode for spoken dialogue and native image creation and editing via ChatGPT Images. Gemini offers Gemini Live for conversational voice with camera and screen sharing alongside Imagen-powered image generation.",
+        "sourceIds": [
+          "src-chatgpt-voice-2026",
+          "src-chatgpt-images-2026",
+          "src-gemini-apps-help-2026"
         ]
       }
     ],
+    "tableFootnote": "Catalogue note: In the table above, ChatGPT lists API available as No because WhichAIPick tracks the consumer ChatGPT application (/tools/chatgpt/) separately from the developer OpenAI API (/tools/openai-api/), whereas the Google Gemini catalogue entry (/tools/google-gemini/) records Google's developer API availability alongside the assistant. Consumer subscriptions ($20/month) do not include API usage credits on either platform.",
+    "productScope": [
+      {
+        "layer": "Consumer Web & Mobile Apps",
+        "toolADetail": "chatgpt.com plus native apps for iOS, Android, macOS, and Windows.",
+        "toolBDetail": "gemini.google.com plus mobile apps for Android and iOS.",
+        "whatToKnow": "Both offer free sign-in and cross-device chat history synchronization."
+      },
+      {
+        "layer": "Individual Paid Subscriptions",
+        "toolADetail": "ChatGPT Plus ($20/mo) for expanded limits, reasoning models, Canvas, and Deep Research; ChatGPT Pro ($200/mo) for highest-tier access.",
+        "toolBDetail": "Google AI Pro / Gemini Advanced ($19.99/mo) with 2 TB Google One storage and Workspace side panels; Google AI Ultra ($249.99/mo) for highest limits.",
+        "whatToKnow": "Gemini's $19.99/mo plan is bundled through Google One and includes cloud storage; ChatGPT Plus is a standalone AI subscription."
+      },
+      {
+        "layer": "Underlying AI Model Families",
+        "toolADetail": "OpenAI multimodal GPT models and dedicated reasoning models (availability and rate limits scale by plan tier).",
+        "toolBDetail": "Google Gemini Flash (fast everyday tasks) and Gemini Pro (complex reasoning, coding, and large-context analysis).",
+        "whatToKnow": "Model names refer to the engines powering the apps; features like Canvas, Voice, or Drive access depend on the app tier."
+      },
+      {
+        "layer": "Team, Workspace & Enterprise Plans",
+        "toolADetail": "ChatGPT Team ($25-$30/user/mo) and ChatGPT Enterprise with shared workspaces, admin console, and business data privacy.",
+        "toolBDetail": "Google Workspace Business and Enterprise plans ($14-$22+/user/mo) with Gemini embedded in Gmail, Docs, Drive, Sheets, Slides, and Meet.",
+        "whatToKnow": "Organisations already paying for Google Workspace often evaluate Gemini through their existing admin console first."
+      },
+      {
+        "layer": "Developer APIs (Billed Separately)",
+        "toolADetail": "OpenAI Platform API (platform.openai.com), tracked in WhichAIPick as OpenAI API (/tools/openai-api/) with pay-as-you-go token billing.",
+        "toolBDetail": "Google AI Studio and Google Cloud Vertex AI, billed by token usage separately from consumer Google One plans.",
+        "whatToKnow": "Buying ChatGPT Plus or Gemini Advanced does not grant API key credits for building software applications."
+      }
+    ],
+    "responsiveUseCaseTable": true,
     "useCaseDecisions": [
       {
-        "useCase": "Research",
-        "toolAFit": "well-suited web search.",
-        "toolBFit": "Supports searching through your Google Drive documents.",
-        "reason": "Gemini's Workspace integration allows finding personal files easily.",
+        "useCase": "Web Research & Fact-Checking",
+        "toolAFit": "Strong for conversational web search, synthesising multi-source answers, and combining web findings with uploaded files.",
+        "toolBFit": "Strong for live Google Search grounding, Deep Research reports, and cross-checking web sources against Google Drive files.",
+        "reason": "Both provide real-time web search and multi-step research; Gemini adds direct Google Search links and Drive retrieval.",
         "confidence": "HIGH",
         "evidenceIds": [
-          "src-gemini-workspace"
+          "src-chatgpt-search-2026",
+          "src-gemini-apps-help-2026",
+          "src-gemini-workspace-2026"
+        ]
+      },
+      {
+        "useCase": "Google Workspace (Gmail, Docs, Drive & Meet)",
+        "toolAFit": "Supports cloud Drive connectors for reading files, but cannot draft inline inside Gmail or Google Docs without third-party tools.",
+        "toolBFit": "Native side-panel assistant inside Gmail, Docs, Sheets, Slides, Drive, and Meet on eligible plans.",
+        "reason": "Gemini is built directly into the Google Workspace interface for drafting, summarising threads, and organising Drive content.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-gemini-workspace-2026",
+          "src-google-workspace-pricing-2026"
+        ]
+      },
+      {
+        "useCase": "Coding, Debugging & Scripting",
+        "toolAFit": "Well suited for iterative code editing in Canvas, debugging snippets, and running Python scripts in a sandboxed environment.",
+        "toolBFit": "Well suited for reviewing large multi-file codebases, generating scripts, and exporting Python notebooks directly to Google Colab.",
+        "reason": "ChatGPT excels at interactive Canvas revisions and sandboxed execution; Gemini offers high-context code ingestion and one-click Colab export.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026",
+          "src-gemini-apps-help-2026"
+        ]
+      },
+      {
+        "useCase": "Spreadsheet & Data Analysis",
+        "toolAFit": "Uploads CSV and Excel files into Advanced Data Analysis to clean data, run statistical Python scripts, and export charts.",
+        "toolBFit": "Analyses uploaded spreadsheets, builds tables, and exports or edits directly inside Google Sheets.",
+        "reason": "Choose ChatGPT for programmatic Python data cleaning; choose Gemini when your deliverable is a live Google Sheet.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-data-analysis-2026",
+          "src-gemini-workspace-2026"
+        ]
+      },
+      {
+        "useCase": "Long-Document & Multi-File Synthesis",
+        "toolAFit": "Organises PDFs and reference files inside persistent Projects with custom instructions for recurring analysis.",
+        "toolBFit": "Handles long PDFs, reports, and multi-document uploads on paid tiers with direct retrieval from Google Drive.",
+        "reason": "Gemini's large context window and Drive integration suit long reports; ChatGPT Projects suit repeatable project workspaces.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-projects-2026",
+          "src-gemini-apps-help-2026",
+          "src-gemini-pricing-2026"
+        ]
+      },
+      {
+        "useCase": "Writing, Editing & Content Production",
+        "toolAFit": "Canvas provides inline paragraph editing, tone adjustments, reading-level controls, and version history.",
+        "toolBFit": "Drafts and refines text directly inside Google Docs or Gemini Canvas with one-click export to Docs and Gmail.",
+        "reason": "ChatGPT Canvas is a dedicated writing studio; Gemini reduces copy-pasting for teams publishing in Google Docs.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-canvas-2026",
+          "src-gemini-workspace-2026"
+        ]
+      },
+      {
+        "useCase": "HR, Operations & Team Workflows",
+        "toolAFit": "Supports reusable Custom GPTs and shared Projects for interview rubrics, policy Q&A, and onboarding templates.",
+        "toolBFit": "Summarises Google Meet interviews, drafts candidate emails in Gmail, and searches HR policies stored in Google Drive.",
+        "reason": "Teams on Google Workspace gain immediate value from Gemini in Gmail, Docs, and Meet; standalone teams benefit from ChatGPT Projects and Custom GPTs.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-projects-2026",
+          "src-gemini-workspace-2026",
+          "src-google-workspace-pricing-2026"
         ]
       }
     ],
+    "strengthsAndLimitations": {
+      "toolA": {
+        "strengths": [
+          "Standalone workspace with Projects, Custom GPTs, and an interactive Canvas editor for writing and code",
+          "Sandboxed Python execution (Advanced Data Analysis) for cleaning CSV/Excel files and generating charts",
+          "Multimodal suite combining Advanced Voice Mode and native ChatGPT Images generation",
+          "Dedicated desktop applications for macOS and Windows alongside web and mobile apps"
+        ],
+        "limitations": [
+          "Does not run natively inside Gmail, Google Docs, or Google Sheets side panels",
+          "Free tier applies stricter rate limits on flagship models, image generation, and file uploads during peak hours",
+          "Consumer Plus ($20/mo) and Pro ($200/mo) subscriptions do not bundle cloud storage or OpenAI API credits"
+        ]
+      },
+      "toolB": {
+        "strengths": [
+          "Native integration across Gmail, Google Docs, Drive, Sheets, Slides, and Meet",
+          "Google AI Pro ($19.99/mo) bundles 2 TB of Google One cloud storage alongside Gemini Advanced access",
+          "Large context window on paid tiers for analysing lengthy PDFs, transcripts, and multi-file uploads",
+          "One-click export of generated tables to Google Sheets, drafts to Google Docs, and Python code to Google Colab"
+        ],
+        "limitations": [
+          "Ecosystem advantages are much smaller if your workflow relies on Microsoft 365, Notion, or Slack instead of Google Workspace",
+          "Full Workspace side-panel features require an eligible Google One AI plan or Google Workspace business tier",
+          "Smaller library of public user-published custom assistants compared with ChatGPT's GPT Store"
+        ]
+      }
+    },
     "chooseToolAIf": [
       {
-        "condition": "You need advanced voice mode.",
+        "condition": "You want an interactive Canvas workspace and sandboxed Python execution for coding and spreadsheet analysis.",
+        "claimId": "chatgpt-canvas-data-2026"
+      },
+      {
+        "condition": "You rely on natural spoken dialogue via Advanced Voice Mode.",
         "claimId": "chatgpt-voice"
+      },
+      {
+        "condition": "You want native conversational image creation and editing via ChatGPT Images.",
+        "claimId": "chatgpt-images-2026"
+      },
+      {
+        "condition": "You organise recurring client or internal work using persistent Projects and Custom GPTs.",
+        "claimId": "chatgpt-projects-2026"
+      },
+      {
+        "condition": "Your tool stack is platform-agnostic rather than centred on Google Workspace.",
+        "claimId": "chatgpt-standalone-plans-2026"
       }
     ],
     "chooseToolBIf": [
       {
-        "condition": "You want to draft emails directly in Gmail.",
+        "condition": "You want to draft, summarise, and search directly inside Gmail, Google Docs, Drive, Sheets, Slides, and Meet.",
         "claimId": "gemini-workspace"
+      },
+      {
+        "condition": "You want a ~$20/month AI plan that also includes 2 TB of Google One cloud storage.",
+        "claimId": "gemini-google-one-storage-2026"
+      },
+      {
+        "condition": "You regularly analyse long PDFs, transcripts, or multi-document folders stored in Google Drive.",
+        "claimId": "gemini-deep-research-drive-2026"
+      },
+      {
+        "condition": "You want one-click export of generated tables to Google Sheets and Python code to Google Colab.",
+        "claimId": "gemini-sheets-colab-export-2026"
+      },
+      {
+        "condition": "Your company already manages user accounts and security policies through Google Workspace.",
+        "claimId": "gemini-workspace-business-2026"
+      }
+    ],
+    "pricingBreakdown": [
+      {
+        "tier": "Free Tier ($0)",
+        "toolADetail": "Access to core multimodal chat, ChatGPT Search, basic file uploads, limited ChatGPT Images generation, and standard voice.",
+        "toolBDetail": "Access to Gemini Flash models, Google Search grounding, file uploads, Gemini Live voice, and standard image generation."
+      },
+      {
+        "tier": "Entry Paid Consumer Plan (~$20/mo)",
+        "toolADetail": "ChatGPT Plus ($20/month): higher message limits, full reasoning model access, Canvas, Advanced Data Analysis, Projects, Deep Research, and Advanced Voice Mode.",
+        "toolBDetail": "Google AI Pro / Gemini Advanced ($19.99/month, promotional trials available): Gemini Pro models, Deep Research, Gemini in Gmail/Docs/Drive side panels, and 2 TB of Google One storage."
+      },
+      {
+        "tier": "High-Usage Individual Plan",
+        "toolADetail": "ChatGPT Pro ($200/month): highest-capacity access to flagship reasoning models, Advanced Voice, and compute-intensive workflows.",
+        "toolBDetail": "Google AI Ultra ($249.99/month): highest usage limits for Gemini models, advanced video/media generation credits, and 30 TB of Google One storage."
+      },
+      {
+        "tier": "Team & Enterprise Plans",
+        "toolADetail": "ChatGPT Team ($25/user/month billed annually or $30/user/month monthly) and custom Enterprise plans with admin controls and no training on business data.",
+        "toolBDetail": "Google Workspace Business and Enterprise plans ($14-$22+/user/month) with Gemini integrated across Workspace apps and enterprise data protection."
       }
     ],
     "neitherIf": [
-      "You are primarily looking for an AI coding IDE (consider Cursor or GitHub Copilot)."
+      "You are primarily looking for a dedicated AI code editor with multi-file repository refactoring (consider Cursor or GitHub Copilot).",
+      "Your primary workflow is citation-first academic or web fact-checking with minimal chat overhead (consider Perplexity AI).",
+      "You specifically prefer Anthropic's Claude writing style or Claude Artifacts for interactive UI previews (consider Claude)."
     ],
     "alternatives": [
       "claude",
       "perplexity-ai"
     ],
+    "relatedLinks": {
+      "toolProfiles": [
+        {
+          "href": "/tools/chatgpt/",
+          "label": "ChatGPT Review & Catalogue Profile",
+          "caption": "Standalone multimodal assistant by OpenAI"
+        },
+        {
+          "href": "/tools/google-gemini/",
+          "label": "Google Gemini Review & Catalogue Profile",
+          "caption": "Google's multimodal assistant & Workspace AI"
+        },
+        {
+          "href": "/tools/openai-api/",
+          "label": "OpenAI API Profile",
+          "caption": "Developer API platform billed separately from ChatGPT Plus"
+        },
+        {
+          "href": "/tools/claude/",
+          "label": "Claude Review & Catalogue Profile",
+          "caption": "Anthropic assistant for long documents & Artifacts"
+        },
+        {
+          "href": "/tools/perplexity-ai/",
+          "label": "Perplexity AI Review & Catalogue Profile",
+          "caption": "Citation-focused AI answer and research engine"
+        }
+      ],
+      "comparisons": [
+        {
+          "href": "/compare/chatgpt-vs-claude/",
+          "label": "ChatGPT vs Claude",
+          "caption": "Compare ChatGPT with Anthropic's Claude across writing, coding, and context windows"
+        },
+        {
+          "href": "/compare/chatgpt-vs-perplexity/",
+          "label": "ChatGPT vs Perplexity",
+          "caption": "Compare general-purpose chat workflows against citation-first web research"
+        },
+        {
+          "href": "/compare/midjourney-vs-chatgpt-images/",
+          "label": "Midjourney vs ChatGPT Images",
+          "caption": "Compare dedicated artistic image generation with conversational image editing"
+        },
+        {
+          "href": "/compare/",
+          "label": "All AI Tool Comparisons",
+          "caption": "Browse all side-by-side comparisons and launch the interactive comparison matrix"
+        }
+      ]
+    },
     "claims": [
       {
         "claimId": "chatgpt-voice",
-        "claim": "ChatGPT provides advanced voice mode.",
+        "claim": "ChatGPT provides Advanced Voice Mode for spoken conversations.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-chatgpt-voice"
+          "src-chatgpt-voice-2026"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "chatgpt-canvas-data-2026",
+        "claim": "ChatGPT provides Canvas for writing and coding revisions and Advanced Data Analysis for spreadsheet and Python workflows.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "chatgpt-images-2026",
+        "claim": "ChatGPT includes native image generation and editing via ChatGPT Images.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-chatgpt-images-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "chatgpt-projects-2026",
+        "claim": "ChatGPT supports persistent Projects and Custom GPTs to organise files and instructions.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-chatgpt-projects-2026",
+          "src-chatgpt-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "chatgpt-standalone-plans-2026",
+        "claim": "ChatGPT offers standalone Free, Plus ($20/mo), Pro ($200/mo), Team, and Enterprise plans.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
       },
       {
         "claimId": "gemini-workspace",
-        "claim": "Gemini integrates natively with Google Workspace apps.",
+        "claim": "Gemini integrates natively with Google Workspace apps including Docs, Gmail, Drive, Sheets, Slides, and Meet.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-gemini-workspace"
+          "src-gemini-workspace-2026"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "gemini-google-one-storage-2026",
+        "claim": "Google AI Pro (Gemini Advanced) costs $19.99/month and includes 2 TB of Google One storage.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-gemini-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "gemini-deep-research-drive-2026",
+        "claim": "Gemini Apps support multi-file uploads, Deep Research, and direct retrieval from Google Drive.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-gemini-apps-help-2026",
+          "src-gemini-workspace-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "gemini-sheets-colab-export-2026",
+        "claim": "Gemini supports exporting responses directly to Google Docs, Google Sheets, and Google Colab.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-gemini-apps-help-2026",
+          "src-gemini-workspace-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "gemini-workspace-business-2026",
+        "claim": "Google Workspace Business and Enterprise plans include Gemini capabilities managed under organisation admin policies.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-google-workspace-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
       }
     ],
     "faqCandidates": [
       {
-        "question": "Which integrates with Google Workspace?",
-        "answer": "Gemini offers native integration with Google Workspace, including Docs, Gmail, and Drive.",
+        "question": "Is ChatGPT or Google Gemini better on the free plan?",
+        "answer": "Both free plans cover everyday writing, web search, voice chat, and image prompts. ChatGPT Free gives you limited access to OpenAI's flagship models, ChatGPT Search, and native image generation, while Gemini Free provides fast responses with Google Search grounding and optional extensions for Gmail, Docs, and Drive. If you rely on Google apps daily, Gemini Free connects to them more directly; if you want a standalone workspace with Custom GPTs and Canvas, ChatGPT Free is stronger.",
         "sourceIds": [
-          "src-gemini-workspace"
+          "src-chatgpt-pricing-2026",
+          "src-gemini-pricing-2026",
+          "src-gemini-apps-help-2026"
+        ]
+      },
+      {
+        "question": "How do ChatGPT Plus and Google Gemini paid plans compare on price?",
+        "answer": "Their flagship consumer plans cost almost the same: ChatGPT Plus is $20/month and Google AI Pro (which includes Gemini Advanced) is $19.99/month. The key value difference is bundling: Google AI Pro includes 2 TB of Google One cloud storage and Gemini side panels in personal Gmail and Docs, whereas ChatGPT Plus focuses on higher usage limits for OpenAI reasoning models, Advanced Data Analysis, Projects, and Canvas. Both also offer high-capacity plans (ChatGPT Pro at $200/month and Google AI Ultra at $249.99/month).",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-gemini-pricing-2026"
+        ]
+      },
+      {
+        "question": "Which assistant integrates natively with Google Workspace (Docs, Gmail, Drive, Sheets)?",
+        "answer": "Google Gemini offers native integration across Google Workspace. On eligible Google One AI plans and Google Workspace Business or Enterprise tiers, Gemini appears directly inside Gmail, Google Docs, Sheets, Slides, Drive, and Meet to draft replies, summarise threads, build tables, and search Drive files. ChatGPT can read files via Google Drive connectors, but it does not live inside the Google Workspace interface.",
+        "sourceIds": [
+          "src-gemini-workspace-2026",
+          "src-google-workspace-pricing-2026"
+        ]
+      },
+      {
+        "question": "Why does the catalogue table list API available as No for ChatGPT and Yes for Google Gemini?",
+        "answer": "In WhichAIPick's tool directory, the consumer ChatGPT application (/tools/chatgpt/) is catalogued separately from OpenAI's developer platform (/tools/openai-api/), whereas the Google Gemini profile (/tools/google-gemini/) records both the Gemini assistant and Google's developer API availability. In practice, both companies offer full developer APIs (OpenAI Platform API and Google AI Studio / Vertex AI), and neither includes API token credits inside a $20/month consumer chat subscription.",
+        "sourceIds": [
+          "src-openai-api-pricing-2026",
+          "src-google-vertex-gemini-2026"
+        ]
+      },
+      {
+        "question": "Which is better for coding and spreadsheet data analysis: ChatGPT or Gemini?",
+        "answer": "ChatGPT is well suited for interactive coding and spreadsheet analysis because Canvas supports side-by-side code revisions and Advanced Data Analysis runs Python scripts in a sandboxed environment to clean CSV or Excel files and plot charts. Google Gemini is well suited when you want to inspect large multi-file codebases, export Python code directly to Google Colab, or send generated tables straight into Google Sheets.",
+        "sourceIds": [
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026",
+          "src-gemini-apps-help-2026"
+        ]
+      },
+      {
+        "question": "Can I use ChatGPT or Google Gemini for HR, operations, and team workflows?",
+        "answer": "Yes. Teams running on Google Workspace often prefer Gemini because it summarises Google Meet interviews, drafts emails in Gmail, and retrieves HR policies stored in Google Drive under existing Workspace permissions. Standalone teams often choose ChatGPT Team ($25-$30/user/month) to build shared Projects and Custom GPTs for onboarding guides, rubric evaluation, and internal documentation.",
+        "sourceIds": [
+          "src-chatgpt-projects-2026",
+          "src-gemini-workspace-2026",
+          "src-google-workspace-pricing-2026"
+        ]
+      },
+      {
+        "question": "Do ChatGPT and Google Gemini train on my business or workspace data?",
+        "answer": "On business and enterprise tiers (ChatGPT Team, ChatGPT Enterprise, OpenAI API, and Google Workspace Business/Enterprise with Gemini), both providers state in their official terms that organisation prompts and files are not used to train public foundation models. On consumer Free and $20/month plans, chat history may be used to improve models unless you disable model training or activity history in your account settings.",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-google-workspace-pricing-2026"
         ]
       }
     ],
     "catalogueConflicts": [],
     "pricingConflicts": [],
-    "checkedAt": "2026-10-04",
-    "editorialReviewed": false,
+    "checkedAt": "2026-11-08",
+    "editorialReviewed": true,
     "affiliateStatus": {
       "toolA": false,
       "toolB": false
@@ -308,8 +743,8 @@
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
-        "sourceId": "src-chatgpt-pricing",
-        "checkedAt": "2026-10-04"
+        "sourceId": "src-chatgpt-pricing-2026",
+        "checkedAt": "2026-11-08"
       },
       "toolB": {
         "freePlan": true,
@@ -317,8 +752,8 @@
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
-        "sourceId": "src-gemini-pricing",
-        "checkedAt": "2026-10-04"
+        "sourceId": "src-gemini-pricing-2026",
+        "checkedAt": "2026-11-08"
       }
     },
     "evidenceAuditPassed": true,
