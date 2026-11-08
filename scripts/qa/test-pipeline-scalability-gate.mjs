@@ -522,8 +522,8 @@ async function runScalabilityGate() {
   assert(initialEligible === 878, 'Recommendation eligible tools invariant: 878');
   assert(initialMonetisation.adsEnabled === false, 'Monetisation setting invariant: adsEnabled === false');
   assert(initialBacklog.counts.v2Structured === 46, 'Backlog V2 count invariant: 46');
-  assert(initialBacklog.counts.richV1 === 302, 'Backlog Rich V1 count invariant: 302');
-  assert(initialBacklog.counts.skeletalV1 === 530, 'Backlog Skeletal V1 count invariant: 530');
+  assert(initialBacklog.counts.richV1 === 312, 'Backlog Rich V1 count invariant: 312');
+  assert(initialBacklog.counts.skeletalV1 === 520, 'Backlog Skeletal V1 count invariant: 520');
 
   const initialUrlCount = (initialSitemap.match(/<loc>/g) || []).length;
   assert(initialUrlCount === 958, 'Sitemap URL count invariant: 958');
@@ -647,7 +647,7 @@ async function runScalabilityGate() {
     const expectedEvidenceIds = ['E9001', 'E9002', 'E9003', 'E9004', 'E9005', 'E9006', 'E9007', 'E9008', 'E9009', 'E9010'];
     const allEvidencePresent = expectedEvidenceIds.every(evId => postLedger.some(e => e.evidenceId === evId));
     assert(allEvidencePresent === true, 'Step 8: All 10 new evidence records (E9001-E9010) present in ledger');
-    assert(postLedger.length === 1327 + 10, 'Step 8: Ledger count incremented by exactly 10 (1327 -> 1337)');
+    assert(postLedger.length === 1337 + 10, 'Step 8: Ledger count incremented by exactly 10 (1337 -> 1347)');
 
     // 9. Comparison index regeneration
     const postCompIndex = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'comparison-index.json'), 'utf8'));
@@ -659,8 +659,8 @@ async function runScalabilityGate() {
     const postBacklog = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'content-enrichment-backlog.json'), 'utf8'));
     assert(postBacklog.counts.totalTools === 881, 'Step 10: Backlog total tools invariant: 881');
     assert(postBacklog.counts.v2Structured === 46, 'Step 10: Backlog V2 count invariant: 46');
-    assert(postBacklog.counts.richV1 === 312, 'Step 10: Backlog Rich V1 count incremented by 10 (302 -> 312)');
-    assert(postBacklog.counts.skeletalV1 === 520, 'Step 10: Backlog Skeletal V1 count decremented by 10 (530 -> 520)');
+    assert(postBacklog.counts.richV1 === 322, 'Step 10: Backlog Rich V1 count incremented by 10 (312 -> 322)');
+    assert(postBacklog.counts.skeletalV1 === 510, 'Step 10: Backlog Skeletal V1 count decremented by 10 (520 -> 510)');
     const noneInSkeletalBacklog = payload10.targetToolIds.every(id => !postBacklog.skeletalBacklogToolIds.includes(id));
     assert(noneInSkeletalBacklog === true, 'Step 10: All 10 tools removed from skeletalBacklogToolIds');
 

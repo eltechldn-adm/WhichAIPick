@@ -252,8 +252,8 @@ async function runPipelineIntegrationPilot() {
   assert(initialEligible === 878, 'Recommendation eligible tools invariant: 878');
   assert(initialMonetisation.adsEnabled === false, 'Monetisation setting invariant: adsEnabled === false');
   assert(initialBacklog.counts.v2Structured === 46, 'Backlog V2 count invariant: 46');
-  assert(initialBacklog.counts.richV1 === 302, 'Backlog Rich V1 count invariant: 302');
-  assert(initialBacklog.counts.skeletalV1 === 530, 'Backlog Skeletal V1 count invariant: 530');
+  assert(initialBacklog.counts.richV1 === 312, 'Backlog Rich V1 count invariant: 312');
+  assert(initialBacklog.counts.skeletalV1 === 520, 'Backlog Skeletal V1 count invariant: 520');
 
   const targetTool = initialTools.find(t => t.id === 'ai-studios');
   assert(targetTool !== undefined, 'Target tool "ai-studios" exists in catalogue');
@@ -378,8 +378,8 @@ async function runPipelineIntegrationPilot() {
     const postBacklog = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'content-enrichment-backlog.json'), 'utf8'));
     assert(postBacklog.counts.totalTools === 881, 'Step 12: Backlog total tools invariant: 881');
     assert(postBacklog.counts.v2Structured === 46, 'Step 12: Backlog V2 structured count invariant: 46');
-    assert(postBacklog.counts.richV1 === 303, 'Step 12: Backlog Rich V1 count incremented by 1 (302 -> 303)');
-    assert(postBacklog.counts.skeletalV1 === 529, 'Step 12: Backlog Skeletal V1 count decremented by 1 (530 -> 529)');
+    assert(postBacklog.counts.richV1 === 313, 'Step 12: Backlog Rich V1 count incremented by 1 (312 -> 313)');
+    assert(postBacklog.counts.skeletalV1 === 519, 'Step 12: Backlog Skeletal V1 count decremented by 1 (520 -> 519)');
     assert(!postBacklog.skeletalBacklogToolIds.includes('ai-studios'), 'Step 12: "ai-studios" removed from skeletalBacklogToolIds');
 
     // Step 13: Generate static tool pages

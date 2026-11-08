@@ -1,32 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T12:05:17.448Z",
+  "generatedAt": "2026-11-08T15:32:27.019Z",
   "description": "Deterministic WhichAIPick content backlog manifest classifying all catalogue tools for editorial enrichment.",
   "baselineReconciliation": {
     "historicalSkeletalBaseline": 574,
-    "derivedEnrichedCountToDate": 44,
-    "remainingSkeletalBacklog": 530,
-    "mathematicalProof": "574 (baseline skeletal) - 44 (tools enriched to date) = 530 remaining skeletal tools"
+    "derivedEnrichedCountToDate": 54,
+    "remainingSkeletalBacklog": 520,
+    "mathematicalProof": "574 (baseline skeletal) - 54 (tools enriched to date) = 520 remaining skeletal tools"
   },
   "counts": {
     "totalTools": 881,
     "v2Structured": 46,
-    "richV1": 302,
-    "skeletalV1": 530,
+    "richV1": 312,
+    "skeletalV1": 520,
     "deprecatedIneligible": 3,
     "requiresReview": 0
   },
   "skeletalByCategoryDistribution": {
-    "Marketing": 54,
+    "Marketing": 53,
     "Education": 34,
-    "Business": 109,
+    "Business": 108,
     "Design": 45,
-    "Development": 114,
-    "Video & Audio": 60,
+    "Development": 110,
+    "Video & Audio": 59,
     "Content Creation": 16,
     "Research": 31,
-    "Productivity": 48,
-    "Automation": 19
+    "Productivity": 46,
+    "Automation": 18
   },
   "ineligibleToolIds": [
     "amazon-codewhisperer",
@@ -121,7 +121,6 @@
     "audimee",
     "audioshake",
     "augmedix",
-    "augment-code",
     "automation-anywhere",
     "backstory",
     "balto",
@@ -143,7 +142,6 @@
     "bricks",
     "brighthire",
     "browser-use",
-    "browserbase",
     "builder-io",
     "byword",
     "celtra",
@@ -236,7 +234,6 @@
     "giskard",
     "gitlab-duo",
     "gizmo",
-    "glean",
     "gling",
     "goodie",
     "google-flow-music",
@@ -244,10 +241,8 @@
     "gpt-for-work",
     "gpt-researcher",
     "gpt4all",
-    "granola",
     "greptile",
     "grok",
-    "groq",
     "guardrails-ai",
     "gupshup",
     "h2o-ai",
@@ -296,7 +291,6 @@
     "kiro",
     "kits-ai",
     "klap",
-    "kling-ai",
     "knowt",
     "koala",
     "kognitos",
@@ -424,7 +418,6 @@
     "piccopilot",
     "picwish",
     "pinecone",
-    "pipedream",
     "pixelcut",
     "pixverse",
     "planner-5d",
@@ -453,7 +446,6 @@
     "rasa-io",
     "rask-ai",
     "rattle",
-    "raycast",
     "recall",
     "recast-studio",
     "reducto",
@@ -503,7 +495,6 @@
     "sleekflow",
     "sloyd",
     "smalltalk2me",
-    "smartlead",
     "smartly",
     "snyk",
     "socialbee",
@@ -534,7 +525,6 @@
     "tali-ai",
     "talkpal",
     "tasklet",
-    "tavily",
     "tavus",
     "teachmate",
     "teachy",
@@ -1486,6 +1476,24 @@
         ]
       },
       {
+        "id": "augment-code",
+        "name": "Augment Code",
+        "category": "Development",
+        "pricingModel": "paid",
+        "hasFreeTier": false,
+        "hasFreeTrial": false,
+        "startingPrice": 20,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "auphonic",
         "name": "Auphonic",
         "category": "Video & Audio",
@@ -1747,6 +1755,24 @@
         "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": "Batch 2",
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "browserbase",
+        "name": "Browserbase",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
         "substantiveSections": [
           "how_it_works",
@@ -3124,6 +3150,24 @@
         ]
       },
       {
+        "id": "glean",
+        "name": "Glean",
+        "category": "Business",
+        "pricingModel": "enterprise",
+        "hasFreeTier": false,
+        "hasFreeTrial": false,
+        "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "glide",
         "name": "Glide Classic",
         "category": "Development",
@@ -3232,6 +3276,24 @@
         ]
       },
       {
+        "id": "granola",
+        "name": "Granola",
+        "category": "Productivity",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "gridlex",
         "name": "Gridlex",
         "category": "Business",
@@ -3239,6 +3301,24 @@
         "hasFreeTier": false,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "groq",
+        "name": "Groq",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -3653,6 +3733,24 @@
         "hasFreeTier": false,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "kling-ai",
+        "name": "Kling AI",
+        "category": "Video & Audio",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -4798,6 +4896,24 @@
         ]
       },
       {
+        "id": "pipedream",
+        "name": "Pipedream",
+        "category": "Automation",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "pitch",
         "name": "Pitch",
         "category": "Design",
@@ -5021,6 +5137,24 @@
         "hasFreeTier": false,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "raycast",
+        "name": "Raycast",
+        "category": "Productivity",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": true,
+        "startingPrice": 0,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -5644,6 +5778,24 @@
         ]
       },
       {
+        "id": "smartlead",
+        "name": "Smartlead",
+        "category": "Marketing",
+        "pricingModel": "paid",
+        "hasFreeTier": false,
+        "hasFreeTrial": true,
+        "startingPrice": 39,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
         "id": "smartwriter",
         "name": "Smartwriter",
         "category": "Marketing",
@@ -6011,6 +6163,24 @@
         "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
+        "hasEvidenceInLedger": true,
+        "enrichedBatch": null,
+        "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
+        "substantiveSections": [
+          "how_it_works",
+          "feature_groups",
+          "pros_cons",
+          "pricing_overview"
+        ]
+      },
+      {
+        "id": "tavily",
+        "name": "Tavily",
+        "category": "Development",
+        "pricingModel": "freemium",
+        "hasFreeTier": true,
+        "hasFreeTrial": false,
+        "startingPrice": 0,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Substantive editorial sections present: how_it_works, feature_groups, pros_cons, pricing_overview",
@@ -7161,19 +7331,6 @@
         "substantiveSections": []
       },
       {
-        "id": "augment-code",
-        "name": "Augment Code",
-        "category": "Development",
-        "pricingModel": "paid",
-        "hasFreeTier": false,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "automation-anywhere",
         "name": "Automation Anywhere",
         "category": "Automation",
@@ -7436,19 +7593,6 @@
       {
         "id": "browser-use",
         "name": "Browser Use",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "browserbase",
-        "name": "Browserbase",
         "category": "Development",
         "pricingModel": "freemium",
         "hasFreeTier": true,
@@ -8656,19 +8800,6 @@
         "substantiveSections": []
       },
       {
-        "id": "glean",
-        "name": "Glean",
-        "category": "Business",
-        "pricingModel": "enterprise",
-        "hasFreeTier": false,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "gling",
         "name": "Gling",
         "category": "Video & Audio",
@@ -8760,19 +8891,6 @@
         "substantiveSections": []
       },
       {
-        "id": "granola",
-        "name": "Granola",
-        "category": "Productivity",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "greptile",
         "name": "Greptile",
         "category": "Development",
@@ -8789,19 +8907,6 @@
         "id": "grok",
         "name": "Grok",
         "category": "Productivity",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "groq",
-        "name": "Groq",
-        "category": "Development",
         "pricingModel": "freemium",
         "hasFreeTier": true,
         "hasFreeTrial": null,
@@ -9425,19 +9530,6 @@
       {
         "id": "klap",
         "name": "Klap",
-        "category": "Video & Audio",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "kling-ai",
-        "name": "Kling AI",
         "category": "Video & Audio",
         "pricingModel": "freemium",
         "hasFreeTier": true,
@@ -11100,19 +11192,6 @@
         "substantiveSections": []
       },
       {
-        "id": "pipedream",
-        "name": "Pipedream",
-        "category": "Automation",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "pixelcut",
         "name": "Pixelcut",
         "category": "Design",
@@ -11469,19 +11548,6 @@
         "category": "Business",
         "pricingModel": "enterprise",
         "hasFreeTier": false,
-        "hasFreeTrial": null,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "raycast",
-        "name": "Raycast",
-        "category": "Productivity",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
         "hasFreeTrial": null,
         "startingPrice": null,
         "hasEvidenceInLedger": true,
@@ -12127,19 +12193,6 @@
         "substantiveSections": []
       },
       {
-        "id": "smartlead",
-        "name": "Smartlead",
-        "category": "Marketing",
-        "pricingModel": "paid",
-        "hasFreeTier": false,
-        "hasFreeTrial": true,
-        "startingPrice": null,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
         "id": "smartly",
         "name": "Smartly",
         "category": "Marketing",
@@ -12524,19 +12577,6 @@
         "hasFreeTier": false,
         "hasFreeTrial": false,
         "startingPrice": 25,
-        "hasEvidenceInLedger": true,
-        "enrichedBatch": null,
-        "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
-        "substantiveSections": []
-      },
-      {
-        "id": "tavily",
-        "name": "Tavily",
-        "category": "Development",
-        "pricingModel": "freemium",
-        "hasFreeTier": true,
-        "hasFreeTrial": null,
-        "startingPrice": null,
         "hasEvidenceInLedger": true,
         "enrichedBatch": null,
         "classificationReason": "Lacks substantive how_it_works, feature_groups, pros/cons, and pricing_overview",
