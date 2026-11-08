@@ -58,9 +58,28 @@
 }
 
 /* Smooth Interactive Comparison Table Scrolling */
+.curated-comparison .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
 .curated-comparison .compare-table-wrapper {
     scrollbar-width: thin;
     scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+.curated-comparison .compare-table-wrapper:focus-visible {
+    outline: 2px solid var(--accent-cyan, #ff8a3d);
+    outline-offset: 2px;
+    border-radius: 6px;
 }
 
 .curated-comparison .compare-table-wrapper::-webkit-scrollbar {
@@ -94,10 +113,19 @@
     }
 
     .curated-comparison .table-responsive-cards thead {
-        display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
     }
 
-    .curated-comparison .table-responsive-cards tr {
+    .curated-comparison .table-responsive-cards tbody tr {
         display: grid;
         gap: 0.45rem;
         padding: 1rem;
@@ -107,6 +135,7 @@
         border-radius: 8px;
     }
 
+    .curated-comparison .table-responsive-cards th[scope="row"],
     .curated-comparison .table-responsive-cards td {
         display: block;
         padding: 0.25rem 0 !important;
@@ -114,6 +143,7 @@
         overflow-wrap: break-word;
     }
 
+    .curated-comparison .table-responsive-cards th[scope="row"]::before,
     .curated-comparison .table-responsive-cards td::before {
         font-weight: 700;
         color: var(--accent-cyan, #ff8a3d);
@@ -124,20 +154,21 @@
         margin-bottom: 0.15rem;
     }
 
+    .curated-comparison .table-responsive-cards th[scope="row"]:nth-child(1)::before,
     .curated-comparison .table-responsive-cards td:nth-child(1)::before {
-        content: var(--label-1);
+        content: var(--label-1) ": ";
     }
 
     .curated-comparison .table-responsive-cards td:nth-child(2)::before {
-        content: var(--label-2);
+        content: var(--label-2) ": ";
     }
 
     .curated-comparison .table-responsive-cards td:nth-child(3)::before {
-        content: var(--label-3);
+        content: var(--label-3) ": ";
     }
 
     .curated-comparison .table-responsive-cards td:nth-child(4)::before {
-        content: var(--label-4);
+        content: var(--label-4) ": ";
     }
 }
 

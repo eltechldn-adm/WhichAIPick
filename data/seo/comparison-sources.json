@@ -218,9 +218,18 @@
   {
     "sourceId": "src-chatgpt-pricing-2026",
     "publisher": "OpenAI",
-    "title": "ChatGPT Pricing and Plans (Free, Plus, Pro, Team, Enterprise)",
+    "title": "ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)",
     "url": "https://openai.com/chatgpt/pricing",
     "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-multicurrency-2026",
+    "publisher": "OpenAI",
+    "title": "Multi-Currency Billing in ChatGPT (USD, GBP and Local Currencies)",
+    "url": "https://help.openai.com/en/articles/9982051-multi-currency-billing",
+    "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
   },
@@ -317,9 +326,27 @@
   {
     "sourceId": "src-google-workspace-pricing-2026",
     "publisher": "Google",
-    "title": "Google Workspace Plans and Pricing with Gemini",
+    "title": "Google Workspace Plans and Pricing with Gemini (USD)",
     "url": "https://workspace.google.com/pricing",
     "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-workspace-uk-pricing-2026",
+    "publisher": "Google",
+    "title": "Google Workspace UK Plans and Pricing with Gemini (GBP)",
+    "url": "https://workspace.google.com/intl/en_uk/pricing.html",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-one-ai-plans-2026",
+    "publisher": "Google",
+    "title": "Google One AI Plans (Google AI Plus, Google AI Pro, Google AI Ultra)",
+    "url": "https://one.google.com/about/google-ai-plans/",
+    "sourceType": "Official Product Page",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
   },

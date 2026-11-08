@@ -114,9 +114,10 @@ function buildPage(def) {
         `;
         def.quickAnswer.forEach(qa => {
             addSources(qa.sourceIds);
+            const badgeText = qa.label ? escapeHTML(qa.label) : 'Source-backed';
             contentHTML += `<li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
                 <span style="position: absolute; left: 0; top: 0; color: var(--accent-cyan);">→</span>
-                ${escapeHTML(qa.text)} <span style="font-size: 0.8rem; color: var(--color-gray-400);">(Source-backed)</span>
+                ${escapeHTML(qa.text)} <span style="font-size: 0.8rem; color: var(--color-gray-400);">(${badgeText})</span>
             </li>`;
         });
         contentHTML += `</ul></section>`;
@@ -145,14 +146,20 @@ function buildPage(def) {
     const tableFootnoteHTML = def.tableFootnote
         ? `\n            <p class="compare-table-footnote" style="margin-top: 1rem; margin-bottom: 0; font-size: 0.88rem; color: var(--color-gray-300); line-height: 1.55; background: rgba(255,255,255,0.03); padding: 0.85rem 1rem; border-radius: 8px; border-left: 3px solid var(--accent-cyan);">${escapeHTML(def.tableFootnote)}</p>`
         : '';
+    const compareWrapperAttrs = def.a11yEnhancedTables
+        ? `class="compare-table-wrapper" tabindex="0" role="region" aria-label="Interactive comparison table for ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}" style="overflow-x: auto; background: var(--bg-surface); border-radius: 12px; padding: 1rem;"`
+        : `class="compare-table-wrapper" style="overflow-x: auto; background: var(--bg-surface); border-radius: 12px; padding: 1rem;"`;
+    const compareFactorHeaderContent = def.a11yEnhancedTables
+        ? `<span class="sr-only">Comparison factor</span>`
+        : '';
     contentHTML += `
         <section class="compare-section interactive-compare-section" style="margin-bottom: 3rem;">
             <h2>Interactive Comparison</h2>
-            <div class="compare-table-wrapper" style="overflow-x: auto; background: var(--bg-surface); border-radius: 12px; padding: 1rem;">
+            <div ${compareWrapperAttrs}>
                 <table class="compare-table" style="width: 100%; border-collapse: collapse; text-align: left; --tool-count: 2;">
                     <thead>
                         <tr>
-                            <th scope="col" class="compare-factor-col"></th>
+                            <th scope="col" class="compare-factor-col">${compareFactorHeaderContent}</th>
                             <th scope="col" style="padding: 1rem; width: 40%;"><h3 style="margin: 0;">${escapeHTML(toolA.canonicalName)}</h3></th>
                             <th scope="col" style="padding: 1rem; width: 40%;"><h3 style="margin: 0;">${escapeHTML(toolB.canonicalName)}</h3></th>
                         </tr>
@@ -174,25 +181,25 @@ function buildPage(def) {
             <section class="compare-section product-scope-section" style="margin-bottom: 3rem;">
                 <h2>Apps, Subscriptions, Models, APIs &amp; Enterprise Explained</h2>
                 <p style="color: var(--color-gray-300); margin-top: 0; margin-bottom: 1.25rem; line-height: 1.6;">AI assistant names are often used interchangeably for consumer apps, paid subscriptions, foundation models, business workspaces, and developer APIs. Here is how ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)} separate each product layer:</p>
-                <div class="table-responsive table-responsive-cards" tabindex="0" role="region" aria-label="Product scope comparison between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}">
-                    <table style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Product layer'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}'; --label-4: 'Practical takeaway';">
-                        <thead>
-                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                <th scope="col" style="padding: 1rem;">Product layer</th>
-                                <th scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
-                                <th scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
-                                <th scope="col" style="padding: 1rem;">Practical takeaway</th>
+                <div class="table-responsive table-responsive-cards">
+                    <table role="table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Product layer'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}'; --label-4: 'Practical takeaway';">
+                        <thead role="rowgroup">
+                            <tr role="row" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th role="columnheader" scope="col" style="padding: 1rem;">Product layer</th>
+                                <th role="columnheader" scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
+                                <th role="columnheader" scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
+                                <th role="columnheader" scope="col" style="padding: 1rem;">Practical takeaway</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody role="rowgroup">
         `;
         def.productScope.forEach(ps => {
             contentHTML += `
-                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                    <td style="padding: 1rem; font-weight: bold;">${escapeHTML(ps.layer)}</td>
-                    <td style="padding: 1rem;">${escapeHTML(ps.toolADetail)}</td>
-                    <td style="padding: 1rem;">${escapeHTML(ps.toolBDetail)}</td>
-                    <td style="padding: 1rem; font-size: 0.9rem; color: var(--color-gray-300);">${escapeHTML(ps.whatToKnow)}</td>
+                <tr role="row" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <th role="rowheader" scope="row" style="padding: 1rem; font-weight: bold;">${escapeHTML(ps.layer)}</th>
+                    <td role="cell" style="padding: 1rem;">${escapeHTML(ps.toolADetail)}</td>
+                    <td role="cell" style="padding: 1rem;">${escapeHTML(ps.toolBDetail)}</td>
+                    <td role="cell" style="padding: 1rem; font-size: 0.9rem; color: var(--color-gray-300);">${escapeHTML(ps.whatToKnow)}</td>
                 </tr>
             `;
         });
@@ -201,17 +208,40 @@ function buildPage(def) {
 
     // Use Case Decisions
     if (def.useCaseDecisions?.length > 0) {
-        const useCaseWrapperAttrs = def.responsiveUseCaseTable
-            ? `class="table-responsive table-responsive-cards" tabindex="0" role="region" aria-label="Use case comparison between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}"`
-            : `class="table-responsive"`;
-        const useCaseTableStyle = def.responsiveUseCaseTable
-            ? `width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Use case'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}'; --label-4: 'What matters';`
-            : `width: 100%; border-collapse: collapse; text-align: left;`;
-        contentHTML += `
+        if (def.responsiveUseCaseTable) {
+            contentHTML += `
             <section class="compare-section use-cases-section" style="margin-bottom: 3rem;">
                 <h2>Which Is Better for Different Use Cases?</h2>
-                <div ${useCaseWrapperAttrs}>
-                    <table style="${useCaseTableStyle}">
+                <div class="table-responsive table-responsive-cards">
+                    <table role="table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Use case'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}'; --label-4: 'What matters';">
+                        <thead role="rowgroup">
+                            <tr role="row" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th role="columnheader" scope="col" style="padding: 1rem;">Use case</th>
+                                <th role="columnheader" scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
+                                <th role="columnheader" scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
+                                <th role="columnheader" scope="col" style="padding: 1rem;">What matters</th>
+                            </tr>
+                        </thead>
+                        <tbody role="rowgroup">
+            `;
+            def.useCaseDecisions.forEach(uc => {
+                addSources(uc.evidenceIds);
+                contentHTML += `
+                <tr role="row" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <th role="rowheader" scope="row" style="padding: 1rem; font-weight: bold;">${escapeHTML(uc.useCase)}</th>
+                    <td role="cell" style="padding: 1rem;">${escapeHTML(uc.toolAFit)}</td>
+                    <td role="cell" style="padding: 1rem;">${escapeHTML(uc.toolBFit)}</td>
+                    <td role="cell" style="padding: 1rem; font-size: 0.9rem; color: var(--color-gray-300);">${escapeHTML(uc.reason)}</td>
+                </tr>
+                `;
+            });
+            contentHTML += `</tbody></table></div></section>`;
+        } else {
+            contentHTML += `
+            <section class="compare-section use-cases-section" style="margin-bottom: 3rem;">
+                <h2>Which Is Better for Different Use Cases?</h2>
+                <div class="table-responsive">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
                         <thead>
                             <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                                 <th style="padding: 1rem;">Use case</th>
@@ -222,9 +252,9 @@ function buildPage(def) {
                         </thead>
                         <tbody>
         `;
-        def.useCaseDecisions.forEach(uc => {
-            addSources(uc.evidenceIds);
-            contentHTML += `
+            def.useCaseDecisions.forEach(uc => {
+                addSources(uc.evidenceIds);
+                contentHTML += `
                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
                     <td style="padding: 1rem; font-weight: bold;">${escapeHTML(uc.useCase)}</td>
                     <td style="padding: 1rem;">${escapeHTML(uc.toolAFit)}</td>
@@ -232,8 +262,9 @@ function buildPage(def) {
                     <td style="padding: 1rem; font-size: 0.9rem; color: var(--color-gray-300);">${escapeHTML(uc.reason)}</td>
                 </tr>
             `;
-        });
-        contentHTML += `</tbody></table></div></section>`;
+            });
+            contentHTML += `</tbody></table></div></section>`;
+        }
     }
 
     // Strengths & Limitations
@@ -319,13 +350,16 @@ function buildPage(def) {
             let fp = t.pd.freePlan === true ? 'Free plan available' : (t.pd.freePlan === false ? 'No free plan confirmed' : 'Free-plan status not confirmed');
             let tr = t.pd.trial === true ? 'Trial available' : (t.pd.trial === false ? 'No trial confirmed' : 'Trial status not confirmed');
             let ep = t.pd.entryPaidPlan ? `From ${t.pd.currency} ${t.pd.entryPaidPlan} / ${t.pd.billingBasis}` : 'Entry paid price not confirmed';
+            const extraNotesHTML = Array.isArray(t.pd.extraNotes) && t.pd.extraNotes.length > 0
+                ? t.pd.extraNotes.map(n => `\n                        <li style="margin-top: 0.35rem; font-size: 0.9rem; color: var(--color-gray-300);">• ${escapeHTML(n)}</li>`).join('')
+                : '';
             contentHTML += `
                 <div class="pricing-card" style="background: var(--bg-surface); padding: 1.5rem; border-radius: 8px;">
                     <h3 style="margin-top: 0;">${escapeHTML(t.label)}</h3>
                     <ul style="list-style: none; padding-left: 0;">
                         <li>${escapeHTML(fp)}</li>
                         <li>${escapeHTML(tr)}</li>
-                        <li><strong>${escapeHTML(ep)}</strong></li>
+                        <li><strong>${escapeHTML(ep)}</strong></li>${extraNotesHTML}
                     </ul>
                 </div>
             `;
@@ -335,21 +369,21 @@ function buildPage(def) {
             pricingBreakdownHTML = `
                 <div class="pricing-breakdown-block" style="margin-top: 1.75rem;">
                     <h3 style="font-size: 1.2rem; margin-top: 0; margin-bottom: 1rem;">Free vs Paid Plan Breakdown</h3>
-                    <div class="table-responsive table-responsive-cards" tabindex="0" role="region" aria-label="Free vs paid plan breakdown between ${escapeHTML(toolA.canonicalName)} and ${escapeHTML(toolB.canonicalName)}">
-                        <table style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Plan tier'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}';">
-                            <thead>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                    <th scope="col" style="padding: 1rem;">Plan tier</th>
-                                    <th scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
-                                    <th scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
+                    <div class="table-responsive table-responsive-cards">
+                        <table role="table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Plan tier'; --label-2: '${escapeHTML(toolA.canonicalName)}'; --label-3: '${escapeHTML(toolB.canonicalName)}';">
+                            <thead role="rowgroup">
+                                <tr role="row" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                    <th role="columnheader" scope="col" style="padding: 1rem;">Plan tier</th>
+                                    <th role="columnheader" scope="col" style="padding: 1rem;">${escapeHTML(toolA.canonicalName)}</th>
+                                    <th role="columnheader" scope="col" style="padding: 1rem;">${escapeHTML(toolB.canonicalName)}</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody role="rowgroup">
                                 ${def.pricingBreakdown.map(row => `
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                                    <td style="padding: 1rem; font-weight: bold;">${escapeHTML(row.tier)}</td>
-                                    <td style="padding: 1rem;">${escapeHTML(row.toolADetail)}</td>
-                                    <td style="padding: 1rem;">${escapeHTML(row.toolBDetail)}</td>
+                                <tr role="row" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <th role="rowheader" scope="row" style="padding: 1rem; font-weight: bold;">${escapeHTML(row.tier)}</th>
+                                    <td role="cell" style="padding: 1rem;">${escapeHTML(row.toolADetail)}</td>
+                                    <td role="cell" style="padding: 1rem;">${escapeHTML(row.toolBDetail)}</td>
                                 </tr>`).join('')}
                             </tbody>
                         </table>
