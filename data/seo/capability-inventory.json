@@ -370,8 +370,8 @@
           "productLayer": "Related product / CLI",
           "requiredPlan": "Separate developer tool access; consumer Code Assist extensions stopped serving individual, Pro, and Ultra tiers on 18 June 2026",
           "availabilityAndLimitations": "Available through related Google developer products including Antigravity and Antigravity CLI. Gemini Code Assist extensions and CLI for individual consumer tiers ceased on 18 June 2026 (users directed to Antigravity); new enterprise subscriptions ended sales on 9 October 2026. These capabilities are separate developer tools and are not bundled in the consumer Gemini app.",
-          "sourceId": "src-google-antigravity-dev-tools-2026",
-          "officialSourceUrl": "https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview",
+          "sourceId": "src-google-antigravity-pricing-2026",
+          "officialSourceUrl": "https://antigravity.google/pricing",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -479,13 +479,13 @@
           "lastVerifiedDate": "2026-11-08"
         },
         "google-gemini": {
-          "state": "Limited",
-          "productProvidedBy": "Gemini App (Skills & Gems) & NotebookLM",
+          "state": "Available",
+          "productProvidedBy": "Gemini Apps + Gemini Notebook",
           "productLayer": "Consumer app",
-          "requiredPlan": "Free (NotebookLM notebooks), Google AI plans (Gems to Skills)",
-          "availabilityAndLimitations": "Gemini provides reusable custom instructions via Gems (transitioning to Skills), and NotebookLM provides separate project research notebooks, but these adjacent features do not offer unified persistent project workspaces equivalent to competing platforms.",
-          "sourceId": "src-gemini-gems-skills-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/18560919",
+          "requiredPlan": "Personal Google accounts (gradual rollout across supported apps and devices)",
+          "availabilityAndLimitations": "Google provides dedicated project notebooks integrated with Gemini Apps, supporting persistent source files, saved instructions, continuous conversations, and context from previous discussions synchronized with Gemini Notebook. Availability is rolling out gradually to personal Google accounts on supported apps and devices; certain memory features require Keep Activity to remain enabled. Does not offer unlimited project storage or universal plan availability.",
+          "sourceId": "src-gemini-project-notebooks-2026",
+          "officialSourceUrl": "https://support.google.com/gemini/answer/16972047",
           "lastVerifiedDate": "2026-11-08"
         }
       }
@@ -864,8 +864,8 @@
           "productLayer": "Business / Enterprise workspace",
           "requiredPlan": "Free (consumer toggle); Google Workspace plans for commercial data protection",
           "availabilityAndLimitations": "Consumer Gemini allows users to pause Gemini Apps Activity to stop data retention and human review, but does not offer contractual commercial privacy. Google Workspace accounts provide organizational data controls where user data is not trained on, but exact default settings across all hybrid tiers remain partially unverified without plan-specific contracts.",
-          "sourceId": "src-gemini-connected-apps-2026",
-          "officialSourceUrl": "https://support.google.com/gemini/answer/13695044",
+          "sourceId": "src-google-workspace-ai-privacy-2026",
+          "officialSourceUrl": "https://workspace.google.com/security/ai-privacy/",
           "lastVerifiedDate": "2026-11-08"
         }
       }

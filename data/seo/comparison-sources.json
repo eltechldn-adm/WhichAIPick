@@ -549,15 +549,6 @@
     "checkedAt": "2026-11-08"
   },
   {
-    "sourceId": "src-google-antigravity-dev-tools-2026",
-    "publisher": "Google",
-    "title": "Antigravity Developer Tools and AI-Powered Coding Environment Overview",
-    "url": "https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview",
-    "sourceType": "Official Documentation",
-    "publishedAt": null,
-    "checkedAt": "2026-11-08"
-  },
-  {
     "sourceId": "src-gemini-api-code-execution-2026",
     "publisher": "Google",
     "title": "Gemini API Code Execution and Sandboxed Python Environment",
@@ -625,6 +616,42 @@
     "publisher": "OpenAI",
     "title": "Using Codex and Codex Cloud with Your ChatGPT Plan",
     "url": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-antigravity-pricing-2026",
+    "publisher": "Google",
+    "title": "Google Antigravity Pricing and Access Documentation",
+    "url": "https://antigravity.google/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-project-notebooks-2026",
+    "publisher": "Google",
+    "title": "Gemini Project Notebooks and Integrated Workspace Documentation",
+    "url": "https://support.google.com/gemini/answer/16972047",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-google-workspace-ai-privacy-2026",
+    "publisher": "Google",
+    "title": "Google Workspace AI Security and Privacy Policies",
+    "url": "https://workspace.google.com/security/ai-privacy/",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-gemini-models-2026",
+    "publisher": "Google",
+    "title": "Google Gemini Consumer Help: Gemini Models and Availability",
+    "url": "https://support.google.com/gemini/answer/18648722",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
