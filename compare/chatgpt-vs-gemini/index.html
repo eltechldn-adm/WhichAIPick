@@ -551,6 +551,1496 @@
                     <td role="cell" style="padding: 1rem; font-size: 0.9rem; color: var(--color-gray-300);">Choose Gemini on Google Workspace Business Standard+; choose ChatGPT Business for standalone teams.</td>
                 </tr>
                 </tbody></table></div></section>
+            <section class="compare-section capability-explorer-section" id="capability-explorer" aria-labelledby="capability-explorer-heading" style="margin-bottom: 3rem;">
+                <h2 id="capability-explorer-heading">Full Capability Explorer</h2>
+                <p class="cap-explorer-intro">Need to check a specific workflow beyond the high-level summary? Expand the source-backed inventory below to inspect 23 verified capabilities across 8 categories, separating consumer app features, paid subscriptions, related CLI/browser tools, underlying models, business workspaces, and developer APIs.</p>
+                <div class="cap-legend" aria-label="Capability availability state legend">
+                    <span class="cap-legend-label">States used:</span>
+                    <span class="cap-state-badge cap-state--available">Available</span>
+                    <span class="cap-state-badge cap-state--limited">Limited</span>
+                    <span class="cap-state-badge cap-state--not-offered">Not offered</span>
+                    <span class="cap-state-badge cap-state--not-verified">Not verified</span>
+                </div>
+                <details class="capability-explorer-master" id="explore-all-capabilities">
+                    <summary class="capability-explorer-master-summary">
+                        <span class="cap-master-summary-text">Explore all capabilities</span>
+                        <span class="cap-master-summary-meta">23 verified capabilities across 8 categories</span>
+                        <span class="cap-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="capability-explorer-body">
+                        <div class="capability-explorer-toolbar">
+                            <div class="cap-filter-group" role="group" aria-label="Filter capabilities by category">
+                                <button type="button" class="cap-filter-btn is-active" aria-pressed="true" data-cap-category="all">All categories (23)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="writing">Writing (3)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="research">Research (3)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="coding">Coding (3)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="documents-and-data">Documents and data (3)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="images-and-media">Images and media (3)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="voice">Voice (1)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="integrations-and-automation">Integrations and automation (3)</button>
+                            <button type="button" class="cap-filter-btn" aria-pressed="false" data-cap-category="business-privacy-and-security">Business, privacy and security (4)</button>
+                            </div>
+                            <div class="cap-action-group" role="group" aria-label="Expand or collapse capability categories">
+                                <button type="button" class="cap-action-btn" data-cap-action="expand-all">Expand all categories</button>
+                                <button type="button" class="cap-action-btn" data-cap-action="collapse-all">Collapse all categories</button>
+                            </div>
+                        </div>
+                        <div class="capability-categories-list">
+                        <details class="capability-category-group" id="cap-cat-writing" data-category-id="writing" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Writing</span>
+                                    <span class="cap-cat-count">3 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Document drafting workspaces, tone customisation, and structured presentation generation.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Dedicated Interactive Writing &amp; Document Editor (Writing Blocks / Canvas vs Artifacts &amp; Claude Docs)</div>
+                                            <p class="cap-feature-desc">Provides dedicated editable document blocks or a side-by-side workspace to draft, revise, and format long-form writing without losing conversation context.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Writing &amp; Code Blocks; legacy Canvas)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Flagship chat models feature interactive inline writing blocks with full-screen expansion, inline editing, targeted feedback, and reading-level adjustments directly within the chat thread, superseding the legacy standalone Canvas side-panel.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Canvas in ChatGPT for Writing and Coding</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini Canvas</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (Gemini Canvas); Google Workspace plans for Docs integration</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Canvas provides a dedicated split-screen editing workspace for drafting and refining long-form text. Google Docs integration is a distinct Workspace and product-plan surface.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/16047321" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Canvas Collaborative Writing and Coding Workspace</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Custom Writing Styles, Instructions &amp; Cross-Chat Memory</div>
+                                            <p class="cap-feature-desc">Applies saved tone presets, formatting rules, and remembered user context automatically across conversations.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Custom Instructions &amp; Memory)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Includes account-wide Custom Instructions, cross-conversation Memory, and project-specific instructions inside Projects and Custom GPTs.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/chatgpt/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Gems to Skills transition)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Google AI Plus, Google AI Pro, Google AI Ultra</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Provides reusable custom instructions through Gems transitioning to Skills (Gems become read-only 17 November 2026 and are removed 17 December 2026 for eligible adult personal accounts; Workspace transition dates differ). Does not provide universal cross-chat memory across all account types.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/18560919" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Gems to Skills Transition and Reusable Instructions</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Presentation &amp; Slide Deck Creation (Claude Slides vs Python File Export)</div>
+                                            <p class="cap-feature-desc">Generates structured presentation slide decks and visual layouts from outlines or source documents.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Advanced Data Analysis)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (limited), Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Can generate downloadable PowerPoint (.pptx) files via Python scripts, but does not offer a dedicated interactive slide-deck canvas in the consumer app.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Advanced Data Analysis in ChatGPT</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Canvas) &amp; Google Slides</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (Canvas outline and slide drafting); Google Workspace plans ($7-$22/user/mo) for native Google Slides integration</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Canvas can create and edit structured presentation slide outlines. In-app Google Slides generative features require separate Google Workspace business plans.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/16047321" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Canvas Collaborative Writing and Coding Workspace</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-research" data-category-id="research" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Research</span>
+                                    <span class="cap-cat-count">3 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Live web search with citations, multi-step synthesis reports, and domain-specific research surfaces.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Real-Time Web Search with Inline Source Citations</div>
+                                            <p class="cap-feature-desc">Retrieves live information from the web and attaches verifiable links to cited sources.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (ChatGPT Search)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Triggers automatically on timely queries or manually via the Search toggle, returning inline links and a collapsible sources sidebar.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Search Documentation</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Google Search integration)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Google AI Plus, Google AI Pro, Google AI Ultra</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Available through the Gemini app and live Google Search integration; inline citations are generated where source matches are identified rather than automatically on every response.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/13695044" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Connected Apps and Extensions</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Autonomous Multi-Step Research Reports (Deep Research vs Claude Research)</div>
+                                            <p class="cap-feature-desc">Executes multi-step searches across web pages and connected workspace documents to produce a synthesised report.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Paid subscription</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT Subscription (Deep Research)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Plus, Pro, Business, Enterprise (tiered monthly query quotas)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Performs multi-minute autonomous web browsing and synthesis with full source citations; monthly report allowances depend on plan tier.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/chatgpt/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Deep Research)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (eligible users); Google AI Pro (£18.99/mo) and Ultra provide higher research limits</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Available on eligible Free accounts for multi-step research inquiries; Google AI Pro and Ultra subscriptions unlock higher research limits and advanced model options.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/15719111" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Deep Research Multi-Step Reports</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Dedicated Scientific Research Surface (Claude Science)</div>
+                                            <p class="cap-feature-desc">Provides a specialized product surface tailored for scientific literature review, hypothesis testing, and technical analysis.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--not-offered">Not offered</span>
+                                                <span class="cap-layer-badge">Underlying model</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App &amp; GPT Reasoning Models</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Not applicable as a separate named surface (reasoning models included on Plus/Pro/Business/Enterprise)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>OpenAI handles scientific reasoning through general GPT reasoning models and Deep Research rather than a separate named &#039;Science&#039; product surface.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/chatgpt/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Related product / CLI</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>NotebookLM (Adjacent Google Product)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (NotebookLM personal Google account)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Google offers NotebookLM as an adjacent source-grounded research product with document notebooks and audio summaries, but Gemini does not include a dedicated built-in scientific research workspace inside the Gemini app.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/notebooklm/answer/14294096" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: NotebookLM Grounded Research and Source Analysis Help Center</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-coding" data-category-id="coding" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Coding</span>
+                                    <span class="cap-cat-count">3 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Interactive UI previews, terminal and repository coding agents, and sandboxed code execution.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Live Interactive UI, React &amp; Diagram Previews (Artifacts vs Code Block &amp; Canvas Previews)</div>
+                                            <p class="cap-feature-desc">Renders interactive HTML/CSS layouts, React components, SVG graphics, and diagrams directly inside the browser or desktop app.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Interactive Code Blocks &amp; Canvas)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Interactive code blocks provide dedicated live Preview tabs for HTML layouts, React components, SVGs, and Mermaid diagrams directly in chat responses and full-screen views, alongside legacy Canvas previews.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Canvas in ChatGPT for Writing and Coding</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Canvas)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Google AI Plus, Google AI Pro, Google AI Ultra</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Available through Gemini Canvas, including interactive web application and code editing with live preview rendering directly in the workspace.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/16047321" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Canvas Collaborative Writing and Coding Workspace</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Agentic Terminal &amp; Repository Coding (Claude Code vs OpenAI Codex CLI &amp; IDE)</div>
+                                            <p class="cap-feature-desc">Reads local multi-file repositories, edits files, runs shell commands/tests, and manages Git workflows from your terminal or IDE.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Related product / CLI</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>OpenAI Codex (Codex CLI, IDE Extension, Desktop &amp; Cloud)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Included across ChatGPT plans (Free, Go, Plus, Pro, Business, Enterprise, Edu); Codex Cloud requires eligible Plus, Pro, Business, Enterprise, or Edu</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Included across ChatGPT plans, including Free and Go, with plan-dependent usage limits. Codex Cloud has separate eligibility requiring an eligible Plus, Pro, Business, Enterprise, or education account (not Free or Go).</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Using Codex and Codex Cloud with Your ChatGPT Plan</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Related product / CLI</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Antigravity &amp; Antigravity CLI (Related Developer Products)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Separate developer tool access; consumer Code Assist extensions stopped serving individual, Pro, and Ultra tiers on 18 June 2026</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Available through related Google developer products including Antigravity and Antigravity CLI. Gemini Code Assist extensions and CLI for individual consumer tiers ceased on 18 June 2026 (users directed to Antigravity); new enterprise subscriptions ended sales on 9 October 2026. These capabilities are separate developer tools and are not bundled in the consumer Gemini app.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://antigravity.google/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Google Antigravity Pricing and Access Documentation</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Sandboxed Cloud Code Execution &amp; File Generation</div>
+                                            <p class="cap-feature-desc">Executes code inside a secure cloud sandbox to validate logic, transform files, and output downloadable artefacts.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Advanced Data Analysis)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (limited), Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Runs stateful Python sessions capable of parsing uploaded archives, executing scripts, and generating downloadable files.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Advanced Data Analysis in ChatGPT</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Developer API</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini Developer API (Code Execution)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Gemini Developer API account (Google AI Studio / Vertex AI)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Code execution in a sandboxed Python environment is documented and supported via the Gemini Developer API, requiring separate API access; parity across consumer Gemini app subscription plans is not guaranteed.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://ai.google.dev/gemini-api/docs/code-execution" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini API Code Execution and Sandboxed Python Environment</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-documents-and-data" data-category-id="documents-and-data" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Documents and data</span>
+                                    <span class="cap-cat-count">3 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Model context window limits, persistent project knowledge bases, and spreadsheet/chart analysis.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Model Context Window Capacity (Long PDFs, Books &amp; Repositories)</div>
+                                            <p class="cap-feature-desc">Defines the maximum volume of text, code, and documents that can be processed within a single conversation or API request.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Underlying model</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>OpenAI GPT Models (Consumer App &amp; Platform API)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise, API (varies by model and tier)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Context window capacity scales by subscription tier and selected GPT reasoning or multimodal model, with expanded context on paid and API tiers.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/chatgpt/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Gemini 4 Argon &amp; Gemini 3.x models)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (32K tokens), Google AI Plus (128K tokens), Google AI Pro / Ultra (1M tokens)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Consumer app context allowances are tiered by plan: Free tier includes 32K tokens, Google AI Plus provides 128K tokens, and Google AI Pro and Ultra provide 1M tokens. Developer API allowances are governed separately.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/16275805" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini App Context Window and Usage Limits</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Persistent Project Workspaces &amp; Knowledge Folders (Projects)</div>
+                                            <p class="cap-feature-desc">Organises reference documents, custom instructions, and ongoing chats into dedicated project spaces.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Projects)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Plus, Pro, Business, Enterprise (and rolling out to broader tiers per official docs)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Groups chats, uploaded files, and custom instructions; shared team Projects are supported on ChatGPT Business and Enterprise.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Projects in ChatGPT</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini Apps + Gemini Notebook</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Personal Google accounts (gradual rollout across supported apps and devices)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Google provides dedicated project notebooks integrated with Gemini Apps, supporting persistent source files, saved instructions, continuous conversations, and context from previous discussions synchronized with Gemini Notebook. Availability is rolling out gradually to personal Google accounts on supported apps and devices; certain memory features require Keep Activity to remain enabled. Does not offer unlimited project storage or universal plan availability.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/16972047" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Project Notebooks and Integrated Workspace Documentation</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Spreadsheet Cleaning, Quantitative Analysis &amp; Interactive Dashboards</div>
+                                            <p class="cap-feature-desc">Processes uploaded CSV and Excel files to clean data, calculate metrics, and build visual charts or dashboards.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Advanced Data Analysis)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (limited), Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Executes Python (pandas/matplotlib) directly on multi-sheet spreadsheets to clean rows, run regressions, and export modified Excel/CSV files.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Advanced Data Analysis in ChatGPT</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Spreadsheet Analysis) &amp; Google Sheets</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free &amp; Google AI plans (spreadsheet upload in Gemini); Google Workspace for native Sheets integration</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Apps support uploading tabular files and spreadsheets for data exploration, summary analysis, and chart generation. In-sheet Gemini capabilities are a distinct Google Workspace surface.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/14903178" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini File, Spreadsheet and Data Analysis Documentation</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-images-and-media" data-category-id="images-and-media" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Images and media</span>
+                                    <span class="cap-cat-count">3 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Photorealistic raster image generation, multimodal visual inspection, and vector/motion design.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Native Photorealistic Raster Image Generation &amp; Editing (ChatGPT Images)</div>
+                                            <p class="cap-feature-desc">Creates original photorealistic images, illustrations, and rendered text-in-image graphics from prompts and edits selected regions.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (ChatGPT Images)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (limited daily quota), Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Built-in multimodal image generation and conversational inpainting directly inside ChatGPT chats.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/11084440-images-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Creating Images in ChatGPT</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Nano Banana 2)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Google AI Plus, Google AI Pro, Google AI Ultra</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Supports native image generation and editing powered by Nano Banana 2 across the Gemini app; eligible paid plans may provide additional Nano Banana Pro access.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/14286560" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Nano Banana 2 and Nano Banana Pro Image Generation in Gemini</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Multimodal Vision Input (Photos, UI Screenshots, Charts &amp; PDFs)</div>
+                                            <p class="cap-feature-desc">Analyses uploaded images, diagrams, handwritten notes, and visual PDF pages to extract text, code, or structured insights.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Underlying model</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT Multimodal Models (App &amp; API)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise, API</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Supports multi-image and document uploads across web, desktop, mobile camera, and API (subject to plan file-upload caps).</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/chatgpt/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Multimodal Input Analysis)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Google AI Plus, Google AI Pro, Google AI Ultra</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Apps accept and analyze photos, screenshots, charts, PDFs, and video uploads, with file size and upload rate limits varying by plan tier.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/14903178" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini File, Spreadsheet and Data Analysis Documentation</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Vector Graphics, UI Design &amp; Motion Surfaces (Claude Design &amp; Claude Motion beta)</div>
+                                            <p class="cap-feature-desc">Creates editable SVG diagrams, interactive visual prototypes, and motion graphics.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Canvas &amp; Python)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Can write raw SVG/HTML code in Canvas or export static charts via Python, without dedicated named Design or Motion surfaces inside ChatGPT.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Canvas in ChatGPT for Writing and Coding</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini Canvas &amp; Google Video Tools</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (SVG code in Canvas); Google Workspace / ecosystem tiers for video workflows</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Canvas can generate and render SVG markup and visual prototypes, but Google does not provide a dedicated vector motion design studio in consumer Gemini comparable to specialized vector-motion platforms.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/16047321" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Canvas Collaborative Writing and Coding Workspace</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-voice" data-category-id="voice" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Voice</span>
+                                    <span class="cap-cat-count">1 capability</span>
+                                </span>
+                                <span class="cap-cat-desc">Real-time spoken dialogue across mobile, desktop, and web applications.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Real-Time Spoken Voice Mode</div>
+                                            <p class="cap-feature-desc">Allows hands-free, back-and-forth spoken conversations with the assistant across devices.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Advanced Voice Mode)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (preview/daily limits), Go, Plus, Pro, Business, Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Supports low-latency interruption, expressive tone adjustments, and live camera/screen sharing on mobile apps.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/8400625-voice-conversations-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Voice Conversations in ChatGPT</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Gemini Live)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free on supported mobile devices for personal Google accounts; Google AI plans</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Live provides real-time spoken voice interactions with natural interruptions and fluid back-and-forth speech in supported Android and iOS mobile apps for eligible accounts; not universally available on web.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/15274899" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Live Real-Time Spoken Voice Conversations on Mobile</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-integrations-and-automation" data-category-id="integrations-and-automation" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Integrations and automation</span>
+                                    <span class="cap-cat-count">3 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Cloud app connectors, browser/office add-ons, scheduled tasks, and developer APIs.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">App Connectors, Desktop Extensions &amp; Browser/Office Add-ons</div>
+                                            <p class="cap-feature-desc">Connects the assistant to external cloud storage, productivity apps, web browsers, and local desktop tools.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (ChatGPT Work &amp; Custom Actions)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Eligible paid individual and organisational plans, including eligible Plus and Pro users, Business, Enterprise, and Edu</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>ChatGPT Work is available to eligible paid individual and organisational plans, including eligible Plus and Pro users (not exclusively Business/Enterprise/Edu), subject to rollout, plan, and workspace settings, alongside Custom GPT Actions and desktop context.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Work and Codex Access across Plans</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Connected Apps)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free, Google AI Plus, Google AI Pro, Google AI Ultra</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Integrates with Google ecosystem apps (Google Workspace, YouTube, Google Maps, Flights, Hotels) through Gemini Connected Apps. Available apps and permitted actions vary by account type, country, device, and permission settings.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/13695044" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Connected Apps and Extensions</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Scheduled Tasks &amp; Asynchronous Task Handoffs</div>
+                                            <p class="cap-feature-desc">Runs scheduled prompts, recurring briefings, or delegated background workflows automatically.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Consumer app</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT App (Scheduled Tasks)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Available across eligible Free, Go, Plus, Pro, Business, Enterprise, and Edu (event-triggered tasks require an eligible paid account)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Available across eligible Free, Go, Plus, Pro, Business, Enterprise, and Edu accounts. Free and Go have lower limits; event-triggered tasks require an eligible paid account.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Scheduled Tasks in ChatGPT for Consumer and Workspace Accounts</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Paid subscription</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini App (Gemini Tasks)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Eligible Google AI Pro and Ultra personal accounts in supported countries</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini Tasks supports scheduled automated prompts on eligible Google AI Pro and Ultra personal accounts in select regions; currently excluded in the United Kingdom, European Economic Area, Switzerland, and Nigeria.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://support.google.com/gemini/answer/17094710" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Scheduled Tasks Regional Availability and Limitations</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Developer APIs, Batch Processing, Prompt Caching &amp; Subscription API Credits</div>
+                                            <p class="cap-feature-desc">Provides programmatic API access to underlying models with token-based billing and cost-optimisation controls.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Developer API</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>OpenAI Platform API (/tools/openai-api/)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Pay-as-you-go token billing (separate from ChatGPT consumer subscriptions)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Billed per million input/output tokens on platform.openai.com; consumer ChatGPT Plus and Pro plans do not include API token credits.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/api/pricing/" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: OpenAI Platform API Pricing (Separate from ChatGPT Consumer Plans)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Developer API</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Google AI Studio &amp; Gemini Developer API</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free tier (rate-limited) or Pay-as-you-go developer billing</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Available via Google AI Studio and the Gemini Developer API with both free (rate-limited) and pay-as-you-go commercial tiers; API token billing is completely separate from consumer Google AI subscriptions.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Gemini Developer API Pricing, Rate Limits and Token Costs</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="capability-category-group" id="cap-cat-business-privacy-and-security" data-category-id="business-privacy-and-security" open>
+                            <summary class="capability-category-summary">
+                                <span class="cap-cat-summary-main">
+                                    <span class="cap-cat-title">Business, privacy and security</span>
+                                    <span class="cap-cat-count">4 capabilities</span>
+                                </span>
+                                <span class="cap-cat-desc">Team seat rules, AI model training defaults, SSO/SCIM identity management, and compliance controls.</span>
+                                <span class="cap-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <div class="capability-category-content">
+                                <div class="table-responsive table-responsive-cards capability-table-wrapper">
+                                    <table role="table" class="capability-explorer-table" style="width: 100%; border-collapse: collapse; text-align: left; --label-1: 'Capability'; --label-2: 'ChatGPT'; --label-3: 'Google Gemini';">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" class="cap-col-feature">Capability &amp; What It Does</th>
+                                                <th role="columnheader" scope="col" class="cap-col-tool">ChatGPT</th>
+                                        <th role="columnheader" scope="col" class="cap-col-tool">Google Gemini</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Team Workspaces, Seat Minimums (2+ Seats) &amp; Mixed Seat Tiers</div>
+                                            <p class="cap-feature-desc">Provides shared team workspaces, centralized billing, and role-appropriate seat tiers for organisations.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Business / Enterprise workspace</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT Business (formerly ChatGPT Team)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Standard seat: $20 USD/user/mo billed annually or $25 USD/user/mo billed monthly (minimum 2 seats)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Requires a minimum of 2 seats; includes shared Projects, internal Custom GPT publishing, admin console, and domain/SSO controls.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/chatgpt/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: ChatGPT Pricing and Plans (Free, Go, Plus, Pro, Business, Enterprise)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Business / Enterprise workspace</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Google Workspace (Starter, Standard, Plus, Enterprise)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Business Starter ($7/user/mo), Business Standard ($14/user/mo), Business Plus ($22/user/mo), Enterprise (contact sales); annual commitment USD</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Gemini features are integrated into current Google Workspace tiers (Business Starter, Standard, Plus, and Enterprise) with varying feature capabilities; legacy standalone Gemini add-on subscriptions are discontinued.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://workspace.google.com/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Google Workspace Plans and Pricing with Gemini (USD)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">AI Model Training Defaults &amp; Temporary/Incognito Chat Privacy</div>
+                                            <p class="cap-feature-desc">Governs whether user prompts, uploaded documents, and code sessions are used to train public AI models.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Business / Enterprise workspace</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>OpenAI Privacy Controls &amp; Commercial Terms</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>No training by default on Business, Enterprise &amp; API; Opt-out &amp; Temporary Chat on Free, Go, Plus &amp; Pro</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Commercial and API data are excluded from training by default; consumer users can turn off &#039;Improve the model for everyone&#039; in settings or use Temporary Chat.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: OpenAI Enterprise, Business and API Data Privacy Commitments</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--limited">Limited</span>
+                                                <span class="cap-layer-badge">Business / Enterprise workspace</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Gemini Apps Activity Controls &amp; Google Workspace Admin</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (consumer toggle); Google Workspace plans for commercial data protection</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Consumer Gemini allows users to pause Gemini Apps Activity to stop data retention and human review, but does not offer contractual commercial privacy. Google Workspace accounts provide organizational data controls where user data is not trained on, but exact default settings across all hybrid tiers remain partially unverified without plan-specific contracts.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://workspace.google.com/security/ai-privacy/" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Google Workspace AI Security and Privacy Policies</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Enterprise Governance: SSO, SCIM, Audit Logs, Spend Controls &amp; HIPAA</div>
+                                            <p class="cap-feature-desc">Enforces identity federation, automated user provisioning, audit logging, spend limits, and regulatory compliance.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Business / Enterprise workspace</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>ChatGPT Business &amp; ChatGPT Enterprise</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>ChatGPT Business (SSO &amp; admin console) and ChatGPT Enterprise (SCIM, audit logs, custom retention, HIPAA BAA)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>SCIM directory sync, granular role-based access, audit logs, and custom data retention require custom sales-assisted ChatGPT Enterprise contracts.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: OpenAI Enterprise, Business and API Data Privacy Commitments</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Business / Enterprise workspace</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Google Workspace Enterprise &amp; Google Cloud</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Google Workspace Enterprise &amp; Google Cloud Enterprise agreements</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Enterprise governance, SAML SSO, admin audit controls, and compliance certifications are provided through Google Workspace Enterprise and Google Cloud agreements; specific certifications such as HIPAA BAA coverage require designated enterprise plan agreements.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://workspace.google.com/pricing" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Google Workspace Plans and Pricing with Gemini (USD)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="capability-row">
+                                        <th role="rowheader" scope="row" class="capability-feature-cell">
+                                            <div class="cap-feature-name">Published UK GBP (£) Subscription Pricing Table</div>
+                                            <p class="cap-feature-desc">Displays official UK Pound Sterling (£ GBP) subscription rates directly on vendor documentation or checkout.</p>
+                                        </th>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Paid subscription</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>OpenAI Multi-Currency Billing (ChatGPT Plus, Pro &amp; Business)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Plus (£20 GBP/mo incl. VAT), Pro (£200 GBP/mo), Business</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>OpenAI officially documents UK GBP web checkout pricing (£20/mo on Plus; £200/mo on Pro) including applicable VAT.</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://help.openai.com/en/articles/9982051-multi-currency-billing" target="_blank" rel="noopener noreferrer" class="cap-source-link">OpenAI: Multi-Currency Billing in ChatGPT (USD, GBP and Local Currencies)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                        <td role="cell" class="capability-provider-cell">
+                                            <div class="cap-badges-row">
+                                                <span class="cap-state-badge cap-state--available">Available</span>
+                                                <span class="cap-layer-badge">Paid subscription</span>
+                                            </div>
+                                            <dl class="cap-detail-list">
+                                                <div class="cap-detail-row">
+                                                    <dt>Product surface:</dt>
+                                                    <dd>Google UK AI Subscriptions</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Required plan:</dt>
+                                                    <dd>Free (£0), Google AI Plus (£4.49/mo, 400 GB), Google AI Pro (£18.99/mo, 5 TB), Google AI Ultra (from £79.99/mo, from 20 TB)</dd>
+                                                </div>
+                                                <div class="cap-detail-row">
+                                                    <dt>Availability &amp; limits:</dt>
+                                                    <dd>Google officially publishes UK pricing in GBP: Free (£0/month), Google AI Plus (£4.49/month with 400 GB storage), Google AI Pro (£18.99/month with 5 TB storage), and Google AI Ultra (starting at £79.99/month with 20 TB storage).</dd>
+                                                </div>
+                                                <div class="cap-detail-row cap-detail-source">
+                                                    <dt>Official source:</dt>
+                                                    <dd><a href="https://gemini.google/gb/subscriptions/?hl=en-GB" target="_blank" rel="noopener noreferrer" class="cap-source-link">Google: Google UK AI Subscriptions and Plans (Free, AI Plus, AI Pro, AI Ultra)</a> <span class="cap-verified-date">(Verified: 2026-11-08)</span></dd>
+                                                </div>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </details>
+                        </div>
+                        <p class="cap-explorer-disclaimer">This capability inventory is a curated, source-backed reference of verified capabilities across consumer apps, paid subscriptions, related tools, underlying models, business workspaces, and developer APIs as of 2026-11-08. It is not an exhaustive list of every minor setting or regional experiment. Unconfirmed features are marked &#039;Not verified&#039; rather than inferred as &#039;No&#039;.</p>
+                    </div>
+                </details>
+            </section>
+
             <section class="compare-section strengths-limitations-section" style="margin-bottom: 3rem;">
                 <h2>Strengths &amp; Limitations</h2>
                 <div class="strengths-limitations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
@@ -872,6 +2362,126 @@
                     <a href="https://help.openai.com/en/articles/8400625-voice-conversations-in-chatgpt" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Voice Conversations in ChatGPT</a>
                     <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
                 </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/16047321" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Canvas Collaborative Writing and Coding Workspace</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/18560919" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Gems to Skills Transition and Reusable Instructions</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/13695044" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Connected Apps and Extensions</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/15719111" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Deep Research Multi-Step Reports</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/notebooklm/answer/14294096" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">NotebookLM Grounded Research and Source Analysis Help Center</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>OpenAI</strong> —
+                    <a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Using Codex and Codex Cloud with Your ChatGPT Plan</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://antigravity.google/pricing" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Google Antigravity Pricing and Access Documentation</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://ai.google.dev/gemini-api/docs/code-execution" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini API Code Execution and Sandboxed Python Environment</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/16275805" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini App Context Window and Usage Limits</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/16972047" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Project Notebooks and Integrated Workspace Documentation</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/14903178" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini File, Spreadsheet and Data Analysis Documentation</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/14286560" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Nano Banana 2 and Nano Banana Pro Image Generation in Gemini</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/15274899" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Live Real-Time Spoken Voice Conversations on Mobile</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>OpenAI</strong> —
+                    <a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">ChatGPT Work and Codex Access across Plans</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>OpenAI</strong> —
+                    <a href="https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Scheduled Tasks in ChatGPT for Consumer and Workspace Accounts</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://support.google.com/gemini/answer/17094710" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Scheduled Tasks Regional Availability and Limitations</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Gemini Developer API Pricing, Rate Limits and Token Costs</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>OpenAI</strong> —
+                    <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">OpenAI Enterprise, Business and API Data Privacy Commitments</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://workspace.google.com/security/ai-privacy/" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Google Workspace AI Security and Privacy Policies</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Google</strong> —
+                    <a href="https://gemini.google/gb/subscriptions/?hl=en-GB" target="_blank" rel="noopener noreferrer" style="color: var(--color-gray-300); text-decoration: underline;">Google UK AI Subscriptions and Plans (Free, AI Plus, AI Pro, AI Ultra)</a>
+                    <span style="color: var(--color-gray-500); margin-left: 0.5rem;">(Checked: 2026-11-08)</span>
+                </li>
             </ul></section>
         <section class="compare-section methodology-section" style="margin-bottom: 3rem; font-size: 0.85rem; color: var(--color-gray-400);">
             <p>This comparison combines structured WhichAIPick catalogue data with current official product documentation. Unknown values are shown as unconfirmed rather than inferred. <a href="/review-methodology" style="color: inherit; text-decoration: underline;">Read our methodology</a>.</p>
@@ -1016,6 +2626,34 @@
                 btn.addEventListener('click', () => {
                     const tools = btn.dataset.tools.split(',');
                     window.DecisionAssistant.open(tools);
+                });
+            }
+            const explorer = document.querySelector('.capability-explorer-section');
+            if (explorer) {
+                const filterBtns = explorer.querySelectorAll('.cap-filter-btn');
+                const categoryGroups = explorer.querySelectorAll('.capability-category-group');
+                filterBtns.forEach(fBtn => {
+                    fBtn.addEventListener('click', () => {
+                        const targetCat = fBtn.dataset.capCategory;
+                        filterBtns.forEach(b => {
+                            const active = b === fBtn;
+                            b.classList.toggle('is-active', active);
+                            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+                        });
+                        categoryGroups.forEach(group => {
+                            const matches = targetCat === 'all' || group.dataset.categoryId === targetCat;
+                            group.hidden = !matches;
+                            if (matches) group.open = true;
+                        });
+                    });
+                });
+                explorer.querySelectorAll('.cap-action-btn').forEach(aBtn => {
+                    aBtn.addEventListener('click', () => {
+                        const shouldOpen = aBtn.dataset.capAction === 'expand-all';
+                        categoryGroups.forEach(group => {
+                            if (!group.hidden) group.open = shouldOpen;
+                        });
+                    });
                 });
             }
         });

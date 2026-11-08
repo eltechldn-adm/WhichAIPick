@@ -1230,7 +1230,10 @@
     ],
     "pricingUnknowns": [
       "chatgpt: trial is unknown in both catalogue and research"
-    ]
+    ],
+    "capabilityExplorer": {
+      "enabled": true
+    }
   },
   {
     "slug": "chatgpt-vs-perplexity",
