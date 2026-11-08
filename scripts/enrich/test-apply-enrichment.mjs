@@ -316,16 +316,16 @@ async function runTestSuite() {
     assert(postLedger.length === preLedger.length + 1, 'Evidence ledger count incremented by exactly 1');
 
     // Comparison index updated
-    assert(postIndex.length === 882, 'Comparison index preserves 882 tools');
+    assert(postIndex.length === 881, 'Comparison index preserves 881 tools');
     const indexTool = postIndex.find(t => t.id === 'ai-studios');
     assert(indexTool !== undefined, 'Enriched tool present in comparison index');
 
     // Backlog reconciled
-    assert(postBacklog.counts.totalTools === 882, 'Backlog preserves total 882 tools');
-    assert(postBacklog.counts.skeletalV1 === preBacklog.counts.skeletalV1 - 1, 'Skeletal backlog count decreased by 1 (531 -> 530)');
-    assert(postBacklog.counts.richV1 === preBacklog.counts.richV1 + 1, 'Rich V1 count increased by 1 (302 -> 303)');
+    assert(postBacklog.counts.totalTools === 881, 'Backlog preserves total 881 tools');
+    assert(postBacklog.counts.skeletalV1 === preBacklog.counts.skeletalV1 - 1, 'Skeletal backlog count decreased by 1');
+    assert(postBacklog.counts.richV1 === preBacklog.counts.richV1 + 1, 'Rich V1 count increased by 1');
 
-    // Non-target invariant: 881 tools unchanged
+    // Non-target invariant: 880 tools unchanged
     let nonTargetMismatches = 0;
     for (const tool of postTools) {
       if (tool.id !== 'ai-studios') {
@@ -335,7 +335,7 @@ async function runTestSuite() {
         }
       }
     }
-    assert(nonTargetMismatches === 0, 'All 881 non-target tools remained 100% untouched');
+    assert(nonTargetMismatches === 0, 'All 880 non-target tools remained 100% untouched');
 
     // 2.3 Idempotency & Re-application Protection
     let secondRunError = null;

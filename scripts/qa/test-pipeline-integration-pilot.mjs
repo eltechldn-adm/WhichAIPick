@@ -247,13 +247,13 @@ async function runPipelineIntegrationPilot() {
   const initialBacklog = JSON.parse(fs.readFileSync(backlogPath, 'utf8'));
   const initialMonetisation = JSON.parse(fs.readFileSync(monetisationPath, 'utf8'));
 
-  assert(initialTools.length === 882, 'Total catalogue tools invariant: 882');
+  assert(initialTools.length === 881, 'Total catalogue tools invariant: 881');
   const initialEligible = initialTools.filter(t => t.recommendationEligible !== false).length;
-  assert(initialEligible === 879, 'Recommendation eligible tools invariant: 879');
+  assert(initialEligible === 878, 'Recommendation eligible tools invariant: 878');
   assert(initialMonetisation.adsEnabled === false, 'Monetisation setting invariant: adsEnabled === false');
   assert(initialBacklog.counts.v2Structured === 46, 'Backlog V2 count invariant: 46');
   assert(initialBacklog.counts.richV1 === 302, 'Backlog Rich V1 count invariant: 302');
-  assert(initialBacklog.counts.skeletalV1 === 531, 'Backlog Skeletal V1 count invariant: 531');
+  assert(initialBacklog.counts.skeletalV1 === 530, 'Backlog Skeletal V1 count invariant: 530');
 
   const targetTool = initialTools.find(t => t.id === 'ai-studios');
   assert(targetTool !== undefined, 'Target tool "ai-studios" exists in catalogue');
@@ -371,15 +371,15 @@ async function runPipelineIntegrationPilot() {
 
     // Step 11: Regenerate comparison index
     const postComparisonIndex = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'comparison-index.json'), 'utf8'));
-    assert(postComparisonIndex.length === 882, 'Step 11: Comparison index preserved exactly 882 tools');
+    assert(postComparisonIndex.length === 881, 'Step 11: Comparison index preserved exactly 881 tools');
     assert(postComparisonIndex.some(e => e.id === 'ai-studios'), 'Step 11: "ai-studios" present in comparison index');
 
     // Step 12: Reconcile content backlog
     const postBacklog = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'content-enrichment-backlog.json'), 'utf8'));
-    assert(postBacklog.counts.totalTools === 882, 'Step 12: Backlog total tools invariant: 882');
+    assert(postBacklog.counts.totalTools === 881, 'Step 12: Backlog total tools invariant: 881');
     assert(postBacklog.counts.v2Structured === 46, 'Step 12: Backlog V2 structured count invariant: 46');
     assert(postBacklog.counts.richV1 === 303, 'Step 12: Backlog Rich V1 count incremented by 1 (302 -> 303)');
-    assert(postBacklog.counts.skeletalV1 === 530, 'Step 12: Backlog Skeletal V1 count decremented by 1 (531 -> 530)');
+    assert(postBacklog.counts.skeletalV1 === 529, 'Step 12: Backlog Skeletal V1 count decremented by 1 (530 -> 529)');
     assert(!postBacklog.skeletalBacklogToolIds.includes('ai-studios'), 'Step 12: "ai-studios" removed from skeletalBacklogToolIds');
 
     // Step 13: Generate static tool pages
@@ -420,7 +420,7 @@ async function runPipelineIntegrationPilot() {
         }
       }
     }
-    assert(nonTargetMismatches === 0, 'Deep Check: Exactly 881 non-target tools are 100% untouched');
+    assert(nonTargetMismatches === 0, 'Deep Check: Exactly 880 non-target tools are 100% untouched');
 
     // 4.2 Target tool nested editorial fields preserved
     const enrichedAiStudios = postTools.find(t => t.id === 'ai-studios');

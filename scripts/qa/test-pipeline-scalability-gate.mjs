@@ -517,16 +517,16 @@ async function runScalabilityGate() {
   const initialMonetisation = JSON.parse(fs.readFileSync(monetisationPath, 'utf8'));
   const initialSitemap = fs.readFileSync(sitemapPath, 'utf8');
 
-  assert(initialTools.length === 882, 'Total catalogue tools invariant: 882');
+  assert(initialTools.length === 881, 'Total catalogue tools invariant: 881');
   const initialEligible = initialTools.filter(t => t.recommendationEligible !== false).length;
-  assert(initialEligible === 879, 'Recommendation eligible tools invariant: 879');
+  assert(initialEligible === 878, 'Recommendation eligible tools invariant: 878');
   assert(initialMonetisation.adsEnabled === false, 'Monetisation setting invariant: adsEnabled === false');
   assert(initialBacklog.counts.v2Structured === 46, 'Backlog V2 count invariant: 46');
   assert(initialBacklog.counts.richV1 === 302, 'Backlog Rich V1 count invariant: 302');
-  assert(initialBacklog.counts.skeletalV1 === 531, 'Backlog Skeletal V1 count invariant: 531');
+  assert(initialBacklog.counts.skeletalV1 === 530, 'Backlog Skeletal V1 count invariant: 530');
 
   const initialUrlCount = (initialSitemap.match(/<loc>/g) || []).length;
-  assert(initialUrlCount === 959, 'Sitemap URL count invariant: 959');
+  assert(initialUrlCount === 958, 'Sitemap URL count invariant: 958');
 
   // Snapshot tracked file hashes to guarantee zero mutation of candidate worktree
   const trackedFileSnapshots = new Map();
@@ -647,20 +647,20 @@ async function runScalabilityGate() {
     const expectedEvidenceIds = ['E9001', 'E9002', 'E9003', 'E9004', 'E9005', 'E9006', 'E9007', 'E9008', 'E9009', 'E9010'];
     const allEvidencePresent = expectedEvidenceIds.every(evId => postLedger.some(e => e.evidenceId === evId));
     assert(allEvidencePresent === true, 'Step 8: All 10 new evidence records (E9001-E9010) present in ledger');
-    assert(postLedger.length === 1331 + 10, 'Step 8: Ledger count incremented by exactly 10 (1331 -> 1341)');
+    assert(postLedger.length === 1327 + 10, 'Step 8: Ledger count incremented by exactly 10 (1327 -> 1337)');
 
     // 9. Comparison index regeneration
     const postCompIndex = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'comparison-index.json'), 'utf8'));
-    assert(postCompIndex.length === 882, 'Step 9: Comparison index preserves exactly 882 tools');
+    assert(postCompIndex.length === 881, 'Step 9: Comparison index preserves exactly 881 tools');
     const allInIndex = payload10.targetToolIds.every(id => postCompIndex.some(e => e.id === id));
     assert(allInIndex === true, 'Step 9: All 10 enriched tools present in comparison index');
 
     // 10. Backlog reconciliation
     const postBacklog = JSON.parse(fs.readFileSync(path.join(sandboxDir, 'data', 'content-enrichment-backlog.json'), 'utf8'));
-    assert(postBacklog.counts.totalTools === 882, 'Step 10: Backlog total tools invariant: 882');
+    assert(postBacklog.counts.totalTools === 881, 'Step 10: Backlog total tools invariant: 881');
     assert(postBacklog.counts.v2Structured === 46, 'Step 10: Backlog V2 count invariant: 46');
     assert(postBacklog.counts.richV1 === 312, 'Step 10: Backlog Rich V1 count incremented by 10 (302 -> 312)');
-    assert(postBacklog.counts.skeletalV1 === 521, 'Step 10: Backlog Skeletal V1 count decremented by 10 (531 -> 521)');
+    assert(postBacklog.counts.skeletalV1 === 520, 'Step 10: Backlog Skeletal V1 count decremented by 10 (530 -> 520)');
     const noneInSkeletalBacklog = payload10.targetToolIds.every(id => !postBacklog.skeletalBacklogToolIds.includes(id));
     assert(noneInSkeletalBacklog === true, 'Step 10: All 10 tools removed from skeletalBacklogToolIds');
 
@@ -712,7 +712,7 @@ async function runScalabilityGate() {
         }
       }
     }
-    assert(nonTargetMismatches === 0, 'Deep Check: Exactly 872 non-target tools are 100% untouched');
+    assert(nonTargetMismatches === 0, 'Deep Check: Exactly 871 non-target tools are 100% untouched');
 
     // 4.2 Non-target workbook rows immutability
     const origWb = XLSX.readFile(path.join(ROOT, 'data', 'WhichAIPick_Catalog_PHASE11_ANTIGRAVITY_IMPORT_CONTRACT_COMPLETE_2026-10-01.xlsx'));
@@ -726,7 +726,7 @@ async function runScalabilityGate() {
         }
       }
     }
-    assert(nonTargetWbMismatches === 0, 'Deep Check: Exactly 872 non-target workbook rows are 100% untouched');
+    assert(nonTargetWbMismatches === 0, 'Deep Check: Exactly 871 non-target workbook rows are 100% untouched');
 
     // 4.3 Nested editorial fields and transparency checks on all 10 tools
     for (const id of payload10.targetToolIds) {

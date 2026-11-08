@@ -525,14 +525,14 @@ export async function applyEnrichment(options = {}) {
     const postStaged = JSON.parse(fs.readFileSync(stagedJsonPath, 'utf8'));
     const postIndex = JSON.parse(fs.readFileSync(comparisonIndexPath, 'utf8'));
 
-    if (postTools.length !== 882) {
-      throw new Error(`Post-mutation catalogue count invalid: expected 882, got ${postTools.length}`);
+    if (postTools.length !== 881) {
+      throw new Error(`Post-mutation catalogue count invalid: expected 881, got ${postTools.length}`);
     }
-    if (postStaged.length !== 882) {
-      throw new Error(`Post-mutation staged catalogue count invalid: expected 882, got ${postStaged.length}`);
+    if (postStaged.length !== 881) {
+      throw new Error(`Post-mutation staged catalogue count invalid: expected 881, got ${postStaged.length}`);
     }
-    if (postIndex.length !== 882) {
-      throw new Error(`Post-mutation comparison index count invalid: expected 882, got ${postIndex.length}`);
+    if (postIndex.length !== 881) {
+      throw new Error(`Post-mutation comparison index count invalid: expected 881, got ${postIndex.length}`);
     }
 
     // Verify non-targets are completely unchanged
