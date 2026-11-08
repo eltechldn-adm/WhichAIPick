@@ -7,7 +7,7 @@
     ],
     "status": "research-ready",
     "title": "ChatGPT vs Claude: Free vs Paid, Coding, Writing and Pricing Guide",
-    "metaDescription": "Compare ChatGPT and Claude across free and paid plans ($20/mo), writing, coding (Canvas vs Artifacts and Claude Code), document analysis, privacy, and APIs.",
+    "metaDescription": "Compare ChatGPT and Claude across free and paid plans ($20/mo), writing, coding (Codex vs Claude Code, Artifacts, code blocks), document analysis, privacy, and APIs.",
     "a11yEnhancedTables": true,
     "capabilityExplorer": {
       "enabled": true
@@ -15,7 +15,7 @@
     "introSummary": "ChatGPT and Claude both offer free tiers, $20/month flagship personal plans ($20 USD / £20 GBP incl. VAT in UK for ChatGPT Plus; $20 USD monthly or $17 USD/mo billed annually at $200 for Claude Pro), high-capacity plans ($200/mo ChatGPT Pro; $100/mo Claude Max and $200/mo Claude Ultra/Max), team/enterprise workspaces (starting at 2 seats), and token-billed developer APIs. Neither assistant is a universal winner: ChatGPT is an all-in-one multimodal workspace with live web search, Advanced Voice Mode, native ChatGPT Images generation, and sandboxed Python data analysis, whereas Claude specialises in natural long-form writing, model-dependent context windows up to 1M tokens, live UI rendering in Artifacts, and terminal-based coding with Claude Code.",
     "quickAnswer": [
       {
-        "text": "Choose ChatGPT if you want one multimodal workspace combining live web search, Advanced Voice Mode, native ChatGPT Images creation, sandboxed Python spreadsheet analysis, and side-by-side editing in Canvas.",
+        "text": "Choose ChatGPT if you want one multimodal workspace combining live web search, Advanced Voice Mode, native ChatGPT Images creation, sandboxed Python spreadsheet analysis, OpenAI Codex for terminal/IDE coding, and interactive writing and code blocks.",
         "classification": "EDITORIAL INTERPRETATION",
         "label": "Editorial recommendation · Sourced",
         "sourceIds": [
@@ -23,7 +23,8 @@
           "src-chatgpt-canvas-2026",
           "src-chatgpt-data-analysis-2026",
           "src-chatgpt-images-2026",
-          "src-chatgpt-voice-2026"
+          "src-chatgpt-voice-2026",
+          "src-openai-codex-2026"
         ]
       },
       {
@@ -63,7 +64,7 @@
     "keyDifferences": [
       {
         "topic": "Writing, Editing & Research Workflows",
-        "description": "Claude is widely used for structured long-form drafting, custom writing Styles, and multi-document synthesis alongside web search and Research mode. ChatGPT pairs side-by-side paragraph editing in Canvas with ChatGPT Search and multi-step Deep Research reports.",
+        "description": "Claude is widely used for structured long-form drafting, custom writing Styles, and multi-document synthesis alongside web search and Research mode. ChatGPT pairs interactive inline writing blocks and side-by-side editing with ChatGPT Search and multi-step Deep Research reports.",
         "sourceIds": [
           "src-claude-models-2026",
           "src-claude-search-2026",
@@ -72,13 +73,14 @@
         ]
       },
       {
-        "topic": "Coding & Software Development (Canvas vs Artifacts & Claude Code)",
-        "description": "Claude provides two distinct coding interfaces: Artifacts in the web/desktop app for live React, HTML/CSS, and SVG rendering, and Claude Code (included on Pro, Max, Ultra, Team Standard & Premium seats, Enterprise, and via API) for agentic terminal coding across local repositories. ChatGPT provides Canvas for inline code review and refactoring plus a sandboxed Python execution environment.",
+        "topic": "Coding & Software Development (OpenAI Codex vs Claude Code & Artifacts)",
+        "description": "Both platforms offer terminal coding agents and in-app code workspaces: Claude includes Claude Code (across Pro, Max, Ultra, Team Standard & Premium seats, Enterprise, and API) alongside live browser Artifacts for React/HTML previews. OpenAI provides Codex (including the open-source Codex CLI for terminal repository coding, IDE extensions for VS Code/Cursor, and desktop integration) authenticated with ChatGPT subscription accounts (Plus, Pro, Business, Enterprise) or API keys, alongside interactive code blocks and sandboxed Python data execution.",
         "sourceIds": [
-          "src-claude-artifacts-2026",
+          "src-chatgpt-pricing-2026",
+          "src-claude-pricing-2026",
           "src-claude-code-2026",
-          "src-chatgpt-canvas-2026",
-          "src-chatgpt-data-analysis-2026"
+          "src-openai-codex-2026",
+          "src-claude-artifacts-2026"
         ]
       },
       {
@@ -156,9 +158,9 @@
     "useCaseDecisions": [
       {
         "useCase": "Long-Form Writing, Editing & Tone Control",
-        "toolAFit": "Canvas offers side-by-side paragraph edits, length adjustments, and inline revisions.",
+        "toolAFit": "Interactive writing blocks offer inline paragraph edits, length adjustments, and full-screen revisions.",
         "toolBFit": "Natural, low-fluff prose with custom writing Styles and clean document drafting in Artifacts.",
-        "reason": "Choose Claude for natural long-form prose and custom Styles; choose ChatGPT for side-by-side Canvas editing.",
+        "reason": "Choose Claude for natural long-form prose and custom Styles; choose ChatGPT for interactive writing block editing.",
         "confidence": "HIGH",
         "evidenceIds": [
           "src-chatgpt-canvas-2026",
@@ -168,14 +170,14 @@
       },
       {
         "useCase": "Coding, UI Prototyping & Terminal Development",
-        "toolAFit": "Canvas code editor with inline review plus sandboxed Python execution.",
+        "toolAFit": "OpenAI Codex CLI (@openai/codex) for terminal repository coding, IDE extensions, interactive code blocks, and sandboxed Python execution.",
         "toolBFit": "Live React/HTML/SVG previews in Artifacts plus agentic terminal coding via Claude Code.",
-        "reason": "Choose Claude for live UI previews in Artifacts and terminal repo work in Claude Code; choose ChatGPT for Python scripts.",
+        "reason": "Choose Claude for frontend UI prototyping in Artifacts and Claude Code terminal agents; choose ChatGPT for OpenAI Codex terminal/IDE coding, interactive code blocks, and sandboxed Python data execution.",
         "confidence": "HIGH",
         "evidenceIds": [
-          "src-claude-artifacts-2026",
           "src-claude-code-2026",
-          "src-chatgpt-canvas-2026",
+          "src-claude-artifacts-2026",
+          "src-openai-codex-2026",
           "src-chatgpt-data-analysis-2026"
         ]
       },
@@ -244,7 +246,7 @@
         "strengths": [
           "All-in-one multimodal workspace combining ChatGPT Search, Advanced Voice Mode, and native ChatGPT Images generation (Official source fact)",
           "Sandboxed Python execution (Advanced Data Analysis) for cleaning spreadsheets, running scripts, and exporting files (Official source fact)",
-          "Interactive Canvas editor for side-by-side writing and code revisions plus persistent Projects and Custom GPTs (Official source fact)",
+          "OpenAI Codex CLI and IDE extensions for repository coding, interactive in-chat writing and code blocks, persistent Projects, and Custom GPTs (Official source fact)",
           "Local UK GBP billing (£20/mo incl. VAT on web checkout) alongside USD pricing and an $8/mo Go entry tier where available (Official source fact)"
         ],
         "limitations": [
@@ -412,11 +414,12 @@
       },
       {
         "claimId": "chatgpt-canvas-python-c2a-2026",
-        "claim": "ChatGPT provides Canvas for side-by-side writing and code edits and Advanced Data Analysis for Python spreadsheet execution.",
+        "claim": "ChatGPT provides interactive writing and code blocks, OpenAI Codex for terminal and IDE coding, and Advanced Data Analysis for Python spreadsheet execution.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-chatgpt-canvas-2026",
+          "src-chatgpt-pricing-2026",
+          "src-openai-codex-2026",
           "src-chatgpt-data-analysis-2026"
         ],
         "checkedAt": "2026-11-08"
@@ -528,17 +531,17 @@
       },
       {
         "question": "Which is better for coding and software development: ChatGPT or Claude?",
-        "answer": "Both are strong coding assistants with different workflows. Claude is well suited to frontend prototyping and repository-scale development because Artifacts renders React, HTML/CSS, and SVG components live in the browser, and Claude Code (included with Claude Pro, Max, Ultra, Team Standard and Premium seats, and Enterprise) runs agentic coding loops directly in your terminal. ChatGPT is well suited to interactive single-file refactoring in Canvas and data-science scripting via its sandboxed Python environment.",
+        "answer": "Both provide advanced coding workflows across consumer apps and developer tools. Claude features Artifacts for live React, HTML/CSS, and SVG rendering directly in the browser, plus Claude Code (included with Claude Pro, Max, Ultra, Team Standard and Premium seats, Enterprise, and API) for terminal-based agentic workflows across local repositories. ChatGPT provides OpenAI Codex (including the open-source Codex CLI for terminal repository coding and IDE extensions for VS Code and Cursor, authenticated with ChatGPT Plus, Pro, Business, Enterprise, or API keys), interactive in-chat code blocks with live previews, and a sandboxed Python environment for data science and file automation.",
         "sourceIds": [
-          "src-claude-artifacts-2026",
           "src-claude-code-2026",
-          "src-chatgpt-canvas-2026",
+          "src-claude-artifacts-2026",
+          "src-openai-codex-2026",
           "src-chatgpt-data-analysis-2026"
         ]
       },
       {
         "question": "Which is better for long-form writing, editing, and document analysis?",
-        "answer": "Claude is frequently chosen for long-form writing and document review because its model-dependent context window (up to 1M tokens on current models, 200K on select variants) handles full contracts, transcripts, and book-length PDFs in a single prompt while maintaining a natural, low-fluff prose style. ChatGPT is strong when your writing workflow depends on side-by-side paragraph edits in Canvas or combining uploaded documents with Python data tables.",
+        "answer": "Claude is frequently chosen for long-form writing and document review because its model-dependent context window (up to 1M tokens on current models, 200K on select variants) handles full contracts, transcripts, and book-length PDFs in a single prompt while maintaining a natural, low-fluff prose style. ChatGPT is strong when your writing workflow depends on interactive in-chat writing blocks with targeted paragraph feedback or combining uploaded documents with Python data tables.",
         "sourceIds": [
           "src-claude-models-2026",
           "src-claude-projects-2026",

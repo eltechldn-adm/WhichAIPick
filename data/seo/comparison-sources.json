@@ -430,5 +430,23 @@
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-openai-codex-2026",
+    "publisher": "OpenAI",
+    "title": "OpenAI Codex CLI, IDE Extension and Desktop Agent Documentation",
+    "url": "https://openai.com/codex",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-chatgpt-work-2026",
+    "publisher": "OpenAI",
+    "title": "ChatGPT for Work, Enterprise Workspaces and Scheduled Tasks",
+    "url": "https://openai.com/index/chatgpt-for-work/",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
   }
 ]

@@ -74,15 +74,15 @@
     {
       "capabilityId": "writing-side-by-side-editor",
       "categoryId": "writing",
-      "featureName": "Side-by-Side Document & Prose Editor (Canvas vs Artifacts & Claude Docs)",
-      "whatItDoes": "Opens a dedicated editing pane alongside the chat to draft, revise, and format long-form writing without losing conversation context.",
+      "featureName": "Dedicated Interactive Writing & Document Editor (Writing Blocks / Canvas vs Artifacts & Claude Docs)",
+      "whatItDoes": "Provides dedicated editable document blocks or a side-by-side workspace to draft, revise, and format long-form writing without losing conversation context.",
       "providers": {
         "chatgpt": {
           "state": "Available",
-          "productProvidedBy": "ChatGPT App (Canvas)",
+          "productProvidedBy": "ChatGPT App (Writing & Code Blocks; legacy Canvas)",
           "productLayer": "Consumer app",
           "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
-          "availabilityAndLimitations": "Supports inline paragraph highlighting, targeted rewrites, reading-level and length sliders, and document export.",
+          "availabilityAndLimitations": "Flagship chat models feature interactive inline writing blocks with full-screen expansion, inline editing, targeted feedback, and reading-level adjustments directly within the chat thread, superseding the legacy standalone Canvas side-panel.",
           "sourceId": "src-chatgpt-canvas-2026",
           "officialSourceUrl": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
           "lastVerifiedDate": "2026-11-08"
@@ -242,15 +242,15 @@
     {
       "capabilityId": "coding-interactive-ui-previews",
       "categoryId": "coding",
-      "featureName": "Live Interactive UI, React & Diagram Previews (Artifacts vs Canvas)",
+      "featureName": "Live Interactive UI, React & Diagram Previews (Artifacts vs Code Block & Canvas Previews)",
       "whatItDoes": "Renders interactive HTML/CSS layouts, React components, SVG graphics, and diagrams directly inside the browser or desktop app.",
       "providers": {
         "chatgpt": {
-          "state": "Limited",
-          "productProvidedBy": "ChatGPT App (Canvas)",
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Interactive Code Blocks & Canvas)",
           "productLayer": "Consumer app",
           "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
-          "availabilityAndLimitations": "Supports inline code editing, bug review comments, language porting, and HTML/React preview in Canvas.",
+          "availabilityAndLimitations": "Interactive code blocks provide dedicated live Preview tabs for HTML layouts, React components, SVGs, and Mermaid diagrams directly in chat responses and full-screen views, alongside legacy Canvas previews.",
           "sourceId": "src-chatgpt-canvas-2026",
           "officialSourceUrl": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
           "lastVerifiedDate": "2026-11-08"
@@ -270,17 +270,17 @@
     {
       "capabilityId": "coding-agentic-terminal-cli",
       "categoryId": "coding",
-      "featureName": "Agentic Terminal & Repository Coding (Claude Code vs Desktop IDE Context)",
+      "featureName": "Agentic Terminal & Repository Coding (Claude Code vs OpenAI Codex CLI & IDE)",
       "whatItDoes": "Reads local multi-file repositories, edits files, runs shell commands/tests, and manages Git workflows from your terminal or IDE.",
       "providers": {
         "chatgpt": {
-          "state": "Limited",
-          "productProvidedBy": "ChatGPT Desktop App & OpenAI Platform API",
+          "state": "Available",
+          "productProvidedBy": "OpenAI Codex (Codex CLI, IDE Extension, Desktop & Cloud)",
           "productLayer": "Related product / CLI",
-          "requiredPlan": "Plus, Pro, Business, Enterprise (or separate API token billing)",
-          "availabilityAndLimitations": "The ChatGPT desktop app can read active IDE panes on macOS/Windows, and OpenAI offers developer API tools, but consumer plans do not bundle a full terminal agent equivalent to Claude Code.",
-          "sourceId": "src-chatgpt-pricing-2026",
-          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "requiredPlan": "Plus ($20/mo), Pro ($100–$500/mo), Business ($20–$25/user/mo), Enterprise, or OpenAI API",
+          "availabilityAndLimitations": "OpenAI provides the open-source Codex CLI (@openai/codex) for terminal repository coding, test execution, and Git workflows, alongside Codex IDE extensions (VS Code, Cursor) and Codex desktop integration. Authenticates directly with ChatGPT subscription accounts (Plus/Pro/Business/Enterprise) or via pay-as-you-go API keys.",
+          "sourceId": "src-openai-codex-2026",
+          "officialSourceUrl": "https://openai.com/codex",
           "lastVerifiedDate": "2026-11-08"
         },
         "claude": {
@@ -527,10 +527,10 @@
       "providers": {
         "chatgpt": {
           "state": "Available",
-          "productProvidedBy": "ChatGPT App (Connectors, Custom GPT Actions & Desktop App)",
+          "productProvidedBy": "ChatGPT App (ChatGPT Work & Custom Actions)",
           "productLayer": "Consumer app",
           "requiredPlan": "Plus, Pro, Business, Enterprise (availability varies by connector)",
-          "availabilityAndLimitations": "Includes cloud drive connectors (Google Drive, OneDrive/SharePoint), GitHub connectors, Custom GPT API Actions, and desktop app integrations.",
+          "availabilityAndLimitations": "Connects to Google Drive, Microsoft OneDrive, GitHub, Slack, and third-party tools via ChatGPT Work workspace connectors and Custom GPT Actions, alongside desktop application window context.",
           "sourceId": "src-chatgpt-pricing-2026",
           "officialSourceUrl": "https://openai.com/chatgpt/pricing",
           "lastVerifiedDate": "2026-11-08"
@@ -555,12 +555,12 @@
       "providers": {
         "chatgpt": {
           "state": "Available",
-          "productProvidedBy": "ChatGPT Subscription (Scheduled Tasks)",
+          "productProvidedBy": "ChatGPT Work & Scheduled Tasks",
           "productLayer": "Paid subscription",
           "requiredPlan": "Plus, Pro, Business, Enterprise",
           "availabilityAndLimitations": "Supports recurring scheduled prompts and automated reminders with web and mobile notifications.",
-          "sourceId": "src-chatgpt-pricing-2026",
-          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "sourceId": "src-chatgpt-work-2026",
+          "officialSourceUrl": "https://openai.com/index/chatgpt-for-work/",
           "lastVerifiedDate": "2026-11-08"
         },
         "claude": {
