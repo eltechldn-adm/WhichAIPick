@@ -6,156 +6,572 @@
       "claude"
     ],
     "status": "research-ready",
-    "title": "ChatGPT vs Claude: Which AI Assistant Fits Your Workflow?",
-    "metaDescription": "Compare ChatGPT and Claude across pricing, workflows, capabilities, and who each is well-suited suited to.",
+    "title": "ChatGPT vs Claude: Free vs Paid, Coding, Writing and Pricing Guide",
+    "metaDescription": "Compare ChatGPT and Claude across free and paid plans ($20/mo), writing, coding (Canvas vs Artifacts and Claude Code), document analysis, privacy, and APIs.",
+    "a11yEnhancedTables": true,
+    "introSummary": "ChatGPT and Claude both offer free tiers, $20/month flagship personal plans ($20 USD / £20 GBP incl. VAT in UK for ChatGPT Plus; $20 USD monthly or $17 USD/mo billed annually at $200 for Claude Pro), high-capacity plans ($200/mo ChatGPT Pro; $100/mo and $200/mo Claude Max), team/enterprise workspaces, and token-billed developer APIs. Neither assistant is a universal winner: ChatGPT is an all-in-one multimodal workspace with live web search, Advanced Voice Mode, native ChatGPT Images generation, and sandboxed Python data analysis, whereas Claude specialises in natural long-form writing, 200K-token document analysis, live UI rendering in Artifacts, and terminal-based coding with Claude Code.",
     "quickAnswer": [
       {
-        "text": "Choose ChatGPT if you need native web research, native image generation, and data analysis.",
+        "text": "Choose ChatGPT if you want one multimodal workspace combining live web search, Advanced Voice Mode, native ChatGPT Images creation, sandboxed Python spreadsheet analysis, and side-by-side editing in Canvas.",
         "classification": "EDITORIAL INTERPRETATION",
+        "label": "Editorial recommendation · Sourced",
         "sourceIds": [
-          "src-chatgpt-search",
-          "src-chatgpt-images",
-          "src-chatgpt-data-analysis"
+          "src-chatgpt-pricing-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026",
+          "src-chatgpt-images-2026",
+          "src-chatgpt-voice-2026"
         ]
       },
       {
-        "text": "Choose Claude if you handle large documents (supported by large context limits) or value an integrated coding UI.",
+        "text": "Choose Claude if your priority is nuanced long-form writing, analysing lengthy contracts or codebases in a 200K-token context window, previewing interactive UI components in Artifacts, or running agentic terminal workflows with Claude Code.",
         "classification": "EDITORIAL INTERPRETATION",
+        "label": "Editorial recommendation · Sourced",
         "sourceIds": [
-          "src-claude-artifacts",
-          "src-claude-models"
+          "src-claude-pricing-2026",
+          "src-claude-models-2026",
+          "src-claude-artifacts-2026",
+          "src-claude-code-2026"
         ]
       },
       {
-        "text": "The main trade-off is ChatGPT's broader multimodal ecosystem versus Claude's Artifacts UI and context window.",
-        "classification": "EDITORIAL INTERPRETATION",
+        "text": "Personal plans start at $0 (Free) and $20 USD/mo on flagship tiers: ChatGPT Plus costs $20 USD/mo (£20 GBP/mo incl. VAT on UK web checkout; ChatGPT Go is $8 USD/mo where available), while Claude Pro costs $20 USD/mo monthly or $17 USD/mo billed annually ($200 upfront, plus applicable local tax/VAT). High-capacity tiers scale to Claude Max ($100/mo 5x or $200/mo 20x) and ChatGPT Pro ($200/mo).",
+        "classification": "OFFICIAL SOURCE FACT",
+        "label": "Official source fact",
         "sourceIds": [
-          "src-chatgpt-voice",
-          "src-claude-artifacts"
+          "src-chatgpt-pricing-2026",
+          "src-chatgpt-multicurrency-2026",
+          "src-claude-pricing-2026"
+        ]
+      },
+      {
+        "text": "Apps, business workspaces, and APIs are separate products: ChatGPT Business ($20 USD/user/mo annual or $25 monthly, 2+ seats) and Claude Team ($20 USD/seat/mo annual or $25 monthly Standard; $100 annual or $125 monthly Premium, 2-150 seats) do not train models on company data by default, and developer APIs (OpenAI Platform API and Anthropic API) are billed per token.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "label": "Official source fact",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-openai-api-pricing-2026",
+          "src-openai-privacy-2026",
+          "src-claude-pricing-2026",
+          "src-claude-privacy-2026"
         ]
       }
     ],
     "keyDifferences": [
       {
-        "topic": "Ecosystem",
-        "description": "ChatGPT is part of a broad multimodal ecosystem including advanced voice mode. Claude focuses heavily on text, reasoning, and its Artifacts UI.",
+        "topic": "Writing, Editing & Research Workflows",
+        "description": "Claude is widely used for structured long-form drafting, custom writing Styles, and multi-document synthesis alongside web search and Research mode. ChatGPT pairs side-by-side paragraph editing in Canvas with ChatGPT Search and multi-step Deep Research reports.",
         "sourceIds": [
-          "src-chatgpt-voice",
-          "src-claude-artifacts"
+          "src-claude-models-2026",
+          "src-claude-search-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-search-2026"
         ]
       },
       {
-        "topic": "Context Window",
-        "description": "Claude supports large context windows on current paid products. Context limits vary by model and plan.",
+        "topic": "Coding & Software Development (Canvas vs Artifacts & Claude Code)",
+        "description": "Claude provides two distinct coding interfaces: Artifacts in the web/desktop app for live React, HTML/CSS, and SVG rendering, and Claude Code (available on Pro, Max, Team Premium, and API) for agentic terminal coding across local repositories. ChatGPT provides Canvas for inline code review and refactoring plus a sandboxed Python execution environment.",
         "sourceIds": [
-          "src-claude-pricing",
-          "src-claude-models"
+          "src-claude-artifacts-2026",
+          "src-claude-code-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026"
         ]
       },
       {
-        "topic": "Workflow Integration",
-        "description": "Claude's Artifacts provide a dedicated UI for code and document previews. ChatGPT provides Advanced Data Analysis for uploaded datasets.",
+        "topic": "Files, Context Windows & Document Analysis",
+        "description": "Claude supports a 200K-token context window across paid models (with expanded context on Enterprise) for analysing full contracts, financial filings, and multi-file Projects. ChatGPT combines persistent Projects with Advanced Data Analysis, executing Python directly on uploaded CSV and Excel files to clean data and plot charts.",
         "sourceIds": [
-          "src-claude-artifacts",
-          "src-chatgpt-pricing"
+          "src-claude-models-2026",
+          "src-claude-projects-2026",
+          "src-chatgpt-projects-2026",
+          "src-chatgpt-data-analysis-2026"
+        ]
+      },
+      {
+        "topic": "Multimodal Capabilities (Voice & Image Generation)",
+        "description": "ChatGPT is a broader multimodal generation suite featuring Advanced Voice Mode for spoken dialogue and native ChatGPT Images creation and editing. Claude analyses uploaded images, charts, and PDFs and renders interactive SVG/HTML diagrams via Artifacts, but does not generate photorealistic raster images.",
+        "sourceIds": [
+          "src-chatgpt-voice-2026",
+          "src-chatgpt-images-2026",
+          "src-claude-artifacts-2026",
+          "src-claude-models-2026"
+        ]
+      },
+      {
+        "topic": "Pricing, Plan Tiers & Currency Billing (USD & GBP)",
+        "description": "Both start at $0 on Free and $20 USD/mo on flagship monthly plans. OpenAI offers ChatGPT Go ($8 USD/mo where available), ChatGPT Plus ($20 USD/mo; £20 GBP/mo incl. VAT in UK), and ChatGPT Pro ($200 USD/mo; £200 GBP/mo). Anthropic offers an annual discount on Claude Pro ($17 USD/mo billed annually at $200, or $20/mo monthly) and two high-capacity tiers: Claude Max 5x ($100 USD/mo) and Max 20x ($200 USD/mo).",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-chatgpt-multicurrency-2026",
+          "src-claude-pricing-2026"
+        ]
+      },
+      {
+        "topic": "Privacy, Data Handling & Model Training Defaults",
+        "description": "On commercial and API tiers (ChatGPT Business, ChatGPT Enterprise, OpenAI API, Claude Team, Claude Enterprise, and Anthropic API), neither provider trains generative models on customer data by default. On consumer plans (ChatGPT Free/Go/Plus/Pro and Claude Free/Pro/Max), chats and coding sessions may be used for model improvement unless you opt out in your privacy settings.",
+        "sourceIds": [
+          "src-openai-privacy-2026",
+          "src-claude-privacy-2026"
         ]
       }
     ],
+    "tableFootnote": "Catalogue note: In the table above, both ChatGPT and Claude list API available as No because WhichAIPick scopes those catalogue records (/tools/chatgpt/ and /tools/claude/) to the consumer applications rather than their separate developer API platforms (OpenAI Platform API at /tools/openai-api/ and Anthropic's Claude Console API). Standard $20/month consumer subscriptions (ChatGPT Plus and Claude Pro) do not fund general developer API calls, which are billed per token (though Claude Max $100/$200 plans include monthly Claude Platform API credit allotments under Anthropic's current terms).",
+    "productScope": [
+      {
+        "layer": "Consumer Web, Desktop & Mobile Apps",
+        "toolADetail": "chatgpt.com plus official iOS and Android apps with synced conversation history.",
+        "toolBDetail": "claude.ai plus official web, desktop, iOS, and Android apps with synced Projects and Artifacts.",
+        "whatToKnow": "Both offer free sign-in with rolling session usage caps that reset automatically."
+      },
+      {
+        "layer": "Underlying Model Families",
+        "toolADetail": "OpenAI GPT flagship multimodal and reasoning models, selectable by task on paid plans.",
+        "toolBDetail": "Claude Opus (deepest reasoning), Claude Sonnet (balanced everyday coding and writing), and Claude Haiku (fast lightweight tasks).",
+        "whatToKnow": "Claude Free includes Sonnet and Haiku; Claude Pro and Max unlock Opus and higher session limits."
+      },
+      {
+        "layer": "Individual Paid Subscriptions",
+        "toolADetail": "ChatGPT Go ($8 USD/mo where available), ChatGPT Plus ($20 USD/mo; £20 GBP/mo incl. VAT in UK), and ChatGPT Pro ($200 USD/mo; £200 GBP/mo).",
+        "toolBDetail": "Claude Pro ($20 USD/mo monthly or $17 USD/mo billed annually at $200) and Claude Max ($100 USD/mo for 5x Pro usage; $200 USD/mo for 20x session / 10x weekly usage).",
+        "whatToKnow": "Claude Pro offers an annual billing discount ($200/yr); Claude Max adds 5x-20x capacity plus monthly Claude Platform API credits ($100-$200/mo)."
+      },
+      {
+        "layer": "Business, Team & Enterprise Plans",
+        "toolADetail": "ChatGPT Business, formerly Team ($20 USD/user/mo annual or $25 monthly, 2+ seats) and custom ChatGPT Enterprise.",
+        "toolBDetail": "Claude Team for 2-150 seats (Standard seat: $20 USD/seat/mo annual or $25 monthly; Premium seat with 5x usage: $100 annual or $125 monthly) and Claude Enterprise (20+ seats, $20/seat/mo annual + API usage rates or custom contract).",
+        "whatToKnow": "Neither ChatGPT Business/Enterprise nor Claude Team/Enterprise trains models on organisation data by default."
+      },
+      {
+        "layer": "Developer APIs & CLI Tools",
+        "toolADetail": "OpenAI Platform API (platform.openai.com), catalogued as OpenAI API (/tools/openai-api/) with pay-as-you-go token pricing.",
+        "toolBDetail": "Claude Platform / Anthropic API (billed per million tokens across Opus, Sonnet, and Haiku with Prompt Caching and Batch API) plus Claude Code CLI.",
+        "whatToKnow": "Claude Code runs in the terminal using either a Claude Pro/Max/Team subscription or pay-as-you-go Anthropic API credits."
+      }
+    ],
+    "responsiveUseCaseTable": true,
     "useCaseDecisions": [
       {
-        "useCase": "Coding",
-        "toolAFit": "Supports general scripting and data analysis.",
-        "toolBFit": "Well suited when immediate preview of code output via Artifacts.",
-        "reason": "Claude's Artifacts feature allows immediate preview of UI code.",
+        "useCase": "Long-Form Writing, Editing & Tone Control",
+        "toolAFit": "Canvas offers side-by-side paragraph edits, length adjustments, and inline revisions.",
+        "toolBFit": "Natural, low-fluff prose with custom writing Styles and clean document drafting in Artifacts.",
+        "reason": "Choose Claude for natural long-form prose and custom Styles; choose ChatGPT for side-by-side Canvas editing.",
         "confidence": "HIGH",
         "evidenceIds": [
-          "src-claude-artifacts"
+          "src-chatgpt-canvas-2026",
+          "src-claude-artifacts-2026",
+          "src-claude-models-2026"
+        ]
+      },
+      {
+        "useCase": "Coding, UI Prototyping & Terminal Development",
+        "toolAFit": "Canvas code editor with inline review plus sandboxed Python execution.",
+        "toolBFit": "Live React/HTML/SVG previews in Artifacts plus agentic terminal coding via Claude Code.",
+        "reason": "Choose Claude for live UI previews in Artifacts and terminal repo work in Claude Code; choose ChatGPT for Python scripts.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-claude-artifacts-2026",
+          "src-claude-code-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026"
+        ]
+      },
+      {
+        "useCase": "Large PDFs, Contracts & Document Synthesis",
+        "toolAFit": "Groups uploaded files inside Projects and uses Python to search and extract sections.",
+        "toolBFit": "200K-token context window ingests full contracts, transcripts, and research papers in one prompt.",
+        "reason": "Choose Claude for clause-by-clause review of long documents; choose ChatGPT when combining PDFs with Python analysis.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-claude-models-2026",
+          "src-claude-projects-2026",
+          "src-chatgpt-projects-2026"
+        ]
+      },
+      {
+        "useCase": "Spreadsheet & Quantitative Data Analysis",
+        "toolAFit": "Runs Python in Advanced Data Analysis to clean CSV/Excel files, run regressions, and export files.",
+        "toolBFit": "Analyses uploaded CSVs, executes code for summaries, and builds interactive visual charts in Artifacts.",
+        "reason": "Choose ChatGPT for heavy multi-sheet Excel/CSV cleaning in Python; choose Claude for interactive Artifact dashboards.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-data-analysis-2026",
+          "src-claude-artifacts-2026"
+        ]
+      },
+      {
+        "useCase": "Web Research & Fact-Checking",
+        "toolAFit": "ChatGPT Search for fast live web answers plus Deep Research for multi-step cited reports.",
+        "toolBFit": "Live web search with inline citations plus Research mode across web and connected workspace files.",
+        "reason": "Both support live web search and deep research; ChatGPT is stronger for multimodal web queries, Claude for synthesis.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-search-2026",
+          "src-claude-search-2026"
+        ]
+      },
+      {
+        "useCase": "Multimodal Work (Voice & Image Generation)",
+        "toolAFit": "Advanced Voice Mode for spoken dialogue and native ChatGPT Images generation and editing.",
+        "toolBFit": "Reads charts, screenshots, and PDFs and creates SVG/HTML diagrams, but no raster image generation.",
+        "reason": "Choose ChatGPT if you need native image generation or conversational voice mode.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-voice-2026",
+          "src-chatgpt-images-2026",
+          "src-claude-artifacts-2026"
+        ]
+      },
+      {
+        "useCase": "Business Teams, Privacy & Governance",
+        "toolAFit": "ChatGPT Business ($20-$25/user/mo) with shared Projects, Custom GPTs, SSO, and no default training.",
+        "toolBFit": "Claude Team ($20-$25 Standard / $100-$125 Premium per seat/mo) with shared Projects, Enterprise search, and no default training.",
+        "reason": "Choose Claude Team if developers need Premium seats for Claude Code; choose ChatGPT Business for Custom GPT workflows.",
+        "confidence": "HIGH",
+        "evidenceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-openai-privacy-2026",
+          "src-claude-pricing-2026",
+          "src-claude-privacy-2026"
         ]
       }
     ],
+    "strengthsAndLimitations": {
+      "toolA": {
+        "strengths": [
+          "All-in-one multimodal workspace combining ChatGPT Search, Advanced Voice Mode, and native ChatGPT Images generation (Official source fact)",
+          "Sandboxed Python execution (Advanced Data Analysis) for cleaning spreadsheets, running scripts, and exporting files (Official source fact)",
+          "Interactive Canvas editor for side-by-side writing and code revisions plus persistent Projects and Custom GPTs (Official source fact)",
+          "Local UK GBP billing (£20/mo incl. VAT on web checkout) alongside USD pricing and an $8/mo Go entry tier where available (Official source fact)"
+        ],
+        "limitations": [
+          "Does not offer an annual billing discount on ChatGPT Plus ($20/mo monthly only) (Official source fact)",
+          "Consumer plans (Free, Go, Plus, Pro) do not include OpenAI Platform API token credits (Official source fact)",
+          "Default writing tone can require more prompt steering than Claude for long-form editorial prose (Editorial synthesis)"
+        ]
+      },
+      "toolB": {
+        "strengths": [
+          "200K-token context window on paid tiers for analysing full contracts, books, and multi-file repositories (Official source fact)",
+          "Artifacts workspace for live rendering of React components, HTML/CSS prototypes, SVG graphics, and diagrams (Official source fact)",
+          "Claude Code terminal agent included with Claude Pro ($20/mo), Claude Max ($100-$200/mo), and Team Premium seats (Official source fact)",
+          "Annual discount on Claude Pro ($17 USD/mo billed annually at $200) and flexible Max tiers (5x at $100/mo; 20x at $200/mo) (Official source fact)"
+        ],
+        "limitations": [
+          "No native photorealistic raster image generation (limited to visual input analysis and SVG/code diagrams) (Official source fact)",
+          "Rolling 5-hour session message caps can be reached quickly during heavy Opus or multi-file coding sessions on Free and Pro tiers (Official source fact)",
+          "Official pricing is published in USD (plus applicable local taxes/VAT at checkout) without a sub-$10 entry plan (Official source fact)"
+        ]
+      }
+    },
     "chooseToolAIf": [
       {
-        "condition": "You need native image generation.",
-        "claimId": "chatgpt-images-feature"
+        "condition": "You want one subscription that includes native image generation (ChatGPT Images) and Advanced Voice Mode.",
+        "claimId": "chatgpt-multimodal-suite-c2a-2026"
       },
       {
-        "condition": "You rely on real-time web search integration.",
-        "claimId": "chatgpt-search-feature"
+        "condition": "You regularly clean CSV/Excel spreadsheets and generate charts using sandboxed Python in Advanced Data Analysis.",
+        "claimId": "chatgpt-canvas-python-c2a-2026"
+      },
+      {
+        "condition": "You rely on live conversational web search combined with multi-step Deep Research reports.",
+        "claimId": "chatgpt-search-deep-research-c2a-2026"
+      },
+      {
+        "condition": "You build reusable Custom GPTs and persistent Projects for recurring personal or team tasks.",
+        "claimId": "chatgpt-projects-gpts-c2a-2026"
+      },
+      {
+        "condition": "You want fixed UK GBP web checkout (£20/mo incl. VAT on Plus) or an $8/mo entry tier (ChatGPT Go where available).",
+        "claimId": "chatgpt-plans-multicurrency-c2a-2026"
       }
     ],
     "chooseToolBIf": [
       {
-        "condition": "You work with very large documents or codebases.",
-        "claimId": "claude-context"
+        "condition": "Your primary work is long-form writing, editing, and synthesis where natural tone and custom Styles matter most.",
+        "claimId": "claude-writing-projects-c2a-2026"
       },
       {
-        "condition": "You need to instantly preview generated code in a dedicated window.",
-        "claimId": "claude-artifacts"
+        "condition": "You want live interactive previews of React, HTML/CSS, and diagrams in Artifacts or agentic terminal coding via Claude Code.",
+        "claimId": "claude-artifacts-code-c2a-2026"
+      },
+      {
+        "condition": "You analyse lengthy contracts, academic PDFs, or multi-file codebases using a 200K-token context window.",
+        "claimId": "claude-context-documents-c2a-2026"
+      },
+      {
+        "condition": "You want an annual discount on your individual plan ($17 USD/mo billed annually) or a $100/mo middle tier (Claude Max 5x).",
+        "claimId": "claude-plans-max-team-c2a-2026"
+      },
+      {
+        "condition": "Your engineering or knowledge team wants mixed Standard ($20-$25/seat/mo) and Premium ($100-$125/seat/mo) seats with commercial data privacy.",
+        "claimId": "claude-commercial-privacy-c2a-2026"
+      }
+    ],
+    "pricingBreakdown": [
+      {
+        "tier": "Free Tier ($0 / £0)",
+        "toolADetail": "Core multimodal chat, ChatGPT Search, basic file uploads, limited ChatGPT Images generation, and standard voice.",
+        "toolBDetail": "Claude Sonnet and Haiku access, web search, Artifacts, file uploads, code execution, and up to 5 Projects with rolling 5-hour session limits."
+      },
+      {
+        "tier": "Entry & Annual Discount Options",
+        "toolADetail": "ChatGPT Go ($8 USD/month where available; local currency equivalents apply): expanded everyday message, file upload, and image limits. No annual discount on Plus.",
+        "toolBDetail": "Claude Pro Annual ($17 USD/month billed annually at $200 upfront, plus applicable local tax/VAT): full Claude Pro benefits at a 15% annual discount over monthly billing."
+      },
+      {
+        "tier": "Flagship Monthly Plans ($20 USD/mo)",
+        "toolADetail": "ChatGPT Plus ($20 USD/month; £20 GBP/month incl. VAT on UK web checkout): full reasoning models, Canvas, Advanced Data Analysis, Projects, Deep Research, and Advanced Voice.",
+        "toolBDetail": "Claude Pro Monthly ($20 USD/month, plus applicable local tax/VAT): 5x+ Free usage, Claude Opus access, unlimited Projects, Research, and Claude Code in the terminal."
+      },
+      {
+        "tier": "High-Capacity Individual Plans ($100-$200/mo)",
+        "toolADetail": "ChatGPT Pro ($200 USD/month; £200 GBP/month in UK): highest individual access to reasoning models and heavy compute workloads.",
+        "toolBDetail": "Claude Max ($100 USD/month for 5x Pro usage + $100/mo Claude Platform API credits; or $200 USD/month for 20x session / 10x weekly Pro usage + $200/mo API credits, subject to official terms)."
+      },
+      {
+        "tier": "Team & Enterprise Plans",
+        "toolADetail": "ChatGPT Business, formerly Team ($20 USD/user/month billed annually or $25 monthly, 2+ seats) and custom Enterprise plans. Zero default model training on business data.",
+        "toolBDetail": "Claude Team for 2-150 seats (Standard: $20 USD/seat/mo annual or $25 monthly; Premium with 5x usage: $100 annual or $125 monthly) and Claude Enterprise (20+ seats, $20/seat/mo annual + API token rates). Zero default model training."
       }
     ],
     "neitherIf": [
-      "You are primarily looking for an AI coding IDE (consider Cursor or GitHub Copilot)."
+      "You are primarily looking for a dedicated AI code editor with inline multi-file IDE autocompletion (consider Cursor or GitHub Copilot).",
+      "Your team works almost entirely inside Gmail, Google Docs, Google Drive, Sheets, and Meet and wants native in-app side panels (consider Google Gemini).",
+      "Your primary use case is citation-first web answer lookup with minimal conversational setup (consider Perplexity AI)."
     ],
     "alternatives": [
       "google-gemini",
       "perplexity-ai"
     ],
+    "relatedLinks": {
+      "toolProfiles": [
+        {
+          "href": "/tools/chatgpt/",
+          "label": "ChatGPT Review & Catalogue Profile",
+          "caption": "Standalone multimodal assistant by OpenAI"
+        },
+        {
+          "href": "/tools/claude/",
+          "label": "Claude Review & Catalogue Profile",
+          "caption": "Anthropic assistant for writing, 200K-context analysis & Artifacts"
+        },
+        {
+          "href": "/tools/openai-api/",
+          "label": "OpenAI API Profile",
+          "caption": "Developer API platform billed separately from ChatGPT Plus"
+        },
+        {
+          "href": "/tools/google-gemini/",
+          "label": "Google Gemini Review & Catalogue Profile",
+          "caption": "Google's multimodal assistant & Workspace AI"
+        },
+        {
+          "href": "/tools/cursor/",
+          "label": "Cursor Review & Catalogue Profile",
+          "caption": "AI-first code editor for repository-scale software engineering"
+        }
+      ],
+      "comparisons": [
+        {
+          "href": "/compare/chatgpt-vs-gemini/",
+          "label": "ChatGPT vs Google Gemini",
+          "caption": "Compare ChatGPT with Google Gemini across Free vs Paid plans, coding, and Google Workspace"
+        },
+        {
+          "href": "/compare/chatgpt-vs-perplexity/",
+          "label": "ChatGPT vs Perplexity",
+          "caption": "Compare general-purpose assistant workflows against citation-first web research"
+        },
+        {
+          "href": "/compare/cursor-vs-github-copilot/",
+          "label": "Cursor vs GitHub Copilot",
+          "caption": "Compare dedicated AI IDE coding assistants for software development"
+        },
+        {
+          "href": "/compare/",
+          "label": "All AI Tool Comparisons",
+          "caption": "Browse all side-by-side comparisons and launch the interactive comparison matrix"
+        }
+      ]
+    },
     "claims": [
       {
-        "claimId": "chatgpt-images-feature",
-        "claim": "ChatGPT provides image generation via ChatGPT Images.",
+        "claimId": "chatgpt-multimodal-suite-c2a-2026",
+        "claim": "ChatGPT includes native image generation via ChatGPT Images and spoken dialogue via Advanced Voice Mode.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-chatgpt-images"
+          "src-chatgpt-images-2026",
+          "src-chatgpt-voice-2026"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-11-08"
       },
       {
-        "claimId": "chatgpt-search-feature",
-        "claim": "ChatGPT provides real-time web search features.",
+        "claimId": "chatgpt-canvas-python-c2a-2026",
+        "claim": "ChatGPT provides Canvas for side-by-side writing and code edits and Advanced Data Analysis for Python spreadsheet execution.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-chatgpt-search"
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-11-08"
       },
       {
-        "claimId": "claude-context",
-        "claim": "Claude offers a 200k context window.",
+        "claimId": "chatgpt-search-deep-research-c2a-2026",
+        "claim": "ChatGPT provides real-time web browsing and multi-step research via ChatGPT Search.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-claude-pricing"
+          "src-chatgpt-search-2026"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-11-08"
       },
       {
-        "claimId": "claude-artifacts",
-        "claim": "Claude offers Artifacts for viewing and editing code.",
+        "claimId": "chatgpt-projects-gpts-c2a-2026",
+        "claim": "ChatGPT supports persistent Projects and Custom GPTs to organise files and custom instructions.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
-          "src-claude-artifacts"
+          "src-chatgpt-projects-2026",
+          "src-chatgpt-pricing-2026"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "chatgpt-plans-multicurrency-c2a-2026",
+        "claim": "ChatGPT offers Free, Go ($8/mo where available), Plus ($20 USD/mo; £20 GBP/mo in UK), Pro ($200/mo), and Business ($20-$25/user/mo) plans.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-chatgpt-multicurrency-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "claude-writing-projects-c2a-2026",
+        "claim": "Claude supports Projects and custom writing instructions across Claude Sonnet and Opus models.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-claude-projects-2026",
+          "src-claude-models-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "claude-artifacts-code-c2a-2026",
+        "claim": "Claude offers Artifacts for live code/document previews and Claude Code for terminal-based software development.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-claude-artifacts-2026",
+          "src-claude-code-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "claude-context-documents-c2a-2026",
+        "claim": "Claude provides a 200K-token context window on paid tiers for long-document and codebase analysis.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-claude-models-2026",
+          "src-claude-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "claude-plans-max-team-c2a-2026",
+        "claim": "Claude offers Free ($0), Pro ($20/mo monthly or $17/mo billed annually at $200), Max ($100/mo 5x or $200/mo 20x), Team ($20-$25 Standard / $100-$125 Premium per seat/mo), and Enterprise plans.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-claude-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
+      },
+      {
+        "claimId": "claude-commercial-privacy-c2a-2026",
+        "claim": "Anthropic does not train generative models on Claude Team, Claude Enterprise, or Anthropic API data by default.",
+        "classification": "OFFICIAL SOURCE FACT",
+        "confidence": "HIGH",
+        "sourceIds": [
+          "src-claude-privacy-2026",
+          "src-claude-pricing-2026"
+        ],
+        "checkedAt": "2026-11-08"
       }
     ],
     "faqCandidates": [
       {
-        "question": "Which is supports coding?",
-        "answer": "Claude is often utilized for coding due to its Artifacts UI, while ChatGPT is supports data analysis.",
+        "question": "Is ChatGPT or Claude better on the free plan?",
+        "answer": "Both free plans ($0 / £0) handle everyday drafting, coding questions, and web search. Claude Free includes access to Claude Sonnet and Haiku, Artifacts previews, and up to 5 Projects, but enforces rolling 5-hour session caps and excludes Claude Opus and Claude Code. ChatGPT Free includes ChatGPT Search, standard voice, Custom GPT access, and limited ChatGPT Images generation.",
         "sourceIds": [
-          "src-claude-artifacts",
-          "src-chatgpt-pricing"
+          "src-chatgpt-pricing-2026",
+          "src-claude-pricing-2026"
+        ]
+      },
+      {
+        "question": "How do ChatGPT Plus, ChatGPT Pro, Claude Pro, and Claude Max pricing compare?",
+        "answer": "On flagship monthly plans, both cost $20 USD/month: ChatGPT Plus is $20 USD/month (£20 GBP/month incl. VAT on UK web checkout), while Claude Pro is $20 USD/month monthly or $17 USD/month billed annually ($200 upfront, plus applicable local tax/VAT). For heavy individual users, Claude offers a $100 USD/month middle tier (Claude Max 5x) as well as a $200 USD/month tier (Claude Max 20x), whereas OpenAI steps from ChatGPT Plus ($20/mo) directly to ChatGPT Pro ($200 USD/mo; £200 GBP/mo).",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-chatgpt-multicurrency-2026",
+          "src-claude-pricing-2026"
+        ]
+      },
+      {
+        "question": "Which is better for coding and software development: ChatGPT or Claude?",
+        "answer": "Both are strong coding assistants with different workflows. Claude is well suited to frontend prototyping and repository-scale development because Artifacts renders React, HTML/CSS, and SVG components live in the browser, and Claude Code (included with Claude Pro, Max, and Team Premium) runs agentic coding loops directly in your terminal. ChatGPT is well suited to interactive single-file refactoring in Canvas and data-science scripting via its sandboxed Python environment.",
+        "sourceIds": [
+          "src-claude-artifacts-2026",
+          "src-claude-code-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-data-analysis-2026"
+        ]
+      },
+      {
+        "question": "Which is better for long-form writing, editing, and document analysis?",
+        "answer": "Claude is frequently chosen for long-form writing and document review because its 200K-token context window handles full contracts, transcripts, and book-length PDFs in a single prompt while maintaining a natural, low-fluff prose style. ChatGPT is strong when your writing workflow depends on side-by-side paragraph edits in Canvas or combining uploaded documents with Python data tables.",
+        "sourceIds": [
+          "src-claude-models-2026",
+          "src-claude-projects-2026",
+          "src-chatgpt-canvas-2026",
+          "src-chatgpt-projects-2026"
+        ]
+      },
+      {
+        "question": "How do ChatGPT Business and Claude Team compare for company use?",
+        "answer": "Both team plans start at $20 USD/seat/month billed annually or $25 USD/seat/month billed monthly (2+ seats on ChatGPT Business; 2-150 seats on Claude Team). Claude Team also allows organisations to mix Standard seats ($20-$25/mo) with high-capacity Premium seats ($100 USD/seat/mo annual or $125 monthly, which include 5x usage and Claude Code), whereas ChatGPT Business focuses on shared Projects, Custom GPTs, and connectors.",
+        "sourceIds": [
+          "src-chatgpt-pricing-2026",
+          "src-claude-pricing-2026"
+        ]
+      },
+      {
+        "question": "How do ChatGPT and Claude handle data privacy and AI model training?",
+        "answer": "Both providers separate consumer and commercial data policies. On commercial workspaces and developer APIs (ChatGPT Business, ChatGPT Enterprise, OpenAI API, Claude Team, Claude Enterprise, and Anthropic API), neither company trains generative models on customer inputs or outputs by default. On consumer plans (ChatGPT Free/Go/Plus/Pro and Claude Free/Pro/Max), conversations and coding sessions may be used for model training unless you turn off model improvement in your privacy settings.",
+        "sourceIds": [
+          "src-openai-privacy-2026",
+          "src-claude-privacy-2026"
+        ]
+      },
+      {
+        "question": "Why does the catalogue table list API available as No for both ChatGPT and Claude?",
+        "answer": "WhichAIPick scopes the ChatGPT (/tools/chatgpt/) and Claude (/tools/claude/) catalogue records to the consumer assistant applications rather than their separate developer API platforms (OpenAI Platform API at /tools/openai-api/ and Anthropic's Claude Console API). Both companies offer full developer APIs billed per million tokens, and standard $20/month consumer subscriptions (ChatGPT Plus and Claude Pro) do not pay for general API calls—though Claude Max ($100/$200) includes monthly Claude Platform API credit allotments under Anthropic's current terms.",
+        "sourceIds": [
+          "src-openai-api-pricing-2026",
+          "src-claude-pricing-2026"
         ]
       }
     ],
     "catalogueConflicts": [],
     "pricingConflicts": [],
-    "checkedAt": "2026-10-04",
-    "editorialReviewed": false,
+    "checkedAt": "2026-11-08",
+    "editorialReviewed": true,
     "affiliateStatus": {
       "toolA": false,
       "toolB": false
@@ -167,8 +583,13 @@
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
-        "sourceId": "src-chatgpt-pricing",
-        "checkedAt": "2026-10-04"
+        "extraNotes": [
+          "Flagship Plus: USD 20/mo (£20/mo incl. VAT on UK web checkout)",
+          "Entry tier: ChatGPT Go at USD 8/mo where available; High-capacity Pro at USD 200/mo",
+          "Business (formerly Team, 2+ seats): USD 20/user/mo annual (USD 25 monthly)"
+        ],
+        "sourceId": "src-chatgpt-pricing-2026",
+        "checkedAt": "2026-11-08"
       },
       "toolB": {
         "freePlan": true,
@@ -176,8 +597,13 @@
         "entryPaidPlan": 20,
         "currency": "USD",
         "billingBasis": "monthly",
-        "sourceId": "src-claude-pricing",
-        "checkedAt": "2026-10-04"
+        "extraNotes": [
+          "Flagship Claude Pro: USD 20/mo monthly or USD 17/mo billed annually ($200/yr + applicable tax/VAT)",
+          "High-capacity Claude Max: USD 100/mo (5x usage) or USD 200/mo (20x session / 10x weekly usage)",
+          "Claude Team (2-150 seats): Standard USD 20/seat/mo annual (USD 25 monthly); Premium USD 100 annual (USD 125 monthly)"
+        ],
+        "sourceId": "src-claude-pricing-2026",
+        "checkedAt": "2026-11-08"
       }
     },
     "evidenceAuditPassed": true,
@@ -255,7 +681,7 @@
       },
       {
         "topic": "Free, Entry-Level & Flagship Plans (USD & GBP)",
-        "description": "Both offer a free tier and lightweight entry plans in eligible regions (ChatGPT Go at $8 USD/mo; Google AI Plus at $4.99 USD/mo with 400 GB storage). Standard personal plans cost $20 USD/mo (£20 GBP/mo incl. VAT in UK) for ChatGPT Plus and $19.99 USD/mo (£18.99 GBP/mo in UK) for Google AI Pro (Gemini Advanced), which bundles 2 TB-5 TB of Google One storage.",
+        "description": "Both offer a free tier and lightweight entry plans in eligible regions (ChatGPT Go at $8 USD/mo; Google AI Plus at $4.99 USD/mo or £4.49 GBP/mo in UK with 400 GB storage). Standard personal plans cost $20 USD/mo (£20 GBP/mo incl. VAT in UK) for ChatGPT Plus and $19.99 USD/mo (£18.99 GBP/mo in UK) for Google AI Pro (Gemini Advanced), which bundles 5 TB of Google One storage.",
         "sourceIds": [
           "src-chatgpt-pricing-2026",
           "src-chatgpt-multicurrency-2026",
@@ -313,8 +739,8 @@
       {
         "layer": "Entry & Flagship Personal Plans",
         "toolADetail": "ChatGPT Go ($8 USD/mo where available) for higher everyday limits; ChatGPT Plus ($20 USD/mo; £20 GBP/mo incl. VAT in UK) for reasoning models, Canvas, and Deep Research.",
-        "toolBDetail": "Google AI Plus ($4.99 USD/mo with 400 GB storage where available); Google AI Pro / Gemini Advanced ($19.99 USD/mo; £18.99 GBP/mo in UK) with 2 TB-5 TB Google One storage and Workspace side panels.",
-        "whatToKnow": "Google AI Pro bundles Google One cloud storage; ChatGPT Plus is a dedicated AI workspace subscription."
+        "toolBDetail": "Google AI Plus ($4.99 USD/mo; £4.49 GBP/mo in UK with 400 GB storage where available); Google AI Pro / Gemini Advanced ($19.99 USD/mo; £18.99 GBP/mo in UK) with 5 TB Google One storage and Workspace side panels.",
+        "whatToKnow": "Google AI Pro bundles 5 TB of Google One cloud storage; ChatGPT Plus is a dedicated AI workspace subscription."
       },
       {
         "layer": "High-Capacity Individual Plans",
@@ -437,7 +863,7 @@
       "toolB": {
         "strengths": [
           "Native integration across Gmail, Google Docs, Drive, Sheets, Slides, and Meet on eligible plans (Official source fact)",
-          "Google AI Pro ($19.99 USD / £18.99 GBP per month) bundles 2 TB-5 TB of Google One cloud storage (Official source fact)",
+          "Google AI Pro ($19.99 USD / £18.99 GBP per month) bundles 5 TB of Google One cloud storage across Gmail, Drive, and Photos (Official source fact)",
           "Large context window on paid tiers for analysing lengthy PDFs, transcripts, and multi-file uploads (Official source fact)",
           "One-click export of generated tables to Google Sheets, drafts to Google Docs, and Python code to Google Colab (Official source fact)"
         ],
@@ -476,7 +902,7 @@
         "claimId": "gemini-workspace"
       },
       {
-        "condition": "You want a ~$20/month (£18.99/mo UK) AI plan that also bundles Google One cloud storage.",
+        "condition": "You want a ~$20/month (£18.99/mo UK) AI plan that also bundles 5 TB of Google One cloud storage.",
         "claimId": "gemini-google-one-storage-2026"
       },
       {
@@ -501,12 +927,12 @@
       {
         "tier": "Entry-Level Personal Plans",
         "toolADetail": "ChatGPT Go ($8 USD/month where available; local currency equivalents apply): expanded message, file upload, and image limits over Free.",
-        "toolBDetail": "Google AI Plus ($4.99 USD/month where available; local currency equivalents apply): higher everyday model limits plus 400 GB of Google One storage."
+        "toolBDetail": "Google AI Plus ($4.99 USD/month; £4.49 GBP/month in UK where available): higher everyday model limits plus 400 GB of Google One storage."
       },
       {
         "tier": "Flagship Personal Plans (~$20 / ~£19-£20)",
         "toolADetail": "ChatGPT Plus ($20 USD/month; £20 GBP/month incl. VAT on UK web checkout): full reasoning models, Canvas, Advanced Data Analysis, Projects, Deep Research, and Advanced Voice.",
-        "toolBDetail": "Google AI Pro / Gemini Advanced ($19.99 USD/month; £18.99 GBP/month in UK): Gemini Pro models, Deep Research, Gemini side panels in personal Gmail/Docs, and 2 TB-5 TB Google One storage."
+        "toolBDetail": "Google AI Pro / Gemini Advanced ($19.99 USD/month; £18.99 GBP/month in UK): Gemini Pro models, Deep Research, Gemini side panels in personal Gmail/Docs, and 5 TB Google One storage."
       },
       {
         "tier": "High-Capacity Individual Plans",
@@ -645,7 +1071,7 @@
       },
       {
         "claimId": "gemini-google-one-storage-2026",
-        "claim": "Google AI Pro (Gemini Advanced) costs $19.99 USD/month (£18.99 GBP/month in UK) and bundles 2 TB-5 TB of Google One storage.",
+        "claim": "Google AI Pro (Gemini Advanced) costs $19.99 USD/month (£18.99 GBP/month in UK) and bundles 5 TB of Google One storage.",
         "classification": "OFFICIAL SOURCE FACT",
         "confidence": "HIGH",
         "sourceIds": [
@@ -700,7 +1126,7 @@
       },
       {
         "question": "How do ChatGPT and Google Gemini paid plans compare in USD and GBP?",
-        "answer": "Both offer lightweight entry plans in eligible regions (ChatGPT Go at $8 USD/mo; Google AI Plus at $4.99 USD/mo with 400 GB storage). Their flagship individual plans cost $20 USD/month (£20 GBP/month incl. VAT on UK web checkout) for ChatGPT Plus and $19.99 USD/month (£18.99 GBP/month in the UK) for Google AI Pro, which also bundles 2 TB-5 TB of Google One storage. High-capacity plans scale to $200 USD/mo (£200 GBP/mo) on ChatGPT Pro and $99.99-$249.99 USD/mo on Google AI Ultra.",
+        "answer": "Both offer lightweight entry plans in eligible regions (ChatGPT Go at $8 USD/mo; Google AI Plus at $4.99 USD/mo or £4.49 GBP/mo in UK with 400 GB storage). Their flagship individual plans cost $20 USD/month (£20 GBP/month incl. VAT on UK web checkout) for ChatGPT Plus and $19.99 USD/month (£18.99 GBP/month in the UK) for Google AI Pro, which also bundles 5 TB of Google One storage. High-capacity plans scale to $200 USD/mo (£200 GBP/mo) on ChatGPT Pro and $99.99-$249.99 USD/mo on Google AI Ultra.",
         "sourceIds": [
           "src-chatgpt-pricing-2026",
           "src-chatgpt-multicurrency-2026",
@@ -784,8 +1210,8 @@
         "currency": "USD",
         "billingBasis": "monthly",
         "extraNotes": [
-          "Flagship Google AI Pro: USD 19.99/mo (£18.99/mo in UK) with 2 TB-5 TB storage",
-          "Entry tier: Google AI Plus at USD 4.99/mo (400 GB) where available",
+          "Flagship Google AI Pro: USD 19.99/mo (£18.99/mo in UK) with 5 TB storage",
+          "Entry tier: Google AI Plus at USD 4.99/mo (£4.49/mo in UK, 400 GB) where available",
           "Workspace Business: Starter from USD 7 / £5.90 user/mo; Standard USD 14 / £11.80 (annual ex. VAT)"
         ],
         "sourceId": "src-gemini-pricing-2026",

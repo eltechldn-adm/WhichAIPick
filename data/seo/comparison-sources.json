@@ -358,5 +358,77 @@
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-pricing-2026",
+    "publisher": "Anthropic",
+    "title": "Claude Pricing and Plans (Free, Pro, Max, Team, Enterprise and API)",
+    "url": "https://www.anthropic.com/pricing",
+    "sourceType": "Official Pricing Page",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-models-2026",
+    "publisher": "Anthropic",
+    "title": "Claude Models Overview (Opus, Sonnet, Haiku and Context Windows)",
+    "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-artifacts-2026",
+    "publisher": "Anthropic",
+    "title": "What Are Artifacts in Claude and How to Use Them",
+    "url": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-projects-2026",
+    "publisher": "Anthropic",
+    "title": "Projects in Claude for Knowledge and Team Workflows",
+    "url": "https://support.anthropic.com/en/articles/9517075-what-are-projects",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-code-2026",
+    "publisher": "Anthropic",
+    "title": "Claude Code Overview — Terminal and Agentic Coding",
+    "url": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-search-2026",
+    "publisher": "Anthropic",
+    "title": "Web Search and Research in Claude",
+    "url": "https://support.anthropic.com/en/articles/10599426-web-search-on-claude",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-claude-privacy-2026",
+    "publisher": "Anthropic",
+    "title": "Anthropic Privacy Policy and Consumer vs Commercial Data Handling",
+    "url": "https://www.anthropic.com/legal/privacy",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
+  },
+  {
+    "sourceId": "src-openai-privacy-2026",
+    "publisher": "OpenAI",
+    "title": "OpenAI Enterprise, Business and API Data Privacy Commitments",
+    "url": "https://openai.com/enterprise-privacy/",
+    "sourceType": "Official Documentation",
+    "publishedAt": null,
+    "checkedAt": "2026-11-08"
   }
 ]
