@@ -1,0 +1,719 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastVerifiedAt": "2026-11-08",
+  "isExhaustive": false,
+  "scopeDisclaimer": "This capability inventory is a curated, source-backed reference of verified capabilities across consumer apps, paid subscriptions, related tools, underlying models, business workspaces, and developer APIs as of 2026-11-08. It is not an exhaustive list of every minor setting or regional experiment. Unconfirmed features are marked 'Not verified' rather than inferred as 'No'.",
+  "supportedTools": [
+    "chatgpt",
+    "claude"
+  ],
+  "plannedTools": [
+    "google-gemini",
+    "grok",
+    "github-copilot",
+    "microsoft-copilot",
+    "perplexity-ai"
+  ],
+  "allowedStates": [
+    "Available",
+    "Limited",
+    "Not offered",
+    "Not verified"
+  ],
+  "allowedProductLayers": [
+    "Consumer app",
+    "Paid subscription",
+    "Related product / CLI",
+    "Underlying model",
+    "Developer API",
+    "Business / Enterprise workspace"
+  ],
+  "categories": [
+    {
+      "categoryId": "writing",
+      "title": "Writing",
+      "summary": "Document drafting workspaces, tone customisation, and structured presentation generation."
+    },
+    {
+      "categoryId": "research",
+      "title": "Research",
+      "summary": "Live web search with citations, multi-step synthesis reports, and domain-specific research surfaces."
+    },
+    {
+      "categoryId": "coding",
+      "title": "Coding",
+      "summary": "Interactive UI previews, terminal and repository coding agents, and sandboxed code execution."
+    },
+    {
+      "categoryId": "documents-and-data",
+      "title": "Documents and data",
+      "summary": "Model context window limits, persistent project knowledge bases, and spreadsheet/chart analysis."
+    },
+    {
+      "categoryId": "images-and-media",
+      "title": "Images and media",
+      "summary": "Photorealistic raster image generation, multimodal visual inspection, and vector/motion design."
+    },
+    {
+      "categoryId": "voice",
+      "title": "Voice",
+      "summary": "Real-time spoken dialogue across mobile, desktop, and web applications."
+    },
+    {
+      "categoryId": "integrations-and-automation",
+      "title": "Integrations and automation",
+      "summary": "Cloud app connectors, browser/office add-ons, scheduled tasks, and developer APIs."
+    },
+    {
+      "categoryId": "business-privacy-and-security",
+      "title": "Business, privacy and security",
+      "summary": "Team seat rules, AI model training defaults, SSO/SCIM identity management, and compliance controls."
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityId": "writing-side-by-side-editor",
+      "categoryId": "writing",
+      "featureName": "Side-by-Side Document & Prose Editor (Canvas vs Artifacts & Claude Docs)",
+      "whatItDoes": "Opens a dedicated editing pane alongside the chat to draft, revise, and format long-form writing without losing conversation context.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Canvas)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Supports inline paragraph highlighting, targeted rewrites, reading-level and length sliders, and document export.",
+          "sourceId": "src-chatgpt-canvas-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Artifacts & Claude Docs)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Renders formatted Markdown and structured documents in a side-by-side pane with version history; subject to rolling 5-hour session limits.",
+          "sourceId": "src-claude-artifacts-2026",
+          "officialSourceUrl": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "writing-styles-and-memory",
+      "categoryId": "writing",
+      "featureName": "Custom Writing Styles, Instructions & Cross-Chat Memory",
+      "whatItDoes": "Applies saved tone presets, formatting rules, and remembered user context automatically across conversations.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Custom Instructions & Memory)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Includes account-wide Custom Instructions, cross-conversation Memory, and project-specific instructions inside Projects and Custom GPTs.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (User Preferences, Styles & Memory)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Includes configurable writing Styles, user preferences, and memory across conversations on web, desktop, and mobile.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "writing-slides-and-presentations",
+      "categoryId": "writing",
+      "featureName": "Presentation & Slide Deck Creation (Claude Slides vs Python File Export)",
+      "whatItDoes": "Generates structured presentation slide decks and visual layouts from outlines or source documents.",
+      "providers": {
+        "chatgpt": {
+          "state": "Limited",
+          "productProvidedBy": "ChatGPT App (Advanced Data Analysis)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (limited), Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Can generate downloadable PowerPoint (.pptx) files via Python scripts, but does not offer a dedicated interactive slide-deck canvas in the consumer app.",
+          "sourceId": "src-chatgpt-data-analysis-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Claude Slides & Claude Design)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Official plan matrix includes Claude Slides and Claude Design across all consumer and workspace tiers, subject to plan usage limits.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "research-live-web-search",
+      "categoryId": "research",
+      "featureName": "Real-Time Web Search with Inline Source Citations",
+      "whatItDoes": "Retrieves live information from the web and attaches verifiable links to cited sources.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (ChatGPT Search)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Triggers automatically on timely queries or manually via the Search toggle, returning inline links and a collapsible sources sidebar.",
+          "sourceId": "src-chatgpt-search-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Web Search)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Included across Free and paid plans with inline source citations; admins can manage web access on Team and Enterprise workspaces.",
+          "sourceId": "src-claude-search-2026",
+          "officialSourceUrl": "https://support.anthropic.com/en/articles/10599426-web-search-on-claude",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "research-multi-step-deep-research",
+      "categoryId": "research",
+      "featureName": "Autonomous Multi-Step Research Reports (Deep Research vs Claude Research)",
+      "whatItDoes": "Executes multi-step searches across web pages and connected workspace documents to produce a synthesised report.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT Subscription (Deep Research)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Plus, Pro, Business, Enterprise (tiered monthly query quotas)",
+          "availabilityAndLimitations": "Performs multi-minute autonomous web browsing and synthesis with full source citations; monthly report allowances depend on plan tier.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Subscription (Research)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Pro, Max, Ultra, Team, Enterprise (not offered on Free)",
+          "availabilityAndLimitations": "Synthesises findings across live web sources and connected workspace files; excluded from the Free tier on Anthropic's plan matrix.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "research-scientific-workspace",
+      "categoryId": "research",
+      "featureName": "Dedicated Scientific Research Surface (Claude Science)",
+      "whatItDoes": "Provides a specialized product surface tailored for scientific literature review, hypothesis testing, and technical analysis.",
+      "providers": {
+        "chatgpt": {
+          "state": "Not offered",
+          "productProvidedBy": "ChatGPT App & GPT Reasoning Models",
+          "productLayer": "Underlying model",
+          "requiredPlan": "Not applicable as a separate named surface (reasoning models included on Plus/Pro/Business/Enterprise)",
+          "availabilityAndLimitations": "OpenAI handles scientific reasoning through general GPT reasoning models and Deep Research rather than a separate named 'Science' product surface.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Subscription (Claude Science)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Pro, Max, Ultra, Team, Enterprise (not offered on Free)",
+          "availabilityAndLimitations": "Listed as an included capability on paid Individual (Pro, Max, Ultra) and Business (Team, Enterprise) plans; excluded on Free.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "coding-interactive-ui-previews",
+      "categoryId": "coding",
+      "featureName": "Live Interactive UI, React & Diagram Previews (Artifacts vs Canvas)",
+      "whatItDoes": "Renders interactive HTML/CSS layouts, React components, SVG graphics, and diagrams directly inside the browser or desktop app.",
+      "providers": {
+        "chatgpt": {
+          "state": "Limited",
+          "productProvidedBy": "ChatGPT App (Canvas)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Supports inline code editing, bug review comments, language porting, and HTML/React preview in Canvas.",
+          "sourceId": "src-chatgpt-canvas-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Artifacts)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Dedicated live preview window for React components, HTML/CSS prototypes, interactive SVGs, and Mermaid flowcharts across all plans.",
+          "sourceId": "src-claude-artifacts-2026",
+          "officialSourceUrl": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "coding-agentic-terminal-cli",
+      "categoryId": "coding",
+      "featureName": "Agentic Terminal & Repository Coding (Claude Code vs Desktop IDE Context)",
+      "whatItDoes": "Reads local multi-file repositories, edits files, runs shell commands/tests, and manages Git workflows from your terminal or IDE.",
+      "providers": {
+        "chatgpt": {
+          "state": "Limited",
+          "productProvidedBy": "ChatGPT Desktop App & OpenAI Platform API",
+          "productLayer": "Related product / CLI",
+          "requiredPlan": "Plus, Pro, Business, Enterprise (or separate API token billing)",
+          "availabilityAndLimitations": "The ChatGPT desktop app can read active IDE panes on macOS/Windows, and OpenAI offers developer API tools, but consumer plans do not bundle a full terminal agent equivalent to Claude Code.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Code (Terminal CLI, VS Code, JetBrains, Desktop & Web)",
+          "productLayer": "Related product / CLI",
+          "requiredPlan": "Pro ($20/mo), Max ($100/mo), Ultra ($200/mo), Team (Standard & Premium seats), Enterprise, or Anthropic API",
+          "availabilityAndLimitations": "Included on all paid plans (excluded on Free). Both Team Standard ($20-$25/mo) and Premium ($100-$125/mo) seats include Claude Code; Premium seats provide 5x more usage for intensive coding.",
+          "sourceId": "src-claude-code-2026",
+          "officialSourceUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "coding-sandboxed-execution",
+      "categoryId": "coding",
+      "featureName": "Sandboxed Cloud Code Execution & File Generation",
+      "whatItDoes": "Executes code inside a secure cloud sandbox to validate logic, transform files, and output downloadable artefacts.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Advanced Data Analysis)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (limited), Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Runs stateful Python sessions capable of parsing uploaded archives, executing scripts, and generating downloadable files.",
+          "sourceId": "src-chatgpt-data-analysis-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Create and edit files with code execution)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Official plan matrix confirms code execution to create and edit files across Free and all paid plans, alongside browser-side Artifact execution.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "docs-model-context-window",
+      "categoryId": "documents-and-data",
+      "featureName": "Model Context Window Capacity (Long PDFs, Books & Repositories)",
+      "whatItDoes": "Defines the maximum volume of text, code, and documents that can be processed within a single conversation or API request.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "OpenAI GPT Models (Consumer App & Platform API)",
+          "productLayer": "Underlying model",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise, API (varies by model and tier)",
+          "availabilityAndLimitations": "Context window capacity scales by subscription tier and selected GPT reasoning or multimodal model, with expanded context on paid and API tiers.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Models (Opus, Sonnet, Haiku & Fable)",
+          "productLayer": "Underlying model",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise, API (model-dependent)",
+          "availabilityAndLimitations": "Model-dependent context window up to 1M tokens across Free, Pro, Max, Ultra, Team, Enterprise, and API (1M on current flagship models; 200K on select variants). Large prompts consume session quotas faster.",
+          "sourceId": "src-claude-models-2026",
+          "officialSourceUrl": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "docs-persistent-projects",
+      "categoryId": "documents-and-data",
+      "featureName": "Persistent Project Workspaces & Knowledge Folders (Projects)",
+      "whatItDoes": "Organises reference documents, custom instructions, and ongoing chats into dedicated project spaces.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Projects)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Plus, Pro, Business, Enterprise (and rolling out to broader tiers per official docs)",
+          "availabilityAndLimitations": "Groups chats, uploaded files, and custom instructions; shared team Projects are supported on ChatGPT Business and Enterprise.",
+          "sourceId": "src-chatgpt-projects-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Projects)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (up to 5 Projects), Pro, Max, Ultra, Team, Enterprise (unlimited Projects)",
+          "availabilityAndLimitations": "Free tier includes up to 5 Projects; paid plans unlock unlimited Projects. Project sharing and team collaboration require Claude Team or Enterprise.",
+          "sourceId": "src-claude-projects-2026",
+          "officialSourceUrl": "https://support.anthropic.com/en/articles/9517075-what-are-projects",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "docs-spreadsheet-and-dashboards",
+      "categoryId": "documents-and-data",
+      "featureName": "Spreadsheet Cleaning, Quantitative Analysis & Interactive Dashboards",
+      "whatItDoes": "Processes uploaded CSV and Excel files to clean data, calculate metrics, and build visual charts or dashboards.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Advanced Data Analysis)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (limited), Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Executes Python (pandas/matplotlib) directly on multi-sheet spreadsheets to clean rows, run regressions, and export modified Excel/CSV files.",
+          "sourceId": "src-chatgpt-data-analysis-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/8437071-advanced-data-analysis-in-chatgpt",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Code Execution, Artifacts & Claude Dashboards beta)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise (Claude Dashboards beta requires Pro or higher)",
+          "availabilityAndLimitations": "Runs code execution on uploaded data files across all tiers and includes interactive Artifact visualisations plus Claude Dashboards (beta) on paid plans.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "media-raster-image-generation",
+      "categoryId": "images-and-media",
+      "featureName": "Native Photorealistic Raster Image Generation & Editing (ChatGPT Images)",
+      "whatItDoes": "Creates original photorealistic images, illustrations, and rendered text-in-image graphics from prompts and edits selected regions.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (ChatGPT Images)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (limited daily quota), Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Built-in multimodal image generation and conversational inpainting directly inside ChatGPT chats.",
+          "sourceId": "src-chatgpt-images-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Not offered",
+          "productProvidedBy": "Claude App & Models",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Not applicable",
+          "availabilityAndLimitations": "Claude does not generate photorealistic raster images; visual output is focused on SVG vector graphics, code-driven charts, and Claude Design layouts.",
+          "sourceId": "src-claude-models-2026",
+          "officialSourceUrl": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "media-visual-input-analysis",
+      "categoryId": "images-and-media",
+      "featureName": "Multimodal Vision Input (Photos, UI Screenshots, Charts & PDFs)",
+      "whatItDoes": "Analyses uploaded images, diagrams, handwritten notes, and visual PDF pages to extract text, code, or structured insights.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT Multimodal Models (App & API)",
+          "productLayer": "Underlying model",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise, API",
+          "availabilityAndLimitations": "Supports multi-image and document uploads across web, desktop, mobile camera, and API (subject to plan file-upload caps).",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Multimodal Models (Opus, Sonnet, Haiku & Fable)",
+          "productLayer": "Underlying model",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise, API",
+          "availabilityAndLimitations": "Inspects charts, UI screenshots, and full visual PDF layouts across all consumer and API tiers.",
+          "sourceId": "src-claude-models-2026",
+          "officialSourceUrl": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "media-vector-design-and-motion",
+      "categoryId": "images-and-media",
+      "featureName": "Vector Graphics, UI Design & Motion Surfaces (Claude Design & Claude Motion beta)",
+      "whatItDoes": "Creates editable SVG diagrams, interactive visual prototypes, and motion graphics.",
+      "providers": {
+        "chatgpt": {
+          "state": "Limited",
+          "productProvidedBy": "ChatGPT App (Canvas & Python)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Can write raw SVG/HTML code in Canvas or export static charts via Python, without dedicated named Design or Motion surfaces inside ChatGPT.",
+          "sourceId": "src-chatgpt-canvas-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Artifacts, Claude Design & Claude Motion beta)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Artifacts & Claude Design on Free+; Claude Motion (beta) on Team & Enterprise",
+          "availabilityAndLimitations": "Artifacts and Claude Design are available on all tiers; Claude Motion (beta) is listed on Team and Enterprise plans (not offered on Individual tiers).",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "voice-realtime-conversation",
+      "categoryId": "voice",
+      "featureName": "Real-Time Spoken Voice Mode",
+      "whatItDoes": "Allows hands-free, back-and-forth spoken conversations with the assistant across devices.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Advanced Voice Mode)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free (preview/daily limits), Go, Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Supports low-latency interruption, expressive tone adjustments, and live camera/screen sharing on mobile apps.",
+          "sourceId": "src-chatgpt-voice-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/8400625-voice-conversations-in-chatgpt",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Voice Mode)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Free, Pro, Max, Ultra, Team, Enterprise",
+          "availabilityAndLimitations": "Listed as available across all Individual and Team/Enterprise plans on Anthropic's official feature matrix; draws from standard session usage.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "integrations-connectors-and-extensions",
+      "categoryId": "integrations-and-automation",
+      "featureName": "App Connectors, Desktop Extensions & Browser/Office Add-ons",
+      "whatItDoes": "Connects the assistant to external cloud storage, productivity apps, web browsers, and local desktop tools.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT App (Connectors, Custom GPT Actions & Desktop App)",
+          "productLayer": "Consumer app",
+          "requiredPlan": "Plus, Pro, Business, Enterprise (availability varies by connector)",
+          "availabilityAndLimitations": "Includes cloud drive connectors (Google Drive, OneDrive/SharePoint), GitHub connectors, Custom GPT API Actions, and desktop app integrations.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude App (Connectors, Desktop Extensions, Claude in Chrome & Microsoft 365)",
+          "productLayer": "Related product / CLI",
+          "requiredPlan": "Connectors, Skills & Desktop Extensions on Free+; Claude in Chrome, Microsoft 365 & Outlook on Pro+",
+          "availabilityAndLimitations": "Connectors and desktop extensions are available across all plans; Claude in Chrome, Claude for Microsoft 365, and Microsoft Outlook require Pro, Max, Ultra, Team, or Enterprise.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "integrations-scheduled-tasks",
+      "categoryId": "integrations-and-automation",
+      "featureName": "Scheduled Tasks & Asynchronous Task Handoffs",
+      "whatItDoes": "Runs scheduled prompts, recurring briefings, or delegated background workflows automatically.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT Subscription (Scheduled Tasks)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Plus, Pro, Business, Enterprise",
+          "availabilityAndLimitations": "Supports recurring scheduled prompts and automated reminders with web and mobile notifications.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Subscription (Hand off and schedule tasks)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Pro, Max, Ultra, Team, Enterprise (not offered on Free)",
+          "availabilityAndLimitations": "Official plan matrix includes 'Hand off and schedule tasks' across Pro, Max, Ultra, Team, and Enterprise plans (excluded on Free).",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "integrations-developer-apis",
+      "categoryId": "integrations-and-automation",
+      "featureName": "Developer APIs, Batch Processing, Prompt Caching & Subscription API Credits",
+      "whatItDoes": "Provides programmatic API access to underlying models with token-based billing and cost-optimisation controls.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "OpenAI Platform API (/tools/openai-api/)",
+          "productLayer": "Developer API",
+          "requiredPlan": "Pay-as-you-go token billing (separate from ChatGPT consumer subscriptions)",
+          "availabilityAndLimitations": "Billed per million input/output tokens on platform.openai.com; consumer ChatGPT Plus and Pro plans do not include API token credits.",
+          "sourceId": "src-openai-api-pricing-2026",
+          "officialSourceUrl": "https://openai.com/api/pricing/",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Platform / Anthropic API",
+          "productLayer": "Developer API",
+          "requiredPlan": "Pay-as-you-go token billing (plus monthly API credits on Max $100/mo, Ultra $200/mo, and Team up to $500/mo org pool)",
+          "availabilityAndLimitations": "Supports Prompt Caching and 50%-off Batch processing; Max ($100/mo), Ultra ($200/mo), and Team plans include monthly Claude Platform API credit allotments under current terms.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "business-team-seats-and-minimums",
+      "categoryId": "business-privacy-and-security",
+      "featureName": "Team Workspaces, Seat Minimums (2+ Seats) & Mixed Seat Tiers",
+      "whatItDoes": "Provides shared team workspaces, centralized billing, and role-appropriate seat tiers for organisations.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT Business (formerly ChatGPT Team)",
+          "productLayer": "Business / Enterprise workspace",
+          "requiredPlan": "Standard seat: $20 USD/user/mo billed annually or $25 USD/user/mo billed monthly (minimum 2 seats)",
+          "availabilityAndLimitations": "Requires a minimum of 2 seats; includes shared Projects, internal Custom GPT publishing, admin console, and domain/SSO controls.",
+          "sourceId": "src-chatgpt-pricing-2026",
+          "officialSourceUrl": "https://openai.com/chatgpt/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Team",
+          "productLayer": "Business / Enterprise workspace",
+          "requiredPlan": "Minimum 2 seats (2–150 seats): Standard seat $20 USD/seat/mo annual ($25 monthly); Premium seat $100 USD/seat/mo annual ($125 monthly)",
+          "availabilityAndLimitations": "Admins can mix and match Standard and Premium seats (5x usage) in one workspace; both seat types include Claude Code and contribute to up to $500/mo in pooled API credits.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "business-privacy-training-defaults",
+      "categoryId": "business-privacy-and-security",
+      "featureName": "AI Model Training Defaults & Temporary/Incognito Chat Privacy",
+      "whatItDoes": "Governs whether user prompts, uploaded documents, and code sessions are used to train public AI models.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "OpenAI Privacy Controls & Commercial Terms",
+          "productLayer": "Business / Enterprise workspace",
+          "requiredPlan": "No training by default on Business, Enterprise & API; Opt-out & Temporary Chat on Free, Go, Plus & Pro",
+          "availabilityAndLimitations": "Commercial and API data are excluded from training by default; consumer users can turn off 'Improve the model for everyone' in settings or use Temporary Chat.",
+          "sourceId": "src-openai-privacy-2026",
+          "officialSourceUrl": "https://openai.com/enterprise-privacy/",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Anthropic Privacy Controls & Commercial Terms",
+          "productLayer": "Business / Enterprise workspace",
+          "requiredPlan": "None by default on Team, Enterprise & API; Opt-out & Incognito chats on Free, Pro, Max & Ultra",
+          "availabilityAndLimitations": "Official feature matrix confirms 'None by default' model training on Team and Enterprise, and 'Opt-out' plus Incognito chats on Free, Pro, Max, and Ultra.",
+          "sourceId": "src-claude-privacy-2026",
+          "officialSourceUrl": "https://www.anthropic.com/legal/privacy",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "business-enterprise-security-compliance",
+      "categoryId": "business-privacy-and-security",
+      "featureName": "Enterprise Governance: SSO, SCIM, Audit Logs, Spend Controls & HIPAA",
+      "whatItDoes": "Enforces identity federation, automated user provisioning, audit logging, spend limits, and regulatory compliance.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "ChatGPT Business & ChatGPT Enterprise",
+          "productLayer": "Business / Enterprise workspace",
+          "requiredPlan": "ChatGPT Business (SSO & admin console) and ChatGPT Enterprise (SCIM, audit logs, custom retention, HIPAA BAA)",
+          "availabilityAndLimitations": "SCIM directory sync, granular role-based access, audit logs, and custom data retention require custom sales-assisted ChatGPT Enterprise contracts.",
+          "sourceId": "src-openai-privacy-2026",
+          "officialSourceUrl": "https://openai.com/enterprise-privacy/",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Available",
+          "productProvidedBy": "Claude Team & Claude Enterprise (Self-Serve & Sales-Assisted)",
+          "productLayer": "Business / Enterprise workspace",
+          "requiredPlan": "Team (SSO, domain verification, spend controls); Enterprise 20+ seats ($20/seat/mo annual + API usage or sales-assisted)",
+          "availabilityAndLimitations": "SSO and spend controls start on Team (2+ seats); SCIM, role-based access, audit logs, Compliance API, custom data retention, and HIPAA-ready offerings require Enterprise (20+ seats).",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    },
+    {
+      "capabilityId": "business-published-uk-gbp-checkout",
+      "categoryId": "business-privacy-and-security",
+      "featureName": "Published UK GBP (£) Subscription Pricing Table",
+      "whatItDoes": "Displays official UK Pound Sterling (£ GBP) subscription rates directly on vendor documentation or checkout.",
+      "providers": {
+        "chatgpt": {
+          "state": "Available",
+          "productProvidedBy": "OpenAI Multi-Currency Billing (ChatGPT Plus, Pro & Business)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Plus (£20 GBP/mo incl. VAT), Pro (£200 GBP/mo), Business",
+          "availabilityAndLimitations": "OpenAI officially documents UK GBP web checkout pricing (£20/mo on Plus; £200/mo on Pro) including applicable VAT.",
+          "sourceId": "src-chatgpt-multicurrency-2026",
+          "officialSourceUrl": "https://help.openai.com/en/articles/9982051-multi-currency-billing",
+          "lastVerifiedDate": "2026-11-08"
+        },
+        "claude": {
+          "state": "Not verified",
+          "productProvidedBy": "Anthropic Public Pricing Page (claude.com/pricing)",
+          "productLayer": "Paid subscription",
+          "requiredPlan": "Pro ($20 USD/mo monthly or $17 USD/mo annual), Max ($100/mo), Ultra ($200/mo), Team ($20-$125/seat/mo)",
+          "availabilityAndLimitations": "Anthropic's public pricing page lists plans in USD (excluding applicable local tax/VAT); fixed UK GBP schedule is not published on the unauthenticated public pricing table.",
+          "sourceId": "src-claude-pricing-2026",
+          "officialSourceUrl": "https://www.anthropic.com/pricing",
+          "lastVerifiedDate": "2026-11-08"
+        }
+      }
+    }
+  ]
+}

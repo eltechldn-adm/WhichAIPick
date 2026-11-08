@@ -194,6 +194,88 @@ function runGuard() {
         }
     });
 
+    // Validate Capability Inventory (data/seo/capability-inventory.json) if present
+    if (fs.existsSync('data/seo/capability-inventory.json')) {
+        const capInv = JSON.parse(fs.readFileSync('data/seo/capability-inventory.json', 'utf8'));
+        const requiredCategories = [
+            'writing',
+            'research',
+            'coding',
+            'documents-and-data',
+            'images-and-media',
+            'voice',
+            'integrations-and-automation',
+            'business-privacy-and-security'
+        ];
+        const allowedStates = new Set(['Available', 'Limited', 'Not offered', 'Not verified']);
+        const allowedLayers = new Set(capInv.allowedProductLayers || []);
+        const catIds = new Set((capInv.categories || []).map(c => c.categoryId));
+
+        if (capInv.isExhaustive !== false) {
+            console.error('[ERROR] capability-inventory.json must explicitly set isExhaustive: false.');
+            errors++;
+        }
+        requiredCategories.forEach(rc => {
+            if (!catIds.has(rc)) {
+                console.error(`[ERROR] capability-inventory.json missing required category: ${rc}`);
+                errors++;
+            }
+        });
+
+        const seenCapIds = new Set();
+        (capInv.capabilities || []).forEach(cap => {
+            if (seenCapIds.has(cap.capabilityId)) {
+                console.error(`[ERROR] Duplicate capabilityId: ${cap.capabilityId}`);
+                errors++;
+            }
+            seenCapIds.add(cap.capabilityId);
+
+            if (!catIds.has(cap.categoryId)) {
+                console.error(`[ERROR] Capability ${cap.capabilityId} has invalid categoryId: ${cap.categoryId}`);
+                errors++;
+            }
+            if (!cap.featureName || !cap.whatItDoes) {
+                console.error(`[ERROR] Capability ${cap.capabilityId} missing featureName or whatItDoes.`);
+                errors++;
+            }
+
+            (capInv.supportedTools || []).forEach(tid => {
+                const p = cap.providers?.[tid];
+                if (!p) {
+                    console.error(`[ERROR] Capability ${cap.capabilityId} missing provider entry for supported tool: ${tid}`);
+                    errors++;
+                    return;
+                }
+                if (!allowedStates.has(p.state)) {
+                    console.error(`[ERROR] Capability ${cap.capabilityId} (${tid}) has invalid state '${p.state}'. Must be Available / Limited / Not offered / Not verified.`);
+                    errors++;
+                }
+                if (!allowedLayers.has(p.productLayer)) {
+                    console.error(`[ERROR] Capability ${cap.capabilityId} (${tid}) has invalid productLayer '${p.productLayer}'.`);
+                    errors++;
+                }
+                if (!p.productProvidedBy || !p.requiredPlan || !p.availabilityAndLimitations || !p.lastVerifiedDate) {
+                    console.error(`[ERROR] Capability ${cap.capabilityId} (${tid}) missing required metadata fields.`);
+                    errors++;
+                }
+                if (!p.sourceId || !sourceIds.has(p.sourceId)) {
+                    console.error(`[ERROR] Capability ${cap.capabilityId} (${tid}) references missing sourceId: ${p.sourceId}`);
+                    errors++;
+                }
+                try {
+                    const u = new URL(p.officialSourceUrl);
+                    if (u.protocol !== 'https:') {
+                        console.error(`[ERROR] Capability ${cap.capabilityId} (${tid}) officialSourceUrl must be HTTPS.`);
+                        errors++;
+                    }
+                } catch (e) {
+                    console.error(`[ERROR] Capability ${cap.capabilityId} (${tid}) has invalid officialSourceUrl.`);
+                    errors++;
+                }
+            });
+        });
+    }
+
     if (errors > 0) {
         console.error(`\n[FAIL] comparison-editorial-data-guard.mjs found ${errors} errors.`);
         process.exit(1);

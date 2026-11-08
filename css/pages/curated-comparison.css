@@ -172,3 +172,385 @@
     }
 }
 
+/* =========================================================
+   Full Capability Explorer (Phase C.2B Reusable Component)
+   ========================================================= */
+
+.curated-comparison .cap-explorer-intro {
+    color: var(--color-gray-200, #e5e7eb);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.curated-comparison .cap-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: #161d2e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
+
+.curated-comparison .cap-legend-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-gray-200, #e5e7eb);
+    margin-right: 0.25rem;
+}
+
+.curated-comparison .capability-explorer-master {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: #141b2b;
+    overflow: hidden;
+}
+
+.curated-comparison .capability-explorer-master-summary {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1.1rem 1.25rem;
+    min-block-size: 48px;
+    cursor: pointer;
+    background: #182135;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    user-select: none;
+    transition: background 0.15s ease;
+}
+
+.curated-comparison .capability-explorer-master-summary::-webkit-details-marker {
+    display: none;
+}
+
+.curated-comparison .capability-explorer-master-summary:hover {
+    background: #1e2942;
+}
+
+.curated-comparison .capability-explorer-master-summary:focus-visible,
+.curated-comparison .capability-category-summary:focus-visible,
+.curated-comparison .cap-filter-btn:focus-visible,
+.curated-comparison .cap-action-btn:focus-visible,
+.curated-comparison .cap-source-link:focus-visible {
+    outline: 2px solid var(--accent-cyan, #ff8a3d);
+    outline-offset: 2px;
+}
+
+.curated-comparison .cap-master-summary-text {
+    color: var(--accent-cyan, #ff8a3d);
+    font-size: 1.08rem;
+}
+
+.curated-comparison .cap-master-summary-meta {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-gray-200, #e5e7eb);
+    margin-left: auto;
+}
+
+.curated-comparison .cap-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--accent-cyan, #ff8a3d);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.curated-comparison .cap-chevron::before {
+    content: "▾";
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.curated-comparison details[open] > summary .cap-chevron::before {
+    transform: rotate(180deg);
+}
+
+.curated-comparison .capability-explorer-body {
+    padding: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.curated-comparison .capability-explorer-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.curated-comparison .cap-filter-group,
+.curated-comparison .cap-action-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.curated-comparison .cap-filter-btn,
+.curated-comparison .cap-action-btn {
+    appearance: none;
+    background: #1c2539;
+    color: #f3f4f6;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 6px;
+    padding: 0.45rem 0.8rem;
+    min-block-size: 36px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.curated-comparison .cap-filter-btn:hover,
+.curated-comparison .cap-action-btn:hover {
+    background: #25314a;
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+.curated-comparison .cap-filter-btn.is-active {
+    background: var(--accent-cyan, #ff8a3d);
+    color: #0b0f19;
+    border-color: var(--accent-cyan, #ff8a3d);
+    font-weight: 700;
+}
+
+.curated-comparison .capability-categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.curated-comparison .capability-category-group {
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 8px;
+    background: #101624;
+    overflow: hidden;
+}
+
+.curated-comparison .capability-category-summary {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.9rem 1rem;
+    min-block-size: 44px;
+    cursor: pointer;
+    background: #161f33;
+    color: #ffffff;
+    user-select: none;
+}
+
+.curated-comparison .capability-category-summary::-webkit-details-marker {
+    display: none;
+}
+
+.curated-comparison .capability-category-summary:hover {
+    background: #1b263e;
+}
+
+.curated-comparison .cap-cat-summary-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.curated-comparison .cap-cat-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.curated-comparison .cap-cat-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: #24304a;
+    color: #e5e7eb;
+}
+
+.curated-comparison .cap-cat-desc {
+    font-size: 0.85rem;
+    color: var(--color-gray-300, #d1d5db);
+    margin-left: auto;
+}
+
+.curated-comparison .capability-category-content {
+    padding: 0.75rem;
+}
+
+.curated-comparison .capability-explorer-table th,
+.curated-comparison .capability-explorer-table td {
+    vertical-align: top;
+    padding: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.curated-comparison .capability-explorer-table thead th {
+    background: #151d2f;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.curated-comparison .cap-col-feature {
+    width: 28%;
+}
+
+.curated-comparison .cap-col-tool {
+    width: 36%;
+}
+
+.curated-comparison .cap-feature-name {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 0.96rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+.curated-comparison .cap-feature-desc {
+    margin: 0;
+    font-size: 0.86rem;
+    font-weight: 400;
+    color: var(--color-gray-300, #d1d5db);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.curated-comparison .cap-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.curated-comparison .cap-state-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.curated-comparison .cap-state--available {
+    background: #064e3b;
+    color: #a7f3d0;
+    border: 1px solid #10b981;
+}
+
+.curated-comparison .cap-state--limited {
+    background: #451a03;
+    color: #fde68a;
+    border: 1px solid #f59e0b;
+}
+
+.curated-comparison .cap-state--not-offered {
+    background: #3f1d28;
+    color: #fecdd3;
+    border: 1px solid #f43f5e;
+}
+
+.curated-comparison .cap-state--not-verified {
+    background: #1f2937;
+    color: #e5e7eb;
+    border: 1px solid #9ca3af;
+}
+
+.curated-comparison .cap-layer-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.curated-comparison .cap-detail-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+.curated-comparison .cap-detail-row {
+    display: block;
+}
+
+.curated-comparison .cap-detail-row dt {
+    display: inline;
+    font-weight: 700;
+    color: #f3f4f6;
+    margin-right: 0.25rem;
+}
+
+.curated-comparison .cap-detail-row dd {
+    display: inline;
+    margin: 0;
+    color: var(--color-gray-300, #d1d5db);
+}
+
+.curated-comparison .cap-source-link {
+    color: var(--accent-cyan, #ff8a3d);
+    text-decoration: underline;
+}
+
+.curated-comparison .cap-verified-date {
+    color: var(--color-gray-300, #d1d5db);
+    font-size: 0.8rem;
+}
+
+.curated-comparison .cap-explorer-disclaimer {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 0.84rem;
+    color: var(--color-gray-300, #d1d5db);
+    line-height: 1.55;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .curated-comparison .cap-master-summary-meta,
+    .curated-comparison .cap-cat-desc {
+        width: 100%;
+        margin-left: 0;
+        order: 3;
+    }
+
+    .curated-comparison .capability-explorer-body {
+        padding: 0.65rem 0.5rem;
+    }
+
+    .curated-comparison .capability-category-content {
+        padding: 0.35rem;
+    }
+
+    .curated-comparison .capability-table-wrapper tbody tr {
+        padding: 0.75rem;
+    }
+}
+
+

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 // Import shared rendering logic
 import { renderComparisonTableRows, escapeHTML } from '../../js/comparison-core.js';
+import { renderCapabilityExplorerSection } from './capability-explorer-renderer.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,6 +14,7 @@ const TOOLS_JSON_PATH = path.join(ROOT, 'data/tools.json');
 const RESEARCH_PATH = path.join(ROOT, 'data/seo/comparisons-v2.research.json');
 const MANIFEST_PATH = path.join(ROOT, 'data/seo/comparisons-v2.publish.json');
 const SOURCES_PATH = path.join(ROOT, 'data/seo/comparison-sources.json');
+const CAPABILITY_INVENTORY_PATH = path.join(ROOT, 'data/seo/capability-inventory.json');
 const DIST_DIR = path.join(ROOT, 'compare');
 const TEMPLATE_PATH = path.join(ROOT, 'category.html');
 const SEO_HERO_PATH = path.join(ROOT, 'partials/seo-hero.html');
@@ -21,6 +23,9 @@ const tools = JSON.parse(fs.readFileSync(TOOLS_JSON_PATH, 'utf-8'));
 const publishManifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf-8'));
 const researchData = JSON.parse(fs.readFileSync(RESEARCH_PATH, 'utf-8'));
 const allSources = JSON.parse(fs.readFileSync(SOURCES_PATH, 'utf-8'));
+const capabilityInventory = fs.existsSync(CAPABILITY_INVENTORY_PATH)
+    ? JSON.parse(fs.readFileSync(CAPABILITY_INVENTORY_PATH, 'utf-8'))
+    : null;
 let baseTemplate = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
 const seoHeroTemplate = fs.readFileSync(SEO_HERO_PATH, 'utf-8');
 
@@ -265,6 +270,17 @@ function buildPage(def) {
             });
             contentHTML += `</tbody></table></div></section>`;
         }
+    }
+
+    // Full Capability Explorer (Reusable across comparisons when enabled)
+    if (def.capabilityExplorer?.enabled && capabilityInventory) {
+        contentHTML += renderCapabilityExplorerSection({
+            def,
+            toolObjects: [toolA, toolB],
+            inventory: capabilityInventory,
+            allSources,
+            addSources
+        });
     }
 
     // Strengths & Limitations
@@ -530,6 +546,36 @@ function buildPage(def) {
         faqSchemaStr = `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
     }
 
+    const capabilityExplorerScript = def.capabilityExplorer?.enabled ? `
+            const explorer = document.querySelector('.capability-explorer-section');
+            if (explorer) {
+                const filterBtns = explorer.querySelectorAll('.cap-filter-btn');
+                const categoryGroups = explorer.querySelectorAll('.capability-category-group');
+                filterBtns.forEach(fBtn => {
+                    fBtn.addEventListener('click', () => {
+                        const targetCat = fBtn.dataset.capCategory;
+                        filterBtns.forEach(b => {
+                            const active = b === fBtn;
+                            b.classList.toggle('is-active', active);
+                            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+                        });
+                        categoryGroups.forEach(group => {
+                            const matches = targetCat === 'all' || group.dataset.categoryId === targetCat;
+                            group.hidden = !matches;
+                            if (matches) group.open = true;
+                        });
+                    });
+                });
+                explorer.querySelectorAll('.cap-action-btn').forEach(aBtn => {
+                    aBtn.addEventListener('click', () => {
+                        const shouldOpen = aBtn.dataset.capAction === 'expand-all';
+                        categoryGroups.forEach(group => {
+                            if (!group.hidden) group.open = shouldOpen;
+                        });
+                    });
+                });
+            }` : '';
+
     let finalHTML = baseTemplate
         .replace(/<title>.*<\/title>/, `<title>${escapeHTML(def.title)}</title>`)
         .replace(/<meta name="description"[\s\S]*?>/, `<meta name="description" content="${escapeHTML(def.metaDescription)}">`)
@@ -550,7 +596,7 @@ function buildPage(def) {
                     const tools = btn.dataset.tools.split(',');
                     window.DecisionAssistant.open(tools);
                 });
-            }
+            }${capabilityExplorerScript}
         });
     </script>
 </body>`);
