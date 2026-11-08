@@ -29,11 +29,11 @@
   {
     "sourceId": "src-chatgpt-search",
     "publisher": "OpenAI",
-    "title": "Browsing with ChatGPT",
-    "url": "https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search",
+    "title": "Searching the web with ChatGPT",
+    "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
     "sourceType": "Official Documentation",
     "publishedAt": null,
-    "checkedAt": "2026-10-04"
+    "checkedAt": "2026-11-08"
   },
   {
     "sourceId": "src-claude-pricing",
@@ -47,11 +47,11 @@
   {
     "sourceId": "src-claude-artifacts",
     "publisher": "Anthropic",
-    "title": "Using Artifacts in Claude",
-    "url": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+    "title": "What are artifacts and how do I use them?",
+    "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
     "sourceType": "Official Documentation",
     "publishedAt": null,
-    "checkedAt": "2026-10-04"
+    "checkedAt": "2026-11-08"
   },
   {
     "sourceId": "src-gemini-workspace",
@@ -236,8 +236,8 @@
   {
     "sourceId": "src-chatgpt-search-2026",
     "publisher": "OpenAI",
-    "title": "ChatGPT Search Documentation",
-    "url": "https://help.openai.com/en/articles/8077698-how-do-i-use-chatgpt-with-search",
+    "title": "Searching the web with ChatGPT",
+    "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
@@ -272,8 +272,8 @@
   {
     "sourceId": "src-chatgpt-canvas-2026",
     "publisher": "OpenAI",
-    "title": "Canvas in ChatGPT for Writing and Coding",
-    "url": "https://help.openai.com/en/articles/9930697-what-is-the-canvas-feature-in-chatgpt-and-how-do-i-use-it",
+    "title": "Working with writing blocks and code blocks in ChatGPT",
+    "url": "https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
@@ -380,8 +380,8 @@
   {
     "sourceId": "src-claude-artifacts-2026",
     "publisher": "Anthropic",
-    "title": "What Are Artifacts in Claude and How to Use Them",
-    "url": "https://support.anthropic.com/en/articles/9487310-what-are-artifacts",
+    "title": "What are artifacts and how do I use them?",
+    "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
@@ -407,8 +407,8 @@
   {
     "sourceId": "src-claude-search-2026",
     "publisher": "Anthropic",
-    "title": "Web Search and Research in Claude",
-    "url": "https://support.anthropic.com/en/articles/10599426-web-search-on-claude",
+    "title": "Enable and use web search",
+    "url": "https://support.claude.com/en/articles/10684626-enable-and-use-web-search",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"
@@ -461,8 +461,8 @@
   {
     "sourceId": "src-google-notebooklm-2026",
     "publisher": "Google",
-    "title": "NotebookLM Grounded Research and Source Analysis Help Center",
-    "url": "https://support.google.com/notebooklm/answer/14294096",
+    "title": "Create a notebook in Gemini Notebook",
+    "url": "https://support.google.com/gemininotebook/answer/16206563",
     "sourceType": "Official Documentation",
     "publishedAt": null,
     "checkedAt": "2026-11-08"

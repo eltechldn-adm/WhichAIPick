@@ -12,7 +12,7 @@ function runGuard() {
 
     const domainAllowlist = {
         'OpenAI': ['openai.com', 'help.openai.com'],
-        'Anthropic': ['anthropic.com', 'support.anthropic.com', 'docs.anthropic.com'],
+        'Anthropic': ['anthropic.com', 'support.anthropic.com', 'docs.anthropic.com', 'claude.com', 'support.claude.com'],
         'GitHub': ['github.com', 'docs.github.com'],
         'Google': ['google.com', 'support.google.com', 'gemini.google.com', 'gemini.google', 'antigravity.google', 'google.dev'],
         'Midjourney': ['midjourney.com', 'docs.midjourney.com', 'help.midjourney.com'],
